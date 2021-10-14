@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/validationmessages">Manage validation</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/validationmessages2">Funded Aims</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/validationmessages3">UKPRN_01</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      Severity
+    </li>
+  </ol>
+</div>
+<br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+      Severity
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="severity" name="severity" type="radio" value="e" checked>
+        <label class="govuk-label govuk-radios__label" for="severity">
+          Error
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="severity-2" name="severity" type="radio" value="w">
+        <label class="govuk-label govuk-radios__label" for="severity-2">
+          Warning
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+<a href="/validationmessages3" button class="govuk-button" data-module="govuk-button">
+  Save
+</a>
+
+
+{% endblock %}

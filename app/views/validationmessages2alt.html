@@ -1,0 +1,141 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/validationmessages">Manage validation</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Funded aims</a>
+    </li>
+  </ol>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-l">Funded aims</h1>
+            <!--<div id="dob-hint" class="govuk-hint">Choose providers file to upload</div>-->
+            <br>
+            <div class="standard-search">
+                                <label for="autocomplete-overlay" class="govuk-label">Search by <strong>rulename</strong> or <strong>message</strong></label>
+
+                                <div class="govuk-form-group">
+                                    <div id="tt-overlay" class="autocomplete-wrapper second">
+                                        <div class="autocomplete__wrapper" role="combobox" aria-expanded="false">
+                                            <input class="govuk-input" id="autocomplete-overlay" name="SearchTerm" placeholder="e.g Maths or 40010740" type="text" maxlength="200">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <button class="govuk-button" data-module="govuk-button">
+                                      Search
+                                    </button>
+                                </div>
+              </div>
+                <div id="filesList">﻿<div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                        <table class="govuk-table">
+                            <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                    <th scope="col" class="govuk-table__header">Rulename</th>
+                                    <th scope="col" class="govuk-table__header">Severity</th>
+                                    <th scope="col" class="govuk-table__header">Message</th>
+                                    <th scope="col" class="govuk-table__header">Enabled</th>
+                                    <th scope="col" class="govuk-table__header">Task</th>
+                                </tr>
+                            </thead>
+                            <tbody class="govuk-table__body" id="fileContainer">
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">UKPRN_01</td>
+                                    <td class="govuk-table__cell">Error</td>
+                                    <td class="govuk-table__cell">The UKPRN has not been returned</td>
+                                    <td class="govuk-table__cell">Yes</td>
+                                    <td class="govuk-table__cell"><a href="validationmessages3">Change</a></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">UKPRN_02</td>
+                                    <td class="govuk-table__cell">Error</td>
+                                    <td class="govuk-table__cell">The Provider UKPRN is not available in Submit Learner Data. Check the UK Register of Learning Providers (UKRLP) and ensure the provider details have been sent to ESFA for them to be onboarded</td>
+                                    <td class="govuk-table__cell">Yes</td>
+                                    <td class="govuk-table__cell"><a href="update">Change</a></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">UKPRN_03</td>
+                                    <td class="govuk-table__cell">Error</td>
+                                    <td class="govuk-table__cell">The UKPRN must be in the range 10000000 to 99999999.</td>
+                                    <td class="govuk-table__cell">Yes</td>
+                                    <td class="govuk-table__cell"><a href="update">Change</a></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">UKPRN_04</td>
+                                    <td class="govuk-table__cell">Error</td>
+                                    <td class="govuk-table__cell">The length of the value returned for UKPRN is not between 1 and 8 characters.</td>
+                                    <td class="govuk-table__cell">Yes</td>
+                                    <td class="govuk-table__cell"><a href="update">Change</a></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">LearnRefNumber_01</td>
+                                    <td class="govuk-table__cell">Error</td>
+                                    <td class="govuk-table__cell">The Learner Reference Number has not been returned.</td>
+                                    <td class="govuk-table__cell">Yes</td>
+                                    <td class="govuk-table__cell"><a href="update">Change</a></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">LearnRefNumber_02</td>
+                                    <td class="govuk-table__cell">Error</td>
+                                    <td class="govuk-table__cell">The length of the value returned for Learner reference number is not between 1 and 12 characters.</td>
+                                    <td class="govuk-table__cell">Yes</td>
+                                    <td class="govuk-table__cell"><a href="update">Change</a></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">LearnRefNumber_03</td>
+                                    <td class="govuk-table__cell">Error</td>
+                                    <td class="govuk-table__cell">The Learner reference number does not match the validation pattern.</td>
+                                    <td class="govuk-table__cell">Yes</td>
+                                    <td class="govuk-table__cell"><a href="update">Change</a></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">ULN_01</td>
+                                    <td class="govuk-table__cell">Error</td>
+                                    <td class="govuk-table__cell">The Unique learner number has not been returned.</td>
+                                    <td class="govuk-table__cell">Yes</td>
+                                    <td class="govuk-table__cell"><a href="update">Change</a></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">ULN_02</td>
+                                    <td class="govuk-table__cell">Error</td>
+                                    <td class="govuk-table__cell">The Unique learner number must be in the range 1000000000 to 9999999999.</td>
+                                    <td class="govuk-table__cell">Yes</td>
+                                    <td class="govuk-table__cell"><a href="update">Change</a></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">ULN_03</td>
+                                    <td class="govuk-table__cell">Error</td>
+                                    <td class="govuk-table__cell">The length of the value returned for the Unique learner number is not between 1 and 10 characters.</td>
+                                    <td class="govuk-table__cell">Yes</td>
+                                    <td class="govuk-table__cell"><a href="update">Change</a></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">AimSeqNum_01</td>
+                                    <td class="govuk-table__cell">Error</td>
+                                    <td class="govuk-table__cell">The Aim sequence number has not been returned.</td>
+                                    <td class="govuk-table__cell">Yes</td>
+                                    <td class="govuk-table__cell"><a href="update">Change</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+</div>
+
+
+{% endblock %}

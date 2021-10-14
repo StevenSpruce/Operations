@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% include "./includes/nav.html" %}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      Manage validation
+    </li>
+  </ol>
+</div>
+
+
+<!--<a class="govuk-back-link navigation-back">Back</a>-->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+            <h1 class="govuk-heading-l">Manage validation</h1>
+            <div id="dob-hint" class="govuk-hint">Use this page to enable or disable a validation, change the severity of a validation or change the error message of a validation.</div>
+            <br>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend">
+                  Select a collection
+                </legend>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="collection-1" name="collection" type="radio" value="dc">
+                  <label class="govuk-label govuk-radios__label" for="collection-1">
+                    Devolved contracts
+                  </label>
+                </div>
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="collection-2" name="collection" type="radio" value="eas">
+                    <label class="govuk-label govuk-radios__label" for="collection-2">
+                      Earnings adjustment statement 21/22
+                    </label>
+                  </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="collection-3" name="collection" type="radio" value="esf">
+                    <label class="govuk-label govuk-radios__label" for="collection-3">
+                      ESF supplementary data
+                    </label>
+                  </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="collection-4" name="collection" type="radio" value="fa">
+                  <label class="govuk-label govuk-radios__label" for="collection-4">
+                    Funded aims
+                  </label>
+                </div>
+
+            </div>
+
+  </fieldset>
+</div>
+
+<a href="/validationmessages2" button class="govuk-button" data-module="govuk-button">
+  Continue
+</a>
+
+</div>
+</div>
+</body>
+</html>
+
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/validationmessages">Manage validation</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/validationmessages2">Funded Aims</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/validationmessages3">UKPRN_01</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      Message
+    </li>
+  </ol>
+</div>
+<br>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="event-name">
+    Message
+  </label>
+  <input class="govuk-input" id="event-name" name="event-name" type="text" value="The UKPRN is mandatory">
+</div>
+
+<a href="/validationmessages3" button class="govuk-button" data-module="govuk-button">
+  Save
+</a>
+
+{% endblock %}

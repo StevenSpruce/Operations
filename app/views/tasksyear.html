@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% include "./includes/nav.html" %}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      Select year
+    </li>
+  </ol>
+</div>
+
+
+<!--<a class="govuk-back-link navigation-back">Back</a>-->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+            <h1 class="govuk-heading-l">Select year</h1>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend">
+                  Select a year
+                </legend>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="year-2021" name="year" type="radio" value="2021">
+                  <label class="govuk-label govuk-radios__label" for="collection-1">
+                    2021
+                  </label>
+                </div>
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="year-2122" name="year" type="radio" value="2122" checked>
+                    <label class="govuk-label govuk-radios__label" for="collection-2">
+                      2122
+                    </label>
+                  </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="year-unknown" name="year" type="radio" value="unknown">
+                    <label class="govuk-label govuk-radios__label" for="collection-3">
+                      Year agnostic
+                    </label>
+                  </div>
+            </div>
+
+  </fieldset>
+</div>
+
+<a href="/taskscollectiontype" button class="govuk-button" data-module="govuk-button">
+  Continue
+</a>
+
+</div>
+</div>
+</body>
+</html>
+
+
+{% endblock %}

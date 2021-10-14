@@ -1,0 +1,364 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="tasksyear">Select year</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="selecttopic">Select submission topic</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      Manage tasks
+    </li>
+  </ol>
+</div>
+<br>
+
+<h1 class="govuk-heading-l">Manage tasks for 2122 Summarisation</h1>
+
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          PE-App-Summarisation2122
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body govuk-!-font-weight-bold" id="accordion-with-summary-sections-summary-1">
+        This collection has tasks that are currently turned off
+      </div>
+
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Task</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Setting</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body" id="fileContainer">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Apps1920_EAS</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="Apps1920_EAS" name="Apps1920_EAS" type="radio" value="on" checked>
+                  <label class="govuk-label govuk-radios__label" for="Apps1920_EAS">
+                    On
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="Apps1920_EAS" name="Apps1920_EAS" type="radio" value="off">
+                  <label class="govuk-label govuk-radios__label" for="Apps1920_EAS">
+                    Off
+                  </label>
+                </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Apps1920_Levy</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="Apps1920_Levy" name="Apps1920_Levy" type="radio" value="on" checked>
+                  <label class="govuk-label govuk-radios__label" for="Apps1920_Levy">
+                    On
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="Apps1920_Levy" name="Apps1920_Levy" type="radio" value="off">
+                  <label class="govuk-label govuk-radios__label" for="Apps1920_Levy">
+                    Off
+                  </label>
+                </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Apps1920_NonLevy</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="Apps1920_NonLevy" name="Apps1920_NonLevy" type="radio" value="on" checked>
+                  <label class="govuk-label govuk-radios__label" for="Apps1920_NonLevy">
+                    On
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="Apps1920_NonLevy" name="Apps1920_NonLevy" type="radio" value="off">
+                  <label class="govuk-label govuk-radios__label" for="Apps1920_NonLevy">
+                    Off
+                  </label>
+                </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          PE-DC-Summarisation2122
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Task</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Setting</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body" id="fileContainer">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Main2122_ALB</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="Main2122_ALB" name="Main2122_ALB" type="radio" value="on">
+                  <label class="govuk-label govuk-radios__label" for="Main2122_ALB">
+                    On
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="Main2122_ALB" name="Main2122_ALB" type="radio" value="off" checked>
+                  <label class="govuk-label govuk-radios__label" for="Main2122_ALB">
+                    Off
+                  </label>
+                </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Main2122_EAS</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="Main2122_EAS" name="Main2122_EAS" type="radio" value="on" checked>
+                  <label class="govuk-label govuk-radios__label" for="Main2122_EAS">
+                    On
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="Main2122_EAS" name="Main2122_EAS" type="radio" value="off">
+                  <label class="govuk-label govuk-radios__label" for="Main2122_EAS">
+                    Off
+                  </label>
+                </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Main2122_FM25</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="Main2122_FM25" name="Main2122_FM25" type="radio" value="on" checked>
+                  <label class="govuk-label govuk-radios__label" for="Main2122_FM25">
+                    On
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="Main2122_FM25" name="Main2122_FM25" type="radio" value="off">
+                  <label class="govuk-label govuk-radios__label" for="Main2122_FM25">
+                    Off
+                  </label>
+                </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Main2122_FM35</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="Main2122_FM35" name="Main2122_FM35" type="radio" value="on" checked>
+                  <label class="govuk-label govuk-radios__label" for="Main2122_FM35">
+                    On
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="Main2122_FM35" name="Main2122_FM35" type="radio" value="off">
+                  <label class="govuk-label govuk-radios__label" for="Main2122_FM35">
+                    Off
+                  </label>
+                </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Main2122_TBL</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="Main2122_TBL" name="Main2122_TBL" type="radio" value="on" checked>
+                  <label class="govuk-label govuk-radios__label" for="Main2122_TBL">
+                    On
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="Main2122_TBL" name="Main2122_TBL" type="radio" value="off">
+                  <label class="govuk-label govuk-radios__label" for="Main2122_TBL">
+                    Off
+                  </label>
+                </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          PE-ESF-Summarisation2122
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Task</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Setting</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body" id="fileContainer">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">ESF_ILR_And_Supp</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="ESF_ILR_And_Supp" name="ESF_ILR_And_Supp" type="radio" value="on" checked>
+                  <label class="govuk-label govuk-radios__label" for="ESF_ILR_And_Supp">
+                    On
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="ESF_ILR_And_Supp" name="ESF_ILR_And_Supp" type="radio" value="off">
+                  <label class="govuk-label govuk-radios__label" for="ESF_ILR_And_Supp">
+                    Off
+                  </label>
+                </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">ESF_ILRData</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="ESF_ILRData" name="ESF_ILRData" type="radio" value="on" checked>
+                  <label class="govuk-label govuk-radios__label" for="ESF_ILRData">
+                    On
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="ESF_ILRData" name="ESF_ILRData" type="radio" value="off">
+                  <label class="govuk-label govuk-radios__label" for="ESF_ILRData">
+                    Off
+                  </label>
+                </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">ESF_SuppData</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="ESF_SuppData" name="ESF_SuppData" type="radio" value="on" checked>
+                  <label class="govuk-label govuk-radios__label" for="ESF_SuppData">
+                    On
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="ESF_SuppData" name="ESF_SuppData" type="radio" value="off">
+                  <label class="govuk-label govuk-radios__label" for="ESF_SuppData">
+                    Off
+                  </label>
+                </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          PE-NCS-Summarisation2122
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Task</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Setting</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body" id="fileContainer">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">NCS2122_C</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="NCS2122_C" name="NCS2122_C" type="radio" value="on">
+                  <label class="govuk-label govuk-radios__label" for="NCS2122_C">
+                    On
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="NCS2122_C" name="NCS2122_C" type="radio" value="off" checked>
+                  <label class="govuk-label govuk-radios__label" for="NCS2122_C">
+                    Off
+                  </label>
+                </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">re-run</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="re-run" name="re-run" type="radio" value="on" checked>
+                  <label class="govuk-label govuk-radios__label" for="re-run">
+                    On
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="re-run" name="re-run" type="radio" value="off">
+                  <label class="govuk-label govuk-radios__label" for="re-run">
+                    Off
+                  </label>
+                </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<a href="/validationmessages3" button class="govuk-button" data-module="govuk-button">
+  Save
+</a>
+
+{% endblock %}

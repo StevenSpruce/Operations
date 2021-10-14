@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+{% include "./includes/nav.html" %}
+
+<!-- <script src="/public/javascripts/tt.js"></script> -->
+
+<!--<div class="govuk-width-container>"-->
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+<a class="govuk-back-link navigation-back">Back</a>
+
+<div id="content"></div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Jobs processing</h1>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Select collection
+              </h1>
+            </legend>
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  ILR
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  EAS
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                  ESF
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                  NCS
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                  FEW
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                  Period end
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+<div class="govuk-form-group govuk-!-margin-top-4">
+    <label class="govuk-label" for="sort">
+        Sort by
+    </label>
+    <select class="govuk-select govuk-input--width-20" id="sort" name="sort">
+    <option selected="selected" value="ProviderName">Provider name</option>
+<option value="Ukprn">UKPRN</option>
+<option value="TimeTaken">Time taken - Slowest first</option>
+</select>
+</div>
+</div>
+    <div class="govuk-grid-column-one-third">
+            <div class="position-right">
+                <section class="margin-bottom">
+                    <section class="margin-bottom">
+        <svg class="circle-chart" viewBox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+            <circle class="circle-chart__background" stroke="#EFEFEF" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15"></circle>
+            <circle id="firstCircle" class="circle-chart__circle" stroke-width="3" stroke-dasharray="0.8, 100" stroke-linecap="" fill="none" cx="16.91549431" cy="16.91549431" r="15" style="stroke:rgb(-2,255,0)"></circle>
+            <g class="circle-chart__info">
+                <text id="firstDonut" class="circle-chart__percent counter" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" data-count="1">1</text>
+                <text id="firstDonutText" class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">Looking Good</text>
+            </g>
+        </svg>
+    </section>
+                </section>
+            </div>
+        </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full" id="table_box_native">
+        <table class="govuk-table" id="tblData">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col" style="width:350px">Provider name</th>
+                    <th class="govuk-table__header" scope="col" style="width:80px">UKPRN</th>
+                    <th class="govuk-table__header" scope="col" style="width:80px">Job Id</th>
+                    <th class="govuk-table__header" scope="col" style="width:160px">Time taken</th>
+                    <th class="govuk-table__header" scope="col">Average processing time</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="dataContent"><tr class="govuk-table__row">
+                    <td class="govuk-table__cell" style="width:350px">BIRMINGHAM CITY UNIVERSITY</td>
+                    <td class="govuk-table__cell" style="width:80px">10007140</td>
+                    <td class="govuk-table__cell" style="width:80px">782003</td>
+                    <td class="govuk-table__cell" style="width:160px">1 minute 22 seconds</td>
+                    <td class="govuk-table__cell"></td>
+                </tr></tbody>
+        </table>
+        <div id="dataLoadingSpinner" class="govuk-text-center-align" style="display: none;">
+            <img src="/assets/images/loading-spinner.gif" alt="loading-icon">
+        </div>
+    </div>
+    <div id="index_native" class="box"><div><button disabled="" class="govuk-button govuk-button--disabled govuk-!-margin-right-1">&lt; Previous</button><button class="govuk-button govuk-!-margin-right-1">1</button><button disabled="" class="govuk-button govuk-button--disabled govuk-!-margin-right-1">Next &gt;</button></div><span>On page 1 of 1, showing rows 1 to 1 of 1</span></div>
+</div>
+
+<a href="#" class="govuk-button" id="aBtnDownloadCSV" style="visibility: visible;">Download CSV</a>
+<br>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">&nbsp;</div>
+    <div class="govuk-grid-column-two-thirds">
+        <state-display><label id="lastSync"></label><label id="state">Status: Connected</label></state-display>
+    </div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+
+{% endblock %}

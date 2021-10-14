@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="validationmessages">Manage validation</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="validationmessages2">Funded Aims</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      UKPRN_01
+    </li>
+  </ol>
+</div>
+<br>
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Rulename
+    </dt>
+    <dd class="govuk-summary-list__value">
+      UKPRN_01
+    </dd>
+    <dd class="govuk-summary-list__actions">
+
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Severity
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Error
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="validationmessagesseverity">
+        Change<span class="govuk-visually-hidden"> severity</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Message
+    </dt>
+    <dd class="govuk-summary-list__value">
+      The UKPRN has not been returned
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="validationmessagesmessage">
+        Change<span class="govuk-visually-hidden"> message</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Enabled
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">Yes</p>
+      </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="validationmessagesenabled">
+        Change<span class="govuk-visually-hidden"> enabled</span>
+      </a>
+    </dd>
+  </div>
+</dl>
+
+
+{% endblock %}

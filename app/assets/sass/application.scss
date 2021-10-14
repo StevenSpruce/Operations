@@ -1,0 +1,201 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+$govuk-new-link-styles: true;
+
+// We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
+$govuk-assets-path: '/govuk/assets/';
+
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import "lib/extensions/extensions";
+
+// Patterns that aren't in Frontend
+@import "patterns/step-by-step-header";
+@import "patterns/step-by-step-nav";
+@import "patterns/step-by-step-related";
+@import "patterns/task-list";
+@import "patterns/related-items";
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+@include govuk-media-query($from: mobile) {
+  .main-nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-color: govuk-colour("light-grey");
+
+    .govuk-link, a {
+        text-decoration: none;
+        padding: 15px;
+        margin-bottom: 0;
+    }
+
+    .red-dot {
+      height: 10px;
+      width: 10px;
+      background-color: #df3034;
+      display: block;
+      border-radius: 15px;
+      color: white;
+      font-size: 14px;
+      text-align: center;
+      line-height: 12px;
+      padding: 6px;
+      margin-left: 5px;
+      text-decoration: none;
+    }
+
+  }
+
+  .nav-wrap {
+    flex-wrap: wrap;
+  }
+
+}
+
+@include govuk-media-query($from: tablet) {
+
+  .main-nav {
+    // margin-bottom: 15px;
+    flex-direction: row;
+    height: 53px;
+    margin-bottom: 0;
+
+    .govuk-link:hover, a:hover {
+        border-bottom: 4px solid govuk-colour("light-blue");
+    }
+
+    .active {
+        border-bottom: 4px solid govuk-colour("blue");
+    }
+
+    .govuk-link:focus, a:focus {
+      background-color: inherit;
+    }
+  }
+
+  .auto-height {
+    height: auto;
+  }
+
+}
+
+/**
+ * 1. The `reverse` animation direction plays the animation backwards
+ *    which makes it start at the stroke offset 100 which means displaying
+ *    no stroke at all and animating it to the value defined in the SVG
+ *    via the inline `stroke-dashoffset` attribute.
+ * 2. Rotate by -90 degree to make the starting point of the
+ *    stroke the top of the circle.
+ * 3. Using CSS transforms on SVG elements is not supported by Internet Explorer
+ *    and Edge, use the transform attribute directly on the SVG element as a
+ * .  workaround (https://markus.oberlehner.net/blog/pure-css-animated-svg-circle-chart/#part-4-internet-explorer-strikes-back).
+ */
+.circle-chart__circle {
+  // animation-delay: 1s;
+  animation: circle-chart-fill 1s reverse; /* 1 */
+  transform: rotate(-90deg); /* 2, 3 */
+  transform-origin: center; /* 4 */
+  // stroke-dasharray: 30,100;
+}
+
+.centre-text {
+  text-align: center;
+}
+
+.circle-chart {
+  width: 100%
+}
+
+/**
+ * 1. Rotate by -90 degree to make the starting point of the
+ *    stroke the top of the circle.
+ * 2. Scaling mirrors the circle to make the stroke move right
+ *    to mark a positive chart value.
+ * 3. Using CSS transforms on SVG elements is not supported by Internet Explorer
+ *    and Edge, use the transform attribute directly on the SVG element as a
+ * .  workaround (https://markus.oberlehner.net/blog/pure-css-animated-svg-circle-chart/#part-4-internet-explorer-strikes-back).
+ */
+.circle-chart__circle--negative {
+  transform: rotate(-90deg) scale(1,-1); /* 1, 2, 3 */
+}
+
+.circle-chart__info {
+  animation: circle-chart-appear 1s forwards;
+  opacity: 0;
+  font-family: "nta", Arial, sans-serif;
+  transform: translateY(0.3em);
+  font-weight: 700;
+}
+
+.circle-chart__subline {
+    font-size: 3px;
+    font-weight: 100;
+}
+
+@keyframes circle-chart-fill {
+  to { stroke-dasharray: 0 100; }
+}
+
+@keyframes circle-chart-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Layout styles only, not needed for functionality */
+html {
+  font-family: sans-serif;
+  // padding-right: 1em;
+  // padding-left: 1em;
+}
+
+.grid {
+  display: grid;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 31em) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+#first {
+  stroke: govuk-colour("turquoise");
+}
+
+#first.warning {
+  stroke: govuk-colour("orange");
+}
+
+#first.danger {
+  stroke: govuk-colour("red");
+}
+
+#second {
+  stroke: govuk-colour("turquoise");
+}
+
+#second.warning {
+  stroke: govuk-colour("orange");
+}
+
+#second.danger {
+  stroke: govuk-colour("red");
+}
+
+#third {
+  stroke: govuk-colour("turquoise");
+}
+
+#third.warning {
+  stroke: govuk-colour("orange");
+}
+
+#third.danger {
+  stroke: govuk-colour("red");
+}

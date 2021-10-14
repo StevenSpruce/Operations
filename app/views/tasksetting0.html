@@ -1,0 +1,1360 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="tasksyear">Select year</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="taskscollectiontype">Select collection type</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      Tasks
+    </li>
+  </ol>
+</div>
+<br>
+
+<h1 class="govuk-heading-l">Manage tasks for 2122 PE-ILR</h1>
+
+<a href="/tasksettingPEILRaltview">
+  Mock-up only, click me for alt view
+</a>
+
+
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          CrossYearReport
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <p class='govuk-body govuk-!-font-weight-bold'>PE-DAS-CrossYearPaymentsReport2122</p>
+      <table class="govuk-table">
+          <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Task</th>
+                  <th scope="col" class="govuk-table__header">Setting</th>
+              </tr>
+          </thead>
+          <tbody class="govuk-table__body" id="fileContainer">
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">TaskGenerateCrossYearPaymentsReport</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateCrossYearPaymentsReport" name="TaskGenerateCrossYearPaymentsReport" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateCrossYearPaymentsReport">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateCrossYearPaymentsReport-2" name="TaskGenerateCrossYearPaymentsReport" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateCrossYearPaymentsReport-2">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          DataScience
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <p class='govuk-body govuk-!-font-weight-bold'>PE-Data-Warehouse12122</p>
+      <table class="govuk-table">
+          <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Task</th>
+                  <th scope="col" class="govuk-table__header">Setting</th>
+              </tr>
+          </thead>
+          <tbody class="govuk-table__body" id="fileContainer">
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">TaskSendData</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskSendData" name="TaskSendData" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="TaskSendData">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskSendData" name="TaskSendData" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="TaskSendData">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+            </tbody>
+      </table>
+        <p class='govuk-body govuk-!-font-weight-bold'>PE-Data-Warehouse22122</p>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Task</th>
+                    <th scope="col" class="govuk-table__header">Setting</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="fileContainer">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">TaskSendData</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="TaskSendData1" name="TaskSendData1" type="radio" value="on" checked>
+                          <label class="govuk-label govuk-radios__label" for="TaskSendData1">
+                            On
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="TaskSendData1" name="TaskSendData1" type="radio" value="off">
+                          <label class="govuk-label govuk-radios__label" for="TaskSendData1">
+                            Off
+                          </label>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class='govuk-body govuk-!-font-weight-bold'>PE-StandardFile2122</p>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Task</th>
+                    <th scope="col" class="govuk-table__header">Setting</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="fileContainer">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">TaskSendData</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="TaskSendData3" name="TaskSendData3" type="radio" value="on" checked>
+                          <label class="govuk-label govuk-radios__label" for="TaskSendData3">
+                            On
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="TaskSendData3" name="TaskSendData3" type="radio" value="off">
+                          <label class="govuk-label govuk-radios__label" for="TaskSendData3">
+                            Off
+                          </label>
+                        </div>
+                    </td>
+                </tr>
+              </tbody>
+        </table>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          FRM
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body govuk-!-font-weight-bold" id="accordion-with-summary-sections-summary-1">
+                    This topic has tasks that are currently turned off
+     </div>
+    </div>
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+      <p class='govuk-body govuk-!-font-weight-bold'>PE-FRM-Reports2122</p>
+      <table class="govuk-table">
+          <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Task</th>
+                  <th scope="col" class="govuk-table__header">Setting</th>
+              </tr>
+          </thead>
+          <tbody class="govuk-table__body" id="fileContainer">
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">TaskGenerateFundingRulesMonitoring06Report</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateFundingRulesMonitoring06Report" name="TaskGenerateFundingRulesMonitoring06Report" type="radio" value="on" >
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateFundingRulesMonitoring06Report">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateFundingRulesMonitoring06Report" name="TaskGenerateFundingRulesMonitoring06Report" type="radio" value="off" checked>
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateFundingRulesMonitoring06Report">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">TaskGenerateFundingRulesMonitoring07Report</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateFundingRulesMonitoring07Report" name="TaskGenerateFundingRulesMonitoring07Report" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateFundingRulesMonitoring07Report">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateFundingRulesMonitoring07Report" name="TaskGenerateFundingRulesMonitoring07Report" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateFundingRulesMonitoring07Report">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">TaskGenerateFundingRulesMonitoring08Report</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateFundingRulesMonitoring08Report" name="TaskGenerateFundingRulesMonitoring08Report" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateFundingRulesMonitoring08Report">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateFundingRulesMonitoring08Report" name="TaskGenerateFundingRulesMonitoring08Report" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateFundingRulesMonitoring08Report">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">TaskGenerateFundingRulesMonitoring09PEReport</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateFundingRulesMonitoring09PEReport" name="TaskGenerateFundingRulesMonitoring09PEReport" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateFundingRulesMonitoring09PEReport">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateFundingRulesMonitoring09PEReport" name="TaskGenerateFundingRulesMonitoring09PEReport" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateFundingRulesMonitoring09PEReport">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">TaskGenerateFundingRulesMonitoring09Report</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateFundingRulesMonitoring09Report" name="TaskGenerateFundingRulesMonitoring09Report" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateFundingRulesMonitoring09Report">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateFundingRulesMonitoring09Report" name="TaskGenerateFundingRulesMonitoring09Report" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateFundingRulesMonitoring09Report">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">TaskGenerateFundingRulesMonitoring15Report</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateFundingRulesMonitoring15Report" name="TaskGenerateFundingRulesMonitoring15Report" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateFundingRulesMonitoring15Report">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateFundingRulesMonitoring15Report" name="TaskGenerateFundingRulesMonitoring15Report" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateFundingRulesMonitoring15Report">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">TaskGenerateFundingRulesMonitoringReport</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateFundingRulesMonitoringReport" name="TaskGenerateFundingRulesMonitoringReport" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateFundingRulesMonitoringReport">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateFundingRulesMonitoringReport" name="TaskGenerateFundingRulesMonitoringReport" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateFundingRulesMonitoringReport">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+            </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          GenerateFM36Payments
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body govuk-!-font-weight-bold'>PE-DAS-Submission2122</p>
+      <table class="govuk-table">
+          <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Task</th>
+                  <th scope="col" class="govuk-table__header">Setting</th>
+              </tr>
+          </thead>
+          <tbody class="govuk-table__body" id="fileContainer">
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">JobSuccess</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="JobSuccess" name="JobSuccess" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="JobSuccess">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="JobSuccess" name="JobSuccess" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="JobSuccess">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">ProcessPeriodEnd</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="ProcessPeriodEnd" name="ProcessPeriodEnd" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="ProcessPeriodEnd">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="ProcessPeriodEnd" name="ProcessPeriodEnd" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="ProcessPeriodEnd">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+            </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-5">
+          MCAGLAReporting2122
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-5" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-5">
+      <p class='govuk-body govuk-!-font-weight-bold'>PE-ESFANonContDevolvedAdultEducationReport2122</p>
+      <table class="govuk-table">
+          <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Task</th>
+                  <th scope="col" class="govuk-table__header">Setting</th>
+              </tr>
+          </thead>
+          <tbody class="govuk-table__body" id="fileContainer">
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">TaskGenerateEsfaNonContractedDevolvedAdultEducationActivityReport</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateEsfaNonContractedDevolvedAdultEducationActivityReport" name="TaskGenerateEsfaNonContractedDevolvedAdultEducationActivityReport" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateEsfaNonContractedDevolvedAdultEducationActivityReport">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateEsfaNonContractedDevolvedAdultEducationActivityReport" name="TaskGenerateEsfaNonContractedDevolvedAdultEducationActivityReport" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateEsfaNonContractedDevolvedAdultEducationActivityReport">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+            </tbody>
+      </table>
+        <p class='govuk-body govuk-!-font-weight-bold'>PE-MCA-Reports2122</p>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Task</th>
+                    <th scope="col" class="govuk-table__header">Setting</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="fileContainer">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">TaskGenerateDestinationAndProgressionReport</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="TaskGenerateDestinationAndProgressionReport" name="TaskGenerateDestinationAndProgressionReport" type="radio" value="on" checked>
+                          <label class="govuk-label govuk-radios__label" for="TaskGenerateDestinationAndProgressionReport">
+                            On
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="TaskGenerateDestinationAndProgressionReport" name="TaskGenerateDestinationAndProgressionReport" type="radio" value="off">
+                          <label class="govuk-label govuk-radios__label" for="TaskGenerateDestinationAndProgressionReport">
+                            Off
+                          </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">TaskGenerateDevolvedFundingSummaryReport</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="TaskGenerateDevolvedFundingSummaryReport" name="TaskGenerateDevolvedFundingSummaryReport" type="radio" value="on" checked>
+                          <label class="govuk-label govuk-radios__label" for="TaskGenerateDevolvedFundingSummaryReport">
+                            On
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="TaskGenerateDevolvedFundingSummaryReport" name="TaskGenerateDevolvedFundingSummaryReport" type="radio" value="off">
+                          <label class="govuk-label govuk-radios__label" for="TaskGenerateDevolvedFundingSummaryReport">
+                            Off
+                          </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">TaskGenerateDevolvedNonContractedReport</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="TaskGenerateDevolvedNonContractedReport" name="TaskGenerateDevolvedNonContractedReport" type="radio" value="on" checked>
+                          <label class="govuk-label govuk-radios__label" for="TaskGenerateDevolvedNonContractedReport">
+                            On
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="TaskGenerateDevolvedNonContractedReport" name="TaskGenerateDevolvedNonContractedReport" type="radio" value="off">
+                          <label class="govuk-label govuk-radios__label" for="TaskGenerateDevolvedNonContractedReport">
+                            Off
+                          </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">TaskGenerateDevolvedOccupancyReport</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="TaskGenerateDevolvedOccupancyReport" name="TaskGenerateDevolvedOccupancyReport" type="radio" value="on" checked>
+                          <label class="govuk-label govuk-radios__label" for="TaskGenerateDevolvedOccupancyReport">
+                            On
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="TaskGenerateDevolvedOccupancyReport" name="TaskGenerateDevolvedOccupancyReport" type="radio" value="off">
+                          <label class="govuk-label govuk-radios__label" for="TaskGenerateDevolvedOccupancyReport">
+                            Off
+                          </label>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-6">
+          Payments
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-6" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-6">
+      <p class='govuk-body govuk-!-font-weight-bold'>PE-DAS-Reports-Finished2122</p>
+      <table class="govuk-table">
+          <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Task</th>
+                  <th scope="col" class="govuk-table__header">Setting</th>
+              </tr>
+          </thead>
+          <tbody class="govuk-table__body" id="fileContainer">
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">PeriodEndReports</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="PeriodEndReports" name="PeriodEndReports" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="PeriodEndReports">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="PeriodEndReports" name="PeriodEndReports" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="PeriodEndReports">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+            </tbody>
+      </table>
+        <p class='govuk-body govuk-!-font-weight-bold'>PE-DAS-Run2122</p>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Task</th>
+                    <th scope="col" class="govuk-table__header">Setting</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="fileContainer">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">PeriodEndRun</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="PeriodEndRun" name="PeriodEndRun" type="radio" value="on" checked>
+                          <label class="govuk-label govuk-radios__label" for="PeriodEndRun">
+                            On
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="PeriodEndRun" name="PeriodEndRun" type="radio" value="off">
+                          <label class="govuk-label govuk-radios__label" for="PeriodEndRun">
+                            Off
+                          </label>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class='govuk-body govuk-!-font-weight-bold'>PE-DAS-Start2122</p>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Task</th>
+                    <th scope="col" class="govuk-table__header">Setting</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="fileContainer">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">PeriodEndStart</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="PeriodEndStart" name="PeriodEndStart" type="radio" value="on" checked>
+                          <label class="govuk-label govuk-radios__label" for="PeriodEndStart">
+                            On
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="PeriodEndStart" name="PeriodEndStart" type="radio" value="off">
+                          <label class="govuk-label govuk-radios__label" for="PeriodEndStart">
+                            Off
+                          </label>
+                        </div>
+                    </td>
+                </tr>
+              </tbody>
+        </table>
+        <p class='govuk-body govuk-!-font-weight-bold'>PE-DAS-Stop2122</p>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Task</th>
+                    <th scope="col" class="govuk-table__header">Setting</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="fileContainer">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">PeriodEndStop</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="PeriodEndStop" name="PeriodEndStop" type="radio" value="on" checked>
+                          <label class="govuk-label govuk-radios__label" for="PeriodEndStop">
+                            On
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="PeriodEndStop" name="PeriodEndStop" type="radio" value="off">
+                          <label class="govuk-label govuk-radios__label" for="PeriodEndStop">
+                            Off
+                          </label>
+                        </div>
+                    </td>
+                </tr>
+              </tbody>
+        </table>
+        <p class='govuk-body govuk-!-font-weight-bold'>PE-DAS-SubmissionWindowPeriodValidation2122</p>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Task</th>
+                    <th scope="col" class="govuk-table__header">Setting</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="fileContainer">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">PeriodEndSubmissionWindowValidation</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="PeriodEndSubmissionWindowValidation" name="PeriodEndSubmissionWindowValidation" type="radio" value="on" checked>
+                          <label class="govuk-label govuk-radios__label" for="PeriodEndSubmissionWindowValidation">
+                            On
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="PeriodEndSubmissionWindowValidation" name="PeriodEndSubmissionWindowValidation" type="radio" value="off">
+                          <label class="govuk-label govuk-radios__label" for="PeriodEndSubmissionWindowValidation">
+                            Off
+                          </label>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-7">
+          Report
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-7" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-7">
+      <p class='govuk-body govuk-!-font-weight-bold'>PE-DAS-AppsDataMatchMonthEndReport2122</p>
+      <table class="govuk-table">
+          <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Task</th>
+                  <th scope="col" class="govuk-table__header">Setting</th>
+              </tr>
+          </thead>
+          <tbody class="govuk-table__body" id="fileContainer">
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">TaskGenerateDataMatchReport</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateDataMatchReport" name="TaskGenerateDataMatchReport" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateDataMatchReport">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateDataMatchReport" name="TaskGenerateDataMatchReport" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateDataMatchReport">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+            </tbody>
+      </table>
+        <p class='govuk-body govuk-!-font-weight-bold'>PE-DAS-AppsInternalDataMatchMonthEndReport2122</p>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Task</th>
+                    <th scope="col" class="govuk-table__header">Setting</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="fileContainer">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">TaskGenerateInternalDataMatchReport</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="TaskGenerateInternalDataMatchReport" name="TaskGenerateInternalDataMatchReport" type="radio" value="on" checked>
+                          <label class="govuk-label govuk-radios__label" for="TaskGenerateInternalDataMatchReport">
+                            On
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="TaskGenerateInternalDataMatchReport" name="TaskGenerateInternalDataMatchReport" type="radio" value="off">
+                          <label class="govuk-label govuk-radios__label" for="TaskGenerateInternalDataMatchReport">
+                            Off
+                          </label>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-8">
+          Reports2122
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-8" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-8">
+      <p class='govuk-body govuk-!-font-weight-bold'>PE-ACT-Count-Report2122</p>
+      <table class="govuk-table">
+          <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Task</th>
+                  <th scope="col" class="govuk-table__header">Setting</th>
+              </tr>
+          </thead>
+          <tbody class="govuk-table__body" id="fileContainer">
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">TaskGenerateActCountReport</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateActCountReport" name="TaskGenerateActCountReport" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateActCountReport">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGenerateActCountReport" name="TaskGenerateActCountReport" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="TaskGenerateActCountReport">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+            </tbody>
+      </table>
+        <p class='govuk-body govuk-!-font-weight-bold'>PE-Collection-Stats2122</p>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Task</th>
+                    <th scope="col" class="govuk-table__header">Setting</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="fileContainer">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">TaskGenerateCollectionStatsReport</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="TaskGenerateCollectionStatsReport" name="TaskGenerateCollectionStatsReport" type="radio" value="on" checked>
+                          <label class="govuk-label govuk-radios__label" for="TaskGenerateCollectionStatsReport">
+                            On
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="TaskGenerateCollectionStatsReport" name="TaskGenerateCollectionStatsReport" type="radio" value="off">
+                          <label class="govuk-label govuk-radios__label" for="TaskGenerateCollectionStatsReport">
+                            Off
+                          </label>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+          <p class='govuk-body govuk-!-font-weight-bold'>PE-DAS-AppsAdditionalPaymentsReport2122</p>
+          <table class="govuk-table">
+              <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header">Task</th>
+                      <th scope="col" class="govuk-table__header">Setting</th>
+                  </tr>
+              </thead>
+              <tbody class="govuk-table__body" id="fileContainer">
+                  <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">TaskGenerateAppsAdditionalPaymentsReport</td>
+                      <td class="govuk-table__cell">
+                        <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="TaskGenerateAppsAdditionalPaymentsReport" name="TaskGenerateAppsAdditionalPaymentsReport" type="radio" value="on" checked>
+                            <label class="govuk-label govuk-radios__label" for="TaskGenerateAppsAdditionalPaymentsReport">
+                              On
+                            </label>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="TaskGenerateAppsAdditionalPaymentsReport" name="TaskGenerateAppsAdditionalPaymentsReport" type="radio" value="off">
+                            <label class="govuk-label govuk-radios__label" for="TaskGenerateAppsAdditionalPaymentsReport">
+                              Off
+                            </label>
+                          </div>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+            <p class='govuk-body govuk-!-font-weight-bold'>PE-DAS-AppsCoInvestmentContributionsReport2122</p>
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Task</th>
+                        <th scope="col" class="govuk-table__header">Setting</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body" id="fileContainer">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">TaskGenerateAppsCoInvestmentContributionsReport</td>
+                        <td class="govuk-table__cell">
+                          <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="TaskGenerateAppsCoInvestmentContributionsReport" name="TaskGenerateAppsCoInvestmentContributionsReport" type="radio" value="on" checked>
+                              <label class="govuk-label govuk-radios__label" for="TaskGenerateAppsCoInvestmentContributionsReport">
+                                On
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="TaskGenerateAppsCoInvestmentContributionsReport" name="TaskGenerateAppsCoInvestmentContributionsReport" type="radio" value="off">
+                              <label class="govuk-label govuk-radios__label" for="TaskGenerateAppsCoInvestmentContributionsReport">
+                                Off
+                              </label>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            <p class='govuk-body govuk-!-font-weight-bold'>PE-DAS-AppsMonthlyPaymentReport2122</p>
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Task</th>
+                        <th scope="col" class="govuk-table__header">Setting</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body" id="fileContainer">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">TaskGenerateAppsMonthlyPaymentReport</td>
+                        <td class="govuk-table__cell">
+                          <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="TaskGenerateAppsMonthlyPaymentReport" name="TaskGenerateAppsMonthlyPaymentReport" type="radio" value="on" checked>
+                              <label class="govuk-label govuk-radios__label" for="TaskGenerateAppsMonthlyPaymentReport">
+                                On
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="TaskGenerateAppsMonthlyPaymentReport" name="TaskGenerateAppsMonthlyPaymentReport" type="radio" value="off">
+                              <label class="govuk-label govuk-radios__label" for="TaskGenerateAppsMonthlyPaymentReport">
+                                Off
+                              </label>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+              <p class='govuk-body govuk-!-font-weight-bold'>PE-DAS-FundingSummaryPeriodEndReport2122</p>
+              <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header">Task</th>
+                          <th scope="col" class="govuk-table__header">Setting</th>
+                      </tr>
+                  </thead>
+                  <tbody class="govuk-table__body" id="fileContainer">
+                      <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">TaskGenerateFundingSummaryPeriodEndReport</td>
+                          <td class="govuk-table__cell">
+                            <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="TaskGenerateFundingSummaryPeriodEndReport" name="TaskGenerateFundingSummaryPeriodEndReport" type="radio" value="on" checked>
+                                <label class="govuk-label govuk-radios__label" for="TaskGenerateFundingSummaryPeriodEndReport">
+                                  On
+                                </label>
+                              </div>
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="TaskGenerateFundingSummaryPeriodEndReport" name="TaskGenerateFundingSummaryPeriodEndReport" type="radio" value="off">
+                                <label class="govuk-label govuk-radios__label" for="TaskGenerateFundingSummaryPeriodEndReport">
+                                  Off
+                                </label>
+                              </div>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+                <p class='govuk-body govuk-!-font-weight-bold'>PE-DAS-PeriodEndReportPreparation2122</p>
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Task</th>
+                            <th scope="col" class="govuk-table__header">Setting</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body" id="fileContainer">
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">TaskClearPeriodEndDASZip</td>
+                            <td class="govuk-table__cell">
+                              <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="TaskClearPeriodEndDASZip" name="TaskClearPeriodEndDASZip" type="radio" value="on" checked>
+                                  <label class="govuk-label govuk-radios__label" for="TaskClearPeriodEndDASZip">
+                                    On
+                                  </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="TaskClearPeriodEndDASZip" name="TaskClearPeriodEndDASZip" type="radio" value="off">
+                                  <label class="govuk-label govuk-radios__label" for="TaskClearPeriodEndDASZip">
+                                    Off
+                                  </label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                  <p class='govuk-body govuk-!-font-weight-bold'>PE-DataQuality-Report2122</p>
+                  <table class="govuk-table">
+                      <thead class="govuk-table__head">
+                          <tr class="govuk-table__row">
+                              <th scope="col" class="govuk-table__header">Task</th>
+                              <th scope="col" class="govuk-table__header">Setting</th>
+                          </tr>
+                      </thead>
+                      <tbody class="govuk-table__body" id="fileContainer">
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">TaskGenerateDataQualityReport</td>
+                              <td class="govuk-table__cell">
+                                <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                                  <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="TaskGenerateDataQualityReport" name="TaskGenerateDataQualityReport" type="radio" value="on" checked>
+                                    <label class="govuk-label govuk-radios__label" for="TaskGenerateDataQualityReport">
+                                      On
+                                    </label>
+                                  </div>
+                                  <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="TaskGenerateDataQualityReport" name="TaskGenerateDataQualityReport" type="radio" value="off">
+                                    <label class="govuk-label govuk-radios__label" for="TaskGenerateDataQualityReport">
+                                      Off
+                                    </label>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+                    <p class='govuk-body govuk-!-font-weight-bold'>PE-Metrics-Report2122</p>
+                    <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Task</th>
+                                <th scope="col" class="govuk-table__header">Setting</th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body" id="fileContainer">
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">TaskGeneratePeriodEndMetricsReport</td>
+                                <td class="govuk-table__cell">
+                                  <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="TaskGeneratePeriodEndMetricsReport" name="TaskGeneratePeriodEndMetricsReport" type="radio" value="on" checked>
+                                      <label class="govuk-label govuk-radios__label" for="TaskGeneratePeriodEndMetricsReport">
+                                        On
+                                      </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="TaskGeneratePeriodEndMetricsReport" name="TaskGeneratePeriodEndMetricsReport" type="radio" value="off">
+                                      <label class="govuk-label govuk-radios__label" for="TaskGeneratePeriodEndMetricsReport">
+                                        Off
+                                      </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                      <p class='govuk-body govuk-!-font-weight-bold'>PE-ProviderSubmissions-Report2122</p>
+                      <table class="govuk-table">
+                          <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                  <th scope="col" class="govuk-table__header">Task</th>
+                                  <th scope="col" class="govuk-table__header">Setting</th>
+                              </tr>
+                          </thead>
+                          <tbody class="govuk-table__body" id="fileContainer">
+                              <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell">TaskGeneratePeriodEndMetricsReport</td>
+                                  <td class="govuk-table__cell">
+                                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                                      <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="TaskGenerateProviderSubmissionsReport" name="TaskGenerateProviderSubmissionsReport" type="radio" value="on" checked>
+                                        <label class="govuk-label govuk-radios__label" for="TaskGenerateProviderSubmissionsReport">
+                                          On
+                                        </label>
+                                      </div>
+                                      <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="TaskGenerateProviderSubmissionsReport" name="TaskGenerateProviderSubmissionsReport" type="radio" value="off">
+                                        <label class="govuk-label govuk-radios__label" for="TaskGenerateProviderSubmissionsReport">
+                                          Off
+                                        </label>
+                                      </div>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                        <p class='govuk-body govuk-!-font-weight-bold'>PE-UYP-LLVReport2122</p>
+                        <table class="govuk-table">
+                            <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                    <th scope="col" class="govuk-table__header">Task</th>
+                                    <th scope="col" class="govuk-table__header">Setting</th>
+                                </tr>
+                            </thead>
+                            <tbody class="govuk-table__body" id="fileContainer">
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">TaskLearnerLevelViewReport</td>
+                                    <td class="govuk-table__cell">
+                                      <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                                        <div class="govuk-radios__item">
+                                          <input class="govuk-radios__input" id="TaskLearnerLevelViewReport" name="TaskLearnerLevelViewReport" type="radio" value="on" checked>
+                                          <label class="govuk-label govuk-radios__label" for="TaskLearnerLevelViewReport">
+                                            On
+                                          </label>
+                                        </div>
+                                        <div class="govuk-radios__item">
+                                          <input class="govuk-radios__input" id="TaskLearnerLevelViewReport" name="TaskLearnerLevelViewReport" type="radio" value="off">
+                                          <label class="govuk-label govuk-radios__label" for="TaskLearnerLevelViewReport">
+                                            Off
+                                          </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+      </div>
+  </div>
+
+
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-9">
+          Summarisation
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body govuk-!-font-weight-bold" id="accordion-with-summary-sections-summary-1">
+                    This topic has tasks that are currently turned off
+     </div>
+    </div>
+    <div id="accordion-default-content-9" class="govuk-accordion__section-content" aria-labelledby="accordion-default-hgovuk-!-font-weight-boldeading-9">
+      <p class='govuk-body govuk-!-font-weight-bold'>PE-App-Summarisation2122</p>
+      <table class="govuk-table">
+          <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Task</th>
+                  <th scope="col" class="govuk-table__header">Setting</th>
+              </tr>
+          </thead>
+          <tbody class="govuk-table__body" id="fileContainer">
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Apps1920_EAS</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="Apps1920_EAS" name="Apps1920_EAS" type="radio" value="on">
+                        <label class="govuk-label govuk-radios__label" for="Apps1920_EAS">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id=""Apps1920_EAS" name="Apps1920_EAS" type="radio" value="off" checked>
+                        <label class="govuk-label govuk-radios__label" for=""Apps1920_EAS">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Apps1920_Levy</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="Apps1920_Levy" name="Apps1920_Levy" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="Apps1920_Levy">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="Apps1920_Levy" name="Apps1920_Levy" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="Apps1920_Levy">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Apps1920_NonLevy</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="Apps1920_NonLevy" name="Apps1920_NonLevy" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="Apps1920_NonLevy">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="Apps1920_NonLevy" name="Apps1920_NonLevy" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="Apps1920_NonLevy">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+            </tbody>
+      </table>
+      <p class='govuk-body govuk-!-font-weight-bold'>PE-DC-Summarisation2122</p>
+      <table class="govuk-table">
+          <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Task</th>
+                  <th scope="col" class="govuk-table__header">Setting</th>
+              </tr>
+          </thead>
+          <tbody class="govuk-table__body" id="fileContainer">
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Main2122_ALB</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="Main2122_ALB" name="Main2122_ALB" type="radio" value="on"checked>
+                        <label class="govuk-label govuk-radios__label" for="Main2122_ALB">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="Main2122_ALB" name="Main2122_ALB" type="radio" value="off" >
+                        <label class="govuk-label govuk-radios__label" for="Main2122_ALB">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Main2122_EAS</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="Main2122_EAS" name="Main2122_EAS" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="Main2122_EAS">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="Main2122_EAS" name="Main2122_EAS" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="Main2122_EAS">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Main2122_FM25</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="Main2122_FM25" name="Main2122_FM25" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="Main2122_FM25">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="Main2122_FM25" name="Main2122_FM25" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="Main2122_FM25">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Main2122_FM35</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="Main2122_FM35" name="Main2122_FM35" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="Main2122_FM35">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="Main2122_FM35" name="Main2122_FM35" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="Main2122_FM35">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Main2122_TBL</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="Main2122_TBL" name="Main2122_TBL" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="Main2122_TBL">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="Main2122_TBL" name="Main2122_TBL" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="Main2122_TBL">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+      <div id="accordion-default-content-9" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-9">
+        <p class='govuk-body govuk-!-font-weight-bold'>PE-ESF-Summarisation2122</p>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Task</th>
+                    <th scope="col" class="govuk-table__header">Setting</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="fileContainer">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">ESF_ILR_And_Supp</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="ESF_ILR_And_Supp" name="ESF_ILR_And_Supp" type="radio" value="on" checked>
+                          <label class="govuk-label govuk-radios__label" for="ESF_ILR_And_Supp">
+                            On
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="ESF_ILR_And_Supp" name="ESF_ILR_And_Supp" type="radio" value="off">
+                          <label class="govuk-label govuk-radios__label" for="ESF_ILR_And_Supp">
+                            Off
+                          </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">ESF_ILRData</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="ESF_ILRData" name="ESF_ILRData" type="radio" value="on" checked>
+                          <label class="govuk-label govuk-radios__label" for="ESF_ILRData">
+                            On
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="ESF_ILRData" name="ESF_ILRData" type="radio" value="off">
+                          <label class="govuk-label govuk-radios__label" for="ESF_ILRData>
+                            Off
+                          </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">ESF_SuppData</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="ESF_SuppData" name="ESF_SuppData" type="radio" value="on" checked>
+                          <label class="govuk-label govuk-radios__label" for="ESF_SuppData">
+                            On
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="ESF_SuppData" name="ESF_SuppData" type="radio" value="off">
+                          <label class="govuk-label govuk-radios__label" for="ESF_SuppData">
+                            Off
+                          </label>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-10">
+          SummarisationReporting
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-10" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-10">
+      <p class='govuk-body govuk-!-font-weight-bold'>PE-DataExtract-Report2122</p>
+      <table class="govuk-table">
+          <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Task</th>
+                  <th scope="col" class="govuk-table__header">Setting</th>
+              </tr>
+          </thead>
+          <tbody class="govuk-table__body" id="fileContainer">
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">TaskGeneratePeriodSummaryReport</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGeneratePeriodSummaryReport" name="TaskGeneratePeriodSummaryReport" type="radio" value="on" checked>
+                        <label class="govuk-label govuk-radios__label" for="TaskGeneratePeriodSummaryReport">
+                          On
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="TaskGeneratePeriodSummaryReport" name="TaskGeneratePeriodSummaryReport" type="radio" value="off">
+                        <label class="govuk-label govuk-radios__label" for="TaskGeneratePeriodSummaryReport">
+                          Off
+                        </label>
+                      </div>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+<a href="/validationmessages3" button class="govuk-button" data-module="govuk-button">
+  Save
+</a>
+
+{% endblock %}
