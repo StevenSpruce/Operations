@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+
+
+
+            <main class="govuk-main-wrapper">
+
+                <h2 class="gem-c-heading govuk-heading-m govuk-!-margin-bottom-6">SLD admin topics</h2>
+
+                <div class="govuk-grid-row govuk-!-margin-top-6">
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/ApplicationVersion">Application version</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Service fabric application information includes version, health state and status</p>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/APIStatus">API status</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">API health status</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/emailtopics">Email distribution</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Includes Email distribution list, add new participants and manage email templates.</p>
+                        </ul>
+                    </div>
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/referencedata/devolvedContracts?collectionName=DevolvedContracts">Notifications</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Set notification banner details.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/reminders">Reminders</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Create, read, update and close reminders.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/schedule">Schedule</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Pause and restart jobs and manage the minutes/hours of the run times.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/collectiontypeilr">Topic subscriptions and tasks</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Mange topic subsriptions and tasks by setting the state.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/validationmessages">Validation messages</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Update error messages and settings.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

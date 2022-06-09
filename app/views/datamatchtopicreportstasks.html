@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="tasksyear">Select year </a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="collectiontype">Collection type</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="collectiontopictask">Collection</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="collectiontopictask">Topic subscriptions</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      Tasks
+    </li>
+  </ol>
+</div>
+<br>
+
+<h1 class="govuk-heading-l">Enable tasks for datamatchtopic reports</h1>
+
+  
+<table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Task</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Setting</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body" id="fileContainer">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">TaskGenerateRuleViolationSummaryReport</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="TaskGenerateRuleViolationSummaryReport" name="TaskGenerateRuleViolationSummaryReport" type="radio" value="on">
+                  <label class="govuk-label govuk-radios__label" for="TaskGenerateRuleViolationSummaryReport">
+                    On
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="TaskGenerateRuleViolationSummaryReport" name="TaskGenerateRuleViolationSummaryReport" type="radio" value="off" checked>
+                  <label class="govuk-label govuk-radios__label" for="TaskGenerateRuleViolationSummaryReport">
+                    Off
+                  </label>
+                </div>
+            </td>
+          </tr>
+          </tbody>
+      </table>
+
+
+<a href="/ilrtopicstasks" button class="govuk-button" data-module="govuk-button">
+  Save
+</a>
+
+{% endblock %}

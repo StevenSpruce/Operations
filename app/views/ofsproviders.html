@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+<!-- <label for="autocomplete-overlay">Select your country</label> -->
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="dashboard">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item" aria-current="page">
+        <a class="govuk-breadcrumbs__link" href="referencedata">Reference data</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item" aria-current="page">
+        OfS Providers
+      </li>
+    </ol>
+  </div>
+
+        <h1 class="govuk-heading-xl">OfS Providers</h1>
+        <h1 class="govuk-heading-m">Choose OfS Providers reference data file to upload</h1>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-!-font-weight-bold" for="file-upload-1">
+            Upload a file
+          </label>
+          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+        </div>
+        <button class="govuk-button" data-module="govuk-button" id="upload-csv">
+          Upload
+        </button>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+      </div>
+    </div>
+    <div class="govuk-grid-row" id="reference-data-report">
+      <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Date</th>
+              <th scope="col" class="govuk-table__header">Submitted by</th>
+              <th scope="col" class="govuk-table__header">File</th>
+              <th scope="col" class="govuk-table__header">Job ID</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+              <th scope="col" class="govuk-table__header">Reports</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row" id="new-csv-upload-row">
+              <th scope="row" class="govuk-table__header">14 October 2011 at 15:22pm</th>
+              <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+              <td class="govuk-table__cell"><a href="#">OfSProvidersRD-202110141522.csv</a></td>
+              <td class="govuk-table__cell">612001</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold">
+                <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Job Completed</p>
+                <p class="govuk-!-margin-bottom-1 govuk-!-font-weight-bold">50 records</p>
+                <p class="govuk-!-margin-bottom-0 govuk-!-font-weight-bold">0 warnings</p>
+                <p class="govuk-!-margin-bottom-0 govuk-!-font-weight-bold">2 errors</p>
+              </td>
+              <td class="govuk-table__cell"><a href="#">OfSProviderRD-Reports-202110141522.zip</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}

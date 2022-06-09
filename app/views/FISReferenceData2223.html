@@ -1,0 +1,148 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      
+     
+
+
+<div class="govuk-width-container">
+<div class="govuk-breadcrumbs">
+<ol class="govuk-breadcrumbs__list">
+<li class="govuk-breadcrumbs__list-item">
+  <a class="govuk-breadcrumbs__link" href="/">Home</a>
+</li>
+<li class="govuk-breadcrumbs__list-item">
+  <a class="govuk-breadcrumbs__link" href="/referenceData/referenceData">Reference data</a>
+</li>
+<li class="govuk-breadcrumbs__list-item" aria-current="page">FISReferenceData2223</li>
+</ol>
+</div>
+</div>
+
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+<h1 class="govuk-heading-xl heading-bottom-margin">FIS reference data 2223</h1>
+</div>
+</div>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+<form method="post" enctype="multipart/form-data" action="/referencedata/referenceDataProcess/SubmitFis">
+<input type="hidden" id="ReferenceDataCollectionName" name="ReferenceDataCollectionName" value="FISReferenceData2122">
+<input type="hidden" id="HubName" name="HubName" value="fisReferenceData2122Hub">
+<input type="hidden" id="CollectionDisplayName" name="CollectionDisplayName" value="FIS reference data 2122">
+<input type="hidden" data-val="true" data-val-required="The LatestVersion field is required." id="LatestVersion" name="LatestVersion" value="15">
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="NewVersionNumber">Enter version number</label>
+  <span class="govuk-error-message field-validation-valid" data-valmsg-for="NewVersionNumber" data-valmsg-replace="true"></span>
+
+  <input class="govuk-input govuk-!-width-one-quarter" placeholder="for example 5" id="NewVersionNumber" autocomplete="off" type="text" name="NewVersionNumber" value="16">
+  <button class="govuk-button govuk-button--secondary" id="run">
+      Run
+  </button>
+
+</div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8K3MQgXE1WVHiY-YMLok5ItpCbstpyrBhhcgSe6z5JYxzboOBzwHRA25VBCYEW46KkXz_0zlOFsudqKTS2EuHjzkLizoIQhupVFzCtSygIXQDNkW1eOGYRNeIRKEinY4LAK02Y5whzLB6miVpNkFMyXlaWBqNOEnDBLcsgSRz7vKFbbOlPj6l1ArIcmBYdoHmA"></form>
+</div>
+</div>
+
+<div id="RefDataProcessFilesList">﻿<form method="post">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-!-font-size-27">Ready to publish</caption>
+  <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header td--width-150-wrap">Date</th>
+          <th scope="col" class="govuk-table__header">Processed by</th>
+          <th scope="col" class="govuk-table__header">Version number</th>
+          <th scope="col" class="govuk-table__header table-width-min">Status</th>
+          <th scope="col" class="govuk-table__header td--width-150-wrap">Report</th>
+          <th scope="col" class="govuk-table__header td--width-150-wrap">File</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+      </tr>
+  </thead>
+  <tbody class="govuk-table__body" id="fileContainer">
+
+      <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-!-font-weight-bold td--width-150-wrap">9 November 2022 at 3:05 pm</td>
+          <td class="govuk-table__cell">Mr Ops User</td>
+          <td class="govuk-table__cell">13</td>
+          <td class="govuk-table__cell">
+              <span class="jobCompleted">Ready To Publish</span> <br>
+          </td>
+          <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceDataProcess/GetCollectionReportFileAsync/FISReferenceData2122/FISReferenceData2122-SummaryReport-202111091505.csv/53390">FISReferenceData2223-SummaryReport-202111091505.csv</a></td>
+          <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceDataProcess/GetCollectionReportFileAsync/FISReferenceData2122/FISReferenceData.13.zip/53390">FISReferenceData.13.zip</a></td>
+          <td class="govuk-table__cell">
+              <input type="hidden" name="JobId" value="53390">
+              <input type="hidden" name="Model.ReferenceDataCollectionName" value="FISReferenceData2122">
+              <button class="govuk-button" id="Publish" formaction="Publish">
+                  Publish
+              </button>
+              <button class="govuk-button govuk-button--secondary" id="Remove" formaction="RemoveFis">
+                  Remove
+              </button>
+          </td>
+      </tr>
+  </tbody>
+</table>
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-!-font-size-27">Jobs completed</caption>
+  <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header td--width-150-wrap">Date</th>
+          <th scope="col" class="govuk-table__header">Processed by</th>
+          <th scope="col" class="govuk-table__header">Version number</th>
+          <th scope="col" class="govuk-table__header table-width-min">Status</th>
+          <th scope="col" class="govuk-table__header td--width-150-wrap">Report</th>
+          <th scope="col" class="govuk-table__header td--width-150-wrap">File</th>
+          <th scope="col" class="govuk-table__header">Published Date</th>
+      </tr>
+  </thead>
+  <tbody class="govuk-table__body" id="fileContainer">
+      <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-!-font-weight-bold td--width-150-wrap">19 November 2022 at 3:31 pm</td>
+          <td class="govuk-table__cell">Mr Ops User</td>
+          <td class="govuk-table__cell">14</td>
+          <td class="govuk-table__cell">
+              <span class="jobCompleted">Job Completed</span> <br>
+          </td>
+          <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceDataProcess/GetCollectionReportFileAsync/FISReferenceData2122/FISReferenceData2122-SummaryReport-202111191531.csv/54074">FISReferenceData2223-SummaryReport-202111191531.csv</a></td>
+          <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceDataProcess/GetCollectionReportFileAsync/FISReferenceData2122/FISReferenceData.14.zip/54074">FISReferenceData.14.zip</a></td>
+          <td class="govuk-table__cell">19 November 2021 at 3:40 pm</td>
+      </tr>
+  
+
+
+
+
+  </tbody>
+</table>
+</div>
+</div>
+</form></div>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+<label id="slowConnection" alt="Connection is slow at the moment"></label>
+<label id="lastSync">Last updated: 06/12/2021 14:32:45</label>
+<label id="state">Status: Connected</label>
+</div>
+</div>
+
+
+  </div>
+</div>
+
+
+{% endblock %}

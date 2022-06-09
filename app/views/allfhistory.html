@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  ALLF history
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<main class="govuk-main-wrapper" id="content" role="main">
+      <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+                    <div class="govuk-breadcrumbs">
+                        <ol class="govuk-breadcrumbs__list">
+                            <li class="govuk-breadcrumbs__list-item">
+                                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                            </li>
+                            <li class="govuk-breadcrumbs__list-item">
+                                <a class="govuk-breadcrumbs__link" href="/periodend/periodEnd">Period end</a>
+                            </li>
+                            <li class="govuk-breadcrumbs__list-item">
+                                <a class="govuk-breadcrumbs__link" href="/periodendallf/periodEnd">ALLF</a>
+                            </li>
+                            <li class="govuk-breadcrumbs__list-item" aria-current="page">ALLF history</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column">
+                            <h1 class="govuk-heading-xl">ALLF history</h1>
+                        </div>
+                    </div>
+                    
+                    <div class="govuk-grid-row">
+                        <div>
+                                <div class="govuk-grid-column">
+                                    <table class="govuk-table">
+                                        <thead class="govuk-table__head">
+                                            <tr class="govuk-table__row">
+                                                <th class="govuk-table__header" scope="col">Date</th>
+                                                <th class="govuk-table__header" scope="col">User name</th>
+                                                <th class="govuk-table__header" scope="col">File</th>
+                                                <th class="govuk-table__header" scope="col">Collection</th>
+                                                <th class="govuk-table__header" scope="col">Period</th>
+                                                <th class="govuk-table__header" scope="col">Job</th>
+                                                <th class="govuk-table__header table-width-min" scope="col">Status</th>
+                                                <th class="govuk-table__header" scope="col">Reports</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="govuk-table__body">
+                                            <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell"><strong>10 March<br>2022 at 10:12 AM</strong></td>
+                                                <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                                                <td class="govuk-table__cell">
+                                                <td class="govuk-table__cell">PE-ALLF-Summarisation</td>
+                                                <td class="govuk-table__cell">A79</td>
+                                                <td class="govuk-table__cell">1001971</td>
+                                                <td class="govuk-table__cell jobCompleted">Job Completed</td>
+                                                <td class="govuk-table__cell">
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell"><strong>02 March<br>2022 at 15:22 PM</strong></td>
+                                                <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                                                <td class="govuk-table__cell">
+                    <a href="/periodendallf/history/getReportFile/ALLF-20220301-100000.csv">ALLF-20220301-100000.csv</a>                            </td>
+                                                <td class="govuk-table__cell">ALLF</td>
+                                                <td class="govuk-table__cell">A79</td>
+                                                <td class="govuk-table__cell">1001970</td>
+                                                <td class="govuk-table__cell jobCompleted">Job Completed
+                                                    <br>
+                                                    <strong>
+                                                        <span>32246 records</span>
+                                                    </strong><br>
+                                                    <strong>
+                                                        <span>0 errors</span>
+                                                    </strong>
+                                                </td>
+                                                <td class="govuk-table__cell">
+                    <a href="/periodendallf/history/getReportFile/Generic%20Actuals%20Collection%20-%20Error%20Report%20ALLF-20220301-100000.csv/79/1001970">Generic Actuals Collection - Error Report ALLF-20220301-100000.csv</a>                            </td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell"><strong>02 February<br>2022 at 17:25 PM</strong></td>
+                                                <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                                                <td class="govuk-table__cell">
+                    <a href="/periodendallf/history/getReportFile/ALLF-20220201-100000.csv">ALLF-20220201-100000.csv</a>                            </td>
+                                                <td class="govuk-table__cell">
+                                                        <svg width="20" height="20" viewBox="0 0 1024 1024"><g fill="green"><path d="M864 128l-480 480-224-224-160 160 384 384 640-640z"></path></g></svg>
+                                                </td>
+                                                <td class="govuk-table__cell">A78</td>
+                                                <td class="govuk-table__cell">973906</td>
+                                                <td class="govuk-table__cell jobCompleted">Job Completed
+                                                    <br>
+                                                    <strong>
+                                                        <span>31968 records</span>
+                                                    </strong><br>
+                                                    <strong>
+                                                        <span>0 errors</span>
+                                                    </strong>
+                                                </td>
+                                                <td class="govuk-table__cell">
+                    <a href="/periodendallf/history/getReportFile/Generic%20Actuals%20Collection%20-%20Error%20Report%20ALLF-20220201-100000.csv/78/973906">Generic Actuals Collection - Error Report ALLF-20220201-100000.csv</a>                            </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                    </div>
+                    
+                                    </div>
+                                </div>
+                            </main>
+                        </div>
+                
+
+{% endblock %}

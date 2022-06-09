@@ -6,48 +6,10 @@
 
 
 {% block content %}
-<div class="govuk-width-container">
-    <div class="govuk-phase-banner">
-        <p class="govuk-phase-banner__content">
-        <span class="govuk-body govuk-!-font-size-16 signed-in-user">
-        <span class="your-name" id="bannerUserName">
-                          Mr Steven Spruce
-        </span>
-              <a class="account-link" href="/Account/SignOut">Sign out</a>
-        </span>
-        </p>
-</div>
-<main class="govuk-main-wrapper" id="content" role="main">
-      <div class="main-nav nav-wrap auto-height">
-          <a class="govuk-heading-s" href="/">Home</a>
-          <a class="govuk-heading-s" href="/provider/AddNew/AddNewOption">Providers</a>
-          <a class="govuk-heading-s" href="/Collections/Index">Collections</a>
-          <a class="govuk-heading-s" href="/periodend/periodEnd">Period end</a>
-          <a class="govuk-heading-s" href="/reports/Index">Reports</a>
-          <a class="govuk-heading-s active" href="/referencedata/referenceData">Reference data</a>
-          <a class="govuk-heading-s" href="/reminders">Reminders</a>
-          <a class="govuk-heading-s" href="/fundingclaims/fundingClaims">Funding claims</a>
-          <a class="govuk-heading-s" href="/notifications">Notifications</a>
-          <a class="govuk-heading-s" href="/publication/Publication">Publication</a>
-      </div>
-      <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
+{% include "./includes/nav.html" %}
 
-
-
-
-
-
-<div class="govuk-width-container">
-    <div class="govuk-breadcrumbs">
-        <ol class="govuk-breadcrumbs__list">
-            <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="/">Home</a>
-            </li>
-
-            <li class="govuk-breadcrumbs__list-item" aria-current="page">Reference Data</li>
-        </ol>
-    </div>
+<br>
+<br>
 
     <details class="govuk-details" data-module="govuk-details" role="group" open="">
         <summary class="govuk-details__summary" role="button" aria-controls="details-content-4deb7b25-e487-432b-9726-710eaceecd46" aria-expanded="true">
@@ -126,6 +88,17 @@
                             </li>
                         </ul>
                     </div>
+                    
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/ofsproviders.html">OfS Providers</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+                                <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">14 October 2021 at 13:56 pm</p>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Mrs Bernie O'Donnell</p>
+                            </li>
+                        </ul>
+                    </div>                    
 
                     <div class="govuk-grid-column-one-third">
                         <ul class="govuk-list">
@@ -168,6 +141,18 @@
                                     <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
                                     <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">16 August 2021 at 9:13 am</p>
                                     <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Mrs Sameenataz Chittoor</p>
+                                    <br>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="govuk-grid-column-one-third">
+                            <ul class="govuk-list">
+                                <li>
+                                    <h3 class="home-services__heading"><a class="govuk-link" href="/ILRValidationMessages2223">Validation Messages 22-23</a></h3>
+                                    <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+                                    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">16 August 2022 at 9:13 am</p>
+                                    <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Mr Ops User</p>
                                     <br>
                                 </li>
                             </ul>
@@ -228,6 +213,17 @@
                                 <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
                                 <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Data unavailable</p>
                                 <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Data unavailable</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/FISReferenceData2223">FIS reference data 2223</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Last update</p>
+                                <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">11 August 2022 at 3:19 pm</p>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-7">by Ops User</p>
                             </li>
                         </ul>
                     </div>

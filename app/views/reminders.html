@@ -1,0 +1,333 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">
+      R01 has a deadline date of 22-05-2022.
+    </p>
+  </div>
+</div>
+
+{% include "./includes/nav.html" %}
+<br>
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#current">
+        Current
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#archive">
+        Archive
+      </a>
+    </li>  
+  </ul>
+  <div class="govuk-tabs__panel" id="current">
+    <fieldset>
+       <legend>Certificates</legend>
+      
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Certificate name</th>
+          <th scope="col" class="govuk-table__header">Current thumbprint</th>
+          <th scope="col" class="govuk-table__header">Deadline date</th>
+          <th scope="col" class="govuk-table__header">Reminder date</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">api-fundingclaims-2021-22</td>
+          <td class="govuk-table__cell">43-BD-48-EC-FB-DF-14-57-31-3C-01-7A-CA-85-07-14-BE-FE-4B-08</td>
+          <td class="govuk-table__cell">2022-05-22</td>
+          <td class="govuk-table__cell">2022-04-15</td>
+          <td class="govuk-table__cell">
+          <a class="govuk-link" href="/editcertificate">Edit</a>
+          <a class="govuk-link" href="/closereminder">Close</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">ServiceFabricDasCertificate</td>
+          <td class="govuk-table__cell">FF-D2-E4-E9-E2-05-04-E5-FF-41-26-EA-C4-53-47-99-D5-D5-1E-64</td>
+          <td class="govuk-table__cell">2023-01-21</td>
+          <td class="govuk-table__cell">2022-12-07</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/editcertificate">Edit</a>
+            <a class="govuk-link" href="/closereminder">Close</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">ServiceFabricCertificate</td>
+          <td class="govuk-table__cell">AB-DD-04-D8-FD-B7-E9-94-9C-C2-55-E0-CA-32-90-3F-6C-74-1F-A9</td>
+          <td class="govuk-table__cell">2022-07-17</td>
+          <td class="govuk-table__cell">2022-06-03</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/editcertificate">Edit</a>
+            <a class="govuk-link" href="/closereminder">Close</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">PublicAPI-2021</td>
+          <td class="govuk-table__cell">86-CB-09-25-1F-3A-70-5A-F2-39-C7-4C-21-99-D1-B1-BB-49-52-DD</td>
+          <td class="govuk-table__cell">2022-03-22</td>
+          <td class="govuk-table__cell">2022-02-08</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/editcertificate">Edit</a>
+            <a class="govuk-link" href="/closereminder">Close</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">publicapi-2020</td>
+          <td class="govuk-table__cell">93-47-C2-3A-9E-FB-AE-67-4A-3D-37-96-80-F9-2F-25-0B-38-5B-2A</td>
+          <td class="govuk-table__cell">2021-03-11</td>
+          <td class="govuk-table__cell">2022-02-27</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/editcertificate">Edit</a>
+            <a class="govuk-link" href="/closereminder">Close</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">pp-submit-learner-data-2021</td>
+          <td class="govuk-table__cell">88-DF-DB-78-88-15-36-01-F3-50-2D-1D-EF-44-F7-DC-17-CC-78-25</td>
+          <td class="govuk-table__cell">2022-04-13</td>
+          <td class="govuk-table__cell">2022-2-28</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/editcertificate">Edit</a>
+            <a class="govuk-link" href="/closereminder">Close</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">operations-pp</td>
+          <td class="govuk-table__cell">95-A5-15-29-A1-98-2B-C9-CC-77-43-07-B7-9C-9E-25-47-4F-A4-3F</td>
+          <td class="govuk-table__cell">2022-02-20</td>
+          <td class="govuk-table__cell">2022-01-06</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/editcertificate">Edit</a>
+            <a class="govuk-link" href="/closereminder">Close</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">new-pp-submit-learner-data-2021</td>
+          <td class="govuk-table__cell">6E-9A-43-24-CC-56-32-3D-4E-12-3C-A3-34-4F-BE-BC-06-1F-B6-0D</td>
+          <td class="govuk-table__cell">2022-04-13</td>
+          <td class="govuk-table__cell">2022-02-28</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/editcertificate">Edit</a>
+            <a class="govuk-link" href="/closereminder">Close</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">integrationapi-fcs-2021</td>
+          <td class="govuk-table__cell">94-08-7D-9B-61-1D-3C-68-F4-45-A1-A3-9E-32-00-98-04-C9-D2-B2</td>
+          <td class="govuk-table__cell">2022-03-22</td>
+          <td class="govuk-table__cell">2022-01-30</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/editcertificate">Edit</a>
+            <a class="govuk-link" href="/closereminder">Close</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </fieldset>
+    <br>
+    <br>
+
+
+  <fieldset>
+  <legend>Reminders</legend>
+  <a class="govuk-button" href="/addreminder">Add reminder</a>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Reminder description</th>
+          <th scope="col" class="govuk-table__header">Deadline date</th>
+          <th scope="col" class="govuk-table__header">Reminder date</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">R01</td>
+          <td class="govuk-table__cell">2022-05-22</td>
+          <td class="govuk-table__cell">2022-04-15</td>
+          <td class="govuk-table__cell">
+          <a class="govuk-link" href="/addreminder">Edit</a>
+          <a class="govuk-link" href="/closereminder">Close</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Maintenance</td>
+          <td class="govuk-table__cell">2023-01-21</td>
+          <td class="govuk-table__cell">2022-12-07</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/addreminder">Edit</a>
+            <a class="govuk-link" href="/closereminder">Close</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">FEW opens</td>
+          <td class="govuk-table__cell">2022-07-17</td>
+          <td class="govuk-table__cell">2022-06-03</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/addreminder">Edit</a>
+            <a class="govuk-link" href="/closereminder">Close</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Funded Aims opens</td>
+          <td class="govuk-table__cell">2022-03-22</td>
+          <td class="govuk-table__cell">2022-02-08</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/addreminder">Edit</a>
+            <a class="govuk-link" href="/closereminder">Close</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">update FIS</td>
+          <td class="govuk-table__cell">2021-03-11</td>
+          <td class="govuk-table__cell">2022-02-27</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/addreminder">Edit</a>
+            <a class="govuk-link" href="/closereminder">Close</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">New reports</td>
+          <td class="govuk-table__cell">2022-04-13</td>
+          <td class="govuk-table__cell">2022-2-28</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/addreminder">Edit</a>
+            <a class="govuk-link" href="/closereminder">Close</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </fieldset>
+  </div>
+
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="archive">
+    <fieldset>
+      <legend>Certificates</legend>
+     
+   <table class="govuk-table">
+     <thead class="govuk-table__head">
+       <tr class="govuk-table__row">
+         <th scope="col" class="govuk-table__header">Certificate name</th>
+         <th scope="col" class="govuk-table__header">Thumbprint</th>
+         <th scope="col" class="govuk-table__header">Closed date</th>
+
+       </tr>
+     </thead>
+     <tbody class="govuk-table__body">
+       <tr class="govuk-table__row">
+         <td class="govuk-table__cell">api-fundingclaims-2021-22</td>
+         <td class="govuk-table__cell">43-BD-48-EC-FB-DF-14-57-31-3C-01-7A-CA-85-07-14-BE-FE-4B-08</td>
+         <td class="govuk-table__cell">2022-05-22</td>
+       </tr>
+       <tr class="govuk-table__row">
+         <td class="govuk-table__cell">ServiceFabricDasCertificate</td>
+         <td class="govuk-table__cell">FF-D2-E4-E9-E2-05-04-E5-FF-41-26-EA-C4-53-47-99-D5-D5-1E-64</td>
+         <td class="govuk-table__cell">2023-01-21</td>
+       </tr>
+       <tr class="govuk-table__row">
+         <td class="govuk-table__cell">ServiceFabricCertificate</td>
+         <td class="govuk-table__cell">AB-DD-04-D8-FD-B7-E9-94-9C-C2-55-E0-CA-32-90-3F-6C-74-1F-A9</td>
+         <td class="govuk-table__cell">2022-07-17</td>
+       </tr>
+       <tr class="govuk-table__row">
+         <td class="govuk-table__cell">PublicAPI-2021</td>
+         <td class="govuk-table__cell">86-CB-09-25-1F-3A-70-5A-F2-39-C7-4C-21-99-D1-B1-BB-49-52-DD</td>
+         <td class="govuk-table__cell">2022-03-22</td>
+       </tr>
+       <tr class="govuk-table__row">
+         <td class="govuk-table__cell">publicapi-2020</td>
+         <td class="govuk-table__cell">93-47-C2-3A-9E-FB-AE-67-4A-3D-37-96-80-F9-2F-25-0B-38-5B-2A</td>
+         <td class="govuk-table__cell">2021-03-11</td>
+       </tr>
+       <tr class="govuk-table__row">
+         <td class="govuk-table__cell">pp-submit-learner-data-2021</td>
+         <td class="govuk-table__cell">88-DF-DB-78-88-15-36-01-F3-50-2D-1D-EF-44-F7-DC-17-CC-78-25</td>
+         <td class="govuk-table__cell">2022-04-13</td>
+       </tr>
+       <tr class="govuk-table__row">
+         <td class="govuk-table__cell">operations-pp</td>
+         <td class="govuk-table__cell">95-A5-15-29-A1-98-2B-C9-CC-77-43-07-B7-9C-9E-25-47-4F-A4-3F</td>
+         <td class="govuk-table__cell">2022-02-20</td>
+       </tr>
+       <tr class="govuk-table__row">
+         <td class="govuk-table__cell">new-pp-submit-learner-data-2021</td>
+         <td class="govuk-table__cell">6E-9A-43-24-CC-56-32-3D-4E-12-3C-A3-34-4F-BE-BC-06-1F-B6-0D</td>
+         <td class="govuk-table__cell">2022-04-13</td>
+       </tr>
+       <tr class="govuk-table__row">
+         <td class="govuk-table__cell">integrationapi-fcs-2021</td>
+         <td class="govuk-table__cell">94-08-7D-9B-61-1D-3C-68-F4-45-A1-A3-9E-32-00-98-04-C9-D2-B2</td>
+         <td class="govuk-table__cell">2022-03-22</td>
+       </tr>
+     </tbody>
+   </table>
+   </fieldset>
+   <br>
+   <br>
+
+
+ <fieldset>
+ <legend>Reminders</legend>
+   <table class="govuk-table">
+     <thead class="govuk-table__head">
+       <tr class="govuk-table__row">
+         <th scope="col" class="govuk-table__header">Reminder description</th>
+         <th scope="col" class="govuk-table__header">Closed date</th>
+       </tr>
+     </thead>
+     <tbody class="govuk-table__body">
+       <tr class="govuk-table__row">
+         <td class="govuk-table__cell">R01</td>
+         <td class="govuk-table__cell">2022-05-22</td>
+       </tr>
+       <tr class="govuk-table__row">
+         <td class="govuk-table__cell">Maintenance</td>
+         <td class="govuk-table__cell">2023-01-21</td>
+       </tr>
+       <tr class="govuk-table__row">
+         <td class="govuk-table__cell">FEW opens</td>
+         <td class="govuk-table__cell">2022-07-17</td>
+       </tr>
+       <tr class="govuk-table__row">
+         <td class="govuk-table__cell">Funded Aims opens</td>
+         <td class="govuk-table__cell">2022-03-22</td>
+       </tr>
+       <tr class="govuk-table__row">
+         <td class="govuk-table__cell">update FIS</td>
+         <td class="govuk-table__cell">2021-03-11</td>
+        </tr>
+       <tr class="govuk-table__row">
+         <td class="govuk-table__cell">New reports</td>
+         <td class="govuk-table__cell">2022-04-13</td>
+         </tr>
+     </tbody>
+   </table>
+ </fieldset>
+
+  </div>
+</div>
+
+
+{% endblock %}

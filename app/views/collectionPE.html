@@ -1,0 +1,173 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% include "./includes/nav.html" %}
+<a class="govuk-link" href="/collectiontypePE">Back</a>
+<br>
+<br>
+
+<h1 class="govuk-heading-l">Select collection(s) for Period End ILR</h1>
+
+<h2 class="govuk-heading-m">Filter your collections</h2>
+<p>Choosing a filter will result in the page refreshing automatically</p>
+
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset">
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Collection year
+    </legend>
+
+
+
+    <div class="govuk-checkboxes govuk-checkboxes--small" style="display: flex;">
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="2021">
+        <label class="govuk-label govuk-checkboxes__label" for="2021">
+          2021
+        </label>
+
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="2122">
+        <label class="govuk-label govuk-checkboxes__label" for="2122">
+          2122
+        </label>
+
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status-3" name="status" type="checkbox" value="2223">
+        <label class="govuk-label govuk-checkboxes__label" for="2223">
+          2223
+        </label>
+      </div>
+    </div>
+  </fieldset>
+  <br>
+
+  <fieldset class="govuk-fieldset">
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Enabled
+    </legend>
+
+    <div class="govuk-checkboxes govuk-checkboxes--small" style="display: flex;">
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="Yes">
+        <label class="govuk-label govuk-checkboxes__label" for="Yes">
+          Yes
+        </label>
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="No">
+        <label class="govuk-label govuk-checkboxes__label" for="No">
+          No
+        </label>
+
+      </div>
+    </div>
+  </fieldset>
+
+</div>
+
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Collections</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Name</th>
+      <th scope="col" class="govuk-table__header">Collection year</th>
+      <th scope="col" class="govuk-table__header">Select</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">PE-Data-Warehouse12122</th>
+      <td class="govuk-table__cell">2122</td>
+      <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">PE-Data-Warehouse22122</th>
+      <td class="govuk-table__cell">2122</td>
+      <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">PE-StandardFile2122</th>
+      <td class="govuk-table__cell">2122</td>
+      <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">PE-DC-Summarisation2122</th>
+      <td class="govuk-table__cell">2122</td>
+      <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">PE-ESF-Summarisation2122</th>
+      <td class="govuk-table__cell">2122</td>
+      <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+      </td>
+    </tr
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">PE-App-Summarisation2122</th>
+      <td class="govuk-table__cell">2122</td>
+      <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+      </td>
+    </tr
+  </tbody>
+</table>
+
+<a href="/PEtopics" button class="govuk-button" data-module="govuk-button">
+      Continue
+ </a>
+
+  </div>
+</div>
+</body>
+
+</html>
+
+{% endblock %}

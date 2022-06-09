@@ -1,0 +1,177 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+<br>
+<a class="govuk-link" href="/settingstopics">< Back</a>
+<br>
+<br>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-m">API status</h2>
+
+
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row" >
+              <td class="govuk-table__header">Name</td>
+              <td class="govuk-table__header">Health</td>
+              <td class="govuk-table__header">Last checked</td>
+              <td class="govuk-table__header">Download</td>
+
+          </tr>
+          </thead>
+              <tbody><tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                      EAS
+                  </td>
+                  <td class="govuk-table__cell govuk-!-text-align-left">
+                    <img src="/public/images/greentick.jpg" width="30" height="30" style="vertical-align:middle" class="govuk-!-display-inline"> Healthy
+                  </td>
+                  <td class="govuk-table__cell">
+                      30/05/2022 09:44:30
+                  </td>
+                  <td class="govuk-table__cell">
+                    <a href="url">Download json</a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                      EDRS
+                  </td>
+                  <td class="govuk-table__cell govuk-!-text-align-left">
+                    <img src="/public/images/redcross.webp" width="30" height="30" style="vertical-align:middle"  class="govuk-!-display-inline"> Unhealthy
+                  </td>
+                <td class="govuk-table__cell">
+                    30/05/2022 09:44:30
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="url">Download json</a>
+              </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                      ESFReprofiling
+                  </td>
+                  <td class="govuk-table__cell">
+                    <img src="/public/images/greentick.jpg" alt="green tick" width="30" height="30" style="vertical-align:middle"> Healthy
+                </td>
+                <td class="govuk-table__cell">
+                    30/05/2022 09:44:30
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="url">Download json</a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                      FEWorkForce
+                  </td>
+                  <td class="govuk-table__cell">
+                    <img src="/public/images/greentick.jpg" alt="green tick" width="30" height="30" style="vertical-align:middle"> Healthy
+                </td>
+                <td class="govuk-table__cell">
+                    30/05/2022 09:44:30
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="url">Download json</a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                      FundingClaim - external
+                  </td>
+                  <td class="govuk-table__cell">
+                    <img src="/public/images/greentick.jpg" alt="green tick" width="30" height="30" style="vertical-align:middle"> Healthy
+                </td>
+                <td class="govuk-table__cell">
+                    30/05/2022 09:44:30
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="url">Download json</a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                    FundingClaim - internal
+                </td>
+                <td class="govuk-table__cell">
+                  <img src="/public/images/greentick.jpg" alt="green tick" width="30" height="30" style="vertical-align:middle"> Healthy
+              </td>
+              <td class="govuk-table__cell">
+                  30/05/2022 09:44:30
+              </td>
+              <td class="govuk-table__cell">
+                <a href="url">Download json</a>
+              </td>
+            </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                      JobApi
+                  </td>
+                  <td class="govuk-table__cell">
+                    <img src="/public/images/greentick.jpg" alt="green tick" width="30" height="30" style="vertical-align:middle"> Healthy
+                </td>
+                <td class="govuk-table__cell">
+                    30/05/2022 09:44:30
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="url">Download json</a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                      Lars
+                  </td>
+                  <td class="govuk-table__cell">
+                    <img src="/public/images/greentick.jpg" alt="green tick" width="30" height="30" style="vertical-align:middle"> Healthy
+                </td>
+                <td class="govuk-table__cell">
+                    30/05/2022 09:44:30
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="url">Download json</a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                      LearnerData
+                  </td>
+                  <td class="govuk-table__cell">
+                    <img src="/public/images/greentick.jpg" alt="green tick" width="30" height="30" style="vertical-align:middle"> Healthy
+                </td>
+                <td class="govuk-table__cell">
+                    30/05/2022 09:44:30
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="url">Download json</a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                      ReferenceData
+                  </td>
+                  <td class="govuk-table__cell">
+                    <img src="/public/images/greentick.jpg" alt="green tick" width="30" height="30" style="vertical-align:middle"> Healthy
+                </td>
+                <td class="govuk-table__cell">
+                    30/05/2022 09:44:30
+                </td>
+                <td class="govuk-table__cell">
+                  <a href="url">Download json</a>
+                </td>
+              </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+<br>
+<a class="govuk-link" href="/settingstopics">< Back</a>
+<br>
+            <main class="govuk-main-wrapper">
+
+                <h2 class="gem-c-heading govuk-heading-m">Email topics</h2>
+
+                <div class="govuk-grid-row govuk-!-margin-top-6">
+
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/APIStatus">Add a new list</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Create a new email list.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/referencedata/devolvedContracts?collectionName=DevolvedContracts">Add a new recipient</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Add an email address to an email list.</p>
+                        </ul>
+                    </div>
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/referencedata/devolvedContracts?collectionName=DevolvedContracts">Manage emails</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Attach an email list to an email.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/ApplicationVersion">Manage distribution list</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Delete email addresses from an email list, or remove an email list.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

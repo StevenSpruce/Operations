@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+            <main class="govuk-main-wrapper">
+
+                <h2 class="gem-c-heading govuk-heading-m">Dashboard topics</h2>
+
+                <div class="govuk-grid-row govuk-!-margin-top-6">
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/esfreprofile">ESF reprofiling</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">View ESF reprofiling dashboards and request reports.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/FEWorkforce">FE Workforce</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">View FE Workforce dashboards.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/FundingClaims">Funding claims</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">View funding claim dashboards and request reports.</p>
+                        </ul>
+                    </div>
+               </div>
+            </main>
+
+
+{% endblock %}

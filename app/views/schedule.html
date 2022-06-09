@@ -1,0 +1,272 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+<br>
+<a class="govuk-link" href="/settingstopics">< Back</a>
+<br>
+<br>
+
+<h1 class="govuk-heading-l">Update the job schedule<h1>
+
+  <p>
+Enter the minute as the minute of the hour the job will run on, ranging from 0-59.
+<br>
+Enter the hour as the hour the job will run at, ranging from 0-23 in the 24-hour notation.  If the job is to run every hour then leave blank.
+  </p>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m"></caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Collection</th>
+        <th scope="col" class="govuk-table__header" style = "width:100px">Minute</th>
+        <th scope="col" class="govuk-table__header" style = "width:80px">Hour (UTC)</th>
+        <th scope="col" class="govuk-table__header">Last executed</th>
+        <th scope="col" class="govuk-table__header">Last updated on</th>
+        <th scope="col" class="govuk-table__header">Last updated by</th>
+        <th scope="col" class="govuk-table__header">Enabled</th>
+        <th scope="col" class="govuk-table__header">Paused</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">REF-EDRS</th>
+        <td class="govuk-table__cell">
+          <div class="govuk-date-input" id="minute">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="45">
+              </div>
+            </div>
+        </td>
+        <td class="govuk-table__cell">
+          <div class="govuk-date-input" id="hour">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="6">
+              </div>
+            </div>
+        </td>
+        <td class="govuk-table__cell">27 May 2022 06:45</td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+              </label>
+            </div>
+        </td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+      </td>
+      </tr>
+    </tbody>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">REF-EPA</th>
+        <td class="govuk-table__cell">
+          <div class="govuk-date-input" id="minute">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="16">
+              </div>
+            </div>
+        </td>
+        <td class="govuk-table__cell">
+          <div class="govuk-date-input" id="hour">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="6">
+              </div>
+            </div>
+        </td>
+        <td class="govuk-table__cell">27 May 2022 06:16</td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+              </label>
+            </div>
+        </td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+      </td>
+      </tr>
+    </tbody>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">REF-FCS</th>
+        <td class="govuk-table__cell">
+          <div class="govuk-date-input" id="minute">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="30">
+              </div>
+            </div>
+        </td>
+        <td class="govuk-table__cell">
+          <div class="govuk-date-input" id="hour">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="6">
+              </div>
+            </div>
+        </td>
+        <td class="govuk-table__cell">27 May 2022 06:30</td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+              </label>
+            </div>
+        </td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+      </td>
+      </tr>
+    </tbody>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">REF-ILRLookups2122</th>
+        <td class="govuk-table__cell">
+          <div class="govuk-date-input" id="minute">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="45">
+              </div>
+            </div>
+        </td>
+        <td class="govuk-table__cell">
+          <div class="govuk-date-input" id="hour">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="6">
+              </div>
+            </div>
+        </td>
+        <td class="govuk-table__cell">27 May 2022 06:45</td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+              </label>
+            </div>
+        </td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+      </td>
+      </tr>
+    </tbody>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">REF-ILRLookups2223</th>
+        <td class="govuk-table__cell">
+          <div class="govuk-date-input" id="minute">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="45">
+              </div>
+            </div>
+        </td>
+        <td class="govuk-table__cell">
+          <div class="govuk-date-input" id="hour">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="6">
+              </div>
+            </div>
+        </td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" >
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+              </label>
+            </div>
+        </td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" >
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+      </td>
+      </tr>
+    </tbody>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">REF-ULN</th>
+        <td class="govuk-table__cell">
+          <div class="govuk-date-input" id="minute">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="45">
+              </div>
+            </div>
+        </td>
+        <td class="govuk-table__cell">
+          <div class="govuk-date-input" id="hour">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="">
+              </div>
+            </div>
+        </td>
+        <td class="govuk-table__cell">27 May 2022 15:15</td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+              </label>
+            </div>
+        </td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a href="/ILRtopicstaskscheck" button class="govuk-button" data-module="govuk-button">
+    Save
+  </a>
+
+
+{% endblock %}
