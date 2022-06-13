@@ -1,0 +1,257 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+
+
+       <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <div class="govuk-grid-column-two-thirds">
+                    
+
+<h1 class="govuk-heading-xl">Staff list</h1>
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+        Contents
+    </h2>
+    <ul class="govuk-tabs__list" role="tablist">
+        <li class="govuk-tabs__list-item" role="presentation">
+            <label class="govuk-visually-hidden" id="completedstaffmembers">List of completed staff members</label>
+            <a class="govuk-tabs__tab" href="#completed" aria-labelledby="completedstaffmembers" id="tab_completed" role="tab" aria-controls="completed" aria-selected="false" tabindex="-1">
+                Completed staff members
+            </a>
+        </li>
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" role="presentation">
+            <label class="govuk-visually-hidden" id="incompletestaffmembers">List of incomplete staff members</label>
+            <a class="govuk-tabs__tab" href="#incomplete" aria-labelledby="incompletestaffmembers" id="tab_incomplete" role="tab" aria-controls="incomplete" aria-selected="true" tabindex="0">
+                Incomplete staff members
+            </a>
+        </li>
+    </ul>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="completed" role="tabpanel" aria-labelledby="tab_completed">
+        <p class="govuk-body">
+            There are 14 completed staff members recorded
+        </p>
+        
+    <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Date of birth</th>
+            <th scope="col" class="govuk-table__header"></th>
+        </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">OctPPRegFour FourTestDataLastName</td>
+    <td class="govuk-table__cell">13 August 1981</td>
+    <td class="govuk-table__cell">
+        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member OctPPRegFour FourTestDataLastName 13 August 1981</label>
+        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1437">Change</a>
+        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record OctPPRegFour FourTestDataLastName 13 August 1981</label>
+        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1437">Delete</a>
+    </td>
+</tr>
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">Samantha Incomplete</td>
+    <td class="govuk-table__cell">15 January 1990</td>
+    <td class="govuk-table__cell">
+        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member Samantha Incomplete 15 January 1990</label>
+        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1446">Change</a>
+        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record Samantha Incomplete 15 January 1990</label>
+        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1446">Delete</a>
+    </td>
+</tr>
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">OneHourlyrateFirstNamee OneHourlyrateTestDataLastName</td>
+    <td class="govuk-table__cell">13 August 1981</td>
+    <td class="govuk-table__cell">
+        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member OneHourlyrateFirstNamee OneHourlyrateTestDataLastName 13 August 1981</label>
+        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1439">Change</a>
+        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record OneHourlyrateFirstNamee OneHourlyrateTestDataLastName 13 August 1981</label>
+        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1439">Delete</a>
+    </td>
+</tr>
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">OctPPRegOne OneTestDataLastName</td>
+    <td class="govuk-table__cell">21 August 1981</td>
+    <td class="govuk-table__cell">
+        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member OctPPRegOne OneTestDataLastName 21 August 1981</label>
+        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1434">Change</a>
+        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record OctPPRegOne OneTestDataLastName 21 August 1981</label>
+        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1434">Delete</a>
+    </td>
+</tr>
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">TeacherTestDataFirstNamee TeacherTestDataLastName</td>
+    <td class="govuk-table__cell">13 August 1981</td>
+    <td class="govuk-table__cell">
+        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member TeacherTestDataFirstNamee TeacherTestDataLastName 13 August 1981</label>
+        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1444">Change</a>
+        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record TeacherTestDataFirstNamee TeacherTestDataLastName 13 August 1981</label>
+        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1444">Delete</a>
+    </td>
+</tr>
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">B Test</td>
+    <td class="govuk-table__cell">13 August 1981</td>
+    <td class="govuk-table__cell">
+        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member B Test 13 August 1981</label>
+        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1438">Change</a>
+        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record B Test 13 August 1981</label>
+        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1438">Delete</a>
+    </td>
+</tr>
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">C Test</td>
+    <td class="govuk-table__cell">13 August 1981</td>
+    <td class="govuk-table__cell">
+        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member C Test 13 August 1981</label>
+        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1442">Change</a>
+        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record C Test 13 August 1981</label>
+        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1442">Delete</a>
+    </td>
+</tr>
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">A Test</td>
+    <td class="govuk-table__cell">13 August 1981</td>
+    <td class="govuk-table__cell">
+        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member A Test 13 August 1981</label>
+        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1443">Change</a>
+        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record A Test 13 August 1981</label>
+        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1443">Delete</a>
+    </td>
+</tr>
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">Test Test</td>
+    <td class="govuk-table__cell">20 February 1990</td>
+    <td class="govuk-table__cell">
+        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member Test Test 20 February 1990</label>
+        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1445">Change</a>
+        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record Test Test 20 February 1990</label>
+        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1445">Delete</a>
+    </td>
+</tr>
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">test tester</td>
+    <td class="govuk-table__cell">20 March 2000</td>
+    <td class="govuk-table__cell">
+        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member test tester 20 March 2000</label>
+        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1447">Change</a>
+        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record test tester 20 March 2000</label>
+        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1447">Delete</a>
+    </td>
+</tr>
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">ThreeHourlyrate ThreeHourlyTestDataLastName</td>
+    <td class="govuk-table__cell">13 August 1981</td>
+    <td class="govuk-table__cell">
+        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member ThreeHourlyrate ThreeHourlyTestDataLastName 13 August 1981</label>
+        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1441">Change</a>
+        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record ThreeHourlyrate ThreeHourlyTestDataLastName 13 August 1981</label>
+        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1441">Delete</a>
+    </td>
+</tr>
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">OctPPRegThree ThreeTestDataLastName</td>
+    <td class="govuk-table__cell">13 August 1981</td>
+    <td class="govuk-table__cell">
+        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member OctPPRegThree ThreeTestDataLastName 13 August 1981</label>
+        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1436">Change</a>
+        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record OctPPRegThree ThreeTestDataLastName 13 August 1981</label>
+        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1436">Delete</a>
+    </td>
+</tr>
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">TwoHourlyrateTestDataFirstNamee TwoHourlyrate</td>
+    <td class="govuk-table__cell">13 August 1981</td>
+    <td class="govuk-table__cell">
+        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member TwoHourlyrateTestDataFirstNamee TwoHourlyrate 13 August 1981</label>
+        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1440">Change</a>
+        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record TwoHourlyrateTestDataFirstNamee TwoHourlyrate 13 August 1981</label>
+        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1440">Delete</a>
+    </td>
+</tr>
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">OctPPRegTwo TwoTestDataLastName</td>
+    <td class="govuk-table__cell">13 August 1981</td>
+    <td class="govuk-table__cell">
+        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member OctPPRegTwo TwoTestDataLastName 13 August 1981</label>
+        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1435">Change</a>
+        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record OctPPRegTwo TwoTestDataLastName 13 August 1981</label>
+        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1435">Delete</a>
+    </td>
+</tr>        </tbody>
+
+    </table>
+
+
+    </div>
+    <div class="govuk-tabs__panel" id="incomplete" role="tabpanel" aria-labelledby="tab_incomplete">
+        <p class="govuk-body">
+                <span>There is 1 incomplete staff member recorded</span>
+
+        </p>
+        
+    <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Date of birth</th>
+            <th scope="col" class="govuk-table__header"></th>
+        </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">peter  test </td>
+    <td class="govuk-table__cell">09 October 1990</td>
+    <td class="govuk-table__cell">
+        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member peter  test  09 October 1990</label>
+        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1448">Change</a>
+        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record peter  test  09 October 1990</label>
+        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1448">Delete</a>
+    </td>
+</tr>        </tbody>
+
+    </table>
+
+
+    </div>
+
+</div>
+
+<p class="govuk-body">
+    </p><div class="govuk-button-group">
+        <label class="govuk-visually-hidden" id="addstaffmember">Add a member of staff not already recorded </label>
+        <a class="govuk-button" aria-labelledby="addstaffmember" href="/few/staff/add-staff-member">Add another staff member</a>
+        <label class="govuk-visually-hidden" id="returntodashboard">Exit from this collection and return to dashboard tile page </label>
+        <a class="govuk-link" aria-labelledby="returntodashboard" href="/submission-options">Return to dashboard</a>
+    </div>
+<p></p>
+
+    <input type="hidden" value="1" id="incomplete-select">
+
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+
+{% endblock %}

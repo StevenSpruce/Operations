@@ -1,0 +1,141 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<body class="govuk-template__body  js-enabled">
+    <div class="govuk-width-container">
+       <a href="/FEWHomeClosed" class="govuk-back-link">Back to Homepage</a>
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <div class="govuk-grid-row flex">
+                        <div id="left-nav-wrapper" class="govuk-grid-column-one-quarter flex-grow-1">
+                            <div class="sticky-top">
+                                
+<ul class="govuk-list left-navigation-2">
+   
+    
+    <li asp-authorize="">
+        <a class="govuk-link active govuk-!-font-weight-bold" href="/few/reports">FE Workforce</a>
+    </li>
+    
+</ul>
+
+                </div>
+                        </div>
+                        <div class="govuk-grid-column-three-quarters flex-grow-1">
+                            <div class="govuk-form-group">
+                                
+
+
+<h1 class="govuk-heading-l" id="submission">
+    Submissions
+</h1>
+
+<p>FE staff data collection</p>
+
+<h2 class="govuk-heading-l">Academic Year 2021 to 2022</h2>
+
+<h3 class="govuk-heading-m">Online form</h3>
+
+<p>View your 2021 to 2022 staff data via the <a class="govuk-link" href="/FEWStaffListPrevious">online form.</a>
+</p>
+
+
+<h3 class="govuk-heading-m">XML file submission</h3>
+
+<p>Download your XML file</p>
+
+
+<table class="govuk-table">
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Date</th>
+            <th class="govuk-table__header" scope="col">File</th>
+            <th class="govuk-table__header" scope="col">Submitted by</th>
+            <th class="govuk-table__header" scope="col">Reference</th>
+            <th class="govuk-table__header" scope="col">Reports</th>
+
+        </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header" scope="row">9 June 2022 at 3:06pm</td>
+                <td class="govuk-table__cell">
+                    <a class="govuk-link" href="/few/reports/DownloadFile/10041007/1946269">FEW-10041007-2021-20220609-080000-02.XML</a>
+                </td>
+                <td class="govuk-table__cell" scope="row">Shared FE Workforce User</td>
+                <td class="govuk-table__cell" scope="row">1946270</td>
+
+                <td class="govuk-table__cell">
+                    <a class="govuk-link" href="/few/reports/DownloadFile/10041007/1946269">Download reports</a>
+
+                 </td>
+            </tr>
+    </tbody>
+</table>
+
+
+
+        <h2 class="govuk-heading-l">Academic Year 2020 to 2021</h2>
+
+        <h3 class="govuk-heading-m">Online form</h3>
+        
+        <p>View your 2020 to 2021 staff data via the <a class="govuk-link" href="/FEWStaffListPrevious">online form.</a>
+        </p>
+
+
+        <h3 class="govuk-heading-m">XML file submission</h3>
+        
+        <p>Download your XML file</p>
+
+
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Date</th>
+                    <th class="govuk-table__header" scope="col">File</th>
+                    <th class="govuk-table__header" scope="col">Submitted by</th>
+                    <th class="govuk-table__header" scope="col">Reference</th>
+                    <th class="govuk-table__header" scope="col">Reports</th>
+
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__header" scope="row">9 June 2022 at 3:06pm</td>
+                        <td class="govuk-table__cell">
+                            <a class="govuk-link" href="/few/reports/DownloadFile/10041007/1946269">FEW-10041007-2021-20220609-080000-02.XML</a>
+                        </td>
+                        <td class="govuk-table__cell" scope="row">Shared FE Workforce User</td>
+                        <td class="govuk-table__cell" scope="row">1946269</td>
+
+                        <td class="govuk-table__cell">
+                            <a class="govuk-link" href="/few/reports/DownloadFile/10041007/1946269">Download reports</a>
+                        </td>
+                    </tr>
+ 
+
+            </tbody>
+        </table>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+{% endblock %}
