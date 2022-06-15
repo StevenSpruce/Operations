@@ -1,0 +1,80 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+    <a href="/FEWSeniorLeaderManagementVacancies" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <div class="govuk-grid-column-two-thirds">
+                    
+
+                    
+
+<div class="govuk-grid-column-full">
+
+  
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <span class="govuk-caption-xl">Academic year: 1 August YYYY to 31 July YYYY</span>
+                    <h1 class="govuk-fieldset__heading">
+                        Teaching vacancies
+                    </h1>
+                </legend>
+
+                <form method="post" action="/FEWTeachingVacanciesSelection">
+                    <div class="govuk-form-group">
+                     <fieldset class="govuk-fieldset">
+            
+
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m" 0="">
+                    <h2 class="govuk-fieldset__heading">
+                        Were there any teaching vacancies during the academic year?                    
+                    </h2>
+                </legend>
+            <div class="govuk-hint">
+                You can add teaching vacancy numbers on the next page if applicable. Providers might use different phrasing for teaching vacancies, such as lecturer, trainer, instructor or tutor vacancies
+            </div>
+
+            <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId207" name="TeachingVacancies" value="Yes" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId207" class="govuk-label govuk-radios__label">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId208" name="TeachingVacancies" value="No" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId208" class="govuk-label govuk-radios__label">
+                                No
+                            </label>
+                        </div>
+            </div>
+            <br>
+        </fieldset>
+    </div>
+
+            </div>
+        </div>
+        <br>
+        <button class="govuk-button" type="submit" id="submit">
+            Save and continue
+        </button>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JXkYVn2PiNDhyrTwLjKaCpBA1l1Nqw5XI046SWTXB6M087PcM5DCR7kUlZN3feQ7G-wvmLs49OvtJsBIjL-6A-oCnY_DUNyACa5U-KRjyae2CNqqtvhBEtO3fo_lkIdCPM1g-HaZ-8RhQtJcPhZf-wkxKnGWHHKkS6Y4kaziABHnyHmfsahB_SyXLFfdZSmgQ"></form>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>   
+
+
+{% endblock %}

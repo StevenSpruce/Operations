@@ -1,0 +1,110 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+    <a href="/FEWTeachingRecruitment" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+
+                    
+
+                    
+
+<form method="post" id="form" action="/few/organisation/check-difficult-teaching-vacancies-subjects">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <span class="govuk-caption-l">Academic year: 1 August YYYY to 31 July YYYY</span>
+            <h1 class="govuk-heading-l">Which teaching vacancies were difficult to recruit for?</h1>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+
+                    
+
+                            <h2 class="govuk-heading-m">
+                                Academic subjects
+                            </h2>
+                            <div class="govuk-hint">
+                                Select subjects that were difficult to recruit for
+                            </div>
+                        <div class="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" type="checkbox" id="Subject_47" name="VacancyBySubjects[0].WasDifficultToRecruit" value="true">
+                                        <label class="govuk-label govuk-checkboxes__label" for="Subject_47">
+                                            Ancient Languages
+                                        </label>
+                                    </div>
+                                <input type="hidden" id="VacancyBySubjects_0__Subject" name="VacancyBySubjects[0].Subject" value="Ancient Languages">
+                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_0__CategoryCode" name="VacancyBySubjects[0].CategoryCode" value="14">
+                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_0__IsFilteredOut" name="VacancyBySubjects[0].IsFilteredOut" value="False">
+                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_0__SubjectId" name="VacancyBySubjects[0].SubjectId" value="47">
+                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_0__Ukprn" name="VacancyBySubjects[0].Ukprn" value="10041007">
+                        </div>
+                            <br>
+                            <h2 class="govuk-heading-m">
+                                Vocational programmes
+                            </h2>
+                            <div class="govuk-hint">
+                                Select programmes that were difficult to recruit for
+                            </div>
+                        <div class="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" type="checkbox" id="Subject_77" name="VacancyBySubjects[1].WasDifficultToRecruit" value="true">
+                                        <label class="govuk-label govuk-checkboxes__label" for="Subject_77">
+                                            Accounting and Finance
+                                        </label>
+                                    </div>
+                                <input type="hidden" id="VacancyBySubjects_1__Subject" name="VacancyBySubjects[1].Subject" value="Accounting and Finance">
+                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_1__CategoryCode" name="VacancyBySubjects[1].CategoryCode" value="15">
+                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_1__IsFilteredOut" name="VacancyBySubjects[1].IsFilteredOut" value="False">
+                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_1__SubjectId" name="VacancyBySubjects[1].SubjectId" value="77">
+                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_1__Ukprn" name="VacancyBySubjects[1].Ukprn" value="10041007">
+                        </div>
+                            <br>
+                            <h2 class="govuk-heading-m">
+                                Other learning programmes
+                            </h2>
+                            <div class="govuk-hint">
+                                Select programmes that were difficult to recruit for
+                            </div>
+                        <div class="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" type="checkbox" id="Subject_100" name="VacancyBySubjects[2].WasDifficultToRecruit" value="true">
+                                        <label class="govuk-label govuk-checkboxes__label" for="Subject_100">
+                                            Functional Skills English
+                                        </label>
+                                    </div>
+                                <input type="hidden" id="VacancyBySubjects_2__Subject" name="VacancyBySubjects[2].Subject" value="Functional Skills English">
+                                <input type="hidden" data-val="true" data-val-required="The CategoryCode field is required." id="VacancyBySubjects_2__CategoryCode" name="VacancyBySubjects[2].CategoryCode" value="16">
+                                <input type="hidden" data-val="true" data-val-required="The IsFilteredOut field is required." id="VacancyBySubjects_2__IsFilteredOut" name="VacancyBySubjects[2].IsFilteredOut" value="False">
+                                <input type="hidden" data-val="true" data-val-required="The SubjectId field is required." id="VacancyBySubjects_2__SubjectId" name="VacancyBySubjects[2].SubjectId" value="100">
+                                <input type="hidden" data-val="true" data-val-required="The Ukprn field is required." id="VacancyBySubjects_2__Ukprn" name="VacancyBySubjects[2].Ukprn" value="10041007">
+                        </div>
+                            <br>
+                    <br>
+                    
+                    
+                    <a class="govuk-button secondary" href="/FEWWhyWasItDifficult">Save and continue</a>
+
+
+
+                </fieldset>
+            </div>
+        </div>
+    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+</body>   
+
+
+{% endblock %}

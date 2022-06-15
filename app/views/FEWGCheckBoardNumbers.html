@@ -1,0 +1,83 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+    <a class="govuk-back-link" href="/FEWGBoardRepresentation">Back</a>
+                  
+
+<div class="govuk-grid-row">
+        <span class="govuk-caption-l">Governor data as at 31 July 2021</span>
+
+        <h1 class="govuk-heading-l">
+            A total of "sum of board members here" board members are recorded
+        </h1>
+
+
+        <p class="govuk-body">Board representation:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+               <span>{{ data['Governor.StaffCount'] }} Staff governors</span> 
+            </li>
+            <li>
+                <span>{{ data['Governor.StudentCount'] }} Student governors</span> 
+            </li>
+            <li>
+                <span>{{ data['Governor.IndependentCount'] }} Independent governors</span> 
+            </li>
+            <li>
+                <span>{{ data['Governor.ParentCount'] }} Parent governors</span> 
+            </li>
+        </ul>
+      
+            <div class="govuk-form-group">
+                <input class="govuk-visually-hidden" type="number" data-val="true" data-val-required="The CollectionYear field is required." id="CollectionYear" name="CollectionYear" value="2021">
+                <input class="govuk-visually-hidden" type="number" data-val="true" data-val-required="The Ukprn field is required." id="Governor_Ukprn" name="Governor.Ukprn" value="10041007">
+                <input class="govuk-visually-hidden" type="text" id="Governor_StaffCount" name="Governor.StaffCount" value="10">
+                <input class="govuk-visually-hidden" type="text" id="Governor_StudentCount" name="Governor.StudentCount" value="10">
+                <input class="govuk-visually-hidden" type="text" id="Governor_IndependentCount" name="Governor.IndependentCount" value="10">
+                <input class="govuk-visually-hidden" type="text" id="Governor_ParentCount" name="Governor.ParentCount" value="10">
+                <input class="govuk-visually-hidden" type="checkbox" data-val="true" data-val-required="The HaveGovernorTypesChanged field is required." id="HaveGovernorTypesChanged" name="HaveGovernorTypesChanged" value="true">
+                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h2 class="govuk-fieldset__heading">
+                            Is this the correct number of board members?
+                        </h2>
+                    </legend>
+                    <form method="post"  action="/FEWGConfirmNumberBoard">
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" type="radio" id="Governor_Selection" value="True" name="ConfirmBoard">
+                            <label class="govuk-label govuk-radios__label" for="SingleOption_Selection">
+                                Yes, it's the correct number
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" type="radio" value="False" id="SingleOption_Selection" name="ConfirmBoard">
+                            <label class="govuk-label govuk-radios__label" for="SingleOption_Selection">
+                                No, I want to make changes
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+            </div>
+
+            <button class="govuk-button" type="submit" >Save and continue</button>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+<a class="govuk-back-link" href="/FEWGBoardGender">Back</a>
+<div class="govuk-grid-row">
+        <form method="post">
+            <div class="govuk-form-group" id="Governor_MaximumBoardSize">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-xl">Governor data as at 31 July 2021</span>
+                        <h1 class="govuk-fieldset__heading">
+                            What are the age ranges of the board members?
+                        </h1>
+                    </legend>
+
+                    <p>Enter numbers for governors into applicable age ranges.</p>
+
+                    
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="Governor_Age1618Count">16 to 18 years</label>
+                        
+                        <input class="govuk-input govuk-input--width-4" type="text" maxlength="2" id="Governor_Age1618Count" name="Governor.Age1618Count" value="2">
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="Governor_Age1924Count">19 to 24 years</label>
+                        
+                        <input class="govuk-input govuk-input--width-4" type="text" maxlength="2" id="Governor_Age1924Count" name="Governor.Age1924Count" value="2">
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="Governor_Age2534Count">25 to 34 years</label>
+                        
+                        <input class="govuk-input govuk-input--width-4" type="text" maxlength="2" id="Governor_Age2534Count" name="Governor.Age2534Count" value="2">
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="Governor_Age3544Count">35 to 44 years</label>
+                        
+                        <input class="govuk-input govuk-input--width-4" type="text" maxlength="2" id="Governor_Age3544Count" name="Governor.Age3544Count" value="2">
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="Governor_Age4554Count">45 to 54 years</label>
+                        
+                        <input class="govuk-input govuk-input--width-4" type="text" maxlength="2" id="Governor_Age4554Count" name="Governor.Age4554Count" value="2">
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="Governor_Age5564Count">55 to 64 years</label>
+                        
+                        <input class="govuk-input govuk-input--width-4" type="text" maxlength="2" id="Governor_Age5564Count" name="Governor.Age5564Count" value="10">
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="Governor_Age6574Count">65 to 74 years</label>
+                        
+                        <input class="govuk-input govuk-input--width-4" type="text" maxlength="2" id="Governor_Age6574Count" name="Governor.Age6574Count" value="10">
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="Governor_Age75OverCount">75 years or over</label>
+                        
+                        <input class="govuk-input govuk-input--width-4" type="text" maxlength="2" id="Governor_Age75OverCount" name="Governor.Age75OverCount" value="10">
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="Governor_AgePreferNotToSayCount">Prefer not to say</label>
+                        
+                        <input class="govuk-input govuk-input--width-4" type="text" maxlength="2" id="Governor_AgePreferNotToSayCount" name="Governor.AgePreferNotToSayCount" value="0">
+                    </div>
+
+                    <input type="hidden" id="Governor_BoardMembersCount" name="Governor.BoardMembersCount" value="40">
+                    <input type="hidden" data-val="true" data-val-required="The CollectionYear field is required." id="CollectionYear" name="CollectionYear" value="2021">
+                </fieldset>
+            </div>
+
+            <button class="govuk-button" type="submit" formaction="/FEWGBoardDisability">
+                Save and continue
+            </button>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body> 
+
+
+
+{% endblock %}

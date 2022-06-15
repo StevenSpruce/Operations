@@ -1,0 +1,109 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+    <a class="govuk-back-link" href="/FEWGTotalBoard">Back</a>
+
+<div class="govuk-grid-row">
+        
+        <form method="post">
+            <input class="govuk-visually-hidden" type="number" data-val="true" data-val-required="The CollectionYear field is required." id="CollectionYear" name="CollectionYear" value="2021">
+            <div class="govuk-form-group" id="Governor_PageError">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-xl">Governor data as at 31 July 2021</span>
+                        <h1 class="govuk-fieldset__heading">
+                            How is the board currently represented?
+                        </h1>
+                    </legend>
+
+                   <p>Enter figures for current board members. Do not include co-opted governors.</p>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="staff-governors">
+                            Staff governors  
+                        </label>
+                        <div id="account-number-hint" class="govuk-hint">
+                            Include executive (ex-officio), principal or chief executive and other staff members who are governors
+                        </div>
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                                
+                                <input class="govuk-input govuk-input--width-4" type="text" maxlength="2" id="Governor_StaffCount" name="Governor.StaffCount" value="{{ data['Governor.StaffCount'] }}">
+                                <br>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="student-governors">
+                            Student governors
+                        </label>
+                        <div id="account-number-hint" class="govuk-hint">
+                            Include part-time students if applicable
+                        </div>
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                                
+                                <input class="govuk-input govuk-input--width-4" type="text" maxlength="2" id="Governor_StudentCount" name="Governor.StudentCount" value="{{ data['Governor.StudentCount'] }} ">
+                                <br>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="independent-governors">
+                            Independent governors
+                        </label>
+                        <div id="account-number-hint" class="govuk-hint">
+                            Not a member of staff, student or parent at the organisation
+                        </div>
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                                
+                                <input class="govuk-input govuk-input--width-4" type="text" maxlength="2" id="Governor_IndependentCount" name="Governor.IndependentCount" value="{{ data['Governor.IndependentCount'] }}">
+                                <br>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="parent-governors">
+                            Parent governors
+                        </label>
+                        <div id="account-number-hint" class="govuk-hint">
+                            Parent of a learner at the organisation. Not a member of staff or a student at the organisation
+                        </div>
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                                
+                                <input class="govuk-input govuk-input--width-4" type="text" maxlength="2" id="Governor_ParentCount" name="Governor.ParentCount" value="{{ data['Governor.ParentCount'] }}">
+                                <br>
+                            </fieldset>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <button class="govuk-button" type="submit" formaction="/FEWGCheckBoardNumbers">Save and continue</button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JXkYVn2PiNDhyrTwLjKaCrXndlQOlq-j74ccushoTF4cmbWtxDp9mss_akk2Sa4VHOS1EHeT47AvmP0jAJVb5l3JcO46dkFP6cCiXJycS5k6aMF3YuMN84RCm5Otx04_5dStVSSAQm6eOvoPCGybdLXch9rnSVerpWEXXkNo1fnra5UlwcCSDf9au23XksKHg"></form>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+ 
+
+
+
+{% endblock %}

@@ -5,6 +5,7 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
+    <a href="/FEWSelectCollectionType" class="govuk-back-link">Back</a>
 
 
         <main class="govuk-main-wrapper" id="content" role="main">
@@ -17,52 +18,53 @@ GOV.UK Prototype Kit
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
         <span class="govuk-caption-l">Academic year: 1 August YYYY to 31 July YYYY</span>
-        <h1 class="govuk-heading-l">Record further education data</h1>
+        <h1 class="govuk-heading-l">Record staff data: select method</h1>
 
         <p class="govuk-body">
-            This data collection has 2 parts.  You can start with either.
+            Submissions must use either the online form or an XML file.
+        </p>
+        
+        <p class="govuk-body">
+            Overview
         </p>
 
-        <form method="post" id="radio-group" action="/few/submissionAuthorised/select-collection-type">
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Use the online form service to record staff member data individually</li>
+            <li>XML file data can be prepared and generated <a class="govuk-link" href="/publicdownloads/FEWorkforceStaffentrytool">using our desktop application</a> or your own system for bulk uploading of staff data</li>
+        </ul>
+
+        <form method="post" action="/FEWStaffMethodSelection">
             <div class="govuk-form-group">
                 
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                        <h2 class="govuk-fieldset__heading">
-                            Select an option
-                        </h2>
+                        Select an option
                     </legend>
                     <div class="govuk-radios">
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="option-1" type="radio" value="staff" aria-describedby="option-1-item-hint" name="SelectedOption">
+                            <input class="govuk-radios__input" id="option-1" type="radio" value="online" aria-describedby="option-1-item-hint" name="SelectedOptionStaff">
                             <label class="govuk-label govuk-radios__label" for="option-1">
-                                Record staff data
+                                Use the online form service
                             </label>
-                            <div id="option-1-item-hint" class="govuk-hint govuk-radios__hint">
-                                Requires data for job role, qualifications, experience, personal details
-                            </div>
                         </div>
                         <div class="govuk-radios__item">
-                            
-                                <input class="govuk-radios__input" id="option-2a" type="radio" value="vacancyAndRecruitment" aria-describedby="option-2-item-hint" name="SelectedOption">
-                            
-                            <label class="govuk-label govuk-radios__label" for="option-2">
-                                Record vacancy and recruitment data
+                            <input class="govuk-radios__input" id="option-3" type="radio" value="uploadXml" aria-describedby="option-3-item-hint" name="SelectedOptionStaff">
+                            <label class="govuk-label govuk-radios__label" for="option-3">
+                                Upload an XML file
                             </label>
-                            <div id="option-2-item-hint" class="govuk-hint govuk-radios__hint">
-                                Requires data for senior management and teaching vacancies, employed apprentices
-                            </div>
                         </div>
                     </div>
                 </fieldset>
+                <br>
+                <br>
+                <button class="govuk-button" type="submit">
+                    Continue
+                </button>
             </div>
-
-            <button class="govuk-button" type="submit" id="submit">
-                Continue
-            </button>
-        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JXkYVn2PiNDhyrTwLjKaCryEnCJl6MeA9ZkggO2bIcacoW8VaoBnmCYoyjAH8YL6jF_YiswgQyJJXtJnUv_u1mY-1E2E8lcK5HOj8Ynq29U8hfRWm1fo4LrBlVhY_tfdktGQTFXkPrNq4AeNSmO2wJ00n2QLMSWRosvi4uqbMfvuvfKeYq_UoA3BrjUf5y1rw"></form>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JXkYVn2PiNDhyrTwLjKaCrIV0AECWV5IRjfS6lbTHLebDTekZW_bxMW-TOXF59LVf1rwxPl4zWhToxb-merZrZw-fLFhdRstI3SPEKzzbLnA11WEyIX8F2P5nI9OFdJTIXwu1eVpMoHoTSzSWFaC4EyKUmMsdhMmShf4PLm1VOBxVZvwlT93SfVdrn8FWZ_1A"></form>
     </div>
 </div>
+
 
                 </div>
             </div>
@@ -71,5 +73,6 @@ GOV.UK Prototype Kit
 
 
 </body>
+
 
 {% endblock %}

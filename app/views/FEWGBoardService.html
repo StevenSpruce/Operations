@@ -1,0 +1,96 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+    <a class="govuk-back-link" href="/FEWGBoardEthnicity">Back</a>
+<div class="govuk-grid-row">
+
+        <form action="" method="post" class="form">
+            <div class="govuk-form-group" id="Governor_MaximumBoardSize">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-xl">Governor data as at 31 July 2021</span>
+                        <h1 class="govuk-fieldset__heading">
+                            How long have board members served since they were appointed?
+                        </h1>
+                    </legend>
+                    <p class="govuk-body">Enter figures accounting for all board members.</p>
+
+                    
+                    <div class="govuk-form-group">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-label--m" for="Governor_Year0Count">
+                                Less than 1 year served
+                            </label>
+                            
+                            <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_Year0Count" name="Governor.Year0Count" value="40">
+                        </div>
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-label--m" for="Governor_Years1To4Count">
+                                1 to 4 years served
+                            </label>
+                            
+                            <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_Years1To4Count" name="Governor.Years1To4Count" value="0">
+                        </div>
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-label--m" for="Governor_Years5To8Count">
+                                5 to 8 years served
+                            </label>
+                            
+                            <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_Years5To8Count" name="Governor.Years5To8Count" value="0">
+                        </div>
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-label--m" for="Governor_Years9To12Count">
+                                9 to 12 years served
+                            </label>
+                            
+
+                            <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_Years9To12Count" name="Governor.Years9To12Count" value="0">
+                        </div>
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-label--m" for="Governor_YearsOver12Count">
+                                Over 12 years served
+                            </label>
+                            
+
+                            <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_YearsOver12Count" name="Governor.YearsOver12Count" value="0">
+                        </div>
+                    </div>
+
+                    <input class="govuk-visually-hidden" type="number" data-val="true" data-val-required="The CollectionYear field is required." id="CollectionYear" name="CollectionYear" value="2021">
+                    <input class="govuk-visually-hidden" type="number" id="Governor_BoardMembersCount" name="Governor.BoardMembersCount" value="40">
+                </fieldset>
+            </div>
+
+            <button class="govuk-button" type="submit" formaction="/FEWGBoardInYearVacancy">
+                Save and continue
+            </button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JXkYVn2PiNDhyrTwLjKaCp1a9ox4Qr76W8W6xVBNuYwr8Yy9NxdHuXUyp3wfb7r6FP37bkSw2KfSF05LQY7Qgo4fMJhobYey71CAQuwoI_sJEC0TkNL5MhelSRRedMhdv7S1BzMEqw2A-ZFDqa7MkYEj8nJ_S2xTKVxZ91ZWyV6blkUNO7SAe8LTAag93kfmQ"></form>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+{% endblock %}

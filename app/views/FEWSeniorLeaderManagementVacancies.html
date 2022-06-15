@@ -1,0 +1,90 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+    <a href="/FEWVacancyStart" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <div class="govuk-grid-column-two-thirds">
+                    
+
+                    
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form method="post">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-xl">Academic year: 1 August YYYY to 31 July YYYY</span>
+                        <h1 class="govuk-fieldset__heading">
+                            Vacancy and recruitment for senior leader and management roles
+                        </h1>
+                    </legend>
+                    <div class="govuk-form-group">
+
+                        <p>For example count vacancies for:</p>
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>Principals</li>
+                            <li>Vice-principals</li>
+                            <li>Senior managers</li>
+                            <li>CEOs</li>
+                            <li>Directors</li>
+                            <li>Functional or people manager.</li>
+                            <li>Faculty, department manager</li>
+                            <li>Curriculum, or programme lead</li>
+                            <li>Advanced practitioner</li>
+                            <li>Other types of senior leader or manager</li>
+                        </ul>
+                        <p>Provide answers for both questions. Enter 0 if not applicable.</p>
+
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading">
+                                How many senior leader or manager vacancies did you have?<span class="govuk-visually-hidden">line 1 of 2</span>
+                            </h1>
+                        </legend>
+                        
+                        <input class="govuk-input govuk-input--width-4" id="howManySeniorLeaderOrManagerVacanciesDidYouHave" type="text" aria-describedby="howManySeniorLeaderOrManagerVacanciesDidYouHaveError" maxlength="3" name="vacancyAndRecruitmentForSeniorLeaders.HowManySeniorLeaderOrManagerVacanciesDidYouHave" value="">
+                        <br>
+                        <br>
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading">
+                                How many of these vacancies were filled?<span class="govuk-visually-hidden">line 1 of 2</span>
+                            </h1>
+                        </legend>
+                        
+                        <input class="govuk-input govuk-input--width-4" id="howManyVacanciesFilled" type="text" aria-describedby="howManyVacanciesFilledError" maxlength="3" name="vacancyAndRecruitmentForSeniorLeaders.HowManyVacanciesFilled" value="">
+                        <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="8/1/2020 12:00:00 AM">
+                        <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="7/31/2021 12:00:00 AM">
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <a class="govuk-button govuk-button--start" href="/FEWTeachingVacancies">
+                Save and continue
+            </a>
+
+
+
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+</body>
+
+{% endblock %}

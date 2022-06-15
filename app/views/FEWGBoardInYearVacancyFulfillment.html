@@ -1,0 +1,68 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+    <a class="govuk-back-link" href="/FEWGBoardService">Back</a>
+
+
+                    
+<div class="govuk-grid-row">
+
+        <form method="get" class="form">
+            <div class="govuk-form-group">
+                <input class="govuk-visually-hidden" type="number" data-val="true" data-val-required="The CollectionYear field is required." id="CollectionYear" name="CollectionYear" value="2021">
+                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Were there any board member vacancies during the academic year?
+                        </h1>
+                    </legend>
+                    <div class="govuk-form-group">
+                        <div id="changed-name-hint" class="govuk-hint">
+                            Include any governor vacancies that were open at the beginning of, or occurred during, the academic year
+                        </div>
+                        
+                        <div class="govuk-radios govuk-radios--inline">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="Governor_Selection" type="radio" value="True" name="SingleOption.Selection">
+                                <label class="govuk-label govuk-radios__label" for="open-vacancies">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="open-vacancies-2" type="radio" value="False" checked="checked" name="SingleOption.Selection">
+                                <label class="govuk-label govuk-radios__label" for="open-vacancies-2">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+            </div>
+
+
+
+            <button class="govuk-button" type="submit" formaction="/FEW-GOV/SubmitGov10">
+                Save and continue
+            </button>
+        </form>
+    </div>
+
+
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+ 
+
+{% endblock %}
