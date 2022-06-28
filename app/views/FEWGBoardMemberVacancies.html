@@ -1,0 +1,86 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+    <a class="govuk-back-link" href="/FEWGBoardInYearVacancy">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="gov-12" method="post" class="form">
+            <div class="govuk-form-group" id="Governor_">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Board member vacancies
+                        </h1>
+                    </legend>
+
+                    <p class="govuk-body">Record board member vacancies for academic year 2020 to 2021. </p>
+                    <p> Include all board member vacancies that were open at the beginning of, or occurred during the academic year.</p>
+
+                    
+                    <input type="hidden" data-val="true" data-val-required="The CollectionYear field is required." id="CollectionYear" name="CollectionYear" value="2021">
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="Governor_VacanciesCount">
+                            How many vacancies were there during the academic year?
+                        </label>
+                        
+                        <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_VacanciesCount" name="Governor.VacanciesCount" value="">
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="Governor_VacanciesFilledCount">
+                            How many were filled?
+                        </label>
+                        
+                        <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_VacanciesFilledCount" name="Governor.VacanciesFilledCount" value="">
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="Governor_Took6MonthsOrLongerCount">
+                            How many took 6 months or longer to fill?
+                        </label>
+                        
+                        <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_Took6MonthsOrLongerCount" name="Governor.Took6MonthsOrLongerCount" value="">
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--m" for="Governor_UnfilledCount">
+                            How many vacancies have been open for 6 months or longer and are still unfilled?
+                        </label>
+                        
+                        <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_UnfilledCount" name="Governor.UnfilledCount" value="">
+                    </div>
+                </fieldset>
+            </div>        
+
+            <button role="button" draggable="false" class="govuk-button" formaction="/FEWGCheckYourAnswers">
+                Save and continue
+            </button>
+        </form>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+    
+ 
+
+{% endblock %}

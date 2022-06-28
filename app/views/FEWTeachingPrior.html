@@ -1,0 +1,102 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+
+  <a href="/FEWTeachingDFE" class="govuk-back-link">Back</a>
+
+
+      <main class="govuk-main-wrapper" id="content" role="main">
+          <div class="govuk-grid-row flex">
+                
+<div class="govuk-grid-column-full">
+  <form method="post" action="/few/subjects/check-prior-job-relevancy-subject-taught">
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+
+
+              <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1452">
+
+                  <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+          
+
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                  <h1 class="govuk-fieldset__heading">
+Prior to their FE role, how long did they work in a job relevant to the subject they teach?                    </h1>
+              </legend>
+          <div class="govuk-hint">
+              Select an option
+          </div>
+
+          <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                          <input id="LookupItemId166" name="SingleOption.Selection" value="166" class="govuk-radios__input" type="radio">
+                          <label for="LookupItemId166" class="govuk-label govuk-radios__label">
+                              Less than one year
+                          </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                          <input id="LookupItemId167" name="SingleOption.Selection" value="167" class="govuk-radios__input" type="radio">
+                          <label for="LookupItemId167" class="govuk-label govuk-radios__label">
+                              1 to 3 years
+                          </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                          <input id="LookupItemId168" name="SingleOption.Selection" value="168" class="govuk-radios__input" type="radio">
+                          <label for="LookupItemId168" class="govuk-label govuk-radios__label">
+                              4 to 10 years
+                          </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                          <input id="LookupItemId169" name="SingleOption.Selection" value="169" class="govuk-radios__input" type="radio">
+                          <label for="LookupItemId169" class="govuk-label govuk-radios__label">
+                              11 to 20 years
+                          </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                          <input id="LookupItemId170" name="SingleOption.Selection" value="170" class="govuk-radios__input" type="radio">
+                          <label for="LookupItemId170" class="govuk-label govuk-radios__label">
+                              Over 20 years
+                          </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                          <input id="LookupItemId171" name="SingleOption.Selection" value="171" class="govuk-radios__input" type="radio">
+                          <label for="LookupItemId171" class="govuk-label govuk-radios__label">
+                              They haven’t had prior industry experience
+                          </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                          <input id="LookupItemId172" name="SingleOption.Selection" value="172" class="govuk-radios__input" type="radio">
+                          <label for="LookupItemId172" class="govuk-label govuk-radios__label">
+                              Not known 
+                          </label>
+                      </div>
+              <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="">
+              <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="">
+          </div>
+          <br>
+      </fieldset>
+  </div>
+
+          </div>
+      </div>
+      <br>
+      <button class="govuk-button" type="submit" formaction="/FEWTeachingJob">Save and continue</button>
+
+  <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KVAUD2KRGL8BxM1v2H4XHs4UfgAZ4dfscwqpvdGmrbp0Dr3E-QtgeiJ7F7ODMB3pDS_a2OwKv4FplFkBFYYbk_yq1N48zr0RVAFaEeJggGGXCPn9vJJ-m4ERVbn1opNxGvDVSEMeCQcJOAxZau3Q5ZcRwwaqozDrrjU1xPpLPTABQ"></form>
+</div>
+
+
+              </div>
+          </div>
+      </main>
+  </div>
+
+</body>
+
+{% endblock %}

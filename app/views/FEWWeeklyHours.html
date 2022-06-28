@@ -1,0 +1,64 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+    <a href="/FEWMainEmploymentContract" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+
+        <h1 class="govuk-heading-xl">Weekly contracted hours</h1>
+
+        <p class="govuk-body">
+            For staff members with more than one contract, record weekly contracted hours using their main contract with the most hours.
+        </p>
+
+        <form method="post" id="weekly-hours-form" action="/few/contracts/check-weekly-contracted-hours">
+            <div class="govuk-form-group">
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1450">
+                <fieldset class="govuk-fieldset">
+                    <div class="govuk-form-group" id="weekly-Group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h2 class="govuk-fieldset__heading">
+                                What are their weekly contracted hours?
+                            </h2>
+                        </legend>
+                        <div id="weekly-hours-hint" class="govuk-hint">
+                            For example enter 32.5 for thirty two and a half
+                        </div>
+
+                        
+                        <div class="govuk-input__wrapper">
+                            <input class="govuk-input govuk-input--width-5" id="weekly-hours" type="text" inputmode="numeric" maxlength="5" name="WeeklyHours.Hours" value="">
+                            <div class="govuk-input__suffix" aria-hidden="true">hours per week</div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+            <a class="govuk-button secondary" href="/FEWFTE">Save and continue</a>
+
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KWiH8TsmjJxmDRf2SjFdpKH1Hmn_4GNNII9GNYOXCsCnCjopZRC9HXYy9Dx2xBbt08JOJk47H6Ueao40Eqpj-DXm3yCFROrFqJ3xJTg52EFn0ileDs-boahbp8k47-XRkxoyuFLEn16g2VBpoA5xTAs2iDxPheANpXI6Sm2vTLnaA"></form>
+    </div>
+</div>
+
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+
+{% endblock %}

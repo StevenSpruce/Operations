@@ -1,0 +1,100 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+
+
+    <a href="/FEWEmploymentContracts" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <div class="govuk-grid-column-two-thirds">
+                    
+
+                    
+
+<div class="govuk-grid-column-full">
+    <form method="post" action="/few/contracts/check-main-contract-type">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1450">
+
+                    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+            
+
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                    <h1 class="govuk-fieldset__heading">
+What is their main type of contract?                    </h1>
+                </legend>
+            <div class="govuk-hint">
+                The main contract should be the one that is for the most hours
+            </div>
+
+            <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId178" name="SingleOption.Selection" value="178" checked="" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId178" class="govuk-label govuk-radios__label">
+                                Permanent
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId179" name="SingleOption.Selection" value="179" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId179" class="govuk-label govuk-radios__label">
+                                Fixed term 
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId180" name="SingleOption.Selection" value="180" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId180" class="govuk-label govuk-radios__label">
+                                Variable hours
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId181" name="SingleOption.Selection" value="181" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId181" class="govuk-label govuk-radios__label">
+                                Zero hours 
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId182" name="SingleOption.Selection" value="182" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId182" class="govuk-label govuk-radios__label">
+                                Other
+                            </label>
+                        </div>
+                <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="">
+                <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="">
+            </div>
+            <br>
+        </fieldset>
+    </div>
+
+            </div>
+        </div>
+        <br>
+        <a class="govuk-button secondary" href="/FEWWeeklyHours">Save and continue - PROTOTYPE SELECTED PERMANENT OR FIXED TERM</a>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KWtFXrIgrtEz8HNfnJ6Nfc6ggNsyqbBypD69ldSvv6zhUgHC8tP2RXFH8lVW-Di_LjJr7r_i2mKoxlru4FZ7Syr-X9ssny6qFrfneTiPlkB9X4d22V7YKneDOVnkWzjv5ZIPPD5II2ZBkzAR20g-52D3VzsT2PvFFHuwc70HJS1rA"></form>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+<input type="hidden" id="version" value="0.2.0.0">
+
+
+
+
+
+</body>
+
+
+{% endblock %}

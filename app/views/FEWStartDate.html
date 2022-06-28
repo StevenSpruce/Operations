@@ -1,0 +1,75 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+    <a href="/FEWPayRise" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                    
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+        <h1 class="govuk-heading-xl">When did they start working for the organisation?</h1>
+        <form method="post" id="radio-group" action="/few/contracts/check-contract-start-date">
+            <div class="govuk-form-group">
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1450">
+                <fieldset class="govuk-fieldset">
+
+                    <div id="dob-hint" class="govuk-hint">
+                        For example, 4 10 2012
+                    </div>
+                    
+                    <div class="govuk-date-input" id="dob">
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="startDateDay">
+                                    Day
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="startDateDay" type="text" pattern="[0-9]*" inputmode="numeric" name="EmploymentStartDate.StartDateDay" value="1">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="startDateMonth">
+                                    Month
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="startDateMonth" type="text" pattern="[0-9]*" inputmode="numeric" name="EmploymentStartDate.StartDateMonth" value="1">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="startDateYear">
+                                    Year
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govsuk-input--width-4" id="startDateYear" type="text" pattern="[0-9]*" inputmode="numeric" name="EmploymentStartDate.StartDateYear" value="2021">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+            <a class="govuk-button secondary" href="/FEWTimeCurrentRole">Save and continue</a>
+
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KUx1gMKzty26QDc9u1xPSl4M7EdQV3XHJT-Kn53cvOsLLcUS_oLiro5isbmRn7NumyTPELW9d6F6CSNK2asEcnkIThMZO2YytMDyRE1yVTVAQQAt9--jyfkVqt0bI7qdVvo5FN2IWgsrraDVgX5fxybs4otp-NfjqK8hNI3xNIG1w"></form>
+    </div>
+</div>
+
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+
+
+{% endblock %}

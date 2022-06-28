@@ -19,7 +19,7 @@ GOV.UK Prototype Kit
                             How long have board members served since they were appointed?
                         </h1>
                     </legend>
-                    <p class="govuk-body">Enter figures accounting for all board members.</p>
+                    <p class="govuk-body">Enter numbers accounting for all board members.</p>
 
                     
                     <div class="govuk-form-group">
@@ -28,7 +28,7 @@ GOV.UK Prototype Kit
                                 Less than 1 year served
                             </label>
                             
-                            <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_Year0Count" name="Governor.Year0Count" value="40">
+                            <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_Year0Count" name="Governor.Year0Count" value="{{ data['Governor.Year0Count'] }}">
                         </div>
                     </div>
 
@@ -38,7 +38,7 @@ GOV.UK Prototype Kit
                                 1 to 4 years served
                             </label>
                             
-                            <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_Years1To4Count" name="Governor.Years1To4Count" value="0">
+                            <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_Years1To4Count" name="Governor.Years1To4Count" value="{{ data['Governor.Years1To4Count'] }}">
                         </div>
                     </div>
 
@@ -48,7 +48,7 @@ GOV.UK Prototype Kit
                                 5 to 8 years served
                             </label>
                             
-                            <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_Years5To8Count" name="Governor.Years5To8Count" value="0">
+                            <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_Years5To8Count" name="Governor.Years5To8Count" value="{{ data['Governor.Years5To8Count'] }}">
                         </div>
                     </div>
 
@@ -59,7 +59,7 @@ GOV.UK Prototype Kit
                             </label>
                             
 
-                            <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_Years9To12Count" name="Governor.Years9To12Count" value="0">
+                            <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_Years9To12Count" name="Governor.Years9To12Count" value="{{ data['Governor.Years9To12Count'] }}">
                         </div>
                     </div>
 
@@ -70,7 +70,7 @@ GOV.UK Prototype Kit
                             </label>
                             
 
-                            <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_YearsOver12Count" name="Governor.YearsOver12Count" value="0">
+                            <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_YearsOver12Count" name="Governor.YearsOver12Count" value="{{ data['Governor.YearsOver12Count'] }}">
                         </div>
                     </div>
 

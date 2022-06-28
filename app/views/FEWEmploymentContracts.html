@@ -1,0 +1,71 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+  <a href="/FEWAddJobRoleCompleted" class="govuk-back-link">Back</a>
+
+
+      <main class="govuk-main-wrapper" id="content" role="main">
+          <div class="govuk-grid-row flex">
+
+<div class="govuk-grid-column-full">
+  <form method="post" action="/few/contracts/check-how-many-contracts">
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+<span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+
+              <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1452">
+
+                  <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+          
+
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                  <h1 class="govuk-fieldset__heading">
+How many contracts do they have with the organisation?                    </h1>
+              </legend>
+          <div class="govuk-hint">
+              Only include contracts from 1 August 2020 to 31 July 2021 academic year
+          </div>
+
+          <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                          <input id="LookupItemId176" name="SingleOption.Selection" value="176" class="govuk-radios__input" type="radio">
+                          <label for="LookupItemId176" class="govuk-label govuk-radios__label">
+                              One
+                          </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                          <input id="LookupItemId177" name="SingleOption.Selection" value="177" class="govuk-radios__input" type="radio">
+                          <label for="LookupItemId177" class="govuk-label govuk-radios__label">
+                              More than one
+                          </label>
+                      </div>
+              <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="">
+              <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="">
+          </div>
+          <br>
+      </fieldset>
+  </div>
+
+          </div>
+      </div>
+      <br>
+      <a class="govuk-button secondary" href="/FEWMainEmploymentContract">Save and continue</a>
+
+  <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KX_bFeDa2pJL6ts2jTAIP2xkUn-0NY7oFL9YALP2_uSDef2lt5NZ1ZjHG7K4ne8AZ5rlJWktCg6ps58iYiRxMF6ny1waRluEEtECPMXx4kMlMDR7tva-JAY7jcC1X-rsBxv1B35j1C8HsbRnS10sTB71Rlbh8bsa4-kJnlepKO-Sg"></form>
+</div>
+
+
+              </div>
+          </div>
+      </main>
+  </div>
+</body>
+
+
+
+{% endblock %}

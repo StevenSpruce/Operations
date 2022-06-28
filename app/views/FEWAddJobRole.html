@@ -1,0 +1,529 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<a href="/FEWAddStaffMemberCompleted" class="govuk-back-link">Back</a>
+
+
+<main class="govuk-main-wrapper" id="content" role="main">
+        <div class="govuk-grid-row flex">
+
+<div class="govuk-grid-column-full">
+    <form method="post" action="/few/roles/check-job-roles">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+<span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1452">
+                <input type="hidden" id="StaffName" name="StaffName" value="">
+
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                      What are their job roles?  
+                    </h1>
+                  </legend>
+                  <div class="govuk-hint">
+                    Select one or more job roles for the staff member.
+                </div>
+                <div class="govuk-hint">
+                 Then select up to 5 sub roles (in total) that are most relevant to the staff member's job activities.
+                </div>
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="SeniorLeader" name="SeniorLeader" type="checkbox" value="" data-aria-controls="conditional-SeniorLeader">
+                      <label class="govuk-label govuk-checkboxes__label" for="SeniorLeader">
+                        Senior Leader
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-SeniorLeader">
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="AssistantHead" name="AssistantHead" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="AssistantHead">
+                            Assistant Head
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="AssistantPrinciple" name="AssistantPrinciple" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="AssistantPrinciple">
+                            Assistant Principle
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="CEO" name="CEO" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="CEO">
+                            CEO
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="Director" name="Director" type="checkbox" value="">
+                            <label class="govuk-label govuk-checkboxes__label" for="Director">
+                              Director
+                            </label>
+                        </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="ExecutiveHead" name="ExecutiveHead" type="checkbox" value="">
+                            <label class="govuk-label govuk-checkboxes__label" for="ExecutiveHead">
+                              Executive Head Teacher
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="HeadTeacher" name="HeadTeacher" type="checkbox" value="">
+                            <label class="govuk-label govuk-checkboxes__label" for="HeadTeacher">
+                              Head Teacher
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="MD" name="MD" type="checkbox" value="">
+                            <label class="govuk-label govuk-checkboxes__label" for="MD">
+                              Managing Director
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="Principle" name="Principle" type="checkbox" value="">
+                            <label class="govuk-label govuk-checkboxes__label" for="Principle">
+                              Principle
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="SeniorManager" name="SeniorManager" type="checkbox" value="">
+                            <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                              Senior Manager
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="VP" name="VP" type="checkbox" value="">
+                            <label class="govuk-label govuk-checkboxes__label" for="SeniorManager">
+                              Vice Principle
+                            </label>
+                          </div>
+                      </div>
+                    </div>
+
+
+
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="Manager" name="Manager" type="checkbox" value="" data-aria-controls="conditional-Manager">
+                      <label class="govuk-label govuk-checkboxes__label" for="Manager">
+                        Manager
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-Manager">
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="CurriculumLead" name="CurriculumLead" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="CurriculumLead">
+                            Curriculum Lead
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="FacultyLead" name="FacultyLead" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="FacultyLead">
+                            Faculty Lead
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="FunctionalManager" name="FunctionalManager" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="FunctionalManager">
+                            Functional Manager
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="HeadOfDepartment" name="HeadOfDepartment" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="HeadOfDepartment">
+                            Head of Department 
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="ProgrammeLead" name="ProgrammeLead" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="ProgrammeLead">
+                            Programme Lead
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="QualityAssuranceManager" name="QualityAssuranceManager" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="QualityAssuranceManager">
+                            Quality Assurance Manager 
+                          </label>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="Teacher" name="Teacher" type="checkbox" value="" data-aria-controls="conditional-Teacher">
+                      <label class="govuk-label govuk-checkboxes__label" for="Teacher">
+                        Teacher
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-Teacher">
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="AdvancedPractitioner" name="AdvancedPractitioner" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="AdvancedPractitioner">
+                            Advanced Practitioner
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Instructor" name="Instructor" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Instructor">
+                            Instructor
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Lecturer" name="Lecturer" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Lecturer">
+                            Lecturer
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Practitioner" name="Practitioner" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Practitioner">
+                            Practitioner
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Teacher" name="Teacher" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Teacher">
+                            Teacher 
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Trainer" name="Trainer" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Trainer">
+                            Trainer 
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Tutor" name="Tutor" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Tutor">
+                            Tutor
+                          </label>
+                        </div>
+
+                      </div>
+                    </div>
+
+
+
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="TeachingSupport" name="TeachingSupport" type="checkbox" value="" data-aria-controls="conditional-TeachingSupport">
+                      <label class="govuk-label govuk-checkboxes__label" for="TeachingSupport">
+                        Teaching Support
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-TeachingSupport">
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Assessor" name="Assessor" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Assessor">
+                            Assessor
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="BehaviourSpecialist" name="BehaviourSpecialist" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="BehaviourSpecialist">
+                            Behaviour Specialist
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="BilingualSupportAssistant" name="BilingualSupportAssistant" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="BilingualSupportAssistant">
+                            Bilingual Support Assistant
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="CareersAdvisor" name="CareersAdvisor" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="CareersAdvisor">
+                            Careers Advisor
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Counsellor" name="Counsellor" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Counsellor">
+                            Counsellor
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="CoverSupervisor" name="CoverSupervisor" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="CoverSupervisor">
+                            Cover Supervisor
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="EducationWelfareOfficer" name="EducationWelfareOfficer" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="EducationWelfareOfficer">
+                            Education Welfare Officer
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="HigherLevelTeachingAssistant" name="HigherLevelTeachingAssistant" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="HigherLevelTeachingAssistant">
+                            Higher Level Teaching Assistant
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="LanguageSupport" name="LanguageSupport" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="LanguageSupport">
+                            Language Support
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="LearningFacilitator" name="LearningFacilitator" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="LearningFacilitator">
+                            Learning Facilitator
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="LearningMentor" name="LearningMentor" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="LearningMentor">
+                            Learning Mentor
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="LearningSupport" name="LearningSupport" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="LearningSupport">
+                            Learning Support
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="LearningSupportAssistant" name="LearningSupportAssistant" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="LearningSupportAssistant">
+                            Learning Support Assistant (SEN)
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Librarian" name="Librarian" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Librarian">
+                            Librarian
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="PastoralSupport" name="PastoralSupport" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="PastoralSupport">
+                            Pastoral Support
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="SENCoordinator" name="SENCoordinator" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="SENCoordinator">
+                            SEN Co-ordinator
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="TeachingAssistant" name="TeachingAssistant" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="TeachingAssistant">
+                            Teaching Assistant
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Technician" name="Technician" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Technician">
+                            Technician
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Therapist" name="Therapist" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Therapist">
+                            Therapist
+                          </label>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="Administration" name="Administration" type="checkbox" value="" data-aria-controls="conditional-Administration">
+                      <label class="govuk-label govuk-checkboxes__label" for="Administration">
+                        Administration
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-Administration">
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Administrator" name="Administrator" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Administrator">
+                            Administrator
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Admissions" name="Admissions" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Admissions">
+                            Admissions
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="ApprenticeshipsAdministrator" name="ApprenticeshipsAdministrator" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="ApprenticeshipsAdministrator">
+                            Apprenticeships Administrator
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Bursar" name="Bursar" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Bursar">
+                            Bursar
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="BusinessManager" name="BusinessManager" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="BusinessManager">
+                            Business Manager
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Clerk" name="Clerk" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Clerk">
+                            Clerk
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="CommunicationSupport" name="CommunicationSupport" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="CommunicationSupport">
+                            Communication Support
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="DataAnalyst" name="DataAnalyst" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="DataAnalyst">
+                            Data Analyst
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="DSL" name="DSL" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="DSL">
+                            DSL and Safe Guarding Officer
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="EmployerEngagement" name="EmployerEngagement" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="EmployerEngagement">
+                            Employer Engagement
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="ExaminationsAdministrator" name="ExaminationsAdministrator" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="ExaminationsAdministrator">
+                            Examinations Administrator
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="ExternalGrants" name="ExternalGrants" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="ExternalGrants">
+                            External Grants and Funding
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="FinanceOfficer" name="FinanceOfficer" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="FinanceOfficer">
+                            Finance Officer
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="HumanResources" name="HumanResources" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="HumanResources">
+                            Human Resources (HR)
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="ICTNetworkManager" name="ICTNetworkManager" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="ICTNetworkManager">
+                            ICT Network Manager
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="InformationServices" name="InformationServices" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="InformationServices">
+                            Information Services (MIS)
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="MarketingAdministrator" name="MarketingAdministrator" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="MarketingAdministrator">
+                            Marketing Administrator
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="OfficeManager" name="OfficeManager" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="OfficeManager">
+                            Office Manager
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="PayrollAdministrator" name="PayrollAdministrator" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="PayrollAdministrator">
+                            Payroll Administrator
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Programmerecruitment " name="Programmerecruitment" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Programmerecruitment">
+                            Programme recruitment 
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Receptionist" name="Receptionist" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Receptionist">
+                            Receptionist
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Secretary" name="Secretary" type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="Secretary">
+                            Secretary
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="TechnologySupport " name="TechnologySupport " type="checkbox" value="">
+                          <label class="govuk-label govuk-checkboxes__label" for="TechnologySupport">
+                            Technology Support 
+                          </label>
+                        </div>
+
+                      </div>
+                    </div>
+
+
+                  </div>
+                </fieldset>
+              </div>
+
+    </div>
+
+            </div>
+        </div>
+        <br>
+        <button class="govuk-button" type="submit" id="submit">Save and continue</button>
+        <button class="govuk-button" type="submit" formaction="/FEWTeachingResponsibilities">Prototype - I have selected manager, teaching support or admin only</button>
+        <button class="govuk-button" type="submit" formaction="/FEWWhatQualsProgrammes">Prototype - I have selected teacher only</button>
+        <button class="govuk-button" type="submit" formaction="/FEWLeaderHead">Prototype - I have selected senior leader only</button>
+
+      </div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+
+{% endblock %}

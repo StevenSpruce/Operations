@@ -102,6 +102,76 @@ router.post('/FEWGConfirmNumberBoard', function (req, res) {
 })
 
 
+router.post('/FEWCheckTeachingResponsibilities', function (req, res) {
+
+  // Make a variable and give it the value from 'FEWStaffMethodSelection'
+  var confirmTeachingResponsibilities = req.session.data['TeachingResponsibilities']
+
+  // Check whether the variable matches a condition
+  if (confirmTeachingResponsibilities == "No"){
+    // Send user to next page
+    res.redirect('/FEWAddJobRoleCompleted')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWWhatQualsProgrammes')
+  }
+})
+
+
+
+
+router.post('/FEWWhatQualsProgs', function (req, res) {
+
+  // Make a variable and give it the value from 'FEWStaffMethodSelection'
+  var confirmWhatQualsProgs = req.session.data['WhatQualsProgs']
+
+  // Check whether the variable matches a condition
+  if (confirmWhatQualsProgs == "Academic"){
+    // Send user to next page
+    res.redirect('/FEWAcademicQuals')
+  } else if (confirmWhatQualsProgs == "Vocational"){
+    // Send user to ineligible page
+    res.redirect('/FEWVocationalProgs')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWOtherLearningProgs')
+  }
+})
+
+
+router.post('/InYearVacancies', function (req, res) {
+
+  // Make a variable and give it the value from 'FEWStaffMethodSelection'
+  var confirmVacancies = req.session.data['Vacancies']
+
+  // Check whether the variable matches a condition
+  if (confirmVacancies == "Yes"){
+    // Send user to next page
+    res.redirect('/FEWGBoardMemberVacancies')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWGCheckYourAnswers')
+  }
+})
+
+
+
+router.post('/ConfirmSameOrg', function (req, res) {
+
+  // Make a variable and give it the value from 'FEWStaffMethodSelection'
+  var confirmSameOrg = req.session.data['SameOrg']
+
+  // Check whether the variable matches a condition
+  if (confirmSameOrg == "Yes"){
+    // Send user to next page
+    res.redirect('/FEWTeachingEmploymentContractCompleted')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWNoLongerWorks')
+  }
+})
+
+
 
 
 

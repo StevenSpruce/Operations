@@ -1,0 +1,104 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+
+ <a href="/FEWTeachingStatus" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                    
+
+                    
+
+<div class="govuk-grid-column-full">
+    <form method="post" action="/few/subjects/check-highest-maths-qualification">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1452">
+
+                    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+            
+
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                  <h1 class="govuk-fieldset__heading">NEW PAGE *** NEW PAGE *** NEW PAGE *** NEW PAGE</h1>
+                  <h1 class="govuk-fieldset__heading">Have they taken part in, or directly/indirectly benefitted from, any of the listed DfE programmes?</h1>
+                </legend>
+            <div class="govuk-hint">
+                Select all applicable for the academic year.
+            </div>
+
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="TTF" name="TTF" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="TTF">
+                    Taking Teaching Further (TTF)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="MTP" name="MTP" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="MTP">
+                    Mentor Training Programme
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="FEPlatform" name="FEPlatform" type="checkbox" value="">
+                  <label class="govuk-label govuk-checkboxes__label" for="FEPlatform">
+                    Teach in FE Platform
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="Bursaries" name="Bursaries" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="Bursaries">
+                      Bursaries for FE Teacher Training
+                    </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="TLevel" name="TLevel" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="TLevel">
+                      T Level Professional Development
+                    </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="DFENone" name="DFENone" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="DFENone">
+                      None
+                    </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="DFENotKnown" name="DFENotKnown" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="DFENotKnown">
+                      Not known
+                    </label>
+                </div>
+              </div>
+
+            <br>
+        </fieldset>
+    </div>
+
+            </div>
+        </div>
+        <br>
+        <button class="govuk-button" type="submit" formaction="/FEWTeachingPrior">Save and continue</button>
+
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KVSmuQh9vW0pSswHxfVHZEAo1cAtQfI8w8CyAOVK_GSalEU-oyEx7eLGD_sbkYIX_p5jEPTVbdi2cSl_ZZffyLk_eCeeTjgHs5GGBrY6IjAJ1v_mRJq490yrAO06_5p4cK7PZH-fRtJmxCDqtnGNo-BD_Tf1CttPChI7y-innwj7A"></form>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>  
+
+
+
+{% endblock %}

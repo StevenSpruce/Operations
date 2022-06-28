@@ -1,0 +1,112 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <div class="govuk-grid-column-two-thirds">
+                    
+
+                    
+<span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+<h1 class="govuk-heading-l">Summary of personal details</h1>
+
+<dl class="govuk-summary-list dl-override">
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key dt-override">
+            Name
+        </dt>
+        <dd class="govuk-summary-list__value dd-override">
+            {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions dd-override">
+            <a class="govuk-link" href="/few/staff/add-staff-member/1437">
+                Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key dt-override">
+            Date of Birth
+        </dt>
+        <dd class="govuk-summary-list__value dd-override">
+            {{ data['StaffMember.DobDay'] }} {{ data['StaffMember.DobMonth'] }} {{ data['StaffMember.DobYear'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions dd-override">
+            <a class="govuk-link" href="/few/staff/add-staff-member/1437">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key dt-override">
+            Gender
+        </dt>
+        <dd class="govuk-summary-list__value dd-override">
+            {{ data['StaffMember.GenderId'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions dd-override">
+            <a class="govuk-link" href="/few/staff/add-staff-member/1437">
+                Change<span class="govuk-visually-hidden"> gender</span>
+            </a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key dt-override">
+            Ethnicity
+        </dt>
+        <dd class="govuk-summary-list__value dd-override">
+            {{ data['StaffMember.EthnicityId'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions dd-override">
+            <a class="govuk-link" href="/few/staff/add-staff-member/1437">
+                Change<span class="govuk-visually-hidden"> ethnicity</span>
+            </a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key dt-override">
+            Disability
+        </dt>
+        <dd class="govuk-summary-list__value dd-override">
+            {{ data['StaffMember.DisabilityId'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions dd-override">
+            <a class="govuk-link" href="/few/staff/add-staff-member/1437">
+                Change<span class="govuk-visually-hidden"> disability</span>
+            </a>
+        </dd>
+    </div>
+</dl>
+
+<p class="govuk-body">
+    <a class="govuk-button govuk-button--secondary" href="javascript:history.back()">
+        Choose another section
+    </a>
+
+    <label class="govuk-visually-hidden" id="staffchange">Review staff list</label>
+    <a class="govuk-link govuk-!-margin-left-6 " aria-labelledby="staffchange" href="/FEWStaffSummaryOpen">
+        Staff list
+    </a>
+
+    <span id="waste-hint" class="govuk-hint">
+        Check or complete job role and employment contract data for {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}
+    </span>
+
+</p>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+
+{% endblock %}

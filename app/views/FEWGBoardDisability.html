@@ -20,7 +20,7 @@ GOV.UK Prototype Kit
 
                     
 
-                    <input type="hidden" id="Governor_BoardMembersCount" name="Governor.BoardMembersCount" value="40">
+                    <input type="hidden" id="Governor_BoardMembersCount" name="Governor.BoardMembersCount" value="">
                     <input type="hidden" data-val="true" data-val-required="The CollectionYear field is required." id="CollectionYear" name="CollectionYear" value="2021">
 
                     <div class="govuk-form-group">
@@ -28,7 +28,7 @@ GOV.UK Prototype Kit
                         <label class="govuk-label govuk-label--m" for="Governor_DisabilityCount">
                             How many board members consider themselves to have a disability?
                         </label>
-                        <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_DisabilityCount" name="Governor.DisabilityCount" value="0">
+                        <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_DisabilityCount" name="Governor.DisabilityCount" value="{{ data['Governor.DisabilityCount'] }}">
                     </div>
 
                     <div class="govuk-form-group">
@@ -36,7 +36,7 @@ GOV.UK Prototype Kit
                         <label class="govuk-label govuk-label--m" for="Governor_NoDisabilityCount">
                             How many board members do not identify themselves as having a disability?
                         </label>
-                        <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_NoDisabilityCount" name="Governor.NoDisabilityCount" value="40">
+                        <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_NoDisabilityCount" name="Governor.NoDisabilityCount" value="{{ data['Governor.NoDisabilityCount'] }}">
                     </div>
 
                     <div class="govuk-form-group">
@@ -44,7 +44,7 @@ GOV.UK Prototype Kit
                         <label class="govuk-label govuk-label--m" for="Governor_DisabilityPreferNotToSayCount">
                             How many prefer not to say?
                         </label>
-                        <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_DisabilityPreferNotToSayCount" name="Governor.DisabilityPreferNotToSayCount" value="0">
+                        <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_DisabilityPreferNotToSayCount" name="Governor.DisabilityPreferNotToSayCount" value="{{ data['Governor.DisabilityPreferNotToSayCount'] }}">
                     </div>
                 </fieldset>
             </div>

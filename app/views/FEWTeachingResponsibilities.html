@@ -1,0 +1,75 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+  <a href="/FEWAddJobRole" class="govuk-back-link">Back</a>
+
+
+      <main class="govuk-main-wrapper" id="content" role="main">
+          <div class="govuk-grid-row flex">
+              <div class="govuk-grid-column-two-thirds">
+                  
+
+                  
+
+<div class="govuk-grid-column-full">
+  <form method="post" action="/FEWCheckTeachingResponsibilities">
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+              <span class="govuk-caption-m">steve test</span>
+
+                  <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <form method="post" action="/FEWCheckTeachingResponsibilities">
+
+
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                  <h1 class="govuk-fieldset__heading">
+Do they have any teaching responsibilities?                    </h1>
+              </legend>
+          <div class="govuk-hint">
+              This is in addition to their job role responsibilities
+          </div>
+
+          <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                          <input id="LookupItemId42" name="TeachingResponsibilities" value="Yes" class="govuk-radios__input" type="radio">
+                          <label for="LookupItemId42" class="govuk-label govuk-radios__label">
+                              Yes
+                          </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                          <input id="LookupItemId43" name="TeachingResponsibilities" value="No" class="govuk-radios__input" type="radio">
+                          <label for="LookupItemId43" class="govuk-label govuk-radios__label">
+                              No
+                          </label>
+                      </div>
+              <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="">
+              <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="">
+          </div>
+          <br>
+      </fieldset>
+  </div>
+
+          </div>
+      </div>
+      <br>
+      <button class="govuk-button" type="submit" id="submit">
+          Save and continue
+      </button>
+  <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JXkYVn2PiNDhyrTwLjKaCoDxhRTkiheu5Ra7NIukpTyKQ7gXCSVNPgZhunyDZqtQGXL9Ro7oHCcoT4aDme2uigfcZbgFkFERsS40RdJ5NXhx_9d777M1qiAex5bmURRf8GTH45ofA1Xqd1pqwvLHbIGlW_q-9jy5N41G1BrD370xIbF9X7svt7i8gbC_SyZSw"></form>
+</div>
+
+
+              </div>
+          </div>
+      </main>
+  </div>
+</body>
+
+
+
+{% endblock %}
