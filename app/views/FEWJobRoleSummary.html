@@ -1,0 +1,105 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <div class="govuk-grid-column-two-thirds">
+                    
+
+                    
+
+<div class="govuk-grid-column-full">
+    <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+    <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1437">
+
+    <h1 class="govuk-heading-l">Summary: job role details</h1>
+    <form method="post" action="/few/roles/check-job-roles/1437">
+        <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Details recorded</caption>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row govuk-table__row">
+                    <th scope="row" class="govuk-table__header">What are their job roles?</th>
+                    <td class="govuk-table__cell">Senior Leader, Manager, Teacher, Teaching Support</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">What is their main role?</th>
+                    <td class="govuk-table__cell">Teaching Support</td>
+                </tr>
+
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header"> Are they the Head of FE provision?</th>
+                            <td class="govuk-table__cell">No</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">What qualifications or programmes do they teach?</th>
+                            <td class="govuk-table__cell">Academic qualifications</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">What is the main subject area they teach?</th>
+                            <td class="govuk-table__cell">Archaeology</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">What is the highest qualification they teach?</th>
+                            <td class="govuk-table__cell">Level 2 GCSEs/functional skills</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">What is their highest Maths qualification?</th>
+                            <td class="govuk-table__cell">Level 4 Certificate of higher education</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">What is their highest English qualification?</th>
+                            <td class="govuk-table__cell">Level 3 A Level or equivalent</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">What is their highest teaching qualification?</th>
+                            <td class="govuk-table__cell">Working towards a teacher training qualification</td>
+                        </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">What teaching qualification are they working towards?</th>
+                                <td class="govuk-table__cell">Level 4 in Education and Training, Level 4 Certificate in Teaching in the Lifelong Learning Sector</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Is their teaching qualification being funded by the organisation?</th>
+                                <td class="govuk-table__cell">Yes, we’re paying for all of it </td>
+                            </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">What is their professional teaching status?</th>
+                            <td class="govuk-table__cell">Advanced teacher status (Society for Education and Training)</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Prior to their FE role, how long did they work in a job relevant to the subject they teach?</th>
+                            <td class="govuk-table__cell">4 to 10 years</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Do they still work in industry as well as your organisation?</th>
+                            <td class="govuk-table__cell">Yes</td>
+                        </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <button class="govuk-button" type="submit" id="submit">
+            Change details
+        </button>
+        <a class="govuk-link" href="/few/staff/staff-listing">Staff list</a>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KVBwxlQC5aa_KdL07B-MHVPGhoOo3cv7WBS6NOeiS3BsFDzzVI1edtWlEJwN56skQf4zmVqiQNMQmL7gjD78cJCL4corlwk_ny8zhekoTxfvSmFd6rjNEYXoUwrXDPBCQKUh0yBD_Z01xnfSY9AHPhJ06GfIdxh_P5fILzZbHWTEA"></form>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+</body>
+
+
+
+{% endblock %}

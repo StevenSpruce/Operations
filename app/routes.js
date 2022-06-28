@@ -174,5 +174,25 @@ router.post('/ConfirmSameOrg', function (req, res) {
 
 
 
+router.post('/ConfirmMainContract', function (req, res) {
+
+  // Make a variable and give it the value from 'FEWStaffMethodSelection'
+  var MainContract = req.session.data['MainContract']
+
+  // Check whether the variable matches a condition
+  if (MainContract == "Permanent"){
+    // Send user to next page
+    res.redirect('/FEWWeeklyHours')
+  } else if (MainContract == "FixedTerm"){
+    // Send user to ineligible page
+    res.redirect('/FEWWeeklyHours')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWSalary')
+  }
+})
+
+
+
 
 module.exports = router

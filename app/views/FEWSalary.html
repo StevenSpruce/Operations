@@ -6,23 +6,18 @@ GOV.UK Prototype Kit
 {% block content %}
 
 
-    <a href="/FEWFTE" class="govuk-back-link">Back</a>
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 
         <main class="govuk-main-wrapper" id="content" role="main">
             <div class="govuk-grid-row flex">
-                <div class="govuk-grid-column-two-thirds">
-                    
-
-                    
-
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
         <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
 
 
-        <h1 class="govuk-heading-xl">Salary or hourly rate details</h1>
+        <h1 class="govuk-heading">Salary or hourly rate details</h1>
 
         <p class="govuk-body">
             The annual salary or hourly rate should be recorded for the main contract with the most hours.
@@ -32,10 +27,10 @@ GOV.UK Prototype Kit
             <div class="govuk-form-group">
                 <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1450">
                 <fieldset class="govuk-fieldset" aria-describedby="isannual-hint">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <h1 class="govuk-fieldset__heading">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">
                             How is the staff member paid?
-                        </h1>
+                        </h2>
                     </legend>
                     <div id="isannual-hint" class="govuk-hint">
                         Select an option to add details
@@ -50,11 +45,11 @@ GOV.UK Prototype Kit
                         </div>
                         <div class="govuk-radios__conditional" id="conditional-annual">
                             <div class="govuk-form-group">
-                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
 
-                                    <h2 class="govuk-fieldset__heading">
+                                    <h3 class="govuk-fieldset__heading">
                                         What is their annual salary?
-                                    </h2>
+                                    </h3>
                                 </legend>
                                 <div id="annual-salary-hint" class="govuk-hint">
                                     For example, enter 27420 for a salary of twenty seven thousand four hundred and twenty pounds
@@ -77,11 +72,11 @@ GOV.UK Prototype Kit
                         </div>
                         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hourly">
                             <div class="govuk-form-group">
-                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
 
-                                    <h2 class="govuk-fieldset__heading">
+                                    <h3 class="govuk-fieldset__heading">
                                         What is their hourly rate?
-                                    </h2>
+                                    </h3>
                                 </legend>
                                 <div id="hourly-rate-hint" class="govuk-hint">
                                     For example, enter 11.36 for an hourly rate of eleven pounds thirty six pence

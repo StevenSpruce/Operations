@@ -19,7 +19,7 @@ GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
 <div class="govuk-grid-column-full">
-<h1 class="govuk-heading-xl">Add a member of staff</h1>
+<h1 class="govuk-heading">Add a member of staff</h1>
 
 <p class="govuk-body">
     Record FE staff data
@@ -58,7 +58,7 @@ GOV.UK Prototype Kit
                     First name
                 </label>
                 
-                <input class="govuk-input govuk-!-width-two-thirds" id="firstName" maxlength="100" type="text" aria-describedby="firstNameError" name="StaffMember.FirstName" value="">
+                <input class="govuk-input govuk-!-width-two-thirds" id="firstName" maxlength="100" type="text" aria-describedby="firstNameError" name="StaffMember.FirstName" value="{{ data['StaffMember.FirstName'] }}">
             </div>
 
             <div class="govuk-form-group" id="last-Name">
@@ -66,7 +66,7 @@ GOV.UK Prototype Kit
                     Last name
                 </label>
                 
-                <input class="govuk-input govuk-!-width-two-thirds" id="lastName" maxlength="100" type="text" aria-describedby="lastNameError" name="StaffMember.LastName" value="">
+                <input class="govuk-input govuk-!-width-two-thirds" id="lastName" maxlength="100" type="text" aria-describedby="lastNameError" name="StaffMember.LastName" value="{{ data['StaffMember.LastName'] }}">
             </div>
         </fieldset>
     </div>
@@ -88,7 +88,7 @@ GOV.UK Prototype Kit
                         <label class="govuk-label govuk-date-input__label" for="dobDay">
                             Day
                         </label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" err="" id="dobDay" type="text" pattern="[0-9]*" inputmode="numeric" name="StaffMember.DobDay" value="">
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" err="" id="dobDay" type="text" pattern="[0-9]*" inputmode="numeric" name="StaffMember.DobDay" value="{{ data['StaffMember.DobDay'] }}">
                     </div>
                 </div>
                 <div class="govuk-date-input__item">
@@ -96,7 +96,7 @@ GOV.UK Prototype Kit
                         <label class="govuk-label govuk-date-input__label" for="dobMonth">
                             Month
                         </label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dobMonth" type="text" pattern="[0-9]*" inputmode="numeric" name="StaffMember.DobMonth" value="">
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dobMonth" type="text" pattern="[0-9]*" inputmode="numeric" name="StaffMember.DobMonth" value="{{ data['StaffMember.DobMonth'] }}">
                     </div>
                 </div>
                 <div class="govuk-date-input__item">
@@ -104,7 +104,7 @@ GOV.UK Prototype Kit
                         <label class="govuk-label govuk-date-input__label" for="dobYear">
                             Year
                         </label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dobYear" type="text" pattern="[0-9]*" inputmode="numeric" name="StaffMember.DobYear" value="">
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dobYear" type="text" pattern="[0-9]*" inputmode="numeric" name="StaffMember.DobYear" value="{{ data['StaffMember.DobYear'] }}">
                     </div>
                 </div>
             </div>
