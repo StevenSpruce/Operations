@@ -193,6 +193,39 @@ router.post('/ConfirmMainContract', function (req, res) {
 })
 
 
+router.post('/FEWCheckHighestTeachingQualification', function (req, res) {
+
+
+  var Studying = req.session.data['HighestTeachingQual']
+
+  // Check whether the variable matches a condition
+  if (Studying == "Working towards a teacher training qualification"){
+    // Send user to next page
+    res.redirect('/FEWTeachingQualStudying')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWTeachingStatus')
+  }
+})
+
+
+router.post('/FEWSelectSubRoles', function (req, res) {
+
+
+  var SubRoles = req.session.data['SubRole']
+  var JobRole = req.session.data['JobRole']
+
+  // Check whether the variable matches a condition
+  if (SubRoles.length ==1){
+    // Send user to next page
+    res.redirect('/FEWWhatQualsProgrammes')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWMainRole')
+    
+  }
+})
+
 
 
 module.exports = router

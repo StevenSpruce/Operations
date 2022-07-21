@@ -5,23 +5,22 @@ GOV.UK Prototype Kit
 {% endblock %}
 {% block content %}
 
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
-    <a href="/FEWTeachingPrior" class="govuk-back-link">Back</a>
 
 
         <main class="govuk-main-wrapper" id="content" role="main">
             <div class="govuk-grid-row flex">
-                    
-
-                    
+                   
 
 <div class="govuk-grid-column-full">
-    <form method="post" action="/few/subjects/check-subject-taught-relevancy-job-status-outside-FE">
+    <form method="post" action="">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
                 <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
 
-                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1452">
+
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1459">
 
                     <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
@@ -29,29 +28,29 @@ GOV.UK Prototype Kit
 
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
                     <h1 class="govuk-fieldset__heading">
-Do they still have a job outside of FE relevant to the subject they teach?                    </h1>
+Is their teaching qualification being funded by your organisation?                    </h1>
                 </legend>
             <div class="govuk-hint">
-                Select an option
+                
             </div>
 
             <div class="govuk-radios">
                         <div class="govuk-radios__item">
-                            <input id="TeachingJob" name="TeachingJob" value="Yes" class="govuk-radios__input" type="radio">
-                            <label for="LookupItemId173" class="govuk-label govuk-radios__label">
-                                Yes
+                            <input id="Funding" name="Funding" value="Yes, we’re paying for all of it" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId156" class="govuk-label govuk-radios__label">
+                                Yes, we’re paying for all of it 
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="TeachingJob" name="TeachingJob" value="No" class="govuk-radios__input" type="radio">
-                            <label for="LookupItemId174" class="govuk-label govuk-radios__label">
+                            <input id="Funding" name="Funding" value="Yes, we’re paying for some of it" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId157" class="govuk-label govuk-radios__label">
+                                Yes, we’re paying for some of it
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="Funding" name="Funding" value="No" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId158" class="govuk-label govuk-radios__label">
                                 No
-                            </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input id="TeachingJob" name="TeachingJob" value="Not known" class="govuk-radios__input" type="radio">
-                            <label for="LookupItemId175" class="govuk-label govuk-radios__label">
-                                Not known 
                             </label>
                         </div>
                 <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="">
@@ -64,9 +63,8 @@ Do they still have a job outside of FE relevant to the subject they teach?      
             </div>
         </div>
         <br>
-        <button class="govuk-button" type="submit" formaction="/FEWTeachingJobRoleCompleted">Save and continue</button>
+        <button class="govuk-button" type="submit" formaction="/FEWTeachingStatus"">Save and continue</button>
 
-    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KWxLVw5-2kykqPtR27W-JsZKehZ8Nkqk__J8fdu1mi1zuBV9ashEMuDM9RrGPpm_CsznSrfNHxn11fMH_EWgbrivZUwQkU3cMy4G3G7cHWFSXH1ufz4zQw8LPZZUnZAo_bhPCYa8IrtQ7Ki6gnTaiawARJJ96Fd7dAmxdLtDIvE6g"></form>
 </div>
 
 
@@ -76,6 +74,7 @@ Do they still have a job outside of FE relevant to the subject they teach?      
     </div>
 
 </body>
+
 
 
 {% endblock %}

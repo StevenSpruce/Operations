@@ -33,56 +33,64 @@ GOV.UK Prototype Kit
 
                 <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">What is their main role?</th>
-                    <td class="govuk-table__cell">SS needs to add appropriate screen</td>
+                    <td class="govuk-table__cell">{{ data["MainRole"]}}</td>
                 </tr>
 
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Are they the Head of FE provision?</th>
+                    <td class="govuk-table__cell">{{ data["HeadFE"]}}</td>
+                </tr>
+
+{% if(data["JobRole"]=="Teacher" or data["TeachingResponsibilities"]=="Yes")%}
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">What qualifications or programmes do they teach?</th>
                             <td class="govuk-table__cell">{{ data["WhatQualsProgs"]}}</td>
                         </tr>
+{% endif%}
+
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">What is the main subject area they teach?</th>
                             <td class="govuk-table__cell">{{ data["MainSubject"]}}</td>
                         </tr>
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">What is the highest qualification they teach?</th>
-                            <td class="govuk-table__cell"></td>
+                            <td class="govuk-table__cell">{{ data["HighestQualificationTaught"]}}</td>
                         </tr>
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">What is their highest Maths qualification?</th>
-                            <td class="govuk-table__cell"></td>
+                            <td class="govuk-table__cell">{{ data["HighestMaths"]}}</td>
                         </tr>
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">What is their highest English qualification?</th>
-                            <td class="govuk-table__cell"></td>
+                            <td class="govuk-table__cell">{{ data["HighestEnglish"]}}</td>
                         </tr>
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">What is their highest teaching qualification?</th>
-                            <td class="govuk-table__cell"></td>
+                            <td class="govuk-table__cell">{{ data["HighestTeachingQual"]}}</td>
                         </tr>
                             <tr class="govuk-table__row">
                                 <th scope="row" class="govuk-table__header">What teaching qualification are they working towards?</th>
-                                <td class="govuk-table__cell"></td>
+                                <td class="govuk-table__cell">{{ data["TeachingQualStudying"]}}</td>
                             </tr>
                             <tr class="govuk-table__row">
                                 <th scope="row" class="govuk-table__header">Is their teaching qualification being funded by the organisation?</th>
-                                <td class="govuk-table__cell"> </td>
+                                <td class="govuk-table__cell">{{ data["Funding"]}}</td>
                             </tr>
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">What is their professional teaching status?</th>
-                            <td class="govuk-table__cell"></td>
+                            <td class="govuk-table__cell">{{ data["TeachingStatus"]}}</td>
                         </tr>
                         <tr class="govuk-table__row">
-                            <th scope="row" class="govuk-table__header">Have they taken part in, or directly/indirectly benefitted from, any of the listed DfE programmes?</th>
-                            <td class="govuk-table__cell"></td>
+                            <th scope="row" class="govuk-table__header">Have they participated in or benefitted from any of the listed DfE programmes?</th>
+                            <td class="govuk-table__cell">{{ data["DFE"]}}</td>
                         </tr>
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">Prior to their FE role, how long did they work in a job relevant to the subject they teach?</th>
-                            <td class="govuk-table__cell"></td>
+                            <td class="govuk-table__cell">{{ data["Prior"]}}</td>
                         </tr>
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">Do they still work in industry as well as your organisation?</th>
-                            <td class="govuk-table__cell"></td>
+                            <td class="govuk-table__cell">{{ data["TeachingJob"]}}</td>
                         </tr>
             </tbody>
         </table>

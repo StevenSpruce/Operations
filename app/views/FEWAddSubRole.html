@@ -1,0 +1,491 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<main class="govuk-main-wrapper" id="content" role="main">
+        <div class="govuk-grid-row flex">
+
+<div class="govuk-grid-column-full">
+    <form method="post" action="/FEWSelectSubRoles">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+<span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="sub-role-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        NEW PAGE *** NEW PAGE *** NEW PAGE***
+ </h1>
+      <h1 class="govuk-fieldset__heading">
+             What are their sub roles?
+      </h1>
+    </legend>
+    <div id="sub-role-hint" class="govuk-hint">
+      Select up to 5 sub roles (in total) that are most relevant to the staff member's job activities.
+    </div>
+
+{% if ("Senior Leader" in data["JobRole"]) %}
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+        Senior Leader
+      </h2>
+    </legend>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Assistant Head">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Assistant Head
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Assistant Principle">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Assistant Principle
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="CEO">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          CEO
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Director">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Director
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Executive Head Teacher">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Executive Head Teacher
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Head Teacher">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Head Teacher
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Managing Director">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Managing Director
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Principle">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Principle
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Senior Manager">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Senior Manager
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Vice Principle">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Vice Principle
+        </label>
+      </div>
+    </div>
+    <br>
+{% endif%}
+
+
+{% if ("Manager" in data["JobRole"]) %}
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+        Manager
+      </h2>
+    </legend>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Curriculum Lead">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Curriculum Lead
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Faculty Lead">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Faculty Lead
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Functional Manager">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Functional Manager
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Head of Department">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Head of Department
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Programme Lead">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Programme Lead
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Quality Assurance Manager">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Quality Assurance Manager
+        </label>
+      </div>
+    </div>
+    <br>
+    {% endif%}
+
+    {% if ("Teacher" in data["JobRole"]) %}
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+        Teacher
+      </h2>
+    </legend>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Advanced Practitioner">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Advanced Practitioner
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Instructor">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Instructor
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Lecturer">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Lecturer
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Practitioner">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Practitioner
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Teacher">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Teacher
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Trainer">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Trainer
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Tutor">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Tutor
+        </label>
+      </div>
+    </div>
+    <br>
+    {% endif%}
+
+    {% if ("Teaching Support" in data["JobRole"]) %}
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+        Teaching Support
+      </h2>
+    </legend>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Assessor">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Assessor
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Behaviour Specialist">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Behaviour Specialist
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Bilingual Support Assistant">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Bilingual Support Assistant
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Careers Advisor">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Careers Advisor
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Counsellor">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Counsellor
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Cover Supervisor">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Cover Supervisor
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Education Welfare Officer">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Education Welfare Officer
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Higher Level Teaching Assistant Language Support">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Higher Level Teaching Assistant Language Support
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Learning Facilitator">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Learning Facilitator
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Learning Mentor">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Learning Mentor
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Learning Support">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Learning Support
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Learning Support Assistant (SEN)">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Learning Support Assistant (SEN)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Librarian">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Librarian
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Pastoral Support">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Pastoral Support
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="SEN Co-ordinator">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          SEN Co-ordinator
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Teaching Assistant">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Teaching Assistant
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Technician">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Technician
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Therapist">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Therapist
+        </label>
+      </div>
+    </div>
+    <br>
+    {% endif%}
+
+
+
+    {% if ("Administration" in data["JobRole"]) %}
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+        Administration
+      </h2>
+    </legend>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Administrator">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Administrator
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Admissions">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Admissions
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Apprenticeships Administrator">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Apprenticeships Administrator
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Bursar">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Bursar
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Business Manager">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Business Manager
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Clerk">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Clerk
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Communication Support">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Communication Support
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Data Analyst">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Data Analyst
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="DSL and Safe Guarding Officer">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          DSL and Safe Guarding Officer
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Employer Engagement">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Employer Engagement
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Examinations Administrator">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Examinations Administrator
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="External Grants and Funding">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          External Grants and Funding
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Finance Officer">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Finance Officer
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Human Resources (HR)">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Human Resources (HR)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="ICT Network Manager">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          ICT Network Manager
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Information Services (MIS)">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Information Services (MIS)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Marketing Administrator">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Marketing Administrator
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Office Manager">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Office Manager
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Payroll Administrator">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Payroll Administrator
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Programme recruitment">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Programme recruitment
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Receptionist">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Receptionist
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Secretary">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Secretary
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="SubRole" name="SubRole" type="checkbox" value="Technology Support">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Technology Support
+        </label>
+      </div>
+    </div>
+    {% endif%}
+
+
+  </fieldset>
+
+        <br>
+        <button class="govuk-button" type="submit" id="submit">Save and continue</button>
+      </div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+
+{% endblock %}

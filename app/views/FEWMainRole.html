@@ -1,0 +1,579 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper" id="content" role="main">
+          <div class="govuk-grid-row flex">
+                
+
+                  
+
+<div class="govuk-grid-column-full">
+  <form method="post" action="/few/roles/check-main-role">
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+          
+              <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1459">
+
+                  <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+          
+
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                  <h1 class="govuk-fieldset__heading">
+What is their main role?                    </h1>
+              </legend>
+          <div class="govuk-hint">
+              Select the role where the member of staff spends most of their time
+          </div>
+
+           <div class="govuk-radios">
+                      {% if ("Assistant Head" in data["SubRole"]) %}
+                      <div class="govuk-radios__item">
+                          <input id="LookupItemId30" name="MainRole" value="Assistant Head" aria-describedby="LookupHintItemId30" class="govuk-radios__input" type="radio">
+                          <label for="LookupItemId30" class="govuk-label govuk-radios__label">
+                              Assistant Head
+                          </label>
+                      </div>
+                      {% endif%}
+                      {% if ("Assistant Principal" in data["SubRole"]) %}
+                      <div class="govuk-radios__item">
+                          <input id="LookupItemId31" name="MainRole" value="Assistant Principal" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                          <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                            Assistant Principal
+                          </label>
+                       </div>
+                       {% endif%}   
+                       {% if ("CEO" in data["SubRole"]) %}
+                       <div class="govuk-radios__item">
+                        <input id="LookupItemId31" name="MainRole" value="CEO" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                        <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                            CEO
+                        </label>
+                        </div>
+                        {% endif%}
+                        {% if ("Director" in data["SubRole"]) %}
+                        <div class="govuk-radios__item">
+                         <input id="LookupItemId31" name="MainRole" value="Director" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                          <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                            Director
+                          </label>
+                         </div>
+                         {% endif%}
+                         {% if ("Executive Head Teacher" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Executive Head Teacher" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Executive Head Teacher
+                             </label>
+                         </div>
+                         {% endif%}
+                         {% if ("Head Teacher" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Head Teacher" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Head Teacher
+                             </label>
+                         </div>
+                         {% endif%}
+                         {% if ("Managing Director" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Managing Director" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Managing Director
+                             </label>
+                         </div> 
+                         {% endif%}  
+                         {% if ("Principal" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Principal" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Principal
+                             </label>
+                         </div>
+                         {% endif%}                           
+                         {% if ("Senior Manager" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Senior Manager" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Senior Manager 
+                             </label>
+                         </div> 
+                         {% endif%}
+                         {% if ("Vice-Principal" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Vice-Principal" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Vice-Principal
+                             </label>
+                         </div>
+                         {% endif%}  
+                         {% if ("Curriculum Lead" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Curriculum Lead" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Curriculum Lead
+                             </label>
+                         </div> 
+                         {% endif%} 
+                         {% if ("Faculty Lead" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Faculty Lead" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Faculty Lead
+                             </label>
+                         </div> 
+                         {% endif%} 
+                         {% if ("Head of Department" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Head of Department" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Head of Department 
+                             </label>
+                         </div>  
+                         {% endif%}
+                         {% if ("Programme Lead" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Programme Lead" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Programme Lead
+                             </label>
+                         </div> 
+                         {% endif%} 
+                         {% if ("Quality Assurance Manager" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Quality Assurance Manager" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Quality Assurance Manager 
+                             </label>
+                         </div>  
+                         {% endif%}
+                         {% if ("Advanced Practitioner" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Advanced Practitioner" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Advanced Practitioner
+                             </label>
+                         </div> 
+                         {% endif%} 
+                         {% if ("Instructor" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Instructor" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Instructor
+                             </label>
+                         </div> 
+                         {% endif%} 
+                         {% if ("Lecturer" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Lecturer" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Lecturer
+                             </label>
+                         </div> 
+                         {% endif%} 
+                         {% if ("Practitioner" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Practitioner" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Practitioner
+                             </label>
+                         </div> 
+                         {% endif%} 
+                         {% if ("Teacher" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Teacher" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Teacher
+                             </label>
+                         </div> 
+                         {% endif%} 
+                         {% if ("Trainer" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Trainer" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Trainer
+                             </label>
+                         </div>  
+                         {% endif%}
+                         {% if ("Tutor" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Tutor" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Tutor
+                             </label>
+                         </div>
+                         {% endif%}  
+                         {% if ("Assessor" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Assessor" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Assessor 
+                             </label>
+                         </div>
+                         {% endif%}   
+                         {% if ("Behaviour Specialist" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Behaviour Specialist" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Behaviour Specialist
+                             </label>
+                         </div> 
+                         {% endif%} 
+                         {% if ("Bilingual Support Assistant" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Bilingual Support Assistant" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Bilingual Support Assistant
+                             </label>
+                         </div>
+                         {% endif%}  
+                         {% if ("Careers Advisor" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Careers Advisor" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Careers Advisor
+                             </label>
+                         </div>
+                         {% endif%}  
+                         {% if ("Counsellor" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Counsellor" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Counsellor
+                             </label>
+                         </div>  
+                         {% endif%}
+                         {% if ("Cover Supervisor" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Cover Supervisor" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Cover Supervisor
+                             </label>
+                         </div>  
+                         {% endif%}
+                         {% if ("Education Welfare Officer" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Education Welfare Officer" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Education Welfare Officer
+                             </label>
+                         </div> 
+                         {% endif%} 
+                         {% if ("Higher Level Teaching Assistant" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Higher Level Teaching Assistant" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Higher Level Teaching Assistant 
+                             </label>
+                         </div> 
+                         {% endif%}  
+                         {% if ("Language Support" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Language Support" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Language Support
+                             </label>
+                         </div>  
+                         {% endif%}
+                         {% if ("Learning Facilitator" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Learning Facilitator" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Learning Facilitator
+                             </label>
+                         </div> 
+                         {% endif%} 
+                         {% if ("Learning Mentor" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Learning Mentor" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Learning Mentor
+                             </label>
+                         </div>  
+                         {% endif%}
+                         {% if ("Learning Support" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Learning Support" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Learning Support
+                             </label>
+                         </div>  
+                         {% endif%}
+                         {% if ("Learning Support Assistant (SEN)" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Learning Support Assistant (SEN)" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Learning Support Assistant (SEN)
+                             </label>
+                         </div>  
+                         {% endif%}
+                         {% if ("Librarian" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Librarian" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Librarian
+                             </label>
+                         </div>  
+                         {% endif%}
+                         {% if ("Pastoral Support" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Pastoral Support" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Pastoral Support
+                             </label>
+                         </div> 
+                         {% endif%} 
+                         {% if ("SEN Co-ordinator" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="SEN Co-ordinator" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                SEN Co-ordinator
+                             </label>
+                         </div> 
+                         {% endif%}  
+                         {% if ("Teaching Assistant" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Teaching Assistant" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Teaching Assistant
+                             </label>
+                         </div>  
+                         {% endif%}
+                         {% if ("Technician" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Technician" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Technician
+                             </label>
+                         </div>  
+                         {% endif%}
+                         {% if ("Therapist" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Therapist" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Therapist
+                             </label>
+                         </div>  
+                         {% endif%}
+                         {% if ("Administrator" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Administrator" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Administrator
+                             </label>
+                         </div> 
+                         {% endif%} 
+                         {% if ("Admissions" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Admissions" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Admissions
+                             </label>
+                         </div>
+                         {% endif%}
+                         {% if ("Apprenticeships Administrator" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Apprenticeships Administrator" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Apprenticeships Administrator
+                             </label>
+                         </div>
+                         {% endif%}
+                         {% if ("Bursar" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Bursar" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Bursar
+                             </label>
+                         </div> 
+                         {% endif%}
+                         {% if ("Business Manager" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Business Manager" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Business Manager
+                             </label>
+                         </div> 
+                         {% endif%}
+                         {% if ("Clerk" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Clerk" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Clerk
+                             </label>
+                         </div>
+                         {% endif%} 
+                         {% if ("Communication Support" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Communication Support" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Communication Support
+                             </label>
+                         </div>
+                         {% endif%} 
+                         {% if ("Data Analyst" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Data Analyst" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Data Analyst
+                             </label>
+                         </div> 
+                         {% endif%}
+                         {% if ("DSL and Safe Guarding Officer" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="DSL and Safe Guarding Officer" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                DSL and Safe Guarding Officer
+                             </label>
+                         </div> 
+                         {% endif%}
+                         {% if ("Employer Engagement" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Employer Engagement" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Employer Engagement
+                             </label>
+                         </div>
+                         {% endif%} 
+                         {% if ("Examinations Administrator" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Examinations Administrator" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Examinations Administrator
+                             </label>
+                         </div> 
+                         {% endif%}
+                         {% if ("External Grants and Funding" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="External Grants and Funding" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                External Grants and Funding
+                             </label>
+                         </div> 
+                         {% endif%}
+                         {% if ("Finance Officer" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Finance Officer" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Finance Officer
+                             </label>
+                         </div> 
+                         {% endif%}
+                         {% if ("Human Resources (HR)" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Human Resources (HR)" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Human Resources (HR) 
+                             </label>
+                         </div>
+                         {% endif%} 
+                         {% if ("ICT Network Manager" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="ICT Network Manager" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                ICT Network Manager
+                             </label>
+                         </div> 
+                         {% endif%}
+                         {% if ("Information Services (MIS)" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Information Services (MIS)" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Information Services (MIS)
+                             </label>
+                         </div> 
+                         {% endif%}
+                         {% if ("Marketing Administrator" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Marketing Administrator" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Marketing Administrator
+                             </label>
+                         </div> 
+                         {% endif%}
+                         {% if ("Office Manager" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Office Manager" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Office Manager
+                             </label>
+                         </div> 
+                         {% endif%}
+                         {% if ("Payroll Administrator" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Payroll Administrator" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Payroll Administrator
+                             </label>
+                         </div> 
+                         {% endif%}
+                         {% if ("Programme recruitment" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Programme recruitment" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Programme recruitment 
+                             </label>
+                         </div> 
+                         {% endif%}
+                         {% if ("Receptionist" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Receptionist" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Receptionist
+                             </label>
+                         </div> 
+                         {% endif%}
+                         {% if ("Secretary" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Secretary" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Secretary
+                             </label>
+                         </div>
+                         {% endif%} 
+                         {% if ("Technology Support " in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Technology Support " aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                                Technology Support 
+                             </label>
+                         </div> 
+                         {% endif%}   
+              <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="">
+              <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="">
+          </div>
+          <br>
+      </fieldset>
+  </div>
+
+          </div>
+      </div>
+      <br>
+      <button class="govuk-button" type="submit" formaction="/FEWLeaderHead">Save and continue</button><br>
+
+  <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KV7V0hXLHNu8keeYzonDdkg4ZQeZBSlvHpppk3SKYpxZpEuFnqPoxb3wZcl0SuiCVxonUWw0F9f4QT7guLlKi8lJr3HQdAQGZPgkeFrqbfd0H75E-FiEfh90uZiHQ1F6csl6u3Ijy4hdjpis7qdqgL7lxxP8kaxiupFxhFwNVuiiA"></form>
+</div>
+
+
+              </div>
+          </div>
+      </main>
+  </div>
+
+
+
+
+
+
+
+</body>
+
+
+{% endblock %}

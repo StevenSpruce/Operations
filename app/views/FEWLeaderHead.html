@@ -8,20 +8,19 @@ GOV.UK Prototype Kit
   <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 
-      <main class="govuk-main-wrapper" id="content" role="main">
-          <div class="govuk-grid-row flex">
+<main class="govuk-main-wrapper" id="content" role="main">
+    <div class="govuk-grid-row flex">
 
 <div class="govuk-grid-column-full">
-  <form method="post" action="/few/roles/check-head-of-fe-provision">
+  <form method="post" action="">
       <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
             <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
 
               <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1452">
 
-                  <div class="govuk-form-group">
+    <div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
-          
 
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
                   <h1 class="govuk-fieldset__heading">Are they the Head of the FE Provision?</h1>
@@ -32,13 +31,13 @@ GOV.UK Prototype Kit
 
           <div class="govuk-radios">
                       <div class="govuk-radios__item">
-                          <input id="LookupItemId40" name="SingleOption.Selection" value="40" class="govuk-radios__input" type="radio">
+                          <input id="HeadFE" name="HeadFE" value="Yes" class="govuk-radios__input" type="radio">
                           <label for="LookupItemId40" class="govuk-label govuk-radios__label">
                               Yes
                           </label>
                       </div>
                       <div class="govuk-radios__item">
-                          <input id="LookupItemId41" name="SingleOption.Selection" value="41" class="govuk-radios__input" type="radio">
+                          <input id="HeadFE" name="HeadFE" value="No" class="govuk-radios__input" type="radio">
                           <label for="LookupItemId41" class="govuk-label govuk-radios__label">
                               No
                           </label>
