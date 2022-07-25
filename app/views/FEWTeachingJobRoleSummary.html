@@ -35,18 +35,20 @@ GOV.UK Prototype Kit
                     <th scope="row" class="govuk-table__header">What is their main role?</th>
                     <td class="govuk-table__cell">{{ data["MainRole"]}}</td>
                 </tr>
-
+                
+           {% if("Senior Leader" in data["JobRole"])%}
                 <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Are they the Head of FE provision?</th>
                     <td class="govuk-table__cell">{{ data["HeadFE"]}}</td>
                 </tr>
+            {% endif%}
 
-{% if(data["JobRole"]=="Teacher" or data["TeachingResponsibilities"]=="Yes")%}
+          {% if("Teacher" in data["JobRole"] or data["TeachingResponsibilities"]=="Yes")%}
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">What qualifications or programmes do they teach?</th>
                             <td class="govuk-table__cell">{{ data["WhatQualsProgs"]}}</td>
                         </tr>
-{% endif%}
+
 
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">What is the main subject area they teach?</th>
@@ -92,6 +94,7 @@ GOV.UK Prototype Kit
                             <th scope="row" class="govuk-table__header">Do they still work in industry as well as your organisation?</th>
                             <td class="govuk-table__cell">{{ data["TeachingJob"]}}</td>
                         </tr>
+                        {% endif%}
             </tbody>
         </table>
 

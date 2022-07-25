@@ -14,7 +14,7 @@ GOV.UK Prototype Kit
                   
 
 <div class="govuk-grid-column-full">
-  <form method="post" action="/few/roles/check-main-role">
+  <form method="post" action="/FEWSelectMainRole">
       <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
             <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
@@ -110,7 +110,7 @@ What is their main role?                    </h1>
                          <div class="govuk-radios__item">
                             <input id="LookupItemId31" name="MainRole" value="Vice-Principal" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
                              <label for="LookupItemId31" class="govuk-label govuk-radios__label">
-                                Vice-Principal
+                              Vice-Principal
                              </label>
                          </div>
                          {% endif%}  
@@ -538,9 +538,9 @@ What is their main role?                    </h1>
                              </label>
                          </div>
                          {% endif%} 
-                         {% if ("Technology Support " in data["SubRole"]) %}
+                         {% if ("Technology Support" in data["SubRole"]) %}
                          <div class="govuk-radios__item">
-                            <input id="LookupItemId31" name="MainRole" value="Technology Support " aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                            <input id="LookupItemId31" name="MainRole" value="Technology Support" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
                              <label for="LookupItemId31" class="govuk-label govuk-radios__label">
                                 Technology Support 
                              </label>
@@ -556,7 +556,7 @@ What is their main role?                    </h1>
           </div>
       </div>
       <br>
-      <button class="govuk-button" type="submit" formaction="/FEWLeaderHead">Save and continue</button><br>
+      <button class="govuk-button" type="submit" id="submit">Save and continue</button>
 
   <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KV7V0hXLHNu8keeYzonDdkg4ZQeZBSlvHpppk3SKYpxZpEuFnqPoxb3wZcl0SuiCVxonUWw0F9f4QT7guLlKi8lJr3HQdAQGZPgkeFrqbfd0H75E-FiEfh90uZiHQ1F6csl6u3Ijy4hdjpis7qdqgL7lxxP8kaxiupFxhFwNVuiiA"></form>
 </div>

@@ -33,7 +33,7 @@ GOV.UK Prototype Kit
 
             <div class="govuk-radios">
                         <div class="govuk-radios__item">
-                            <input id="WhatQualsProgs" name="WhatQualsProgs" value="Academic" aria-describedby="LookupHintItemId44" class="govuk-radios__input" type="radio">
+                            <input id="WhatQualsProgs" name="WhatQualsProgs" value="Academic" {{ checked("WhatQualsProgs", "Academic") }} aria-describedby="LookupHintItemId44" class="govuk-radios__input" type="radio">
                             <label for="WhatQualsProgs" class="govuk-label govuk-radios__label">
                                 Academic qualifications
                             </label>
@@ -42,7 +42,7 @@ GOV.UK Prototype Kit
                                 </div>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="WhatQualsProgs" name="WhatQualsProgs" value="Vocational" aria-describedby="LookupHintItemId45" class="govuk-radios__input" type="radio">
+                            <input id="WhatQualsProgs" name="WhatQualsProgs" value="Vocational" {{ checked("WhatQualsProgs", "Vocational") }} aria-describedby="LookupHintItemId45" class="govuk-radios__input" type="radio">
                             <label for="WhatQualsProgs" class="govuk-label govuk-radios__label">
                                 Vocational programmes
                             </label>
@@ -51,7 +51,7 @@ GOV.UK Prototype Kit
                                 </div>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="WhatQualsProgs" name="WhatQualsProgs" value="Other" aria-describedby="LookupHintItemId46" class="govuk-radios__input" type="radio">
+                            <input id="WhatQualsProgs" name="WhatQualsProgs" value="Other" {{ checked("WhatQualsProgs", "Other") }} aria-describedby="LookupHintItemId46" class="govuk-radios__input" type="radio">
                             <label for="WhatQualsProgs" class="govuk-label govuk-radios__label">
                                 Other learning programmes
                             </label>

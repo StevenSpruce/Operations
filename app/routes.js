@@ -1,5 +1,12 @@
 const express = require('express')
 const router = express.Router()
+const teacherSubRoles = ["Advanced Practitioner", "Instructor", "Lecturer", "Practitioner", "Teacher", "Trainer", "Tutor"] 
+const managerSubRoles = ["Curriculum Lead", "Faculty Lead", "Functional Manager", "Head of Department", "Programme Lead", "Quality Assurance Manager" ] 
+const seniorLeaderSubRoles = ["Assistant Head", "Assistant Principal", "CEO", "Director", "Executive Head Teacher", "Managing Director", "Principal", "Senior Manager", "Vice-Principal"] 
+const teachingSupportSubRoles = ["Assessor", "Behaviour Specialist", "Bilingual Support Assistant", "Careers Advisor", "Counsellor", "Cover Supervisor", "Education Welfare Officer", "Higher Level Teaching Assistant", "Language Support", "Learning Facilitator", "Learning Mentor", "Learning Support", "Learning Support Assistant (SEN)", "Librarian", "Pastoral Support", "SEN Co-ordinator", "Teaching Assistant", "Technician", "Therapist"] 
+const administrationSubRoles = ["Administrator", "Admissions", "Apprenticeships Administrator", "Bursar", "Business Manager", "Clerk", "Communication Support", "Data Analyst", "DSL and Safe Guarding Officer", "Employer Engagement Examinations Administrator", "External Grants and Funding", "Finance Officer", "Human Resources (HR)", "ICT Network Manager", "Information Services (MIS)", "Marketing Administrator", "Office Manager", "Payroll Administrator", "Programme Recruitment", "Receptionist", "Secretary", "Technology Support" ] 
+
+
 
 // Add your routes here - above the module.exports line
 
@@ -102,20 +109,7 @@ router.post('/FEWGConfirmNumberBoard', function (req, res) {
 })
 
 
-router.post('/FEWCheckTeachingResponsibilities', function (req, res) {
 
-  // Make a variable and give it the value from 'FEWStaffMethodSelection'
-  var confirmTeachingResponsibilities = req.session.data['TeachingResponsibilities']
-
-  // Check whether the variable matches a condition
-  if (confirmTeachingResponsibilities == "No"){
-    // Send user to next page
-    res.redirect('/FEWAddJobRoleCompleted')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/FEWWhatQualsProgrammes')
-  }
-})
 
 
 
@@ -202,6 +196,8 @@ router.post('/FEWCheckHighestTeachingQualification', function (req, res) {
   if (Studying == "Working towards a teacher training qualification"){
     // Send user to next page
     res.redirect('/FEWTeachingQualStudying')
+
+    
   } else {
     // Send user to ineligible page
     res.redirect('/FEWTeachingStatus')
@@ -216,15 +212,129 @@ router.post('/FEWSelectSubRoles', function (req, res) {
   var JobRole = req.session.data['JobRole']
 
   // Check whether the variable matches a condition
-  if (SubRoles.length ==1){
+  if (SubRoles.length ==1 &&  (JobRole == "Teacher" ||"Teacher" in JobRole) ) { 
     // Send user to next page
     res.redirect('/FEWWhatQualsProgrammes')
+
+
+  } else if (SubRoles.length ==1 && (JobRole == "Senior Leader"||"Senior Leader" in JobRole)){
+    // Send user to ineligible page
+    res.redirect('/FEWLeaderHead')
+
+  } else if (SubRoles.length ==1 && (JobRole == "Manager"||"Manager" in JobRole )){
+    // Send user to ineligible page
+    res.redirect('/FEWTeachingResponsibilities')
+
+  } else if (SubRoles.length ==1 && (JobRole == "Teaching Support"||"Teaching Support" in JobRole)){
+    // Send user to ineligible page
+    res.redirect('/FEWTeachingResponsibilities')
+
+
+  } else if (SubRoles.length ==1 && (JobRole == "Administration"||"Administration" in JobRole)){
+    // Send user to ineligible page
+    res.redirect('/FEWTeachingResponsibilities')
+    
   } else {
     // Send user to ineligible page
     res.redirect('/FEWMainRole')
     
   }
 })
+
+
+router.post('/FEWSelectMainRole', function (req, res) {
+
+  var MainRole = req.session.data['MainRole']
+  var JobRole = req.session.data['JobRole']
+  var TeachingResponsibilities = req.session.data['TeachingResponsibilities']
+
+  // Check whether the variable matches a condition
+  if (MainRole == "Advanced Practitioner" 
+  || MainRole == "Instructor"
+  || MainRole == "Lecturer"
+  || MainRole == "Practitioner"
+  || MainRole == "Teacher"
+  || MainRole == "Trainer"
+  || MainRole == "Tutor"){
+    // Send user to ineligible page
+    res.redirect('/FEWWhatQualsProgrammes')
+
+
+  } else if (MainRole == "Assistant Head"
+  ||MainRole == "Assistant Principal"
+  ||MainRole == "CEO"
+  ||MainRole == "Director"
+  ||MainRole == "Executive Head Teacher"
+  ||MainRole == "Managing Director"
+  ||MainRole == "Principal"
+  ||MainRole == "Senior Manager"
+  ||MainRole == "Vice-Principal"){
+    // Send user to ineligible page
+    res.redirect('/FEWLeaderHead')
+
+  } else if (JobRole.includes("Teacher") || JobRole == "Teacher" || TeachingResponsibilities =="Yes"){
+    // Send user to ineligible page
+    res.redirect('/FEWWhatQualsProgrammes')
+
+    
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWTeachingResponsibilities')
+    
+  }
+})
+
+
+router.post('/FEWRouteFromHeadFE', function (req, res) {
+
+  var JobRole = req.session.data['JobRole']
+  var TeachingResponsibilities = req.session.data['TeachingResponsibilities']
+
+  // Check whether the variable matches a condition
+ if (JobRole.includes("Teacher") || JobRole == "Teacher" || TeachingResponsibilities =="Yes") {
+    // Send user to ineligible page
+    res.redirect('/FEWWhatQualsProgrammes')
+    
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWTeachingResponsibilities')
+    
+  }
+})
+
+
+router.post('/FEWRouteFromHeadFE', function (req, res) {
+
+  var JobRole = req.session.data['JobRole']
+
+  // Check whether the variable matches a condition
+ if (JobRole.includes("Teacher") || JobRole == "Teacher"){
+    // Send user to ineligible page
+    res.redirect('/FEWWhatQualsProgrammes')
+    
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWTeachingResponsibilities')
+    
+  }
+})
+
+router.post('/FEWRouteFromTeachingResponsibilities', function (req, res) {
+
+  var TeachingResponsibilities = req.session.data['TeachingResponsibilities']
+
+  // Check whether the variable matches a condition
+ if (TeachingResponsibilities == "Yes"){
+    // Send user to ineligible page
+    res.redirect('/FEWAddSubRole')
+    
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWAddJobRoleCompleted')
+    
+  }
+})
+
 
 
 

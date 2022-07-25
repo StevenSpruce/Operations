@@ -5,8 +5,7 @@ GOV.UK Prototype Kit
 {% endblock %}
 {% block content %}
 
-
- <a href="/FEWTeachingStatus" class="govuk-back-link">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 
         <main class="govuk-main-wrapper" id="content" role="main">
@@ -37,45 +36,45 @@ GOV.UK Prototype Kit
 
             <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Taking Teaching Further (TTF)">
+                  <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Taking Teaching Further (TTF)" {{ checked("DFE", "Taking Teaching Further (TTF)") }}>
                   <label class="govuk-label govuk-checkboxes__label" for="TTF">
                     Taking Teaching Further (TTF)
                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Mentor Training Programme (either as a mentor or mentee)">
+                  <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Mentor Training Programme (either as a mentor or mentee)" {{ checked("DFE", "Mentor Training Programme (either as a mentor or mentee)") }}>
                   <label class="govuk-label govuk-checkboxes__label" for="MTP">
                     Mentor Training Programme (either as a mentor or mentee)
                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Teach in FE Platform">
+                  <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Teach in FE Platform" {{ checked("DFE", "Teach in FE Platform") }}>
                   <label class="govuk-label govuk-checkboxes__label" for="FEPlatform">
                     Teach in FE Platform
                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Bursaries for FE Teacher Training">
+                    <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Bursaries for FE Teacher Training" {{ checked("DFE", "Bursaries for FE Teacher Training") }}>
                     <label class="govuk-label govuk-checkboxes__label" for="Bursaries">
                       Bursaries for FE Teacher Training
                     </label>
                 </div>
                 <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="T Level Professional Development">
+                    <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="T Level Professional Development" {{ checked("DFE", "T Level Professional Development") }}>
                     <label class="govuk-label govuk-checkboxes__label" for="TLevel">
                       T Level Professional Development
                     </label>
                 </div>
                 <div class="govuk-radios__divider">or</div>
                 <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="None">
+                    <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="None" {{ checked("DFE", "None") }}>
                     <label class="govuk-label govuk-checkboxes__label" for="DFENone">
                       None
                     </label>
                 </div>
                 <div class="govuk-radios__divider">or</div>
                 <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Not known">
+                    <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Not known" {{ checked("DFE", "Not known") }}>
                     <label class="govuk-label govuk-checkboxes__label" for="DFENotKnown">
                       Not known
                     </label>
