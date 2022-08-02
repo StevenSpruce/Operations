@@ -1,0 +1,481 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+<body class="govuk-template__body  js-enabled">
+
+
+
+
+
+    <main class="govuk-main-wrapper" id="content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+            </div>
+
+                <div class="govuk-grid-column-full">
+                    
+
+<a class="govuk-back-link" href="/index">Back</a>
+
+<br>
+<br>
+<h1 class="govuk-heading-xl">
+    Final (R14) Funding Claim 2021 to 2022
+</h1>
+
+
+<form method="post" id="form" action="/fc/update">
+
+    
+
+    <div class="sticky stuck">
+        <h2 class="govuk-heading-m">
+            ESFA funded Adult Education Budget (grant funded)
+        </h2>
+    </div>
+<p>Adult Education Budget contract value = £4,504,803.00<br>…of which Community Learning contract value = £2,018,011.00 </p>    <table class="govuk-table cursor-pointer">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header govuk-table__header">Deliverable</th>
+                    <th class="govuk-table__header govuk-table__header govuk-table__header--numeric">Delivery to date (£)</th>
+                    <th class="govuk-table__header govuk-table__header govuk-table__header--numeric">Exceptional adjustments (£)</th>
+                    <th class="govuk-table__header govuk-table__header govuk-table__header--numeric">Total delivery (£)</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">ESFA AEB Adult Skills - programme funding</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_3_1td">
+                                <input name="AEBC-ASCL2122_3_1" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£8,021.88" id="AEBC-ASCL2122_3_1" data-type="currency" step="any">
+                                    <span id="AEBC-ASCL2122_3_1span">£8,021.88</span>
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_3_2td">
+                                <input name="AEBC-ASCL2122_3_2" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="-99999999.99" data-max="99999999.99" type="text" value="£100.00" id="AEBC-ASCL2122_3_2" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_3_rowTotaltd">
+                                <input name="AEBC-ASCL2122_3_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£8,121.88" id="AEBC-ASCL2122_3_rowTotal" data-type="currency" step="any">
+
+                                    <span id="AEBC-ASCL2122_3_rowTotalspan">£8,121.88</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">ESFA AEB Adult Skills - learning support</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_4_1td">
+                                <input name="AEBC-ASCL2122_4_1" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£6,283.20" id="AEBC-ASCL2122_4_1" data-type="currency" step="any">
+
+                                    <span id="AEBC-ASCL2122_4_1span">£6,283.20</span>
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_4_2td">
+
+                                <input name="AEBC-ASCL2122_4_2" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="-99999999.99" data-max="99999999.99" type="text" value="£2.00" id="AEBC-ASCL2122_4_2" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_4_rowTotaltd">
+
+                                <input name="AEBC-ASCL2122_4_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£6,285.20" id="AEBC-ASCL2122_4_rowTotal" data-type="currency" step="any">
+
+                                    <span id="AEBC-ASCL2122_4_rowTotalspan">£6,285.20</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">ESFA AEB Adult Skills of which Community Learning</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_5_1td">
+
+                                <input name="AEBC-ASCL2122_5_1" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="text" value="£129,877.00" id="AEBC-ASCL2122_5_1" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_5_2td"></td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_5_rowTotaltd">
+
+                                <input name="AEBC-ASCL2122_5_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£129,879.00" id="AEBC-ASCL2122_5_rowTotal" data-type="currency" step="any">
+
+                                    <span id="AEBC-ASCL2122_5_rowTotalspan">£129,877.00</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">ESFA AEB Learner Support - 19+ hardship</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_6_1td">
+
+                                <input name="AEBC-ASCL2122_6_1" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="text" value="£5.00" id="AEBC-ASCL2122_6_1" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_6_2td"></td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_6_rowTotaltd">
+
+                                <input name="AEBC-ASCL2122_6_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£11.00" id="AEBC-ASCL2122_6_rowTotal" data-type="currency" step="any">
+
+                                    <span id="AEBC-ASCL2122_6_rowTotalspan">£5.00</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">ESFA AEB Learner Support - 20+ childcare</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_7_1td">
+
+                                <input name="AEBC-ASCL2122_7_1" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="text" value="£7.00" id="AEBC-ASCL2122_7_1" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_7_2td"></td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_7_rowTotaltd">
+
+                                <input name="AEBC-ASCL2122_7_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£15.00" id="AEBC-ASCL2122_7_rowTotal" data-type="currency" step="any">
+
+                                    <span id="AEBC-ASCL2122_7_rowTotalspan">£7.00</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">ESFA AEB Learner Support - residential access funding</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_8_1td">
+
+                                <input name="AEBC-ASCL2122_8_1" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="text" value="£9.00" id="AEBC-ASCL2122_8_1" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_8_2td"></td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_8_rowTotaltd">
+
+                                <input name="AEBC-ASCL2122_8_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£19.00" id="AEBC-ASCL2122_8_rowTotal" data-type="currency" step="any">
+
+                                    <span id="AEBC-ASCL2122_8_rowTotalspan">£9.00</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">ESFA AEB Learner Support - COVID-19 response</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_10_1td">
+
+                                <input name="AEBC-ASCL2122_10_1" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="text" value="£11.00" id="AEBC-ASCL2122_10_1" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_10_2td"></td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_10_rowTotaltd">
+
+                                <input name="AEBC-ASCL2122_10_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£23.00" id="AEBC-ASCL2122_10_rowTotal" data-type="currency" step="any">
+
+                                    <span id="AEBC-ASCL2122_10_rowTotalspan">£11.00</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">ESFA AEB Learner Support - administration expenditure</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_9_1td">
+
+                                <input name="AEBC-ASCL2122_9_1" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="text" value="£0.10" id="AEBC-ASCL2122_9_1" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_9_2td"></td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-ASCL2122_9_rowTotaltd">
+                                <label for="AEBC-ASCL2122_9_rowTotal" class="govuk-label govuk-visually-hidden">
+                                    ESFA AEB Learner Support - administration expenditure Total delivery (£)
+                                </label>
+                                <input name="AEBC-ASCL2122_9_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£0.30" id="AEBC-ASCL2122_9_rowTotal" data-type="currency" step="any">
+
+                                    <span id="AEBC-ASCL2122_9_rowTotalspan">£0.10</span>
+                        </td>
+                </tr>
+        </tbody>
+
+        <tfoot>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header">ESFA funded Adult Education Budget (grant funded) Total</th>
+
+                            <th id="AEBC-ASCL2122_1_colTotal" class="govuk-table__header govuk-table__header--numeric">£144,214.18</th>
+                            <th id="AEBC-ASCL2122_2_colTotal" class="govuk-table__header govuk-table__header--numeric">£102.00</th>
+                            <th id="AEBC-ASCL2122_3_colTotal" class="govuk-table__header govuk-table__header--numeric">£144,316.18</th>
+            </tr>
+        </tfoot>
+
+    </table>
+    <div class="sticky stuck">
+        <h2 class="govuk-heading-m">
+            ESFA funded AEB National Skills Fund level 3 offer for 24 years old and over (grant funded)
+        </h2>
+    </div>
+<p>National Skills Fund contract value = £129,150.00</p>    <table class="govuk-table cursor-pointer">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header govuk-table__header">Deliverable</th>
+                    <th class="govuk-table__header govuk-table__header govuk-table__header--numeric">Delivery to date (£)</th>
+                    <th class="govuk-table__header govuk-table__header govuk-table__header--numeric">Exceptional adjustments (£)</th>
+                    <th class="govuk-table__header govuk-table__header govuk-table__header--numeric">Total delivery (£)</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">ESFA AEB National Skills Fund - programme funding</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_3_1td">
+                                <input name="AEBC-NSF2122_3_1" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£1,413.50" id="AEBC-NSF2122_3_1" data-type="currency" step="any">
+
+                                    <span id="AEBC-NSF2122_3_1span">£1,413.50</span>
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_3_2td">
+                                <input name="AEBC-NSF2122_3_2" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="-99999999.99" data-max="99999999.99" type="text" value="£2,100.00" id="AEBC-NSF2122_3_2" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_3_rowTotaltd">
+                                <input name="AEBC-NSF2122_3_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£3,513.50" id="AEBC-NSF2122_3_rowTotal" data-type="currency" step="any">
+
+                                    <span id="AEBC-NSF2122_3_rowTotalspan">£3,513.50</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">ESFA AEB National Skills Fund - learning support</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_4_1td">
+                                <input name="AEBC-NSF2122_4_1" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£1,992.00" id="AEBC-NSF2122_4_1" data-type="currency" step="any">
+
+                                    <span id="AEBC-NSF2122_4_1span">£1,992.00</span>
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_4_2td">
+                                <input name="AEBC-NSF2122_4_2" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="-99999999.99" data-max="99999999.99" type="text" value="£22.00" id="AEBC-NSF2122_4_2" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_4_rowTotaltd">
+                                <input name="AEBC-NSF2122_4_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£2,014.00" id="AEBC-NSF2122_4_rowTotal" data-type="currency" step="any">
+
+                                    <span id="AEBC-NSF2122_4_rowTotalspan">£2,014.00</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">ESFA AEB National Skills Fund Learner Support - 19+ hardship</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_5_1td">
+                                <input name="AEBC-NSF2122_5_1" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="text" value="£23.00" id="AEBC-NSF2122_5_1" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_5_2td"></td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_5_rowTotaltd">
+                                <input name="AEBC-NSF2122_5_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£47.00" id="AEBC-NSF2122_5_rowTotal" data-type="currency" step="any">
+
+                                    <span id="AEBC-NSF2122_5_rowTotalspan">£23.00</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">ESFA AEB National Skills Fund Learner Support - 20+ childcare</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_6_1td">
+                                <input name="AEBC-NSF2122_6_1" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="text" value="£25.00" id="AEBC-NSF2122_6_1" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_6_2td"></td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_6_rowTotaltd">
+                                <input name="AEBC-NSF2122_6_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£51.00" id="AEBC-NSF2122_6_rowTotal" data-type="currency" step="any">
+
+                                    <span id="AEBC-NSF2122_6_rowTotalspan">£25.00</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">ESFA AEB National Skills Fund Learner Support - residential access funding</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_7_1td">
+                                <input name="AEBC-NSF2122_7_1" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="text" value="£27.00" id="AEBC-NSF2122_7_1" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_7_2td"></td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_7_rowTotaltd">
+                                <input name="AEBC-NSF2122_7_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£55.00" id="AEBC-NSF2122_7_rowTotal" data-type="currency" step="any">
+
+                                    <span id="AEBC-NSF2122_7_rowTotalspan">£27.00</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">ESFA AEB National Skills Fund Learner Support - administration expenditure</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_8_1td">
+                                <input name="AEBC-NSF2122_8_1" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="text" value="£0.50" id="AEBC-NSF2122_8_1" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_8_2td"></td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="AEBC-NSF2122_8_rowTotaltd">
+                                <input name="AEBC-NSF2122_8_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£1.10" id="AEBC-NSF2122_8_rowTotal" data-type="currency" step="any">
+
+                                    <span id="AEBC-NSF2122_8_rowTotalspan">£0.50</span>
+                        </td>
+                </tr>
+        </tbody>
+
+        <tfoot>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header">ESFA funded AEB National Skills Fund level 3 offer (grant funded) Total</th>
+
+                            <th id="AEBC-NSF2122_1_colTotal" class="govuk-table__header govuk-table__header--numeric">£3,481.00</th>
+                            <th id="AEBC-NSF2122_2_colTotal" class="govuk-table__header govuk-table__header--numeric">£2,122.00</th>
+                            <th id="AEBC-NSF2122_3_colTotal" class="govuk-table__header govuk-table__header--numeric">£5,603.60</th>
+            </tr>
+        </tfoot>
+
+    </table>
+    <div class="sticky stuck">
+        <h2 class="govuk-heading-m">
+            Advanced Learner Loans Bursary
+        </h2>
+    </div>
+<p>Loans Bursary contract value = £52,229.00</p>    <table class="govuk-table cursor-pointer">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header govuk-table__header">Deliverable</th>
+                    <th class="govuk-table__header govuk-table__header govuk-table__header--numeric">Delivery to date (£)</th>
+                    <th class="govuk-table__header govuk-table__header govuk-table__header--numeric">Exceptional adjustments (£)</th>
+                    <th class="govuk-table__header govuk-table__header govuk-table__header--numeric">Total delivery (£)</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">Bursary funding</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_2_1td">
+                                <input name="ALLBC2122_2_1" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£2,700.00" id="ALLBC2122_2_1" data-type="currency" step="any">
+
+                                    <span id="ALLBC2122_2_1span">£2,700.00</span>
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_2_2td">
+                                <input name="ALLBC2122_2_2" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="-99999999.99" data-max="99999999.99" type="text" value="£2,900.00" id="ALLBC2122_2_2" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_2_rowTotaltd">
+                                <input name="ALLBC2122_2_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£5,600.00" id="ALLBC2122_2_rowTotal" data-type="currency" step="any">
+
+                                    <span id="ALLBC2122_2_rowTotalspan">£5,600.00</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">Hardship</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_5_1td">
+                                <input name="ALLBC2122_5_1" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="text" value="£30.00" id="ALLBC2122_5_1" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_5_2td"></td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_5_rowTotaltd">
+
+                                <input name="ALLBC2122_5_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£61.00" id="ALLBC2122_5_rowTotal" data-type="currency" step="any">
+
+                                    <span id="ALLBC2122_5_rowTotalspan">£30.00</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">Childcare</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_6_1td">
+                                <input name="ALLBC2122_6_1" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="text" value="£32.00" id="ALLBC2122_6_1" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_6_2td"></td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_6_rowTotaltd">
+                                <input name="ALLBC2122_6_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£65.00" id="ALLBC2122_6_rowTotal" data-type="currency" step="any">
+
+                                    <span id="ALLBC2122_6_rowTotalspan">£32.00</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">Residential access fund</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_7_1td">
+                                <input name="ALLBC2122_7_1" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="text" value="£34.00" id="ALLBC2122_7_1" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_7_2td"></td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_7_rowTotaltd">
+                                <input name="ALLBC2122_7_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£69.00" id="ALLBC2122_7_rowTotal" data-type="currency" step="any">
+
+                                    <span id="ALLBC2122_7_rowTotalspan">£34.00</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">Area costs</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_3_1td">
+                                <input name="ALLBC2122_3_1" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£721.96" id="ALLBC2122_3_1" data-type="currency" step="any">
+
+                                    <span id="ALLBC2122_3_1span">£721.96</span>
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_3_2td">
+                                <input name="ALLBC2122_3_2" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="-99999999.99" data-max="99999999.99" type="text" value="£36.00" id="ALLBC2122_3_2" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_3_rowTotaltd">
+                                <input name="ALLBC2122_3_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£757.96" id="ALLBC2122_3_rowTotal" data-type="currency" step="any">
+
+                                    <span id="ALLBC2122_3_rowTotalspan">£757.96</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">Excess claims</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_4_1td">
+                                <input name="ALLBC2122_4_1" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£435.00" id="ALLBC2122_4_1" data-type="currency" step="any">
+
+                                    <span id="ALLBC2122_4_1span">£435.00</span>
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_4_2td">
+                                <input name="ALLBC2122_4_2" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="-99999999.99" data-max="99999999.99" type="text" value="£37.00" id="ALLBC2122_4_2" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_4_rowTotaltd">
+                                <input name="ALLBC2122_4_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£472.00" id="ALLBC2122_4_rowTotal" data-type="currency" step="any">
+
+                                    <span id="ALLBC2122_4_rowTotalspan">£472.00</span>
+                        </td>
+                </tr>
+                <tr class="govuk-table__row show">
+                    <td class="govuk-table__cell">Administration expenditure</td>
+
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_8_1td">
+                                <input name="ALLBC2122_8_1" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="text" value="£0.70" id="ALLBC2122_8_1" data-type="currency" step="any">
+
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_8_2td"></td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric td--width-200" id="ALLBC2122_8_rowTotaltd">
+                                <input name="ALLBC2122_8_rowTotal" readonly="readonly" class="govuk-input govuk-input--width-10 govuk-table__cell--numeric" data-min="0" data-max="99999999.99" type="hidden" value="£1.50" id="ALLBC2122_8_rowTotal" data-type="currency" step="any">
+
+                                    <span id="ALLBC2122_8_rowTotalspan">£0.70</span>
+                        </td>
+                </tr>
+        </tbody>
+
+        <tfoot>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header">Advanced Learner Loans Bursary Total</th>
+
+                            <th id="ALLBC2122_1_colTotal" class="govuk-table__header govuk-table__header--numeric">£3,953.66</th>
+                            <th id="ALLBC2122_2_colTotal" class="govuk-table__header govuk-table__header--numeric">£2,973.00</th>
+                            <th id="ALLBC2122_3_colTotal" class="govuk-table__header govuk-table__header--numeric">£6,926.66</th>
+            </tr>
+        </tfoot>
+
+    </table>
+
+
+    <button class="govuk-button govuk-button--secondary" id="save" name="save">
+        Save and finish later
+    </button>
+    <button id="submit" name="submit" class="govuk-!-margin-left-6 govuk-button">
+        Save and Continue
+    </button>
+
+
+                   
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+
+{% endblock %}

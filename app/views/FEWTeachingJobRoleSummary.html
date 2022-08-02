@@ -31,11 +31,21 @@ GOV.UK Prototype Kit
                     <td class="govuk-table__cell">{{ data["SubRole"]}}</td>
                 </tr>
 
+                
+                {% if(data["SubRole"].length ==1 )%}
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">What is their main role?</th>
+                    <td class="govuk-table__cell">{{ data["SubRole"]}}</td>
+                </tr>
+                {% endif%}
+
+                {% if(data["SubRole"].length >1 )%} 
                 <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">What is their main role?</th>
                     <td class="govuk-table__cell">{{ data["MainRole"]}}</td>
                 </tr>
-                
+                {% endif%}
+
            {% if("Senior Leader" in data["JobRole"])%}
                 <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Are they the Head of FE provision?</th>

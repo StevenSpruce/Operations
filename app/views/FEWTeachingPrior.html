@@ -13,7 +13,7 @@ GOV.UK Prototype Kit
           <div class="govuk-grid-row flex">
                 
 <div class="govuk-grid-column-full">
-  <form method="post" action="/few/subjects/check-prior-job-relevancy-subject-taught">
+  <form method="post" action="">
       <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
             <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
@@ -35,43 +35,43 @@ Prior to their FE role, how long did they work in a job relevant to the subject 
 
           <div class="govuk-radios">
                       <div class="govuk-radios__item">
-                          <input id="Prior" name="Prior" value="Less than one year" class="govuk-radios__input" type="radio">
+                          <input id="Prior" name="Prior" value="Less than one year" {{ checked("Prior", "Less than one year") }} class="govuk-radios__input" type="radio">
                           <label for="LookupItemId166" class="govuk-label govuk-radios__label">
                               Less than one year
                           </label>
                       </div>
                       <div class="govuk-radios__item">
-                          <input id="Prior" name="Prior" value="1 to 3 years" class="govuk-radios__input" type="radio">
+                          <input id="Prior" name="Prior" value="1 to 3 years" {{ checked("Prior", "1 to 3 years") }} class="govuk-radios__input" type="radio">
                           <label for="LookupItemId167" class="govuk-label govuk-radios__label">
                               1 to 3 years
                           </label>
                       </div>
                       <div class="govuk-radios__item">
-                          <input id="Prior" name="Prior" value="4 to 10 years" class="govuk-radios__input" type="radio">
+                          <input id="Prior" name="Prior" value="4 to 10 years" {{ checked("Prior", "4 to 10 years") }} class="govuk-radios__input" type="radio">
                           <label for="LookupItemId168" class="govuk-label govuk-radios__label">
                               4 to 10 years
                           </label>
                       </div>
                       <div class="govuk-radios__item">
-                          <input id="Prior" name="Prior" value="11 to 20 years" class="govuk-radios__input" type="radio">
+                          <input id="Prior" name="Prior" value="11 to 20 years" {{ checked("Prior", "11 to 20 years") }} class="govuk-radios__input" type="radio">
                           <label for="LookupItemId169" class="govuk-label govuk-radios__label">
                               11 to 20 years
                           </label>
                       </div>
                       <div class="govuk-radios__item">
-                          <input id="Prior" name="Prior" value="Over 20 years" class="govuk-radios__input" type="radio">
+                          <input id="Prior" name="Prior" value="Over 20 years" {{ checked("Prior", "Over 20 years") }} class="govuk-radios__input" type="radio">
                           <label for="LookupItemId170" class="govuk-label govuk-radios__label">
                               Over 20 years
                           </label>
                       </div>
                       <div class="govuk-radios__item">
-                          <input id="Prior" name="Prior" value="They haven’t had prior industry experience" class="govuk-radios__input" type="radio">
+                          <input id="Prior" name="Prior" value="They haven’t had prior industry experience" {{ checked("Prior", "They haven’t had prior industry experience") }} class="govuk-radios__input" type="radio">
                           <label for="LookupItemId171" class="govuk-label govuk-radios__label">
                               They haven’t had prior industry experience
                           </label>
                       </div>
                       <div class="govuk-radios__item">
-                          <input id="Prior" name="Prior" value="Not known " class="govuk-radios__input" type="radio">
+                          <input id="Prior" name="Prior" value="Not known" {{ checked("Prior", "Not known") }} class="govuk-radios__input" type="radio">
                           <label for="LookupItemId172" class="govuk-label govuk-radios__label">
                               Not known 
                           </label>
