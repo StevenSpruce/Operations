@@ -1,0 +1,71 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<body class="govuk-template__body  js-enabled">
+    <div class="govuk-width-container">
+       <a href="/FEWHomeClosed" class="govuk-back-link">Back to Homepage</a>
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <div class="govuk-grid-row flex">
+                        <div id="left-nav-wrapper" class="govuk-grid-column-one-quarter flex-grow-1">
+                            <div class="sticky-top">
+                                
+<ul class="govuk-list left-navigation-2">
+   
+    
+    <li asp-authorize="">
+        <a class="govuk-link active govuk-!-font-weight-bold" href="/FEWSubmissionClosed">FE Workforce</a>
+    </li>
+    <li asp-authorize="">
+        <a class="govuk-link active govuk-!-font-weight-bold" href="/FEWGovernorSubmissions">FE Governors</a>
+    </li>
+    
+</ul>
+
+                </div>
+                        </div>
+                        <div class="govuk-grid-column-three-quarters flex-grow-1">
+                            <div class="govuk-form-group">
+                                
+
+
+<h1 class="govuk-heading-l" id="submission">
+    Submissions
+</h1>
+
+<p>FE Workforce Governor data collection</p>
+
+<h2 class="govuk-heading-l">Academic Year 2021 to 2022</h2>
+
+<h3 class="govuk-heading-m">Online forms</h3>
+
+<p>View your 2021 to 2022 governor data via the <a class="govuk-link" href="/FEWGCheckYourAnswersReadOnly">online form.</a></p>
+
+
+<h2 class="govuk-heading-l">Academic Year 2020 to 2021</h2>
+
+<h3 class="govuk-heading-m">Online forms</h3>
+        
+<p>View your 2020 to 2021 governor data via the <a class="govuk-link" href="/FEWGCheckYourAnswersReadOnly">online form.</a></p>
+   
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+{% endblock %}
