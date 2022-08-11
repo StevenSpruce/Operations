@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+<!-- <label for="autocomplete-overlay">Select your country</label> -->
+<div class="govuk-width-container">
+
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+  <h1 class="govuk-heading-xl">ILR lookups</h1>
+        
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+      </div>
+    </div>
+    <div class="govuk-grid-row" id="reference-data-report">
+      <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Date</th>
+              <th scope="col" class="govuk-table__header">Submitted by</th>
+              <th scope="col" class="govuk-table__header">Job ID</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+              <th scope="col" class="govuk-table__header">Reports</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row" id="new-csv-upload-row">
+              <th scope="row" class="govuk-table__header">10 August 2022 at 6.45am</th>
+              <td class="govuk-table__cell">Schedule</td>
+              <td class="govuk-table__cell">612001</td>
+              <td class="govuk-table__cell">Job Completed</td>
+              <td class="govuk-table__cell"><a href="#">ILRLookupsChanges-202110141522.fileformat</format>zip</a></td>
+            </tr>
+
+            <tr class="govuk-table__row" id="new-csv-upload-row">
+              <th scope="row" class="govuk-table__header">08 August 2022 at 6.45am</th>
+              <td class="govuk-table__cell">Schedule</td>
+              <td class="govuk-table__cell">61200</td>
+              <td class="govuk-table__cell">Job Completed</td>
+              <td class="govuk-table__cell"><a href="#">ILRLookupsChanges-202110141522.fileformat</format>zip</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}

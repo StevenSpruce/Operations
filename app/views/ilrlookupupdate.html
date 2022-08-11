@@ -1,0 +1,274 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-l">ILR lookup update</h1>
+            <!--<div id="dob-hint" class="govuk-hint">Choose providers file to upload</div>-->
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="sort">
+                  Select a collection year
+                </label>
+                <select class="govuk-select" id="sort" name="sort">
+                  <option value="2223">2223</option>
+                  <option value="2122">2122</option>
+                </select>
+              </div>
+
+
+            <div class="govuk-tabs" data-module="govuk-tabs">
+                <h2 class="govuk-tabs__title">
+                  Contents
+                </h2>
+                <ul class="govuk-tabs__list">
+                  <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                    <a class="govuk-tabs__tab" href="#Lookup">
+                      Lookup
+                    </a>
+                  </li>
+                  <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="#Sub-category">
+                      Sub category
+                    </a>
+                  </li>
+                </ul>
+                
+                <div class="govuk-tabs__panel" id="Lookup">
+                  <h2 class="govuk-heading-l">Lookup</h2>
+                 
+                  <div class="standard-search">
+                    <label for="autocomplete-overlay" class="govuk-label">Search by <strong>name</strong> or <strong>description</strong></label>
+                    <div class="govuk-form-group">
+                        <div id="tt-overlay" class="autocomplete-wrapper second">
+                            <div class="autocomplete__wrapper" role="combobox" aria-expanded="false">
+                                <input class="govuk-input" id="autocomplete-overlay" name="SearchTerm" placeholder="e.g AimType or Programme aim" type="text" maxlength="200">
+                            </div>
+                        </div>
+                        <br>
+                        <button class="govuk-button" data-module="govuk-button">
+                          Search
+                        </button>
+                    </div>
+                 </div>
+
+
+                <div id="filesList">﻿<div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                        <table class="govuk-table">
+                            <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                    <th scope="col" class="govuk-table__header">Name</th>
+
+                                    <th scope="col" class="govuk-table__header">Code</th>
+
+                                    <th scope="col" class="govuk-table__header">Description</th>
+
+                                    <th scope="col" class="govuk-table__header">Alt description</th>
+                                </tr>
+                            </thead>
+                            <tbody class="govuk-table__body" id="fileContainer">
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">AimType</td>
+
+                                    <td class="govuk-table__cell">1</td>
+
+                                    <td class="govuk-table__cell">Programme Aim</td>
+
+                                    <td class="govuk-table__cell">
+                                        <input class="govuk-input" id="event-name" name="event-name" type="text">
+                                    </td> 
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">AimType</td>
+
+                                    <td class="govuk-table__cell">3</td>
+
+                                    <td class="govuk-table__cell">Component learning aim within a programme</td>
+
+                                    <td class="govuk-table__cell">
+                                        <input class="govuk-input" id="event-name" name="event-name" type="text">
+                                    </td> 
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">AimType</td>
+
+                                    <td class="govuk-table__cell">4</td>
+
+                                    <td class="govuk-table__cell">Learning aim that is not part of a programme</td>
+
+                                    <td class="govuk-table__cell">
+                                        <input class="govuk-input" id="event-name" name="event-name" type="text">
+                                    </td> 
+                                                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">AimType</td>
+
+                                    <td class="govuk-table__cell">5</td>
+
+                                    <td class="govuk-table__cell">Core aim – EFA funded learning aims only</td>
+
+                                    <td class="govuk-table__cell">
+                                        <input class="govuk-input" id="event-name" name="event-name" type="text">
+                                    </td>                                 </tr>
+                              </tbody>
+                        </table>
+                    </div>
+                </div>
+                <button class="govuk-button" data-module="govuk-button">Save</button>
+                </div>
+              </div>
+               
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="Sub-category">
+                  <h2 class="govuk-heading-l">Sub category</h2>
+
+                  <div class="standard-search">
+                    <label for="autocomplete-overlay" class="govuk-label">Search by <strong>parent name</strong>, <strong>name</strong> or <strong>description</strong></label>
+                    <div class="govuk-form-group">
+                        <div id="tt-overlay" class="autocomplete-wrapper second">
+                            <div class="autocomplete__wrapper" role="combobox" aria-expanded="false">
+                                <input class="govuk-input" id="autocomplete-overlay" name="SearchTerm" placeholder="e.g AppFinType, PMR or training" type="text" maxlength="200">
+                            </div>
+                        </div>
+                        <br>
+                        <button class="govuk-button" data-module="govuk-button">
+                          Search
+                        </button>
+                    </div>
+                 </div>
+
+                 <div id="filesList">﻿<div class="govuk-grid-row">
+                  <div class="govuk-grid-column-full">
+                      <table class="govuk-table">
+                          <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                  <th scope="col" class="govuk-table__header">Parent name</th>
+
+                                  <th scope="col" class="govuk-table__header">Name</th>
+
+                                  <th scope="col" class="govuk-table__header">Code</th>
+
+                                  <th scope="col" class="govuk-table__header">Description</th>
+
+                                  <th scope="col" class="govuk-table__header">Alt description</th>
+                              </tr>
+                          </thead>
+                          <tbody class="govuk-table__body" id="fileContainer">
+                              <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell govuk-!-font-weight-bold">AppFinType</td>
+
+                                  <td class="govuk-table__cell">PMR</td>
+
+                                  <td class="govuk-table__cell">1</td>
+
+                                  <td class="govuk-table__cell">Training payment</td>
+
+                                  <td class="govuk-table__cell">
+                                      <input class="govuk-input" id="event-name" name="event-name" type="text">
+                                  </td> 
+                              </tr>
+                              <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell govuk-!-font-weight-bold">AppFinType</td>
+
+                                  <td class="govuk-table__cell">PMR</td>
+
+                                  <td class="govuk-table__cell">2</td>
+
+                                  <td class="govuk-table__cell">Assessment payment</td>
+
+                                  <td class="govuk-table__cell">
+                                      <input class="govuk-input" id="event-name" name="event-name" type="text">
+                                  </td> 
+                              </tr>
+                              <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell govuk-!-font-weight-bold">AppFinType</td>
+
+                                  <td class="govuk-table__cell">PMR</td>
+
+                                  <td class="govuk-table__cell">3</td>
+
+                                  <td class="govuk-table__cell">Employer payment reimbursed by provider</td>
+
+                                  <td class="govuk-table__cell">
+                                      <input class="govuk-input" id="event-name" name="event-name" type="text">
+                                  </td> 
+                                </tr>
+                              <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell govuk-!-font-weight-bold">AppFinType</td>
+
+                                  <td class="govuk-table__cell">TNP</td>
+
+                                  <td class="govuk-table__cell">1</td>
+
+                                  <td class="govuk-table__cell">Total training price</td>
+
+                                  <td class="govuk-table__cell">
+                                      <input class="govuk-input" id="event-name" name="event-name" type="text">
+                                  </td>                                 
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-!-font-weight-bold">AppFinType</td>
+
+                                <td class="govuk-table__cell">TNP</td>
+
+                                <td class="govuk-table__cell">2</td>
+
+                                <td class="govuk-table__cell">Total assessment price</td>
+
+                                <td class="govuk-table__cell">
+                                    <input class="govuk-input" id="event-name" name="event-name" type="text">
+                                </td>                                 
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell govuk-!-font-weight-bold">AppFinType</td>
+
+                              <td class="govuk-table__cell">TNP</td>
+
+                              <td class="govuk-table__cell">3</td>
+
+                              <td class="govuk-table__cell">Residual training price</td>
+
+                              <td class="govuk-table__cell">
+                                  <input class="govuk-input" id="event-name" name="event-name" type="text">
+                              </td>                                 
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-!-font-weight-bold">AppFinType</td>
+
+                            <td class="govuk-table__cell">TNP</td>
+
+                            <td class="govuk-table__cell">4</td>
+
+                            <td class="govuk-table__cell">Residual assessment price</td>
+
+                            <td class="govuk-table__cell">
+                                <input class="govuk-input" id="event-name" name="event-name" type="text">
+                            </td>                                 
+                        </tr>
+                            </tbody>
+                      </table>
+
+                      <button class="govuk-button" data-module="govuk-button">Save</button>
+
+
+
+
+
+
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
