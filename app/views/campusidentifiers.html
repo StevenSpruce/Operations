@@ -1,0 +1,177 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl heading-bottom-margin">Campus Identifiers</h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <form method="post" enctype="multipart/form-data" action="/referencedata/referenceData">
+            <input type="hidden" id="referenceDataCollectionName" name="ReferenceDataCollectionName" value="CampusIdentifier">
+            <input type="hidden" id="hubName" name="HubName" value="campusIdentifiersHub">
+            <input type="hidden" id="CollectionDisplayName" name="CollectionDisplayName" value="Campus Identifiers">
+
+            
+
+            <h1 class="govuk-heading-m">
+                Choose Campus Identifiers reference data file to upload
+            </h1>
+
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-!-font-weight-bold" for="file">
+                    Upload a file
+                </label>
+                
+                <input class="govuk-file-upload" name="file" id="file" type="file" accept=".csv">
+            </div>
+
+            <button class="govuk-button" id="uploadFile">
+                Upload
+            </button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Ogx-S-Y65hCkmbp_fRZbS7rgxnaWj1KRoSV-uWn0_Rrg8ig5tYaA7vZtld9H8yC1G1UaGLsuLgqz-1iMgpTxJ4oNlspIQa2tbIxl-9zFNURd6t9HMVRFqety8OEB8cZF02ARbu2yVjMtLUYdNZLaelyVfiY9-fIbsnqmaysxq_Ds25xgbDk9JLO_Q_dSNWbXA"></form>
+    </div>
+</div>
+
+<div id="filesList">﻿<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header td--width-100-wrap">Date</th>
+                    <th scope="col" class="govuk-table__header">Submitted by</th>
+                    <th scope="col" class="govuk-table__header td--width-150-wrap">File</th>
+                    <th scope="col" class="govuk-table__header">Job ID</th>
+                    <th scope="col" class="govuk-table__header table-width-min">Status</th>
+                    <th scope="col" class="govuk-table__header td--width-150-wrap">Reports</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="fileContainer">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">14 June 2022 at 3:27 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CampusIdentifier/CampusIdentifierRD-202206101000.csv">CampusIdentifierRD-202206101000.csv</a></td>
+                    <td class="govuk-table__cell">1108778</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">200 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">16 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CampusIdentifier/CampusIdentifierRD-ValidationReport-202206101000.csv/1108778">CampusIdentifierRD-ValidationReport-202206101000.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">20 January 2022 at 4:48 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CampusIdentifier/CampusIdentifierRD-202201170930.csv">CampusIdentifierRD-202201170930.csv</a></td>
+                    <td class="govuk-table__cell">966765</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">197 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">16 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CampusIdentifier/CampusIdentifierRD-ValidationReport-202201170930.csv/966765">CampusIdentifierRD-ValidationReport-202201170930.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">16 December 2021 at 6:45 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CampusIdentifier/CampusIdentifierRD-202112160930.csv">CampusIdentifierRD-202112160930.csv</a></td>
+                    <td class="govuk-table__cell">938971</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">195 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">16 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CampusIdentifier/CampusIdentifierRD-ValidationReport-202112160930.csv/938971">CampusIdentifierRD-ValidationReport-202112160930.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">28 August 2020 at 9:33 am</td>
+                    <td class="govuk-table__cell">Mr Pete Chamley</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CampusIdentifier/CampusIdentifierRD-202008280930.csv">CampusIdentifierRD-202008280930.csv</a></td>
+                    <td class="govuk-table__cell">386022</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">193 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">12 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CampusIdentifier/CampusIdentifierRD-ValidationReport-202008280930.csv/386022">CampusIdentifierRD-ValidationReport-202008280930.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">27 August 2020 at 4:07 pm</td>
+                    <td class="govuk-table__cell">Lynne Burdon</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CampusIdentifier/CampusIdentifierRD-202008271404.csv">CampusIdentifierRD-202008271404.csv</a></td>
+                    <td class="govuk-table__cell">385817</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">193 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">12 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CampusIdentifier/CampusIdentifierRD-ValidationReport-202008271404.csv/385817">CampusIdentifierRD-ValidationReport-202008271404.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">12 August 2020 at 2:05 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CampusIdentifier/CampusIdentifierRD-202008121404.csv">CampusIdentifierRD-202008121404.csv</a></td>
+                    <td class="govuk-table__cell">381896</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">193 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">12 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CampusIdentifier/CampusIdentifierRD-ValidationReport-202008121404.csv/381896">CampusIdentifierRD-ValidationReport-202008121404.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">12 August 2020 at 12:08 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CampusIdentifier/CampusIdentifierRD-202008120901.csv">CampusIdentifierRD-202008120901.csv</a></td>
+                    <td class="govuk-table__cell">381867</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">194 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">15 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CampusIdentifier/CampusIdentifierRD-ValidationReport-202008120901.csv/381867">CampusIdentifierRD-ValidationReport-202008120901.csv</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <label id="slowConnection" alt="Connection is slow at the moment"></label>
+        <label id="lastSync">Last updated: 11/08/2022 11:38:53</label>
+        <label id="state">Status: Connected</label>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+ 
+
+{% endblock %}

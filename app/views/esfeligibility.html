@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl heading-bottom-margin">ESF Eligibility</h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <form id="referenceDataForm" method="post" enctype="multipart/form-data" action="/referencedata/referenceDataProcess">
+            <input type="hidden" id="ReferenceDataCollectionName" name="ReferenceDataCollectionName" value="EsfEligibility">
+            <input type="hidden" id="HubName" name="HubName" value="esfEligibilityHub">
+            <input type="hidden" id="CollectionDisplayName" name="CollectionDisplayName" value="ESF Eligibility">
+
+            <button class="govuk-button" id="run" formaction="CreateEsfJob">
+                Run
+            </button>
+            <label class="govuk-label" id="runInformation"></label>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Ogx-S-Y65hCkmbp_fRZbS52miwQwTaTtA2G1O2-GAw8m2vQpzoaSyJCYDBg0SiYJlU-xOzW5yK2icyHVqb2fe5Xtbw26LNJyJoOqXmUgaxyGcQ1ZyzgNUPwc8iFzLgJzGXm0g8nm8Qe13bsV--D8xRvhrnGiyT80-DWcj92oegflvLvJNSYIgE25zDqNEBVkw"></form>
+    </div>
+</div>
+
+<div id="RefDataProcessFilesList">﻿<form method="post" action="Publish">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-!-font-size-27">Ready to publish</caption>
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header td--width-150-wrap">Date</th>
+                        <th scope="col" class="govuk-table__header">Processed by</th>
+                        <th scope="col" class="govuk-table__header">Job ID</th>
+                        <th scope="col" class="govuk-table__header table-width-min">Status</th>
+                        <th scope="col" class="govuk-table__header td--width-150-wrap">Reports</th>
+                        <th scope="col" class="govuk-table__header">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body" id="fileContainer">
+                </tbody>
+            </table>
+            <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-!-font-size-27">Jobs completed</caption>
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header td--width-150-wrap">Date</th>
+                        <th scope="col" class="govuk-table__header">Processed by</th>
+                        <th scope="col" class="govuk-table__header">Job ID</th>
+                        <th scope="col" class="govuk-table__header table-width-min">Status</th>
+                        <th scope="col" class="govuk-table__header td--width-150-wrap">Reports</th>
+                        <th scope="col" class="govuk-table__header">Published date</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body" id="fileContainer">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell govuk-!-font-weight-bold td--width-150-wrap">4 March 2022 at 4:07 pm</td>
+                        <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                        <td class="govuk-table__cell">1006941</td>
+                        <td class="govuk-table__cell">
+                            <span class="jobCompleted">Job Completed</span> <br>
+                        </td>
+                        <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceDataProcess/GetCollectionReportFileAsync/EsfEligibility/Reports-202203041607.zip/1006941">Reports-202203041607.zip</a></td>
+                        <td class="govuk-table__cell">4 March 2022 at 4:08 pm</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell govuk-!-font-weight-bold td--width-150-wrap">23 February 2022 at 8:50 am</td>
+                        <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                        <td class="govuk-table__cell">996980</td>
+                        <td class="govuk-table__cell">
+                            <span class="jobCompleted">Job Completed</span> <br>
+                        </td>
+                        <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceDataProcess/GetCollectionReportFileAsync/EsfEligibility/Reports-202202230850.zip/996980">Reports-202202230850.zip</a></td>
+                        <td class="govuk-table__cell">23 February 2022 at 8:50 am</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell govuk-!-font-weight-bold td--width-150-wrap">10 December 2021 at 3:33 pm</td>
+                        <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                        <td class="govuk-table__cell">937106</td>
+                        <td class="govuk-table__cell">
+                            <span class="jobCompleted">Job Completed</span> <br>
+                        </td>
+                        <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceDataProcess/GetCollectionReportFileAsync/EsfEligibility/Reports-202112101533.zip/937106">Reports-202112101533.zip</a></td>
+                        <td class="govuk-table__cell">10 December 2021 at 3:33 pm</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell govuk-!-font-weight-bold td--width-150-wrap">19 November 2021 at 8:39 am</td>
+                        <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                        <td class="govuk-table__cell">908768</td>
+                        <td class="govuk-table__cell">
+                            <span class="jobCompleted">Job Completed</span> <br>
+                        </td>
+                        <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceDataProcess/GetCollectionReportFileAsync/EsfEligibility/Reports-202111190839.zip/908768">Reports-202111190839.zip</a></td>
+                        <td class="govuk-table__cell">19 November 2021 at 8:41 am</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell govuk-!-font-weight-bold td--width-150-wrap">1 July 2021 at 8:47 am</td>
+                        <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                        <td class="govuk-table__cell">725249</td>
+                        <td class="govuk-table__cell">
+                            <span class="jobCompleted">Job Completed</span> <br>
+                        </td>
+                        <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceDataProcess/GetCollectionReportFileAsync/EsfEligibility/Reports-202107010847.zip/725249">Reports-202107010847.zip</a></td>
+                        <td class="govuk-table__cell">1 July 2021 at 8:51 am</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell govuk-!-font-weight-bold td--width-150-wrap">24 June 2021 at 2:29 pm</td>
+                        <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                        <td class="govuk-table__cell">722612</td>
+                        <td class="govuk-table__cell">
+                            <span class="jobCompleted">Job Completed</span> <br>
+                        </td>
+                        <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceDataProcess/GetCollectionReportFileAsync/EsfEligibility/Reports-202106241429.zip/722612">Reports-202106241429.zip</a></td>
+                        <td class="govuk-table__cell">25 June 2021 at 10:10 am</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <label id="slowConnection" alt="Connection is slow at the moment"></label>
+        <label id="lastSync">Last updated: 11/08/2022 14:25:48</label>
+        <label id="state">Status: Connected</label>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,271 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+                 
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl heading-bottom-margin">Devolved Contracts</h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <form method="post" enctype="multipart/form-data" id="ilrform" action="/referencedata/devolvedContracts">
+
+            
+
+            <h1 class="govuk-heading-m">
+                Choose Devolved Contracts file to upload
+            </h1>
+
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-!-font-weight-bold" for="file">
+                    Upload a file
+                </label>
+                
+                <input class="govuk-file-upload" name="file" id="file" type="file" accept=".csv">
+            </div>
+
+            <button class="govuk-button" id="uploadFile">
+                Upload
+            </button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Ogx-S-Y65hCkmbp_fRZbS4Fw5YMHT8hJSsgo9_ptl8BLQ2_ZEaBixKgfGgWRmmRcLLzy_IVkpAZWSYTL5cuqSXTmWkkvidREpApRbZCkPKDOAzNCuq1av5zIHOHDWMKVoPm6uMdfU-klwL31d-M4gp1SvZnczuW8dGx9_ZCbupnh_wvYNFy6W9WlNtd4voOfw"></form>
+    </div>
+</div>
+
+<div id="filesList">﻿<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header td--width-100-wrap">Date</th>
+                    <th scope="col" class="govuk-table__header">Submitted by</th>
+                    <th scope="col" class="govuk-table__header td--width-150-wrap">File</th>
+                    <th scope="col" class="govuk-table__header">Job ID</th>
+                    <th scope="col" class="govuk-table__header table-width-min">Status</th>
+                    <th scope="col" class="govuk-table__header td--width-150-wrap">Reports</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="fileContainer">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">5 August 2022 at 11:50 am</td>
+                    <td class="govuk-table__cell">Joanne Galvin</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000445-DevolvedContracts-202208051147.csv">90000445-DevolvedContracts-202208051147.csv</a></td>
+                    <td class="govuk-table__cell">1150668</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">89 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">7 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">2 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000445-DevolvedContractsReports-202208051147.zip/1150668">90000445-DevolvedContractsReports-202208051147.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">2 August 2022 at 3:43 pm</td>
+                    <td class="govuk-table__cell">Wendy Wood</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000441-DevolvedContracts-202208021540.csv">90000441-DevolvedContracts-202208021540.csv</a></td>
+                    <td class="govuk-table__cell">1144909</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">42 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">35 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000441-DevolvedContractsReports-202208021540.zip/1144909">90000441-DevolvedContractsReports-202208021540.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">19 July 2022 at 4:36 pm</td>
+                    <td class="govuk-table__cell">Kevin Nicholls</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000445-DevolvedContracts-202207191636.csv">90000445-DevolvedContracts-202207191636.csv</a></td>
+                    <td class="govuk-table__cell">1138302</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">83 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">2 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000445-DevolvedContractsReports-202207191636.zip/1138302">90000445-DevolvedContractsReports-202207191636.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">30 May 2022 at 3:01 pm</td>
+                    <td class="govuk-table__cell">Margaret Foster</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000449-DevolvedContracts-202205301459.csv">90000449-DevolvedContracts-202205301459.csv</a></td>
+                    <td class="govuk-table__cell">1085401</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">31 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">33 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000449-DevolvedContractsReports-202205301459.zip/1085401">90000449-DevolvedContractsReports-202205301459.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">18 May 2022 at 4:38 pm</td>
+                    <td class="govuk-table__cell">Michelle Stone</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000449-DevolvedContracts-202205181638.csv">90000449-DevolvedContracts-202205181638.csv</a></td>
+                    <td class="govuk-table__cell">1081164</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">31 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">61 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000449-DevolvedContractsReports-202205181638.zip/1081164">90000449-DevolvedContractsReports-202205181638.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">18 May 2022 at 4:33 pm</td>
+                    <td class="govuk-table__cell">Michelle Stone</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000449-DevolvedContracts-202205181632.csv">90000449-DevolvedContracts-202205181632.csv</a></td>
+                    <td class="govuk-table__cell">1081159</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">31 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">59 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000449-DevolvedContractsReports-202205181632.zip/1081159">90000449-DevolvedContractsReports-202205181632.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">18 May 2022 at 12:25 pm</td>
+                    <td class="govuk-table__cell">Margaret Foster</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000449-DevolvedContracts-202205181216.csv">90000449-DevolvedContracts-202205181216.csv</a></td>
+                    <td class="govuk-table__cell">1081017</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">31 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">31 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000449-DevolvedContractsReports-202205181216.zip/1081017">90000449-DevolvedContractsReports-202205181216.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">1 March 2022 at 11:33 am</td>
+                    <td class="govuk-table__cell">Joanna Litzbarska</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000443-DevolvedContracts-202203011132.csv">90000443-DevolvedContracts-202203011132.csv</a></td>
+                    <td class="govuk-table__cell">999920</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">45 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">2 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">2 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000443-DevolvedContractsReports-202203011132.zip/999920">90000443-DevolvedContractsReports-202203011132.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">25 February 2022 at 2:07 pm</td>
+                    <td class="govuk-table__cell">Joanne Galvin</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000445-DevolvedContracts-202202251408.csv">90000445-DevolvedContracts-202202251408.csv</a></td>
+                    <td class="govuk-table__cell">998290</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">81 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">1 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000445-DevolvedContractsReports-202202251408.zip/998290">90000445-DevolvedContractsReports-202202251408.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">22 February 2022 at 2:56 pm</td>
+                    <td class="govuk-table__cell">Joanna Litzbarska</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000443-DevolvedContracts-202202221451.csv">90000443-DevolvedContracts-202202221451.csv</a></td>
+                    <td class="govuk-table__cell">996803</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">45 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">2 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">2 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000443-DevolvedContractsReports-202202221451.zip/996803">90000443-DevolvedContractsReports-202202221451.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">24 January 2022 at 2:55 pm</td>
+                    <td class="govuk-table__cell">Ellis Millar</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000444-DevolvedContracts-202201241430.csv">90000444-DevolvedContracts-202201241430.csv</a></td>
+                    <td class="govuk-table__cell">967552</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">31 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">10 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000444-DevolvedContractsReports-202201241430.zip/967552">90000444-DevolvedContractsReports-202201241430.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">22 November 2021 at 5:14 pm</td>
+                    <td class="govuk-table__cell">Janet Warren</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000439-DevolvedContracts-202111221710.csv">90000439-DevolvedContracts-202111221710.csv</a></td>
+                    <td class="govuk-table__cell">909614</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">20 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000439-DevolvedContractsReports-202111221710.zip/909614">90000439-DevolvedContractsReports-202111221710.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">19 November 2021 at 1:16 pm</td>
+                    <td class="govuk-table__cell">Joanne Galvin</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000445-DevolvedContracts-202111191315.csv">90000445-DevolvedContracts-202111191315.csv</a></td>
+                    <td class="govuk-table__cell">908935</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">78 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000445-DevolvedContractsReports-202111191315.zip/908935">90000445-DevolvedContractsReports-202111191315.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">12 November 2021 at 11:56 am</td>
+                    <td class="govuk-table__cell">Joanne Galvin</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000445-DevolvedContracts-202105170905.csv">90000445-DevolvedContracts-202105170905.csv</a></td>
+                    <td class="govuk-table__cell">906968</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">78 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">6 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000445-DevolvedContractsReports-202105170905.zip/906968">90000445-DevolvedContractsReports-202105170905.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">1 October 2021 at 8:42 am</td>
+                    <td class="govuk-table__cell">Tom King</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000439-DevolvedContracts-202110010845.csv">90000439-DevolvedContracts-202110010845.csv</a></td>
+                    <td class="govuk-table__cell">831314</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">19 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">1 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/DevolvedContracts/GetCollectionReportFile/DevolvedContracts/90000439-DevolvedContractsReports-202110010845.zip/831314">90000439-DevolvedContractsReports-202110010845.zip</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <label id="slowConnection" alt="Connection is slow at the moment"></label>
+        <label id="lastSync">Last updated: 11/08/2022 12:02:57</label>
+        <label id="state">Status: Connected</label>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+{% endblock %}

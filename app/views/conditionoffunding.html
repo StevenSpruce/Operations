@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl heading-bottom-margin">Conditions of Funding Removal</h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <form method="post" enctype="multipart/form-data" action="/referencedata/referenceData">
+            <input type="hidden" id="referenceDataCollectionName" name="ReferenceDataCollectionName" value="CoFRemoval">
+            <input type="hidden" id="hubName" name="HubName" value="conditionOfFundingRemovalHub">
+            <input type="hidden" id="CollectionDisplayName" name="CollectionDisplayName" value="Conditions of Funding Removal">
+
+            
+
+            <h1 class="govuk-heading-m">
+                Choose Conditions of Funding Removal reference data file to upload
+            </h1>
+
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-!-font-weight-bold" for="file">
+                    Upload a file
+                </label>
+                
+                <input class="govuk-file-upload" name="file" id="file" type="file" accept=".csv">
+            </div>
+
+            <button class="govuk-button" id="uploadFile">
+                Upload
+            </button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Ogx-S-Y65hCkmbp_fRZbS6pmf-T0GAoJkmec6WvWrwJfSTATZANL99nGY-amiTvOh4tYAW8NRd6L0xvrxJg5dGk2Lc62ifwtVaS2hf5MHJ3BC3wnZW6DCn4wHEdlTVnh5iTwSeHoTMtP55y2Sow9MJYruPtJ8ibkRCfJn5rMrRqsoGOD8Zef6KCYNl3_ov-Tg"></form>
+    </div>
+</div>
+
+<div id="filesList">﻿<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header td--width-100-wrap">Date</th>
+                    <th scope="col" class="govuk-table__header">Submitted by</th>
+                    <th scope="col" class="govuk-table__header td--width-150-wrap">File</th>
+                    <th scope="col" class="govuk-table__header">Job ID</th>
+                    <th scope="col" class="govuk-table__header table-width-min">Status</th>
+                    <th scope="col" class="govuk-table__header td--width-150-wrap">Reports</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="fileContainer">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">8 August 2022 at 4:02 pm</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CoFRemoval/CoFRemovalRD-202208021000.csv">CoFRemovalRD-202208021000.csv</a></td>
+                    <td class="govuk-table__cell">1166422</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">12938 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CoFRemoval/CoFRemovalRD-ValidationReport-202208021000.csv/1166422">CoFRemovalRD-ValidationReport-202208021000.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">21 July 2022 at 3:39 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CoFRemoval/CoFRemovalRD-202207211537.csv">CoFRemovalRD-202207211537.csv</a></td>
+                    <td class="govuk-table__cell">1139092</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">10437 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CoFRemoval/CoFRemovalRD-ValidationReport-202207211537.csv/1139092">CoFRemovalRD-ValidationReport-202207211537.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">11 July 2022 at 12:18 pm</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CoFRemoval/CoFRemovalRD-202207051547.csv">CoFRemovalRD-202207051547.csv</a></td>
+                    <td class="govuk-table__cell">1136649</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">10437 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CoFRemoval/CoFRemovalRD-ValidationReport-202207051547.csv/1136649">CoFRemovalRD-ValidationReport-202207051547.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">8 June 2022 at 2:06 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CoFRemoval/CoFRemovalRD-202206081350.csv">CoFRemovalRD-202206081350.csv</a></td>
+                    <td class="govuk-table__cell">1092622</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">10437 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CoFRemoval/CoFRemovalRD-ValidationReport-202206081350.csv/1092622">CoFRemovalRD-ValidationReport-202206081350.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">9 March 2022 at 11:45 am</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CoFRemoval/CoFRemovalRD-202203071350.csv">CoFRemovalRD-202203071350.csv</a></td>
+                    <td class="govuk-table__cell">1021865</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">10437 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/CoFRemoval/CoFRemovalRD-ValidationReport-202203071350.csv/1021865">CoFRemovalRD-ValidationReport-202203071350.csv</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <label id="slowConnection" alt="Connection is slow at the moment"></label>
+        <label id="lastSync">Last updated: 11/08/2022 11:53:07</label>
+        <label id="state">Status: Connected</label>
+    </div>
+</div>
+
+        </main>
+    </div>
+
+  
+ 
+
+{% endblock %}

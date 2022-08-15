@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-l">Funding claim configuration</h1>
+            <!--<div id="dob-hint" class="govuk-hint">Choose providers file to upload</div>-->
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="sort">
+                  Select a funding claim 
+                </label>
+                <select class="govuk-select" id="sort" name="sort">
+                  <option value="2223">2122-Final</option>
+                  <option value="2122">2122-YearEnd</option>
+                  <option value="2122">2122-MidYear</option>
+                </select>
+              </div>
+
+
+            <div class="govuk-tabs" data-module="govuk-tabs">
+                <h2 class="govuk-tabs__title">
+                  Contents
+                </h2>
+                <ul class="govuk-tabs__list">
+                  <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                    <a class="govuk-tabs__tab" href="#Lookup">
+                      Funding stream period 
+                    </a>
+                  </li>
+                  <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="#Sub-category">
+                      Deliverable lines
+                    </a>
+                  </li>
+                </ul>
+                
+                <div class="govuk-tabs__panel" id="Lookup">
+                  <h2 class="govuk-heading-l">Section</h2>
+                 
+
+                <div id="filesList">﻿<div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                        <table class="govuk-table">
+                            <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                    <th scope="col" class="govuk-table__header">FSP Code</th>
+
+                                    <th scope="col" class="govuk-table__header">Display name</th>
+
+                                    <th scope="col" class="govuk-table__header">Display order</th>
+
+                                    <th scope="col" class="govuk-table__header">Template</th>
+                                </tr>
+                            </thead>
+                            <tbody class="govuk-table__body" id="fileContainer">
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                      <input class="govuk-input govuk-input--width-8" id="event-name" name="event-name" type="text">
+                                  </td> 
+
+                                    <td class="govuk-table__cell">
+                                      <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text">
+                                  </td> 
+
+                                    <td class="govuk-table__cell">
+                                      <input class="govuk-input govuk-input--width-2" id="event-name" name="event-name" type="text">
+                                  </td> 
+
+                                  <td class="govuk-table__cell">
+                                  <select class="govuk-select" id="sort" name="sort">
+                                    <option value="2223">Adult - Forecast</option>
+                                    <option value="2122">Adult - Exceptional adjustments</option>
+                                    <option value="2223">1619 - Forecast</option>
+                                    <option value="2122">1619 - Exceptional adjustments</option>
+                                  </select> 
+                                  </td> 
+                                </tr>
+                             </tbody>
+                        </table>
+                    </div>
+                </div>
+                <button class="govuk-button" data-module="govuk-button">Add</button>
+                <button class="govuk-button" data-module="govuk-button">Save</button>
+                </div>
+              </div>
+               
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="Sub-category">
+                  <h2 class="govuk-heading-l">Deliverable lines</h2>
+
+                 <div id="filesList">﻿<div class="govuk-grid-row">
+                  <div class="govuk-grid-column-full">
+                      <table class="govuk-table">
+                          <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                  <th scope="col" class="govuk-table__header">Funding stream period</th>
+
+                                  <th scope="col" class="govuk-table__header">Display name</th>
+
+                                  <th scope="col" class="govuk-table__header">Display order</th>
+
+                                  <th scope="col" class="govuk-table__header">Deliverable code</th>
+                              </tr>
+                          </thead>
+                          <tbody class="govuk-table__body" id="fileContainer">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                  <select class="govuk-select" id="sort" name="sort">
+                                    <option value="2223">From FSP tab</option>
+                                    <option value="2122">1619ED2122</option>
+                                  </select> 
+                                  </td> 
+
+                                <td class="govuk-table__cell">
+                                    <input class="govuk-input" id="event-name" name="event-name" type="text">
+                                </td> 
+
+                                <td class="govuk-table__cell">
+                                  <input class="govuk-input" id="event-name" name="event-name" type="text">
+                              </td> 
+
+                              <td class="govuk-table__cell">
+                                <input class="govuk-input" id="event-name" name="event-name" type="text">
+                            </td> 
+
+                              </tr>
+                            </tbody>
+                      </table>
+
+                      <button class="govuk-button" data-module="govuk-button">Add</button>
+                      <button class="govuk-button" data-module="govuk-button">Save</button>
+
+
+
+
+
+
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

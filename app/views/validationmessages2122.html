@@ -1,0 +1,405 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl heading-bottom-margin">Validation Messages 21-22</h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <form method="post" enctype="multipart/form-data" action="/referencedata/referenceData">
+            <input type="hidden" id="referenceDataCollectionName" name="ReferenceDataCollectionName" value="ILRValidationMessages2122">
+            <input type="hidden" id="hubName" name="HubName" value="validationMessages2122Hub">
+            <input type="hidden" id="CollectionDisplayName" name="CollectionDisplayName" value="Validation Messages 21-22">
+
+            
+
+            <h1 class="govuk-heading-m">
+                Choose Validation Messages 21-22 reference data file to upload
+            </h1>
+
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-!-font-weight-bold" for="file">
+                    Upload a file
+                </label>
+                
+                <input class="govuk-file-upload" name="file" id="file" type="file" accept=".csv">
+            </div>
+
+            <button class="govuk-button" id="uploadFile">
+                Upload
+            </button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Ogx-S-Y65hCkmbp_fRZbS4PWF5UrXLTSvlEsXAiB8Kmy3SKHs6Q2V6qUBQ_guS91kfLxKg3TJ7k_2E1gMoqTMdeuz3fyi1i068Vuyfpg0IeBrKxsf9qXGlJigJheO5x9jzQ3ZEeK3NPrtEJ3kACTXdC8VZlIqWn03_rGjy9jldYX-cwxus_68qLmtEJNi0zKA"></form>
+    </div>
+</div>
+
+<div id="filesList">﻿<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header td--width-100-wrap">Date</th>
+                    <th scope="col" class="govuk-table__header">Submitted by</th>
+                    <th scope="col" class="govuk-table__header td--width-150-wrap">File</th>
+                    <th scope="col" class="govuk-table__header">Job ID</th>
+                    <th scope="col" class="govuk-table__header table-width-min">Status</th>
+                    <th scope="col" class="govuk-table__header td--width-150-wrap">Reports</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="fileContainer">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">9 August 2022 at 2:27 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202208091205.csv">ILR2122ValidationMessages-202208091205.csv</a></td>
+                    <td class="govuk-table__cell">1166538</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">853 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202208091205.csv/1166538">ILR2122ValidationMessages-ValidationReport-202208091205.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">14 July 2022 at 2:22 pm</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202207140948.csv">ILR2122ValidationMessages-202207140948.csv</a></td>
+                    <td class="govuk-table__cell">1137257</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">853 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202207140948.csv/1137257">ILR2122ValidationMessages-ValidationReport-202207140948.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">25 May 2022 at 5:11 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202205250957.csv">ILR2122ValidationMessages-202205250957.csv</a></td>
+                    <td class="govuk-table__cell">1083531</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">853 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202205250957.csv/1083531">ILR2122ValidationMessages-ValidationReport-202205250957.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">27 April 2022 at 4:31 pm</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202204270925.csv">ILR2122ValidationMessages-202204270925.csv</a></td>
+                    <td class="govuk-table__cell">1055682</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">853 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202204270925.csv/1055682">ILR2122ValidationMessages-ValidationReport-202204270925.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">22 April 2022 at 4:08 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202204221516.csv">ILR2122ValidationMessages-202204221516.csv</a></td>
+                    <td class="govuk-table__cell">1054083</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">853 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202204221516.csv/1054083">ILR2122ValidationMessages-ValidationReport-202204221516.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">11 April 2022 at 12:43 pm</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202203311159.csv">ILR2122ValidationMessages-202203311159.csv</a></td>
+                    <td class="govuk-table__cell">1051980</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">853 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202203311159.csv/1051980">ILR2122ValidationMessages-ValidationReport-202203311159.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">23 March 2022 at 3:20 pm</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202203231512.csv">ILR2122ValidationMessages-202203231512.csv</a></td>
+                    <td class="govuk-table__cell">1025477</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">848 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202203231512.csv/1025477">ILR2122ValidationMessages-ValidationReport-202203231512.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">23 March 2022 at 10:48 am</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202203231032.csv">ILR2122ValidationMessages-202203231032.csv</a></td>
+                    <td class="govuk-table__cell">1025224</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">848 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202203231032.csv/1025224">ILR2122ValidationMessages-ValidationReport-202203231032.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">22 March 2022 at 3:30 pm</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202203221453.csv">ILR2122ValidationMessages-202203221453.csv</a></td>
+                    <td class="govuk-table__cell">1024916</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">848 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202203221453.csv/1024916">ILR2122ValidationMessages-ValidationReport-202203221453.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">9 February 2022 at 3:28 pm</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202202091510.csv">ILR2122ValidationMessages-202202091510.csv</a></td>
+                    <td class="govuk-table__cell">993737</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">851 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202202091510.csv/993737">ILR2122ValidationMessages-ValidationReport-202202091510.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">25 January 2022 at 4:32 pm</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202201251521.csv">ILR2122ValidationMessages-202201251521.csv</a></td>
+                    <td class="govuk-table__cell">968127</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">851 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202201251521.csv/968127">ILR2122ValidationMessages-ValidationReport-202201251521.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">13 January 2022 at 12:42 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202201121415.csv">ILR2122ValidationMessages-202201121415.csv</a></td>
+                    <td class="govuk-table__cell">964933</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">851 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202201121415.csv/964933">ILR2122ValidationMessages-ValidationReport-202201121415.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">10 December 2021 at 2:32 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202112101131.csv">ILR2122ValidationMessages-202112101131.csv</a></td>
+                    <td class="govuk-table__cell">937075</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">849 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202112101131.csv/937075">ILR2122ValidationMessages-ValidationReport-202112101131.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">2 December 2021 at 1:11 pm</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202112021212.csv">ILR2122ValidationMessages-202112021212.csv</a></td>
+                    <td class="govuk-table__cell">916172</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">849 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202112021212.csv/916172">ILR2122ValidationMessages-ValidationReport-202112021212.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">12 November 2021 at 12:17 pm</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202111121133.csv">ILR2122ValidationMessages-202111121133.csv</a></td>
+                    <td class="govuk-table__cell">906981</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">849 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202111121133.csv/906981">ILR2122ValidationMessages-ValidationReport-202111121133.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">2 November 2021 at 4:43 pm</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202111021543.csv">ILR2122ValidationMessages-202111021543.csv</a></td>
+                    <td class="govuk-table__cell">887469</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">849 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202111021543.csv/887469">ILR2122ValidationMessages-ValidationReport-202111021543.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">1 November 2021 at 1:36 pm</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202110291144.csv">ILR2122ValidationMessages-202110291144.csv</a></td>
+                    <td class="govuk-table__cell">885695</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">847 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202110291144.csv/885695">ILR2122ValidationMessages-ValidationReport-202110291144.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">22 October 2021 at 12:40 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202110220941.csv">ILR2122ValidationMessages-202110220941.csv</a></td>
+                    <td class="govuk-table__cell">876442</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">847 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202110220941.csv/876442">ILR2122ValidationMessages-ValidationReport-202110220941.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">13 October 2021 at 10:41 am</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202110131025.csv">ILR2122ValidationMessages-202110131025.csv</a></td>
+                    <td class="govuk-table__cell">855134</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">847 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202110131025.csv/855134">ILR2122ValidationMessages-ValidationReport-202110131025.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">11 October 2021 at 9:50 am</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202110081349.csv">ILR2122ValidationMessages-202110081349.csv</a></td>
+                    <td class="govuk-table__cell">853790</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">847 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202110081349.csv/853790">ILR2122ValidationMessages-ValidationReport-202110081349.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">20 September 2021 at 4:02 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202109201156.csv">ILR2122ValidationMessages-202109201156.csv</a></td>
+                    <td class="govuk-table__cell">825420</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">847 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202109201156.csv/825420">ILR2122ValidationMessages-ValidationReport-202109201156.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">25 August 2021 at 2:08 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202108241518.csv">ILR2122ValidationMessages-202108241518.csv</a></td>
+                    <td class="govuk-table__cell">781305</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">845 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202108241518.csv/781305">ILR2122ValidationMessages-ValidationReport-202108241518.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">18 August 2021 at 10:57 am</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202108181026.csv">ILR2122ValidationMessages-202108181026.csv</a></td>
+                    <td class="govuk-table__cell">778751</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">845 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202108181026.csv/778751">ILR2122ValidationMessages-ValidationReport-202108181026.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">16 August 2021 at 12:14 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202108161133.csv">ILR2122ValidationMessages-202108161133.csv</a></td>
+                    <td class="govuk-table__cell">778003</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">845 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202108161133.csv/778003">ILR2122ValidationMessages-ValidationReport-202108161133.csv</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">10 August 2021 at 3:19 pm</td>
+                    <td class="govuk-table__cell">Lynne Burdon</td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-202107301424.csv">ILR2122ValidationMessages-202107301424.csv</a></td>
+                    <td class="govuk-table__cell">777084</td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">844 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/referencedata/ReferenceData/GetCollectionReportFileAsync/ILRValidationMessages2122/ILR2122ValidationMessages-ValidationReport-202107301424.csv/777084">ILR2122ValidationMessages-ValidationReport-202107301424.csv</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <label id="slowConnection" alt="Connection is slow at the moment"></label>
+        <label id="lastSync">Last updated: 11/08/2022 14:04:32</label>
+        <label id="state">Status: Connected</label>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+{% endblock %}
