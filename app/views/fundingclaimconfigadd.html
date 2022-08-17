@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+                 <table class="govuk-table">
+                    <caption class="govuk-table__caption govuk-table__caption--l">Add a funding stream period</caption>
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Field</th>
+                        <th scope="col" class="govuk-table__header">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">FSP code</th>
+                        <td class="govuk-table__cell">
+                          <input class="govuk-input govuk-input--width-8" id="event-name" name="event-name" type="text">
+                        </td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Display name</th>
+                        <td class="govuk-table__cell">
+                          <input class="govuk-input govuk-input--width-8" id="event-name" name="event-name" type="text">
+                        </td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Display order</th>
+                        <td class="govuk-table__cell">
+                          <input class="govuk-input govuk-input--width-8" id="event-name" name="event-name" type="text">
+                        </td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Template</th>
+                        <td class="govuk-table__cell">
+                          <select class="govuk-select" id="sort" name="sort">
+                            <option value="2223">Adult</option>
+                            <option value="2122">1619</option>
+                          </select>                         
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <a class="govuk-button" href="/fundingclaimconfig">Save</a>
+
+
+
+
+
+               
+
+
+
+
+
+        </div>
+
+</div>
+
+
+{% endblock %}

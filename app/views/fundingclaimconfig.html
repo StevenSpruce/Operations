@@ -20,9 +20,19 @@
                   Select a funding claim 
                 </label>
                 <select class="govuk-select" id="sort" name="sort">
-                  <option value="2223">2122-Final</option>
-                  <option value="2122">2122-YearEnd</option>
-                  <option value="2122">2122-MidYear</option>
+                  <option value="2122-Final">2122-Final</option>
+                  <option value="2122-YearEnd">2122-YearEnd</option>
+                  <option value="2122-MidYear">2122-MidYear</option>
+                </select>
+              </div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="sort">
+                  Select a model 
+                </label>
+                <select class="govuk-select" id="sort" name="sort">
+                  <option value="Forecast">Forecast</option>
+                  <option value="Exceptional">Exceptional adjustments</option>
                 </select>
               </div>
 
@@ -60,36 +70,46 @@
                                     <th scope="col" class="govuk-table__header">Display order</th>
 
                                     <th scope="col" class="govuk-table__header">Template</th>
+
+                                    <th scope="col" class="govuk-table__header">Action</th>
                                 </tr>
                             </thead>
                             <tbody class="govuk-table__body" id="fileContainer">
                                 <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">AEBC-ASCL2122</td> 
+                                    <td class="govuk-table__cell">ESFA funded Adult Education Budget (grant funded)</td> 
+                                    <td class="govuk-table__cell">1</td> 
+                                    <td class="govuk-table__cell">Adult</td>
                                     <td class="govuk-table__cell">
-                                      <input class="govuk-input govuk-input--width-8" id="event-name" name="event-name" type="text">
-                                  </td> 
-
-                                    <td class="govuk-table__cell">
-                                      <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text">
-                                  </td> 
-
-                                    <td class="govuk-table__cell">
-                                      <input class="govuk-input govuk-input--width-2" id="event-name" name="event-name" type="text">
-                                  </td> 
-
-                                  <td class="govuk-table__cell">
-                                  <select class="govuk-select" id="sort" name="sort">
-                                    <option value="2223">Adult - Forecast</option>
-                                    <option value="2122">Adult - Exceptional adjustments</option>
-                                    <option value="2223">1619 - Forecast</option>
-                                    <option value="2122">1619 - Exceptional adjustments</option>
-                                  </select> 
-                                  </td> 
+                                      <a class="govuk-link" href="/fundingclaimconfigupdate1">Update</a> 
+                                      <a class="govuk-link" href="/">Delete</a>
+                                    </td> 
                                 </tr>
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell">AEBC-19TRN2122</td> 
+                                  <td class="govuk-table__cell">AEB 19 to 24 traineeships (grant funded)</td> 
+                                  <td class="govuk-table__cell">2</td> 
+                                  <td class="govuk-table__cell">Adult</td>
+                                  <td class="govuk-table__cell">
+                                    <a class="govuk-link" href="/fundingclaimconfigupdate2">Update</a> 
+                                    <a class="govuk-link" href="/">Delete</a>
+                                  </td> 
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">AEBC-NSF2122</td> 
+                                <td class="govuk-table__cell">AEB National Skills Fund level 3 offer for 24 years old and over (grant funded)</td> 
+                                <td class="govuk-table__cell">3</td> 
+                                <td class="govuk-table__cell">Adult</td>
+                                <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/fundingclaimconfigupdate3">Update</a> 
+                                  <a class="govuk-link" href="/">Delete</a>
+                                </td> 
+                            </tr>
                              </tbody>
                         </table>
                     </div>
                 </div>
-                <button class="govuk-button" data-module="govuk-button">Add</button>
+                <a class="govuk-button" href="/fundingclaimconfigadd">Add</a>
                 <button class="govuk-button" data-module="govuk-button">Save</button>
                 </div>
               </div>
@@ -103,46 +123,49 @@
                           <thead class="govuk-table__head">
                               <tr class="govuk-table__row">
                                   <th scope="col" class="govuk-table__header">Funding stream period</th>
-
-                                  <th scope="col" class="govuk-table__header">Display name</th>
-
-                                  <th scope="col" class="govuk-table__header">Display order</th>
-
                                   <th scope="col" class="govuk-table__header">Deliverable code</th>
+                                  <th scope="col" class="govuk-table__header">Display name</th>
+                                  <th scope="col" class="govuk-table__header">Display order</th>
+                                  <th scope="col" class="govuk-table__header">Action</th>
                               </tr>
                           </thead>
                           <tbody class="govuk-table__body" id="fileContainer">
-                              <tr class="govuk-table__row">
-                                <td class="govuk-table__cell">
-                                  <select class="govuk-select" id="sort" name="sort">
-                                    <option value="2223">From FSP tab</option>
-                                    <option value="2122">1619ED2122</option>
-                                  </select> 
-                                  </td> 
-
-                                <td class="govuk-table__cell">
-                                    <input class="govuk-input" id="event-name" name="event-name" type="text">
-                                </td> 
-
-                                <td class="govuk-table__cell">
-                                  <input class="govuk-input" id="event-name" name="event-name" type="text">
-                              </td> 
-
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">AEBC-19TRN2122</td> 
+                              <td class="govuk-table__cell">1</td> 
+                              <td class="govuk-table__cell">ESFA AEB 19 to 24 Traineeships – programme funding</td> 
+                              <td class="govuk-table__cell">1</td> 
                               <td class="govuk-table__cell">
-                                <input class="govuk-input" id="event-name" name="event-name" type="text">
+                                <a class="govuk-link" href="/fundingclaimconfigupdatedeliverable1">Update</a> 
+                                <a class="govuk-link" href="/">Delete</a>
+                              </td> 
+                           </tr>
+                           <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">AEBC-19TRN2122</td> 
+                            <td class="govuk-table__cell">2</td> 
+                            <td class="govuk-table__cell">ESFA AEB 19 to 24 Traineeships – learning support</td> 
+                            <td class="govuk-table__cell">2</td> 
+                            <td class="govuk-table__cell">
+                              <a class="govuk-link" href="/fundingclaimconfigupdatedeliverable2">Update</a> 
+                              <a class="govuk-link" href="/">Delete</a>
                             </td> 
-
-                              </tr>
+                         </tr>
+                         <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">AEBC-19TRN2122</td> 
+                          <td class="govuk-table__cell">3</td> 
+                          <td class="govuk-table__cell">ESFA AEB 19 to 24 Traineeships Learner Support – 19+ hardship</td> 
+                          <td class="govuk-table__cell">3</td> 
+                          <td class="govuk-table__cell">
+                            <a class="govuk-link" href="/fundingclaimconfigupdatedeliverable3">Update</a> 
+                            <a class="govuk-link" href="/">Delete</a>
+                          </td> 
+                       </tr>
                             </tbody>
                       </table>
 
-                      <button class="govuk-button" data-module="govuk-button">Add</button>
+
+                      <a class="govuk-button" href="/fundingclaimconfigadddeliverable">Add</a>
                       <button class="govuk-button" data-module="govuk-button">Save</button>
-
-
-
-
-
 
                 </div>
              </div>
