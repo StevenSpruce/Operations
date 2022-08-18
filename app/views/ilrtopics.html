@@ -7,23 +7,87 @@ GOV.UK Prototype Kit
 
 {% block content %}
 {% include "./includes/nav.html" %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
-<div class="govuk-breadcrumbs">
-  <ol class="govuk-breadcrumbs__list">
-    <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="collectiontypeilr">Collection type</a>
-    </li>
-    <li class="govuk-breadcrumbs__list-item">
-      Topic subscriptions
-    </li>
-  </ol>
+<h1 class="govuk-heading-l">Topic subscriptions and tasks</h1>
+
+<h2 class="govuk-heading-l">Topics</h2>
+
+<h3 class="govuk-heading-m">Filter by collection year</h3>
+<p>Choosing a filter will result in the page refreshing automatically</p>
+
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset">
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Collection year
+    </legend>
+
+
+
+    <div class="govuk-checkboxes govuk-checkboxes--small" style="display: flex;">
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="2021">
+        <label class="govuk-label govuk-checkboxes__label" for="2021">
+          2021
+        </label>
+
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="2122">
+        <label class="govuk-label govuk-checkboxes__label" for="2122">
+          2122
+        </label>
+
+     </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status-3" name="status" type="checkbox" value="2223">
+        <label class="govuk-label govuk-checkboxes__label" for="2223">
+          2223
+        </label>
+      </div>
+    </div>
+  </fieldset>
 </div>
-<br>
 
-<h1 class="govuk-heading-l">Enable topic subscriptions for collection ILR2122<h1>
+<h3 class="govuk-heading-m">Filter by enabled setting</h3>
+<p>Choosing a filter will result in the page refreshing automatically</p>
+
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset">
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Setting
+    </legend>
+
+    <div class="govuk-checkboxes govuk-checkboxes--small" style="display: flex;">
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="2021">
+        <label class="govuk-label govuk-checkboxes__label" for="2021">
+          Enabled
+        </label>
+
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="2122">
+        <label class="govuk-label govuk-checkboxes__label" for="2122">
+          Not enabled
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
 
   <table class="govuk-table">
-    <caption class="govuk-table__caption govuk-table__caption--m">Topics and subscriptions</caption>
+    <caption class="govuk-table__caption govuk-table__caption--m">Enable or disable topic subscriptions for "selected collection type"</caption>
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Topic</th>
@@ -84,7 +148,7 @@ GOV.UK Prototype Kit
           </div>
         </td>
         <td class="govuk-table__cell">
-          <a href="ilrreportstasks.html">Tasks</a>
+          <a href="/ilrvalidation1tasks">Tasks</a>
           </td>
       </tr>
       <tr class="govuk-table__row">
@@ -101,7 +165,7 @@ GOV.UK Prototype Kit
           </div>
         </td>
         <td class="govuk-table__cell">
-          <a href="ilrreportstasks.html">Tasks</a>
+          <a href="/ilrreports1tasks">Tasks</a>
           </td>
       </tr>
       <tr class="govuk-table__row">
@@ -118,7 +182,7 @@ GOV.UK Prototype Kit
           </div>
         </td>
         <td class="govuk-table__cell">
-          <a href="ilrreportstasks.html">Tasks</a>
+          <a href="/ilrfilevalidation2tasks">Tasks</a>
           </td>
       </tr>
       <tr class="govuk-table__row">
@@ -135,7 +199,7 @@ GOV.UK Prototype Kit
           </div>
         </td>
         <td class="govuk-table__cell">
-          <a href="ilrreportstasks.html">Tasks</a>
+          <a href="/ilrreferencedata2tasks">Tasks</a>
           </td>
       </tr>
       <tr class="govuk-table__row">
@@ -152,7 +216,7 @@ GOV.UK Prototype Kit
           </div>
         </td>
         <td class="govuk-table__cell">
-          <a href="ilrreportstasks.html">Tasks</a>
+          <a href="/ilrvalidation2tasks">Tasks</a>
           </td>
       </tr>
       <tr class="govuk-table__row">
@@ -169,7 +233,7 @@ GOV.UK Prototype Kit
           </div>
         </td>
         <td class="govuk-table__cell">
-          <a href="ilrreportstasks.html">Tasks</a>
+          <a href="/ilrfundingtasks">Tasks</a>
           </td>
       </tr>
         <tr class="govuk-table__row">
@@ -186,7 +250,7 @@ GOV.UK Prototype Kit
             </div>
           </td>
           <td class="govuk-table__cell">
-            <a href="ilrreportstasks.html">Tasks</a>
+            <a href="/ilrgeneratefm36paymentstasks">Tasks</a>
             </td>
         </tr>
         <tr class="govuk-table__row">
@@ -203,7 +267,7 @@ GOV.UK Prototype Kit
           </div>
         </td>
         <td class="govuk-table__cell">
-          <a href="ilrreportstasks.html">Tasks</a>
+          <a href="/ilrdedstasks">Tasks</a>
           </td>
       </tr>
       <tr class="govuk-table__row">
@@ -220,7 +284,7 @@ GOV.UK Prototype Kit
           </div>
         </td>
         <td class="govuk-table__cell">
-          <a href="ilrreportstasks.html">Tasks</a>
+          <a href="/ilrgeneratefm36paymentstasks2">Tasks</a>
           </td>
       </tr>
       <tr class="govuk-table__row">
@@ -237,7 +301,7 @@ GOV.UK Prototype Kit
           </div>
         </td>
         <td class="govuk-table__cell">
-          <a href="ilrreportstasks.html">Tasks</a>
+          <a href="/ilrreportstasks2a">Tasks</a>
           </td>
       </tr>
       <tr class="govuk-table__row">
@@ -254,7 +318,7 @@ GOV.UK Prototype Kit
           </div>
         </td>
         <td class="govuk-table__cell">
-          <a href="ilrreportstasks.html">Tasks</a>
+          <a href="/ilresfv2">Tasks</a>
           </td>
       </tr>
       <tr class="govuk-table__row">
@@ -271,24 +335,7 @@ GOV.UK Prototype Kit
           </div>
         </td>
         <td class="govuk-table__cell">
-          <a href="ilrreportstasks.html">Tasks</a>
-          </td>
-      </tr>
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">frmsubmissiontopic</th>
-        <td class="govuk-table__cell">FRM</td>
-        <td class="govuk-table__cell">2</td>
-        <td class="govuk-table__cell">1</td>
-        <td class="govuk-table__cell">28 April 2021</td>
-        <td class="govuk-table__cell">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
-            <label class="govuk-label govuk-checkboxes__label" for="waste">
-            </label>
-          </div>
-        </td>
-        <td class="govuk-table__cell">
-          <a href="ilrreportstasks.html">Tasks</a>
+          <a href="/ilrreportstasks2b">Tasks</a>
           </td>
       </tr>
     </tbody>

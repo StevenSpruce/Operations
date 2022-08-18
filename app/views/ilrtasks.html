@@ -1,0 +1,978 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<h1 class="govuk-heading-l">Topic subscriptions and tasks</h1>
+
+<h2 class="govuk-heading-l">Tasks</h2>
+
+<h3 class="govuk-heading-m">Filter by collection year</h3>
+<p>Choosing a filter will result in the page refreshing automatically</p>
+
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset">
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Collection year
+    </legend>
+
+
+
+    <div class="govuk-checkboxes govuk-checkboxes--small" style="display: flex;">
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="2021">
+        <label class="govuk-label govuk-checkboxes__label" for="2021">
+          2021
+        </label>
+
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="2122">
+        <label class="govuk-label govuk-checkboxes__label" for="2122">
+          2122
+        </label>
+
+     </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status-3" name="status" type="checkbox" value="2223">
+        <label class="govuk-label govuk-checkboxes__label" for="2223">
+          2223
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<h3 class="govuk-heading-m">Filter by enabled setting</h3>
+<p>Choosing a filter will result in the page refreshing automatically</p>
+
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset">
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Setting
+    </legend>
+
+    <div class="govuk-checkboxes govuk-checkboxes--small" style="display: flex;">
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="2021">
+        <label class="govuk-label govuk-checkboxes__label" for="2021">
+          Enabled
+        </label>
+
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="2122">
+        <label class="govuk-label govuk-checkboxes__label" for="2122">
+          Not enabled
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">Enable or disable tasks for "selected collection type"</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Topic</th>
+        <th scope="col" class="govuk-table__header">Subscription</th>
+        <th scope="col" class="govuk-table__header">Stage</th>
+        <th scope="col" class="govuk-table__header">Task name</th>
+        <th scope="col" class="govuk-table__header">Last updated</th>
+        <th scope="col" class="govuk-table__header">Enabled</th>
+        
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">FileValidation</td>
+        <td class="govuk-table__cell">1</td>
+        <td class="govuk-table__cell">Process</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+              </label>
+            </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">ReferenceDataRetrieval</td>
+        <td class="govuk-table__cell">1</td>
+        <td class="govuk-table__cell">IlrMessage</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">ReferenceDataRetrieval</td>
+        <td class="govuk-table__cell">1</td>
+        <td class="govuk-table__cell">LearnerReferenceData</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Validation</td>
+        <td class="govuk-table__cell">1</td>
+        <td class="govuk-table__cell">Process</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">1</td>
+        <td class="govuk-table__cell">TaskGenerateValidationReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">1</td>
+        <td class="govuk-table__cell">TaskGenerateRuleViolationSummaryReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">1</td>
+        <td class="govuk-table__cell">TaskGenerateValidationReportV2</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">FileValidation</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">Process</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">ReferenceDataRetrieval</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">IlrMessage</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">ReferenceDataRetrieval</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">LearnerReferenceData</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Validation</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">Process</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Funding</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">ALB</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Funding</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">FM25</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Funding</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">FM35</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Funding</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">FM36</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Funding</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">FM70</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Funding</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">FM81</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Funding</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">FM37</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+          <td class="govuk-table__cell">GenerateFM36Payments</td>
+          <td class="govuk-table__cell">2</td>
+          <td class="govuk-table__cell">Process</td>
+          <td class="govuk-table__cell">28 April 2021</td>
+          <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+              </label>
+            </div>
+          </td>
+        </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Deds</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">PersistDataToDeds</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Deds</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskStoreInvalidTables</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Deds</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskStoreValidTables</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Deds</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskStoreALBTables</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Deds</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskStoreFM25Tables</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Deds</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskStoreFM35Tables</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Deds</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskStoreFM36Tables</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Deds</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskStoreFM70Tables</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Deds</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskStoreFM81Tables</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Deds</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskStoreFM37Tables</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Deds</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskStoreValidationTables</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">GenerateFM36Payments</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">JobSuccess</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateValidationReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateAllbOccupancyReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateFundingSummaryReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateMainOccupancyReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateMathsAndEnglishReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateAppsIndicativeEarningsReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateTrailblazerEmployerIncentivesReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateFundingClaim1619Report</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateTrailblazerAppsOccupancyReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateHNSReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateAdultFundingClaimReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateNonContractedAppsActivityReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateHNSSummaryReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateCommunityLearningReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateSummaryOfFm35FundingReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateDevolvedAdultEducationOccupancyReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateDevolvedAdultEducationFundingSummaryReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateSummaryOfFundingByStudentReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateRuleViolationSummaryReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateValidationReportV2</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateNonContractDevolvedAdultEducationOccupancyReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateAEBSTFInitiativesOccupancyReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateAEBSTFFundingSummaryReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateDevolvedAdultEducationOccupancyV2Report</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateDevolvedAdultEducationDestinationAndProgressionReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateOfSHeQualityControlReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">ilr2223submissiontopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateSkillsBootcampOccupancyReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">esfsubmissiontopic</th>
+        <td class="govuk-table__cell">ESFV2</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateEsfAimAndDeliverableReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">esfsubmissiontopic</th>
+        <td class="govuk-table__cell">ESFV2</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateFundingSummaryReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">datamatchtopic</th>
+        <td class="govuk-table__cell">Reports</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">TaskGenerateDataMatchReport</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">frmsubmissiontopic</th>
+        <td class="govuk-table__cell">FRM</td>
+        <td class="govuk-table__cell">2</td>
+        <td class="govuk-table__cell">1</td>
+        <td class="govuk-table__cell">28 April 2021</td>
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+            </label>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a href="/ILRtopicstaskscheck" button class="govuk-button" data-module="govuk-button">
+    Save
+  </a>
+
+
+{% endblock %}
