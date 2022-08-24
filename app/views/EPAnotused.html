@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-l">End point assessment</h1>
+
+                  <div class="standard-search">
+                    <label for="autocomplete-overlay" class="govuk-label">Search by <strong>EPA id</strong></label>
+                    <div class="govuk-form-group">
+                        <div id="tt-overlay" class="autocomplete-wrapper second">
+                            <div class="autocomplete__wrapper" role="combobox" aria-expanded="false">
+                                <input class="govuk-input" id="autocomplete-overlay" name="SearchTerm" placeholder="e.g EPA0001" type="text" maxlength="200">
+                            </div>
+                        </div>
+                        <br>
+                        <button class="govuk-button" data-module="govuk-button">
+                          Search
+                        </button>
+                    </div>
+                 </div>
+
+
+                <div id="filesList">﻿<div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                        <table class="govuk-table">
+                            <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                    <th scope="col" class="govuk-table__header">EPA id</th>
+
+                                    <th scope="col" class="govuk-table__header">Name</th>
+
+                                    <th scope="col" class="govuk-table__header">UKPRN</th>
+
+                                    <th scope="col" class="govuk-table__header">Deleted</th>
+
+                                    <th scope="col" class="govuk-table__header">Std code effective to date</th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody class="govuk-table__body" id="fileContainer">
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">EPA0001</td>
+
+                                    <td class="govuk-table__cell">BCS, The Chartered Institute for IT</td>
+
+                                    <td class="govuk-table__cell">10022712</td>
+
+                                    
+                                    <td class="govuk-table__cell">
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="true">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                        </label>
+                                      </div>
+                                  </td>
+                                  
+
+                                  
+                                  <td class="govuk-table__cell">
+                                    <input asp-for="2022-08-15T07:00:00" type="date" class="govuk-input" value="dd-mm-yyyy" name="effectivetodate">
+                                  </td>
+                                </tr>
+
+                              
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">EPA0002</td>
+
+                                    <td class="govuk-table__cell">British Institute of Facilities Management</td>
+
+                                    <td class="govuk-table__cell">10029857</td>
+
+                                    <td class="govuk-table__cell">
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="true">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                        </label>
+                                      </div>
+                                  </td> 
+
+                                      <td class="govuk-table__cell">
+                                        <input asp-for="2022-08-15T07:00:00" type="date" class="govuk-input" value="dd-mm-yyyy" name="effectivetodate">
+                                      </td>
+                                </tr>
+
+
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">EPA0003</td>
+
+                                    <td class="govuk-table__cell">BINDT</td>
+
+                                    <td class="govuk-table__cell">90000315</td>
+                                    <td class="govuk-table__cell">
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="true">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                        </label>
+                                      </div>
+                                    </td> 
+                                      <td class="govuk-table__cell">
+                                        <input asp-for="2022-08-15T07:00:00" type="date" class="govuk-input" value="dd-mm-yyyy" name="effectivetodate">
+                                      </td>
+
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-!-font-weight-bold">EPA0167</td>
+
+                                    <td class="govuk-table__cell">Rehabilitation Workers Professional Network</td>
+
+                                    <td class="govuk-table__cell">n/a</td>
+
+                                    <td class="govuk-table__cell">
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="true">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                        </label>
+                                      </div>
+                                  </td> 
+                                  <td class="govuk-table__cell">
+                                    <input asp-for="2022-08-15T07:00:00" type="date" class="govuk-input" value="dd-mm-yyyy" name="effectivetodate">
+                                  </td>                                
+                                </tr>
+                              </tbody>
+                        </table>
+                    </div>
+                </div>
+                <button class="govuk-button" data-module="govuk-button">Save</button>
+                </div>
+              </div>
+             </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
