@@ -17,28 +17,25 @@ GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
 <form method="post" action="/reminders/submit-certificate-reminder">
-<h1 class="govuk-heading-l">Edit certificate reminder</h1>
+<h1 class="govuk-heading-l">Add/edit reminder</h1>
 
 <div>
-<span class="govuk-label govuk-!-font-weight-bold">Name</span>
-<p>api-fundingclaims-2021-22</p>
+<span class="govuk-label govuk-!-font-weight-bold">Description</span>
+<p>R01 closes</p>
 </div>
 
-<div>
-<span class="govuk-label govuk-!-font-weight-bold">Thumbprint</span>
-<p>43-BD-48-EC-FB-DF-14-57-31-3C-01-7A-CA-85-07-14-BE-FE-4B-08</p>
-</div>
-
-<div>
-<span class="govuk-label govuk-!-font-weight-bold">Deadline date</span>
-<p>2022-05-22</p>
-</div>
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-font-weight-bold" for="Reminder_ReminderDate">
+    Select deadline date
+  </label>
+  <input class="govuk-input govuk-!-width-one-third" type="date" id="Reminder_ReminderDate" name="Reminder.ReminderDate" value="2022-09-06">
+  </div>
 
 <div class="govuk-form-group">
 <label class="govuk-label govuk-!-font-weight-bold" for="Reminder_ReminderDate">
   Select reminder date
 </label>
-<input class="govuk-input govuk-!-width-one-third" type="date" id="Reminder_ReminderDate" name="Reminder.ReminderDate" value="2021-11-27">
+<input class="govuk-input govuk-!-width-one-third" type="date" id="Reminder_ReminderDate" name="Reminder.ReminderDate" value="2022-09-01">
 </div>
 
 <div class="govuk-form-group">

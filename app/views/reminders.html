@@ -21,31 +21,35 @@ GOV.UK Prototype Kit
 
 {% include "./includes/nav.html" %}
 <br>
+
 <div class="govuk-tabs" data-module="govuk-tabs">
   <h2 class="govuk-tabs__title">
     Contents
   </h2>
   <ul class="govuk-tabs__list">
     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-      <a class="govuk-tabs__tab" href="#current">
+      <a class="govuk-tabs__tab" href="#certificates">
         Certificates
       </a>
     </li>
     <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#archive">
+      <a class="govuk-tabs__tab" href="#past-week">
         Reminders
       </a>
-    </li> 
+    </li>
     <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#archive">
-        Archive
+      <a class="govuk-tabs__tab" href="#closedcerts">
+        Closed certificates
       </a>
-    </li>  
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#closedreminds">
+        Closed reminders
+      </a>
+    </li>
   </ul>
-  <div class="govuk-tabs__panel" id="current">
-    <fieldset>
-       <legend>Certificates</legend>
-      
+  <div class="govuk-tabs__panel" id="certificates">
+    <h2 class="govuk-heading-l">Certificates</h2>
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -87,103 +91,80 @@ GOV.UK Prototype Kit
             <a class="govuk-link" href="/closereminder">Close</a>
           </td>
         </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+    <h2 class="govuk-heading-l">Reminders</h2>
+    <a class="govuk-button" href="/addreminder">Add reminder</a>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">PublicAPI-2021</td>
-          <td class="govuk-table__cell">86-CB-09-25-1F-3A-70-5A-F2-39-C7-4C-21-99-D1-B1-BB-49-52-DD</td>
-          <td class="govuk-table__cell">2022-03-22</td>
-          <td class="govuk-table__cell">2022-02-08</td>
-          <td class="govuk-table__cell">
-            <a class="govuk-link" href="/editcertificate">Edit</a>
-            <a class="govuk-link" href="/closereminder">Close</a>
-          </td>
+          <th scope="col" class="govuk-table__header">Description</th>
+          <th scope="col" class="govuk-table__header">Deadline date</th>
+          <th scope="col" class="govuk-table__header">Reminder date</th>
+          <th scope="col" class="govuk-table__header">Action</th>
         </tr>
+      </thead>
+      <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">publicapi-2020</td>
-          <td class="govuk-table__cell">93-47-C2-3A-9E-FB-AE-67-4A-3D-37-96-80-F9-2F-25-0B-38-5B-2A</td>
-          <td class="govuk-table__cell">2021-03-11</td>
-          <td class="govuk-table__cell">2022-02-27</td>
+          <td class="govuk-table__cell">R01 closes</td>
+          <td class="govuk-table__cell">2022-09-06</td>
+          <td class="govuk-table__cell">2022-09-01</td>
           <td class="govuk-table__cell">
-            <a class="govuk-link" href="/editcertificate">Edit</a>
+            <a class="govuk-link" href="/editreminder">Edit</a>
             <a class="govuk-link" href="/closereminder">Close</a>
           </td>
         </tr>
       </tbody>
     </table>
-    </fieldset>
   </div>
 
-  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="archive">
- <fieldset>
- <legend>Reminders</legend>
-   <table class="govuk-table">
-     <thead class="govuk-table__head">
-       <tr class="govuk-table__row">
-         <th scope="col" class="govuk-table__header">Reminder description</th>
-         <th scope="col" class="govuk-table__header">Closed date</th>
-         <th scope="col" class="govuk-table__header">Reminder date</th>
-         <th scope="col" class="govuk-table__header">Action</th>
-       </tr>
-     </thead>
-     <tbody class="govuk-table__body">
-       <tr class="govuk-table__row">
-         <td class="govuk-table__cell">R01</td>
-         <td class="govuk-table__cell">2022-05-22</td>
-         <td class="govuk-table__cell">2022-05-22</td>
-         <td class="govuk-table__cell">
-          <a class="govuk-link" href="/editcertificate">Edit</a>
-          <a class="govuk-link" href="/closereminder">Close</a>
-        </td>
-       </tr>
-       <tr class="govuk-table__row">
-         <td class="govuk-table__cell">Maintenance</td>
-         <td class="govuk-table__cell">2023-01-21</td>
-         <td class="govuk-table__cell">2022-05-22</td>
-         <td class="govuk-table__cell">
-          <a class="govuk-link" href="/editcertificate">Edit</a>
-          <a class="govuk-link" href="/closereminder">Close</a>
-        </td>
-       </tr>
-       <tr class="govuk-table__row">
-         <td class="govuk-table__cell">FEW opens</td>
-         <td class="govuk-table__cell">2022-07-17</td>
-         <td class="govuk-table__cell">2022-05-22</td>
-         <td class="govuk-table__cell">
-          <a class="govuk-link" href="/editcertificate">Edit</a>
-          <a class="govuk-link" href="/closereminder">Close</a>
-        </td>
-       </tr>
-       <tr class="govuk-table__row">
-         <td class="govuk-table__cell">Funded Aims opens</td>
-         <td class="govuk-table__cell">2022-03-22</td>
-         <td class="govuk-table__cell">2022-05-22</td>
-         <td class="govuk-table__cell">
-          <a class="govuk-link" href="/editcertificate">Edit</a>
-          <a class="govuk-link" href="/closereminder">Close</a>
-        </td>
-       </tr>
-       <tr class="govuk-table__row">
-         <td class="govuk-table__cell">update FIS</td>
-         <td class="govuk-table__cell">2021-03-11</td>
-         <td class="govuk-table__cell">2022-05-22</td>
-         <td class="govuk-table__cell">
-          <a class="govuk-link" href="/editcertificate">Edit</a>
-          <a class="govuk-link" href="/closereminder">Close</a>
-        </td>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="closedcerts">
+    <h2 class="govuk-heading-l">Closed certificates</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Certificate name</th>
+          <th scope="col" class="govuk-table__header">Thumbprint</th>
+          <th scope="col" class="govuk-table__header">Closed date</th>
         </tr>
-       <tr class="govuk-table__row">
-         <td class="govuk-table__cell">New reports</td>
-         <td class="govuk-table__cell">2022-04-13</td>
-         <td class="govuk-table__cell">2022-05-22</td>
-         <td class="govuk-table__cell">
-          <a class="govuk-link" href="/editcertificate">Edit</a>
-          <a class="govuk-link" href="/closereminder">Close</a>
-        </td>
-         </tr>
-     </tbody>
-   </table>
- </fieldset>
-
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">api-fundingclaims-2021-22</td>
+          <td class="govuk-table__cell">43-BD-48-EC-FB-DF-14-57-31-3C-01-7A-CA-85-07-14-BE-FE-4B-08</td>
+          <td class="govuk-table__cell">2022-05-22</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">api-fundingclaims-2022-23</td>
+          <td class="govuk-table__cell">19-CS-48-EC-FB-DF-14-57-31-3C-01-7A-CA-85-07-14-BE-FE-4B-08</td>
+          <td class="govuk-table__cell">2022-05-21</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="closedreminds">
+    <h2 class="govuk-heading-l">Closed reminders</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Description</th>
+          <th scope="col" class="govuk-table__header">Closed date</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">R12 closing</td>
+          <td class="govuk-table__cell">2022-08-08</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
 </div>
 
 
