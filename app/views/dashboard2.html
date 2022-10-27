@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+
+
+
+<div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Red zone</h2>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+        <div class="border-top">
+            <h2 class="govuk-heading-m">
+                <a href="/processing/jobFailedToday">Failed today</a>
+            </h2>
+            <span id="failedToday" class="govuk-heading-l no-margin-bottom">0</span>
+        </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <div class="border-top">
+            <h2 class="govuk-heading-m">
+                <a href="/processing/jobSlowFile">Slow files</a>
+            </h2>
+            <span id="slowFiles" class="govuk-heading-l no-margin-bottom">0</span>
+            <span class="govuk-body-s">Taking 20% longer than usual</span>
+        </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <div class="border-top">
+            <h2 class="govuk-heading-m">
+                <a id="jobConcern" href="/processing/jobConcern">Concerns</a>
+            </h2>
+            <span id="concerns" class="govuk-heading-l no-margin-bottom">4</span>
+            <span class="govuk-body-s">Providers where their last submitted file was unsuccessful</span>
+        </div>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Processing in detail</h2>
+        <span id="collectionYearContainer" style="display: block;" class="govuk-!-padding-bottom-6">
+            <select id="collectionYears" class="govuk-select govuk-input--width-10 form-control">
+            <option value="2021">20/21</option><option value="2122">21/22</option></select>
+        </span>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+        <div class="border-top">
+            <h2 class="govuk-heading-m">
+                <a class="dashboardLink" id="jobProcessingDetail/CurrentPeriod" href="/processing/jobProcessingDetail/CurrentPeriod/?collectionYear=2021">Current Period</a>
+            </h2>
+            <span id="lastPeriod" class="govuk-heading-l no-margin-bottom">35</span>
+        </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <div class="border-top ">
+            <h2 class="govuk-heading-m">
+                <a class="dashboardLink" id="jobProcessingDetail/LastHour" href="/processing/jobProcessingDetail/LastHour/?collectionYear=2021">Last Hour</a>
+            </h2>
+            <span id="lastHour" class="govuk-heading-l no-margin-bottom">3</span>
+        </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <div class="border-top ">
+            <h2 class="govuk-heading-m">
+                <a class="dashboardLink" id="jobProcessingDetail/LastFiveMins" href="/processing/jobProcessingDetail/LastFiveMins/?collectionYear=2021">Last 5 Minutes</a>
+            </h2>
+            <span id="last5Minutes" class="govuk-heading-l no-margin-bottom">0</span>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="border-top">
+            <h2 class="govuk-heading-m">
+                <a class="dashboardLink" id="jobProvidersReturnedCurrentPeriod" href="/processing/jobProvidersReturnedCurrentPeriod/?collectionYear=2021">ILR returners in current period</a>
+            </h2>
+            <span id="ilrReturns" class="govuk-heading-l no-margin-bottom">375</span>
+        </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <div class="border-top ">
+            <h2 class="govuk-heading-m">
+                <a class="dashboardLink" id="jobFailedCurrentPeriod" href="/processing/jobFailedCurrentPeriod/?collectionYear=2021">Failed files in current period</a>
+            </h2>
+            <span id="failedFiles" class="govuk-heading-l no-margin-bottom">0</span>
+        </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <div class="border-top ">
+            <h2 class="govuk-heading-m">
+                <a class="dashboardLink" id="jobDasMismatch" href="/processing/jobDasMismatch/?collectionYear=2021">SLD/DAS mismatches in current period</a>
+            </h2>
+            <span id="sldDasMismatches" class="govuk-heading-l no-margin-bottom">324</span>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">&nbsp;</div>
+    <div class="govuk-grid-column-two-thirds">
+        <state-display><label id="lastSync">Last updated: 26/08/2021 13:34:31</label><label id="state">Status: Connected</label></state-display>
+    </div>
+</div>
+
+
+</div>
+</div>
+
+{% endblock %}
