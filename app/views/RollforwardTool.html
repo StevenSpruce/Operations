@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<br>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<br>
+
+<h1 class="govuk-heading-xl">ILR Roll forward tool</h1>
+
+<form method="post" id="filter-reports-form" action="/managementtool-downloads/ILRRollForward">
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+            <span id="waste-hint" class="govuk-hint">
+                Filter by year
+            </span>
+            <span id="waste-hint" class="govuk-hint">
+                The page will refresh after you select each filter.
+            </span>
+            <div id="yearFilter" class="govuk-checkboxes govuk-checkboxes--small">
+
+                    <div class="govuk-checkboxes__item">
+                        <input id="year2122" class="govuk-checkboxes__input" name="downloadsFilter" type="checkbox" value="2122">
+                        <label class="govuk-label govuk-checkboxes__label" for="ESFA.DC.Web.Ui.ViewModels.AcademicYearViewModel">
+                            2021 to 2022
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input id="year2021" class="govuk-checkboxes__input" name="downloadsFilter" type="checkbox" value="2021">
+                        <label class="govuk-label govuk-checkboxes__label" for="ESFA.DC.Web.Ui.ViewModels.AcademicYearViewModel">
+                            2020 to 2021
+                        </label>
+                    </div>
+            </div>
+        </fieldset>
+        <br>
+    </div>
+
+    <noscript>
+        <button class="govuk-button" id="downloadsFilterButton">
+            Filter
+        </button>
+    </noscript>
+    <button hidden="" id="downloadsFilterButtonHidden"></button>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8AJFaM0sU5tIk7EBESZKgdREdJI1rC0SF2e67IdZem7PLAbds1bYu3JwqxwGbVfRj4P6Iryyrg--hZVsvaI6NEhcjdoyjLc97zBOIZ0egLaDdE_vcrmmPZmQFwyOmVySuq0cQHzngNqOPzy4eiwnApdF1RHoO2qSwSkkUFghJTq8SqR2aVqOVrD0oWaLlS0W_A"></form>
+            <div id="downloadTable2122" class="tableContainer govuk-!-display-block">
+                <table class="govuk-table">
+                    <caption class="govuk-table__caption govuk-heading-m">Academic year 2021 to 2022</caption>
+                    <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col">Version</th>
+                        <th class="govuk-table__header" scope="col">Date and time uploaded</th>
+                        <th class="govuk-table__header" scope="col">Download Link</th>
+                    </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="row">0.0</th>
+                            <td class="govuk-table__cell">19 October 2021 at 10:15am</td>
+                            <td class="govuk-table__cell">
+                                <a href="/managementtool-downloads/ILRRollForward/DC-ILR-2122-Tools-ILRRollForward.0.0.zip?AcademicYear=2122">Download 0.0</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="downloadTable2021" class="tableContainer govuk-!-display-block">
+                <table class="govuk-table">
+                    <caption class="govuk-table__caption govuk-heading-m">Academic year 2020 to 2021</caption>
+                    <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col">Version</th>
+                        <th class="govuk-table__header" scope="col">Date and time uploaded</th>
+                        <th class="govuk-table__header" scope="col">Download Link</th>
+                    </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="row">2021.1</th>
+                            <td class="govuk-table__cell">9 October 2020 at 3:56pm</td>
+                            <td class="govuk-table__cell">
+                                <a href="/managementtool-downloads/ILRRollForward/DC-ILR-2021-Tools-ILRRollForward.2021.1.zip?AcademicYear=2021">Download 2021.1</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+    
+        <script src="/assets/minified/app.min.js?v=ZtVrfTFn24M2aHg4_7R0E2SGwegJZT0kSPbzHnMt-Jo"></script>
+    
+
+
+
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+
+
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<br>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<br>
+
+
+<h1 class="govuk-heading-xl">Reference Data Loader</h1>
+
+<form method="post" id="filter-reports-form" action="/managementtool-downloads/ReferenceDataLoader">
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+            <span id="waste-hint" class="govuk-hint">
+                Filter by year
+            </span>
+            <span id="waste-hint" class="govuk-hint">
+                The page will refresh after you select each filter.
+            </span>
+            <div id="yearFilter" class="govuk-checkboxes govuk-checkboxes--small">
+
+                    <div class="govuk-checkboxes__item">
+                        <input id="year2021" class="govuk-checkboxes__input" name="downloadsFilter" type="checkbox" value="2021">
+                        <label class="govuk-label govuk-checkboxes__label" for="ESFA.DC.Web.Ui.ViewModels.AcademicYearViewModel">
+                            2020 to 2021
+                        </label>
+                    </div>
+            </div>
+        </fieldset>
+        <br>
+    </div>
+
+    <noscript>
+        <button class="govuk-button" id="downloadsFilterButton">
+            Filter
+        </button>
+    </noscript>
+    <button hidden="" id="downloadsFilterButtonHidden"></button>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8AJFaM0sU5tIk7EBESZKgdROYqAzHczmncgbhI1EnraJRcp1DVVxMqtkPuUgx1vdeci5XGLhi0atHDt5xccbGDFCJebOOt_3o0U0ZGhQqgzaAiOb5e2OyJbpClLtP-dU_1I4mSxP_vn8tcxgDPxQ8PA3b4qrnNbmUJiyLEmKOP5_A8JniP1WwSfYqvFzTdiWXA"></form>
+            <div id="downloadTable2021" class="tableContainer govuk-!-display-block">
+                <table class="govuk-table">
+                    <caption class="govuk-table__caption govuk-heading-m">Academic year 2020 to 2021</caption>
+                    <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col">Version</th>
+                        <th class="govuk-table__header" scope="col">Date and time uploaded</th>
+                        <th class="govuk-table__header" scope="col">Download Link</th>
+                    </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="row">0.3</th>
+                            <td class="govuk-table__cell">24 February 2021 at 9:49am</td>
+                            <td class="govuk-table__cell">
+                                <a href="/managementtool-downloads/ReferenceDataLoader/DC-ILR-2021-ReferenceDataLoader.0.3.zip?AcademicYear=2021">Download 0.3</a>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="row">0.3.0207</th>
+                            <td class="govuk-table__cell">18 February 2021 at 12:15pm</td>
+                            <td class="govuk-table__cell">
+                                <a href="/managementtool-downloads/ReferenceDataLoader/DC-ILR-2021-ReferenceDataLoader.0.3.0207.zip?AcademicYear=2021">Download 0.3.0207</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+
+
+
+
+{% endblock %}

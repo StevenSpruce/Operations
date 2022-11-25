@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% include "./includes/nav.html" %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<br>
+
+<h2 class="gem-c-heading govuk-heading-l govuk-!-margin-bottom-6">SLD links</h2>
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#collection">
+        Collection related content
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#homepage">
+        Home page related content
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-tabs__panel" id="collection">
+    <h2 class="govuk-heading-l">Collection related content</h2>
+
+   
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Links for "selected collection"</caption>
+
+ 
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" style="width: 40%;">Title</th>
+          <th class="govuk-table__header" style="width: 50%;">URL</th>
+          <th class="govuk-table__header" style="width: 2%;">Display order</th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row" >
+          <td class="govuk-table__cell">
+            <input id="title" asp-for="" type="text" class="govuk-input" data-collectionid="title" value="ILR guides and templates for 2022 to 2023">
+        </td>
+          <td class="govuk-table__cell tooltip">
+              <input id="url" asp-for="" type="text" class="govuk-input " data-collectionid="url" value="https://guidance.submit-learner-data.service.gov.uk/22-23/psm">
+          </td>
+          <td class="govuk-table__cell">
+              <input id="sortorder" asp-for="" type="text" class="govuk-input" data-collectionid="sortorder" value="1">
+          </td>
+      </tr>
+
+      <tr class="govuk-table__row" >
+        <td class="govuk-table__cell">
+          <input id="title" asp-for="" type="text" class="govuk-input" data-collectionid="title" value="ILR specification 2022 to 2023">
+      </td>
+        <td class="govuk-table__cell">
+            <input id="url" asp-for="" type="text" class="govuk-input" data-collectionid="url" value="https://guidance.submit-learner-data.service.gov.uk/22-23/ilr/overview">
+        </td>
+        <td class="govuk-table__cell">
+            <input id="sortorder" asp-for="" type="text" class="govuk-input" data-collectionid="sortorder" value="2">
+        </td>
+    </tr>
+
+    <tr class="govuk-table__row" >
+      <td class="govuk-table__cell">
+        <input id="title" asp-for="" type="text" class="govuk-input" data-collectionid="title" value="ILR validation rules and appendices 2022 to 2023">
+    </td>
+      <td class="govuk-table__cell">
+          <input id="url" asp-for="" type="text" class="govuk-input" data-collectionid="url" value="https://guidance.submit-learner-data.service.gov.uk/22-23/ilr/appendices">
+      </td>
+      <td class="govuk-table__cell">
+          <input id="sortorder" asp-for="" type="text" class="govuk-input" data-collectionid="sortorder" value="3">
+      </td>
+  </tr>
+
+  <tr class="govuk-table__row" >
+    <td class="govuk-table__cell">
+      <input id="title" asp-for="" type="text" class="govuk-input" data-collectionid="title" value="How to provide and maintain accurate ILR data">
+  </td>
+    <td class="govuk-table__cell">
+        <input id="url" asp-for="" type="text" class="govuk-input" data-collectionid="url" value="https://www.gov.uk/government/collections/individualised-learner-record-ilr#how-to-provide-and-maintain-accurate-ilr-data">
+    </td>
+    <td class="govuk-table__cell">
+        <input id="sortorder" asp-for="" type="text" class="govuk-input" data-collectionid="sortorder" value="4">
+    </td>
+</tr>
+
+
+      </tbody>
+    </table>
+
+    <a href="/links" button class="govuk-button" data-module="govuk-button">
+      Save
+    </a>
+
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="homepage">
+    <h2 class="govuk-heading-l">Home page related content</h2>
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Links</caption>
+
+ 
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" style="width: 40%;">Title</th>
+          <th class="govuk-table__header" style="width: 50%;">URL</th>
+          <th class="govuk-table__header" style="width: 2%;">Display order</th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row" >
+          <td class="govuk-table__cell">
+            <input id="title" asp-for="" type="text" class="govuk-input" data-collectionid="title" value="How to become an approved training provider">
+        </td>
+          <td class="govuk-table__cell tooltip">
+              <input id="url" asp-for="" type="text" class="govuk-input " data-collectionid="url" value="https://www.gov.uk/guidance/how-to-become-an-approved-training-provider-and-bid-for-funding">
+          </td>
+          <td class="govuk-table__cell">
+              <input id="sortorder" asp-for="" type="text" class="govuk-input" data-collectionid="sortorder" value="1">
+          </td>
+      </tr>
+
+      <tr class="govuk-table__row" >
+        <td class="govuk-table__cell">
+          <input id="title" asp-for="" type="text" class="govuk-input" data-collectionid="title" value="Individualised Learner Record (ILR) technical documents, guidance and requirements (all years)">
+      </td>
+        <td class="govuk-table__cell">
+            <input id="url" asp-for="" type="text" class="govuk-input" data-collectionid="url" value="https://guidance.submit-learner-data.service.gov.uk/">
+        </td>
+        <td class="govuk-table__cell">
+            <input id="sortorder" asp-for="" type="text" class="govuk-input" data-collectionid="sortorder" value="2">
+        </td>
+    </tr>
+
+      </tbody>
+    </table>
+
+    <a href="/links#homepage" button class="govuk-button" data-module="govuk-button">
+      Save
+    </a>
+
+
+  </div>
+
+</div>
+
+{% endblock %}

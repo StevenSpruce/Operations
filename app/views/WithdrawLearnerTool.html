@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+
+<br>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<br>
+ 
+   
+        
+        <h1 class="govuk-heading-xl">Withdraw learner tool</h1>
+        
+        
+        
+        
+        <form method="post" id="filter-reports-form" action="/managementtool-downloads/WithdrawLearnerTool">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+        
+                    <span id="waste-hint" class="govuk-hint">
+                        Filter by year
+                    </span>
+                    <span id="waste-hint" class="govuk-hint">
+                        The page will refresh after you select each filter.
+                    </span>
+                    <div id="yearFilter" class="govuk-checkboxes govuk-checkboxes--small">
+        
+                            <div class="govuk-checkboxes__item">
+                                <input id="year2122" class="govuk-checkboxes__input" name="downloadsFilter" type="checkbox" value="2122">
+                                <label class="govuk-label govuk-checkboxes__label" for="ESFA.DC.Web.Ui.ViewModels.AcademicYearViewModel">
+                                    2021 to 2022
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input id="year1920" class="govuk-checkboxes__input" name="downloadsFilter" type="checkbox" value="1920">
+                                <label class="govuk-label govuk-checkboxes__label" for="ESFA.DC.Web.Ui.ViewModels.AcademicYearViewModel">
+                                    2019 to 2020
+                                </label>
+                            </div>
+                    </div>
+                </fieldset>
+                <br>
+            </div>
+        
+            <noscript>
+                <button class="govuk-button" id="downloadsFilterButton">
+                    Filter
+                </button>
+            </noscript>
+            <button hidden="" id="downloadsFilterButtonHidden"></button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AJFaM0sU5tIk7EBESZKgdStz2jNVw8xGWfKL-YAoJWbWQA13IUayU7mdjtF6-UCbr1ouFL1zpWwjtVPY9THg2rweIPCPHtPhK-0ZtV_2X9OoWtKh12j-19H0DwYm-XMP4Ex1qXdCcvVDKqxDsz0laQgmsg8WVLueJbrdHte2lHwMVymKniAsNFMRCK9BbofoA"></form>
+                    <div id="downloadTable2122" class="tableContainer govuk-!-display-block">
+                        <table class="govuk-table">
+                            <caption class="govuk-table__caption govuk-heading-m">Academic year 2021 to 2022</caption>
+                            <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="col">Version</th>
+                                <th class="govuk-table__header" scope="col">Date and time uploaded</th>
+                                <th class="govuk-table__header" scope="col">Download Link</th>
+                            </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                                <tr class="govuk-table__row">
+                                    <th class="govuk-table__header" scope="row">2122.01</th>
+                                    <td class="govuk-table__cell">19 October 2021 at 10:16am</td>
+                                    <td class="govuk-table__cell">
+                                        <a href="/managementtool-downloads/WithdrawLearnerTool/DC-ILR-2122-WithdrawLearnerTool.2122.01.zip?AcademicYear=2122">Download 2122.01</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="downloadTable1920" class="tableContainer govuk-!-display-block">
+                        <table class="govuk-table">
+                            <caption class="govuk-table__caption govuk-heading-m">Academic year 2019 to 2020</caption>
+                            <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="col">Version</th>
+                                <th class="govuk-table__header" scope="col">Date and time uploaded</th>
+                                <th class="govuk-table__header" scope="col">Download Link</th>
+                            </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                                <tr class="govuk-table__row">
+                                    <th class="govuk-table__header" scope="row">1920.03</th>
+                                    <td class="govuk-table__cell">13 January 2021 at 12:47pm</td>
+                                    <td class="govuk-table__cell">
+                                        <a href="/managementtool-downloads/WithdrawLearnerTool/DC-ILR-1920-WithdrawLearnerTool.1920.03.zip?AcademicYear=1920">Download 1920.03</a>
+                                    </td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <th class="govuk-table__header" scope="row">1920.01</th>
+                                    <td class="govuk-table__cell">13 January 2021 at 12:47pm</td>
+                                    <td class="govuk-table__cell">
+                                        <a href="/managementtool-downloads/WithdrawLearnerTool/DC-ILR-1920-WithdrawLearnerTool.1920.01.zip?AcademicYear=1920">Download 1920.01</a>
+                                    </td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <th class="govuk-table__header" scope="row">1920.02</th>
+                                    <td class="govuk-table__cell">13 January 2021 at 12:46pm</td>
+                                    <td class="govuk-table__cell">
+                                        <a href="/managementtool-downloads/WithdrawLearnerTool/DC-ILR-1920-WithdrawLearnerTool.1920.02.zip?AcademicYear=1920">Download 1920.02</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            
+            
+                <script src="/assets/minified/app.min.js?v=ZtVrfTFn24M2aHg4_7R0E2SGwegJZT0kSPbzHnMt-Jo"></script>
+            
+        
+        
+        
+        
+        
+                        </div>
+                    </div>
+                </main>
+            </div>
+        
+{% endblock %}

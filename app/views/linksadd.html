@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% include "./includes/nav.html" %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<br>
+
+<h2 class="gem-c-heading govuk-heading-l govuk-!-margin-bottom-6">SLD links</h2>
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#collection">
+        Collection related content
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#homepage">
+        Home page related content
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-tabs__panel" id="collection">
+    <h2 class="govuk-heading-l">Collection related content</h2>
+
+   
+
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            Add new link for "selected collection"
+          </h1>
+        </legend>
+      
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-1">
+            Title
+          </label>
+          <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+        </div>
+      
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-2">
+            URL
+          </label>
+          <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+        </div>
+      
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-town">
+            Display order
+          </label>
+          <input class="govuk-input govuk-input--width-3" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+        </div>
+     
+      </fieldset>
+
+    <a href="/links" button class="govuk-button" data-module="govuk-button">
+      Save
+    </a>
+
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="homepage">
+    <h2 class="govuk-heading-l">Home page related content</h2>
+    
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <h1 class="govuk-fieldset__heading">
+          Add new link
+        </h1>
+      </legend>
+    
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-1">
+          Title
+        </label>
+        <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+      </div>
+    
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-2">
+          URL
+        </label>
+        <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+      </div>
+    
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-town">
+          Display order
+        </label>
+        <input class="govuk-input govuk-input--width-3" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+      </div>
+   
+    </fieldset>
+
+    <a href="/links#homepage" button class="govuk-button" data-module="govuk-button">
+      Save
+    </a>
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% include "./includes/nav.html" %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<br>
+
+<h2 class="gem-c-heading govuk-heading-l govuk-!-margin-bottom-6">SLD links</h2>
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#collection">
+        Collection related content
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#homepage">
+        Home page related content
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-tabs__panel" id="collection">
+    <h2 class="govuk-heading-l">Collection related content</h2>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        What collection do you want to view?
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="published">Select collection...</option>
+        <option value="published"selected>ILR2223</option>
+        <option value="updated">ILR2122</option>
+        <option value="views">ILR2021</option>
+        <option value="comments">ILR1920</option>
+      </select>
+    </div>
+
+ 
+    <a href="/linksupdate" button class="govuk-button" data-module="govuk-button">
+      Change link
+    </a>
+
+    <a href="/linksadd" button class="govuk-button" data-module="govuk-button">
+      Add link
+    </a>
+
+
+    
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Links</caption>
+      
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Title</th>
+          <th scope="col" class="govuk-table__header">URL</th>
+          <th scope="col" class="govuk-table__header">Display order</th>
+          <th scope="col" class="govuk-table__header">Last updated on</th>
+          <th scope="col" class="govuk-table__header">Last updated by</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+         
+          <td class="govuk-table__cell">ILR guides and templates for 2022 to 2023</td>
+          <td class="govuk-table__cell">https://guidance.submit-learner-data.service.gov.uk/22-23/psm</td>
+          <td class="govuk-table__cell">1</td>
+          <td class="govuk-table__cell">04 November 2022</td>
+          <td class="govuk-table__cell">Donald Duck</td>
+        </tr>
+        <tr class="govuk-table__row">
+        
+          <td class="govuk-table__cell">ILR specification 2022 to 2023</td>
+          <td class="govuk-table__cell">https://guidance.submit-learner-data.service.gov.uk/22-23/ilr/overview</td>
+          <td class="govuk-table__cell">2</td>
+          <td class="govuk-table__cell">04 November 2022</td>
+          <td class="govuk-table__cell">Donald Duck</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          
+          <td class="govuk-table__cell">ILR validation rules and appendices 2022 to 2023</td>
+          <td class="govuk-table__cell">https://guidance.submit-learner-data.service.gov.uk/22-23/ilr/appendices</td>
+          <td class="govuk-table__cell">3</td>
+          <td class="govuk-table__cell">04 November 2022</td>
+          <td class="govuk-table__cell">Donald Duck</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">How to provide and maintain accurate ILR data</td>
+          <td class="govuk-table__cell">https://www.gov.uk/government/collections/individualised-learner-record-ilr#how-to-provide-and-maintain-accurate-ilr-data</td>
+          <td class="govuk-table__cell">4</td>
+          <td class="govuk-table__cell">04 November 2022</td>
+          <td class="govuk-table__cell">Donald Duck</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+ 
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="homepage">
+    <h2 class="govuk-heading-l">Home page related content</h2>
+
+    <a href="/linksupdate#homepage" button class="govuk-button" data-module="govuk-button">
+      Change link
+    </a>
+
+    <a href="/linksadd#homepage" button class="govuk-button" data-module="govuk-button">
+      Add link
+    </a>
+
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Links</caption>
+      
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Title</th>
+          <th scope="col" class="govuk-table__header">URL</th>
+          <th scope="col" class="govuk-table__header">Display order</th>
+          <th scope="col" class="govuk-table__header">Last updated on</th>
+          <th scope="col" class="govuk-table__header">Last updated by</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+         
+          <td class="govuk-table__cell">How to become an approved training provider</td>
+          <td class="govuk-table__cell">https://www.gov.uk/guidance/how-to-become-an-approved-training-provider-and-bid-for-funding</td>
+          <td class="govuk-table__cell">1</td>
+          <td class="govuk-table__cell">04 November 2022</td>
+          <td class="govuk-table__cell">Donald Duck</td>
+        </tr>
+        <tr class="govuk-table__row">
+        
+          <td class="govuk-table__cell">Individualised Learner Record (ILR) technical documents, guidance and requirements (all years)</td>
+          <td class="govuk-table__cell">https://guidance.submit-learner-data.service.gov.uk/</td>          
+          <td class="govuk-table__cell">2</td>
+          <td class="govuk-table__cell">04 November 2022</td>
+          <td class="govuk-table__cell">Donald Duck</td>
+
+        </tr>
+      </tbody>
+    </table>
+   
+  </div>
+
+
+</div>
+
+{% endblock %}

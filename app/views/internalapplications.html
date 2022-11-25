@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+ 
+<body class="govuk-template__body  js-enabled">
+    <div class="govuk-width-container">
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <!--<div class="govuk-grid-column-fullgovuk-grid-column-two-thirds"> -->
+                <div class="govuk-grid-column-full">
+
+<h1 class="govuk-heading-xl">Internal Applications</h1>
+
+    <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+                <div class="border-top-apps">
+                    <h2 class="govuk-heading-m "><a href="/EOPATool">Easy OPA</a></h2>
+                        <span class="govuk-body-s">Version 0.0</span><br>
+                        <span class="govuk-body-s">Uploaded on  2 March 2021 at 11:04am</span><br>
+                </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+                <div class="border-top-apps">
+                    <h2 class="govuk-heading-m "><a href="/RollforwardTool">ILR Roll Forward</a></h2>
+                        <span class="govuk-body-s">Version 0.0</span><br>
+                        <span class="govuk-body-s">Uploaded on  19 October 2021 at 10:15am</span><br>
+                </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+                <div class="border-top-apps">
+                    <h2 class="govuk-heading-m "><a href="/ReferenceDataLoaderTool">Reference Data Loader</a></h2>
+                        <span class="govuk-body-s">Version 0.3</span><br>
+                        <span class="govuk-body-s">Uploaded on  24 February 2021 at 9:49am</span><br>
+                </div>
+            </div>
+    </div>
+    <br>
+    <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+                <div class="border-top-apps">
+                    <h2 class="govuk-heading-m "><a href="/WithdrawLearnerTool">Withdraw Learner</a></h2>
+                        <span class="govuk-body-s">Version 2122.01</span><br>
+                        <span class="govuk-body-s">Uploaded on  19 October 2021 at 10:16am</span><br>
+                </div>
+            </div>
+    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+{% endblock %}
