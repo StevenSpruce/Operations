@@ -1,0 +1,349 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<br>
+<h1 class="gem-c-heading govuk-heading-l">Providers</h1>
+
+
+<div class="app-masthead">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <span class="govuk-heading-s govuk-!-font-size-27 white-text">Search for a provider</span>
+            
+<div id="tt-overlay">
+    <div id="tt-overlay" class="autocomplete-wrapper"></div>
+<div class="autocomplete__wrapper"><div style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"><div id="autocomplete-overlay__status--A" role="status" aria-atomic="true" aria-live="polite"></div><div id="autocomplete-overlay__status--B" role="status" aria-atomic="true" aria-live="polite"></div></div><input aria-expanded="false" aria-owns="autocomplete-overlay__listbox" aria-autocomplete="list" aria-describedby="autocomplete-overlay__assistiveHint" autocomplete="off" class="autocomplete__input autocomplete__input--default" id="autocomplete-overlay" name="input-autocomplete" placeholder="e.g Manchester, 12345678 or 098765" type="text" role="combobox"><ul class="autocomplete__menu autocomplete__menu--overlay autocomplete__menu--hidden" id="autocomplete-overlay__listbox" role="listbox"></ul><span id="autocomplete-overlay__assistiveHint" style="display: none;">When autocomplete results are available use up and down arrows to review and enter to select.  Touch device users, explore by touch or with swipe gestures.</span></div></div>
+
+
+<script src="/lib/signalr/dist/browser/signalr.js?v=Gg6jzLGxSLrGeA3EHrsd3PkW9MHZFUQfTGV5PZXPPqs"></script>
+<script src="/assets/minified/accessible-autocomplete.min.js"></script>
+<script src="/assets/minified/aspnet-validation.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <details class="govuk-details" data-module="govuk-details" role="group">
+            <summary class="govuk-details__summary" role="button" aria-controls="details-content" aria-expanded="false">
+                <span class="govuk-details__summary-text">Upload multiple providers</span>
+            </summary>
+            <div class="govuk-details__text" id="details-content" aria-hidden="true">
+                <h1 class="govuk-heading-l">
+                    Provider collection assignments
+                </h1>
+                <p> Choose providers file to upload</p>
+                <p>
+                    <a href="/provider/AddNew/DownloadTemplate">Download CSV template</a>
+                </p>
+                <form method="post" enctype="multipart/form-data" id="providersUploadForm" action="/provider/AddNew/BulkUpload">
+                    
+                    <div class="govuk-form-group">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="file">
+                                <strong>Upload a file</strong>
+                            </label>
+                            
+                            <input class="govuk-file-upload" id="file" name="file" type="file">
+                        </div>
+
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="reasonForUpload">
+                                <strong>Reason for upload</strong>
+                            </label>
+                            
+                            <input class="govuk-input" id="reasonForUpload" name="reasonForUpload" type="text" ,="" maxlength="250">
+                        </div>
+                    </div>
+                    <button class="govuk-button" id="bulkUploadButton">
+                        Upload file
+                    </button>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BDUh7siDJhAkCbVPTNBKJGssp93tmgfE2Hmk5GAtgrdW5VqbLv9S3oIyOWz98S-vab3l1jYJLUAChFijvw84W7R8WJWWVIKR3AAPlmnctgNIM4x7dpR0Jap-U9GiJL7XIQM3LrjBTT7B874tWjMOZhm-LbDuaDK1PzTsMVpX3c76BWyLf5AKkCzfTWXolxOxg"></form>
+
+                <div id="filesList">﻿<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header td--width-100-wrap">Date</th>
+                    <th scope="col" class="govuk-table__header">Submitted by</th>
+                    <th scope="col" class="govuk-table__header td--width-150-wrap">File</th>
+                    <th scope="col" class="govuk-table__header">Job ID</th>
+                    <th scope="col" class="govuk-table__header">Reason</th>
+                    <th scope="col" class="govuk-table__header table-width-min">Status</th>
+                    <th scope="col" class="govuk-table__header td--width-150-wrap">Reports</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="fileContainer">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">24 October 2022 at 4:33 pm</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell"><a href="/provider/AddNew/DownloadFile/Providers-20221024-162510.csv">Providers-20221024-162510.csv</a></td>
+                    <td class="govuk-table__cell">1274046</td>
+                    <td class="govuk-table__cell td--width-150-wrap">
+                        <div class="abbreviated-text-4" title="Funding Claims 2122 Final">Funding Claims 2122 Final</div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">115 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/provider/AddNew/DownloadFile/ProviderReports-20221024-162510.zip/1274046">ProviderReports-20221024-162510.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">20 October 2022 at 9:42 am</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell"><a href="/provider/AddNew/DownloadFile/Providers-20221020-091010.csv">Providers-20221020-091010.csv</a></td>
+                    <td class="govuk-table__cell">1257367</td>
+                    <td class="govuk-table__cell td--width-150-wrap">
+                        <div class="abbreviated-text-4" title="Funding Claims 2122 Final">Funding Claims 2122 Final</div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">88 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/provider/AddNew/DownloadFile/ProviderReports-20221020-091010.zip/1257367">ProviderReports-20221020-091010.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">19 October 2022 at 9:50 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell"><a href="/provider/AddNew/DownloadFile/Providers-20221019-141010.csv">Providers-20221019-141010.csv</a></td>
+                    <td class="govuk-table__cell">1256892</td>
+                    <td class="govuk-table__cell td--width-150-wrap">
+                        <div class="abbreviated-text-4" title="Funding Claims 2122 Final">Funding Claims 2122 Final</div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">405 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/provider/AddNew/DownloadFile/ProviderReports-20221019-141010.zip/1256892">ProviderReports-20221019-141010.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">29 September 2022 at 4:41 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell"><a href="/provider/AddNew/DownloadFile/Providers-20220929-105802.csv">Providers-20220929-105802.csv</a></td>
+                    <td class="govuk-table__cell">1221738</td>
+                    <td class="govuk-table__cell td--width-150-wrap">
+                        <div class="abbreviated-text-4" title="ROATP Onboarding">ROATP Onboarding</div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">42 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">6 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/provider/AddNew/DownloadFile/ProviderReports-20220929-105802.zip/1221738">ProviderReports-20220929-105802.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">9 September 2022 at 5:56 pm</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell"><a href="/provider/AddNew/DownloadFile/Providers-20220909-171502.csv">Providers-20220909-171502.csv</a></td>
+                    <td class="govuk-table__cell">1196284</td>
+                    <td class="govuk-table__cell td--width-150-wrap">
+                        <div class="abbreviated-text-4" title="FEWG2122">FEWG2122</div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">249 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/provider/AddNew/DownloadFile/ProviderReports-20220909-171502.zip/1196284">ProviderReports-20220909-171502.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">8 September 2022 at 5:34 pm</td>
+                    <td class="govuk-table__cell">Kam Thandi</td>
+                    <td class="govuk-table__cell"><a href="/provider/AddNew/DownloadFile/Providers-20220908-171502.csv">Providers-20220908-171502.csv</a></td>
+                    <td class="govuk-table__cell">1195639</td>
+                    <td class="govuk-table__cell td--width-150-wrap">
+                        <div class="abbreviated-text-4" title="FEW2122">FEW2122</div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">1841 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/provider/AddNew/DownloadFile/ProviderReports-20220908-171502.zip/1195639">ProviderReports-20220908-171502.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">2 September 2022 at 1:00 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell"><a href="/provider/AddNew/DownloadFile/Providers-20220902-105802.csv">Providers-20220902-105802.csv</a></td>
+                    <td class="govuk-table__cell">1176517</td>
+                    <td class="govuk-table__cell td--width-150-wrap">
+                        <div class="abbreviated-text-4" title="22/23 ILR EAS EDS">22/23 ILR EAS EDS</div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">99 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">30 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/provider/AddNew/DownloadFile/ProviderReports-20220902-105802.zip/1176517">ProviderReports-20220902-105802.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">15 August 2022 at 11:49 am</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell"><a href="/provider/AddNew/DownloadFile/Providers-20220815-100000.csv">Providers-20220815-100000.csv</a></td>
+                    <td class="govuk-table__cell">1167488</td>
+                    <td class="govuk-table__cell td--width-150-wrap">
+                        <div class="abbreviated-text-4" title="ESF-Reprofiling">ESF-Reprofiling</div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">34 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">2 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/provider/AddNew/DownloadFile/ProviderReports-20220815-100000.zip/1167488">ProviderReports-20220815-100000.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">4 August 2022 at 3:42 pm</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell"><a href="/provider/AddNew/DownloadFile/Providers-20220803-105805.csv">Providers-20220803-105805.csv</a></td>
+                    <td class="govuk-table__cell">1149106</td>
+                    <td class="govuk-table__cell td--width-150-wrap">
+                        <div class="abbreviated-text-4" title="ESFR2-2223">ESFR2-2223</div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">48 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/provider/AddNew/DownloadFile/ProviderReports-20220803-105805.zip/1149106">ProviderReports-20220803-105805.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">3 August 2022 at 11:40 am</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell"><a href="/provider/AddNew/DownloadFile/Providers-20220803-105804.csv">Providers-20220803-105804.csv</a></td>
+                    <td class="govuk-table__cell">1145857</td>
+                    <td class="govuk-table__cell td--width-150-wrap">
+                        <div class="abbreviated-text-4" title="Remove EDRS-Ref-Data">Remove EDRS-Ref-Data</div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">142 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/provider/AddNew/DownloadFile/ProviderReports-20220803-105804.zip/1145857">ProviderReports-20220803-105804.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">3 August 2022 at 11:32 am</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell"><a href="/provider/AddNew/DownloadFile/Providers-20220803-105803.csv">Providers-20220803-105803.csv</a></td>
+                    <td class="govuk-table__cell">1145831</td>
+                    <td class="govuk-table__cell td--width-150-wrap">
+                        <div class="abbreviated-text-4" title="EDRS-Ref-Data">EDRS-Ref-Data</div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">8 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/provider/AddNew/DownloadFile/ProviderReports-20220803-105803.zip/1145831">ProviderReports-20220803-105803.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">3 August 2022 at 11:21 am</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell"><a href="/provider/AddNew/DownloadFile/Providers-20220803-105802.csv">Providers-20220803-105802.csv</a></td>
+                    <td class="govuk-table__cell">1145790</td>
+                    <td class="govuk-table__cell td--width-150-wrap">
+                        <div class="abbreviated-text-4" title="ILR2223">ILR2223</div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">1865 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/provider/AddNew/DownloadFile/ProviderReports-20220803-105802.zip/1145790">ProviderReports-20220803-105802.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">3 August 2022 at 11:04 am</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell"><a href="/provider/AddNew/DownloadFile/Providers-20220803-105801.csv">Providers-20220803-105801.csv</a></td>
+                    <td class="govuk-table__cell">1145735</td>
+                    <td class="govuk-table__cell td--width-150-wrap">
+                        <div class="abbreviated-text-4" title="EAS2223">EAS2223</div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">1865 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">2 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/provider/AddNew/DownloadFile/ProviderReports-20220803-105801.zip/1145735">ProviderReports-20220803-105801.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">15 June 2022 at 9:31 am</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell"><a href="/provider/AddNew/DownloadFile/Providers-20220615-092003.csv">Providers-20220615-092003.csv</a></td>
+                    <td class="govuk-table__cell">1108885</td>
+                    <td class="govuk-table__cell td--width-150-wrap">
+                        <div class="abbreviated-text-4" title="Funding Claims 2122 YearEnd Removals">Funding Claims 2122 YearEnd Removals</div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">91 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/provider/AddNew/DownloadFile/ProviderReports-20220615-092003.zip/1108885">ProviderReports-20220615-092003.zip</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-!-font-weight-bold td--width-100-wrap">15 June 2022 at 9:25 am</td>
+                    <td class="govuk-table__cell">Mrs Bernie O'Donnell</td>
+                    <td class="govuk-table__cell"><a href="/provider/AddNew/DownloadFile/Providers-20220615-092002.csv">Providers-20220615-092002.csv</a></td>
+                    <td class="govuk-table__cell">1108880</td>
+                    <td class="govuk-table__cell td--width-150-wrap">
+                        <div class="abbreviated-text-4" title="Funding Claims 2122 YearEnd Removals">Funding Claims 2122 YearEnd Removals</div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <span class="jobCompleted">Job Completed</span> <br>
+                        <span class="govuk-!-font-weight-bold">1 records</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 warnings</span> <br>
+                        <span class="govuk-!-font-weight-bold">0 errors</span> <br>
+                    </td>
+                    <td class="govuk-table__cell td--width-150-wrap"><a href="/provider/AddNew/DownloadFile/ProviderReports-20220615-092002.zip/1108880">ProviderReports-20220615-092002.zip</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div></div>                
+            </div>
+        </details>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <label id="slowConnection" alt="Connection is slow at the moment"></label>
+        <label id="lastSync">Last updated: 25/11/2022 13:44:52</label>
+        <label id="state">Status: Connected</label>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+{% endblock %}

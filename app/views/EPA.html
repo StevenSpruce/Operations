@@ -18,7 +18,7 @@
                   <h2 class="govuk-heading-m">Organisations</h2>
                  
                   <div class="standard-search">
-                    <label for="autocomplete-overlay" class="govuk-label">Search by <strong>EPA id</strong></label>
+                    <label for="autocomplete-overlay" class="govuk-label">Search by <strong>EPA Id</strong>, <strong>name</strong> or <strong>UKPRN</strong> </label>
                     <div class="govuk-form-group">
                         <div id="tt-overlay" class="autocomplete-wrapper second">
                             <div class="autocomplete__wrapper" role="combobox" aria-expanded="false">
@@ -26,29 +26,21 @@
                             </div>
                         </div>
                         <br>
-                        <button class="govuk-button" data-module="govuk-button">
-                          Search
-                        </button>
                     </div>
                  </div>
-
-<p>some additional text here</p>
 
                 <div id="filesList">﻿<div class="govuk-grid-row">
                     <div class="govuk-grid-column-full">
                         <table class="govuk-table">
                             <thead class="govuk-table__head">
                                 <tr class="govuk-table__row">
-                                    <th scope="col" class="govuk-table__header">EPA ID</th>
+                                    <th scope="col" class="govuk-table__header">EPA Id</th>
 
                                     <th scope="col" class="govuk-table__header">Name</th>
 
                                     <th scope="col" class="govuk-table__header">UKPRN</th>
 
                                     <th scope="col" class="govuk-table__header">Deleted</th>
-
-                                    <th scope="col" class="govuk-table__header">Action</th>
-
 
                                 </tr>
                             </thead>
@@ -67,72 +59,103 @@
                                         </label>
                                       </div>
                                   </td>
-                                  <td class="govuk-table__cell">
-                                    <a href="/EPA1">Std codes</a><br>
-                                  </td>
-
-                                </tr>
-                                <tr class="govuk-table__row">
-                                    <td class="govuk-table__cell govuk-!-font-weight-bold">EPA0002</td>
-
-                                    <td class="govuk-table__cell">British Institute of Facilities Management</td>
-
-                                    <td class="govuk-table__cell">10029857</td>
-
-                                    <td class="govuk-table__cell">
-                                      <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                                        <label class="govuk-label govuk-checkboxes__label" for="waste">
-                                        </label>
-                                      </div>
-                                  </td> 
-                                  <td class="govuk-table__cell">
-                                    <a href="/EPA2">Std codes</a><br>
-                                  </td>
-                                </tr>
-                                <tr class="govuk-table__row">
-                                    <td class="govuk-table__cell govuk-!-font-weight-bold">EPA0003</td>
-
-                                    <td class="govuk-table__cell">BINDT</td>
-
-                                    <td class="govuk-table__cell">90000315</td>
-                                    <td class="govuk-table__cell">
-                                      <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                                        <label class="govuk-label govuk-checkboxes__label" for="waste">
-                                        </label>
-                                      </div>
-                                  </td> 
-                                  <td class="govuk-table__cell">
-                                    <a href="/EPA3">Std codes</a><br>
-                                  </td>
-                                </tr>
-                                <tr class="govuk-table__row">
-                                    <td class="govuk-table__cell govuk-!-font-weight-bold">EPA0167</td>
-
-                                    <td class="govuk-table__cell">Rehabilitation Workers Professional Network</td>
-
-                                    <td class="govuk-table__cell">n/a</td>
-
-                                    <td class="govuk-table__cell">
-                                      <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                                        <label class="govuk-label govuk-checkboxes__label" for="waste">
-                                        </label>
-                                      </div>
-                                  </td> 
-                                  <td class="govuk-table__cell">
-                                    <a href="/EPA167">Std codes</a><br>
-                                  </td>                                
                                 </tr>
                               </tbody>
                         </table>
                     </div>
-                </div>
-                <a class="govuk-button secondary" href="">Save</a>
-                </div>
               </div>
                
+<br>
+
+  <h2 class="govuk-heading-m">Standard codes</h2>
+  
+  <p>Use this date input field if the same date is to apply to all standard codes without an effective to date, otherwise enter dates for each standard code.</p>
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <input asp-for="2022-08-15T07:00:00" type="date" class="govuk-input" value="dd-mm-yyyy" name="effectivetodate">
+                  <br>
+                  <br>
+                  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    Apply to all
+                  </button>
+
+
+                </div>
+              </div>
+                    
+  
+                   <div id="filesList">﻿<div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                        <table class="govuk-table">
+                            <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+
+                                    <th scope="col" class="govuk-table__header">Standard code</th>
+  
+                                    <th scope="col" class="govuk-table__header">Effective from date</th>
+  
+                                    <th scope="col" class="govuk-table__header">Effective to date</th>
+                                </tr>
+                            </thead>
+                            <tbody class="govuk-table__body" id="fileContainer">
+                                <tr class="govuk-table__row">
+  
+                                    <td class="govuk-table__cell">1</td>
+  
+                                    <td class="govuk-table__cell">01 August 2014</td>
+  
+                                    <td class="govuk-table__cell">
+                                      <input asp-for="2022-08-15T07:00:00" type="date" class="govuk-input" value="dd-mm-yyyy" name="effectivetodate">
+                                    </td>
+                                </tr>
+                                <tr class="govuk-table__row">
+ 
+                                    <td class="govuk-table__cell">2</td>
+  
+                                    <td class="govuk-table__cell">01 August 2014</td>
+                                    <td class="govuk-table__cell">
+                                      <input asp-for="2022-08-15T07:00:00" type="date" class="govuk-input" value="dd-mm-yyyy" name="effectivetodate">
+                                    </td>
+                                </tr>
+                                <tr class="govuk-table__row">
+ 
+                                  <td class="govuk-table__cell">3</td>
+  
+                                  <td class="govuk-table__cell">01 August 2014</td> 
+                                  <td class="govuk-table__cell">
+                                    <input asp-for="2022-08-15T07:00:00" type="date" class="govuk-input" value="dd-mm-yyyy" name="effectivetodate">
+                                  </td>
+                                  </tr>
+                                <tr class="govuk-table__row">
+  
+                                  <td class="govuk-table__cell">4</td>
+  
+                                  <td class="govuk-table__cell">01 August 2014</td>
+                                  <td class="govuk-table__cell">
+                                    <input asp-for="2022-08-15T07:00:00" type="date" class="govuk-input" value="dd-mm-yyyy" name="effectivetodate">
+                                  </td>
+                                </tr>
+                                <tr class="govuk-table__row">
+ 
+                                  <td class="govuk-table__cell">5</td>
+  
+                                  <td class="govuk-table__cell">01 August 2014</td>
+                                  <td class="govuk-table__cell">31 July 2021</td>
+  
+                                </tr>
+  
+                              </tbody>
+                        </table>
+  
+                        <button class="govuk-button" data-module="govuk-button">Save</button>
+  
+                  </div>
+               </div>
+          </div>
+
+
+
+
                 
 
                </div>

@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+<br>
+<h1 class="gem-c-heading govuk-heading-l">Reports</h1>
+
+<form method="post">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <label for="collectionYears" class="govuk-label">Select academic year</label>
+            <select id="collectionYears" class="govuk-select govuk-input--width-10 form-control" data-val="true" data-val-required="The CollectionYear field is required." name="CollectionYear">
+            <option selected="selected" value="2223">2022 to 2023</option>
+<option value="2122">2021 to 2022</option>
+<option value="2021">2020 to 2021</option>
+<option value="1920">2019 to 2020</option>
+<option value="1819">2018 to 2019</option>
+</select>
+        </div>
+        <div class="govuk-grid-column-one-third">
+            <label for="collectionPeriod" class="govuk-label">Select period</label>
+            <select id="collectionPeriod" class="govuk-select govuk-input--width-10 form-control" data-val="true" data-val-required="The CollectionPeriod field is required." name="CollectionPeriod">
+            <option value="4">R04</option><option value="3">R03</option><option value="2">R02</option><option value="1">R01</option></select>
+        </div>
+    </div>
+    <br>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <label for="reportSelection" class="govuk-label">Create new report for:</label>
+            <select id="reportSelection" class="govuk-select govuk-input--width-20 form-control">﻿<option value="ACTCountReport">ACT Count Report</option>
+<option value="ILRFileSubmissionsPerDayReport">ILR File Submissions Per Day Report</option>
+<option value="InternalDataMatchReport">Internal Data Match Report</option>
+<option value="PeriodEndDataQualityReport">Period End Data Quality Report</option>
+<option value="ProviderSubmissionsReport">Provider Submissions Report</option>
+<option value="ILRProvidersReturningFirstTimePerDayReport">Providers Returning First Time Per Day Report</option>
+<option value="RuleValidationDetailReport">Rule Validation Detail Report</option>
+</select>
+            <button class="govuk-button" data-module="govuk-button" id="createReport" style="visibility: visible;">Create report</button>
+        </div>
+    </div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8BDUh7siDJhAkCbVPTNBKJENIJvpuFWKG5JRvnaP1SnbhosfCUveAUwImd1dR25jecbNbhwZta8gNDmKn7ASW7CNBy-ihG7ZzyIawNHX8ug3ZWEzfr3tshmYYIxKrCyST4FVNciDNGBmO1PMA7lbCntesxaOElxOkwnxJgfQmREKG2wYwQOA0IgxJzVoyryCLQ"></form>
+
+<div id="ruleValidationDetailReportSection" style="display: none; visibility: hidden;">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <span id="spinner" class="loading-spinner spinner-block"><img src="/assets/images/loading-spinner.gif" alt="loading-icon"></span>
+            <h3>Search for a validation rule:</h3>
+        </div>
+        <div class="govuk-grid-row govuk-grid-column-two-thirds">
+            <div class="govuk-grid-column-two-thirds">
+                <div id="tt-overlay">
+                    <div id="tt-overlay" class="autocomplete-wrapper"></div>
+                </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+                <button data-prevent-double-click="true" class="govuk-button" type="submit" data-module="govuk-button" id="generateValidationReport" disabled="">Generate Report</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<span id="reportsLoadingSpinner" class="loading-spinner spinner-block" style="visibility: hidden;"><img src="/assets/images/loading-spinner.gif" alt="loading-icon"></span>
+<div id="internalReportsDownloadList">﻿<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Internal Reports</h2>
+        <table class="govuk-table" id="internalReports">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Report name</th>
+                    <th class="govuk-table__header" scope="col">Download</th>
+                </tr>
+            </thead>
+            <tbody id="internalReportsBody" class="govuk-table__body">
+                <tr class="govuk-table__row internalreports">
+                    <td class="govuk-table__cell">Provider Submissions Report</td>
+                    <td class="govuk-table__cell"><a href="/reports/GetReportFile?collectionYear=2223&amp;collectionPeriod=4&amp;fileName=ILR%20Provider%20Submissions%20Report%20R04%2020221117-084255.xlsx&amp;reportDisplayName=Provider%20Submissions%20Report"> ILR Provider Submissions Report R04 20221117-084255.xlsx</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div></div>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">&nbsp;</div>
+    <div class="govuk-grid-column-two-thirds">
+        <label id="state">Status: Connected</label>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+        
+{% endblock %}
