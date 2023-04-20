@@ -1,14 +1,13 @@
-const express = require('express')
-const router = express.Router()
-const teacherSubRoles = ["Advanced Practitioner", "Instructor", "Lecturer", "Practitioner", "Teacher", "Trainer", "Tutor"] 
-const managerSubRoles = ["Curriculum Lead", "Faculty Lead", "Functional Manager", "Head of Department", "Programme Lead", "Quality Assurance Manager" ] 
-const seniorLeaderSubRoles = ["Assistant Head", "Assistant Principal", "CEO", "Director", "Executive Head Teacher", "Managing Director", "Principal", "Senior Manager", "Vice-Principal"] 
-const teachingSupportSubRoles = ["Assessor", "Behaviour Specialist", "Bilingual Support Assistant", "Careers Advisor", "Counsellor", "Cover Supervisor", "Education Welfare Officer", "Higher Level Teaching Assistant", "Language Support", "Learning Facilitator", "Learning Mentor", "Learning Support", "Learning Support Assistant (SEN)", "Librarian", "Pastoral Support", "SEN Co-ordinator", "Teaching Assistant", "Technician", "Therapist"] 
-const administrationSubRoles = ["Administrator", "Admissions", "Apprenticeships Administrator", "Bursar", "Business Manager", "Clerk", "Communication Support", "Data Analyst", "DSL and Safe Guarding Officer", "Employer Engagement Examinations Administrator", "External Grants and Funding", "Finance Officer", "Human Resources (HR)", "ICT Network Manager", "Information Services (MIS)", "Marketing Administrator", "Office Manager", "Payroll Administrator", "Programme Recruitment", "Receptionist", "Secretary", "Technology Support" ] 
+//
+// For guidance on how to create routes see:
+// https://prototype-kit.service.gov.uk/docs/create-routes
+//
 
+const govukPrototypeKit = require('govuk-prototype-kit')
+const router = govukPrototypeKit.requests.setupRouter()
 
+// Add your routes here
 
-// Add your routes here - above the module.exports line
 
 
 // Run this code when a form is submitted to 'juggling-balls-answer'
@@ -337,4 +336,3 @@ router.post('/FEWRouteFromTeachingResponsibilities', function (req, res) {
 
 
 
-module.exports = router
