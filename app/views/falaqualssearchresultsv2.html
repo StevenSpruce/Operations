@@ -1,0 +1,419 @@
+{% extends "layoutfala.html" %}
+{% block content %}
+
+<body class="govuk-template__body  js-enabled">
+
+<script src="/find-a-learning-aim/assets/dist/js/app/Layout/header.js?v=y7imvRzcAuxBYiRnF0q8u4PqBghiEKUMFzf7EGIF-zE"></script>
+
+
+    <div class="govuk-width-container">
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    
+
+                    
+<div class="govuk-breadcrumbs">
+    <ol id="breadCrumbs" class="govuk-breadcrumbs__list"><li class="govuk-breadcrumbs__list-item"><a class="govuk-breadcrumbs__link" href="/find-a-learning-aim/">Home</a></li><li class="govuk-breadcrumbs__list-item">Search Results</li></ol>
+</div>
+
+
+<div id="resultsApp">
+    <form id="filterForm" method="post" class="govuk-form-group" action="/find-a-learning-aim/LearningAimSearchResult/Search">
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Search qualifications</h1>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div class="standard-search">
+                    <label for="autocomplete-overlay" class="govuk-label">Search by <strong>title</strong> or <strong>reference number</strong></label>
+
+                    <div class="govuk-form-group">
+                        <div id="tt-overlay" class="autocomplete-wrapper second">
+                            <div class="autocomplete__wrapper" role="combobox" aria-expanded="false">
+                                <input class="govuk-input" id="autocomplete-overlay" name="SearchTerm" placeholder="e.g Maths or 40010740" type="text" maxlength="200" value="Z0004323">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <details class="govuk-details govuk-!-margin-bottom-1" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+            Search using a wildcard
+        </span>
+    </summary>
+    <div class="govuk-details__text">
+        A wildcard search allows you to search using the asterisk * symbol.
+    </div>
+</details>
+
+                </div>
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group flex-col">
+                    <label class="govuk-label" for="searchType">
+                        Type of learning
+                    </label>
+                    <select class="govuk-select" id="searchType" name="searchType">
+                    <option selected="selected" value="Qualifications">Qualifications</option>
+<option value="Frameworks">Frameworks</option>
+<option value="Units">Units</option>
+<option value="Standards">Standards</option>
+<option value="TLevels">T Levels</option>
+</select>
+                    <noscript>
+                        <button class="govuk-!-margin-top-4 govuk-button govuk-button--secondary" type="submit">
+                            Apply
+                        </button>
+                    </noscript>
+                </div>
+            </div>
+        </div>
+
+        <div class="govuk-grid-row govuk-!-margin-top-6">
+            <div class="govuk-grid-column-one-third">
+                
+    
+<span class="govuk-heading-s govuk-!-margin-bottom-0">Filter results</span>
+
+<div id="allFilters" class="filter-container">
+
+    
+<section class="filter-section">
+    <h2 class="govuk-!-font-weight-regular">
+        <a href="#" id="AwardingBodies-Button" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19 filter-box-button" role="button" aria-expanded="false">
+            Awarding body
+        </a>
+    </h2>
+  
+</section>
+
+    
+<section class="filter-section">
+    <h2 class="govuk-!-font-weight-regular">
+        <a href="#" id="Levels-Button" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19 filter-box-button" role="button" aria-expanded="false">
+            Level
+        </a>
+    </h2>
+   
+
+</section>
+
+    
+<section class="filter-section">
+    <h2 class="govuk-!-font-weight-regular">
+        <a href="#" id="FundingStreams-Button" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19 filter-box-button" role="button" aria-expanded="false">
+            Funding stream
+        </a>
+    </h2>
+       
+</section>
+
+    
+<section class="filter-section">
+    <h2 class="govuk-!-font-weight-regular">
+        <a href="#" id="EFAFundingConditions-Button" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19 filter-box-button" role="button" aria-expanded="false">
+            EFA funding condition
+        </a>
+    </h2>
+
+</section>
+
+
+    
+<section class="filter-section">
+    <h2 class="govuk-!-font-weight-regular">
+        <a href="#" id="Categories-Button" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19 filter-box-button" role="button" aria-expanded="false">
+            Category
+        </a>
+    </h2>
+     
+
+</section>
+
+    
+<section class="filter-section">
+    <h2 class="govuk-!-font-weight-regular">
+        <a href="#" id="SectorSubjectAreaTier2s-Button" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19 filter-box-button" role="button" aria-expanded="false">
+            Sector subject area
+        </a>
+    </h2>
+   
+</section>
+
+
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+        <span class="govuk-heading-s govuk-!-margin-bottom-0">Learning start date</span>
+      <div id="passport-issued-hint" class="govuk-hint">
+        Use in conjunction with funding stream to filter on aims that are available for new starts. For example, 27 3 2023.
+      </div>
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+<br>
+    
+    <noscript id="filtersNoScript">
+        <input type="submit" value="Update results" class="govuk-!-margin-top-4 govuk-button govuk-button--secondary" />
+        <a class="govuk-!-margin-top-4 govuk-button govuk-button--secondary" href="/find-a-learning-aim/LearningAimSearchResult/ClearFilters?academicYear=2223">Clear filters</a>
+    </noscript>
+
+                
+                <p id="clearFilterContainer" class="">
+                    <a id="clearFilter" class="govuk-link govuk-link--no-visited-state" href="#">Clear filters</a>
+                </p>
+                <br>
+            </div>
+
+            <div class="govuk-grid-column-two-thirds">
+                
+
+<nav id="pagination" class="govuk-body flex space-between" role="navigation" aria-label="Pagination Navigation">
+    <span class="govuk-grid-column-one-quarter govuk-!-padding-0">
+        <button id="previous-page" name="PageNumber" class="visibility-hidden govuk-link govuk-link--no-visited-state pager" value="0" aria-label="Goto page 0">
+            <svg class="previous-link-arrow" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13" fill="#1d70b8">
+                <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            Previous
+        </button>
+    </span>
+
+    <span class="govuk-grid-column-two-quarters govuk-!-padding-0 text-align-centre">
+
+        <span id="pager-container">
+                <span class="pager" aria-label="Current page, page 1">1 to 50</span>
+                
+                
+                <button name="PageNumber" class="govuk-link govuk-link--no-visited-state pager" value="2" aria-label="Goto page 2">
+                    51 to 100
+                </button>
+                
+                <button name="PageNumber" class="govuk-link govuk-link--no-visited-state pager" value="3" aria-label="Goto page 3">
+                    101 to 150
+                </button>
+        </span>
+    </span>
+
+    <span class="govuk-grid-column-one-quarter govuk-!-padding-0 text-align-right">
+        <button id="next-page" name="PageNumber" class="govuk-link govuk-link--no-visited-state pager" value="2" aria-label="Goto page 2">
+            Next page
+            <svg class="next-link-arrow" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13" fill="#1d70b8">
+                <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg>
+        </button>
+    </span>
+</nav>
+
+                <p class="govuk-body flex space-between" aria-live="assertive">
+                    <span id="resultsCount" data-count="36408">36408 results</span>
+                </p>
+
+                <hr class="colour-black govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                
+    
+<div id="academicYearTemplate" class="govuk-form-group flex">
+    <div class="govuk-!-margin-top-1">
+        <label class="govuk-label" for="sort">
+            Academic year
+        </label>
+        <select class="govuk-select" name="TeachingYears" id="TeachingYears">
+                    <option value="2324">2023 to 2024</option>
+                    <option value="2223" selected="">2022 to 2023</option>
+                    <option value="2122">2021 to 2022</option>
+                    <option value="2021">2020 to 2021</option>
+                    <option value="1920">2019 to 2020</option>
+                    <option value="1819">2018 to 2019</option>
+                    <option value="1718">2017 to 2018</option>
+                    <option value="1617">2016 to 2017</option>
+                    <option value="1516">2015 to 2016</option>
+        </select>
+    </div>
+</div>
+
+
+
+                <div id="resultList" class="govuk-list">
+                    
+    
+                    <div class="search-item">
+                        <h3 class="govuk-!-margin-0">
+                            <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline govuk-!-font-size-19" href="/find-a-learning-aim/LearningAimSearchResult/RedirectToDetails?learnAimRef=Z0004323&amp;academicYear=2223">Non regulated Adult skills formula funded provision, Level 1, ESOL, 93 to 100 hrs</a>
+                        </h3>
+                
+                        <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+                            <div class="govuk-summary-list">
+                            <div class="govuk-summary-list__row">
+                                <dd class="govuk-summary-list__key">
+                                    Reference
+                                </dd>
+                                  <dd class="govuk-summary-list__value">
+                                    Z0004323
+                                  </dd>
+                             </div>
+                                <div class="govuk-summary-list__row">
+                                    <dd class="govuk-summary-list__key">
+                                    Level
+                                  </dt>
+                                  <dd class="govuk-summary-list__value">
+                                    Level 1
+                                 </dd>
+                 
+                                </div>
+                                <div class="govuk-summary-list__row">
+                                    <dd class="govuk-summary-list__key">
+                                    Awarding body
+                                </dd>
+                                  <dd class="govuk-summary-list__value">
+                                    None
+                                  </dd>
+                
+                                </div>
+                                <div class="govuk-summary-list__row">
+                                    <dd class="govuk-summary-list__key">
+                                    Guided learning hours
+                                </dd>
+                                  <dd class="govuk-summary-list__value">
+                                    Not provided
+                                  </dd>
+                            </div>
+                        </dl>
+                
+                            <h4 class="govuk-heading-s govuk-!-font-size-18 govuk-!-margin-bottom-16 govuk-!-margin-top-0">Available funding streams and the last date for new starts:</h4>
+                            <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+                                <div class="govuk-summary-list__row">
+                                <dd class="govuk-summary-list__key">
+                                    Adult Skills
+                                </dd>
+                                  <dd class="govuk-summary-list__value">
+                                    01/12/2023
+                                  </dd>
+                
+                                </div>
+                                <div class="govuk-summary-list__row">
+                                    <dd class="govuk-summary-list__key">
+                                    Other
+                                  </dt>
+                                  <dd class="govuk-summary-list__value">
+                                    Not set
+                                 </dd>
+                 
+                                </div>
+                                <div class="govuk-summary-list__row">
+                                    <dd class="govuk-summary-list__key">
+                                    European Social Fund
+                                </dd>
+                                  <dd class="govuk-summary-list__value">
+                                    01/03/2023
+                                  </dd>
+                
+                                </div>
+                                <div class="govuk-summary-list__row">
+                                    <dd class="govuk-summary-list__key">
+                                    MCA/GL
+                                </dd>
+                                  <dd class="govuk-summary-list__value">
+                                    01/03/2023
+                                  </dd>
+                
+                                </div>
+                              </dl>
+                           
+                    </div>
+
+                </div>
+                
+
+            </div>
+        </div>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Eryvdlo0_VCucIUdIwOkOfr1GxuVd5sts4QK0iE3tXRl6LJzSWL4jVEk-oEqRWaCKv9htkjNswZDJ80yRnWYydBMwkErqSusAlbFUzeTAA7BirhiTudYwPkFwEyjAWW6Tb3I0XwU-O9RTobNlxmq40"></form>
+</div>
+
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    
+
+<footer class="govuk-footer " role="contentinfo">
+    <div class="govuk-width-container ">
+        <div class="govuk-footer__meta">
+            <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+                <ul class="govuk-footer__inline-list">
+                    <li class="govuk-footer__inline-list-item">
+                        <a class="govuk-footer__link govuk-link govuk-link--no-visited-state" href="/find-a-learning-aim/PrivacyPolicy">Privacy policy</a>
+                    </li>
+                    <li class="govuk-footer__inline-list-item">
+                        <a class="govuk-footer__link govuk-link govuk-link--no-visited-state" href="/find-a-learning-aim/TermsAndConditions">Terms and conditions</a>
+                    </li>
+                    <li class="govuk-footer__inline-list-item">
+                        <a class="govuk-footer__link" href="/find-a-learning-aim/SupportLinks/AccessibilityStatement">Accessibility statement</a>
+                    </li>
+                    <li class="govuk-footer__inline-list-item">
+                        <a class="govuk-footer__link" href="/find-a-learning-aim/Help/Cookies">Cookies</a>
+                    </li>
+                </ul>
+                <svg focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41" aria-label="Open Government Licence">
+                    <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+                </svg>
+                <span class="govuk-footer__licence-description">
+                    All content is available under the
+                    <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+                </span>
+            </div>
+            <div class="govuk-footer__meta-item">
+                <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="global-app-error" class="app-error hidden"></div>
+
+    <script src="/find-a-learning-aim/assets/dist/js/pollyfills.js?v=enbtseasxmen5WIAZVDRvEKoj-FTVytSmIIV0ulPo7k"></script>
+
+    
+    
+        <script src="/find-a-learning-aim/lib/govuk-frontend/all.min.js?v=50KcBXY7upOn4HAbUZVPCnkxRXj0D6mnmhQaIS7sLEM"></script>
+    
+
+    <script src="/find-a-learning-aim/assets/dist/js/app/Layout/footer.js?v=EqC1IoExuK5tc2voaK2lZfgklxrJiXOiR8yK54ZeWLQ"></script>
+
+    
+    
+    <script src="/find-a-learning-aim/assets/dist/js/learningAimSearchResults.js?v=Ml2TDgspKqrBqix_Ik52EtQ0sLCh-8ENLwJ9ktHwgZk"></script>
+
+
+
+</body>
+ 
+{% endblock %}

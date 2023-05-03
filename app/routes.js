@@ -206,38 +206,54 @@ router.post('/FEWCheckHighestTeachingQualification', function (req, res) {
 
 router.post('/FEWSelectSubRoles', function (req, res) {
 
+  console.log("in FEW select sub roles");
 
   var SubRoles = req.session.data['SubRole']
   var JobRole = req.session.data['JobRole']
 
+  console.log("sub roles are "+SubRoles);
+  console.log("job roles are "+JobRole);
+  console.log(SubRoles.length);
+  console.log(typeof SubRoles);
+
+
+  var isMoreThanOneSubRole = typeof SubRoles==="object"
+
+  if(isMoreThanOneSubRole) {
+    // Send user to ineligible page
+    console.log("we are in six else");
+    res.redirect('/FEWMainRole')
+  }
+
   // Check whether the variable matches a condition
-  if (SubRoles.length ==1 &&  (JobRole == "Teacher" ||"Teacher" in JobRole) ) { 
+  else if ((JobRole == "Teacher") ) { 
+    console.log("we are in one");
     // Send user to next page
     res.redirect('/FEWWhatQualsProgrammes')
 
 
-  } else if (SubRoles.length ==1 && (JobRole == "Senior Leader"||"Senior Leader" in JobRole)){
+  } else if ((JobRole == "Senior Leader")){
+    console.log("we are in two");
     // Send user to ineligible page
     res.redirect('/FEWLeaderHead')
 
-  } else if (SubRoles.length ==1 && (JobRole == "Manager"||"Manager" in JobRole )){
+  } else if ((JobRole == "Manager")){
+    console.log("we are in three");
     // Send user to ineligible page
     res.redirect('/FEWTeachingResponsibilities')
 
-  } else if (SubRoles.length ==1 && (JobRole == "Teaching Support"||"Teaching Support" in JobRole)){
+  } else if ((JobRole == "Teaching Support")){
+    console.log("we are in four");
     // Send user to ineligible page
     res.redirect('/FEWTeachingResponsibilities')
 
 
-  } else if (SubRoles.length ==1 && (JobRole == "Administration"||"Administration" in JobRole)){
+  } else if ((JobRole == "Administration")){
+    console.log("we are in five");
     // Send user to ineligible page
     res.redirect('/FEWTeachingResponsibilities')
     
-  } else {
-    // Send user to ineligible page
-    res.redirect('/FEWMainRole')
-    
-  }
+  } 
 })
 
 

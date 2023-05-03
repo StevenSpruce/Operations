@@ -137,6 +137,14 @@ What is their main role?                    </h1>
                                 Head of Department 
                              </label>
                          </div>  
+                         {% endif%} 
+                         {% if ("Functional Manager" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Head of Department" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                               Functional Manager
+                             </label>
+                         </div>  
                          {% endif%}
                          {% if ("Programme Lead" in data["SubRole"]) %}
                          <div class="govuk-radios__item">
