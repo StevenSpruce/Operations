@@ -1,0 +1,72 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                    
+
+<div class="govuk-grid-column-full">
+    <form method="post" action="/TeachingQualification">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1452">
+
+                    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+            
+
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                    <h1 class="govuk-fieldset__heading">Are they working towards a teacher training qualification?</h1>
+                </legend>
+            <div class="govuk-hint">
+                Some blurb...
+            </div>
+
+            <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="TeachingQual" name="TeachingQual" value="Yes" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId140" class="govuk-label govuk-radios__label">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="TeachingQual" name="TeachingQual" value="No" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId141" class="govuk-label govuk-radios__label">
+                                No
+                            </label>
+                        </div>
+            </div>
+            <br>
+        </fieldset>
+    </div>
+
+            </div>
+        </div>
+        <br>
+        <button class="govuk-button" type="submit" id="submit">
+            Save and continue
+        </button>
+
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KVaIYTc5UBg9vDUN4Ixgu5gxMttjoPQ9AtxCdUu7rhgC16FXGePZhu9Cnh9F274Mc99FYJCXLi98RAFSIC8VrDApfhq8MX2rERjQtbxpo24iraaAiQldznUks45d0A8RWTT8R9Lu_vuvJsnHLzWR3PohhlPje9bVC6ujfpF5s7Hew"></form>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+ 
+
+
+
+{% endblock %}

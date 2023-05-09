@@ -204,6 +204,26 @@ router.post('/FEWCheckHighestTeachingQualification', function (req, res) {
 })
 
 
+
+router.post('/TeachingQualification', function (req, res) {
+
+
+  var Studying = req.session.data['TeachingQual']
+
+  // Check whether the variable matches a condition
+  if (Studying == "Yes"){
+    // Send user to next page
+    res.redirect('/FEWTeachingQualStudying')
+
+    
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWTeachingStatus')
+  }
+})
+
+
+
 router.post('/FEWSelectSubRoles', function (req, res) {
 
   console.log("in FEW select sub roles");

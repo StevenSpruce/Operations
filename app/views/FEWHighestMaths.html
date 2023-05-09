@@ -30,49 +30,47 @@ GOV.UK Prototype Kit
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
                     <h1 class="govuk-fieldset__heading">What is their highest Maths qualification?</h1>
                 </legend>
-            <div class="govuk-hint">
-                You can select 'not known' for this year. You will need to provide an alternative answer next year.
-            </div>
+            <div class="govuk-hint"></div>
 
             <div class="govuk-radios">
                         <div class="govuk-radios__item">
-                            <input id="HighestMaths" name="HighestMaths" value="Level 2 GCSE grade A* to C or equivalent" {{ checked("HighestMaths", "Level 2 GCSE grade A* to C or equivalent") }} class="govuk-radios__input" type="radio">
+                            <input id="HighestMaths" name="HighestMaths" value="Level 2 GCSE grade A* to C or equivalent" class="govuk-radios__input" type="radio">
                             <label for="LookupItemId120" class="govuk-label govuk-radios__label">
                                 Level 2 GCSE grade A* to C or equivalent
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="HighestMaths" name="HighestMaths" value="Level 3 A Level or equivalent" {{ checked("HighestMaths", "Level 3 A Level or equivalent") }} class="govuk-radios__input" type="radio">
+                            <input id="HighestMaths" name="HighestMaths" value="Level 3 A Level or equivalent" class="govuk-radios__input" type="radio">
                             <label for="LookupItemId121" class="govuk-label govuk-radios__label">
                                 Level 3 A Level or equivalent
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="HighestMaths" name="HighestMaths" value="Level 4 Certificate of higher education" {{ checked("HighestMaths", "Level 4 Certificate of higher education") }} class="govuk-radios__input" type="radio">
+                            <input id="HighestMaths" name="HighestMaths" value="Level 4 Certificate of higher education" class="govuk-radios__input" type="radio">
                             <label for="LookupItemId122" class="govuk-label govuk-radios__label">
                                 Level 4 Certificate of higher education
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="HighestMaths" name="HighestMaths" value="Level 5 Foundation degree" {{ checked("HighestMaths", "Level 5 Foundation degree") }} class="govuk-radios__input" type="radio">
+                            <input id="HighestMaths" name="HighestMaths" value="Level 5 Foundation degree" class="govuk-radios__input" type="radio">
                             <label for="LookupItemId123" class="govuk-label govuk-radios__label">
                                 Level 5 Foundation degree
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="HighestMaths" name="HighestMaths" value="Level 6 Undergraduate degree or equivalent" {{ checked("HighestMaths", "Level 6 Undergraduate degree or equivalent") }} class="govuk-radios__input" type="radio">
+                            <input id="HighestMaths" name="HighestMaths" value="Level 6 Undergraduate degree or equivalent" class="govuk-radios__input" type="radio">
                             <label for="LookupItemId124" class="govuk-label govuk-radios__label">
                                 Level 6 Undergraduate degree or equivalent
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="HighestMaths" name="HighestMaths" value="Level 7 Postgraduate degree or equivalent" {{ checked("HighestMaths", "Level 7 Postgraduate degree or equivalent") }} class="govuk-radios__input" type="radio">
+                            <input id="HighestMaths" name="HighestMaths" value="Level 7 Postgraduate degree or equivalent" class="govuk-radios__input" type="radio">
                             <label for="LookupItemId125" class="govuk-label govuk-radios__label">
                                 Level 7 Postgraduate degree or equivalent
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="HighestMaths" name="HighestMaths" value="Level 8 Doctorates, award, certificate diploma in strategic direction" {{ checked("HighestMaths", "Level 8 Doctorates, award, certificate diploma in strategic direction") }} class="govuk-radios__input" type="radio">
+                            <input id="HighestMaths" name="HighestMaths" value="Level 8 Doctorates, award, certificate diploma in strategic direction" class="govuk-radios__input" type="radio">
                             <label for="LookupItemId126" class="govuk-label govuk-radios__label">
                                 Level 8 Doctorates, award, certificate diploma in strategic direction
                             </label>
@@ -90,13 +88,17 @@ GOV.UK Prototype Kit
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="HighestMaths" name="HighestMaths" value="Not known" {{ checked("HighestMaths", "Not known") }} class="govuk-radios__input" type="radio">
+                            <input id="HighestMaths" name="HighestMaths" value="Not known - Employee chose not to disclose" class="govuk-radios__input" type="radio">
                             <label for="LookupItemId129" class="govuk-label govuk-radios__label">
-                                Not known 
+                                Not known - Employee chose not to disclose
                             </label>
                         </div>
-                <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="">
-                <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="">
+                        <div class="govuk-radios__item">
+                            <input id="HighestMaths" name="HighestMaths" value="Not known - Unable to find answer" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId129" class="govuk-label govuk-radios__label">
+                                Not known - Unable to find answer
+                            </label>
+                        </div>
             </div>
             <br>
         </fieldset>

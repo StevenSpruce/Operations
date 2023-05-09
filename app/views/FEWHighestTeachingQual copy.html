@@ -27,7 +27,9 @@ GOV.UK Prototype Kit
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
                     <h1 class="govuk-fieldset__heading">What is their highest teaching qualification?</h1>
                 </legend>
-            <div class="govuk-hint"></div>
+            <div class="govuk-hint">
+                You can select 'not known' for this year. You will need to provide an alternative answer next year.
+            </div>
 
             <div class="govuk-radios">
                         <div class="govuk-radios__item">
@@ -67,6 +69,12 @@ GOV.UK Prototype Kit
                             </label>
                         </div>
                         <div class="govuk-radios__item">
+                            <input id="HighestTeachingQual" name="HighestTeachingQual" value="Working towards a teacher training qualification" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId146" class="govuk-label govuk-radios__label">
+                                Working towards a teacher training qualification
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
                             <input id="HighestTeachingQual" name="HighestTeachingQual" value="Other" class="govuk-radios__input" type="radio">
                             <label for="LookupItemId147" class="govuk-label govuk-radios__label">
                                 Other
@@ -78,6 +86,14 @@ GOV.UK Prototype Kit
                                 None
                             </label>
                         </div>
+                        <div class="govuk-radios__item">
+                            <input id="HighestTeachingQual" name="HighestTeachingQual" value="Not known" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId149" class="govuk-label govuk-radios__label">
+                                Not known 
+                            </label>
+                        </div>
+                <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="">
+                <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="">
             </div>
             <br>
         </fieldset>

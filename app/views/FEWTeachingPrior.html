@@ -71,13 +71,17 @@ Prior to their FE role, how long did they work in a job relevant to the subject 
                           </label>
                       </div>
                       <div class="govuk-radios__item">
-                          <input id="Prior" name="Prior" value="Not known" {{ checked("Prior", "Not known") }} class="govuk-radios__input" type="radio">
+                          <input id="Prior" name="Prior" value="Not known - Employee chose not to disclose" class="govuk-radios__input" type="radio">
                           <label for="LookupItemId172" class="govuk-label govuk-radios__label">
-                              Not known 
+                            Not known - Employee chose not to disclose
                           </label>
                       </div>
-              <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="">
-              <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="">
+                      <div class="govuk-radios__item">
+                        <input id="Prior" name="Prior" value="Not known - Unable to find answer" class="govuk-radios__input" type="radio">
+                        <label for="LookupItemId172" class="govuk-label govuk-radios__label">
+                            Not known - Unable to find answer 
+                        </label>
+                    </div>
           </div>
           <br>
       </fieldset>

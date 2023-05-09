@@ -27,9 +27,7 @@ GOV.UK Prototype Kit
                     <h1 class="govuk-fieldset__heading">
 What is their professional teaching status?                    </h1>
                 </legend>
-            <div class="govuk-hint">
-                You can select 'not known' for this year. You will need to provide an alternative answer next year.
-            </div>
+            <div class="govuk-hint"></div>
 
             <div class="govuk-radios">
                         <div class="govuk-radios__item">
@@ -69,14 +67,18 @@ What is their professional teaching status?                    </h1>
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="TeachingStatus" name="TeachingStatus" value="Not known" class="govuk-radios__input" type="radio">
-                            <label for="LookupItemId165" class="govuk-label govuk-radios__label">
-                                Not known 
+                            <input id="TeachingStatus" name="TeachingStatus" value="Not known - Employee chose not to disclose" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId166" class="govuk-label govuk-radios__label">
+                                Not known - Employee chose not to disclose
                             </label>
                         </div>
-                <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="">
-                <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="">
-            </div>
+                        <div class="govuk-radios__item">
+                            <input id="TeachingStatus" name="TeachingStatus" value="Not known - Unable to find answer" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId167" class="govuk-label govuk-radios__label">
+                                Not known - Unable to find answer
+                            </label>
+                       </div>
+                    </div>
             <br>
         </fieldset>
     </div>

@@ -1,0 +1,107 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<main class="govuk-main-wrapper" id="content" role="main">
+        <div class="govuk-grid-row flex">
+
+          <div class="govuk-grid-column-full">
+    <form method="post" action="">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+              <div class="govuk-error-summary" data-module="govuk-error-summary">
+                <div role="alert">
+                  <h2 class="govuk-error-summary__title">
+                    There is a problem
+                  </h2>
+                  <div class="govuk-error-summary__body">
+                    <ul class="govuk-list govuk-error-summary__list">
+                      <li>
+                        <a href="#">There are incomplete staff records</a>
+                      </li>
+                      <li>
+                        <a href="#">Either complete or delete any incomplete staff records</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="govuk-form-group govuk-form-group--error">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                      Complete your staff collection
+                    </h1>
+                  </legend>
+                  <div id="passport-issued-hint" class="govuk-hint">
+                    Confirm the staff collection is completed when you have finished all the updates for this year
+                  </div>
+
+                  <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        What if I need to update the data after I have completed it?
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      That's ok, you can update the data, but you will need to return here and mark it as complete after you have completed any further updates.
+                    </div>
+                  </details>
+
+
+                  <p id="passport-issued-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> There are incomplete staff records</p>
+                  <div class="govuk-date-input" id="passport-issued">
+                
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="JobRole" name="JobRole" type="checkbox" value="Senior Leader" {{ checked("JobRole", "Senior Leader") }} data-aria-controls="conditional-SeniorLeader">
+                        <label class="govuk-label govuk-checkboxes__label" for="SeniorLeader">
+                          I confirm the staff collection is complete.
+                        </label>
+                        </div>
+                    </div>                   
+
+                  </div>
+                </fieldset>
+              </div>
+
+
+
+
+
+
+
+
+ 
+                </fieldset>
+              </div>
+
+    </div>
+
+            </div>
+        </div>
+        <br>
+        <button class="govuk-button" type="submit" formaction="/FEWAddSubRole">Save and continue</button><br>
+      </div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+
+{% endblock %}
