@@ -1,0 +1,122 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+  <main class="govuk-main-wrapper" id="content" role="main">
+     <div class="govuk-grid-row flex">
+                    
+
+                    
+
+<div class="govuk-grid-column-full">
+  <form method="post" action"">
+        <div class="govuk-grid-row">
+        
+
+              <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1452">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+            
+
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                   <h1 class="govuk-fieldset__heading">Have they participated in or benefitted from any of the listed DfE programmes?</h1>
+                </legend>
+            <div class="govuk-hint">
+                Select 1 or more options applicable to the staff member.
+            </div>
+
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Taking Teaching Further (TTF)">
+                  <label class="govuk-label govuk-checkboxes__label" for="TTF">
+                    Taking Teaching Further (TTF)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Mentor Training Programme (either as a mentor or mentee)">
+                  <label class="govuk-label govuk-checkboxes__label" for="MTP">
+                    Mentor Training Programme (either as a mentor or mentee)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Teach in FE Platform">
+                  <label class="govuk-label govuk-checkboxes__label" for="FEPlatform">
+                    Teach in FE Platform
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Bursaries for FE Teacher Training">
+                    <label class="govuk-label govuk-checkboxes__label" for="Bursaries">
+                      Bursaries for FE Teacher Training
+                    </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="T Level Professional Development">
+                    <label class="govuk-label govuk-checkboxes__label" for="TLevel">
+                      T Level Professional Development
+                    </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Strategic Development Fund (SDF)/Local Skills Improvement Fund (LSIF)">
+                  <label class="govuk-label govuk-checkboxes__label" for="SDF">
+                    Strategic Development Fund (SDF)/Local Skills Improvement Fund (LSIF)
+                  </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="T Level Professional Development">
+                <label class="govuk-label govuk-checkboxes__label" for="TLevel">
+                  A targeted retention and/or recruitment financial incentive 
+                </label>
+                <div id="TLevel-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  For example: An early career, joiner, or retention incentive, targeted salary uplift (consolidated) or a targeted non-consolidated payment to the existing DFE programmes
+                </div>
+            </div>
+                <div class="govuk-radios__divider">or</div>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="None">
+                    <label class="govuk-label govuk-checkboxes__label" for="DFENone">
+                      None
+                    </label>
+                </div>
+                <div class="govuk-radios__divider">or</div>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Not known - Employee chose not to disclose">
+                    <label class="govuk-label govuk-checkboxes__label" for="DFENotKnown">
+                      Not known - Employee chose not to disclose
+                    </label>
+                </div>
+                <div class="govuk-radios__divider">or</div>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="DFE" name="DFE" type="checkbox" value="Not known - Unable to find answer">
+                    <label class="govuk-label govuk-checkboxes__label" for="DFENotKnown">
+                      Not known - Unable to find answer
+                    </label>
+                </div>
+              </div>
+
+            <br>
+        </fieldset>
+    </div>
+
+            </div>
+        </div>
+        <br>
+        <button class="govuk-button" type="submit" formaction="/FEWTeachingPrior">Save and continue</button>
+
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KVSmuQh9vW0pSswHxfVHZEAo1cAtQfI8w8CyAOVK_GSalEU-oyEx7eLGD_sbkYIX_p5jEPTVbdi2cSl_ZZffyLk_eCeeTjgHs5GGBrY6IjAJ1v_mRJq490yrAO06_5p4cK7PZH-fRtJmxCDqtnGNo-BD_Tf1CttPChI7y-innwj7A"></form>
+</div>
+</main>
+</body>  
+
+
+
+{% endblock %}

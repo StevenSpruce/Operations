@@ -1,0 +1,100 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                    
+
+<div class="govuk-grid-column-full">
+    <form method="post" action="/FEWRouteFromDFEProg">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1452">
+
+                    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+            
+
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                    <h1 class="govuk-fieldset__heading">Have they participated in or benefitted from any DfE programmes?</h1>
+                </legend>
+
+            <h2 class="govuk-heading-m">DfE programmes list:</h2>
+         
+              <ul class="govuk-list govuk-list--bullet">
+                <li>A targeted retention and/or recruitment financial incentive</li>
+                <li>Bursaries for FE Teacher Training</li>
+                <li>Mentor Training Programme (either as a mentor or mentee)</li>
+                <li>Strategic Development Fund (SDF)/Local Skills Improvement Fund (LSIF)</li>
+                <li>T Level Professional Development</li>
+                <li>Taking Teaching Further (TTF)</li>
+                <li>Teach in FE Platform</li>
+           
+              
+                
+            </ul>   
+
+
+
+
+
+            <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="DFEProg" name="DFEProg" value="Yes" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId140" class="govuk-label govuk-radios__label">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="DFEProg" name="DFEProg" value="No" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId141" class="govuk-label govuk-radios__label">
+                                No, they have not participated or benefitted from any DfE programmes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="DFEProg" name="DFEProg" value="No" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId141" class="govuk-label govuk-radios__label">
+                                Not known - Employee chose not to disclose
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="DFEProg" name="DFEProg" value="No" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId141" class="govuk-label govuk-radios__label">
+                                Not known - Unable to find answer
+                            </label>
+                        </div>
+            </div>
+            <br>
+        </fieldset>
+    </div>
+
+            </div>
+        </div>
+        <br>
+        <button class="govuk-button" type="submit" id="submit">
+            Save and continue
+        </button>
+
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KVaIYTc5UBg9vDUN4Ixgu5gxMttjoPQ9AtxCdUu7rhgC16FXGePZhu9Cnh9F274Mc99FYJCXLi98RAFSIC8VrDApfhq8MX2rERjQtbxpo24iraaAiQldznUks45d0A8RWTT8R9Lu_vuvJsnHLzWR3PohhlPje9bVC6ujfpF5s7Hew"></form>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+ 
+
+
+
+{% endblock %}

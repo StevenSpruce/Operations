@@ -346,6 +346,14 @@ What is their main role?                    </h1>
                              </label>
                          </div> 
                          {% endif%}  
+                         {% if ("Sports Coach" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Technology Support" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                              Sports Coach
+                             </label>
+                         </div> 
+                         {% endif%} 
                          {% if ("Teaching Assistant" in data["SubRole"]) %}
                          <div class="govuk-radios__item">
                             <input id="LookupItemId31" name="MainRole" value="Teaching Assistant" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
@@ -498,6 +506,14 @@ What is their main role?                    </h1>
                              </label>
                          </div> 
                          {% endif%}
+                         {% if ("Legal" in data["SubRole"]) %}
+                         <div class="govuk-radios__item">
+                            <input id="LookupItemId31" name="MainRole" value="Technology Support" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
+                             <label for="LookupItemId31" class="govuk-label govuk-radios__label">
+                              Legal
+                             </label>
+                         </div> 
+                         {% endif%} 
                          {% if ("Marketing Administrator" in data["SubRole"]) %}
                          <div class="govuk-radios__item">
                             <input id="LookupItemId31" name="MainRole" value="Marketing Administrator" aria-describedby="LookupHintItemId31" class="govuk-radios__input" type="radio">
@@ -553,7 +569,9 @@ What is their main role?                    </h1>
                                 Technology Support 
                              </label>
                          </div> 
-                         {% endif%}   
+                         {% endif%} 
+  
+
               <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="">
               <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="">
           </div>

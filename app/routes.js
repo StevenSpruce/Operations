@@ -372,3 +372,21 @@ router.post('/FEWRouteFromTeachingResponsibilities', function (req, res) {
 
 
 
+router.post('/FEWRouteFromDFEProg', function (req, res) {
+
+  var DFEProg = req.session.data['DFEProg']
+
+  // Check whether the variable matches a condition
+ if (DFEProg == "Yes"){
+    // Send user to ineligible page
+    res.redirect('/FEWTeachingDFEProgrammes')
+    
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWTeachingPrior')
+    
+  }
+})
+
+
+

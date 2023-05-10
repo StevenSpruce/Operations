@@ -5,7 +5,7 @@ GOV.UK Prototype Kit
 {% endblock %}
 {% block content %}
 
-    <a href="/FEWMainEmploymentContract" class="govuk-back-link">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 
         <main class="govuk-main-wrapper" id="content" role="main">
@@ -15,10 +15,10 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-column-full">
         <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
 
-        <h1 class="govuk-heading">Weekly contracted hours</h1>
+        <h1 class="govuk-heading">Weeks a year contracted to work</h1>
 
         <p class="govuk-body">
-            For staff members with more than one contract, record weekly contracted hours using their main contract with the most hours.
+            Where payment for contracted hours is spread over the whole year, it is the contracted hours in weeks that need to be entered. 
         </p>
 
         <form method="post" id="weekly-hours-form" action="/few/contracts/check-weekly-contracted-hours">
@@ -28,24 +28,25 @@ GOV.UK Prototype Kit
                     <div class="govuk-form-group" id="weekly-Group">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                             <h2 class="govuk-fieldset__heading">
-                                What are their weekly contracted hours?
+                                What are their weeks per year?
                             </h2>
                         </legend>
                         <div id="weekly-hours-hint" class="govuk-hint">
-                            For example enter 32.5 for thirty two and a half
+                            For example, if someone is on a term-time only contract for 37 weeks per year but receives their pay in twelve monthly instalments, it is 37 weeks not 52 that should be entered.
+                            Only a whole number of weeks should be entered. 
                         </div>
 
                         
                         <div class="govuk-input__wrapper">
-                            <input class="govuk-input govuk-input--width-5" id="weekly-hours" type="text" inputmode="numeric" maxlength="5" name="WeeklyHours.Hours" value="">
-                            <div class="govuk-input__suffix" aria-hidden="true">hours per week</div>
+                            <input class="govuk-input govuk-input--width-5" id="weeksayear" type="text" inputmode="numeric" maxlength="5" name="weeksayear" value="">
+                            <div class="govuk-input__suffix" aria-hidden="true">weeks per year</div>
                         </div>
                     </div>
                 </fieldset>
             </div>
 
             <br>
-            <a class="govuk-button secondary" href="/FEWWeeksAYear">Save and continue</a>
+            <a class="govuk-button secondary" href="/FEWFTE">Save and continue</a>
 
         <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KWiH8TsmjJxmDRf2SjFdpKH1Hmn_4GNNII9GNYOXCsCnCjopZRC9HXYy9Dx2xBbt08JOJk47H6Ueao40Eqpj-DXm3yCFROrFqJ3xJTg52EFn0ileDs-boahbp8k47-XRkxoyuFLEn16g2VBpoA5xTAs2iDxPheANpXI6Sm2vTLnaA"></form>
     </div>
