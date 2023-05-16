@@ -5,7 +5,8 @@ GOV.UK Prototype Kit
 {% endblock %}
 {% block content %}
 
-    <a href="/FEWPayRise" class="govuk-back-link">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
 
 
         <main class="govuk-main-wrapper" id="content" role="main">
@@ -31,7 +32,7 @@ GOV.UK Prototype Kit
                                 <label class="govuk-label govuk-date-input__label" for="startDateDay">
                                     Day
                                 </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="startDateDay" type="text" pattern="[0-9]*" inputmode="numeric" name="EmploymentStartDate.StartDateDay" value="1">
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="startDateDay" type="text" pattern="[0-9]*" inputmode="numeric" name="StartDateDay" value="1">
                             </div>
                         </div>
                         <div class="govuk-date-input__item">
@@ -39,7 +40,7 @@ GOV.UK Prototype Kit
                                 <label class="govuk-label govuk-date-input__label" for="startDateMonth">
                                     Month
                                 </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="startDateMonth" type="text" pattern="[0-9]*" inputmode="numeric" name="EmploymentStartDate.StartDateMonth" value="1">
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="startDateMonth" type="text" pattern="[0-9]*" inputmode="numeric" name="StartDateMonth" value="1">
                             </div>
                         </div>
                         <div class="govuk-date-input__item">
@@ -47,7 +48,7 @@ GOV.UK Prototype Kit
                                 <label class="govuk-label govuk-date-input__label" for="startDateYear">
                                     Year
                                 </label>
-                                <input class="govuk-input govuk-date-input__input govsuk-input--width-4" id="startDateYear" type="text" pattern="[0-9]*" inputmode="numeric" name="EmploymentStartDate.StartDateYear" value="2021">
+                                <input class="govuk-input govuk-date-input__input govsuk-input--width-4" id="startDateYear" type="text" pattern="[0-9]*" inputmode="numeric" name="StartDateYear" value="2021">
                             </div>
                         </div>
                     </div>
@@ -55,9 +56,8 @@ GOV.UK Prototype Kit
             </div>
 
             <br>
-            <a class="govuk-button secondary" href="/FEWTimeCurrentRole">Save and continue</a>
+            <button class="govuk-button" type="submit" formaction="/FEWTimeCurrentRole">Save and continue</button>
 
-        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KUx1gMKzty26QDc9u1xPSl4M7EdQV3XHJT-Kn53cvOsLLcUS_oLiro5isbmRn7NumyTPELW9d6F6CSNK2asEcnkIThMZO2YytMDyRE1yVTVAQQAt9--jyfkVqt0bI7qdVvo5FN2IWgsrraDVgX5fxybs4otp-NfjqK8hNI3xNIG1w"></form>
     </div>
 </div>
 

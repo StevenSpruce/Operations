@@ -5,7 +5,8 @@ GOV.UK Prototype Kit
 {% endblock %}
 {% block content %}
 
-    <a href="/FEWTimeFE" class="govuk-back-link">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
 
 
         <main class="govuk-main-wrapper" id="content" role="main">
@@ -45,8 +46,6 @@ Do they still work for the organisation?                    </h1>
                                 No
                             </label>
                         </div>
-                <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="">
-                <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="">
             </div>
             <br>
         </fieldset>
@@ -55,9 +54,8 @@ Do they still work for the organisation?                    </h1>
             </div>
         </div>
         <br>
-        <button class="govuk-button" type="submit" id="submit">
-            Save and continue
-        </button>
+        
+        <button class="govuk-button" type="submit" id="submit">Save and continue</button>
 </div>
 
 

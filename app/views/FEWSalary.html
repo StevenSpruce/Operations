@@ -16,7 +16,6 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-column-full">
         <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
 
-
         <h1 class="govuk-heading">Salary or hourly rate details</h1>
 
         <p class="govuk-body">
@@ -38,12 +37,12 @@ GOV.UK Prototype Kit
                     <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                         
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="is-annual-salary" type="radio" value="true" checked="checked" name="IsAnnualSalary" aria-controls="conditional-annual" aria-expanded="true">
+                            <input class="govuk-radios__input" id="is-annual-salary" type="radio" value="true" checked="checked" name="IsAnnualSalary" aria-controls="conditional-annual">
                             <label class="govuk-label govuk-radios__label" for="is-annual-salary">
                                 Annual Salary
                             </label>
                         </div>
-                        <div class="govuk-radios__conditional" id="conditional-annual">
+                        <div class="govuk-radios__conditional govuk-radios__conditional" id="conditional-annual">
                             <div class="govuk-form-group">
                                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
 
@@ -58,19 +57,19 @@ GOV.UK Prototype Kit
 
                                 <div class="govuk-input__wrapper">
                                     <div class="govuk-input__prefix" aria-hidden="true">£</div>
-                                    <input class="govuk-input govuk-input--width-10" id="annual-salary" type="text" spellcheck="false" maxlength="7" aria-describedby="annual-salary-hint" name="AnnualSalary.Salary" value="">
+                                    <input class="govuk-input govuk-input--width-10" id="annual-salary" type="text" spellcheck="false" maxlength="7" aria-describedby="annual-salary-hint" name="Salary" value="">
                                     <div class="govuk-input__suffix" aria-hidden="true">per annum</div>
 
                                 </div>
                             </div>
                         </div>
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="is-annual-salary2" type="radio" value="false" name="IsAnnualSalary" aria-controls="conditional-hourly" aria-expanded="false">
+                            <input class="govuk-radios__input" id="is-annual-salary2" type="radio" value="false" name="IsAnnualSalary" aria-controls="conditional-hourly">
                             <label class="govuk-label govuk-radios__label" for="is-annual-salary2">
                                 Hourly rate
                             </label>
                         </div>
-                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hourly">
+                        <div class="govuk-radios__conditional govuk-radios__conditional" id="conditional-hourly">
                             <div class="govuk-form-group">
                                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
 
@@ -85,7 +84,7 @@ GOV.UK Prototype Kit
 
                                 <div class="govuk-input__wrapper">
                                     <div class="govuk-input__prefix" aria-hidden="true">£</div>
-                                    <input class="govuk-input govuk-input--width-10" id="hourly-rate" type="text" maxlength="6" aria-describedby="hourly-salary-hint" name="HourlyRate.Rate" value="">
+                                    <input class="govuk-input govuk-input--width-10" id="hourly-rate" type="text" maxlength="6" aria-describedby="hourly-salary-hint" name="Rate" value="">
                                     <div class="govuk-input__suffix" aria-hidden="true">per hour</div>
                                 </div>
                             </div>
@@ -95,8 +94,7 @@ GOV.UK Prototype Kit
             </div>
 
             <br>
-            <a class="govuk-button secondary" href="/FEWPayRise">Save and continue</a>
-        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KWCZwCX_vtswAxRmDPfkVGNKADSFd5q4hTIaDF_08PxxKMyQQrKOctZDH2wH78RY3crAEsoGXBjTygMF-tQ09oUTz8l3-4dxqlwrWidn2i8j7P4H9jjd97S4YlcM_FxUdqe-SBasxBT3xpUj4XVC4TA2zFZZgMoPMc81jNoXMDutQ"></form>
+            <button class="govuk-button" type="submit" formaction="/FEWPayRise">Save and continue</button>
     </div>
 </div>
 

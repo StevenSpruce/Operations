@@ -6,7 +6,8 @@ GOV.UK Prototype Kit
 {% block content %}
 
 
-    <a href="/FEWTimeCurrentRole" class="govuk-back-link">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
 
 
         <main class="govuk-main-wrapper" id="content" role="main">
@@ -35,49 +36,47 @@ How long have they worked in Further Education?                    </h1>
 
             <div class="govuk-radios">
                         <div class="govuk-radios__item">
-                            <input id="LookupItemId188" name="SingleOption.Selection" value="188" class="govuk-radios__input" type="radio">
+                            <input id="LookupItemId188" name="TimeFE" value="Less than one year" class="govuk-radios__input" type="radio">
                             <label for="LookupItemId188" class="govuk-label govuk-radios__label">
                                 Less than one year
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="LookupItemId189" name="SingleOption.Selection" value="189" class="govuk-radios__input" type="radio">
+                            <input id="LookupItemId189" name="TimeFE" value="1 to 3 years" class="govuk-radios__input" type="radio">
                             <label for="LookupItemId189" class="govuk-label govuk-radios__label">
                                 1 to 3 years
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="LookupItemId190" name="SingleOption.Selection" value="190" class="govuk-radios__input" type="radio">
+                            <input id="LookupItemId190" name="TimeFE" value="4 to 10 years" class="govuk-radios__input" type="radio">
                             <label for="LookupItemId190" class="govuk-label govuk-radios__label">
                                 4 to 10 years
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="LookupItemId191" name="SingleOption.Selection" value="191" class="govuk-radios__input" type="radio">
+                            <input id="LookupItemId191" name="TimeFE" value="11 to 20 years" class="govuk-radios__input" type="radio">
                             <label for="LookupItemId191" class="govuk-label govuk-radios__label">
                                 11 to 20 years
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="LookupItemId192" name="SingleOption.Selection" value="192" class="govuk-radios__input" type="radio">
+                            <input id="LookupItemId192" name="TimeFE" value="Over 20 years" class="govuk-radios__input" type="radio">
                             <label for="LookupItemId192" class="govuk-label govuk-radios__label">
                                 Over 20 years
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="LookupItemId193" name="SingleOption.Selection" value="193" class="govuk-radios__input" type="radio">
+                            <input id="LookupItemId193" name="TimeFE" value="Not known - employee chose not to disclose" class="govuk-radios__input" type="radio">
                             <label for="LookupItemId193" class="govuk-label govuk-radios__label">
                                 Not known - employee chose not to disclose 
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input id="LookupItemId194" name="SingleOption.Selection" value="194" class="govuk-radios__input" type="radio">
+                            <input id="LookupItemId194" name="TimeFE" value="Not known - unable to find answer" class="govuk-radios__input" type="radio">
                             <label for="LookupItemId194" class="govuk-label govuk-radios__label">
                                 Not known - unable to find answer
                             </label>
                         </div>
-                <input type="hidden" data-val="true" data-val-required="The StartDate field is required." id="Collection_StartDate" name="Collection.StartDate" value="">
-                <input type="hidden" data-val="true" data-val-required="The EndDate field is required." id="Collection_EndDate" name="Collection.EndDate" value="">
             </div>
             <br>
         </fieldset>
@@ -86,9 +85,8 @@ How long have they worked in Further Education?                    </h1>
             </div>
         </div>
         <br>
-        <a class="govuk-button secondary" href="/FEWSameOrg">Save and continue</a>
+        <button class="govuk-button" type="submit" formaction="/FEWSameOrg">Save and continue</button>
 
-    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KVsrFeY4rdTvi1QEr0Cl8O_16YcEn2UBL0I-5wAcfrX1w7_JdLs9FXrFAQy_fiBfYSo-uN-DJxPEvYdqt2CLMvraeyeTuQfxfEQkbYyhBVQ1C9nr_1_DHHwiXsOXR_aWjRZXrj_tJh36T1_MRTjq3j-TmKESblfkHsmKkB4Tsksvg"></form>
 </div>
 
 

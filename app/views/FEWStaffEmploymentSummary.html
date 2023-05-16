@@ -7,7 +7,7 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-    <a href="/FEWTeachingEmploymentContractCompleted" class="govuk-back-link">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 
         <main class="govuk-main-wrapper" id="content" role="main">
@@ -23,50 +23,75 @@ GOV.UK Prototype Kit
         <table class="govuk-table">
             <caption class="govuk-table__caption govuk-table__caption--m">Details recorded</caption>
             <tbody class="govuk-table__body">
-                <tr class="govuk-table__row govuk-table__row">
+
+                <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">How many contracts do they have with the organisation?</th>
-                    <td class="govuk-table__cell">1</td>
+                    <td class="govuk-table__cell">{{ data["HowMany"]}}</td>
                 </tr>
                 <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">What is their main type of contract?</th>
-                    <td class="govuk-table__cell">Permanent</td>
+                    <td class="govuk-table__cell">{{ data["MainContract"]}}</td>
                 </tr>
-                        <tr class="govuk-table__row">
-                            <th scope="row" class="govuk-table__header">Weekly contracted hours</th>
-                            <td class="govuk-table__cell">48.00 hours per week</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <th scope="row" class="govuk-table__header">Weeks a year contracted to work</th>
-                            <td class="govuk-table__cell">48 weeks per year</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <th scope="row" class="govuk-table__header">Calculated full time equivalent (FTE)</th>
-                            <td class="govuk-table__cell">1.00</td>
-                        </tr>
+                
+                
+                {% if(data["WeeklyHours.Hours"].length >1 )%} 
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Weekly contracted hours</th>
+                    <td class="govuk-table__cell">{{ data["WeeklyHours.Hours"]}}</td>
+                </tr>
+                {% endif%}
+               <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Weeks a year contracted to work</th>
+                    <td class="govuk-table__cell">{{ data["weeksayear"]}}</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Calculated full time equivalent (FTE)</th>
+                    <td class="govuk-table__cell">{{ data["FTE"]}}</td>
+                </tr>
+                {% if(data["Salary"].length >1 )%} 
                 <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Salary or hourly rate details</th>
-                    <td class="govuk-table__cell">£100,000 per annum</td>
+                    <td class="govuk-table__cell">{{ data["Salary"]}} per annum</td>
                 </tr>
+                {% endif%}
+                {% if(data["Rate"].length >1 )%} 
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Salary or hourly rate details</th>
+                    <td class="govuk-table__cell">{{ data["Rate"]}} per hour</td>
+                </tr>
+                {% endif%}
                 <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Have they received a pay rise during the academic year due to either promotion or advancing up the organisation pay bandings?</th>
-                    <td class="govuk-table__cell">No</td>
+                    <td class="govuk-table__cell">{{ data["PayRise"]}}</td>
                 </tr>
                 <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">When did they start working for the organisation?</th>
-                    <td class="govuk-table__cell">29 January 2019</td>
+                    <td class="govuk-table__cell">{{ data["StartDateDay"]}} {{ data["StartDateMonth"]}} {{ data["StartDateYear"]}}</td>
                 </tr>
                 <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">How long have they worked in their current role in the organisation?</th>
-                    <td class="govuk-table__cell">1 to 3 years</td>
+                    <td class="govuk-table__cell">{{ data["TimeCurrentRole"]}}</td>
                 </tr>
                 <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">How long have they worked in Further Education?</th>
-                    <td class="govuk-table__cell">Less than one year</td>
+                    <td class="govuk-table__cell">{{ data["TimeFE"]}}</td>
                 </tr>
                 <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Do they still work for the organisation?</th>
-                    <td class="govuk-table__cell">Yes</td>
+                    <td class="govuk-table__cell">{{ data["SameOrg"]}}</td>
                 </tr>
+                {% if(data["EmploymentEndDate.Day"].length >1 )%} 
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">When did they stop working for the organisation?</th>
+                    <td class="govuk-table__cell">{{ data["EmploymentEndDate.Day"]}} {{ data["EmploymentEndDate.Month"]}} {{ data["EmploymentEndDate.Year"]}}</td>
+                </tr>
+                {% endif%}
+                {% if(data["StopWorking"].length >1 )%} 
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Why did they stop working for the organisation?</th>
+                    <td class="govuk-table__cell">{{ data["StopWorking"]}}</td>
+                </tr>
+                {% endif%}
             </tbody>
         </table>
 
