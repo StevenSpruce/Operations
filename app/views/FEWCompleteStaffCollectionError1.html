@@ -24,10 +24,10 @@ GOV.UK Prototype Kit
                   <div class="govuk-error-summary__body">
                     <ul class="govuk-list govuk-error-summary__list">
                       <li>
-                        <a href="#">There are incomplete staff records</a>
+                        <a href="#">The confirmation box has not been checked</a>
                       </li>
                       <li>
-                        <a href="#">Either complete or delete any incomplete staff records</a>
+                        <a href="#">Either confirm the collection is complete or cancel</a>
                       </li>
                     </ul>
                   </div>
@@ -40,11 +40,11 @@ GOV.UK Prototype Kit
                 <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                     <h1 class="govuk-fieldset__heading">
-                      Complete your staff collection
+                      Submit the staff collection
                     </h1>
                   </legend>
                   <div id="passport-issued-hint" class="govuk-hint">
-                    Confirm the staff collection is completed when you have finished all the updates for this year
+                    Submit the staff collection when updates are complete for 2022/23.
                   </div>
 
                   <details class="govuk-details" data-module="govuk-details">
@@ -54,13 +54,13 @@ GOV.UK Prototype Kit
                       </span>
                     </summary>
                     <div class="govuk-details__text">
-                      That's ok, you can update the data, but you will need to return here and mark it as complete after you have completed any further updates.
+                      That's ok, you can update the data, but you will need to submit it again once you have completed any further changes.
                     </div>
                   </details>
 
 
                   <p id="passport-issued-error" class="govuk-error-message">
-                    <span class="govuk-visually-hidden">Error:</span> There are incomplete staff records</p>
+                    <span class="govuk-visually-hidden">Error:</span>Confirm the staff collection is complete</p>
                   <div class="govuk-date-input" id="passport-issued">
                 
                     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -75,24 +75,22 @@ GOV.UK Prototype Kit
                   </div>
                 </fieldset>
               </div>
-
-
-
-
-
-
-
-
- 
-                </fieldset>
-              </div>
-
     </div>
-
-            </div>
+   </div>
+</div>
         </div>
-        <br>
-        <button class="govuk-button" type="submit" formaction="/FEWStaffSummaryOpen">Save and continue</button><br>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button"  type="submit" formaction="/FEWCompleteStaffCollectionConfirmation">
+            Submit
+          </button>
+          <button class="govuk-button govuk-button--secondary" type="submit" formaction="/FEWStaffSummaryOpen">
+            Cancel
+          </button>
+        </div>
+
+
+
       </div>
 
 
