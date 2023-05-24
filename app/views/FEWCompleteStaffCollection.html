@@ -12,23 +12,23 @@ GOV.UK Prototype Kit
         <div class="govuk-grid-row flex">
 
           <div class="govuk-grid-column-full">
-    <form method="post" action="">
+    <form method="post" action="FEWCompleteStaffCollection">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
 
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                    <h1 class="govuk-fieldset__heading">Submit the staff collection</h1>
+                    <h1 class="govuk-fieldset__heading">Complete the staff data</h1>
                   </legend>
                   <div class="govuk-hint">
-                    Submit the staff collection when updates are complete for 2022/23.
+                    Complete the staff part of the collection.
                 </div>
 
                 <details class="govuk-details" data-module="govuk-details">
                   <summary class="govuk-details__summary">
                     <span class="govuk-details__summary-text">
-                      What if I need to update the data after I have submitted it?
+                      What if I need to update the data after I have completed it?
                     </span>
                   </summary>
                   <div class="govuk-details__text">
@@ -40,9 +40,9 @@ GOV.UK Prototype Kit
 
                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="CompleteCollection" name="CompleteCollection" type="checkbox" value="Complete" data-aria-controls="conditional-SeniorLeader">
+                      <input class="govuk-checkboxes__input" id="CompleteCollection" name="CompleteStaffCollection" type="checkbox" value="Complete" data-aria-controls="conditional-SeniorLeader">
                       <label class="govuk-label govuk-checkboxes__label" for="SeniorLeader">
-                        I confirm the staff collection is complete.
+                        I confirm the staff data is complete.
                       </label>
 
                     </div>
@@ -56,9 +56,7 @@ GOV.UK Prototype Kit
         </div>
         <br>
         <div class="govuk-button-group">
-          <button class="govuk-button"  type="submit" formaction="/FEWCompleteStaffCollectionConfirmation">
-            Submit
-          </button>
+          <button class="govuk-button"  type="submit">Continue</button>
           <button class="govuk-button govuk-button--secondary" type="submit" formaction="/FEWStaffSummaryOpen">
             Cancel
           </button>

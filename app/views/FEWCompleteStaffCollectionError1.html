@@ -40,11 +40,11 @@ GOV.UK Prototype Kit
                 <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                     <h1 class="govuk-fieldset__heading">
-                      Submit the staff collection
+                      Complete the staff data
                     </h1>
                   </legend>
                   <div id="passport-issued-hint" class="govuk-hint">
-                    Submit the staff collection when updates are complete for 2022/23.
+                    Complete the staff part of the collection.
                   </div>
 
                   <details class="govuk-details" data-module="govuk-details">
@@ -60,14 +60,14 @@ GOV.UK Prototype Kit
 
 
                   <p id="passport-issued-error" class="govuk-error-message">
-                    <span class="govuk-visually-hidden">Error:</span>Confirm the staff collection is complete</p>
+                    <span class="govuk-visually-hidden">Error:</span>Confirm the staff data is complete</p>
                   <div class="govuk-date-input" id="passport-issued">
                 
                     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="JobRole" name="JobRole" type="checkbox" value="Senior Leader" {{ checked("JobRole", "Senior Leader") }} data-aria-controls="conditional-SeniorLeader">
                         <label class="govuk-label govuk-checkboxes__label" for="SeniorLeader">
-                          I confirm the staff collection is complete.
+                          I confirm the staff data is complete.
                         </label>
                         </div>
                     </div>                   
@@ -82,7 +82,7 @@ GOV.UK Prototype Kit
 
         <div class="govuk-button-group">
           <button class="govuk-button"  type="submit" formaction="/FEWCompleteStaffCollectionConfirmation">
-            Submit
+            Continue
           </button>
           <button class="govuk-button govuk-button--secondary" type="submit" formaction="/FEWStaffSummaryOpen">
             Cancel

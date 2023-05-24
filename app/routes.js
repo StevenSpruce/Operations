@@ -404,3 +404,22 @@ router.post('/FEWVacancyDataSelected', function (req, res) {
 
 
 
+router.post('/FEWCompleteStaffCollection', function (req, res) {
+
+  var CompleteStaffCollection = req.session.data['CompleteStaffCollection']
+
+  // Check whether the variable matches a condition
+ if (CompleteStaffCollection == "Complete"){
+    // Send user to ineligible page
+    res.redirect('/FEWCompleteStaffCollectionConfirmation')
+    
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWCompleteStaffCollectionError1')
+    
+  }
+})
+
+
+
+
