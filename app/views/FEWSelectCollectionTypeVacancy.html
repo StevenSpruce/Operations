@@ -5,7 +5,7 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-<a href="/FEWCollectionOverview" class="govuk-back-link">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 
         <main class="govuk-main-wrapper" id="content" role="main">
@@ -18,68 +18,16 @@ GOV.UK Prototype Kit
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
         <span class="govuk-caption-l">Academic year: 1 August 2022 to 31 July 2023</span>
-        <h1 class="govuk-heading-l">Record further education data</h1>
+        <h1 class="govuk-heading-l">Vacancy and recruitment data submission</h1>
 
         <p class="govuk-body">
-            This data collection has 2 parts.  You can start with either.
+            The vacancy and recruitment data collection submission has been submiited.
+        </p>
+        <p class="govuk-body">
+            If you make any further changes you will need to submit the collection again.
         </p>
 
-        <form method="post" id="radio-group" action="/FEWCollectionSelection">
-            <div class="govuk-form-group">
-                
-                <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                        <h2 class="govuk-fieldset__heading">
-                            Select an option
-                        </h2>
-                    </legend>
-                    <div class="govuk-radios">
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="option-1" type="radio" value="staff" aria-describedby="option-1-item-hint" name="SelectedOption">
-                            <label class="govuk-label govuk-radios__label" for="option-1">
-                                Record staff data
-                            </label>
-                            <div id="option-1-item-hint" class="govuk-hint govuk-radios__hint">
-                                Requires data for job role, qualifications, experience, personal details
-                            </div>
-                        </div>
-                        <div class="govuk-radios__item">
-                            
-                                <input class="govuk-radios__input" id="option-2a" type="radio" value="vacancyAndRecruitment" aria-describedby="option-2-item-hint" name="SelectedOption">
-                            
-                            <label class="govuk-label govuk-radios__label" for="option-2">
-                                Record vacancy and recruitment data
-                            </label>
-                            <div id="option-2-item-hint" class="govuk-hint govuk-radios__hint">
-                                Requires data for senior management and teaching vacancies, employed apprentices
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
-            </div>
-
-            <h2 class="govuk-heading-m">Staff data submission details</h2>
-            <dl class="govuk-summary-list dl-override">
-               
-                <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key dt-override">
-                    Submitted by
-                </dt>
-                <dd class="govuk-summary-list__value dd-override">
-                    Shared FE Workforce User
-                </dd>
-                </div>
-            
-                <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key dt-override">
-                    Time and date
-                </dt>
-                <dd class="govuk-summary-list__value dd-override">
-                    10:19am on Friday 10 June 2022
-                </dd>
-              </div>
-            </dl>
-
+        <form method="post" id="radio-group" action="/FEWVacancyDataSelected">
 
             <h2 class="govuk-heading-m">Vacancy and recruitment submission details</h2>
             <dl class="govuk-summary-list dl-override">
@@ -103,11 +51,8 @@ GOV.UK Prototype Kit
               </div>
             </dl>
 
-
-
             <button class="govuk-button" type="submit" id="submit">Continue</button>
-            
-        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JXkYVn2PiNDhyrTwLjKaCryEnCJl6MeA9ZkggO2bIcacoW8VaoBnmCYoyjAH8YL6jF_YiswgQyJJXtJnUv_u1mY-1E2E8lcK5HOj8Ynq29U8hfRWm1fo4LrBlVhY_tfdktGQTFXkPrNq4AeNSmO2wJ00n2QLMSWRosvi4uqbMfvuvfKeYq_UoA3BrjUf5y1rw"></form>
+
     </div>
 </div>
 

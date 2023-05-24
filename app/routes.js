@@ -19,10 +19,10 @@ router.post('/FEWCollectionSelection', function (req, res) {
     // Check whether the variable matches a condition
     if (selectedOption == "staff"){
       // Send user to next page
-      res.redirect('/FEWSelectMethodRecordStaffData')
+      res.redirect('/FEWSelectCollectionTypeStaff')
     } else {
       // Send user to ineligible page
-      res.redirect('/FEWVacancyStart')
+      res.redirect('/FEWSelectCollectionTypeVacancy')
     }
 })
 
@@ -386,6 +386,20 @@ router.post('/FEWRouteFromDFEProg', function (req, res) {
     res.redirect('/FEWTeachingPrior')
     
   }
+})
+
+
+
+router.post('/FEWStaffDataSelected', function (req, res) {
+
+    res.redirect('/FEWSelectMethodRecordStaffData')
+  
+})
+
+router.post('/FEWVacancyDataSelected', function (req, res) {
+
+  res.redirect('/FEWVacancyStart')
+
 })
 
 
