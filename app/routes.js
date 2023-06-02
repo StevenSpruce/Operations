@@ -242,7 +242,7 @@ router.post('/FEWSelectSubRoles', function (req, res) {
   console.log(typeof SubRoles);
 
 
-  var isMoreThanOneSubRole = typeof SubRoles==="object"
+  var isMoreThanOneSubRole = typeof SubRoles==="object" && SubRoles.length > 1
 
   if(isMoreThanOneSubRole) {
     // Send user to ineligible page
@@ -450,5 +450,21 @@ router.post('/FEWStaffCollectionIsComplete', function (req, res) {
   }
 })
 
+
+router.post('/FEWHighest', function (req, res) {
+
+  var Highest = req.session.data['HighestTeachingQual']
+
+  // Check whether the variable matches a condition
+ if (Highest == "NoneTTQ"){
+    // Send user to ineligible page
+    res.redirect('/FEWTeachingQualStudying')
+    
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWTeacherTrainingQual')
+    
+  }
+})
 
 

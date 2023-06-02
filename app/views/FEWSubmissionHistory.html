@@ -10,22 +10,10 @@ GOV.UK Prototype Kit
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 <body class="govuk-template__body  js-enabled">
-    <div class="govuk-width-container">
-      
-
         <main class="govuk-main-wrapper" id="content" role="main">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
                     <div class="govuk-grid-row flex">
-                        <div id="left-nav-wrapper" class="govuk-grid-column-one-quarter flex-grow-1">
-                            <div class="sticky-top">
-                                
-
-                </div>
-                        </div>
-                        <div class="govuk-grid-column-three-quarters flex-grow-1">
-                            <div class="govuk-form-group">
-                                
+                        <div class="govuk-grid-column-two-thirds">
+                              
 
 
 <h1 class="govuk-heading-l" id="submission">
@@ -38,12 +26,58 @@ GOV.UK Prototype Kit
 
 <h3 class="govuk-heading-m">Vacancy data collection</h3>
 
-<a class="govuk-link" href="/FEWVacancyPrevious">View your vacancy and recruitment data</a></p>
+<a class="govuk-link" href="/FEWCheckYourAnswers">View your vacancy and recruitment data</a></p>
 
 
 <h3 class="govuk-heading-m">Staff data collection</h3>
+
+{% if ("Complete" == data["CompleteStaffCollection"]) %}
+<dl class="govuk-summary-list dl-override">
+   
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key dt-override">
+        Completed by
+    </dt>
+    <dd class="govuk-summary-list__value dd-override">
+        Shared FE Workforce User
+    </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key dt-override">
+        Time and date
+    </dt>
+    <dd class="govuk-summary-list__value dd-override">
+        10:19am on Friday 10 June 2022
+    </dd>
+  </div>
+</dl>
+{% endif%}
+
+{% if ("Complete" != data["CompleteStaffCollection"]) %}
+<dl class="govuk-summary-list dl-override">
+   
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key dt-override">
+        Completed by
+    </dt>
+    <dd class="govuk-summary-list__value dd-override">
+        <a class="govuk-link" href="/FEWCompleteStaffCollection">Staff collection not confirmed as complete - confirm staff collection is complete</a>
+    </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key dt-override">
+        Time and date
+    </dt>
+    <dd class="govuk-summary-list__value dd-override">
+        Staff collection not confirmed as complete
+    </dd>
+  </div>
+</dl>
+{% endif%}
         
-<a class="govuk-link" href="/FEWStaffListPrevious">View your staff data</a></p>
+<a class="govuk-link" href="/FEWStaffSummaryOpen">View your staff data</a></p>
 
 <p>Download your XML file</p>
 
@@ -131,23 +165,14 @@ GOV.UK Prototype Kit
         <h3 class="govuk-heading-m">Staff data collection</h3>
         <p>No data submitted for this academic year</p>
                 
-        
-       
-   
-        
 
 
 
-
-
-
-                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                        </div>
+
         </main>
-    </div>
+
 </body>
 
 {% endblock %}
