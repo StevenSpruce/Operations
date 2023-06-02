@@ -15,11 +15,16 @@ router.post('/FEWCollectionSelection', function (req, res) {
 
     // Make a variable and give it the value from 'SelectedOption'
     var selectedOption = req.session.data['SelectedOption']
+    var staffComplete = req.session.data['CompleteStaffCollection']
   
     // Check whether the variable matches a condition
-    if (selectedOption == "staff"){
+    if (selectedOption == "staff" && staffComplete == "Complete"){
       // Send user to next page
       res.redirect('/FEWSelectCollectionTypeStaff')
+    } else if (selectedOption == "staff"){
+      // Send user to ineligible page
+      res.redirect('/FEWSelectMethodRecordStaffData')
+  
     } else {
       // Send user to ineligible page
       res.redirect('/FEWSelectCollectionTypeVacancy')
@@ -420,6 +425,30 @@ router.post('/FEWCompleteStaffCollection', function (req, res) {
   }
 })
 
+
+
+router.post('/FEWDirecttoComplete', function (req, res) {
+
+  res.redirect('/FEWCompleteStaffCollection')
+
+})
+
+
+
+router.post('/FEWStaffCollectionIsComplete', function (req, res) {
+
+  // Make a variable and give it the value from 'SelectedOption'
+  var staffComplete = req.session.data['CompleteStaffCollection']
+
+  // Check whether the variable matches a condition
+  if (staffComplete == "Complete"){
+    // Send user to next page
+    res.redirect('/FEWSelectCollectionTypeStaffEnd')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWCompleteStaffCollection')
+  }
+})
 
 
 

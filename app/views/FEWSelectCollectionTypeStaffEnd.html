@@ -1,0 +1,65 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <div class="govuk-grid-column-two-thirds">
+                    
+
+                    
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <span class="govuk-caption-l">Academic year: 1 August 2022 to 31 July 2023</span>
+        
+        <h1 class="govuk-heading-l">Staff data</h1>
+
+        <p class="govuk-body">
+            The staff data part of the collection is complete.  
+        </p>
+        <p class="govuk-body">
+        If you make any further changes you will need to complete the collection again.
+        </p>
+
+        <form method="post" id="radio-group" action="/FEWStaffDataSelected">
+
+            <h2 class="govuk-heading-m">Staff data completion details</h2>
+            <dl class="govuk-summary-list dl-override">
+               
+                <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key dt-override">
+                    Completed by
+                </dt>
+                <dd class="govuk-summary-list__value dd-override">
+                    Shared FE Workforce User
+                </dd>
+                </div>
+            
+                <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key dt-override">
+                    Time and date
+                </dt>
+                <dd class="govuk-summary-list__value dd-override">
+                    10:19am on Friday 10 June 2022
+                </dd>
+              </div>
+            </dl>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+</body>
+
+{% endblock %}

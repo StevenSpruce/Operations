@@ -10,11 +10,12 @@ GOV.UK Prototype Kit
 <body class="govuk-template__body  js-enabled">
 
     <a href="/submission-options" class="govuk-back-link">Back</a>
+    
 
         <main class="govuk-main-wrapper" id="content" role="main">
             <div class="govuk-grid-row flex">
                 <div class="govuk-grid-column-three-quarters">
-
+                    <form method="post" action="/FEWDirecttoComplete">
 
 
 <div class="govuk-panel govuk-panel--confirmation secondary">
@@ -94,11 +95,12 @@ GOV.UK Prototype Kit
     </div>
 </details>
 
-<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-    Confirm staff data collection is complete
-  </button>
 
-<p><a href="/submission-options">Submit another data return</a></p>
+  <button class="govuk-button govuk-button--secondary" type="submit" id="submit">
+    Confirm staff data collection is complete
+</button>
+
+<p><a href="/FEWHomeOpen">Submit another data return</a></p>
 
                 </div>
                     <div class="govuk-grid-column-one-quarter">
