@@ -12,7 +12,7 @@ GOV.UK Prototype Kit
         <div class="govuk-grid-row flex">
 
           <div class="govuk-grid-column-full">
-    <form method="post" action="FEWCompleteStaffCollection">
+    <form method="post" action="FEWCompleteVacancyCollection">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
 
@@ -30,10 +30,10 @@ GOV.UK Prototype Kit
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                    <h1 class="govuk-fieldset__heading">Complete the staff data collection</h1>
+                    <h1 class="govuk-fieldset__heading">Complete the vacancy and recruitment data collection</h1>
                   </legend>
                   <div class="govuk-hint">
-                    Complete the staff part of the collection.
+                    Complete the vacancy and recruitment part of the collection.
                 </div>
 
                 <details class="govuk-details" data-module="govuk-details">
@@ -51,9 +51,9 @@ GOV.UK Prototype Kit
 
                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="CompleteCollection" name="CompleteStaffCollection" type="checkbox" value="Complete" data-aria-controls="conditional-SeniorLeader">
+                      <input class="govuk-checkboxes__input" id="CompleteVacancyCollection" name="CompleteVacancyCollection" type="checkbox" value="Complete" data-aria-controls="conditional-SeniorLeader">
                       <label class="govuk-label govuk-checkboxes__label" for="SeniorLeader">
-                        I confirm the staff data is complete.
+                        I confirm the vacancy and recruitment data is complete.
                       </label>
 
                     </div>
@@ -68,7 +68,7 @@ GOV.UK Prototype Kit
         <br>
         <div class="govuk-button-group">
           <button class="govuk-button"  type="submit">Continue</button>
-          <button class="govuk-button govuk-button--secondary" type="submit" formaction="/FEWStaffSummaryOpen">
+          <button class="govuk-button govuk-button--secondary" type="submit" formaction="/FEWCheckYourAnswers">
             Cancel
           </button>
         </div>

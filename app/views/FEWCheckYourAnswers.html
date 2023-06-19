@@ -13,12 +13,62 @@ GOV.UK Prototype Kit
                 <div class="govuk-grid-column-two-thirds">
                     
 
-                    
-
-
-<script src="/assets/javascripts/clear-accordion.js?v=m5vy6ODh2n7OcCCamUALRGfRGVKWXzUACxMkJu5bY9o" type="text/javascript"></script>
-
 <span class="govuk-caption-l">Academic year: 1 August 2022 to 31 July 2023</span>
+
+{% if ("Complete" == data["CompleteVacancyCollection"]) %}
+
+<h2 class="govuk-heading">Vacancy and recruitment data completion details</h2>
+
+<table class="govuk-table">
+    <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Completed by</th>
+        <th scope="col" class="govuk-table__header">Time and date</th>
+        <th scope="col" class="govuk-table__header"></th>
+    </tr>
+    </thead>
+
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">Robert Smith</td>
+<td class="govuk-table__cell">19 October 2023 at 11:21 am</td>
+<td class="govuk-table__cell">
+</td>
+</tr>
+ </tbody>
+</table>
+{% endif%}
+
+{% if ("Complete" != data["CompleteVacancyCollection"]) %}
+
+<h2 class="govuk-heading">Vacancy and recruitment data completion details</h2>
+
+<table class="govuk-table">
+    <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Completed by</th>
+        <th scope="col" class="govuk-table__header">Time and date</th>
+        <th scope="col" class="govuk-table__header"></th>
+    </tr>
+    </thead>
+
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">Not complete</td>
+<td class="govuk-table__cell">Not complete</td>
+<td class="govuk-table__cell">
+     <a class="govuk-link" aria-labelledby="changestaffmember" href="/FEWCompleteVacancyCollection">Complete collection</a>
+</td>
+</tr>
+ </tbody>
+
+</table>
+
+{% endif%}
+
+
+
+
 
 <h1 class="govuk-heading-l">Check your answers</h1>
 <p>Summary of details recorded for vacancy and recruitment data</p>

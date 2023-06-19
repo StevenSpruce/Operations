@@ -1,0 +1,73 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Vacancy and recruitment data complete
+          </h1>
+        </div>
+
+        <h2 class="govuk-heading-m">Completion details</h2>
+        <dl class="govuk-summary-list dl-override">
+           
+            <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key dt-override">
+                Completed by
+            </dt>
+            <dd class="govuk-summary-list__value dd-override">
+                Shared FE Workforce User
+            </dd>
+            </div>
+        
+            <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key dt-override">
+                Time and date
+            </dt>
+            <dd class="govuk-summary-list__value dd-override">
+                10:19am on Friday 10 June 2022
+            </dd>
+          </div>
+        </dl>
+
+
+<h2 class="govuk-heading-m">Notifications about this confirmation</h2>
+
+<p class="govuk-body">
+    </p><ul class="govuk-list govuk-list--number">
+        <li>An email has been sent to dcttestemail@gmail.com</li>
+        <li>Check your email for staff data completion confirmation</li>
+    </ul>
+<p></p>
+
+<details class="govuk-details">
+    <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+            Wrong email address or email not arrived
+        </span>
+    </summary>
+    <div class="govuk-details__text">
+        <p>If your email address is wrong, you'll need to <a href="https://services.signin.education.gov.uk/">update it in your DfE Sign-in account</a>.</p>
+        <p>If you haven't received an email, it may be in your junkmail folder.</p>
+    </div>
+</details>
+
+<button class="govuk-button" type="submit" formaction="/FEWSelectCollectionType">Finish</button><br>
+
+
+</div>
+</div>
+</main>
+
+
+
+{% endblock %}

@@ -17,50 +17,52 @@ GOV.UK Prototype Kit
 {% if ("Complete" == data["CompleteStaffCollection"]) %}
 
 <h2 class="govuk-heading">Staff data completion details</h2>
-<dl class="govuk-summary-list dl-override">
-               
-    <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key dt-override">
-        Completed by
-    </dt>
-    <dd class="govuk-summary-list__value dd-override">
-        Shared FE Workforce User
-    </dd>
-    </div>
 
-    <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key dt-override">
-        Time and date
-    </dt>
-    <dd class="govuk-summary-list__value dd-override">
-        10:19am on Friday 10 June 2022
-    </dd>
-  </div>
-</dl>
+<table class="govuk-table">
+    <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Completed by</th>
+        <th scope="col" class="govuk-table__header">Time and date</th>
+        <th scope="col" class="govuk-table__header"></th>
+    </tr>
+    </thead>
+
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">Robert Smith</td>
+<td class="govuk-table__cell">19 October 2023 at 11:21 am</td>
+<td class="govuk-table__cell">
+</td>
+</tr>
+ </tbody>
+</table>
 {% endif%}
 
 {% if ("Complete" != data["CompleteStaffCollection"]) %}
 
 <h2 class="govuk-heading">Staff data completion details</h2>
-<dl class="govuk-summary-list dl-override">
-               
-    <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key dt-override">
-        Completed by
-    </dt>
-    <dd class="govuk-summary-list__value dd-override"><a class="govuk-link" href="/FEWCompleteStaffCollection">Staff collection not confirmed as complete - confirm staff collection is complete</a>
-    </dd>
-    </div>
 
-    <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key dt-override">
-        Time and date
-    </dt>
-    <dd class="govuk-summary-list__value dd-override">
-        Staff collection not confirmed as complete
-    </dd>
-  </div>
-</dl>
+<table class="govuk-table">
+    <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Completed by</th>
+        <th scope="col" class="govuk-table__header">Time and date</th>
+        <th scope="col" class="govuk-table__header"></th>
+    </tr>
+    </thead>
+
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">Not complete</td>
+<td class="govuk-table__cell">Not complete</td>
+<td class="govuk-table__cell">
+     <a class="govuk-link" aria-labelledby="changestaffmember" href="/FEWCompleteStaffCollection">Complete collection</a>
+</td>
+</tr>
+ </tbody>
+
+</table>
+
 {% endif%}
 
 <h2 class="govuk-heading">Staff members</h2>
