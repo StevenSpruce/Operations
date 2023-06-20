@@ -57,6 +57,9 @@ GOV.UK Prototype Kit
                 <label class="govuk-label" for="firstName">
                     First name
                 </label>
+                <div class="govuk-hint">
+                    <mark>The first name or forename of the staff member, which might not be the staff member’s legal name but the name used within the organisation.</mark>
+                </div>
                 
                 <input class="govuk-input govuk-!-width-two-thirds" id="firstName" maxlength="100" type="text" aria-describedby="firstNameError" name="StaffMember.FirstName" value="{{ data['StaffMember.FirstName'] }}">
             </div>
@@ -65,6 +68,9 @@ GOV.UK Prototype Kit
                 <label class="govuk-label" for="lastName">
                     Last name
                 </label>
+                <div class="govuk-hint">
+                    <mark>The surname of the staff member, which might not be the staff member’s legal name but the name used within the organisation.</mark>
+                </div>
                 
                 <input class="govuk-input govuk-!-width-two-thirds" id="lastName" maxlength="100" type="text" aria-describedby="lastNameError" name="StaffMember.LastName" value="{{ data['StaffMember.LastName'] }}">
             </div>
@@ -79,9 +85,13 @@ GOV.UK Prototype Kit
                 </h2>
             </legend>
             <div id="dob-hint" class="govuk-hint">
-                For example, 31 3 1980
+                For example, 31 3 1980.
             </div>
-            
+            <div id="dob-hint" class="govuk-hint">
+               <mark>Staff members must be at least 16 years old and the upper age limit is 100.</mark>
+            </div>
+         
+           
             <div class="govuk-date-input" id="dob">
                 <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
@@ -124,6 +134,9 @@ GOV.UK Prototype Kit
                         Gender
                     </h3>
                 </legend>
+                <div id="gender-hint" class="govuk-hint">
+                    <mark>The declared gender of the staff member.</mark>
+                 </div>
             <div class="govuk-radios">
                         <div class="govuk-radios__item">
                             <input id="LookupItemId21" name="StaffMember.GenderId" value="Female" class="govuk-radios__input" type="radio">
@@ -161,6 +174,11 @@ GOV.UK Prototype Kit
             <h2 class="govuk-fieldset__heading">
 Ethnicity                    </h2>
         </legend>
+        <div id="ethnicity-hint" class="govuk-hint">
+            <mark>The ethnic origin of the staff member.</mark>
+         </div>
+
+        
 
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                     <h3 class="govuk-fieldset__heading">
@@ -345,6 +363,11 @@ Ethnicity                    </h2>
                         Does the member of staff consider themselves to have a disability?
                     </h3>
                 </legend>
+
+                <div class="govuk-hint">
+                    <mark>Indicates whether the staff member has reported themselves as having a disability.</mark>
+                 </div>
+
             <div class="govuk-radios">
                         <div class="govuk-radios__item">
                             <input id="LookupItemId25" name="StaffMember.DisabilityId" value="Yes" class="govuk-radios__input" type="radio">

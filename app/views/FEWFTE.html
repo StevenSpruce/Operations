@@ -5,7 +5,7 @@ GOV.UK Prototype Kit
 {% endblock %}
 {% block content %}
 
-    <a href="/FEWWeeklyHours" class="govuk-back-link">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 
         <main class="govuk-main-wrapper" id="content" role="main">
@@ -19,7 +19,10 @@ GOV.UK Prototype Kit
         <h1 class="govuk-heading">Calculated full time equivalent (FTE)</h1>
 
         <p class="govuk-body">
-            The proportion of an FTE year for a member of staff for the reporting period calculated for all contracts.
+            <strike>The proportion of an FTE year for a member of staff for the reporting period calculated for all contracts.</strike>
+        </p>
+        <p class="govuk-body">
+            <mark>Record the proportion of an FTE year for the staff member for the reporting period, calculated for all contracts.</mark>
         </p>
 
         <form method="post" id="fte-form" action="/few/contracts/check-calculated-full-time-equivalent-fte">

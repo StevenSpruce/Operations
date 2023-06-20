@@ -15,61 +15,6 @@ GOV.UK Prototype Kit
 
 <span class="govuk-caption-l">Academic year: 1 August 2022 to 31 July 2023</span>
 
-{% if ("Complete" == data["CompleteVacancyCollection"]) %}
-
-<h2 class="govuk-heading">Vacancy and recruitment data completion details</h2>
-
-<table class="govuk-table">
-    <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Completed by</th>
-        <th scope="col" class="govuk-table__header">Time and date</th>
-        <th scope="col" class="govuk-table__header"></th>
-    </tr>
-    </thead>
-
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">Robert Smith</td>
-<td class="govuk-table__cell">19 October 2023 at 11:21 am</td>
-<td class="govuk-table__cell">
-</td>
-</tr>
- </tbody>
-</table>
-{% endif%}
-
-{% if ("Complete" != data["CompleteVacancyCollection"]) %}
-
-<h2 class="govuk-heading">Vacancy and recruitment data completion details</h2>
-
-<table class="govuk-table">
-    <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Completed by</th>
-        <th scope="col" class="govuk-table__header">Time and date</th>
-        <th scope="col" class="govuk-table__header"></th>
-    </tr>
-    </thead>
-
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">Not complete</td>
-<td class="govuk-table__cell">Not complete</td>
-<td class="govuk-table__cell">
-     <a class="govuk-link" aria-labelledby="changestaffmember" href="/FEWCompleteVacancyCollection">Complete collection</a>
-</td>
-</tr>
- </tbody>
-
-</table>
-
-{% endif%}
-
-
-
-
-
 <h1 class="govuk-heading-l">Check your answers</h1>
 <p>Summary of details recorded for vacancy and recruitment data</p>
 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default"><div class="govuk-accordion__controls"><button type="button" class="govuk-accordion__open-all" aria-expanded="false">Open all<span class="govuk-visually-hidden"> sections</span></button></div>
@@ -199,8 +144,11 @@ GOV.UK Prototype Kit
             </div>
         </div>
 </div>
-<a class="govuk-button show-continue" href="/FEWSelectCollectionType">
-    Finish
+
+<p>Complete the collection to indicate you have finished your data entry for the staff and recruitment collection.</p>
+
+<a class="govuk-button show-continue" href="/FEWCompleteVacancyCollection">
+    Complete collection
 </a>
 <a href="/few/organisation/check-senior-leader-and-management-vacancies">
     <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
