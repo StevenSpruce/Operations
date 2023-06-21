@@ -467,6 +467,10 @@ router.post('/FEWHighest', function (req, res) {
  if (Highest == "NoneTTQ"){
     // Send user to ineligible page
     res.redirect('/FEWTeachingQualStudying')
+
+  } else if (Highest == "None"){
+    // Send user to ineligible page
+    res.redirect('/FEWTeachingStatus')
     
   } else {
     // Send user to ineligible page
