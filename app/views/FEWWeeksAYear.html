@@ -24,10 +24,11 @@ GOV.UK Prototype Kit
             <mark>Record the number of weeks per year the staff member is contracted to work, including any paid holiday</mark>. 
         </p>
 
-        <form method="post" id="weekly-hours-form" action="/few/contracts/check-weekly-contracted-hours">
+        <form method="post" id="weekly-hours-form" action="/WeeksYearError">
             <div class="govuk-form-group">
                 <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1450">
                 <fieldset class="govuk-fieldset">
+ 
                     <div class="govuk-form-group" id="weekly-Group">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                             <h2 class="govuk-fieldset__heading">
@@ -48,9 +49,8 @@ GOV.UK Prototype Kit
             </div>
 
             <br>
-            <button class="govuk-button" type="submit" formaction="/FEWFTE">Save and continue</button>
+            <button class="govuk-button" type="submit" id="submit">Save and continue</button>
 
-        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KWiH8TsmjJxmDRf2SjFdpKH1Hmn_4GNNII9GNYOXCsCnCjopZRC9HXYy9Dx2xBbt08JOJk47H6Ueao40Eqpj-DXm3yCFROrFqJ3xJTg52EFn0ileDs-boahbp8k47-XRkxoyuFLEn16g2VBpoA5xTAs2iDxPheANpXI6Sm2vTLnaA"></form>
     </div>
 </div>
 

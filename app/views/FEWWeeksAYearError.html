@@ -1,0 +1,77 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+
+                <div class="govuk-error-summary" data-module="govuk-error-summary">
+                    <div role="alert">
+                      <h2 class="govuk-error-summary__title">
+                        There is a problem
+                      </h2>
+                      <div class="govuk-error-summary__body">
+                        <ul class="govuk-list govuk-error-summary__list">
+                          <li>
+                            <a href="#">Weeks a year contracted to work must be between 0 and 53</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading">Weeks a year contracted to work</h1>
+
+        <form method="post" id="weekly-hours-form" action="/WeeksYearError">
+
+        <p class="govuk-body">
+            Record the number of weeks per year the staff member is contracted to work, including any paid holiday</mark>. 
+        </p>
+
+
+        <div class="govuk-form-group govuk-form-group--error">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h2 class="govuk-fieldset__heading">
+                    What are their weeks per year?
+                </h2>
+              </legend>
+              <div id="weekly-hours-hint" class="govuk-hint">
+                Where a staff member is contracted to work for less than 52 weeks in a year but payments are spread equally over the year, it is the number of weeks contracted to work that should be entered.  For example, if someone is on a term-time only contract for 37 weeks per year but receives their pay in twelve monthly instalments, it is 37 weeks that should be entered, not 52.
+            </div>
+              <p id="passport-issued-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span>Weeks a year contracted to work must be between 0 and 53
+              </p>
+              <div class="govuk-input__wrapper">
+                <input class="govuk-input govuk-input--width-5" id="weeksayear" type="text" inputmode="numeric" maxlength="5" name="weeksayear" value="">
+                <div class="govuk-input__suffix" aria-hidden="true">weeks per year</div>
+            </div>
+            </fieldset>
+          </div>
+
+            <br>
+            <button class="govuk-button" type="submit" id="submit">Save and continue</button>
+
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KWiH8TsmjJxmDRf2SjFdpKH1Hmn_4GNNII9GNYOXCsCnCjopZRC9HXYy9Dx2xBbt08JOJk47H6Ueao40Eqpj-DXm3yCFROrFqJ3xJTg52EFn0ileDs-boahbp8k47-XRkxoyuFLEn16g2VBpoA5xTAs2iDxPheANpXI6Sm2vTLnaA"></form>
+    </div>
+</div>
+
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+
+{% endblock %}

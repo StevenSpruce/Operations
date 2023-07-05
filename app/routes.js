@@ -498,3 +498,21 @@ router.post('/FEWCompleteVacancyCollection', function (req, res) {
 })
 
 
+router.post('/WeeksYearError', function (req, res) {
+
+  var weeksayear = req.session.data['weeksayear']
+
+  // Check whether the variable matches a condition
+ if (weeksayear >0 & weeksayear <54){
+    // Send user to ineligible page
+    res.redirect('/FEWFTE')
+    
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWWeeksAYearError')
+    
+  }
+})
+
+
+
