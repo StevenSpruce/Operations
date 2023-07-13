@@ -1,0 +1,126 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+
+
+
+    
+
+    <div class="govuk-width-container">
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <!--<div class="govuk-grid-column-fullgovuk-grid-column-two-thirds"> -->
+                <div class="govuk-grid-column-full">
+
+<form method="post" enctype="multipart/form-data" id="ilrform" action="/MCA-GLA-FA/submission/MCA-GLA-FundedAims">
+   
+        <h1 class="govuk-heading-xl">
+            Choose LDCS file to upload
+        </h1>
+        <p>Before uploading your file you should make sure that:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>it’s in CSV format</li>
+            <li>the data it contains is as complete as possible</li>
+            <li>the data it contains is as accurate as possible</li>
+        </ul>
+        <div class="govuk-form-group" id="controls">
+            <label class="govuk-label govuk-!-font-weight-bold" for="file">
+                Select a file to upload
+            </label>
+            
+            <input class="govuk-file-upload" name="file" id="file" type="file" accept=".csv">
+
+        </div>
+        <p>
+            <a class="govuk-button" href="/LDCSSubmitted">Upload file</a>
+        </p>
+        
+
+
+
+
+        <h2 class="govuk-heading-m">Return period Monday 15th August 2023 to Friday 29 October 2024</h2>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header govuk-width-15">Date</th>
+                    <th scope="col" class="govuk-table__header">Submitted by</th>
+                    <th scope="col" class="govuk-table__header">File</th>
+                    <th scope="col" class="govuk-table__header">Reference</th>
+                    <th scope="col" class="govuk-table__header govuk-width-17">Status</th>
+                    <th scope="col" class="govuk-table__header">Reports </th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">23 August 2023 at 12:12pm</th>
+                        <td class="govuk-table__cell">Fred Bloggs</td>
+                        <td class="govuk-table__cell"><a class="govuk-link" href="/MCA-GLA-FA/submission/DownloadFile?filename=90000440-FundedAims-192014-202108190824.csv&amp;collectionname=MCA-GLA-FundedAims">12345678-LDCS-2324-202108190824.csv</a></td>
+                        <td class="govuk-table__cell">1925074</td>
+                        <td class="govuk-table__cell govuk-!-font-weight-bold">
+                            <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Completed</p>
+                        </td>
+                        <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/MCA-GLA-FA/submission/DownloadReports?reportfilename=90000440-FundedAimsReports-192014-202108190824.zip&amp;ukprn=90000440&amp;collectionname=MCA-GLA-FundedAims&amp;jobId=1925074">
+                                    Download reports <span class="govuk-visually-hidden"> Monday, August 23, 2021</span>
+                                </a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">23 August 2023 at 12:11pm</th>
+                        <td class="govuk-table__cell">Fred Bloggs</td>
+                        <td class="govuk-table__cell"><a class="govuk-link" href="/MCA-GLA-FA/submission/DownloadFile?filename=90000440-FundedAims-192014-202108190823.csv&amp;collectionname=MCA-GLA-FundedAims">12345678-LDCS-2324-202308190823.csv</a></td>
+                        <td class="govuk-table__cell">1925073</td>
+                        <td class="govuk-table__cell govuk-!-font-weight-bold">
+                            <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Completed</p>
+                        </td>
+                        <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/MCA-GLA-FA/submission/DownloadReports?reportfilename=90000440-FundedAimsReports-192014-202108190823.zip&amp;ukprn=90000440&amp;collectionname=MCA-GLA-FundedAims&amp;jobId=1925073">
+                                    Download reports <span class="govuk-visually-hidden"> Monday, August 23, 2021</span>
+                                </a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">23 August 2023 at 12:11pm</th>
+                        <td class="govuk-table__cell">Fred Bloggs</td>
+                        <td class="govuk-table__cell"><a class="govuk-link" href="/MCA-GLA-FA/submission/DownloadFile?filename=90000440-FundedAims-192014-202108190822.csv&amp;collectionname=MCA-GLA-FundedAims">12345678-LDCS-2324-202308190822.csv</a></td>
+                        <td class="govuk-table__cell">1925072</td>
+                        <td class="govuk-table__cell govuk-!-font-weight-bold">
+                            <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Completed</p>
+                        </td>
+                        <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/MCA-GLA-FA/submission/DownloadReports?reportfilename=90000440-FundedAimsReports-192014-202108190822.zip&amp;ukprn=90000440&amp;collectionname=MCA-GLA-FundedAims&amp;jobId=1925072">
+                                    Download reports <span class="govuk-visually-hidden"> Monday, August 23, 2021</span>
+                                </a>
+                        </td>
+                    </tr>
+
+
+
+            </tbody>
+        </table>
+
+
+
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+
+</body>
+
+
+{% endblock %}

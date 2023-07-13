@@ -4,14 +4,9 @@
 GOV.UK Prototype Kit
 {% endblock %}
 
-
 {% block content %}
-
-<body class="govuk-template__body  js-enabled">
-
-   
-    
-   
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+    <div class="govuk-width-container">
 
 
         <main class="govuk-main-wrapper" id="content" role="main">
@@ -20,22 +15,48 @@ GOV.UK Prototype Kit
                 <div class="govuk-grid-column-three-quarters">
 
 
-<h1 id="makeSubmission" class="govuk-heading-l">
-    Make a submission
-</h1>
-
-<a class="govuk-link" href="/FEWCollectionOverview"> <img src="/public/images/FEWOpen.PNG" width="180" height="120"></a> <a class="govuk-link" href="/FEWGStart"> <img src="/public/images/FEWG.PNG" width="180" height="120"></a> <a class="govuk-link" href="/LDCSUpload"> <img src="/public/images/LDCS.png" width="180" height="115"></a> 
-
-
-
-    <h1 class="govuk-heading-l">Reports and data</h1>
-
-    <a class="govuk-link" href="/FEWSubmissionHistory"> <img src="/public/images/FEWClosed.PNG" width="180" height="120"></a> <a class="govuk-link" href="/FEWGovernorSubmissions"> <img src="/public/images/FEWGClosed.PNG" width="180" height="120"></a>
-
-
-    
+<div class="govuk-panel govuk-panel--confirmation"> 
+    <h2 class="govuk-panel__title">
+        LDCS file submitted
+    </h2>
+    <div class="govuk-panel__body">
+        Reference: 1995867
     </div>
+</div>
 
+<p>File: <span class="govuk-!-font-weight-bold">12345678-LDCS-2324-202308190825.CSV</span></p>
+<p>Submitted by: <span class="govuk-!-font-weight-bold">Fred Bloggs</span></p>
+<p>At: <span class="govuk-!-font-weight-bold">3:12pm on Thursday 13 July 2023</span></p>
+
+
+<h2 class="govuk-heading-m">What happens next?</h2>
+<p>We’ve sent an email to FredBloggs@gmail.com to confirm we’ve received your file.</p>
+
+<details class="govuk-details">
+    <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+            Wrong email address or email not arrived
+        </span>
+    </summary>
+    <div class="govuk-details__text">
+            <p>If your email address is wrong, you will need to <a href="https://test-services.signin.education.gov.uk/">update it in your DfE Sign-in account</a>.</p>
+        <p>
+            If you haven't received an email, it may be in your junkmail folder.
+        </p>
+    </div>
+</details>
+
+<p>
+    <a class="govuk-button" href="/LDCSUpload">View submissions</a>
+</p>
+<p><a href="/FEWHomeOpen">Submit another data return</a></p>
+
+
+
+
+    <script src="/assets/minified/app.min.js?v=ZtVrfTFn24M2aHg4_7R0E2SGwegJZT0kSPbzHnMt-Jo"></script>
+
+                </div>
                     <div class="govuk-grid-column-one-quarter">
                         <aside class="app-related-items" role="complementary">
                             <h2 class="govuk-heading-m" id="subsection-title-help">
@@ -72,47 +93,16 @@ GOV.UK Prototype Kit
 
                             
 
-<h2 class="govuk-heading-m" id="subsection-title-tools-and-services">
-    Tools and services
-</h2>
-<nav role="navigation" aria-labelledby="subsection-title-tools-and-services">
-    <ul class="govuk-list govuk-!-font-size-16">
-        <li>
-            <a href="/publicdownloads/Desktop">FIS (Funding Information Service)</a>
-
-        </li>
-        <li>
-            
-<a href="https://tst.submit-learner-data.service.gov.uk/find-a-learning-aim/" target="_blank">
-    Find a Learning Aim
-</a>
-
-        </li>
-        <li>
-            <a href="/publicdownloads/LearnerEntry">ILR Learner entry tool</a>
-        </li>
-        <li>
-            <a href="/publicdownloads/FileMerge">ILR FileMerge</a>
-        </li>
-        
-
-        <li few-download-link-switch="">
-            <a href="/publicdownloads/FEWorkforceStaffentrytool">FE staff data desktop application</a>
-        </li>
-
-        
-    </ul>
-</nav>
-
                         </aside>
                     </div>
             </div>
         </main>
     </div>
 
+ 
+
 
 </body>
-
 
 
 {% endblock %}
