@@ -514,5 +514,47 @@ router.post('/WeeksYearError', function (req, res) {
   }
 })
 
+router.post('/FEWSeniorLeaderManagementVacancies', function (req, res) {
+
+  var Leaders = req.session.data['howManySeniorLeaderOrManagerVacanciesDidYouHave']
+
+  console.log(Leaders)
+
+
+  // Check whether the variable matches a condition
+ if (Leaders ==""){
+    // Send user to ineligible page
+    
+       res.redirect('/FEWSeniorLeaderManagementVacanciesError')
+    
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWTeachingVacancies')
+    
+  }
+})
+
+
+
+
+router.post('/FEWVacancyStart', function (req, res) {
+
+  var Leaders = req.session.data['howManySeniorLeaderOrManagerVacanciesDidYouHave']
+
+  console.log(Leaders)
+
+
+  // Check whether the variable matches a condition
+ if (Leaders ==""){
+    // Send user to ineligible page
+    
+       res.redirect('/FEWSeniorLeaderManagementVacancies')
+    
+  } else {
+    // Send user to ineligible page
+    res.redirect('/FEWCheckYourAnswers')
+    
+  }
+})
 
 
