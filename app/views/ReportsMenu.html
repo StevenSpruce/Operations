@@ -1,0 +1,188 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<body class="govuk-template__body  js-enabled">
+
+
+
+
+            <a href="/submission-options" class="govuk-back-link">Back to Homepage</a>
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+
+
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-full">
+                    <div class="govuk-grid-row flex">
+
+                        <div id="left-nav-wrapper" class="govuk-grid-column-one-quarter flex-grow-1">
+                            <div class="sticky-top">
+                                
+<ul class="govuk-list left-navigation-2">
+    <li asp-authorize="">
+        <a class="govuk-link active govuk-!-font-weight-bold" href="/reports">Latest submissions</a>
+    </li>
+    <li asp-authorize="">
+        <a class="govuk-link" href="/reports/history">Submission history</a>
+    </li>
+    
+    <li asp-authorize="">
+        <a class="govuk-link" href="/reports/frm">FRM reports</a>
+    </li>
+    
+        <li asp-authorize="">
+            <a class="govuk-link" href="/reports/summaryreports">FM36 summary</a>
+        </li>
+    
+    
+    <li reports-archive-switch="" asp-authorize="">
+        <a class="govuk-link" href="/reports-archive">Reports archive</a>
+    </li>
+
+    <li reports-archive-switch="" asp-authorize="">
+        <a class="govuk-link" href="/powerbidashboards">Dashboards</a>
+    </li>
+    
+    
+
+</ul>
+
+                                <a class="govuk-!-font-size-16 back-to-top hidden" href="#">
+                                    <svg focusable="false" class="app-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+                                        <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+                                    </svg>Back to top
+                                </a>
+                            </div>
+                        </div>
+                        <div class="govuk-grid-column-three-quarters flex-grow-1">
+                            <div class="govuk-form-group">
+                                
+
+
+<h1 class="govuk-heading-l" id="submission">
+    Latest submissions
+</h1>
+    <p>
+        View your submissions from the last 90 days and see your updated reports. After 90 days you can find your reports for each collection period in 'submission history'.
+    </p>
+  
+
+<p>Download the reports of your most recent submission to see your latest figures</p>
+
+
+<form method="post" id="filter-form" action="/reports/FilterSubmissions">
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+            <p id="filterHeading" class="govuk-!-font-weight-bold">
+                Filter your submission types
+            </p>
+            <span id="waste-hint" class="govuk-hint">
+                Choosing a filter will result in the page refreshing automatically
+            </span>
+            <div id="typeFilter" class="govuk-checkboxes govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+
+                        <input id="ILR" class="govuk-checkboxes__input" name="jobTypeFilter" type="checkbox" value="ILR">
+
+                        <label class="govuk-label govuk-checkboxes__label" for="ILR">
+                            ILR
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+
+                        <input id="EAS" class="govuk-checkboxes__input" name="jobTypeFilter" type="checkbox" value="EAS">
+
+                        <label class="govuk-label govuk-checkboxes__label" for="EAS">
+                            EAS
+                        </label>
+                    </div>
+            </div>
+        </fieldset>
+        <br>
+    </div>
+    <noscript>
+        <button class="govuk-button" id="submissionFilterButton">
+            Filter
+        </button>
+    </noscript>
+    <button hidden="" id="submissionFilterButtonHidden"></button>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8P8_mNUJs2FKrodv3tBn9id0_BQg1PtgbQzrU69iuZp0IUTAIYYXeKfdRap5NeTQXeAxrQWBUNlIyCprVWR2sIyjPaKkjSUMa6enJZXrP_AIujBlfQGTwYU-tYLgcB-Wwsfg0I8oPB0c8cyMUtUG5eqrDhe4a4a3aZ6HcIEiNOezLGr5vAjQyD3YwbuvUvM9cw"></form>
+
+
+    <h2 class="govuk-heading-l">Academic Collection Year 2023 to 2024</h2>
+            <h3 class="govuk-heading-m">
+                R01
+
+            </h3>
+            <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-visually-hidden">Table R01</caption>
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col">Date</th>
+                        <th class="govuk-table__header" scope="col">Type</th>
+                        <th class="govuk-table__header" scope="col">File</th>
+                        <th class="govuk-table__header" scope="col">Submitted by</th>
+                        <th class="govuk-table__header" scope="col">Reference</th>
+                        <th class="govuk-table__header" scope="col">Reports</th>
+
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__header" scope="row">27 July 2023 at 4:09pm</td>
+                            <td class="govuk-table__cell" scope="row">ILR</td>
+                            <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/reports/DownloadFile/10000055/1996986">ILR-10000055-2324-20230726-135000-04.XML</a>
+                            </td>
+                            <td class="govuk-table__cell" scope="row">SharedTestUser FundingClaim</td>
+                            <td class="govuk-table__cell" scope="row">1996986</td>
+
+                            <td class="govuk-table__cell">
+                                    <a class="govuk-link" href="/reports/DownloadLatestReport/10000055/1/2324/1996986">
+                                        Download reports
+                                        <span class="govuk-visually-hidden">
+                                            27 July 2023 at 4:09pm
+                                        </span>
+                                    </a>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__header" scope="row">27 July 2023 at 2:41pm</td>
+                            <td class="govuk-table__cell" scope="row">ILR</td>
+                            <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/reports/DownloadFile/10000055/1996979">ILR-10000055-2324-20230726-135000-03.XML</a>
+                            </td>
+                            <td class="govuk-table__cell" scope="row">SharedTestUser FundingClaim</td>
+                            <td class="govuk-table__cell" scope="row">1996979</td>
+
+                            <td class="govuk-table__cell">
+                                    <a class="govuk-link" href="/reports/DownloadLatestReport/10000055/1/2324/1996979">
+                                        Download reports
+                                        <span class="govuk-visually-hidden">
+                                            27 July 2023 at 2:41pm
+                                        </span>
+                                    </a>
+                            </td>
+                        </tr>
+            </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+
+{% endblock %}
