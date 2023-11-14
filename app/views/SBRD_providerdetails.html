@@ -1,0 +1,36 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+    <main id="main-content" class="app-content" role="main">
+        <h1 class="govuk-heading-xl">
+          Supplier
+        </h1>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="event-name">
+              Which supplier will be delivering the Skills Bootcamp?
+            </label>
+          </h2>
+          <div id="event-name-hint" class="govuk-hint">
+            Enter the UKPRN
+          </div>
+          <label class="govuk-label govuk-date-input__label" for="assessment-price">
+            UKPRN
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+        </div>
+
+          <a class="govuk-button" href="SBRD_contractdetails.html">Continue</a>
+
+
+
+{% endblock %}
