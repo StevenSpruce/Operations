@@ -1,0 +1,106 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<nav class="app-navigation govuk-clearfix">
+    <ul class="app-navigation__list app-width-container">
+  
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_ContractList.html" data-topnav="Contracts">Contracts</a>
+      </li>
+
+      <li class="app-navigation__list-item app-navigation__list-item--current">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Upload.html" data-topnav="Import">Import</a>
+      </li>
+  
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Export.html" data-topnav="Export">Export</a>
+      </li>
+  
+    </ul>
+  </nav>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-l">Imported files</h1>
+        <a class="govuk-button" href="SBRD_ContractList.html">View contracts</a>
+
+
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header govuk-width-15">Date</th>
+                    <th scope="col" class="govuk-table__header">Imported by</th>
+                    <th scope="col" class="govuk-table__header">File</th>
+                    <th scope="col" class="govuk-table__header">Reference</th>
+                    <th scope="col" class="govuk-table__header govuk-width-17">Status</th>
+                    <th scope="col" class="govuk-table__header">Reports </th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">23 August 2023 at 12:12pm</th>
+                        <td class="govuk-table__cell">Fred Bloggs</td>
+                        <td class="govuk-table__cell"><a class="govuk-link" href="/MCA-GLA-FA/submission/DownloadFile?filename=90000440-FundedAims-192014-202108190824.csv&amp;collectionname=MCA-GLA-FundedAims">12345678-LDCS-2324-202108190824.csv</a></td>
+                        <td class="govuk-table__cell">1925074</td>
+                        <td class="govuk-table__cell govuk-!-font-weight-bold">
+                            <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Completed</p>
+                        </td>
+                        <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/MCA-GLA-FA/submission/DownloadReports?reportfilename=90000440-FundedAimsReports-192014-202108190824.zip&amp;ukprn=90000440&amp;collectionname=MCA-GLA-FundedAims&amp;jobId=1925074">
+                                    Download reports <span class="govuk-visually-hidden"> Monday, August 23, 2021</span>
+                                </a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">23 August 2023 at 12:11pm</th>
+                        <td class="govuk-table__cell">Fred Bloggs</td>
+                        <td class="govuk-table__cell"><a class="govuk-link" href="/MCA-GLA-FA/submission/DownloadFile?filename=90000440-FundedAims-192014-202108190823.csv&amp;collectionname=MCA-GLA-FundedAims">12345678-LDCS-2324-202308190823.csv</a></td>
+                        <td class="govuk-table__cell">1925073</td>
+                        <td class="govuk-table__cell govuk-!-font-weight-bold">
+                            <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Completed</p>
+                        </td>
+                        <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/MCA-GLA-FA/submission/DownloadReports?reportfilename=90000440-FundedAimsReports-192014-202108190823.zip&amp;ukprn=90000440&amp;collectionname=MCA-GLA-FundedAims&amp;jobId=1925073">
+                                    Download reports <span class="govuk-visually-hidden"> Monday, August 23, 2021</span>
+                                </a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">23 August 2023 at 12:11pm</th>
+                        <td class="govuk-table__cell">Fred Bloggs</td>
+                        <td class="govuk-table__cell"><a class="govuk-link" href="/MCA-GLA-FA/submission/DownloadFile?filename=90000440-FundedAims-192014-202108190822.csv&amp;collectionname=MCA-GLA-FundedAims">12345678-LDCS-2324-202308190822.csv</a></td>
+                        <td class="govuk-table__cell">1925072</td>
+                        <td class="govuk-table__cell govuk-!-font-weight-bold">
+                            <p class="green-font govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Completed</p>
+                        </td>
+                        <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/MCA-GLA-FA/submission/DownloadReports?reportfilename=90000440-FundedAimsReports-192014-202108190822.zip&amp;ukprn=90000440&amp;collectionname=MCA-GLA-FundedAims&amp;jobId=1925072">
+                                    Download reports <span class="govuk-visually-hidden"> Monday, August 23, 2021</span>
+                                </a>
+                        </td>
+                    </tr>
+
+
+
+            </tbody>
+        </table>
+
+
+
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+
+</body>
+
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<nav class="app-navigation govuk-clearfix">
+    <ul class="app-navigation__list app-width-container">
+  
+      <li class="app-navigation__list-item app-navigation__list-item--current">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_ContractList.html" data-topnav="Contracts">Contracts</a>
+      </li>
+
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Upload.html" data-topnav="Import">Import</a>
+      </li>
+  
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Export.html" data-topnav="Export">Export</a>
+      </li>
+  
+    </ul>
+  </nav>
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">Add a contract</h1>
+
+        <h2 class="govuk-heading-m">Overview</h2>
+
+        <p class="govuk-body">In order to add a contract you must have the following details:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>the Skills Bootcamp name</li>
+            <li>the supplier's UKPRN</li>
+            <li>the contract number in the correct format</li>
+            <li>the contract start date</li>
+            <li>the contract end date</li>
+            <li>if applicable, the last dates for starts, mid-point payments, completions and outcomes</li>
+            <li>the unit cost</li>
+            <li>if applicable, the percentages for starts, mid-point payments, completions and outcomes</li>
+            <li>the procurement wave</li>
+            <li>the calculation method</li>
+        </ul>
+
+
+        <a class="govuk-button" href="SBRD_bootcampdetails.html">Continue</a>
+
+
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+</body>
+
+
+{% endblock %}

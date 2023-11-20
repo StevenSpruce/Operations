@@ -1,0 +1,57 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<nav class="app-navigation govuk-clearfix">
+    <ul class="app-navigation__list app-width-container">
+  
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_ContractList.html" data-topnav="Contracts">Contracts</a>
+      </li>
+
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Upload.html" data-topnav="Import">Import</a>
+      </li>
+  
+      <li class="app-navigation__list-item app-navigation__list-item--current">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Export.html" data-topnav="Export">Export</a>
+      </li>
+  
+    </ul>
+  </nav>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+
+
+
+    
+
+    <div class="govuk-width-container">
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <!--<div class="govuk-grid-column-fullgovuk-grid-column-two-thirds"> -->
+                <div class="govuk-grid-column-full">
+
+<form method="post" enctype="multipart/form-data" id="ilrform" action="/MCA-GLA-FA/submission/MCA-GLA-FundedAims">
+   
+        <h1 class="govuk-heading-l">
+            Export a Skills Bootcamp reference data file
+        </h1>
+        <p>Export your Skills Bootcampe reference data as a CSV file.</p>
+
+         <p>
+            <a class="govuk-button" href="/SBRD">Export</a>
+        </p>
+        </main>
+
+
+
+</body>
+
+
+{% endblock %}

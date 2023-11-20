@@ -1,0 +1,78 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<nav class="app-navigation govuk-clearfix">
+    <ul class="app-navigation__list app-width-container">
+  
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_ContractList.html" data-topnav="Contracts">Contracts</a>
+      </li>
+
+      <li class="app-navigation__list-item app-navigation__list-item--current">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Upload.html" data-topnav="Import">Import</a>
+      </li>
+  
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Export.html" data-topnav="Export">Export</a>
+      </li>
+  
+    </ul>
+  </nav>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+
+
+
+    
+
+    <div class="govuk-width-container">
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <!--<div class="govuk-grid-column-fullgovuk-grid-column-two-thirds"> -->
+                <div class="govuk-grid-column-full">
+
+<form method="post" enctype="multipart/form-data" id="ilrform" action="/MCA-GLA-FA/submission/MCA-GLA-FundedAims">
+   
+        <h1 class="govuk-heading-xl">
+            Select and import a Skills Bootcamp reference data file
+        </h1>
+        <p>Before importing your file you should make sure that:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>it’s in CSV format</li>
+            <li>the data it contains is as complete as possible</li>
+            <li>the data it contains is as accurate as possible</li>
+        </ul>
+        <div class="govuk-form-group" id="controls">
+            <label class="govuk-label govuk-!-font-weight-bold" for="file">
+                Select a file to upload
+            </label>
+            
+            <input class="govuk-file-upload" name="file" id="file" type="file" accept=".csv">
+
+        </div>
+
+        <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              Importing this file will overwrite your current data
+            </strong>
+          </div>
+
+        <p>
+            <a class="govuk-button" href="/SBRD_Submitted">Import</a>
+        </p>
+        </main>
+
+
+
+</body>
+
+
+{% endblock %}

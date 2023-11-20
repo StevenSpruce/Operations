@@ -558,3 +558,19 @@ router.post('/FEWVacancyStart', function (req, res) {
 })
 
 
+
+router.post('/SBRDMethodSelection', function (req, res) {
+
+  // Make a variable and give it the value from 'FEWStaffMethodSelection'
+  var SelectedOptionSBRD = req.session.data['SelectedOptionSBRD']
+
+  // Check whether the variable matches a condition
+  if (SelectedOptionSBRD == "csv"){
+    // Send user to next page
+    res.redirect('/SBRD_Upload')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/SBRD_bootcampdetails')
+  }
+})
+
