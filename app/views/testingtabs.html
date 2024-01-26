@@ -1,54 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
 <div class="govuk-tabs" data-module="govuk-tabs">
     <h2 class="govuk-tabs__title">
-      Contents
+      Filters
     </h2>
     <ul class="govuk-tabs__list">
       <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
         <a class="govuk-tabs__tab" href="#past-day">
-          Past day
+          Staff Collection Started
         </a>
       </li>
       <li class="govuk-tabs__list-item">
         <a class="govuk-tabs__tab" href="#past-week">
-          Past week
+          Staff collection completed
         </a>
       </li>
       <li class="govuk-tabs__list-item">
         <a class="govuk-tabs__tab" href="#past-month">
-          Past month
+          Staff not submitted data
         </a>
       </li>
       <li class="govuk-tabs__list-item">
         <a class="govuk-tabs__tab" href="#past-year">
-          Past year
+          Modified in the last 24hrs
         </a>
       </li>
     </ul>
     <div class="govuk-tabs__panel" id="past-day">
-      <h2 class="govuk-heading-l">Past day</h2>
+      <h2 class="govuk-heading-l">Staff Collection Started</h2>
       <table class="govuk-table">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Case manager</th>
-            <th scope="col" class="govuk-table__header">Cases opened</th>
-            <th scope="col" class="govuk-table__header">Cases closed</th>
+            <th scope="col" class="govuk-table__header">Provider Name</th>
+            <th scope="col" class="govuk-table__header">UKPRN</th>
+            <th scope="col" class="govuk-table__header">Submitted Data Last Year?</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">David Francis</td>
-            <td class="govuk-table__cell">3</td>
-            <td class="govuk-table__cell">0</td>
+            <td class="govuk-table__cell">School of Rock</td>
+            <td class="govuk-table__cell">00012345</td>
+            <td class="govuk-table__cell">Y</td>
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Paul Farmer</td>
-            <td class="govuk-table__cell">1</td>
-            <td class="govuk-table__cell">0</td>
+            <td class="govuk-table__cell">School of Art</td>
+            <td class="govuk-table__cell">00012346</td>
+            <td class="govuk-table__cell">N</td>
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Rita Patel</td>
-            <td class="govuk-table__cell">2</td>
-            <td class="govuk-table__cell">0</td>
+            <td class="govuk-table__cell">Springfield High</td>
+            <td class="govuk-table__cell">00012343</td>
+            <td class="govuk-table__cell">Y</td>
           </tr>
         </tbody>
       </table>
@@ -141,3 +149,5 @@
       </table>
     </div>
   </div>
+
+  {% endblock %}
