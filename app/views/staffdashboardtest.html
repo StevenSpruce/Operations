@@ -45,20 +45,13 @@ cfg: { // Application Insights Configuration
 
 <body class="govuk-template__body js-enabled">
 
-    <!-- Google Tag Manager (noscript) -->
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRD8CKK"
-            class="iframe-hidden"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<div id="skiplink-container">
+    <div id="skiplink-container">
     <div>
         <a href="#content" class="govuk-skip-link">Skip to main content</a>
     </div>
-</div>
+    </div>
 
-<header role="banner" id="global-header" class="govuk-header">
+    <header role="banner" id="global-header" class="govuk-header">
 
     <div class="govuk-header__container govuk-width-container">
         <div class="govuk-header__logo">
@@ -82,219 +75,127 @@ cfg: { // Application Insights Configuration
         </div>
     </div>
 
-</header>
+    </header>
 
     <div class="govuk-width-container">
 
         <div class="govuk-phase-banner">
-    <p class="govuk-phase-banner__content">
-            <span class="govuk-body govuk-!-font-size-16 signed-in-user">
-                <span class="your-name" id="bannerUserName">
-                    Dominic Stone
+            <p class="govuk-phase-banner__content">
+                <span class="govuk-body govuk-!-font-size-16 signed-in-user">
+                    <span class="your-name" id="bannerUserName">
+                        Dominic Stone
+                    </span>
+                    <a class="account-link" href="/Account/SignOut">Sign out</a>
                 </span>
-                <a class="account-link" href="/Account/SignOut">Sign out</a>
-            </span>
-    </p>
-</div>
+            </p>
+        </div>
+    </div>
 
 
-        <main class="govuk-main-wrapper" id="content" role="main">
+    <main class="govuk-main-wrapper" id="content" role="main">  
+
+        <div class="main-nav nav-wrap auto-height">
+            <a class="govuk-heading-s" href="/">Home</a>
             
-            
-
-<div class="main-nav nav-wrap auto-height">
-    <a class="govuk-heading-s" href="/">Home</a>
-    
-    <a class="govuk-heading-s" href="/Dashboard">Dashboards</a>
-    
-    
-    
-    
-    
-    
-    
-
-</div>
+            <a class="govuk-heading-s" href="/Dashboard">Dashboards</a>
+        </div>
 
         <a class="govuk-back-link navigation-back" data-url="/">Back</a>
 
             
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                                            
 
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                        <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
+                            <span class="govuk-caption-m">Data Collections</span>FE Workforce
+                            <span class="govuk-caption-m">🕑<span class="govuk-body-s" id="lastTime">16:10:23</span></span>
+                        </h1>
+                        <h2 id="displayTitle">Return period  - 2022 to 2023</h2>
+                    </div>
+                </div>
+                <div class="govuk-grid-row blue-background">
+                    <div class="govuk-grid-column-one-third">
+                        <span class="govuk-caption-l">
+                            Open date
+                        </span>
+                        <h3 class="govuk-heading-l govuk-!-font-size-27" id="openDate">26th September 2023 at 08:00</h3></div>
+                    <div class="govuk-grid-column-one-third">
+                        <span class="govuk-caption-l">
+                            Close date
+                        </span>
+                        <h3 class="govuk-heading-l govuk-!-font-size-27" id="closeDate">9th February 2024 at 18:00</h3></div>
+                </div>
+                <div class="govuk-grid-row grey-background custom-donut-container">
+                <div class="custom-donut-inner-container">
+                <h2 class="govuk-heading-m centre-text custom-donut-title">
+                        <a href="/feworkforce/drillDown?option=StaffCollectionStarted">Staff collection started</a>
+                </h2>
+                <svg class="circle-chart custom-donut-body" viewBox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="circle-chart__background" stroke="#FFFFFF" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15"></circle>
+                    <circle id="staffCollectionStartedCircle" class="circle-chart__circle" stroke-width="3" stroke-dasharray="16.628504756220288,100" fill="none" cx="16.91549431" cy="16.91549431" r="15" style="stroke: rgb(255, 86, 0);"></circle>
+                    <g class="circle-chart__info">
+                        <text id="staffCollectionStartedDonut" class="circle-chart__percent counter" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" data-count="">283</text>
+                        <text id="staffCollectionStartedLabel" class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">out of 1604</text>
+                    </g>
+                </svg>
+            </div>
 
+                <div class="custom-donut-inner-container">
+                <h2 class="govuk-heading-m centre-text custom-donut-title">
+                        <a href="/feworkforce/drillDown?option=StaffCollectionCompleted">Staff collection completed</a>
+                </h2>
+                <svg class="circle-chart custom-donut-body" viewBox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="circle-chart__background" stroke="#FFFFFF" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15"></circle>
+                    <circle id="staffCollectionCompletedCircle" class="circle-chart__circle" stroke-width="3" stroke-dasharray="56.936470349036966,100" fill="none" cx="16.91549431" cy="16.91549431" r="15" style="stroke: rgb(255, 201, 0);"></circle>
+                    <g class="circle-chart__info">
+                        <text id="staffCollectionCompletedDonut" class="circle-chart__percent counter" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" data-count="">969</text>
+                        <text id="staffCollectionCompletedLabel" class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">out of 1604</text>
+                    </g>
+                </svg>
+            </div>
 
-                    
-
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-        <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
-            <span class="govuk-caption-m">Data Collections</span>FE Workforce
-            <span class="govuk-caption-m">🕑<span class="govuk-body-s" id="lastTime">16:10:23</span></span>
-        </h1>
-        <h2 id="displayTitle">Return period  - 2022 to 2023</h2>
-    </div>
-</div>
-<div class="govuk-grid-row blue-background">
-    <div class="govuk-grid-column-one-third">
-        <span class="govuk-caption-l">
-            Open date
-        </span>
-        <h3 class="govuk-heading-l govuk-!-font-size-27" id="openDate">26th September 2023 at 08:00</h3></div>
-    <div class="govuk-grid-column-one-third">
-        <span class="govuk-caption-l">
-            Close date
-        </span>
-        <h3 class="govuk-heading-l govuk-!-font-size-27" id="closeDate">9th February 2024 at 18:00</h3></div>
-</div>
-
-<div class="govuk-grid-row grey-background custom-donut-container">
-    <div class="custom-donut-inner-container">
-    <h2 class="govuk-heading-m centre-text custom-donut-title">
-            <a href="/feworkforce/drillDown?option=StaffCollectionStarted">Staff collection started</a>
-    </h2>
-    <svg class="circle-chart custom-donut-body" viewBox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-        <circle class="circle-chart__background" stroke="#FFFFFF" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15"></circle>
-        <circle id="staffCollectionStartedCircle" class="circle-chart__circle" stroke-width="3" stroke-dasharray="16.628504756220288,100" fill="none" cx="16.91549431" cy="16.91549431" r="15" style="stroke: rgb(255, 86, 0);"></circle>
-        <g class="circle-chart__info">
-            <text id="staffCollectionStartedDonut" class="circle-chart__percent counter" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" data-count="">283</text>
-            <text id="staffCollectionStartedLabel" class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">out of 1604</text>
-        </g>
-    </svg>
-</div>
-    <div class="custom-donut-inner-container">
-    <h2 class="govuk-heading-m centre-text custom-donut-title">
-            <a href="/feworkforce/drillDown?option=StaffCollectionCompleted">Staff collection completed</a>
-    </h2>
-    <svg class="circle-chart custom-donut-body" viewBox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-        <circle class="circle-chart__background" stroke="#FFFFFF" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15"></circle>
-        <circle id="staffCollectionCompletedCircle" class="circle-chart__circle" stroke-width="3" stroke-dasharray="56.936470349036966,100" fill="none" cx="16.91549431" cy="16.91549431" r="15" style="stroke: rgb(255, 201, 0);"></circle>
-        <g class="circle-chart__info">
-            <text id="staffCollectionCompletedDonut" class="circle-chart__percent counter" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" data-count="">969</text>
-            <text id="staffCollectionCompletedLabel" class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">out of 1604</text>
-        </g>
-    </svg>
-</div>
-    <div class="custom-donut-inner-container">
-    <h2 class="govuk-heading-m centre-text custom-donut-title">
-            <a href="/feworkforce/drillDown?option=StaffNotSubmittedData">Staff not submitted data</a>
-    </h2>
-    <svg class="circle-chart custom-donut-body" viewBox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-        <circle class="circle-chart__background" stroke="#FFFFFF" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15"></circle>
-        <circle id="staffCollectionNotSubmittedCircle" class="circle-chart__circle" stroke-width="3" stroke-dasharray="20.68280450243654,100" fill="none" cx="16.91549431" cy="16.91549431" r="15" style="stroke: rgb(109, 255, 0);"></circle>
-        <g class="circle-chart__info">
-            <text id="staffCollectionNotSubmittedDonut" class="circle-chart__percent counter" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" data-count="">352</text>
-            <text id="staffCollectionNotSubmittedLabel" class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">out of 1604</text>
-        </g>
-    </svg>
-</div>
-
-</div>
-<br>
-<div class="govuk-grid-row grey-background custom-donut-container">
-    <div class="custom-donut-inner-container">
-    <h2 class="govuk-heading-m centre-text custom-donut-title">
-            <a href="/feworkforce/drillDown?option=OrganisationCollectionStarted">Organisation collection started</a>
-    </h2>
-    <svg class="circle-chart custom-donut-body" viewBox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-        <circle class="circle-chart__background" stroke="#FFFFFF" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15"></circle>
-        <circle id="orgCollectionStartedCircle" class="circle-chart__circle" stroke-width="3" stroke-dasharray="1.4101912160752186,100" fill="none" cx="16.91549431" cy="16.91549431" r="15" style="stroke: rgb(255, 2, 0);"></circle>
-        <g class="circle-chart__info">
-            <text id="orgCollectionStartedDonut" class="circle-chart__percent counter" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" data-count="">24</text>
-            <text id="orgCollectionStartedLabel" class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">out of 1604</text>
-        </g>
-    </svg>
-</div>
-    <div class="custom-donut-inner-container">
-    <h2 class="govuk-heading-m centre-text custom-donut-title">
-            <a href="/feworkforce/drillDown?option=OrganisationCollectionCompleted">Organisation collection completed</a>
-    </h2>
-    <svg class="circle-chart custom-donut-body" viewBox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-        <circle class="circle-chart__background" stroke="#FFFFFF" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15"></circle>
-        <circle id="orgCollectionCompletedCircle" class="circle-chart__circle" stroke-width="3" stroke-dasharray="59.69809481385092,100" fill="none" cx="16.91549431" cy="16.91549431" r="15" style="stroke: rgb(255, 186, 0);"></circle>
-        <g class="circle-chart__info">
-            <text id="orgCollectionCompletedDonut" class="circle-chart__percent counter" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" data-count="">1016</text>
-            <text id="orgCollectionCompletedLabel" class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">out of 1604</text>
-        </g>
-    </svg>
-</div>
-    <div class="custom-donut-inner-container">
-    <h2 class="govuk-heading-m centre-text custom-donut-title">
-            <a href="/feworkforce/drillDown?option=OrganisationNotSubmittedData">Organisation not submitted data</a>
-    </h2>
-    <svg class="circle-chart custom-donut-body" viewBox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-        <circle class="circle-chart__background" stroke="#FFFFFF" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15"></circle>
-        <circle id="orgCollection_notSubmittedCircle" class="circle-chart__circle" stroke-width="3" stroke-dasharray="33.13949357776764,100" fill="none" cx="16.91549431" cy="16.91549431" r="15" style="stroke: rgb(177, 255, 0);"></circle>
-        <g class="circle-chart__info">
-            <text id="orgCollection_notSubmittedDonut" class="circle-chart__percent counter" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" data-count="">564</text>
-            <text id="orgCollection_notSubmittedLabel" class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">out of 1604</text>
-        </g>
-    </svg>
-</div>
-</div>
-
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-third">&nbsp;</div>
-    <div class="govuk-grid-column-two-thirds">
-        <state-display><label id="slowConnection" alt="Connection is slow at the moment"></label><label id="lastSync">Last updated: 29/01/2024 16:10:23</label><label id="state">Status: Connected</label></state-display>
-    </div>
-</div>
-
+            <div class="custom-donut-inner-container">
+                <h2 class="govuk-heading-m centre-text custom-donut-title">
+                        <a href="/feworkforce/drillDown?option=StaffNotSubmittedData">Staff not submitted data</a>
+                </h2>
+                <svg class="circle-chart custom-donut-body" viewBox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="circle-chart__background" stroke="#FFFFFF" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15"></circle>
+                    <circle id="staffCollectionNotSubmittedCircle" class="circle-chart__circle" stroke-width="3" stroke-dasharray="20.68280450243654,100" fill="none" cx="16.91549431" cy="16.91549431" r="15" style="stroke: rgb(109, 255, 0);"></circle>
+                    <g class="circle-chart__info">
+                        <text id="staffCollectionNotSubmittedDonut" class="circle-chart__percent counter" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" data-count="">352</text>
+                        <text id="staffCollectionNotSubmittedLabel" class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2">out of 1604</text>
+                    </g>
+                </svg>
+            </div>
 
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
+        <footer class="govuk-footer " role="contentinfo">
+        <div class="govuk-width-container ">
 
-    <footer class="govuk-footer " role="contentinfo">
-    <div class="govuk-width-container ">
+            <div class="govuk-footer__meta">
+                <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
 
-        <div class="govuk-footer__meta">
-            <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
-
-                <svg role="presentation" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
-                    <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
-                </svg>
-                <span class="govuk-footer__licence-description">
-                    All content is available under the
-                    <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
-                </span>
-            </div>
-            <div class="govuk-footer__meta-item">
-                <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+                    <svg role="presentation" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+                        <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+                    </svg>
+                    <span class="govuk-footer__licence-description">
+                        All content is available under the
+                        <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+                    </span>
+                </div>
+                <div class="govuk-footer__meta-item">
+                    <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
-<div id="global-app-error" class="app-error hidden"></div>
-
-
-    
-    
-    
-        <script src="/assets/js/header.min.js?v=3_4VfRvSO5mMPiyjFD9d6howyWcpp3e8-sGDITSWmpo"></script>
-        <script type="module" src="/assets/js/siteController.min.js?v=5dvsECy0cqYBClOLFTHV_OGUCeBdUp1c-kT2qcEY1xU"></script>
-        <script src="/assets/js/govuk-template.min.js?v=bxJE4mlruxt_2NRjicv1qw_AA5fUNxnuk-PgkCO7kiE"></script>
-    
-    
-    <script src="/assets/minified/govuk.min.js?v=a-_buMc2Cw0jWaLG09JWedCrxqakBC9fR-AmSvPL838"></script>
-
-    <script src="/lib/handlebars/dist/handlebars.runtime.js?v=OCETUDXXzC9KlTyEGgRDrOYiUaDKp4s2vTXMHWx-I6Q"></script>
-    <script src="/assets/templates/templates.precompiled.js?v=D3AtdWLGcG1Ykr-ORPYYhVA2oYKxfU7x6XyB2eDiCDo"></script>
-
-    
-    
-    
-        <script src="/lib/signalr/dist/browser/signalr.min.js?v=0YPy9NME7qQqfWeFNi6MlMCvFYO8EWu_v5QWbZsDnXM"></script>
-        <script src="/assets/js/feWorkforce/feWorkforceController.min.js?v=npI3bkux20Eos5YO_LKMtQwEFM18roVj__Oy-NVs2T4" type="module"></script>
-    
-    <script src="/lib/chartjs/dist/chart.bundle.min.js?v=TQq84xX6vkwR0Qs1qH5ADkP-MvH0W-9E7TdHJsoIQiM"></script>
-    <script type="application/json" id="initialState">
-    {"dashboardModel":{"displayTitle":"Return period  - 2022 to 2023","latestOpenCollectionName":null,"submissionOpenDate":"26th September 2023 at 08:00","submissionCloseDate":"9th February 2024 at 18:00","countOfProvidersForCollection":1604,"countOfStaffCollectionStarted":283,"countOfStaffCollectionCompleted":969,"countOfOrgCollectionStarted":24,"countOfNotSubmitted":352,"countOfOrgCollectionCompleted":1016,"countOfOrgNotSubmitted":564}}
-</script>
-
-
+        </footer>
+        <div id="global-app-error" class="app-error hidden"></div>
+    </main>
 </body>
 
 {% endblock %}
