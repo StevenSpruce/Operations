@@ -206,9 +206,32 @@ GOV.UK Prototype Kit
                 <option>UKPRN (desc)</option>
             </select>
         </div>
-                </div>
-        
-                <h3 class="govuk-heading-1">Provider Types</h3>
+    </div>
+
+    <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Provider Name</th>
+            <th scope="col" class="govuk-table__header">UKPRN</th>
+            <th scope="col" class="govuk-table__header">Completed Last Year?</th>
+          </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">London College</td>
+              <td class="govuk-table__cell">00012576</td>
+              <td class="govuk-table__cell">Y</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">York College</td>
+                <td class="govuk-table__cell">00012576</td>
+                <td class="govuk-table__cell">N</td>
+              </tr>
+          </tbody>
+    </table>
+
+    <h3 class="govuk-heading-1">Provider Types</h3>
     <fieldset class="govuk-fieldset">
             <div class="govuk-radios">
                 <div class="govuk-radios__item">
@@ -242,21 +265,10 @@ GOV.UK Prototype Kit
         </fieldset>    
 
         <br></br>
-        <table>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">London College</td>
-            <td class="govuk-table__cell">000124356</td>
-            <td class="govuk-table__cell">Y</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">York College</td>
-            <td class="govuk-table__cell">000124356</td>
-            <td class="govuk-table__cell">Y</td>
-          </tr>
-        </tbody>
-      </table>
+        
+
     </div>
+    
     <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
       <h2 class="govuk-heading-l">Modified in Last 24hrs</h2>
       <div class="govuk-grid-row">
