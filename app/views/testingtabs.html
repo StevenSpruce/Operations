@@ -14,7 +14,12 @@ GOV.UK Prototype Kit
     <h2 class="govuk-tabs__title">
       Filters
     </h2>
-    <ul class="govuk-tabs__list">
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#past-day">
+              All Providers
+            </a>
+          </li>
       <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
         <a class="govuk-tabs__tab" href="#past-day">
           Collection Started
@@ -36,6 +41,7 @@ GOV.UK Prototype Kit
         </a>
       </li>
     </ul>
+    
     <div class="govuk-tabs__panel" id="past-day">
       <h2 class="govuk-heading-l">Staff Collection Started</h2>
       <div class="govuk-grid-row">
@@ -112,7 +118,10 @@ GOV.UK Prototype Kit
           </tr>
         </tbody>
       </table>
+      <button data-prevent-double-click="true" class="govuk-button govuk-!-margin-right-3" type="submit" data-module="govuk-button" id="aBtnRefresh">Refresh</button>
+      <a href="#" class="govuk-button" id="aBtnDownloadCSV" style="visibility: visible;">Download CSV</a>
     </div>
+    
     <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
       <h2 class="govuk-heading-l">Collections Completed</h2>
       <div class="govuk-grid-row">
