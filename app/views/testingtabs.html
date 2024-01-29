@@ -41,7 +41,6 @@ GOV.UK Prototype Kit
       <div class="govuk-grid-row">
         <div class="govuk-form-group">
             <label class="govuk-label" for="sort">Sort by</label>
-    
             <select class="govuk-select" name="sort" id="sort">
                 <option>Provider name (a to z)</option>
                 <option>Provider name (z to a)</option>
@@ -49,7 +48,17 @@ GOV.UK Prototype Kit
                 <option>UKPRN (desc)</option>
             </select>
         </div>
+        </div>
+    <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="collectionStarted" name="filter" type="radio" checked="" value="0">
+                    <label class="govuk-label govuk-radios__label" for="collectionStarted">
+                        Provider Type 
+                    </label>
                 </div>
+            </div>
+     </fieldset>    
       <table class="govuk-table">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
