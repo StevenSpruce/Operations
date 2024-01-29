@@ -16,8 +16,8 @@ GOV.UK Prototype Kit
     </h2>
       <ul class="govuk-tabs__list">
         <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-            <a class="govuk-tabs__tab" href="#past-day">
-              All Providers
+            <a class="govuk-tabs__tab" href="#all">
+              All 
             </a>
           </li>
       <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
@@ -41,7 +41,99 @@ GOV.UK Prototype Kit
         </a>
       </li>
     </ul>
-    
+
+    <div class="govuk-tabs__panel" id="all">
+        <h2 class="govuk-heading-l">All Providers</h2>
+        <div class="govuk-grid-row">
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">Sort by</label>
+              <select class="govuk-select" name="sort" id="sort">
+                  <option>Provider name (a to z)</option>
+                  <option>Provider name (z to a)</option>
+                  <option>UKPRN (asc)</option>
+                  <option>UKPRN (desc)</option>
+              </select>
+          </div>
+          </div>
+  
+      <h3 class="govuk-heading-1">Provider Types</h3>
+      <fieldset class="govuk-fieldset">
+              <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" name="filter" type="radio" checked="" value="0">
+                      <label class="govuk-label govuk-radios__label" for="collectionStarted">
+                          GFEC 
+                      </label>
+                  </div>
+  
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" name="filter" type="radio" checked="" value="0">
+                      <label class="govuk-label govuk-radios__label" for="collectionStarted">
+                       ITP
+                      </label>
+                  </div>
+  
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" name="filter" type="radio" checked="" value="0">
+                      <label class="govuk-label govuk-radios__label" for="collectionStarted">
+                       SSC
+                      </label>
+                  </div>
+  
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" name="filter" type="radio" checked="" value="0">
+                      <label class="govuk-label govuk-radios__label" for="collectionStarted">
+                       LA
+                      </label>
+                  </div>
+              </div>
+       </fieldset>    
+  
+       <br></br>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Provider Name</th>
+              <th scope="col" class="govuk-table__header">UKPRN</th>
+              <th scope="col" class="govuk-table__header">Started</th>
+              <th scope="col" class="govuk-table__header">Complete</th>
+              <th scope="col" class="govuk-table__header">Modified Date</th>
+              <th scope="col" class="govuk-table__header">Modifier</th>
+            </tr>
+          </thead>
+  
+         
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">School of Rock</td>
+              <td class="govuk-table__cell">00012345</td>
+              <td class="govuk-table__cell">Y</td>
+              <td class="govuk-table__cell">N</td>
+              <td class="govuk-table__cell">10/07/2023</td>
+              <td class="govuk-table__cell">Jo Bloggs</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">School of Art</td>
+              <td class="govuk-table__cell">00012346</td>
+              <td class="govuk-table__cell">Y</td>
+              <td class="govuk-table__cell">N</td>
+              <td class="govuk-table__cell">23/07/2023</td>
+              <td class="govuk-table__cell">John Smith</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Springfield High</td>
+              <td class="govuk-table__cell">00012343</td>
+              <td class="govuk-table__cell">Y</td>
+              <td class="govuk-table__cell">Y</td>
+              <td class="govuk-table__cell">11/09/2023</td>
+              <td class="govuk-table__cell">Marty McFly</td>
+            </tr>
+          </tbody>
+        </table>
+        <button data-prevent-double-click="true" class="govuk-button govuk-!-margin-right-3" type="submit" data-module="govuk-button" id="aBtnRefresh">Refresh</button>
+        <a href="#" class="govuk-button" id="aBtnDownloadCSV" style="visibility: visible;">Download CSV</a>
+      </div>
+
     <div class="govuk-tabs__panel" id="past-day">
       <h2 class="govuk-heading-l">Staff Collection Started</h2>
       <div class="govuk-grid-row">
