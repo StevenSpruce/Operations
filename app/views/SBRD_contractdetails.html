@@ -31,6 +31,7 @@ GOV.UK Prototype Kit
           Contract details
         </h1>
 
+
         <div class="govuk-form-group">
           <h2 class="govuk-label-wrapper">
             <label class="govuk-label govuk-label--m" for="event-name">
@@ -54,6 +55,33 @@ GOV.UK Prototype Kit
             Contract reference number
           </label>
           <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="event-name">
+              What is the name of the Skills Bootcamp?
+            </label>
+          </h2>
+          <div id="event-name-hint" class="govuk-hint">
+            Each Skills Bootcamp must have a unique name.
+          </div>
+          <label class="govuk-label govuk-date-input__label" for="assessment-price">
+            Skills Bootcamp name
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="event-name">
+              What is the UKPRN of the provider that will be delivering the Skills Bootcamp?
+            </label>
+          </h2>
+          <label class="govuk-label govuk-date-input__label" for="assessment-price">
+            UKPRN
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
         </div>
   
         <div class="govuk-form-group">
@@ -155,7 +183,6 @@ GOV.UK Prototype Kit
             </fieldset>
           </div>
 
-
           <div class="govuk-form-group">
             <h2 class="govuk-label-wrapper">
                 <label class="govuk-label govuk-label--m" for="assessment-price">
@@ -173,15 +200,11 @@ GOV.UK Prototype Kit
                 <input class="govuk-input govuk-input--width-5" id="assessment-price" name="assessment-price" type="text" spellcheck="false" value="2500">
             </div>
         </div>
-    
 
 
 
 
-  
 
-          <a class="govuk-button" href="SBRD_paymentdates.html">Continue</a>
-
-
+          <a class="govuk-button" href="SBRD_calculationmethod.html">Continue</a>
 
 {% endblock %}

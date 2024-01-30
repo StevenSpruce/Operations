@@ -30,15 +30,15 @@ GOV.UK Prototype Kit
           SBC-10001
         </span>
 
-
         <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
+              <h2 class="govuk-fieldset__heading">
                 How is the unit cost apportioned?
-              </h1>
+              </h2>
+              <div id="event-name-hint" class="govuk-hint">
+                The sum of the percentages must equal 100%.
+              </div>
             </legend>
-
-            <p class="govuk-body">The sum of the percentages must equal 100.</p>
 
 
         <div class="govuk-form-group">
@@ -47,7 +47,7 @@ GOV.UK Prototype Kit
                     What is the start percentage?
                 </label>
             </h2>
-            <p class="govuk-body">Hint text</p>
+            <p class="govuk-body">The percentage of unit cost for the start milestone payment</p>
             <label class="govuk-label govuk-date-input__label" for="assessment-price">
                 Start percentage
             </label>
@@ -60,12 +60,12 @@ GOV.UK Prototype Kit
         <div class="govuk-form-group">
             <h2 class="govuk-label-wrapper">
                 <label class="govuk-label govuk-label--m" for="assessment-price">
-                    What is the mid-point percentage?
+                    What is the mid-course percentage?
                 </label>
             </h2>
-            <p class="govuk-body">Hint text</p>
+            <p class="govuk-body">The percentage of unit cost for the mid-course milestone payment</p>
             <label class="govuk-label govuk-date-input__label" for="assessment-price">
-                Mid-point percentage
+                Mid-course percentage
             </label>
             <div class="govuk-input__wrapper">
                 <input class="govuk-input govuk-input--width-5" id="weekly-hours" type="text" inputmode="numeric" maxlength="5" name="WeeklyHours.Hours" value="">
@@ -79,7 +79,7 @@ GOV.UK Prototype Kit
                     What is the completion percentage?
                 </label>
             </h2>
-            <p class="govuk-body">Hint text</p>
+            <p class="govuk-body">The percentage of unit cost for the completion milestone payment</p>
             <label class="govuk-label govuk-date-input__label" for="assessment-price">
                 Completion percentage
             </label>
@@ -95,7 +95,7 @@ GOV.UK Prototype Kit
                     What is the outcome percentage?
                 </label>
             </h2>
-            <p class="govuk-body">Hint text</p>
+            <p class="govuk-body">The percentage of unit cost for the outcome milestone payment</p>
             <label class="govuk-label govuk-date-input__label" for="assessment-price">
                 Outcome percentage
             </label>
@@ -106,7 +106,7 @@ GOV.UK Prototype Kit
         </div>
 
 
-        <a class="govuk-button" href="SBRD_contractwave.html">Continue</a>
+        <a class="govuk-button" href="SBRD_paymentdates.html">Continue</a>
 
 
 

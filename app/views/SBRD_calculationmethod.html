@@ -34,36 +34,149 @@ GOV.UK Prototype Kit
           <h1 class="govuk-fieldset__heading">
             What is the calculation method?
           </h1>
-          <div id="event-name-hint" class="govuk-hint">
-            hint text
-          </div>
+          <br>
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Further details on calculation methods
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+            <table class="govuk-table">
+              <caption class="govuk-table__caption govuk-table__caption--m">Calculation methods</caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header govuk-!-width-one-sixth">Code</th>
+                  <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Start payment</th>
+                  <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Mid-course payment</th>
+                  <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Completion payment</th>
+                  <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Outcome payment</th>
+                  <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Employer co-funding</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">SBC01</th>
+                  <td class="govuk-table__cell">The start payment is based on a 5 day qualifying period (and other conditions before they are recorded in the ILR)</td>
+                  <td class="govuk-table__cell">None</td>
+                  <td class="govuk-table__cell">The completion payment is based on the completion of learning and an offer of an interview (or alternatives for employed/ self-employed learners)</td>
+                  <td class="govuk-table__cell">The outcome payment is based on the commencement of a job or a role which utilises skills gained from the bootcamp (or alternatives for self-employed learners)</td>
+                  <td class="govuk-table__cell">The employer co-funding percentage is 10% for small/medium employers (less than 250 employees) and 30% for other employers</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">SBC03</th>
+                  <td class="govuk-table__cell">The start payment is based on a 14 day qualifying period (and other conditions before they are recorded in the ILR)</td>
+                  <td class="govuk-table__cell">None</td>
+                  <td class="govuk-table__cell">The completion payment is based on the completion of learning and an offer of an interview (or alternatives for employed/ self-employed learners)</td>
+                  <td class="govuk-table__cell">The outcome payment is based on the commencement of a job or a role which utilises skills gained from the bootcamp (or alternatives for self-employed learners)</td>
+                  <td class="govuk-table__cell">The employer co-funding percentage is 10% for small/medium employers (less than 250 employees) and 30% for other employers</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">HGV01</th>
+                  <td class="govuk-table__cell">The start payment is based on evidence that the learner has an HGV provisional licence (and other conditions before they are recorded in the ILR)</td>
+                  <td class="govuk-table__cell">The mid-course payment is based on the completion of learning and the CPC Part 3b test taken</td>
+                  <td class="govuk-table__cell">The completion payment is based on passing the CPC Part 3b and the CPC Part 4 and an offer of an interview (or alternatives for employed/ self-employed learners)</td>
+                  <td class="govuk-table__cell">The outcome payment is based on the commencement of a job or a role which utilises skills gained from the bootcamp (or alternatives for self-employed learners)</td>
+                  <td class="govuk-table__cell">The employer co-funding percentage is 10% for small/medium employers (less than 250 employees) and 30% for other employers</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">HGV02</th>
+                  <td class="govuk-table__cell">None</td>
+                  <td class="govuk-table__cell">The mid-course payment is based on the completion of learning</td>
+                  <td class="govuk-table__cell">The completion payment is based on passing the CPC Part 3b and an offer of an interview (or alternatives for employed/ self-employed learners)</td>
+                  <td class="govuk-table__cell">The outcome payment is based on the commencement of a job or a role which utilises skills gained from the bootcamp (or alternatives for self-employed learners)</td>
+                  <td class="govuk-table__cell">The employer co-funding percentage is 10% for small/medium employers (less than 250 employees) and 30% for other employers</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">HGV03</th>
+                  <td class="govuk-table__cell">None</td>
+                  <td class="govuk-table__cell">The mid-course payment is based on the completion of learning</td>
+                  <td class="govuk-table__cell">The completion payment is based on passing the ADR test and an offer of an interview (or alternatives for employed/ self-employed learners)</td>
+                  <td class="govuk-table__cell">The outcome payment is based on the commencement of a job or a role which utilises skills gained from the bootcamp (or alternatives for self-employed learners)</td>
+                  <td class="govuk-table__cell">The employer co-funding percentage is 10% for small/medium employers (less than 250 employees) and 30% for other employers</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">HGV04</th>
+                  <td class="govuk-table__cell">None</td>
+                  <td class="govuk-table__cell">The mid-course payment is based on the completion of learning</td>
+                  <td class="govuk-table__cell">The completion payment is based on passing the ADR test and the PDP test and an offer of an interview (or alternatives for employed/ self-employed learners)</td>
+                  <td class="govuk-table__cell">The outcome payment is based on the commencement of a job or a role which utilises skills gained from the bootcamp (or alternatives for self-employed learners)</td>
+                  <td class="govuk-table__cell">The employer co-funding percentage is 10% for small/medium employers (less than 250 employees) and 30% for other employers</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">HGV05</th>
+                  <td class="govuk-table__cell">None</td>
+                  <td class="govuk-table__cell">The mid-course payment is based on the completion of learning</td>
+                  <td class="govuk-table__cell">The completion payment is based on evidence that the driver's CPC has been updated and has an offer of an interview (or alternatives for employed/ self-employed learners)</td>
+                  <td class="govuk-table__cell">The outcome payment is based on the commencement of a job or a role which utilises skills gained from the bootcamp (or alternatives for self-employed learners)</td>
+                  <td class="govuk-table__cell">The employer co-funding percentage is 10% for small/medium employers (less than 250 employees) and 30% for other employers</td>
+                </tr>
+              </tbody>
+            </table>
+          </details>
         </legend>
         <div class="govuk-radios" data-module="govuk-radios">
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
             <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-              Choice 1
+              SBC01
             </label>
             <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
-              Hint text.
+              Wave 3 Bootcamps.
             </div>
           </div>
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
             <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-              Choice 2
+              SBC03
             </label>
             <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
-              Hint text.
+              DPS/ Wave 4 Bootcamps, not HGV driving.
             </div>
           </div>
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
             <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
-              Choice 3
+              HGV01
             </label>
             <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
-              Hint text.
+              HGV Pathways A-C. Novice drivers.
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+              HGV02
+            </label>
+            <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+              HGV Pathways D and H. Upgrades to C+E.
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+              HGV03
+            </label>
+            <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+              HGV Pathway E: Upgrade to ADR (including Tankers).
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+              HGV04
+            </label>
+            <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+              HGV Pathway F: Upgrade to ADR Tankers plus PDP.
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+              HGV05
+            </label>
+            <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+              HGV Pathway G: Refresher into previous existing category.
             </div>
           </div>
         </div>
@@ -73,7 +186,7 @@ GOV.UK Prototype Kit
 
   
 
-          <a class="govuk-button" href="SBRD_contractsummary.html">Save</a>
+          <a class="govuk-button" href="SBRD_Start.html">Continue</a>
 
 
 
