@@ -28,13 +28,13 @@ GOV.UK Prototype Kit
       SBC-10001
     </span>
 
+    <h1 class="govuk-heading-l">Calculation variables</h1>
+    
+    <form method="post" id="radio-group" action="/SBRDCalcMethod">
+
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-          <h1 class="govuk-fieldset__heading">
-            What is the calculation method?
-          </h1>
-          <br>
+          <h2 class="govuk-heading-m">What is the calculation method?</h2>
           <details class="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
@@ -117,7 +117,7 @@ GOV.UK Prototype Kit
         </legend>
         <div class="govuk-radios" data-module="govuk-radios">
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+            <input class="govuk-radios__input" id="whereDoYouLive" name="calcmethod" type="radio" value="SBC01">
             <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
               SBC01
             </label>
@@ -126,7 +126,7 @@ GOV.UK Prototype Kit
             </div>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+            <input class="govuk-radios__input" id="whereDoYouLive-2" name="calcmethod" type="radio" value="SBC03">
             <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
               SBC03
             </label>
@@ -135,7 +135,7 @@ GOV.UK Prototype Kit
             </div>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+            <input class="govuk-radios__input" id="whereDoYouLive-3" name="calcmethod" type="radio" value="HGV01">
             <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
               HGV01
             </label>
@@ -144,7 +144,7 @@ GOV.UK Prototype Kit
             </div>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+            <input class="govuk-radios__input" id="whereDoYouLive-3" name="calcmethod" type="radio" value="HGV02">
             <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
               HGV02
             </label>
@@ -153,7 +153,7 @@ GOV.UK Prototype Kit
             </div>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+            <input class="govuk-radios__input" id="whereDoYouLive-3" name="calcmethod" type="radio" value="HGV03">
             <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
               HGV03
             </label>
@@ -162,7 +162,7 @@ GOV.UK Prototype Kit
             </div>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+            <input class="govuk-radios__input" id="whereDoYouLive-3" name="calcmethod" type="radio" value="HGV04">
             <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
               HGV04
             </label>
@@ -171,7 +171,7 @@ GOV.UK Prototype Kit
             </div>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+            <input class="govuk-radios__input" id="whereDoYouLive-3" name="calcmethod" type="radio" value="HGV05">
             <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
               HGV05
             </label>
@@ -184,9 +184,45 @@ GOV.UK Prototype Kit
     </div>
 
 
-  
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+          <h2 class="govuk-heading-m">What Skills Bootcamp wave does the contract belong to?</h2>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+              Wave 3
+            </label>
+            <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+              Hint text.
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+              DPS round 1
+            </label>
+            <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+              Hint text.
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+              DPS round 2
+            </label>
+            <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+              Hint text.
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
 
-          <a class="govuk-button" href="SBRD_Start.html">Continue</a>
+
+  
+    <button class="govuk-button" type="submit" id="submit">Continue</button>
+          
 
 
 
