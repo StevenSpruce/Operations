@@ -5,6 +5,59 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+        <a class="govuk-back-link" href="/helpdesk">Back to search results</a>
+    </div>
+
+    <form method="post" id="form" action="/helpdesk">
+
+        <div class="govuk-grid-column-one-third">
+                                                                                                                                                                                                                                                                                                                                                
+            <label class="govuk-label govuk-!-width-two-thirds govuk-visually-hidden" for="searchTerm" id="provider-search">
+                Search for a provider
+            </label>
+            <div class="mt15">
+                <input class="govuk-input govuk-!-width-two-thirds" id="searchTerm" name="searchTerm" type="search" value="" aria-describedby="provider-search" placeholder="Name, UKPRN or UPIN">
+                <button type="submit" class="govuk-button">
+                    Search
+                </button>
+            </div>
+        </div>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8LqdUda0pdhKgyqqsk4F5UxfJEzB0moHxdO3FHC8UPm7mk38lWpExJGx-QZZ-LNy8eE9HofgOFcuOO1oojvB_aHaIotNxVQpkUlJYg7yrDTMFVE184TyCzQWH9EVKp_8SEs9gaM7y_KglVKDlrjlWf4CCp3L2rEb098c3nI2Xv6zyYpDcsirYKriYBki6MvoVg"></form>
+</div>
+
+<div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+        ESSEX COUNTY COUNCIL <span class="govuk-caption-l">UKPRN: 10002327, UPIN: 108151</span>
+    </h1>
+    
+        <p>
+            <strong>Collection types: </strong>
+                <span id="eligibility-completed-ILR">
+                    ILR
+                    ,
+                </span>
+                <span id="eligibility-completed-EAS">
+                    EAS
+                    ,
+                </span>
+                <span id="eligibility-completed-FC">
+                    FC
+                    ,
+                </span>
+                <span id="eligibility-completed-FEW">
+                    FEW
+                    ,
+                </span>
+                <span id="eligibility-completed-EDRS">
+                    EDRS
+                    
+                </span>
+
+        </p>
+</div>
 
 
 {% endblock %}
