@@ -6,26 +6,9 @@ GOV.UK Prototype Kit
 
 {% block content %}
 <div class="govuk-grid-row">
-
     <div class="govuk-grid-column-two-thirds">
         <a class="govuk-back-link" href="/testingtabs">Back</a>
     </div>
-
-    <form method="post" id="form" action="/helpdesk">
-
-        <div class="govuk-grid-column-one-third">
-                                                                                                                                                                                                                                                                                                                                                
-            <label class="govuk-label govuk-!-width-two-thirds govuk-visually-hidden" for="searchTerm" id="provider-search">
-                Search for a provider
-            </label>
-            <div class="mt15">
-                <input class="govuk-input govuk-!-width-two-thirds" id="searchTerm" name="searchTerm" type="search" value="" aria-describedby="provider-search" placeholder="Name, UKPRN or UPIN">
-                <button type="submit" class="govuk-button">
-                    Search
-                </button>
-            </div>
-        </div>
-    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8LqdUda0pdhKgyqqsk4F5UxfJEzB0moHxdO3FHC8UPm7mk38lWpExJGx-QZZ-LNy8eE9HofgOFcuOO1oojvB_aHaIotNxVQpkUlJYg7yrDTMFVE184TyCzQWH9EVKp_8SEs9gaM7y_KglVKDlrjlWf4CCp3L2rEb098c3nI2Xv6zyYpDcsirYKriYBki6MvoVg"></form>
 </div>
 
 <div class="govuk-grid-column-two-thirds">
@@ -51,6 +34,50 @@ GOV.UK Prototype Kit
                 </span>
         </p>
 </div>
+
+<div class="sticky-top stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck stuck">
+                                
+    <ul class="govuk-list left-navigation-2">
+        <li asp-authorize="">
+            <a class="govuk-link active govuk-!-font-weight-bold" href="/reports/10002327/essex%20county%20council">Latest submissions</a>
+        </li>
+        <li asp-authorize="">
+            <a class="govuk-link" href="/reports/history/10002327/essex%20county%20council">Submission history</a>
+        </li>
+        <li asp-authorize="">
+            <a class="govuk-link" href="/helpdesk/unsubmitted/10002327/essex%20county%20council">Unsubmitted files</a>
+        </li>
+        <li asp-authorize="">
+            <a class="govuk-link" href="/reports/frm/10002327/essex%20county%20council">FRM reports</a>
+        </li>
+        
+            <li asp-authorize="">
+                <a class="govuk-link" href="/reports/summaryreports/10002327/essex%20county%20council">FM36 summary</a>
+            </li>
+        
+            <li asp-authorize="">
+                <a href="/fc/10002327?collectionName=fc">Funding claims</a>
+            </li>
+        
+        <li reports-archive-switch="" asp-authorize="">
+            <a class="govuk-link" href="/reports-archive/10002327/essex%20county%20council">Reports archive</a>
+        </li>
+        
+        <li asp-authorize="">
+            <a class="govuk-link" href="/few/reports/10002327/essex%20county%20council">FE Workforce</a>
+        </li>
+    
+        <li asp-authorize="">
+            <a href="/understandyourfunding/10002327">Understand your funding</a>
+        </li>
+    </ul>
+    
+                                    <a class="govuk-!-font-size-16 back-to-top hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden hidden" href="#">
+                                        <svg focusable="false" class="app-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+                                            <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+                                        </svg>Back to top
+                                    </a>
+                                </div>
 <br></br>
 
 {% endblock %}
