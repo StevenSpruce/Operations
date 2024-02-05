@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+            <main class="govuk-main-wrapper">
+
+                <h1 class="gem-c-heading govuk-heading-l">Skills Bootcamp reference data topics</h1>
+
+                <div class="govuk-grid-row govuk-!-margin-top-6">
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="OPSSBRDCalcMethods.html">Calculation methods</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Create, read and update Skills Bootcamp calculation methods.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="govuk-grid-column-one-third">
+                        <ul class="govuk-list">
+                            <li>
+                                <h3 class="home-services__heading"><a class="govuk-link" href="/FEWorkforce">Contract waves</a></h3>
+                                <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Create, read and update Skills Bootcamp contract waves.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+              </div>
+            </main>
+
+
+{% endblock %}
