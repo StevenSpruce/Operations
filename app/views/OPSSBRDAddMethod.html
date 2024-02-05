@@ -8,12 +8,12 @@ GOV.UK Prototype Kit
 
 {% include "./includes/nav.html" %}
 
-<H1>Add a Skills Bootcamp Calculation Method</H1>
-
 <fieldset class="govuk-fieldset">
-    <h2 class="govuk-fieldset__heading">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <p class="govuk-fieldset__heading">
         What is the Calculation Method Code ?
-    </h2>
+      </p>
+    </legend>
     <div class="govuk-form-group">
       <label class="govuk-label" for="address-line-1">
         For Example, SBC01, HGV03
@@ -154,5 +154,10 @@ GOV.UK Prototype Kit
         </div>
       </div>
     </fieldset>
+  </div>
+
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button" href="/OPSSBRCCheckAdd.html">Continue</button>
+    <a class="govuk-link" href="/OPSSBRDCalcMethods.html">Cancel</a>
   </div>
 {% endblock %}
