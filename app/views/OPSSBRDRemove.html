@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% include "./includes/nav.html" %}
+
+<a href="/OPSSBRDCalcMethods.html" class="govuk-back-link">Back</a>
+
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          Which Calculation Method/s do you want to remove ?
+        </h1>
+      </legend>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+          <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+            SBC01
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+            SBC03
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+          <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+            HGV01
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="whereDoYouLive-4" name="whereDoYouLive" type="radio" value="northern-ireland">
+          <label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">
+            HGV02
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive-4" name="whereDoYouLive" type="radio" value="northern-ireland">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">
+              HGV03
+            </label>
+          </div>
+        <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive-4" name="whereDoYouLive" type="radio" value="northern-ireland">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">
+              HGV04
+            </label>
+        </div>
+        <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="whereDoYouLive-4" name="whereDoYouLive" type="radio" value="northern-ireland">
+            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">
+              HGV05
+            </label>
+          </div>
+      </div>
+    </fieldset>
+  </div>
+
+ <a href="/OPSSBRDCalcMethods.html" class="govuk-button govuk-button--warning" data-module="govuk-button">
+    Remove and Continue
+  </a>
+  {% endblock %}
