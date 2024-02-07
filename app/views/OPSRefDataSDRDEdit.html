@@ -10,92 +10,152 @@ GOV.UK Prototype Kit
 
 <a href="/OPSSBRDCalcMethods.html" class="govuk-back-link">Back</a>
 
+<fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <p class="govuk-fieldset__heading">
+        What is the Calculation Method Code ?
+      </p>
+    </legend>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-line-1">
+        For Example, SBC01, HGV03
+      </label>
+      <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
+    </div>
+</fieldset>
 
-<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-          What is the Calculation Method Code ?
-        </span>
-      </h2>
-    </div>
-    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-      <p class="govuk-body">This is the content for What is the Calculation Method Code ?.</p>
-    </div>
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h2 class="govuk-fieldset__heading">
+      What Skills Bootcamp wave does the contract belong to?
+    </h2>
+  </legend>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-1">
+      For Example, Wave 3
+    </label>
+    <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
   </div>
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-          What Skills Bootcamp wave does the contract belong to?
-        </span>
-      </h2>
-    </div>
-    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-      <p class="govuk-body">This is the content for What Skills Bootcamp wave does the contract belong to?</p>
-    </div>
-  </div>
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-          Is Start Date Payment Information Required?
-        </span>
-      </h2>
-    </div>
-    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
-      <p class="govuk-body">Yes</p>
-    </div>
-  </div>
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
-          Is Qualifying Period Information Required?    
-        </span>
-      </h2>
-    </div>
-    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
-      <p class="govuk-body">Yes.</p>
-    </div>
-  </div>
-  <div class="govuk-accordion__section">
-      <div class="govuk-accordion__section-header">
-        <h2 class="govuk-accordion__section-heading">
-          <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
-              Is Mid-Course Payment Information Required?   
-          </span>
-        </h2>
+</fieldset>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <p class="govuk-fieldset__heading">
+        Is Start Date Payment Information Required?
+      </p>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="waste" name="waste" type="radio" value="carcasses">
+        <label class="govuk-label govuk-radios__label" for="waste">
+          Yes
+        </label>
       </div>
-      <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
-        <p class="govuk-body">No</p>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="waste-2" name="waste" type="radio" value="mines">
+        <label class="govuk-label govuk-radios__label" for="waste-2">
+          No
+        </label>
       </div>
-  </div>
-  <div class="govuk-accordion__section">
-      <div class="govuk-accordion__section-header">
-        <h2 class="govuk-accordion__section-heading">
-          <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
-              Is Completion Payment Information Required?   
-          </span>
-        </h2>
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <p class="govuk-fieldset__heading">
+        Is Qualifying Period Information Required?
+      </p>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="waste" name="waste" type="radio" value="carcasses">
+        <label class="govuk-label govuk-radios__label" for="waste">
+          Yes
+        </label>
       </div>
-      <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
-        <p class="govuk-body">Yes</p>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="waste-2" name="waste" type="radio" value="mines">
+        <label class="govuk-label govuk-radios__label" for="waste-2">
+          No
+        </label>
       </div>
-  </div> 
-  <div class="govuk-accordion__section">
-      <div class="govuk-accordion__section-header">
-        <h2 class="govuk-accordion__section-heading">
-          <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
-              Is Outcome Payment Information Required?     
-          </span>
-        </h2>
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <p class="govuk-fieldset__heading">
+        Is Mid-Course Payment Information Required?
+      </p>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-checkboxes">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="waste" name="waste" type="radio" value="carcasses">
+        <label class="govuk-label govuk-radios__label" for="waste">
+          Yes
+        </label>
       </div>
-      <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
-        <p class="govuk-body">Yes</p>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="waste-2" name="waste" type="radio" value="mines">
+        <label class="govuk-label govuk-radios__label" for="waste-2">
+          No
+        </label>
       </div>
-  </div> 
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <p class="govuk-fieldset__heading">
+        Is Completion Payment Information Required?
+      </p>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="waste" name="waste" type="radio" value="carcasses">
+        <label class="govuk-label govuk-radios__label" for="waste">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="waste-2" name="waste" type="radio" value="mines">
+        <label class="govuk-label govuk-radios__label" for="waste-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <p class="govuk-fieldset__heading">
+        Is Outcome Payment Information Required?
+      </p>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="waste" name="waste" type="radio" value="carcasses">
+        <label class="govuk-label govuk-radios__label" for="waste">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="waste-2" name="waste" type="radio" value="mines">
+        <label class="govuk-label govuk-radios__label" for="waste-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
 </div>
 
   <div class="govuk-button-group">
