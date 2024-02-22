@@ -41,6 +41,23 @@ GOV.UK Prototype Kit
 </fieldset>
 
 <div class="govuk-form-group">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
+      What Skills Bootcamp wave does the contract belong to?</label>
+    </h2>
+  </legend>
+  <div id="location-hint" class="govuk-hint">
+    For Example, Wave 3
+  </div>
+  <select class="govuk-select" id="location" name="location" aria-describedby="location-hint">
+    <option value="choose" selected>Choose Wave</option>
+    <option value="eastmidlands">Wave 3</option>
+    <option value="eastofengland">DPS Round 1</option>
+    <option value="london">DPS Round 2</option>
+  </select>
+</div>
+
+<div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
         <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price"> Is Start Date Payment Information Required?</label>
