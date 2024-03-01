@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+
+
+
+        
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-x1">Wave 3</h1>
+</div>
+</div>
+<br>
+<div class="govuk-grid-column-two-thirds">
+<form method="post" action="/sldadmin/notifications">
+
+<input type="hidden" data-val="true" data-val-required="The Id field is required." id="Id" name="Id" value="573">
+<table class="govuk-table">
+<tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-!-font-weight-bold">
+            Description
+        </td>
+        <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
+            <details class="govuk-details" role="group">
+                <div class="govuk-details__text" id="details-content-0e301790-0ead-447f-a1b1-cc37495f6b8a" aria-hidden="true">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.  
+                </div>
+            </details>
+            <textarea class="govuk-textarea" id="more-detail" rows="5" aria-describedby="more-detail-hint" name="Message">Read more about the new understand your funding dashboard on the [[https://esfahelp.education.gov.uk/hc/en-gb/community/posts/14197719481106-ILR-Submissions-Data-mismatches]](ESFA communities website.) View the [[/submission-options/UnderstandYourFunding/true]](understand your funding dashboard.)</textarea>
+        </td>
+    </tr>
+    <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-!-font-weight-bold">
+            Contract Wave Start date
+        </td>
+        <td class="govuk-table__cell govuk-!-font-weight-bold">
+            <input max="9999-12-31" class="govuk-input govuk-!-width-one-half" type="date" id="StartDate" name="StartDate" value="2023-10-19">
+        </td>
+    </tr>
+    <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-!-font-weight-bold">
+            Contract Wave End date
+        </td>
+        <td class="govuk-table__cell govuk-!-font-weight-bold">
+            <input max="9999-12-31" class="govuk-input govuk-!-width-one-half" type="date" id="EndDate" name="EndDate" value="2023-12-23">
+        </td>
+    </tr>
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-font-weight-bold">
+        Display On SLD
+    </td>
+    <td class="govuk-table__cell govuk-!-font-weight-bold">
+        <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item margin-bottom-5">
+                    <input id="Home" class="govuk-checkboxes__input" name="SelectedPages" type="checkbox" value="Home">
+                </div>
+        </div>
+     </td>
+</tr>
+</tbody>
+</table>
+
+<div id="buttons" class="block">
+<button type="submit" id="submitButton" name="save" class="govuk-button" value="save">Save</button>
+
+    <a id="deleteLink" class="govuk-button govuk-button--warning inline">Delete</a>
+&nbsp;&nbsp;&nbsp;    
+<a class="govuk-button govuk-button--secondary" href="/sldadmin/notifications">Cancel</a>
+</div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8G7gS31nNThAl6QmW19BnUEPc9YVU5v4vWNDd9GW8TniHGmAUn13M7Vg3LzEKRBceUQiyoaozbAjT6giudod8lWnp-p00WUvYdCTPkTI_rDrvIVAU95vRUHb84ywKWQ3y6Umg2OhSzYs_PpKQPqETaJY3oPdErwhxfhvppBMJJ0VO5hdAQGwQF4aJe6yYoDndw"></form>
+
+<form method="post" action="/sldadmin/notifications/delete">
+<input type="hidden" data-val="true" data-val-required="The Id field is required." id="Id" name="Id" value="573">
+
+<div id="areYouSureWrapper" class="hidden">
+<p>
+    Are you sure you want to delete this message?
+    <button type="submit" id="deleteButton" name="deleteButton" class="govuk-button" value="save">Yes</button>
+    &nbsp; &nbsp;
+    <a id="cancelDelete" class="govuk-button govuk-button--secondary">No</a>
+</p>
+</div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8G7gS31nNThAl6QmW19BnUEPc9YVU5v4vWNDd9GW8TniHGmAUn13M7Vg3LzEKRBceUQiyoaozbAjT6giudod8lWnp-p00WUvYdCTPkTI_rDrvIVAU95vRUHb84ywKWQ3y6Umg2OhSzYs_PpKQPqETaJY3oPdErwhxfhvppBMJJ0VO5hdAQGwQF4aJe6yYoDndw"></form>
+</div>
+
+
+    </div>
+</div>
+
+{% endblock %}
