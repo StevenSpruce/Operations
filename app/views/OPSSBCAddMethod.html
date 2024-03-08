@@ -245,6 +245,39 @@ GOV.UK Prototype Kit
     </td>
   </fieldset>
 
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
+          Is Last Date for Outcome Payment Information Required?</label>
+        </h2>
+      </legend>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="waste" name="waste" type="radio" value="carcasses">
+          <label class="govuk-label govuk-radios__label" for="waste">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="waste-2" name="waste" type="radio" value="mines">
+          <label class="govuk-label govuk-radios__label" for="waste-2">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price"> Description</label>
+      </h2>
+    </legend>
+    <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
+        <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
+    </td>
+  </fieldset>
 
   <div class="govuk-button-group">
     <a href="/OPSSBCCalcMethods.html" button class="govuk-button" data-module="govuk-button">
