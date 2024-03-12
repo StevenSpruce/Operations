@@ -1,0 +1,48 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<a href="/OPSSBRDAddMethod.html" class="govuk-back-link">Back</a>
+
+<span class="govuk-caption-m">
+    SBC-90001232-20240210
+  </span>
+
+  <h1 class="govuk-heading-l">Are you sure that you want to delete this Contract?</h1>
+  
+  <input name="selected-course" value="" style="display:none"><table class="govuk-table" data-module="moj-sortable-table">
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Contract number</th>
+            <th scope="col" class="govuk-table__header">Skills Bootcamp Name </th>
+            <th scope="col" class="govuk-table__header">Provider UKPRN</th>
+            <th scope="col" class="govuk-table__header">Created by</th>
+            <th scope="col" class="govuk-table__header">Date created</th>
+            <th scope="col" class="govuk-table__header">Modified by</th>
+            <th scope="col" class="govuk-table__header">Last modified</th>
+        </tr>
+        </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+
+                <a href="SBRD_contractsummary.html">SBC-90001232-20240210</a>
+
+            </td>
+            <td class="govuk-table__cell">Bootcamp 1</td>
+            <td class="govuk-table__cell">12345678</td>
+            <td class="govuk-table__cell">Jo Bloggs</td>
+            <td class="govuk-table__cell">12/03/2024</td>
+            <td class="govuk-table__cell">Henry Steven</td>
+            <td class="govuk-table__cell">14/04/2024</td>
+        </tr>
+    </tbody>
+
+    <button class="govuk-button-warning" type="submit" id="submit">Confirm</button>
+    <button class="govuk-button--secondary" type="submit" id="submit">Cancel</button>
+
+{% endblock %}
