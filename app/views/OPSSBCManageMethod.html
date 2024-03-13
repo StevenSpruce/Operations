@@ -93,103 +93,115 @@
             Is Start Payment Data Necessary?
         </td>
         <td class="govuk-table__cell govuk-!-font-weight-bold">
-            <div class="govuk-radios__item margin-bottom-5">
-                <input id="Home" class="govuk-radios__input" name="SelectedPages" type="checkbox" value="Home">
-                <label class="govuk-label govuk-radios__label" for="Home">Yes 
-                </label>
-            </div>
-
-                <div class="govuk-radios__item margin-bottom-5">
-                <input id="Home" class="govuk-radios__input" name="SelectedPages" type="checkbox" value="Home">
-                <label class="govuk-label govuk-radios__label" for="Home">No
-                </label>
-            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" checked data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional" id="conditional-contact">
+                  <div class="govuk-form-group govuk-form-group--error">
+                    <label class="govuk-label" for="contact-by-email">
+                      Description
+                    </label>
+                    <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="contact-2">
+                    No
+                  </label>
+                </div>
+              </div>
          </td>
-    </tr>
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell govuk-!-font-weight-bold">
-            Start Payment Description
-        </td>
-        <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
-            <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message">N/a</textarea>
-        </td>
     </tr>
     <tr class="govuk-table__row">
         <td class="govuk-table__cell govuk-!-font-weight-bold">
             Is Mid-Course Payment Data Necessary?
         </td>
         <td class="govuk-table__cell govuk-!-font-weight-bold">
-            <div class="govuk-radios__item margin-bottom-5">
-                <input id="Home" class="govuk-radios__input" name="SelectedPages" type="checkbox" value="Home">
-                <label class="govuk-label govuk-radios__label" for="Home">Yes 
-                </label>
-            </div>
-
-                <div class="govuk-radios__item margin-bottom-5">
-                <input id="Home" class="govuk-radios__input" name="SelectedPages" type="checkbox" value="Home">
-                <label class="govuk-label govuk-radios__label" for="Home">No
-                </label>
-            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" checked data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional" id="conditional-contact">
+                  <div class="govuk-form-group govuk-form-group--error">
+                    <label class="govuk-label" for="contact-by-email">
+                      Description
+                    </label>
+                    <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="contact-2">
+                    No
+                  </label>
+                </div>
+              </div>
          </td>
-    </tr>
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell govuk-!-font-weight-bold">
-            Mid-Course Payment Description
-        </td>
-        <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
-            <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message">N/a</textarea>
-        </td>
     </tr>
     <tr class="govuk-table__row">
         <td class="govuk-table__cell govuk-!-font-weight-bold">
             Is Completion Payment Data Necessary?
         </td>
         <td class="govuk-table__cell govuk-!-font-weight-bold">
-            <div class="govuk-radios__item margin-bottom-5">
-                <input id="Home" class="govuk-radios__input" name="SelectedPages" type="checkbox" value="Home">
-                <label class="govuk-label govuk-radios__label" for="Home">Yes 
-                </label>
-            </div>
-
-                <div class="govuk-radios__item margin-bottom-5">
-                <input id="Home" class="govuk-radios__input" name="SelectedPages" type="checkbox" value="Home">
-                <label class="govuk-label govuk-radios__label" for="Home">No
-                </label>
-            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" checked data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional" id="conditional-contact">
+                  <div class="govuk-form-group govuk-form-group--error">
+                    <label class="govuk-label" for="contact-by-email">
+                      Description
+                    </label>
+                    <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="contact-2">
+                    No
+                  </label>
+                </div>
+              </div>
          </td>
-    </tr>
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell govuk-!-font-weight-bold">
-            Completion Payment Description
-        </td>
-        <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
-            <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message">N/a</textarea>
-        </td>
     </tr>
     <tr class="govuk-table__row">
         <td class="govuk-table__cell govuk-!-font-weight-bold">
             Is Outcome Payment Data Necessary?
         </td>
         <td class="govuk-table__cell govuk-!-font-weight-bold">
-            <div class="govuk-radios__item margin-bottom-5">
-                <input id="Home" class="govuk-radios__input" name="SelectedPages" type="checkbox" value="Home">
-                <label class="govuk-label govuk-radios__label" for="Home">Yes 
-                </label>
+            <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" checked data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional" id="conditional-contact">
+                  <div class="govuk-form-group govuk-form-group--error">
+                    <label class="govuk-label" for="contact-by-email">
+                      Description
+                    </label>
+                    <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="contact-2">
+                    No
+                  </label>
+                </div>
             </div>
-
-                <div class="govuk-radios__item margin-bottom-5">
-                <input id="Home" class="govuk-radios__input" name="SelectedPages" type="checkbox" value="Home">
-                <label class="govuk-label govuk-radios__label" for="Home">No
-                </label>
-            </div>
-         </td>
-    </tr>
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell govuk-!-font-weight-bold">
-            Outcome Payment Description
-        </td>
-        <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
-            <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message">N/a</textarea>
         </td>
     </tr>
     <tr class="govuk-table__row">
@@ -197,26 +209,29 @@
             Is the Last Date for Outcome Payment Necessary?
         </td>
         <td class="govuk-table__cell govuk-!-font-weight-bold">
-            <div class="govuk-radios__item margin-bottom-5">
-                <input id="Home" class="govuk-radios__input" name="SelectedPages" type="checkbox" value="Home">
-                <label class="govuk-label govuk-radios__label" for="Home">Yes 
-                </label>
-            </div>
-
-                <div class="govuk-radios__item margin-bottom-5">
-                <input id="Home" class="govuk-radios__input" name="SelectedPages" type="checkbox" value="Home">
-                <label class="govuk-label govuk-radios__label" for="Home">No
-                </label>
-            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" checked data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional" id="conditional-contact">
+                  <div class="govuk-form-group govuk-form-group--error">
+                    <label class="govuk-label" for="contact-by-email">
+                      Description
+                    </label>
+                    <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="contact-2">
+                    No
+                  </label>
+                </div>
+              </div>
          </td>
-    </tr>
-    <tr class="govuk-table__row">
-        <td class="govuk-table__cell govuk-!-font-weight-bold">
-            Last date for Outcome Payment Description
-        </td>
-        <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
-            <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message">N/a</textarea>
-        </td>
     </tr>
 <tr class="govuk-table__row">
     <td class="govuk-table__cell govuk-!-font-weight-bold">
