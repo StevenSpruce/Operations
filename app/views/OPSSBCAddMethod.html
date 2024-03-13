@@ -76,8 +76,8 @@ GOV.UK Prototype Kit
   <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-  <h2 class="govuk-fieldset__heading">
-    Is qualifying period information required?
+  <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
+    Is qualifying period information required?</label>
   </h2>
   </legend>
   <div id="contact-hint" class="govuk-hint">
@@ -85,14 +85,14 @@ GOV.UK Prototype Kit
   </div>
   <div class="govuk-radios" data-module="govuk-radios">
   <div class="govuk-radios__item">
-    <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" checked data-aria-controls="conditional-contact">
+    <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="Yes" checked data-aria-controls="conditional-contact">
     <label class="govuk-label govuk-radios__label" for="contact">
       Yes
     </label>
   </div>
   <div class="govuk-radios__conditional" id="conditional-contact">
     <div class="govuk-form-group govuk-form-group--error">
-      <label class="govuk-label" for="contact-by-email">
+      <label class="govuk-label" for="contact-by-yes">
         Description
       </label>
       <input class="govuk-input govuk-!-width-one-half govuk-input--error" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" aria-describedby="contact-by-email-error" autocomplete="email">
