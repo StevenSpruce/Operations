@@ -11,44 +11,55 @@ GOV.UK Prototype Kit
        SBC-03
     </span>
 
-    <h1 class="govuk-heading-l">Are you sure that you want to delete this calculation method?</h1>
+    <h1 class="govuk-heading-l">Are you sure that you want edit this Skills Bootcamp Contract?
+    </h1>
     
         <strong class="govuk-!-font-size-24">
-        SBC01
+        SBC-90001267-2781232
         </strong>
         <div class="govuk-body">
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__value">
-                    <strong> Description</strong>
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    Wave 3 Bootcamps
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__value">
-                    <strong> Start date</strong>
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    23-02-2024
-                </dd>
-                <dt class="govuk-summary-list__value">
-                    <strong> Finish date</strong>
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    11-07-2025
-                </dd>
-                </div>
-            </div>
+            <input name="selected-course" value="" style="display:none"><table class="govuk-table" data-module="moj-sortable-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Contract number</th>
+                        <th scope="col" class="govuk-table__header">Skills Bootcamp Name </th>
+                        <th scope="col" class="govuk-table__header">Provider UKPRN</th>
+                        <th scope="col" class="govuk-table__header">Created by</th>
+                        <th scope="col" class="govuk-table__header">Date created</th>
+                        <th scope="col" class="govuk-table__header">Modified by</th>
+                        <th scope="col" class="govuk-table__header">Last modified</th>
+                        <th scope="col" class="govuk-table__header"></th>
+                        <th scope="col" class="govuk-table__header"></th>
+                    </tr>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+    
+                            <a href="SBRD_contractsummary.html">
+                                900000198-12345</a>
+    
+    
+                        </td>
+                        <td class="govuk-table__cell">Bootcamp 1</td>
+                        <td class="govuk-table__cell">12345678</td>
+                        <td class="govuk-table__cell">Jo Bloggs</td>
+                        <td class="govuk-table__cell">12/03/2024</td>
+                        <td class="govuk-table__cell">Henry Steven</td>
+                        <td class="govuk-table__cell">14/04/2024</td>
+                        <td><a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="SBRD_calculationmethod.html">Edit</a>
+                        </td>   
+                        <td><a class="govuk-button govuk-button--warning" data-module="govuk-button" href="SBRD_CheckDelete.html">Remove</a>
+                        </td>   
+                    </tr>
+                </tbody>
+            </table>
+
+        <p>Editing the contract could edit the page flow and their the rates of the calculation method</p>
         
             <a class="govuk-button govuk-button--warning" data-module="govuk-button">Confirm</a>
             <a class="govuk-button govuk-button--secondary" data-module="govuk-button">Cancel</a>
         
         </div> 
-
-
-               
-    
-   
-
 {% endblock %}  
