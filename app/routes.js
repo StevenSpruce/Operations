@@ -586,7 +586,7 @@ router.post('/SBRDCalcMethod', function (req, res) {
   // Check whether the variable matches a condition
   if (calcmethod == "SBC01"||calcmethod == "SBC03"||calcmethod == "HGV01"||calcmethod == "HGV02"||calcmethod == "HGV03"||calcmethod == "HGV04"||calcmethod == "HGV05"){
     // Send user to next page
-    res.redirect('/SBRD_Start')
+    res.redirect('/SBRD_contractdetails')
   } else {
     // Send user to ineligible page
     res.redirect('/SBRD_MidCourse')
