@@ -639,5 +639,18 @@ router.post('/SBRDStart', function (req, res) {
   }
 })
 
+router.post('/SBRDMidCourse', function (req, res) {
 
+  // Make a variable and give it the value from 'FEWStaffMethodSelection'
+  var calcmethod = req.session.data['calcmethod']
+
+  // Check whether the variable matches a condition
+  if (calcmethod == "HGV01"){
+    // Send user to next page
+    res.redirect('/SBRD_Outcome')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/SBRD_MidCourse')
+  }
+})
 
