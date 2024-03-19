@@ -630,12 +630,7 @@ router.post('/SBRDDetails', function (req, res) {
   if (calcmethod == "SBC01"||calcmethod == "SBC03"){
     // Send user to next page
     res.redirect('/SBRD_Qualifying')
-  } 
-  if (calcmethod == "HGV01"){
-    // Send user to next page
-    res.redirect('/SBRD_Start')
-  } 
-  else {
+  } else {
     // Send user to ineligible page
     res.redirect('/SBRD_MidCourse')
   }
