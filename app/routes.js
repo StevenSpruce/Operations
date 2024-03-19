@@ -576,8 +576,6 @@ router.post('/SBRDMethodSelection', function (req, res) {
 
 
 
-
-
 router.post('/SBRDCalcMethod', function (req, res) {
 
   // Make a variable and give it the value from 'FEWStaffMethodSelection'
@@ -593,23 +591,6 @@ router.post('/SBRDCalcMethod', function (req, res) {
   }
 })
 
-router.post('/SBRDDetails', function (req, res) {
-
-  // Make a variable and give it the value from 'FEWStaffMethodSelection'
-  var calcmethod = req.session.data['calcmethod']
-
-  // Check whether the variable matches a condition
-  if (calcmethod == "SBC01"||calcmethod == "SBC03"){
-    // Send user to next page
-    res.redirect('/SBRD_Qualifying')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/SBRD_Start')
-  }
-})
-
-
-
 router.post('/SBRDStart', function (req, res) {
 
   // Make a variable and give it the value from 'FEWStaffMethodSelection'
@@ -619,6 +600,21 @@ router.post('/SBRDStart', function (req, res) {
   if (calcmethod == "SBC01"||calcmethod == "SBC03"){
     // Send user to next page
     res.redirect('/SBRD_Completion')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/SBRD_MidCourse')
+  }
+})
+
+router.post('/SBRDQualifying', function (req, res) {
+
+  // Make a variable and give it the value from 'FEWStaffMethodSelection'
+  var calcmethod = req.session.data['calcmethod']
+
+  // Check whether the variable matches a condition
+  if (calcmethod == "SBC01"||calcmethod == "SBC03"){
+    // Send user to next page
+    res.redirect('/SBRD_Start')
   } else {
     // Send user to ineligible page
     res.redirect('/SBRD_MidCourse')
