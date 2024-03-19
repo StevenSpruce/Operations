@@ -650,7 +650,7 @@ router.post('/SBRDMidCourse', function (req, res) {
     res.redirect('/SBRD_Outcome')
   } else {
     // Send user to ineligible page
-    res.redirect('/SBRD_MidCourse')
+    res.redirect('/SBRD_Completion')
   }
 })
 
