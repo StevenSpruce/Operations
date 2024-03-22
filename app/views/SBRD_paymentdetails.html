@@ -42,6 +42,7 @@ GOV.UK Prototype Kit
                       </div>
                       <input class="govuk-input govuk-input--width-10" id="passport-number" name="passportNumber" type="text" aria-describedby="passport-number-hint">
                     </div>
+                    
                     <div class="govuk-form-group">
                       <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -50,10 +51,12 @@ GOV.UK Prototype Kit
                         <div id="expiry-hint" class="govuk-hint">
                             What is the start percentage?
                         </div>
+                        <div class="govuk-input__wrapper">
+                            <input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                            <div class="govuk-input__suffix" aria-hidden="true">kg</div>
                         </div>
-                            <input class="govuk-input govuk-input--width-10" id="passport-number" name="passportNumber" type="text" aria-describedby="passport-number-hint">
-                            <div class="govuk-input__suffix" aria-hidden="true">%</div>
-                        </div>
+                    </div>
+
                     <button type="submit" class="govuk-button" data-module="govuk-button">
                       Continue
                     </button>
