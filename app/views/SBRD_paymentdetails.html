@@ -23,17 +23,14 @@ GOV.UK Prototype Kit
   </nav>
 
     <a href="javascript:history.back()" class="govuk-back-link">Back</a>
-
-
-    <main id="main-content" class="app-content" role="main">
-        <span class="govuk-caption-m">
-          XSB-90001238-1982343
-        </span>
         
         <div class="govuk-width-container">
             <main class="govuk-main-wrapper " id="main-content" role="main">
               <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds">
+                    <span class="govuk-caption-m">
+                        XSB-90001238-1982343
+                      </span>  
                   <h1 class="govuk-heading-l">Payment Details</h1>
                   <form action="/form-handler" method="post" novalidate>
                     <div class="govuk-form-group">
@@ -51,7 +48,10 @@ GOV.UK Prototype Kit
                          Start Payment 
                         </legend>
                         <div id="expiry-hint" class="govuk-hint">
-                          
+                            What is the start percentage?
+                        </div>
+                        </div>
+                            <input class="govuk-input govuk-input--width-10" id="passport-number" name="passportNumber" type="text" aria-describedby="passport-number-hint">
                         </div>
                     <button type="submit" class="govuk-button" data-module="govuk-button">
                       Continue
