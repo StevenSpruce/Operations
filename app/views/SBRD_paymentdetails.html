@@ -29,100 +29,64 @@ GOV.UK Prototype Kit
         <span class="govuk-caption-m">
           XSB-90001238-1982343
         </span>
-
-        <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h2 class="govuk-fieldset__heading">
-                Qualifying Period 
-              </h2>
-            </legend>
-<div class="govuk-form-group">
-    <h2 class="govuk-label-wrapper">
-      <label class="govuk-label govuk-label--m" for="event-name">
-        What is the qualifying period, in days, before the learner is included in the ILR?
-      </label>
-    </h2>
-    <label class="govuk-label govuk-date-input__label" for="assessment-price">
-      Qualifying period
-    </label>
-    <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
-</div>
-
-<fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h2 class="govuk-fieldset__heading">
-        Start payment
-      </h2>
-    </legend>
-
-
-    <div class="govuk-form-group">
-        <h2 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="assessment-price">
-                What is the start percentage?
-            </label>
-        </h2>
-        <p class="govuk-body">The percentage of unit cost for the start milestone payment</p>
-        <label class="govuk-label govuk-date-input__label" for="assessment-price">
-            Start percentage
-        </label>
-        <div class="govuk-input__wrapper">
-            <input class="govuk-input govuk-input--width-5" id="weekly-hours" type="text" inputmode="numeric" maxlength="5" name="WeeklyHours.Hours" value="">
-            <div class="govuk-input__suffix" aria-hidden="true">%</div>
-        </div>
-    </div>
-
-<div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-        <div class="govuk-accordion__section">
-          <div class="govuk-accordion__section-header">
-            <h2 class="govuk-accordion__section-heading">
-              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                  <h2 class="govuk-fieldset__heading">
-                      What is the last date for new starts?
-                  </h2>
-                </legend>
-              </span>
-            </h2>
+        
+        <div class="govuk-width-container">
+            <main class="govuk-main-wrapper " id="main-content" role="main">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                  <h1 class="govuk-heading-l">Payment Details</h1>
+                  <form action="/form-handler" method="post" novalidate>
+                    <div class="govuk-form-group">
+                    <h2 class="govuk-heading-2">Qualifying Period</h2> 
+                      <label class="govuk-label govuk-label--m" for="passport-number">
+                        What is the qualifying period, in days, before the learner is included in the ILR?
+                      </label>
+                      <div id="passport-number-hint" class="govuk-hint">
+                        Qualifying Period 
+                      </div>
+                      <input class="govuk-input govuk-input--width-10" id="passport-number" name="passportNumber" type="text" aria-describedby="passport-number-hint">
+                    </div>
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                         Start Payment 
+                        </legend>
+                        <div id="expiry-hint" class="govuk-hint">
+                          For example, 31 3 1980
+                        </div>
+                        <div class="govuk-date-input" id="expiry">
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="expiry-day">
+                                Day
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expiry-day" name="expiry-day" type="text" inputmode="numeric">
+                            </div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="expiry-month">
+                                Month
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expiry-month" name="expiry-month" type="text" inputmode="numeric">
+                            </div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="expiry-year">
+                                Year
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="expiry-year" name="expiry-year" type="text" inputmode="numeric">
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <button type="submit" class="govuk-button" data-module="govuk-button">
+                      Continue
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </main>
           </div>
-      <div id="accordion-default-content-1" class="govuk-accordion__section-content">    
-        <div id="passport-issued-hint" class="govuk-hint">
-          The last date for new starts is the last possible date for a start milestone to be paid.
-          <br>For example, 27 3 2024.
-        </div>
-          <div class="govuk-date-input" id="passport-issued">
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                  Day
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-              </div>
-            </div>
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                  Month
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-              </div>
-            </div>
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                  Year
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-              </div>
-            </div>
-          </div>
-      </div>    
-    </div>
-    </fieldset>
-  </div>
-
-  <button class="govuk-button" type="submit" id="submit">Continue</button>
-
-  {% endblock %}
