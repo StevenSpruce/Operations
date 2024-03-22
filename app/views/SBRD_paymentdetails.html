@@ -37,12 +37,11 @@ GOV.UK Prototype Kit
                   <h1 class="govuk-heading-l">Payment Details</h1>
                   <form action="/form-handler" method="post" novalidate>
                     <div class="govuk-form-group">
-                    <h2 class="govuk-heading-2">Qualifying Period</h2> 
                       <label class="govuk-label govuk-label--m" for="passport-number">
-                        What is the qualifying period, in days, before the learner is included in the ILR?
+                        Qualifying Period
                       </label>
                       <div id="passport-number-hint" class="govuk-hint">
-                        Qualifying Period 
+                        What is the qualifying period, in days, before the learner is included in the ILR?
                       </div>
                       <input class="govuk-input govuk-input--width-10" id="passport-number" name="passportNumber" type="text" aria-describedby="passport-number-hint">
                     </div>
@@ -52,36 +51,8 @@ GOV.UK Prototype Kit
                          Start Payment 
                         </legend>
                         <div id="expiry-hint" class="govuk-hint">
-                          For example, 31 3 1980
+                          
                         </div>
-                        <div class="govuk-date-input" id="expiry">
-                          <div class="govuk-date-input__item">
-                            <div class="govuk-form-group">
-                              <label class="govuk-label govuk-date-input__label" for="expiry-day">
-                                Day
-                              </label>
-                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expiry-day" name="expiry-day" type="text" inputmode="numeric">
-                            </div>
-                          </div>
-                          <div class="govuk-date-input__item">
-                            <div class="govuk-form-group">
-                              <label class="govuk-label govuk-date-input__label" for="expiry-month">
-                                Month
-                              </label>
-                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expiry-month" name="expiry-month" type="text" inputmode="numeric">
-                            </div>
-                          </div>
-                          <div class="govuk-date-input__item">
-                            <div class="govuk-form-group">
-                              <label class="govuk-label govuk-date-input__label" for="expiry-year">
-                                Year
-                              </label>
-                              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="expiry-year" name="expiry-year" type="text" inputmode="numeric">
-                            </div>
-                          </div>
-                        </div>
-                      </fieldset>
-                    </div>
                     <button type="submit" class="govuk-button" data-module="govuk-button">
                       Continue
                     </button>
