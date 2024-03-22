@@ -42,7 +42,7 @@ GOV.UK Prototype Kit
                       </div>
                       <input class="govuk-input govuk-input--width-10" id="passport-number" name="passportNumber" type="text" aria-describedby="passport-number-hint">
                     </div>
-                    
+
                     <div class="govuk-form-group">
                       <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -54,6 +54,37 @@ GOV.UK Prototype Kit
                         <div class="govuk-input__wrapper">
                             <input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
                             <div class="govuk-input__suffix" aria-hidden="true">kg</div>
+                        </div>
+                        <div id="expiry-hint" class="govuk-hint">
+                            What is last date for new starts?
+                        </div>
+                        <div class="govuk-input__wrapper">
+                            <div class="govuk-date-input" id="passport-issued">
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                      Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                                  </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                      Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                  </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                      Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                                  </div>
+                                </div>
+                              </div>
                         </div>
                     </div>
 
