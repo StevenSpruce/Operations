@@ -1,0 +1,136 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<nav class="app-navigation govuk-clearfix">
+    <ul class="app-navigation__list app-width-container">
+  
+      <li class="app-navigation__list-item app-navigation__list-item--current">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_ContractList.html" data-topnav="Contracts">Contracts</a>
+      </li>
+
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Upload.html" data-topnav="Import">Import</a>
+      </li>
+  
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Export.html" data-topnav="Export">Export</a>
+      </li>
+  
+    </ul>
+  </nav>
+        
+        <div class="govuk-width-container">
+            <main class="govuk-main-wrapper " id="main-content" role="main">
+            <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <span class="govuk-caption-m">
+                        XSB-90001238-1982343
+                      </span>  
+                  <h1 class="govuk-heading-l">Payment Details</h1>
+                  <form action="/form-handler" method="post" novalidate>
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                         Mid-course Payment 
+                        </legend>
+                        <div id="expiry-hint" class="govuk-hint">
+                            What is the mid-course payment percentage?
+                        </div>
+                        <div class="govuk-input__wrapper">
+                            <input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                            <div class="govuk-input__suffix" aria-hidden="true">%</div>
+                        </div>
+                        <br>
+                        <div id="expiry-hint" class="govuk-hint">
+                            What is last date for mid-course payment?
+                        </div>
+                        <div class="govuk-input__wrapper">
+                            <div class="govuk-date-input" id="passport-issued">
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                      Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                                  </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                      Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                  </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                      Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        </br>
+                    </div>
+
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                           Outcome Payment 
+                          </legend>
+                          <div id="expiry-hint" class="govuk-hint">
+                              What is the outcome payment percentage?
+                          </div>
+                          <div class="govuk-input__wrapper">
+                              <input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                              <div class="govuk-input__suffix" aria-hidden="true">%</div>
+                          </div>
+                          <br>
+                          <div id="expiry-hint" class="govuk-hint">
+                              What is last date for outcome payment?
+                          </div>
+                          <div class="govuk-input__wrapper">
+                              <div class="govuk-date-input" id="passport-issued">
+                                  <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                        Day
+                                      </label>
+                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                                    </div>
+                                  </div>
+                                  <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                        Month
+                                      </label>
+                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                    </div>
+                                  </div>
+                                  <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                        Year
+                                      </label>
+                                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                                    </div>
+                                  </div>
+                                </div>
+                          </div>
+                          </br>
+                      </div>
+
+                      <a class="govuk-button" href="SBRD_contractsummary.html">Continue</a>
+                  </form>
+                </div>
+              </div>
+            </main>
+          </div>
+
+          {% endblock %}

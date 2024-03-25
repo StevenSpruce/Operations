@@ -603,6 +603,9 @@ router.post('/SBRDDetails', function (req, res) {
   } if (calcmethod == "HGV01"){
     // Send user to next page
     res.redirect('/SBRD_paymentdetails')
+  } if (calcmethod == "HGV05"){
+    // Send user to next page
+    res.redirect('/SBRD_paymentdetails3')
   } else {
     // Send user to ineligible page
     res.redirect('/SBRD_MidCourse')
