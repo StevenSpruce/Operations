@@ -599,7 +599,7 @@ router.post('/SBRDDetails', function (req, res) {
   // Check whether the variable matches a condition
   if (calcmethod == "SBC01"||calcmethod == "SBC03"){
     // Send user to next page
-    res.redirect('/SBRD_PaymentDetails')
+    res.redirect('/SBRD_paymentdetails')
   } if (calcmethod == "HGV01"){
     // Send user to next page
     res.redirect('/SBRD_Start')
