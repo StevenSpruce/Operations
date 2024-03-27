@@ -1,0 +1,169 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">
+      R01 has a deadline date of 22-05-2022.
+    </p>
+  </div>
+</div>
+
+{% include "./includes/nav.html" %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<h1 class="govuk-heading-l">Standard file tests</h1>
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#certificates">
+        ILR tests
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-week">
+        DataPresentation counts
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-tabs__panel" id="certificates">
+    <h2 class="govuk-heading-l">DataPresentation counts</h2>
+    <table class="govuk-table" data-module="moj-sortable-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Certificate name</th>
+          <th scope="col" class="govuk-table__header">Current thumbprint</th>
+          <th scope="col" class="govuk-table__header">Deadline date</th>
+          <th scope="col" class="govuk-table__header">Reminder date</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">api-fundingclaims-2021-22</td>
+          <td class="govuk-table__cell">43-BD-48-EC-FB-DF-14-57-31-3C-01-7A-CA-85-07-14-BE-FE-4B-08</td>
+          <td class="govuk-table__cell">2022-05-22</td>
+          <td class="govuk-table__cell">2022-04-15</td>
+          <td class="govuk-table__cell">
+          <a class="govuk-link" href="/editcertificate">Edit</a>
+          <a class="govuk-link" href="/closecertificate">Close</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">ServiceFabricDasCertificate</td>
+          <td class="govuk-table__cell">FF-D2-E4-E9-E2-05-04-E5-FF-41-26-EA-C4-53-47-99-D5-D5-1E-64</td>
+          <td class="govuk-table__cell">2023-01-21</td>
+          <td class="govuk-table__cell">2022-12-07</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/editcertificate">Edit</a>
+            <a class="govuk-link" href="/closecertificate">Close</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">ServiceFabricCertificate</td>
+          <td class="govuk-table__cell">AB-DD-04-D8-FD-B7-E9-94-9C-C2-55-E0-CA-32-90-3F-6C-74-1F-A9</td>
+          <td class="govuk-table__cell">2022-07-17</td>
+          <td class="govuk-table__cell">2022-06-03</td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/editcertificate">Edit</a>
+            <a class="govuk-link" href="/closecertificate">Close</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+    <h2 class="govuk-heading-l">DataPresentation counts</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">RunId</th>
+          <th scope="col" class="govuk-table__header">Date and time</th>
+          <th scope="col" class="govuk-table__header">Source</th>
+          <th scope="col" class="govuk-table__header">Count match?</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/CountDetails">0000976c-a041-4a5e-a707-576ae3ea5a63</a>
+            </td>
+          <td class="govuk-table__cell">2023-12-15 15:49:17</td>
+          <td class="govuk-table__cell">EAS2324</td>
+          <td class="govuk-table__cell">Yes</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="/CountDetails">5be142ad-1a78-4752-9ee7-707340d85a10</a></td>
+          <td class="govuk-table__cell">2023-12-15 15:49:17</td>
+          <td class="govuk-table__cell">PostcodesV2</td>
+          <td class="govuk-table__cell">Yes</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">8f243872-05b4-4fb6-9c1e-34aad89c614a</td>
+          <td class="govuk-table__cell">2023-12-15 15:49:17</td>
+          <td class="govuk-table__cell">AppEarnHistory</td>
+          <td class="govuk-table__cell">Yes</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">ad632f95-a143-444e-9021-f039dd027fbf</td>
+          <td class="govuk-table__cell">2023-12-15 15:49:17</td>
+          <td class="govuk-table__cell">Org</td>
+          <td class="govuk-table__cell">Yes</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">0000976c-a041-4a5e-a707-576ae3ea5a63</td>
+          <td class="govuk-table__cell">2023-12-15 15:49:17</td>
+          <td class="govuk-table__cell">SummarisedActuals</td>
+          <td class="govuk-table__cell">Yes</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">981ab64b-d5c4-422f-85e5-a966dcb0a623</td>
+          <td class="govuk-table__cell">2023-12-15 15:49:17</td>
+          <td class="govuk-table__cell">LARS</td>
+          <td class="govuk-table__cell">Yes</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">3bad8fff-ce35-49d1-8c91-b1e2302ab09b</td>
+          <td class="govuk-table__cell">2023-12-15 15:49:17</td>
+          <td class="govuk-table__cell">DASPayments</td>
+          <td class="govuk-table__cell">Yes</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">991c09cb-5dde-4377-a996-f6eb121fdf9e</td>
+          <td class="govuk-table__cell">2023-12-15 15:49:17</td>
+          <td class="govuk-table__cell">DASPayments_Audit</td>
+          <td class="govuk-table__cell">Yes</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+{% endblock %}

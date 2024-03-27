@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-m">EAS2324</h2>
+
+
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row" >
+              <td class="govuk-table__header">Source type</td>
+              <td class="govuk-table__header">Source count</td>
+              <td class="govuk-table__header">Destination count</td>
+              <td class="govuk-table__header">Difference</td>
+
+          </tr>
+          </thead>
+              <tbody><tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    dbo.AdjustmentType
+                  </td>
+                  <td class="govuk-table__cell govuk-!-text-align-left">24</td>
+                  <td class="govuk-table__cell">24</td>
+                  <td class="govuk-table__cell">0</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    dbo.EAS_Submission
+                  </td>
+                  <td class="govuk-table__cell govuk-!-text-align-left">
+                    256
+                  </td>
+                <td class="govuk-table__cell">256</td>
+                <td class="govuk-table__cell">0</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">                    dbo.EAS_Submission_Values
+                  </td>
+                  <td class="govuk-table__cell">45903</td>
+                <td class="govuk-table__cell">45903</td>
+                <td class="govuk-table__cell">0</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    dbo.FundingLine              </td>
+                  <td class="govuk-table__cell">32</td>
+                <td class="govuk-table__cell">32</td>
+                <td class="govuk-table__cell">0</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    dbo.Payment_Types
+                  </td>
+                  <td class="govuk-table__cell">170
+                </td>
+                <td class="govuk-table__cell">170</td>
+                <td class="govuk-table__cell">0</td>
+              </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+{% endblock %}
