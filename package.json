@@ -6,7 +6,10 @@
   },
   "name": "govuk-prototype-kit",
   "engines": {
-    "node": "20.x"
+    "node": "20.x",
+    "npm": "10.x",
+    "yarn": "1.x"
+
   },
   "dependencies": {
     "@govuk-prototype-kit/step-by-step": "^2.1.0",
