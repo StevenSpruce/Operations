@@ -31,32 +31,28 @@ GOV.UK Prototype Kit
                         XSB-90001238-1982343
                       </span>  
                   <h1 class="govuk-heading-l">Payment Details</h1>
-                  <form action="/form-handler" method="post" novalidate>
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-label--m" for="passport-number">
-                        Qualifying Period
-                      </label>
-                      <div id="passport-number-hint" class="govuk-hint">
-                        What is the qualifying period, in days, before the learner is included in the ILR?
-                      </div>
-                      <input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
-                    </div>
 
                     <div class="govuk-form-group">
                       <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                          Start Payment 
                         </legend>
+                        <label class="govuk-label govuk-label--s" for="passport-number">
+                          What is the start payment percentage?
+                        </label>
                         <div id="expiry-hint" class="govuk-hint">
-                            What is the start payment percentage?
+                          The start payment is based on evidence that the learner has an HGV provisional licence (and other conditions before they are recorded in the ILR)
                         </div>
                         <div class="govuk-input__wrapper">
                             <input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
                             <div class="govuk-input__suffix" aria-hidden="true">%</div>
                         </div>
                         <br>
+                        <label class="govuk-label govuk-label--s" for="passport-number">
+                          What is last date for new starts?
+                        </label>
                         <div id="expiry-hint" class="govuk-hint">
-                            What is last date for new starts?
+                            Description
                         </div>
                         <div class="govuk-input__wrapper">
                             <div class="govuk-date-input" id="passport-issued">
@@ -89,99 +85,111 @@ GOV.UK Prototype Kit
                         </br>
                     </div>
 
-                      <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
-                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                           Completion Payment 
-                          </legend>
-                          <div id="expiry-hint" class="govuk-hint">
-                              What is the completion payment percentage?
-                          </div>
-                          <div class="govuk-input__wrapper">
-                              <input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
-                              <div class="govuk-input__suffix" aria-hidden="true">%</div>
-                          </div>
-                          <br>
-                          <div id="expiry-hint" class="govuk-hint">
-                              What is last date for completion payment?
-                          </div>
-                          <div class="govuk-input__wrapper">
-                              <div class="govuk-date-input" id="passport-issued">
-                                  <div class="govuk-date-input__item">
-                                    <div class="govuk-form-group">
-                                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                                        Day
-                                      </label>
-                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                                    </div>
-                                  </div>
-                                  <div class="govuk-date-input__item">
-                                    <div class="govuk-form-group">
-                                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                                        Month
-                                      </label>
-                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                                    </div>
-                                  </div>
-                                  <div class="govuk-date-input__item">
-                                    <div class="govuk-form-group">
-                                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                                        Year
-                                      </label>
-                                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                                    </div>
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                         Completion Payment 
+                        </legend>
+                        <label class="govuk-label govuk-label--s" for="passport-number">
+                          What is the completion payment percentage?
+                        </label>
+                        <div id="expiry-hint" class="govuk-hint">
+                          The completion payment is based on the completion of learning and an offer of an interview (or alternatives for employed/ self-employed learners)
+                        </div>
+                        <div class="govuk-input__wrapper">
+                            <input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                            <div class="govuk-input__suffix" aria-hidden="true">%</div>
+                        </div>
+                        <br>
+                        <label class="govuk-label govuk-label--s" for="passport-number">
+                          What is last date for completion payment?
+                        </label>
+                        <div id="expiry-hint" class="govuk-hint">
+                            Description
+                        </div>
+                        <div class="govuk-input__wrapper">
+                            <div class="govuk-date-input" id="passport-issued">
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                      Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
                                   </div>
                                 </div>
-                          </div>
-                          </br>
-                      </div>
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                      Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                  </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                      Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        </br>
+                    </div>
 
-                      <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
-                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                           Outcome Payment 
-                          </legend>
-                          <div id="expiry-hint" class="govuk-hint">
-                              What is the outcome payment percentage?
-                          </div>
-                          <div class="govuk-input__wrapper">
-                              <input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
-                              <div class="govuk-input__suffix" aria-hidden="true">%</div>
-                          </div>
-                          <br>
-                          <div id="expiry-hint" class="govuk-hint">
-                              What is last date for outcome payment?
-                          </div>
-                          <div class="govuk-input__wrapper">
-                              <div class="govuk-date-input" id="passport-issued">
-                                  <div class="govuk-date-input__item">
-                                    <div class="govuk-form-group">
-                                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                                        Day
-                                      </label>
-                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                                    </div>
-                                  </div>
-                                  <div class="govuk-date-input__item">
-                                    <div class="govuk-form-group">
-                                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                                        Month
-                                      </label>
-                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                                    </div>
-                                  </div>
-                                  <div class="govuk-date-input__item">
-                                    <div class="govuk-form-group">
-                                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                                        Year
-                                      </label>
-                                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                                    </div>
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                         Outcome Payment 
+                        </legend>
+                        <label class="govuk-label govuk-label--s" for="passport-number">
+                          What is the outcome payment percentage?
+                        </label>
+                        <div id="expiry-hint" class="govuk-hint">
+                          The outcome payment is based on the commencement of a job or a role which utilises skills gained from the bootcamp (or alternatives for self-employed learners)
+                        </div>
+                        <div class="govuk-input__wrapper">
+                            <input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                            <div class="govuk-input__suffix" aria-hidden="true">%</div>
+                        </div>
+                        <br>
+                        <label class="govuk-label govuk-label--s" for="passport-number">
+                          What is last date for outcome payment?
+                        </label>
+                        <div id="expiry-hint" class="govuk-hint">
+                            Description
+                        </div>
+                        <div class="govuk-input__wrapper">
+                            <div class="govuk-date-input" id="passport-issued">
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                      Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
                                   </div>
                                 </div>
-                          </div>
-                          </br>
-                      </div>
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                      Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                  </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                      Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        </br>
+                    </div>
 
                       <a class="govuk-button" href="SBRD_contractsummary.html">Continue</a>
                   </form>
