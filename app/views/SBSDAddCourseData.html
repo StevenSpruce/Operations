@@ -1,0 +1,104 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<main class="govuk-main-wrapper" id="content" role="main">
+    <div class="govuk-grid-row flex">
+        <div class="govuk-grid-column-two-thirds">
+            
+
+            
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+<h1 class="govuk-heading">Add course data</h1>
+
+<p class="govuk-body">
+    Record Skills Bootcamp course data
+</p>
+
+
+<form method="post" id="radio-group" action="/few/staff/add-staff-member">
+    <div class="govuk-form-group">
+        <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="0">
+
+        <div class="govuk-form-group">
+            <h2 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--m" for="event-name">
+                What is the contract number?
+              </label>
+            </h2>
+            <input class="govuk-input" id="event-name" name="eventName" type="text">
+          </div>
+
+
+          <div class="govuk-form-group">
+            <h2 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--m" for="event-name">
+                What is the number of applicants?
+              </label>
+            </h2>
+            <input class="govuk-input" id="event-name" name="eventName" type="text">
+          </div>
+
+
+         
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h2 class="govuk-fieldset__heading">
+                        What is the delivery location type?
+                    </h2>
+                </legend>
+                <div id="gender-hint" class="govuk-hint">
+                    <p>hint text.</p>
+                 </div>
+            <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId21" name="StaffMember.GenderId" value="Female" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId21" class="govuk-label govuk-radios__label">
+                                This type
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId20" name="StaffMember.GenderId" value="Male" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId20" class="govuk-label govuk-radios__label">
+                                That type
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId22" name="StaffMember.GenderId" value="Identifies in another way" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId22" class="govuk-label govuk-radios__label">
+                                Some other type
+                            </label>
+                        </div>
+            </div>
+            <br>
+    </fieldset>
+</div>
+
+    <button class="govuk-button" type="submit" formaction="/SBSDSummaryCourse">
+        Save and continue
+    </button>
+</div>
+</div>
+
+
+
+        </div>
+    </div>
+</main>
+</div>
+
+</body>
+
+
+
+
+{% endblock %}

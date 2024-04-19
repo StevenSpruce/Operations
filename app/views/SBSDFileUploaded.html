@@ -1,0 +1,152 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<body class="govuk-template__body  js-enabled">
+
+    <a href="/submission-options" class="govuk-back-link">Back</a>
+    
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <div class="govuk-grid-column-three-quarters">
+                    <form method="post" action="/FEWDirecttoComplete">
+
+
+<div class="govuk-panel govuk-panel--confirmation secondary">
+    <h1 class="govuk-panel__title">
+        File Uploaded
+    </h1>
+    <div class="govuk-panel__body">
+        Checking file for errors and preparing reports<br>
+        Submission Reference: 1946310
+    </div>
+</div>
+
+<h2 class="govuk-heading-m">What to do next:</h2>
+<p class="govuk-body">
+    </p><ul class="govuk-list govuk-list--number">
+        <li>You must check the summary reports for any errors</li>
+        <li>Correct any errors and upload a new file</li>
+        <li>Check email for notifications</li>
+    </ul>
+
+<p>
+    <a class="govuk-button secondary" href="/SBSDSelectCollectionType">Check reports</a>
+</p>
+
+<h2 class="govuk-heading-m">Upload details</h2>
+<dl class="govuk-summary-list dl-override">
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key dt-override">
+        File
+    </dt>
+    <dd class="govuk-summary-list__value dd-override">
+        SBSD-10041007-20220609-090000-02.XML
+    </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key dt-override">
+        Submitted by
+    </dt>
+    <dd class="govuk-summary-list__value dd-override">
+        Joe Bloggs
+    </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key dt-override">
+        Time and date
+    </dt>
+    <dd class="govuk-summary-list__value dd-override">
+        10:19am on Friday 10 June 2024
+    </dd>
+    </div>
+</dl>
+
+<h2 class="govuk-heading-m">Notifications about this submission</h2>
+<p>A file has been submitted:</p>
+<p class="govuk-body">
+    </p><ul class="govuk-list govuk-list--number">
+        <li>An email has been sent to JoeBloggs@gmail.com</li>
+        <li>Check your email for confirmation of this submission</li>
+        <li>When reports are ready a separate notification email will be sent within thirty minutes of this submission</li>
+    </ul>
+<p></p>
+
+<details class="govuk-details">
+    <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+            Wrong email address or email not arrived
+        </span>
+    </summary>
+    <div class="govuk-details__text">
+        <p>If your email address is wrong, you'll need to <a href="https://services.signin.education.gov.uk/">update it in your DfE Sign-in account</a>.</p>
+        <p>If you haven't received an email, it may be in your junkmail folder.</p>
+    </div>
+</details>
+
+<p><a href="/FEWHomeOpen">Submit another data return</a></p>
+
+                </div>
+                    <div class="govuk-grid-column-one-quarter">
+                        <aside class="app-related-items" role="complementary">
+                            <h2 class="govuk-heading-m" id="subsection-title-help">
+                                Help and support
+                            </h2>
+
+
+                            <h3 class="govuk-heading-s">ESFA support desk</h3>
+                            <p class="govuk-!-font-size-16">Log a query using our 
+                                <a class="govuk-link" href=" https://form.education.gov.uk/en/AchieveForms/?form_uri=sandbox-publish://AF-Process-f9f4f5a1-936f-448b-bbeb-9dcdd595f468/AF-Stage-8aa41278-3cdd-45a3-ad87-80cbffb8b992/definition.json&amp;redirectlink=%2fen&amp;cancelRedirectLink=%2fen" target="_blank">
+                                            ESFA Service Desk enquiry form
+                                </a>
+                            </p>
+                            <p class="govuk-!-font-size-16">Get help with 
+                                <a class="govuk-link" href="  https://esfahelp.education.gov.uk/hc/en-gb/" target="_blank">
+                                           Education and Skills Funding Agency Services
+                                </a>
+                            </p>
+                            
+                            <p class="govuk-!-font-size-16">
+                                Telephone: 0370 267 0001<br>
+                                Monday to Thursday, 9:00am to 5:00pm<br>
+                                Friday, 9:00am to 4:00pm<br>
+                            </p>
+
+                            
+    
+
+    <h2 class="govuk-heading-m" id="subsection-title-related-content">
+        Related content
+    </h2>
+    <nav role="navigation" aria-labelledby="subsection-title-related-content">
+        <ul class="govuk-list govuk-!-font-size-16">
+                <li>
+                    <a href="https://www.gov.uk/government/publications/further-education-workforce-data-collection" target="_blank">
+                        Further education (FE) workforce staff record specification: 2021 to 2022
+                    </a>
+                </li>
+
+        </ul>
+    </nav>
+
+
+
+                        </aside>
+                    </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+
+
+{% endblock %}
