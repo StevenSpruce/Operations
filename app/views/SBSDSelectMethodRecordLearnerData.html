@@ -1,0 +1,69 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <div class="govuk-grid-column-two-thirds">
+                    
+
+                    
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">Record learner data: select method</h1>
+
+        <p class="govuk-body">
+            Submissions must use either the online form or an XML file.
+        </p>
+
+        <form method="post" action="/SBSDLearnerMethodSelection">
+            <div class="govuk-form-group">
+                
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        Select an option
+                    </legend>
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="option-1" type="radio" value="online" aria-describedby="option-1-item-hint" name="SelectedOptionLearner">
+                            <label class="govuk-label govuk-radios__label" for="option-1">
+                                Use the online form service
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="option-3" type="radio" value="uploadXml" aria-describedby="option-3-item-hint" name="SelectedOptionLearner">
+                            <label class="govuk-label govuk-radios__label" for="option-3">
+                                Upload an XML file
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <br>
+                <br>
+                <button class="govuk-button" type="submit">
+                    Continue
+                </button>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JXkYVn2PiNDhyrTwLjKaCrIV0AECWV5IRjfS6lbTHLebDTekZW_bxMW-TOXF59LVf1rwxPl4zWhToxb-merZrZw-fLFhdRstI3SPEKzzbLnA11WEyIX8F2P5nI9OFdJTIXwu1eVpMoHoTSzSWFaC4EyKUmMsdhMmShf4PLm1VOBxVZvwlT93SfVdrn8FWZ_1A"></form>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+</body>
+
+
+{% endblock %}

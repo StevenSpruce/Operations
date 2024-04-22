@@ -19,10 +19,10 @@ GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
 <div class="govuk-grid-column-full">
-<h1 class="govuk-heading">Add employer contact data</h1>
+<h1 class="govuk-heading">Add learner data</h1>
 
 <p class="govuk-body">
-    Record Skills Bootcamp employer contact data
+    Record Skills Bootcamp learner data
 </p>
 
 
@@ -33,12 +33,12 @@ GOV.UK Prototype Kit
         <div class="govuk-form-group">
             <h2 class="govuk-label-wrapper">
               <label class="govuk-label govuk-label--m" for="event-name">
-                What is the name of the contact?
+                What is the contract number?
               </label>
             </h2>
-            <div id="email-hint" class="govuk-hint">
-              hint text - why we need this?
-            </div>
+            <div id="gender-hint" class="govuk-hint">
+                <p>hint text</p>
+             </div>
             <input class="govuk-input" id="event-name" name="eventName" type="text">
           </div>
 
@@ -46,32 +46,18 @@ GOV.UK Prototype Kit
           <div class="govuk-form-group">
             <h2 class="govuk-label-wrapper">
               <label class="govuk-label govuk-label--m" for="event-name">
-                What is their email address?
+                What is the learner's unique learner number (ULN)?
               </label>
             </h2>
-            <div id="email-hint" class="govuk-hint">
-                hint text - why we need this?
-              </div>
+            <div id="gender-hint" class="govuk-hint">
+                <p>The learner's unique learner number, as held on the Learner Register, obtained from the Learning Records Service (LRS)</p>
+             </div>
             <input class="govuk-input" id="event-name" name="eventName" type="text">
           </div>
-          
-          <div class="govuk-form-group">
-            <h2 class="govuk-label-wrapper">
-              <label class="govuk-label govuk-label--m" for="event-name">
-                What is their telephone number
-              </label>
-            </h2>
-            <div id="email-hint" class="govuk-hint">
-                hint text - why we need this?
-              </div>
-            <input class="govuk-input" id="event-name" name="eventName" type="text">
-          </div>
-     
 
-   
 </div>
 
-    <button class="govuk-button" type="submit" formaction="/SBSDAddEmployerData3">
+    <button class="govuk-button" type="submit" formaction="/SBSDAddLearnerData1">
         Save and continue
     </button>
 </div>
