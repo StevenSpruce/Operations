@@ -1,0 +1,54 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <div class="govuk-grid-column-two-thirds">
+                    
+
+                    
+<form method="post" id="vacancy-start" action="/SBSDAddCourseData">
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Skills Bootcamp course data</h1>
+
+        <h3 class="govuk-heading-m">Before you start</h3>
+        <p>This service uses an online form.</p>
+        <p>You will need:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+                the contract reference number
+            </li>
+            <li>
+                the current learner starts target per month
+            </li>
+            <li>
+                the total number of applicants
+            </li>
+            <li>
+                the delivery location type
+            </li>
+        </ul>
+    </div>
+</div>
+
+<button class="govuk-button" type="submit" id="submit">Start now</button>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+{% endblock %}

@@ -657,3 +657,44 @@ router.post('/SBRDMidCourse', function (req, res) {
   }
 })
 
+
+
+// Run this code when a form is submitted to 'juggling-balls-answer'
+router.post('/SBSDCollectionSelection', function (req, res) {
+
+  // Make a variable and give it the value from 'SelectedOption'
+  var SelectedOption = req.session.data['SelectedOption']
+
+  
+
+  // Check whether the variable matches a condition
+  if (SelectedOption == "course" ){
+    // Send user to next page
+    res.redirect('/SBSDCourseList')
+  } else if (SelectedOption == "employer"){
+    // Send user to ineligible page
+    res.redirect('/SBSDEmployerList')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/SBSDLearnerList')
+  }
+})
+
+
+router.post('/SBSDLearnerMethodSelection', function (req, res) {
+
+  // Make a variable and give it the value from 'FEWStaffMethodSelection'
+  var SelectedOptionLearner = req.session.data['SelectedOptionLearner']
+
+  // Check whether the variable matches a condition
+  if (SelectedOptionLearner == "online"){
+    // Send user to next page
+    res.redirect('/SBSDLearnerStart')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/SBSDUploadLearnerFile')
+  }
+})
+
+
+

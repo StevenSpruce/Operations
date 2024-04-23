@@ -1,0 +1,85 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+            
+                    
+
+                    
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">Record Skills Bootcamp supplementary data</h1>
+
+        <p class="govuk-body">
+            This data collection has 3 parts.  
+        </p>
+
+        <form method="post" id="radio-group" action="/SBSDCollectionSelection">
+            <div class="govuk-form-group">
+                
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">
+                            Select an option
+                        </h2>
+                    </legend>
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="option-1" type="radio" value="course" aria-describedby="option-1-item-hint" name="SelectedOption">
+                            <label class="govuk-label govuk-radios__label" for="option-1">
+                                View and update course data
+                            </label>
+                            <div id="option-1-item-hint" class="govuk-hint govuk-radios__hint">
+                                hint item - what is the data?
+                            </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                            
+                                <input class="govuk-radios__input" id="option-2a" type="radio" value="employer" aria-describedby="option-2-item-hint" name="SelectedOption">
+                            
+                            <label class="govuk-label govuk-radios__label" for="option-2">
+                                View and update employer data 
+                            </label>
+                            <div id="option-2-item-hint" class="govuk-hint govuk-radios__hint">
+                                hint item - what is the data?
+                            </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                            
+                            <input class="govuk-radios__input" id="option-2a" type="radio" value="learner" aria-describedby="option-2-item-hint" name="SelectedOption">
+                        
+                        <label class="govuk-label govuk-radios__label" for="option-2">
+                            View and update learner data 
+                        </label>
+                        <div id="option-2-item-hint" class="govuk-hint govuk-radios__hint">
+                            hint item - what is the data?
+                        </div>
+                    </div>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <button class="govuk-button" type="submit" id="submit">Continue</button>
+            
+    </div>
+</div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+</body>
+
+{% endblock %}
