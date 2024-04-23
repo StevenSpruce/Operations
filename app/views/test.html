@@ -1,0 +1,165 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<div class="govuk-body-column-two-thirds">
+
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          SBC01
+          </legend>
+          <label class="govuk-label govuk-label--s" for="passport-number">
+            Wave 3 Bootcamps
+          </label>
+        </fieldset>
+
+        <details class="govuk-details">
+        <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+            Details 
+            </span>
+        </summary>
+        <div class="govuk-details__text">
+            <div class="govuk-summary-list">
+                <div class="govuk-summary-list__body">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__value">
+                            <strong> Start date</strong>
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            23-02-2024
+                        </dd>
+                        <dt class="govuk-summary-list__value">
+                            <strong> End date</strong>
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            11-07-2025
+                        </dd>
+                    </div>
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-1">
+                        <div class="govuk-summary-list__row no-border-bottom">
+                            <dt class="govuk-summary-list__value">
+                                <strong> Is qualifying period information required?</strong>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dt class="govuk-summary-list__value">
+                                <strong> Description</strong>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                The qualifying period is necessary because of..
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__value">
+                                <strong> Is start payment information required?</strong>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dt class="govuk-summary-list__value">
+                                <strong> Description</strong>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                In this example, we use our tool to prepare for a math exam. We randomize the order of study notes for self-testing
+                            </dd>
+                            </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__value">
+                                <strong> Is mid course payment information required?</strong>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dt class="govuk-summary-list__value">
+                                <strong> Description</strong>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                N/a
+                            </dd>
+                            </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__value">
+                                <strong> Is completion payment information required?</strong>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dt class="govuk-summary-list__value">
+                                <strong> Description</strong>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                In this example, we use our tool to prepare for a math exam. We randomize the order of study notes for self-testing
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__value">
+                                <strong> Is outcome payment information required?</strong>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dt class="govuk-summary-list__value">
+                                <strong> Description</strong>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                hdbdbbdhbjbdjbdj
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__value">
+                                <strong> Is last date for outcome payment information required?</strong>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                        </div>
+                    </dl>
+
+            
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__value">
+                            <strong> Last Modified by</strong>
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Jo Bloggs
+                        </dd>
+                        <dt class="govuk-summary-list__value">
+                            <strong> Date Modified</strong>
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            11-07-2025
+                        </dd>
+                    </div>
+            
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__value">
+                            <strong> Created by</strong>
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Jo Bloggs
+                        </dd>
+                        <dt class="govuk-summary-list__value">
+                            <strong> Date Created</strong>
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            11-07-2025
+                        </dd>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        </details>
+    </div>
+
+</div>
+
+{% endblock %}
