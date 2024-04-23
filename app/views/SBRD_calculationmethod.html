@@ -156,11 +156,39 @@ GOV.UK Prototype Kit
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="whereDoYouLive" name="calcmethod" type="radio" value="SBC01">
             <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-              SBC01
+              <strong>SBC01</strong>
             </label>
             <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
               Wave 3 Bootcamps.
             </div>
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Details
+                </span>
+              </summary>
+              <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-table__caption--m">Calculation methods</caption>
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Qualifying period</th>
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Start payment</th>
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Mid-course payment</th>
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Completion payment</th>
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Outcome payment</th> 
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">The start payment is based on a 5 day qualifying period (and other conditions before they are recorded in the ILR)</td>
+                    <td class="govuk-table__cell">hvhdv v b vb vk</td>
+                    <td class="govuk-table__cell">N/a</td>
+                    <td class="govuk-table__cell">The completion payment is based on the completion of learning and an offer of an interview (or alternatives for employed/ self-employed learners)</td>
+                    <td class="govuk-table__cell">The outcome payment is based on the commencement of a job or a role which utilises skills gained from the bootcamp (or alternatives for self-employed learners)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </details>
           </div>
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="whereDoYouLive-2" name="calcmethod" type="radio" value="SBC03">
@@ -219,9 +247,12 @@ GOV.UK Prototype Kit
         </div>
       </fieldset>
     </div>
+  
 
   
     <button class="govuk-button" type="submit" id="submit">Continue</button>
+
+  </form>
           
 
 
