@@ -8,339 +8,338 @@ GOV.UK Prototype Kit
 
 {% include "./includes/nav.html" %}
 
+<div class="govuk-width-container">
+  <a href="/OPSSBCCalcMethods.html" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
 
+        <h1>Add a calculation method</h1>
 
-<a href="/OPSSBCCalcMethods.html" class="govuk-back-link">Back</a>
-
-<h1>Add a calculation method</h1>
-<div class="govuk-grid-column">
-<div class="govuk-grid-column-two-thirds">
-
-<fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">What is the calculation method code ?
-      </label>
-      </h2>
-    </legend>
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="address-line-1">
-        For Example, SBC01, HGV03
-      </label>
-      <input class="govuk-input govuk-!-width-one-half govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
-    </div>
-</fieldset>
-
-<fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-    <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price"> Description</label>
-    </h2>
-  </legend>
-  <div id="event-name-hint" class="govuk-hint">
-    <mark>For example, Wave 3 Bootcamps or DPS Round 1 Bootcamps</mark>
-  </div> 
-  <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
-      <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
-  </td>
-</fieldset>
-
-
-<fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-    <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">Calculation method start date </label>
-    </h2>
-  </legend>
-  <div class="govuk-date-input" id="passport-issued">
-    <div class="govuk-date-input__item">
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-          Day
-        </label>
-        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-      </div>
-    </div>
-    <div class="govuk-date-input__item">
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-          Month
-        </label>
-        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-      </div>
-    </div>
-    <div class="govuk-date-input__item">
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-          Year
-        </label>
-        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-      </div>
-    </div>
-  </div>
-  
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-    <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">Calculation method end date
-    </label>
-    </h2>
-  </legend>
-  <div class="govuk-date-input" id="passport-issued">
-    <div class="govuk-date-input__item">
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-          Day
-        </label>
-        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-      </div>
-    </div>
-    <div class="govuk-date-input__item">
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-          Month
-        </label>
-        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-      </div>
-    </div>
-    <div class="govuk-date-input__item">
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-          Year
-        </label>
-        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-      </div>
-    </div>
-  </div>
-</fieldset>
-
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
-           Is qualifying period information required?</label>
-        </h2>
-      </legend>
-      <div id="contact-hint" class="govuk-hint">
-        Select one option.
-      </div>
-      <div class="govuk-radios" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="qualifyingperiod">
-          <label class="govuk-label govuk-radios__label" for="contact">
-            Yes
-          </label>
-        </div>
-        <div class="govuk-radios__conditional" id="qualifyingperiod">
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="contact-by-email">
-              Description
-            </label>
-            <div id="event-name-hint" class="govuk-hint">
-              When this calculation method is selected, this will be displayed as the description of the qualifying period within the web UI.
+        <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">What is the calculation method code ?
+              </label>
+              </h2>
+            </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="address-line-1">
+                For Example, SBC01, HGV03
+              </label>
+              <input class="govuk-input govuk-!-width-one-half govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
             </div>
-            <br>
-            <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
-          </div>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-          <label class="govuk-label govuk-radios__label" for="contact-2">
-            No
-          </label>
-        </div>
-      </div>
-    </fieldset>
-  </div>
+        </fieldset>
 
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
-           Is start payment information required?</label>
-        </h2>
-      </legend>
-      <div id="contact-hint" class="govuk-hint">
-        Select one option.
-      </div>
-      <div class="govuk-radios" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="startpayment">
-          <label class="govuk-label govuk-radios__label" for="contact">
-            Yes
-          </label>
-        </div>
-        <div class="govuk-radios__conditional" id="startpayment">
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="contact-by-email">
-              Description
-            </label>
-            <div id="event-name-hint" class="govuk-hint">
-              When this calculation method is selected, this will be displayed as the description of the start payment percentage within the web UI
-            </div>
-            <br>
-            <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
-          </div>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-          <label class="govuk-label govuk-radios__label" for="contact-2">
-            No
-          </label>
-        </div>
-      </div>
-    </fieldset>
-  </div>
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price"> Description</label>
+            </h2>
+          </legend>
+          <div id="event-name-hint" class="govuk-hint">
+            <mark>For example, Wave 3 Bootcamps or DPS Round 1 Bootcamps</mark>
+          </div> 
+          <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
+              <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
+          </td>
+        </fieldset>
 
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
-           Is mid-course payment information required?</label>
-        </h2>
-      </legend>
-      <div id="contact-hint" class="govuk-hint">
-        Select one option.
-      </div>
-      <div class="govuk-radios" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="midcoursepayment">
-          <label class="govuk-label govuk-radios__label" for="contact">
-            Yes
-          </label>
-        </div>
-        <div class="govuk-radios__conditional" id="midcoursepayment">
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="contact-by-email">
-              Description
-            </label>
-            <div id="event-name-hint" class="govuk-hint">
-              When this calculation method is selected, this will be displayed as the description of the mid-course payment percentage within the web UI
-            </div>
-            <br>
-            <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
-          </div>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-          <label class="govuk-label govuk-radios__label" for="contact-2">
-            No
-          </label>
-        </div>
-      </div>
-    </fieldset>
-  </div>  
 
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
-           Is completion payment information required?</label>
-        </h2>
-      </legend>
-      <div id="contact-hint" class="govuk-hint">
-        Select one option.
-      </div>
-      <div class="govuk-radios" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="completionpayment">
-          <label class="govuk-label govuk-radios__label" for="contact">
-            Yes
-          </label>
-        </div>
-        <div class="govuk-radios__conditional" id="completionpayment">
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="contact-by-email">
-              Description
-            </label>
-            <div id="event-name-hint" class="govuk-hint">
-              When this calculation method is selected, this will be displayed as the description of the completion payment percentage within the web UI
-            </div>
-            <br>
-            <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
-          </div>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-          <label class="govuk-label govuk-radios__label" for="contact-2">
-            No
-          </label>
-        </div>
-      </div>
-    </fieldset>
-  </div>
-
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
-           Is outcome payment information required?</label>
-        </h2>
-      </legend>
-      <div id="contact-hint" class="govuk-hint">
-        Select one option.
-      </div>
-      <div class="govuk-radios" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="outcomepayment">
-          <label class="govuk-label govuk-radios__label" for="contact">
-            Yes
-          </label>
-        </div>
-        <div class="govuk-radios__conditional" id="outcomepayment">
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="contact-by-email">
-              Description
-            </label>
-            <div id="event-name-hint" class="govuk-hint">
-              When this calculation method is selected, this will be displayed as the description of the outcome payment percentage within the web UI
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">Calculation method start date </label>
+            </h2>
+          </legend>
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
               </div>
-            <br>
-            <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+  
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">Calculation method end date
+            </label>
+            </h2>
+          </legend>
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
+                  Is qualifying period information required?</label>
+                </h2>
+              </legend>
+              <div id="contact-hint" class="govuk-hint">
+                Select one option.
+              </div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="qualifyingperiod">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional" id="qualifyingperiod">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                      Description
+                    </label>
+                    <div id="event-name-hint" class="govuk-hint">
+                      When this calculation method is selected, this will be displayed as the description of the qualifying period within the web UI.
+                    </div>
+                    <br>
+                    <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="contact-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
+                  Is start payment information required?</label>
+                </h2>
+              </legend>
+              <div id="contact-hint" class="govuk-hint">
+                Select one option.
+              </div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="startpayment">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional" id="startpayment">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                      Description
+                    </label>
+                    <div id="event-name-hint" class="govuk-hint">
+                      When this calculation method is selected, this will be displayed as the description of the start payment percentage within the web UI
+                    </div>
+                    <br>
+                    <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="contact-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
+                  Is mid-course payment information required?</label>
+                </h2>
+              </legend>
+              <div id="contact-hint" class="govuk-hint">
+                Select one option.
+              </div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="midcoursepayment">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional" id="midcoursepayment">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                      Description
+                    </label>
+                    <div id="event-name-hint" class="govuk-hint">
+                      When this calculation method is selected, this will be displayed as the description of the mid-course payment percentage within the web UI
+                    </div>
+                    <br>
+                    <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="contact-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>  
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
+                  Is completion payment information required?</label>
+                </h2>
+              </legend>
+              <div id="contact-hint" class="govuk-hint">
+                Select one option.
+              </div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="completionpayment">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional" id="completionpayment">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                      Description
+                    </label>
+                    <div id="event-name-hint" class="govuk-hint">
+                      When this calculation method is selected, this will be displayed as the description of the completion payment percentage within the web UI
+                    </div>
+                    <br>
+                    <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="contact-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
+                  Is outcome payment information required?</label>
+                </h2>
+              </legend>
+              <div id="contact-hint" class="govuk-hint">
+                Select one option.
+              </div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="outcomepayment">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional" id="outcomepayment">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                      Description
+                    </label>
+                    <div id="event-name-hint" class="govuk-hint">
+                      When this calculation method is selected, this will be displayed as the description of the outcome payment percentage within the web UI
+                      </div>
+                    <br>
+                    <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="contact-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
+                  Is last date for outcome payment information required?</label>
+                </h2>
+              </legend>
+              <div id="contact-hint" class="govuk-hint">
+                Select one option.
+              </div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="contact-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-button-group">
+            <a href="/OPSSBCCalcMethods.html" button class="govuk-button" data-module="govuk-button">
+              Save Calculation Method
+            </a>
+            <a class="govuk-link" href="/OPSSBCCalcMethods.html">Cancel</a>
           </div>
         </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-          <label class="govuk-label govuk-radios__label" for="contact-2">
-            No
-          </label>
-        </div>
       </div>
-    </fieldset>
-  </div>
-
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
-           Is last date for outcome payment information required?</label>
-        </h2>
-      </legend>
-      <div id="contact-hint" class="govuk-hint">
-        Select one option.
-      </div>
-      <div class="govuk-radios" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-          <label class="govuk-label govuk-radios__label" for="contact">
-            Yes
-          </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-          <label class="govuk-label govuk-radios__label" for="contact-2">
-            No
-          </label>
-        </div>
-      </div>
-    </fieldset>
-  </div>
-
-  <div class="govuk-button-group">
-    <a href="/OPSSBCCalcMethods.html" button class="govuk-button" data-module="govuk-button">
-      Save Calculation Method
-    </a>
-    <a class="govuk-link" href="/OPSSBCCalcMethods.html">Cancel</a>
-  </div>
-
-</div>
-</div>
-</div>
+    </main>
 </div>
 
 {% endblock %}
