@@ -9,130 +9,121 @@
 {% include "./includes/nav.html" %}
 
 <div class="govuk-width-container">
-    <a href="OPSSBCWaves.html" class="govuk-back-link">Back</a>
+    <a href="#" class="govuk-back-link">Back</a>
     <main class="govuk-main-wrapper">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">       
-        
-                <h1 class="govuk-heading-x1">Manage contract funding wave</h1>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">       
+    
+                    <h1 class="govuk-heading-x1">Manage contract funding wave</h1>
 
-                <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                      <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
-                          Contract wave name</label>
-                      </h2>
-                      </legend>
-                      <div class="govuk-form-group">
-                        <label class="govuk-label" for="address-line-1">
-                          For example, Wave 3, DPS Round 1
-                        </label>
-                        <input class="govuk-input govuk-!-width-one-half govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
-                      </div>
-                  </fieldset>
-                  
-                  <fieldset class="govuk-fieldset">
-                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                          <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">
-                          Description</label>
-                          </h2>
-                      </legend>
-                      <div class="govuk-form-group">
-                        <label class="govuk-label" for="address-line-1">
-                          Give details about this contract funding wave 
-                        </label>
-                        <div class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-full">
-                          <textarea class="govuk-textarea" id="more-detail" rows="3" aria-describedby="more-detail-hint" name="Message"></textarea>
-                        </div>
-                      </div>
-                  </fieldset>
-                  
-                  <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                      <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">Contract Wave Start Date 
-                      </label>
-                      </h2>
-                    </legend>
-                    <div class="govuk-date-input" id="passport-issued">
-                      <div class="govuk-date-input__item">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                            Day
-                          </label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                        </div>
-                      </div>
-                      <div class="govuk-date-input__item">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                            Month
-                          </label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                        </div>
-                      </div>
-                      <div class="govuk-date-input__item">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                            Year
-                          </label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                      <h2 class="govuk-label-wrapper"><label class="govuk-label--m" for="assessment-price">Contract Wave End Date
-                      </label>
-                      </h2>
-                    </legend>
-                    <div class="govuk-date-input" id="passport-issued">
-                      <div class="govuk-date-input__item">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                            Day
-                          </label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                        </div>
-                      </div>
-                      <div class="govuk-date-input__item">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                            Month
-                          </label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                        </div>
-                      </div>
-                      <div class="govuk-date-input__item">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                            Year
-                          </label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                        </div>
-                      </div>
-                    </div>
-                  </fieldset>
+                <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-!-font-weight-bold">
+                                <strong>Contract funding wave</strong>
+                            </td>
+                            <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
+                                <p>Wave 3</p>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-!-font-weight-bold">
+                                <strong>Description</strong>
+                            </td>
+                            <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
+                                <textarea class="govuk-textarea" id="more-detail" rows="5" aria-describedby="more-detail-hint" name="Message">N/a</textarea>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-!-font-weight-bold">
+                                <strong>Contract wave start date</strong>
+                            </td>
+                            <td>
+                                <div class="govuk-date-input" id="passport-issued">
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                            Day
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                                        </div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                            Month
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                        </div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                            Year
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-!-font-weight-bold">
+                                <strong>Contract wave end date</strong>
+                            </td>
+                            <td>
+                                <div class="govuk-date-input" id="passport-issued">
+                                    <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                        Day
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                                    </div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                        Month
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                    </div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                        Year
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                                    </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-!-font-weight-bold">
+                                <strong>Display on SLD</strong>
+                            </td>
+                            <td class="govuk-table__cell govuk-!-font-weight-bold">
+                                <div class="govuk-checkboxes__item margin-bottom-5">
+                                    <input id="Home" class="govuk-checkboxes__input" name="SelectedPages" type="checkbox" value="Home">
+                                    <label class="govuk-label govuk-checkboxes__label" for="Home"></label>
+                                </div>
+                            </td>
+                        </tr> 
+                    </tbody>
+                    </table>
 
-                  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                      <h2 class="govuk-fieldset__heading">
-                       Display in SLD
-                      </h2>
-                    </legend>
-                    <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
-                        <label class="govuk-label govuk-checkboxes__label" for="contact">
-                        </label>
-                    </div>
-                </fieldset>
-                <br>
-              
-
-                <div id="buttons" class="block">
+                    <div id="buttons" class="block">
                     <button type="submit" id="submitButton" name="save" class="govuk-button" value="save">Save</button>
+                    
                     <a class="govuk-button govuk-button--secondary" href="/OPSSBCWaves">Cancel</a>
+                    </div>
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8G7gS31nNThAl6QmW19BnUEPc9YVU5v4vWNDd9GW8TniHGmAUn13M7Vg3LzEKRBceUQiyoaozbAjT6giudod8lWnp-p00WUvYdCTPkTI_rDrvIVAU95vRUHb84ywKWQ3y6Umg2OhSzYs_PpKQPqETaJY3oPdErwhxfhvppBMJJ0VO5hdAQGwQF4aJe6yYoDndw"></form>
+
                 </div>
-            </div>
-        </div>    
+            </main>
+        </div>
+
     </main>
 </div>
 
