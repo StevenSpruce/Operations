@@ -22,50 +22,58 @@ GOV.UK Prototype Kit
   </ul>
 </nav>
 
-    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<div class="govuk-width-container">
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
 
-    <span class="govuk-caption-m">
-      XSB-90001235-0102934
-    </span>
+        <span class="govuk-caption-m">
+          XSB-90001235-0102934
+        </span>
 
-    <h1 class="govuk-heading-l">Calculation variables</h1>
+        <h1 class="govuk-heading-l">Calculation variables</h1>
 
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset">
-          <h2 class="govuk-heading-m">What Skills Bootcamp wave does the contract belong to?</h2>
-        <div class="govuk-radios" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-            <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-              Wave 3
-            </label>
-            <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
-              Hint text.
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+              <h2 class="govuk-heading-m">What Skills Bootcamp wave does the contract belong to?</h2>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Wave 3
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  Hint text.
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                  DPS round 1
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  Hint text.
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+                  DPS round 2
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  Hint text.
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-              DPS round 1
-            </label>
-            <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
-              Hint text.
-            </div>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
-            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
-              DPS round 2
-            </label>
-            <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
-              Hint text.
-            </div>
-          </div>
+          </fieldset>
         </div>
-      </fieldset>
+    
+        <a class="govuk-button" href="SBRD_calculation.html">Continue</a>
+      </div>
     </div>
- 
-    <a class="govuk-button" href="SBRD_calculation.html">Continue</a>
+  </main>
+</div>
 
 
 {% endblock %}
