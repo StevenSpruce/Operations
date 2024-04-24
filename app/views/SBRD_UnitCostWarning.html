@@ -5,30 +5,38 @@ GOV.UK Prototype Kit
 {% endblock %}
 {% block content %}
 
-    <a href="/SBRD_ContractDatesCost.html" class="govuk-back-link">Back</a>
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper">
+      <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
 
-    <span class="govuk-caption-m">
-        XSB-90001232-20240210
-    </span>
+                <span class="govuk-caption-m">
+                    XSB-90001232-20240210
+                </span>
 
-    <h1 class="govuk-heading-xl">Confirm Unit Cost</h1>
+                <h1 class="govuk-heading-xl">Confirm Unit Cost</h1>
 
-    <p class="govuk-body-l">The unit cost that has been input exceeds £10,000. Are you sure that you have entered the correct value?</p>
+                <p class="govuk-body-l">The unit cost that has been input exceeds £10,000. Are you sure that you have entered the correct value?</p>
 
-    <table class="govuk-table">
-        </thead>
-        <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Unit Cost</th>
-                <td class="govuk-table__cell">£11,132.56</td>
-            </tr>
-        </tbody>
-      </table>
-    
+                <table class="govuk-table">
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Unit Cost</th>
+                            <td class="govuk-table__cell">£11,132.56</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
 
-    <div class="govuk-button-group">
-        <a href="/SBRD_paymentdetails.html" id="EditLink" class="govuk-button">Confirm</a>
-        <a href="/SBRD_ContractDatesCost.html" id="DeleteLink" class="govuk-button govuk-button--secondary" data-module="govuk-button">Cancel</a>
-      </div>
+                <div class="govuk-button-group">
+                    <a href="/SBRD_paymentdetails.html" id="EditLink" class="govuk-button">Confirm</a>
+                    <a href="/SBRD_ContractDatesCost.html" id="DeleteLink" class="govuk-link" data-module="govuk-link">Cancel</a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</div>
 
 {% endblock %}  
