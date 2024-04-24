@@ -587,7 +587,7 @@ router.post('/SBRDCalcMethod', function (req, res) {
     res.redirect('/SBRD_ContractDatesCost')
   } else {
     // Send user to ineligible page
-    res.redirect('/SBRD_MidCourse')
+    res.redirect('/SBRD_ContractDatesCost')
   }
 })
 
@@ -608,7 +608,7 @@ router.post('/SBRDDetails', function (req, res) {
     res.redirect('/SBRD_paymentdetails3')
   } else {
     // Send user to ineligible page
-    res.redirect('/SBRD_MidCourse')
+    res.redirect('/SBRD_paymentdetails')
   }
 })
 
