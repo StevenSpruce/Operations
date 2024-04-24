@@ -4,36 +4,41 @@
 GOV.UK Prototype Kit
 {% endblock %}
 {% block content %}
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
 
-<a href="SBRD_calculationmethod.html" class="govuk-back-link">Back</a>
+                <span class="govuk-caption-m">
+                XSB-90001232-20240210
+                </span>
 
-    <span class="govuk-caption-m">
-       XSB-90001232-20240210
-    </span>
+                <h1 class="govuk-heading-xl">Are you sure that you want to change the calculation method?</h1>
+                
+                <p class="govuk-body">
+                    By editing the calculation method, the rates of the contract could be altered. If a different calculation method is selected, then some data may have to be re-entered in order to ensure the correct parameters have been returned.  
+                </p>
 
-    <h1 class="govuk-heading-xl">Are you sure that you want to change the calculation method?</h1>
-    
-    <p class="govuk-body">
-        By editing the calculation method, the rates of the contract could be altered. If a different calculation method is selected, then some data may have to be re-entered in order to ensure the correct parameters have been returned.  
-    </p>
-
-    <table class="govuk-table">
-    </thead>
-    <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-            <td scope="row" class="govuk-table__cell">Previous Calculation Method </td>
-            <td class="govuk-table__cell">HGV01</td>
-        </tr>
-        <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">New Calculation Method </th>
-            <td class="govuk-table__cell"><strong>HGV03</strong></td>
-        </tr>
-    </tbody>
-  </table>
-        
-    <div class="govuk-button-group">
-        <a href="/SBRD_ContractDatesCost.html" id="EditLink" class="govuk-button">Confirm</a>
-        <a href="SBRD_calculationmethod.html" id="cancellink" class="govuk-link">Cancel</a> 
-    </div>
+                <table class="govuk-table">
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <td scope="row" class="govuk-table__cell">Previous Calculation Method </td>
+                            <td class="govuk-table__cell">HGV01</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">New Calculation Method </th>
+                            <td class="govuk-table__cell"><strong>HGV03</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                    
+                <div class="govuk-button-group">
+                    <a href="/SBRD_ContractDatesCost.html" id="EditLink" class="govuk-button">Confirm</a>
+                    <a href="SBRD_calculationmethod.html" id="cancellink" class="govuk-link">Cancel</a> 
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
    
 {% endblock %}  
