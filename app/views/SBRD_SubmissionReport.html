@@ -1,0 +1,63 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<div class="govuk-width-container">
+    <a href="#" class="govuk-back-link">Back</a>
+    <main class="govuk-main-wrapper">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-l">Submissions</h1>
+          <p class="govuk-body">Skills Bootcamp Contracts collection</p>
+          <h2 class="govuk-heading-l">Academic Year 2023 to 2024</h2>
+          <h2 class="govuk-heading-m">Contracts</h2>
+
+          <input name="selected-course" value="" style="display:none"><table class="govuk-table" data-module="moj-sortable-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Date</th>
+                    <th scope="col" class="govuk-table__header">File </th>
+                    <th scope="col" class="govuk-table__header">Submitted By</th>
+                    <th scope="col" class="govuk-table__header">Contract reference number</th>
+                    <th scope="col" class="govuk-table__header">Reports</th>
+                </tr>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><strong>22 January 2024 at 4:13 pm</strong></td>
+                    <td class="govuk-table__cell">SBC-10007652-2324-20240122.Csv</td>
+                    <td class="govuk-table__cell">Jo Bloggs</td>
+                    <td class="govuk-table__cell">XSB-10001232-20240210</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Download Reports</a></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><strong>22 January 2024 at 4:13 pm</strong></td>
+                    <td class="govuk-table__cell">SBC-10007652-2324-20240122.Csv</td>
+                    <td class="govuk-table__cell">Jo Bloggs</td>
+                    <td class="govuk-table__cell">XSB-10001232-20240210</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Download Reports</a></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><strong>22 January 2024 at 4:13 pm</strong></td>
+                    <td class="govuk-table__cell">SBC-10007652-2324-20240122.Csv</td>
+                    <td class="govuk-table__cell">Jo Bloggs</td>
+                    <td class="govuk-table__cell">XSB-10001232-20240210</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Download Reports</a></td>
+                </tr>
+            </tbody>
+        </table>
+ 
+    </div>
+          
+        </div>
+      </div>
+    </main>
+  </div>
+
+{% endblock %}
