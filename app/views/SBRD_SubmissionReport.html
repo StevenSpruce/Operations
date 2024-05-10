@@ -14,58 +14,53 @@ GOV.UK Prototype Kit
           <p class="govuk-body">Skills Bootcamp Contracts collection</p>
           <h2 class="govuk-heading-l">Contract data</h2>
 
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-    
-                <span id="filter-hint" class="govuk-hint">
-                    Filter by year
-                </span>
-                <div id="yearFilter" class="govuk-checkboxes govuk-checkboxes--small wrap">
-                        <div class="govuk-checkboxes__item">
-                            <input id="2324" class="govuk-checkboxes__input" name="reportsFilter" type="checkbox" value="2324">
-                            <label class="govuk-label govuk-checkboxes__label" for="2324">
-                                2023 to 2024
-                            </label>
-                        </div>
-                        <div class="govuk-checkboxes__item">
-    
-                            <input id="2223" class="govuk-checkboxes__input" name="reportsFilter" type="checkbox" value="2223">
-                            <label class="govuk-label govuk-checkboxes__label" for="2223">
-                                2022 to 2023
-                            </label>
-                        </div>
-                        <div class="govuk-checkboxes__item">
-    
-                            <input id="2122" class="govuk-checkboxes__input" name="reportsFilter" type="checkbox" value="2122">
-                            <label class="govuk-label govuk-checkboxes__label" for="2122">
-                                2021 to 2022
-                            </label>
-                        </div>
-                        <div class="govuk-checkboxes__item">
-    
-                            <input id="2021" class="govuk-checkboxes__input" name="reportsFilter" type="checkbox" value="2021">
-                            <label class="govuk-label govuk-checkboxes__label" for="2021">
-                                2020 to 2021
-                            </label>
-                        </div>
-                        <div class="govuk-checkboxes__item">
-    
-                            <input id="1920" class="govuk-checkboxes__input" name="reportsFilter" type="checkbox" value="1920">
-                            <label class="govuk-label govuk-checkboxes__label" for="1920">
-                                2019 to 2020
-                            </label>
-                        </div>
-                        <div class="govuk-checkboxes__item">
-    
-                            <input id="1819" class="govuk-checkboxes__input" name="reportsFilter" type="checkbox" value="1819">
-                            <label class="govuk-label govuk-checkboxes__label" for="1819">
-                                2018 to 2019
-                            </label>
-                        </div>
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Filter by year
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <table class="govuk-table"
+                            <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                    <th scope="col" class="govuk-table__header"></th>
+                                    <th scope="col" class="govuk-table__header"></th>
+                                    <th scope="col" class="govuk-table__header"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="govuk-table__body>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                        <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                                        <label class="govuk-label govuk-checkboxes__label" for="organisation">2025/2026</label>
+                                        </div>
+                                    </td>
+                                    <td class="govuk-table__cell"> 
+                                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                        <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">2024/2025</label>
+                                        </div>
+                                    </td> 
+                                    <td class="govuk-table__cell">
+                                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                        <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                                        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">2023/2024</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>  
+                        </table>              
+                    </fieldset>
                 </div>
-            </fieldset>
-            <br>
-        </div>
+            </div>
+          </details>
 
           <h5 class="govuk-heading-m">Academic Year: 2025/2026</h5>
 
