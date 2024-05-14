@@ -16,6 +16,15 @@ GOV.UK Prototype Kit
             A total of "sum of board members here" board members are recorded
         </h1>
 
+        <p class="govuk-body">Board leaders:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+               <span>{{ data['Governor.StaffCount'] }} Chair(s)</span> 
+            </li>
+            <li>
+                <span>{{ data['Governor.StudentCount'] }} Vice chairs</span> 
+            </li>
+        </ul>
 
         <p class="govuk-body">Board representation:</p>
         <ul class="govuk-list govuk-list--bullet">
@@ -32,6 +41,7 @@ GOV.UK Prototype Kit
                 <span>{{ data['Governor.ParentCount'] }} Parent governors</span> 
             </li>
         </ul>
+
       
             <div class="govuk-form-group">
                 <input class="govuk-visually-hidden" type="number" data-val="true" data-val-required="The CollectionYear field is required." id="CollectionYear" name="CollectionYear" value="2021">
