@@ -1,0 +1,129 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <div class="govuk-grid-column-two-thirds">
+                    
+
+                    
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">Submit Learner Data feedback form</h1>
+
+        <h2 class="govuk-heading-m">Share your feedback</h2>
+        
+
+        <p>Answer these 2 questions to let us know how we can improve. We'll use this feedback to make our services better.</p>
+
+        <p>All feedback is anonymous and we cannot respond to individual queries. Do not enter any personal data or sensitive information.</p>
+        
+        <p>If you have a question or need help, contact the Education and Skills Funding Agency using the Customer Help Portal (opens in new tab).</p>
+
+
+                
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">
+                            Overall, how would you describe your experience of Submit Learner Data?
+                        </h2>
+                    </legend>
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="option-1" type="radio" value="staff" aria-describedby="option-1-item-hint" name="SelectedOption">
+                            <label class="govuk-label govuk-radios__label" for="option-1">
+                                Very satisfied
+                            </label>
+
+                        </div>
+                        <div class="govuk-radios__item">
+                            
+                                <input class="govuk-radios__input" id="option-2a" type="radio" value="vacancyAndRecruitment" aria-describedby="option-2-item-hint" name="SelectedOption">
+                            
+                            <label class="govuk-label govuk-radios__label" for="option-2">
+                                Satisfied
+                            </label>
+
+                        </div>
+                        <div class="govuk-radios__item">
+                            
+                            <input class="govuk-radios__input" id="option-2a" type="radio" value="vacancyAndRecruitment" aria-describedby="option-2-item-hint" name="SelectedOption">
+                        
+                        <label class="govuk-label govuk-radios__label" for="option-2">
+                            Neither satisfied nor dissatisfied
+                        </label>
+
+                    </div>
+                    <div class="govuk-radios__item">
+                            
+                        <input class="govuk-radios__input" id="option-2a" type="radio" value="vacancyAndRecruitment" aria-describedby="option-2-item-hint" name="SelectedOption">
+                    
+                    <label class="govuk-label govuk-radios__label" for="option-2">
+                        Dissatisfied
+                    </label>
+
+                </div>
+                <div class="govuk-radios__item">
+                            
+                    <input class="govuk-radios__input" id="option-2a" type="radio" value="vacancyAndRecruitment" aria-describedby="option-2-item-hint" name="SelectedOption">
+                
+                <label class="govuk-label govuk-radios__label" for="option-2">
+                    Very dissatisfied
+                </label>
+
+            </div>
+                    </div>
+                </fieldset>
+         
+<br>
+<br>
+
+<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="5000">
+    <h2 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--m" for="with-hint">
+        <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="5000">
+            <h2 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--m" for="with-hint">
+                What are your main reasons for giving this rating?
+              </label>
+            </h2>
+            <div id="with-hint-hint" class="govuk-hint">
+                Tell us anything you'd like to share about your experience. You can give general feedback or tell us about a specific problem. Do not include any information that could identify you personally, such as your name.
+            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+            <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+              You can enter up to 5000 characters
+            </div>
+          </div>
+      </label>
+    </h2>
+
+
+  </div>
+
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+    Submit
+  </button>
+
+
+
+</div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+</body>
+
+
+{% endblock %}     
+
