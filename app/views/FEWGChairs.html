@@ -1,0 +1,64 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+
+<div class="govuk-grid-row">
+
+        <span class="govuk-caption-l">Governor data as at 31 July 2023</span>
+
+        <h1 class="govuk-heading-l">
+            What is the total number of chairs and vice chairs on the board allowed by your corporation's instrument and articles of association?
+        </h1>
+
+        <form method="post">
+            <div class="govuk-form-group">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading">
+                                Record the number of chairs/co-chairs
+                            </h1>
+                        </legend>
+                        
+                        <input class="govuk-input govuk-input--width-4" type="text" maxlength="2" id="MaximumBoardSize" name="MaximumBoardSize" value="{{ data['MaximumBoardSize'] }}">
+
+                    </fieldset>
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading">
+                                Record the number of vice chairs
+                            </h1>
+                        </legend>
+                        
+                        <input class="govuk-input govuk-input--width-4" type="text" maxlength="2" id="MaximumBoardSize" name="MaximumBoardSize" value="{{ data['MaximumBoardSize'] }}">
+
+                    </fieldset>
+                </div>
+            </div>
+
+            <button class="govuk-button" type="submit" formaction="/FEWGBoardRepresentation">
+                Save and continue
+            </button>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+
+{% endblock %}
