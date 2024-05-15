@@ -1,0 +1,67 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<div class="govuk-grid-row">
+        <form method="post" class="form">
+            <div class="govuk-form-group" id="Governor_MaximumBoardSize">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <span class="govuk-caption-xl">Governor data as at 31 July 2023</span>
+                        <h1 class="govuk-fieldset__heading">
+                            Chair of the board disability data
+                        </h1>
+                    </legend>
+
+                    <input type="hidden" id="Governor_BoardMembersCount" name="Governor.BoardMembersCount" value="">
+                    <input type="hidden" data-val="true" data-val-required="The CollectionYear field is required." id="CollectionYear" name="CollectionYear" value="2021">
+
+                    <div class="govuk-form-group">
+                        
+                        <label class="govuk-label govuk-label--m" for="Governor_DisabilityCount">
+                            How many consider themselves to have a disability?
+                        </label>
+                        <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_DisabilityCount" name="Governor.DisabilityCount" value="{{ data['Governor.DisabilityCount'] }}">
+                    </div>
+
+                    <div class="govuk-form-group">
+                        
+                        <label class="govuk-label govuk-label--m" for="Governor_NoDisabilityCount">
+                            How many do not identify themselves as having a disability?
+                        </label>
+                        <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_NoDisabilityCount" name="Governor.NoDisabilityCount" value="{{ data['Governor.NoDisabilityCount'] }}">
+                    </div>
+
+                    <div class="govuk-form-group">
+                        
+                        <label class="govuk-label govuk-label--m" for="Governor_DisabilityPreferNotToSayCount">
+                            Prefer not to say
+                        </label>
+                        <input class="govuk-input govuk-input--width-5" type="text" maxlength="2" id="Governor_DisabilityPreferNotToSayCount" name="Governor.DisabilityPreferNotToSayCount" value="{{ data['Governor.DisabilityPreferNotToSayCount'] }}">
+                    </div>
+                </fieldset>
+            </div>
+
+            <button class="govuk-button" type="submit" formaction="/FEWGBoardEthnicity">
+                Save and continue
+            </button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JXkYVn2PiNDhyrTwLjKaCoIoCZKCqm_9LcZcD8ebaoCLXx2veNm9c9DISWubXettooDySnT_mvLOizelz--2jRnLpzl0zbkxi08u9lNymB-klJ-6-nVTAzb6iDaiyzo5cJMxRsoCpwX2_IMfnZlP2YWDGUjomrWrOb7U4GMT9KDRyBotzCsinAjx4RxhpLSlw"></form>
+    </div>
+</div>
+
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+
+{% endblock %}
