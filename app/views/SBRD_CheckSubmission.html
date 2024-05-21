@@ -1,0 +1,34 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+    <main class="govuk-main-wrapper">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <h1 class="govuk-heading-xl"> The file you have selected contains less contracts than is currently uploaded. Are you sure you want to import this file?</h1>
+                
+                <div class="govuk-warning-text">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text">
+                      <span class="govuk-visually-hidden">Warning</span>
+                      Uploading a file will overwrite all contract reference data that is currently saved. 
+                    </strong>
+                  </div>
+
+                    
+                <div class="govuk-button-group">
+                    <a href="/SBRD_ContractDatesCost.html" id="EditLink" class="govuk-button">Confirm and continue</a>
+                    <a href="SBRD_calculationmethod.html" id="cancellink" class="govuk-link">Cancel</a> 
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+   
+{% endblock %}  
