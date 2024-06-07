@@ -4,6 +4,10 @@
   Start page example
 {% endblock %}
 
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
 <div class="govuk-width-container">
 
     <div class="govuk-body account-info">
@@ -172,6 +176,5 @@
         </main>
     </div>
 
-{% block content %}
 
 {% endblock %}
