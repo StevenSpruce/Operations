@@ -8,18 +8,6 @@ GOV.UK Prototype Kit
 
 {% include "./includes/nav.html" %}
 
-<div class="main-nav nav-wrap auto-height">
-    <a class="govuk-heading-s" href="/">Home</a>
-    <a class="govuk-heading-s" href="/Collections/Index">Collections</a>
-    <a class="govuk-heading-s" href="/Dashboard">Dashboards</a>
-    <a class="govuk-heading-s" href="/periodend/periodEnd">Period end</a>
-    
-    <a class="govuk-heading-s" href="/provider/AddNew/AddNewOption">Providers</a>
-    <a class="govuk-heading-s" href="/referencedata/referenceData">Reference data</a>
-    <a class="govuk-heading-s" href="/reports/Index">Reports</a>
-    <a class="govuk-heading-s" href="/sldadmin">SLD admin</a>
-    <a class="govuk-heading-s" href="/tools">Tools</a>
-
 </div>
 
 <div class="govuk-width-container">
@@ -86,6 +74,10 @@ GOV.UK Prototype Kit
             <tr class="govuk-table__row">
                 <th class="govuk-table__header govuk-!-width-one-third" scope="col">Provider name</th>
                 <th class="govuk-table__header" scope="col">UKPRN</th>
+                <th class="govuk-table__header" scope="col">Submission method</th>
+                <th class="govuk-table__header" scope="col">Number of staff last year</th>
+                <th class="govuk-table__header" scope="col">Number of staff submitted this year</th>
+
             </tr>
         </thead>
         <tbody class="govuk-table__body" id="dataContent"></tbody>
