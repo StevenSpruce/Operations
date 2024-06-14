@@ -33,7 +33,7 @@ GOV.UK Prototype Kit
                 <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="collectionStarted" name="filter" type="radio" value="0">
                     <label class="govuk-label govuk-radios__label" for="collectionStarted">
-                        Staff collection started
+                        Staff collection started/submitted
                     </label>
                 </div>
                 <div class="govuk-radios__item">
@@ -75,9 +75,32 @@ GOV.UK Prototype Kit
                 <th class="govuk-table__header" scope="col">Provider name</th>
                 <th class="govuk-table__header" scope="col">UKPRN</th>
                 <th class="govuk-table__header" scope="col">Submission method</th>
+                <th class="govuk-table__header" scope="col">File level error</th>
                 <th class="govuk-table__header" scope="col">Number of staff last year</th>
-                <th class="govuk-table__header" scope="col">Number of staff submitted this year</th>
-
+                <th class="govuk-table__header" scope="col">Number of valid staff </th>
+                <th class="govuk-table__header" scope="col">Number of invalid staff </th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body" id="dataContent"></tbody>
+    </table>
+    <table class="govuk-table" id="0">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Provider name</th>
+                <th class="govuk-table__header" scope="col">UKPRN</th>
+                <th class="govuk-table__header" scope="col">Submission method</th>
+                <th class="govuk-table__header" scope="col">Number of staff last year</th>
+                <th class="govuk-table__header" scope="col">Number of valid staff </th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body" id="dataContent"></tbody>
+    </table>
+    <table class="govuk-table" id="0">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Provider name</th>
+                <th class="govuk-table__header" scope="col">UKPRN</th>
+                <th class="govuk-table__header" scope="col">Number of staff last year</th>
             </tr>
         </thead>
         <tbody class="govuk-table__body" id="dataContent"></tbody>
