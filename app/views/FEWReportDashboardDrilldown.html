@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% include "./includes/nav.html" %}
+
+<div class="main-nav nav-wrap auto-height">
+    <a class="govuk-heading-s" href="/">Home</a>
+    <a class="govuk-heading-s" href="/Collections/Index">Collections</a>
+    <a class="govuk-heading-s" href="/Dashboard">Dashboards</a>
+    <a class="govuk-heading-s" href="/periodend/periodEnd">Period end</a>
+    
+    <a class="govuk-heading-s" href="/provider/AddNew/AddNewOption">Providers</a>
+    <a class="govuk-heading-s" href="/referencedata/referenceData">Reference data</a>
+    <a class="govuk-heading-s" href="/reports/Index">Reports</a>
+    <a class="govuk-heading-s" href="/sldadmin">SLD admin</a>
+    <a class="govuk-heading-s" href="/tools">Tools</a>
+
+</div>
+
+<div class="govuk-width-container">
+  <a href="/OPSSBCCalcMethods.html" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                
+
+
+
+                
+
+<div class="govuk-grid-row">
+<h1 class="govuk-heading-xl">FE Workforce Staff</h1>
+<div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="collectionStarted" name="filter" type="radio" value="0">
+                    <label class="govuk-label govuk-radios__label" for="collectionStarted">
+                        Staff collection started
+                    </label>
+                </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="collectionCompleted" name="filter" type="radio" checked="" value="1">
+                    <label class="govuk-label govuk-radios__label" for="collectionCompleted">
+                        Staff collection completed
+                    </label>
+                </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="notSubmittedData" name="filter" type="radio" value="2">
+                    <label class="govuk-label govuk-radios__label" for="notSubmittedData">
+                        Staff not submitted data
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+</div>
+
+<div class="govuk-grid-row">
+<div class="govuk-form-group">
+    <label class="govuk-label" for="sort">Sort by</label>
+
+    <select class="govuk-select" name="sort" id="sort">
+        <option value="nameasc">Provider name (a to z)</option>
+        <option value="namedesc">Provider name (z to a)</option>
+        <option value="ukprnasc">UKPRN (asc)</option>
+        <option value="ukprndesc">UKPRN (desc)</option>
+    </select>
+</div>
+</div>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full" id="table_box_native">
+    <table class="govuk-table" id="tblData">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header govuk-!-width-one-third" scope="col">Provider name</th>
+                <th class="govuk-table__header" scope="col">UKPRN</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body" id="dataContent"></tbody>
+    </table>
+    <div id="dataLoadingSpinner" class="govuk-text-center-align" style="display: none;">
+        <img src="/assets/images/loading-spinner.gif" alt="loading-icon">
+    </div>
+</div>
+<div id="index_native" class="box"><div><button disabled="" class="govuk-button govuk-button--disabled govuk-!-margin-right-1">&lt; Previous</button><button disabled="" class="govuk-button govuk-button--disabled govuk-!-margin-right-1">Next &gt;</button></div><span>On page 1 of 1, showing rows 1 to 0 of 0</span></div>
+</div>
+
+<button data-prevent-double-click="true" class="govuk-button govuk-!-margin-right-3" type="submit" data-module="govuk-button" id="aBtnRefresh">Refresh</button>
+<a href="#" class="govuk-button" id="aBtnDownloadCSV" style="visibility: hidden;">Download CSV</a>
+<br>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-one-third">&nbsp;</div>
+<div class="govuk-grid-column-two-thirds">
+    <state-display><label id="lastSync"></label><label id="state">Status: Connected</label></state-display>
+</div>
+</div>
+
+
+            </div>
+        </div>
+        </div>
+        </div>
+        </main>
+        </div>
