@@ -1,0 +1,61 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                    
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-m">Dominic Stone</span>
+        <h1 class="govuk-heading-xl">Staff member has worked in their current role longer than their time at the organisation. Are you sure this correct? </h1>
+        <form method="post" id="radio-group" action="/few/contracts/check-contract-start-date">
+            <div class="govuk-form-group">
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1450">
+
+                <p class="govuk-body">
+                    Current position duration is by the staff members employment end date (if known, other academic year end date) minus the staff members employment start date 
+                </p>
+                <fieldset class="govuk-fieldset">
+
+                    <table class="govuk-table">
+                        <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                <td scope="row" class="govuk-table__cell">Start date at the organisation</td>
+                                <td class="govuk-table__cell">20/01/2022</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Length of time at the organisation</th>
+                                <td class="govuk-table__cell"><strong>2 years</strong></td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header"><strong>Length of time in current position</strong></th>
+                                <td class="govuk-table__cell"><strong>4 years</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+            <br>
+            <button class="govuk-button" type="submit" formaction="/FEWSameOrg">Save and continue</button>
+
+    </div>
+</div>
+
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+
+
+{% endblock %}
