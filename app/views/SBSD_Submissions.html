@@ -1,0 +1,81 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<div class="govuk-width-container">
+    <a href="#" class="govuk-back-link">Back</a>
+    <main class="govuk-main-wrapper">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <span class="govuk-caption-l">All Hallows College - 10040002</span>
+          <h1 class="govuk-heading-xl">Skills Bootcamp supplementary data</h1>
+          <h2 class="govuk-heading-m">Courses</h2>
+        
+          <div class="govuk-body">
+            <a href="#">View your course data</a>
+          </div>
+
+          <h3 class="govuk-heading-m">Employers</h2>
+
+            <div class="govuk-body">
+                <a href="#">View your course data</a>
+            </div>
+
+        
+        <h3 class="govuk-heading-m">Learners</h2> 
+    
+          <h3 class="govuk-heading-s">Download your CSV file and reports:</h3>
+
+         <input name="selected-course" value="" style="display:none"><table class="govuk-table" data-module="moj-sortable-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Upload date</th>
+                    <th scope="col" class="govuk-table__header">Filename</th> 
+                    <th scope="col" class="govuk-table__header">Submitted by</th>
+                    <th scope="col" class="govuk-table__header">Reference</th>
+                    <th scope="col" class="govuk-table__header">Status</th>
+                    <th scope="col" class="govuk-table__header">Reports</th>
+                </tr>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><strong>22 January 2024 at 4:13 pm</strong></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">10040002-SBSD-Learner-20240122-170122.csv</a></td>
+                    <td class="govuk-table__cell">Jo Bloggs</td>
+                    <td class="govuk-table__cell">1598765</td>
+                    <td class="govuk-table__cell">Completed</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Download Reports</a></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><strong>22 January 2024 at 4:13 pm</strong></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">10040002-SBSD-Learner-20240122-170122.csv</a></td>
+                    <td class="govuk-table__cell">Jo Bloggs</td>
+                    <td class="govuk-table__cell">1398765</td>
+                    <td class="govuk-table__cell">Completed</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Download Reports</a></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><strong>22 January 2024 at 4:13 pm</strong></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">10040002-SBSD-Learner-20240122-170122.csv</a></td>
+                    <td class="govuk-table__cell">Jo Bloggs</td>
+                    <td class="govuk-table__cell">1248765</td>
+                    <td class="govuk-table__cell">Completed</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Download Reports</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+          
+        </div>
+      </div>
+    </main>
+  </div>
+
+{% endblock %}
