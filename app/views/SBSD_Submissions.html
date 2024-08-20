@@ -29,20 +29,37 @@ GOV.UK Prototype Kit
         
         <h3 class="govuk-heading-m">Learners</h3>
 
-     <h3 class="govuk-heading-s">Filter by return period: </h2>
-            
-        <div>
-            <div id="yearFilter" class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-form-group">
+            <h3 class="govuk-heading-s">Filter by return period:</h3>
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
-                    <input id="ESFA.DC.Web.Ui.ViewModels.AcademicYearViewModel" class="govuk-checkboxes__input" name="reportsFilter" type="checkbox" value="2223">
-                    <label class="govuk-label govuk-checkboxes__label">R01</label>
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    R01
+                  </label>
                 </div>
                 <div class="govuk-checkboxes__item">
-                    <input id="ESFA.DC.Web.Ui.ViewModels.AcademicYearViewModel" class="govuk-checkboxes__input" name="reportsFilter" type="checkbox" value="2122">
-                    <label class="govuk-label govuk-checkboxes__label">R02</label>
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    R02
+                  </label>
                 </div>
-            </div> 
-        </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                    R03
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    R04
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
         <h4 class="govuk-heading-s">Download your CSV file and reports:</h4>
 
          <input name="selected-course" value="" style="display:none"><table class="govuk-table" data-module="moj-sortable-table">
