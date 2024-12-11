@@ -4,7 +4,6 @@
   Start page example
 {% endblock %}
 
-
 {% block content %}
 {% include "./includes/nav.html" %}
 
@@ -12,58 +11,55 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-      
-<br>
-<div class="govuk-grid-column-full">
-<h1 class="govuk-heading-xl">Skills Bootcamp calculation methods</h1>
+    <br>
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">Skills Bootcamp calculation methods</h1>
 
-<a class="govuk-button" href="/OPSSBCAddMethod">Add a new calculation method</a>
+      <a class="govuk-button" href="/OPSSBCAddMethod">Add a new calculation method</a>
 
+      <div class="govuk-body">
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default-1">
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-1-heading-1">
+                  <table class="govuk-table">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
+                        <strong class="govuk-!-font-size-24">SBC01</strong>
+                      </td>
+                      <td class="govuk-summary-list__actions">
+                        <a class="govuk-link"></a><a href="/OPSSBCManageMethod">Manage</a>
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-summary-list__value">
+                        Wave 3 Bootcamps
+                      </td>
+                    </tr>
+                  </table>
+                </span>
+              </h2>
+            </div>
 
-<div class="govuk-body">
-        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-            <div class="govuk-accordion__section">
-              <div class="govuk-accordion__section-header">
-                    <h2 class="govuk-accordion__section-heading">
-                        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                            <table class="govuk-table">
-                                    <tr class="govuk-table__row">
-                                        <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
-                                            <strong class="govuk-!-font-size-24">SBC01</strong>
-                                        </td>
-                                        <td class="govuk-summary-list__actions">
-                                            <a class="govuk-link">
-                                                </a><a href="/OPSSBCManageMethod">Manage</a>
-                                        </td>
-                                    </tr>
-                                    <tr class="govuk-table__row">
-                                        <td class="govuk-summary-list__value">
-                                            Wave 3 Bootcamps
-                                        </td>
-                                    </tr>
-                            </table>
-                        </span>
-                    </h2>
-                </div>
-        
-            <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-                <table class="govuk-table govuk-table--small-text-until-tablet">
-                    <div class="govuk-summary-list">
-                        <div class="govuk-summary-list__body">
-                            <div class="govuk-summary-list__row">
-                                <dt class="govuk-summary-list__value">
-                                    <strong> Start date</strong>
-                                </dt>
-                                <dd class="govuk-summary-list__value">
-                                    23-02-2024
-                                </dd>
-                                <dt class="govuk-summary-list__value">
-                                    <strong> End date</strong>
-                                </dt>
-                                <dd class="govuk-summary-list__value">
-                                    11-07-2025
-                                </dd>
-                            </div>
+            <div id="accordion-default-1-content-1" class="govuk-accordion__section-content">
+              <table class="govuk-table govuk-table--small-text-until-tablet">
+                <div class="govuk-summary-list">
+                  <div class="govuk-summary-list__body">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__value">
+                        <strong>Start date</strong>
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        23-02-2024
+                      </dd>
+                      <dt class="govuk-summary-list__value">
+                        <strong>End date</strong>
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        11-07-2025
+                      </dd>
+                    </div>
                     <caption class="govuk-table__caption govuk-table__caption--m"></caption>
                     <thead class="govuk-table__head">
                       <tr class="govuk-table__row">
@@ -95,83 +91,96 @@
                       </tr>
                     </tbody>
                   </table>
-
-
-<div class="govuk-body">
-<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-    <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-            <h2 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                    <table class="govuk-table">
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
-                                    <strong class="govuk-!-font-size-24">SBC01</strong>
-                                </td>
-                                <td class="govuk-summary-list__actions">
-                                    <a class="govuk-link">
-                                        </a><a href="/OPSSBCManageMethod">Manage</a>
-                                </td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-summary-list__value">
-                                    Wave 3 Bootcamps
-                                </td>
-                            </tr>
-                    </table>
-                </span>
-            </h2>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-    <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-        <table class="govuk-table govuk-table--small-text-until-tablet">
-            <div class="govuk-summary-list">
-                <div class="govuk-summary-list__body">
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default-2">
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-2-heading-1">
+                  <table class="govuk-table">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
+                        <strong class="govuk-!-font-size-24">SBC02</strong>
+                      </td>
+                      <td class="govuk-summary-list__actions">
+                        <a class="govuk-link"></a><a href="/OPSSBCManageMethod">Manage</a>
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-summary-list__value">
+                        Wave 4 Bootcamps
+                      </td>
+                    </tr>
+                  </table>
+                </span>
+              </h2>
+            </div>
+
+            <div id="accordion-default-2-content-1" class="govuk-accordion__section-content">
+              <table class="govuk-table govuk-table--small-text-until-tablet">
+                <div class="govuk-summary-list">
+                  <div class="govuk-summary-list__body">
                     <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__value">
-                            <strong> Start date</strong>
-                        </dt>
-                        <dd class="govuk-summary-list__value">
-                            23-02-2024
-                        </dd>
-                        <dt class="govuk-summary-list__value">
-                            <strong> End date</strong>
-                        </dt>
-                        <dd class="govuk-summary-list__value">
-                            11-07-2025
-                        </dd>
+                      <dt class="govuk-summary-list__value">
+                        <strong>Start date</strong>
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        01-04-2024
+                      </dd>
+                      <dt class="govuk-summary-list__value">
+                        <strong>End date</strong>
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        31-08-2025
+                      </dd>
                     </div>
-            <caption class="govuk-table__caption govuk-table__caption--m"></caption>
-            <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Question</th>
-                <th scope="col" class="govuk-table__header">Required</th>
-                <th scope="col" class="govuk-table__header">Description</th>
-                </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__cell">Is qualifying period information required?</th>
-                <td class="govuk-table__cell">Yes</td>
-                <td class="govuk-table__cell">In this example, we use our tool to prepare for a math exam. We randomize the order of study notes for self-testing</td>
-                </tr>
-                <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__cell">Is start payment information required?</th>
-                <td class="govuk-table__cell">Yes</td>
-                <td class="govuk-table__cell">In this example, we use our tool to prepare for a math exam. We randomize the order of study notes for self-testing</td>
-                </tr>
-                <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__cell">Is mid course payment information required?</th>
-                <td class="govuk-table__cell">Yes</td>
-                <td class="govuk-table__cell">In this example, we use our tool to prepare for a math exam. We randomize the order of study notes for self-testing</td>
-                </tr>
-                <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__cell">Is outcome payment information required?</th>
-                <td class="govuk-table__cell">Yes</td>
-                <td class="govuk-table__cell">In this example, we use our tool to prepare for a math exam. We randomize the order of study notes for self-testing</td>
-                </tr>
-            </tbody>
-            </table>
+                    <caption class="govuk-table__caption govuk-table__caption--m"></caption>
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Question</th>
+                        <th scope="col" class="govuk-table__header">Required</th>
+                        <th scope="col" class="govuk-table__header">Description</th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__cell">Is qualifying period information required?</th>
+                        <td class="govuk-table__cell">Yes</td>
+                        <td class="govuk-table__cell">In this example, we use our tool to prepare for a math exam. We randomize the order of study notes for self-testing</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__cell">Is start payment information required?</th>
+                        <td class="govuk-table__cell">Yes</td>
+                        <td class="govuk-table__cell">In this example, we use our tool to prepare for a math exam. We randomize the order of study notes for self-testing</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__cell">Is mid course payment information required?</th>
+                        <td class="govuk-table__cell">Yes</td>
+                        <td class="govuk-table__cell">In this example, we use our tool to prepare for a math exam. We randomize the order of study notes for self-testing</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__cell">Is outcome payment information required?</th>
+                        <td class="govuk-table__cell">Yes</td>
+                        <td class="govuk-table__cell">In this example, we use our tool to prepare for a math exam. We randomize the order of study notes for self-testing</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
+
 
