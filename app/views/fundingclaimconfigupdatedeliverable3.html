@@ -2,88 +2,38 @@
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
-{% endblock %}
-
 
 {% block content %}
-{% include "./includes/nav.html" %}
-
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-                 <table class="govuk-table">
-                    <caption class="govuk-table__caption govuk-table__caption--l">Update deliverable</caption>
-                    <thead class="govuk-table__head">
-                      <tr class="govuk-table__row">
-                        <th scope="col" class="govuk-table__header">Field</th>
-                        <th scope="col" class="govuk-table__header">Value</th>
-                      </tr>
-                    </thead>
-                    <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header">FSP code</th>
-                        <td class="govuk-table__cell">
-                          <select class="govuk-select" id="sort" name="sort">
-                            <option value="AEBC-ASCL2122">AEBC-ASCL2122</option>
-                            <option value="AEBC-19TRN2122">AEBC-19TRN2122</option>
-                          </select> 
-                        </td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header">Deliverable code</th>
-                        <td class="govuk-table__cell">
-                          <input class="govuk-input govuk-input--width-8" id="event-name" name="event-name" type="text" value="3">
-                        </td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header">Display name</th>
-                        <td class="govuk-table__cell">
-                          <input class="govuk-input govuk-input--width-8" id="event-name" name="event-name" type="text" value="ESFA AEB 19 to 24 Traineeships Learner Support – 19+ hardship">
-                        </td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header">Display order</th>
-                        <td class="govuk-table__cell">
-                          <input class="govuk-input govuk-input--width-8" id="event-name" name="event-name" type="text" value="3">
-                        </td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header">Delivery to date</th>
-                        <td class="govuk-table__cell">
-                          <select class="govuk-select" id="sort" name="sort">
-                            <option value="Read">Read only</option>
-                            <option value="Update">Update</option>
-                          </select> 
-                        </td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header">Exceptional adjustments</th>
-                        <td class="govuk-table__cell">
-                          <select class="govuk-select" id="sort" name="sort">
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
-                          </select> 
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                  <a class="govuk-button" href="/fundingclaimconfig">Save</a>
-
-
-
-
-
-               
-
-
-
-
-
+<body class="govuk-template__body js-enabled">
+  <main class="govuk-main-wrapper" id="content" role="main">
+    <div class="govuk-width-container">
+      <!-- Header -->
+      
+      <!-- Sign-out and UKPRN -->
+      <div class="govuk-grid-row govuk-!-padding-top-2">
+        <div class="govuk-grid-column-one-half govuk-body">
+          A N Other UKPRN: 12345678
         </div>
-
-</div>
-
-
+        <div class="govuk-grid-column-one-half govuk-body govuk-!-text-align-right">
+          <a href="#" class="govuk-link">Sign out</a>
+        </div>
+      </div>
+      <!-- Confirmation Panel -->
+      <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-top-6">
+        <h1 class="govuk-panel__title">You've submitted your data successfully</h1>
+      </div>
+      <!-- Link to funding claim submissions -->
+      <p class="govuk-body">
+        <a href="#" class="govuk-link">View your funding claim submissions</a>
+      </p>
+      <!-- What happens next section -->
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p class="govuk-body">
+        You can edit your data and submit again until <strong>25 October 2024</strong>.
+      </p>
+    </div>
+  </main>
+  <!-- Footer -->
+  
+</body>
 {% endblock %}
