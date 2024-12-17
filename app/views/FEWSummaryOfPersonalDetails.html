@@ -1,21 +1,13 @@
 {% extends "layoutsld.html" %}
-
 {% block pageTitle %}
 GOV.UK Prototype Kit
 {% endblock %}
 {% block content %}
-
-
-
         <main class="govuk-main-wrapper" id="content" role="main">
             <div class="govuk-grid-row flex">
                 <div class="govuk-grid-column-two-thirds">
-                    
-
-                    
 <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
 <h1 class="govuk-heading-l">Summary of personal details</h1>
-
 <dl class="govuk-summary-list dl-override">
     <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key dt-override">
@@ -82,24 +74,52 @@ GOV.UK Prototype Kit
             </a>
         </dd>
     </div>
+    <!-- National Insurance Number Field -->
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key dt-override">
+            National Insurance Number
+        </dt>
+        <dd class="govuk-summary-list__value dd-override">
+            QQ123456C
+        </dd>
+        <dd class="govuk-summary-list__actions dd-override">
+            <a class="govuk-link" href="/FEWAddStaffMember">
+                Change<span class="govuk-visually-hidden"> National Insurance Number</span>
+            </a>
+        </dd>
+    </div>
 </dl>
-
 <div class="govuk-button-group">
     <a class="govuk-button govuk-button--secondary" href="javascript:history.back()">Choose another section</a>
-    <a class="govuk-link govuk-!-margin-left-6 " aria-labelledby="staffchange" href="/FEWStaffSummaryOpen">Return to staff list</a>
+    <a class="govuk-link govuk-!-margin-left-6" aria-labelledby="staffchange" href="/FEWStaffSummaryOpen">Return to staff list</a>
 </div>
-
 <span id="waste-hint" class="govuk-hint">
     Select "Choose another section" to check or complete the job role or employment contract data for Jane Smith
 </span>
-
-
                 </div>
             </div>
         </main>
     </div>
 </body>
-
-
-
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+Make a note of something
+
+
+
+
+
+
+
+
+
