@@ -16,14 +16,23 @@
 <div class="govuk-grid-column-full">
 <h1 class="govuk-heading-xl">Skills Bootcamp calculation methods</h1>
 
-<a class="govuk-button" href="/OPSSBCAddMethod">Add a new calculation method</a>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a class="govuk-button" href="/OPSSBCAddMethod">Add a new calculation method</a>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button" id="show-all-sections">
+            Show all sections
+        </button>
+    </div>
+</div>
 
 <div class="govuk-body">
-    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default-1">
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-methods">
         <div class="govuk-accordion__section">
             <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
-                    <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    <span class="govuk-accordion__section-button" id="accordion-method-1-heading">
                         <table class="govuk-table">
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
@@ -43,19 +52,19 @@
                 </h2>
             </div>
     
-            <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <div id="accordion-method-1-content" class="govuk-accordion__section-content" aria-labelledby="accordion-method-1-heading">
                 <table class="govuk-table govuk-table--small-text-until-tablet">
                     <div class="govuk-summary-list">
                         <div class="govuk-summary-list__body">
                             <div class="govuk-summary-list__row">
                                 <dt class="govuk-summary-list__value">
-                                    <strong> Start date</strong>
+                                    <strong>Start date</strong>
                                 </dt>
                                 <dd class="govuk-summary-list__value">
                                     23-02-2024
                                 </dd>
                                 <dt class="govuk-summary-list__value">
-                                    <strong> End date</strong>
+                                    <strong>End date</strong>
                                 </dt>
                                 <dd class="govuk-summary-list__value">
                                     11-07-2025
@@ -96,13 +105,11 @@
                 </table>
             </div>
         </div>
-    </div>
 
-    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default-2">
         <div class="govuk-accordion__section">
-            
+            <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
-                    <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                    <span class="govuk-accordion__section-button" id="accordion-method-2-heading">
                         <table class="govuk-table">
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell govuk-!-font-weight-bold govuk-!-width-two-thirds">
@@ -120,21 +127,21 @@
                         </table>
                     </span>
                 </h2>
-         
+            </div>
     
-            <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <div id="accordion-method-2-content" class="govuk-accordion__section-content" aria-labelledby="accordion-method-2-heading">
                 <table class="govuk-table govuk-table--small-text-until-tablet">
                     <div class="govuk-summary-list">
                         <div class="govuk-summary-list__body">
                             <div class="govuk-summary-list__row">
                                 <dt class="govuk-summary-list__value">
-                                    <strong> Start date</strong>
+                                    <strong>Start date</strong>
                                 </dt>
                                 <dd class="govuk-summary-list__value">
                                     23-02-2024
                                 </dd>
                                 <dt class="govuk-summary-list__value">
-                                    <strong> End date</strong>
+                                    <strong>End date</strong>
                                 </dt>
                                 <dd class="govuk-summary-list__value">
                                     11-07-2025
@@ -171,7 +178,6 @@
                             <td class="govuk-table__cell">Yes</td>
                             <td class="govuk-table__cell">In this example, we use our tool to prepare for a math exam. We randomize the order of study notes for self-testing</td>
                         </tr>
-                        
                     </tbody>
                 </table>
             </div>
