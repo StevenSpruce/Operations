@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Data Collections - FE Workforce
+{% endblock %}
+{% block content %}
+{% include "./includes/nav.html" %}
+<a class="govuk-link" href="/dashboardtopics">< Back</a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
+      <span class="govuk-caption-m">Data Collections</span>FE Workforce
+    </h1>
+    <h2 id="displayTitle" class="govuk-!-margin-bottom-4">Return period - 2022 to 2023</h2>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half blue-background govuk-!-padding-3">
+    <span class="govuk-caption-m">Open date</span>
+    <h3 class="govuk-heading-l govuk-!-font-size-27" id="openDate">26th September 2023 at 08:00</h3>
+  </div>
+  <div class="govuk-grid-column-one-half blue-background govuk-!-padding-3">
+    <span class="govuk-caption-m">Close date</span>
+    <h3 class="govuk-heading-l govuk-!-font-size-27" id="closeDate">9th February 2024 at 18:00</h3>
+  </div>
+</div>
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">Contents</h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#staff-collection">Staff collection</a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#org-collection">Org collection</a>
+    </li>
+  </ul>
+  <div class="govuk-tabs__panel" id="staff-collection">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+          <thead>
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">
+                <h2 class="govuk-heading-l">Staff collection</h2>
+              </th>
+              <th scope="col" class="govuk-table__header"></th>
+              <th scope="col" class="govuk-table__header"></th>
+              <th scope="col" class="govuk-table__header">
+                <a href="" class="govuk-button" data-module="govuk-button">Export submission progress report</a>
+              </th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+    <form>
+      <fieldset class="govuk-fieldset" aria-describedby="mca-status-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-heading-m">MCA Status</h2>
+        </legend>
+        <span id="mca-status-hint" class="govuk-hint">Please select the relevant status. Only one can be selected.</span>
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="is-mca" name="mca-status" type="radio" value="mca">
+            <label class="govuk-label govuk-radios__label" for="is-mca">
+              Is MCA
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="is-non-mca" name="mca-status" type="radio" value="non-mca">
+            <label class="govuk-label govuk-radios__label" for="is-non-mca">
+              Is non-MCA devolved authority
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <img src="/public/images/FEW_Staff_Dashboard.png" width="1300" height="1400" alt="Staff collection dashboard">
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="org-collection">
+    <h2 class="govuk-heading-l">Org collection</h2>
+  </div>
+</div>
+{% endblock %}
