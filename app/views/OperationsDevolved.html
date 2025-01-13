@@ -7,17 +7,16 @@
 <a href="/OPSRefDataSBCSelection" class="govuk-back-link">Back</a>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Manage provider</h1>
     <form method="get" action="/search-provider" class="govuk-form-group">
-        <h1 class="govuk-heading-xl">Manage provider</h1>
-      <label for="search" class="govuk-label">Search for a provider</label>
       <div style="background-color: #005ea5; padding: 10px; border-radius: 4px;">
+        <label for="search" class="govuk-label" style="color: white;">Search for a provider</label>
         <input
           class="govuk-input govuk-!-width-two-thirds"
           id="search"
           name="search"
           type="text"
           placeholder="Enter provider name or ID"
-          style="margin: 10px 0;"
         >
       </div>
     </form>
@@ -37,25 +36,29 @@
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Is MCA:</dt>
         <dd class="govuk-summary-list__value">
-          <input
-            type="checkbox"
-            id="is-mca"
-            name="is-mca"
-            class="govuk-checkboxes__input"
-          >
-          <label for="is-mca" class="govuk-label govuk-checkboxes__label">Yes</label>
+          <div class="govuk-checkboxes">
+            <input
+              type="checkbox"
+              id="is-mca"
+              name="is-mca"
+              class="govuk-checkboxes__input"
+            >
+            <label for="is-mca" class="govuk-label govuk-checkboxes__label">Is MCA</label>
+          </div>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Is Non-MCA Devolved Authority:</dt>
         <dd class="govuk-summary-list__value">
-          <input
-            type="checkbox"
-            id="is-non-mca"
-            name="is-non-mca"
-            class="govuk-checkboxes__input"
-          >
-          <label for="is-non-mca" class="govuk-label govuk-checkboxes__label">Yes</label>
+          <div class="govuk-checkboxes">
+            <input
+              type="checkbox"
+              id="is-non-mca"
+              name="is-non-mca"
+              class="govuk-checkboxes__input"
+            >
+            <label for="is-non-mca" class="govuk-label govuk-checkboxes__label">Is Non-MCA Devolved Authority</label>
+          </div>
         </dd>
       </div>
     </div>
@@ -89,8 +92,19 @@
           <td class="govuk-table__cell">14-04-2023</td>
           <td class="govuk-table__cell">14-04-2023</td>
         </tr>
+    
       </tbody>
     </table>
   </div>
 </div>
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
