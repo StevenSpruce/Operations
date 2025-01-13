@@ -1,24 +1,26 @@
-{% extends "layout.html" %}
+{% extends "layoutsld.html" %}
+Reports
 {% block pageTitle %}
-  Reports
+GOV.UK Prototype Kit
 {% endblock %}
+
+
 {% block content %}
-{% include "./includes/nav.html" %}
-<a href="/homepage" class="govuk-back-link">Back to Homepage</a>
 <div class="govuk-grid-row">
+
   <div class="govuk-grid-column-full" style="text-align: right; margin-bottom: 20px;">
     <p class="govuk-body">
       Beau Durman UKPRN: <strong>90000445</strong> <a href="/signout" class="govuk-link">Sign out</a>
     </p>
-  </div>
-</div>
+<a href="/homepage" class="govuk-back-link">Back to Homepage</a>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-xl">Reports</h1>
     <p class="govuk-body">
-      Reports can be accessed through downloading the Zip files below.
-      
+      Reports can be accessed by downloading the Zip files below. 
     </p>
+   
+  
     <h2 class="govuk-heading-l">Academic Collection Year 2024 to 2025</h2>
     <table class="govuk-table">
       <thead class="govuk-table__head">
@@ -110,14 +112,3 @@
   </div>
 </div>
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
-
