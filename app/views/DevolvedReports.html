@@ -1,23 +1,24 @@
-{% extends "layoutsld.html" %}
-Reports
+{% extends "layout.html" %}
 {% block pageTitle %}
-GOV.UK Prototype Kit
+  Reports
 {% endblock %}
-
-
 {% block content %}
-<p class="govuk-body">
-    Beau Durman UKPRN: <strong>90000445</strong> <a href="/signout" class="govuk-link">Sign out</a>
-</p>
+{% include "./includes/nav.html" %}
 <a href="/homepage" class="govuk-back-link">Back to Homepage</a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full" style="text-align: right; margin-bottom: 20px;">
+    <p class="govuk-body">
+      Beau Durman UKPRN: <strong>90000445</strong> <a href="/signout" class="govuk-link">Sign out</a>
+    </p>
+  </div>
+</div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-xl">Reports</h1>
     <p class="govuk-body">
-      Reports can be accessed by downloading the Zip files below. 
+      The report download zip files contain the Adult Education Funding Summary and Occupancy reports.
+      The FRM download files contain the Funding Rules Monitoring reports.
     </p>
-   
-  
     <h2 class="govuk-heading-l">Academic Collection Year 2024 to 2025</h2>
     <table class="govuk-table">
       <thead class="govuk-table__head">
@@ -109,3 +110,14 @@ GOV.UK Prototype Kit
   </div>
 </div>
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
