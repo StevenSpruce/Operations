@@ -10,14 +10,17 @@
     <h1 class="govuk-heading-xl">Manage provider</h1>
     <form method="get" action="/search-provider" class="govuk-form-group">
       <label for="search" class="govuk-label">Search for a provider</label>
-      <input
-        class="govuk-input govuk-!-width-two-thirds"
-        id="search"
-        name="search"
-        type="text"
-        placeholder="Enter provider name or ID"
-      >
-      <button class="govuk-button" type="submit">Search</button>
+      <div style="background-color: #005ea5; padding: 10px; border-radius: 4px;">
+        <input
+          class="govuk-input govuk-!-width-two-thirds"
+          id="search"
+          name="search"
+          type="text"
+          placeholder="Enter provider name or ID"
+          style="margin: 10px 0;"
+        >
+        <button class="govuk-button" type="submit">Search</button>
+      </div>
     </form>
     <div class="govuk-summary-list">
       <div class="govuk-summary-list__row">
@@ -34,11 +37,27 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Is MCA:</dt>
-        <dd class="govuk-summary-list__value">No</dd>
+        <dd class="govuk-summary-list__value">
+          <input
+            type="checkbox"
+            id="is-mca"
+            name="is-mca"
+            class="govuk-checkboxes__input"
+          >
+          <label for="is-mca" class="govuk-label govuk-checkboxes__label">Yes</label>
+        </dd>
       </div>
-    <div class="govuk-summary-list__row"></div>
-        <dt class="govuk-summary-list__key">Is NonMCA Devolved Authority:</dt>
-        <dd class="govuk-summary-list__value">No</dd>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Is Non-MCA Devolved Authority:</dt>
+        <dd class="govuk-summary-list__value">
+          <input
+            type="checkbox"
+            id="is-non-mca"
+            name="is-non-mca"
+            class="govuk-checkboxes__input"
+          >
+          <label for="is-non-mca" class="govuk-label govuk-checkboxes__label">Yes</label>
+        </dd>
       </div>
     </div>
     <h2 class="govuk-heading-l">Assignments</h2>
@@ -60,7 +79,17 @@
           <td class="govuk-table__cell">EAS2324</td>
           <td class="govuk-table__cell">15-08-2024</td>
           <td class="govuk-table__cell">15-08-2024</td>
-        </tr>>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">LU2323</td>
+          <td class="govuk-table__cell">15-09-2023</td>
+          <td class="govuk-table__cell">15-09-2023</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">FEW2223</td>
+          <td class="govuk-table__cell">14-04-2023</td>
+          <td class="govuk-table__cell">14-04-2023</td>
+        </tr>
       </tbody>
     </table>
   </div>
