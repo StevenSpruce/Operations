@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Period End History
+{% endblock %}
+{% block content %}
+{% include "./includes/nav.html" %}
+<a href="/period-end" class="govuk-back-link">Back</a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Period End History</h1>
+    <h2 class="govuk-heading-l">Collection Year 2425</h2>
+    <!-- Dropdown for selecting collection year -->
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="collection-year">Select a collection year</label>
+      <select class="govuk-select" id="collection-year" name="collection-year">
+        <option value="2425" selected>2425</option>
+        <option value="2424">2424</option>
+        <option value="2423">2423</option>
+      </select>
+    </div>
+    <!-- Period History Records -->
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+      <!-- R05 -->
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              R05
+            </span>
+          </h3>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <p class="govuk-body">
+            <strong>Started:</strong> 1/1/2025 6:34 PM<br>
+            <strong>Finished:</strong> 1/1/2025 2:20 PM<br>
+            <strong>Duration:</strong> 2 days 17 hours 47 minutes<br>
+            <strong>Duration (Business Days):</strong> 3 days 17 hours 47 minutes
+          </p>
+          <a href="/reports/r05" class="govuk-link">Reports</a>
+        </div>
+      </div>
+      <!-- R04 -->
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+              R04
+            </span>
+          </h3>
+        </div>
+        <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+          <p class="govuk-body">
+            <strong>Started:</strong> 12/5/2024 6:05 PM<br>
+            <strong>Finished:</strong> 12/8/2024 6:00 AM<br>
+            <strong>Duration:</strong> 3 days 10 hours 54 minutes<br>
+            <strong>Duration (Business Days):</strong> 3 days 10 hours 54 minutes
+          </p>
+          <a href="/reports/r04" class="govuk-link">Reports</a>
+        </div>
+      </div>
+      <!-- R03 -->
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+              R03
+            </span>
+          </h3>
+        </div>
+        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+          <p class="govuk-body">
+            <strong>Started:</strong> 11/6/2024 6:14 PM<br>
+            <strong>Finished:</strong> 11/8/2024 2:10 AM<br>
+            <strong>Duration:</strong> 5 days 14 hours 9 minutes<br>
+            <strong>Duration (Business Days):</strong> 5 days 14 hours 9 minutes
+          </p>
+          <a href="/reports/r03" class="govuk-link">Reports</a>
+        </div>
+      </div>
+      <!-- R02 -->
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+              R02
+            </span>
+          </h3>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+          <p class="govuk-body">
+            <strong>Started:</strong> 10/4/2024 6:10 PM<br>
+            <strong>Finished:</strong> 10/6/2024 2:30 AM<br>
+            <strong>Duration:</strong> 3 days 17 hours 46 minutes<br>
+            <strong>Duration (Business Days):</strong> 3 days 17 hours 46 minutes
+          </p>
+          <a href="/reports/r02" class="govuk-link">Reports</a>
+        </div>
+      </div>
+      <!-- R01 -->
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-5">
+              R01
+            </span>
+          </h3>
+        </div>
+        <div id="accordion-default-content-5" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-5">
+          <p class="govuk-body">
+            <strong>Started:</strong> 9/2/2024 2:11 PM<br>
+            <strong>Finished:</strong> 9/4/2024 6:22 PM<br>
+            <strong>Duration:</strong> 2 days 4 hours 30 minutes<br>
+            <strong>Duration (Business Days):</strong> 2 days 12 hours 40 minutes
+          </p>
+          <a href="/reports/r01" class="govuk-link">Reports</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
