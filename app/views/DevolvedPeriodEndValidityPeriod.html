@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Validity Periods
+{% endblock %}
+{% block content %}
+{% include "./includes/nav.html" %}
+<a href="/homepage" class="govuk-back-link">Back</a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Validity Periods</h1>
+    <div class="govuk-form-group govuk-!-margin-bottom-6">
+      <label class="govuk-label" for="collection-year">Year</label>
+      <select class="govuk-select" id="collection-year" name="collection-year">
+        <option value="2425" selected>2425</option>
+        <option value="2424">2424</option>
+        <option value="2423">2423</option>
+      </select>
+    </div>
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        Critical Path
+      </legend>
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input type="checkbox" class="govuk-checkboxes__input" id="report-1" name="report-1" checked>
+          <label class="govuk-label govuk-checkboxes__label" for="report-1">Period End Instructions</label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input type="checkbox" class="govuk-checkboxes__input" id="report-2" name="report-2" checked>
+          <label class="govuk-label govuk-checkboxes__label" for="report-2">Internal Data Match Report</label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input type="checkbox" class="govuk-checkboxes__input" id="report-3" name="report-3" checked>
+          <label class="govuk-label govuk-checkboxes__label" for="report-3">ACT Count Report</label>
+        </div>
+      </div>
+    </fieldset>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        DAS Started Path
+      </legend>
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input type="checkbox" class="govuk-checkboxes__input" id="das-1" name="das-1" checked>
+          <label class="govuk-label govuk-checkboxes__label" for="das-1">DAS Started Email</label>
+        </div>
+      </div>
+    </fieldset>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        Internal Reports Path
+      </legend>
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input type="checkbox" class="govuk-checkboxes__input" id="internal-1" name="internal-1" checked>
+          <label class="govuk-label govuk-checkboxes__label" for="internal-1">Period End Data Quality Report</label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input type="checkbox" class="govuk-checkboxes__input" id="internal-2" name="internal-2" checked>
+          <label class="govuk-label govuk-checkboxes__label" for="internal-2">Provider Submissions Report</label>
+        </div>
+      </div>
+    </fieldset>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        FCS Hand Over Part 1 Path
+      </legend>
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input type="checkbox" class="govuk-checkboxes__input" id="fcs-1" name="fcs-1" checked>
+          <label class="govuk-label govuk-checkboxes__label" for="fcs-1">Initial FCS Hand Over Part 1</label>
+        </div>
+        
+      </div>
+    </fieldset>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        FCS Hand Over Part 2 Path
+      </legend>
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input type="checkbox" class="govuk-checkboxes__input" id="fcs-2" name="fcs-2" checked>
+          <label class="govuk-label govuk-checkboxes__label" for="fcs-2">Final FCS Hand Over Part 2</label>
+        </div>
+   
+      </div>
+    </fieldset>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <button class="govuk-button govuk-!-margin-top-5" data-module="govuk-button">Save</button>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
