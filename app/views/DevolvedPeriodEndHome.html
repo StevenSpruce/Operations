@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Period End
+{% endblock %}
+{% block content %}
+{% include "./includes/nav.html" %}
+<a href="/period-end" class="govuk-back-link">Back</a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Period end</h1>
+    <h2 class="govuk-heading-l">Period R06 of Year 2425</h2>
+  
+    <p class="govuk-body">
+      <a href="/reports" class="govuk-link">Reports</a><br>
+      <a href="/history" class="govuk-link">History</a><br>
+      <a href="/validity-periods" class="govuk-link">Validity Periods</a>
+    </p>
+    <!-- MCAs Section -->
+    <h3 class="govuk-heading-m">MCAs</h3>
+    <p class="govuk-body">
+      CPCA, London, GMCA, LCRCA, TVCA, WECA, WMCA, NTCA, WYCA, SCRCA, NEMCA
+    </p>
+    <!-- SLD/DAS Mismatches -->
+    <h3 class="govuk-heading-m">SLD/DAS mismatches</h3>
+    <p class="govuk-body">756</p>
+    <!-- Failed Submissions -->
+    <h3 class="govuk-heading-m">Failed submissions</h3>
+    <p class="govuk-body">No Failed Jobs</p>
+    <!-- Reference Data Jobs -->
+    <h3 class="govuk-heading-m">Reference data jobs</h3>
+    <button class="govuk-button" data-module="govuk-button">Pause reference data jobs</button>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Job</th>
+          <th scope="col" class="govuk-table__header">Status</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">REF-FCS</td>
+          <td class="govuk-table__cell">Next due: 15 Jan 2025, 06:30</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">REF-EPA</td>
+          <td class="govuk-table__cell">Next due: 15 Jan 2025, 13:25</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">REF-ILRLookup2425</td>
+          <td class="govuk-table__cell">Next due: 15 Jan 2025, 06:55</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Actions -->
+    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Send Collection Closed Email
+    </button>
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
+  </div>
+</div>
+{% endblock %}
