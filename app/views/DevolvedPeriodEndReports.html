@@ -1,0 +1,176 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Period End Reports
+{% endblock %}
+{% block content %}
+{% include "./includes/nav.html" %}
+<a href="/period-end" class="govuk-back-link">Back</a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Period end reports</h1>
+    <h2 class="govuk-heading-l">Period R06 of Year 2425</h2>
+    <!-- Collection Stats -->
+    <h3 class="govuk-heading-m">Collection Stats</h3>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Collection</th>
+          <th scope="col" class="govuk-table__header">Successful</th>
+          <th scope="col" class="govuk-table__header">Failed</th>
+          <th scope="col" class="govuk-table__header">Total</th>
+          <th scope="col" class="govuk-table__header">Successful %</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">ILR2425</td>
+          <td class="govuk-table__cell">23</td>
+          <td class="govuk-table__cell">1</td>
+          <td class="govuk-table__cell">24</td>
+          <td class="govuk-table__cell">95.83</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><strong>Total</strong></td>
+          <td class="govuk-table__cell"><strong>23</strong></td>
+          <td class="govuk-table__cell"><strong>1</strong></td>
+          <td class="govuk-table__cell"><strong>24</strong></td>
+          <td class="govuk-table__cell"><strong>95.83</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Summarisation Comparison -->
+    <h3 class="govuk-heading-m">Summarisation Comparison</h3>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Last</th>
+          <th scope="col" class="govuk-table__header">Current</th>
+          <th scope="col" class="govuk-table__header">Difference</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">ILR2425 R05: 737,401.1</td>
+          <td class="govuk-table__cell">R06: 767,646.89</td>
+          <td class="govuk-table__cell">30,328.59</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">SB: 2,176,060.89</td>
+          <td class="govuk-table__cell">SB06: 2,177,068.77</td>
+          <td class="govuk-table__cell">1,008.88</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">APPS02: 1,771,876.70</td>
+          <td class="govuk-table__cell">APPS03: 1,736,380,981.45</td>
+          <td class="govuk-table__cell">-435,495,728.55</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Internal Reports -->
+    <h3 class="govuk-heading-m">Internal Reports</h3>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Report name</th>
+          <th scope="col" class="govuk-table__header">Download</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Period End Data Quality Report</td>
+          <td class="govuk-table__cell">
+            <a href="/downloads/data-quality-report" class="govuk-link">Data Quality Report R06 2025</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Provider Submissions Report</td>
+          <td class="govuk-table__cell">
+            <a href="/downloads/provider-submissions-report" class="govuk-link">ILR Provider Submissions Report R06</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Period End EFA Non-Contracted</td>
+          <td class="govuk-table__cell">
+            <a href="/downloads/efa-non-contracted" class="govuk-link">EFA Non-Contracted R06 2025</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Period End Data Extract Report</td>
+          <td class="govuk-table__cell">
+            <a href="/downloads/data-extract-report" class="govuk-link">Data Extract Report R06 2025</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Internal Data Match Report</td>
+          <td class="govuk-table__cell">
+            <a href="/downloads/data-match-report" class="govuk-link">Internal Data Match Report R06 2025</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">ACT Count Report</td>
+          <td class="govuk-table__cell">
+            <a href="/downloads/act-count-report" class="govuk-link">ACT Count Report R06 2025</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 class="govuk-heading-m">Sample Reports</h3>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Report name</th>
+          <th scope="col" class="govuk-table__header">Download</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">10004777 Reports</td>
+          <td class="govuk-table__cell">
+            <a href="/downloads/sample-reports" class="govuk-link">Reports.zip</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 class="govuk-heading-m">LLV Sample Reports</h3>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Report name</th>
+          <th scope="col" class="govuk-table__header">Download</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">10004777 LLV Sample Reports</td>
+          <td class="govuk-table__cell">
+            <a href="/downloads/llv-sample-reports" class="govuk-link">10004777LLVSample.zip</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 class="govuk-heading-m">MCA Reports</h3>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Report name</th>
+          <th scope="col" class="govuk-table__header">Download</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">90000439 CPCA Reports</td>
+          <td class="govuk-table__cell">
+            <a href="/downloads/cpca-reports" class="govuk-link">Reports.zip</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">90000440 London Reports</td>
+          <td class="govuk-table__cell">
+            <a href="/downloads/london-reports" class="govuk-link">Reports.zip</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
