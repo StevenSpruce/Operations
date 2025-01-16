@@ -3,57 +3,63 @@
 GOV.UK Prototype Kit
 {% endblock %}
 {% block content %}
-<body class="govuk-template__body  js-enabled">
- <main class="govuk-main-wrapper" id="content" role="main">
+<body class="govuk-template__body js-enabled">
+    <main class="govuk-main-wrapper" id="content" role="main">
         <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-grid-column-one-half govuk-!-margin-auto">
+                <a class="govuk-back-link" href="/fundingclaimsubmissions2425">Back</a>
+                <br><br>
+                <div>
+                    <p class="govuk-body">
+                        We may request further information and evidence relating to your claims
+                        that you have manually entered, including your Tailored Learning claim.
+                        Grant funding not used for its intended purposes must be excluded from the claim and returned to the ESFA.
+                        We will recover funding claimed in error.
+                    </p>
+                    <p class="govuk-body">
+                        Funding for learner support and learning support is included within your allocation.
+                        We will monitor the amount of funding you spend on support costs and may request evidence.
+                    </p>
+                    <p class="govuk-body">
+                        I certify that this funding claim is complete and accurate, and the funding has been spent
+                        in line with the conditions of grant and 2023 to 2024 funding and performance management rules.
+                    </p>
+                </div>
+                <br>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="https://www.gov.uk/government/publications/adult-education-budget-funding-and-performance-management-rules-2023-to-2024" class="govuk-link">Adult education budget: funding and performance management rules 2023 to 2024</a></li>
+                    <li><a href="https://www.gov.uk/government/publications/advanced-learner-loans-funding-rules-2023-to-2024" class="govuk-link">Advanced learner loans funding rules: 2023 to 2024</a></li>
+                </ul>
+                <br>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="conditions-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            Confirmation
+                        </legend>
+                        <div id="conditions-hint" class="govuk-hint">
+                            I confirm this data is correct and the grant has been spent in line with the conditions and rules.
+                        </div>
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="confirmation" name="confirmation" type="checkbox" value="confirmed">
+                                <label class="govuk-label govuk-checkboxes__label" for="confirmation">
+                                    I agree
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <br>
+                <div class="govuk-button-group">
+                    <a class="govuk-button govuk-button--secondary" id="save" name="save" href="/fundingclaimconfirmation2425">
+                        Save and finish later
+                    </a>
+                    <a id="submit" name="submit" class="govuk-button" href="/fundingclaimconfirmation2425">
+                        Confirm and Submit
+                    </a>
+                </div>
             </div>
-                <div class="govuk-grid-column-full">
-<a class="govuk-back-link" href="/fundingclaimsubmissions2425">Back</a>
-<br>
-<br>
-<div>
-<p>
-    We may request further information and evidence relating to your claims that you have manually entered, including your Tailored Learning claim.
-    Grant funding not used for its intended purposes must be be excluded from the claim and returned to the ESFA. We will recover funding claimed in error.<br>
-   <br> Funding for a learner support and learning support is included within your allocation. We will monitor the amount of funding you spend on support costs and may request evidence. <br>
-   <br> I certify that this funding claim is complete and accurate, and the funding has been spent in line with the conditions of grant and 2023 to 2024 funding and performance management rules. <br>
-  </div>
-</p>
-<br>
-<div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      </legend>
-      <div id="waste-hint" class="govuk-hint">
-        I confim this data is correct and the grant has been spent in line with the conditions and rules
-      </div>
-      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-          <label class="govuk-label govuk-checkboxes__label" for="waste">
         </div>
-      </div>
-    </fieldset>
-  </div>
-  <br>
-  <div class="govuk-button-group">
-    <a class="govuk-button govuk-button--secondary" id="save" name="save" href="/fundingclaimconfirmation2425">
-        Save and finish later
-    </a>
-    <a id="submit" name="submit" class="govuk-button govuk-!-margin-left-6" href="/fundingclaimconfirmation2425">
-        Save and Continue
-    </a>
-</div>
-
-
-               
-  
-
-  
-
-
-
-
-
+    </main>
+</body>
 {% endblock %}
