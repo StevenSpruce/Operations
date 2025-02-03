@@ -1,66 +1,77 @@
 {% extends "layoutsld.html" %}
 {% block pageTitle %}
-Export HECoS template
+HECoS Data Management
 {% endblock %}
 {% block content %}
-<body class="govuk-template__body js-enabled">
-    <main class="govuk-main-wrapper" id="content" role="main">
-        <!-- Header with user information -->
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full govuk-!-text-align-right">
-                <span>Beau DummarTEST UKPRN:10040002</span> |
-                <a href="#" class="govuk-link">Sign out</a>
-            </div>
-        </div>
-        <!-- Back and navigation links -->
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full">
-                <a class="govuk-back-link" href="#">Back</a>
-                <a href="#" class="govuk-link govuk-!-margin-left-3">Import</a>
-            </div>
-        </div>
-        <!-- Main content -->
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-                <h1 class="govuk-heading-l">Export HECoS template</h1>
-                <p class="govuk-body govuk-!-font-size-16">This return is for submitting Higher Education Classification of Subjects (HECoS) codes.</p>
-                <p class="govuk-body">
-                    The template will be populated with the learning aims from your HE dataset and the
-                    corresponding valid HECoS codes. Please download the CSV template below and input the
-                    percentage split that equates to each HECoS code.
-                </p>
-                <p class="govuk-body">
-                    To complete the HECoS file submission:
-                </p>
-                <ul class="govuk-list govuk-list--bullet">
-                    <li>Export the CSV template below.</li>
-                    <li>Input HECoS percentages.</li>
-                    <li>Upload the CSV within the Import tab.</li>
-                </ul>
-                <p class="govuk-body">
-                    Export the template using the button below:
-                </p>
-                <a href="HecosUpload.html" class="govuk-button">Export Template</a>
-            </div>
-            <!-- Help & Support Section -->
-            <div class="govuk-grid-column-one-third">
-                <h2 class="govuk-heading-m">Help & Support</h2>
-                <p class="govuk-body">
-                    Find further information at the
-                    <a href="#" class="govuk-link">Customer Help Centre</a>, where you can read
-                    <a href="#" class="govuk-link">helpful articles</a>, talk to our
-                    <a href="#" class="govuk-link">Community</a>, chat to our
-                    <a href="#" class="govuk-link">virtual assistant</a>, or submit an enquiry.
-                </p>
-                <h3 class="govuk-heading-s">Related content</h3>
-                <ul class="govuk-list">
-                    <li><a href="#" class="govuk-link">Learning aim reference service (LARS)</a></li>
-                </ul>
-                <h3 class="govuk-heading-s">Tools and Services</h3>
-                <ul class="govuk-list">
-                    <li><a href="#" class="govuk-link">Find a Learning Aim</a></li>
-                </ul>
-            </div>
-        </div>
-    </main>
+{% include "./includes/nav.html" %}
+<br>
+<a class="govuk-link" href="#">Back</a>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
+          <span class="govuk-caption-m">HECoS Data Management</span>
+          Select Export or Import
+      </h1>
+      <h2 id="displayTitle">Return period - 2024 to 2025</h2>
+  </div>
+</div>
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">Contents</h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#export-tab">
+        Export HECoS Data
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#import-tab">
+        Import HECoS Data
+      </a>
+    </li>
+  </ul>
+  <!-- Export HECoS Tab -->
+  <div class="govuk-tabs__panel" id="export-tab">
+    <h2 class="govuk-heading-l">Export HECoS Template</h2>
+    <p class="govuk-body">
+      The template will be populated with the learning aims from your HE dataset and the corresponding HECoS codes.
+      Please download the CSV template below and input the percentage split that equates to each HECoS code.
+    </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Export the CSV template below.</li>
+      <li>Input HECoS percentages.</li>
+      <li>Upload the CSV within the Import tab.</li>
+    </ul>
+    <a href="#" class="govuk-button">Export Template</a>
+  </div>
+  <!-- Import HECoS Tab -->
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="import-tab">
+    <h2 class="govuk-heading-l">Select and Upload HECoS File</h2>
+    <p class="govuk-body">Before importing your file, you should make sure that:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>It is in CSV format.</li>
+      <li>The data it contains is as complete as possible.</li>
+      <li>The data it contains is as accurate as possible.</li>
+    </ul>
+    <!-- Return Year Dropdown -->
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="return-year">
+        Select return year
+      </label>
+      <select class="govuk-select" id="return-year" name="return-year">
+        <option value="2024">2024 to 2025</option>
+        <option value="2023">2023 to 2024</option>
+        <option value="2022">2022 to 2023</option>
+      </select>
+    </div>
+    <!-- File Upload Section -->
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-!-font-weight-bold" for="file-upload">
+        Select a file to upload
+      </label>
+      <input class="govuk-file-upload" id="file-upload" name="file-upload" type="file">
+    </div>
+    <a href="HecosConfirmation.html" class="govuk-button">Upload</a>
+  </div>
+</div>
 {% endblock %}
