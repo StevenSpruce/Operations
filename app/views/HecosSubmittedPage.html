@@ -1,0 +1,128 @@
+{% extends "layoutsld.html" %}
+{% block pageTitle %}
+HECoS Export & Import
+{% endblock %}
+{% block content %}
+<br>
+<a class="govuk-link" href="#">Back</a>
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
+          <span class="govuk-caption-m">HECoS Export and Upload</span>
+          Select Export or Import
+      </h1>
+  </div>
+</div>
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">Contents</h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#export-tab">
+        Export HECoS Data
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#import-tab">
+        Import HECoS Data
+      </a>
+    </li>
+  </ul>
+  <!-- Export HECoS Tab -->
+  <div class="govuk-tabs__panel" id="export-tab">
+    <h1 class="govuk-heading-l">Export HECoS Template</h1>
+    <p class="govuk-body">
+      The template will be populated with the learning aims from your HE dataset and the corresponding HECoS codes.
+      Please download the CSV template below and input the percentage split that equates to each HECoS code.
+    </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Export the CSV template below.</li>
+      <li>Input HECoS percentages.</li>
+      <li>Upload the CSV within the Import tab.</li>
+    </ul>
+    <a href="#" class="govuk-button">Export Template</a>
+  </div>
+  <!-- Import HECoS Tab -->
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="import-tab">
+    <h1 class="govuk-heading-l">Select and Upload HECoS File</h1>
+    <p class="govuk-body">Before importing your file, you should make sure that:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>It is in CSV format.</li>
+      <li>The data it contains is as complete as possible.</li>
+      <li>The data it contains is as accurate as possible.</li>
+    </ul>
+    <!-- Return Year Dropdown -->
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="return-year">
+        Select return year
+      </label>
+      <select class="govuk-select" id="return-year" name="return-year">
+        <option value="2024">2024 to 2025</option>
+        <option value="2023">2023 to 2024</option>
+        <option value="2022">2022 to 2023</option>
+      </select>
+    </div>
+    <!-- File Upload Section -->
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-!-font-weight-bold" for="file-upload">
+        Select a file to upload
+      </label>
+      <input class="govuk-file-upload" id="file-upload" name="file-upload" type="file">
+    </div>
+    <a href="HecosConfirmation.html" class="govuk-button">Upload</a>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <!-- Submitted Data Table -->
+    <h2 class="govuk-heading-l">Submitted Data</h2>
+    <p class="govuk-body">Return period: &lt;YYYY&gt; to &lt;YYYY&gt;</p>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Date</th>
+          <th scope="col" class="govuk-table__header">Submitted by</th>
+          <th scope="col" class="govuk-table__header">File</th>
+          <th scope="col" class="govuk-table__header">Reference</th>
+          <th scope="col" class="govuk-table__header">Status</th>
+          <th scope="col" class="govuk-table__header">Reports</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">10 Nov</td>
+          <td class="govuk-table__cell">Beau DummarTEST</td>
+          <td class="govuk-table__cell"><a href="#">10040002.csv</a></td>
+          <td class="govuk-table__cell">2074080</td>
+          <td class="govuk-table__cell">Completed</td>
+          <td class="govuk-table__cell"><a href="#">Download report</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">9 Nov</td>
+          <td class="govuk-table__cell">Beau DummarTEST</td>
+          <td class="govuk-table__cell"><a href="#">10040002.csv</a></td>
+          <td class="govuk-table__cell">2073079</td>
+          <td class="govuk-table__cell">Completed</td>
+          <td class="govuk-table__cell"><a href="#">Download report</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">8 Nov</td>
+          <td class="govuk-table__cell">Beau DummarTEST</td>
+          <td class="govuk-table__cell"><a href="#">10040002.csv</a></td>
+          <td class="govuk-table__cell">2071978</td>
+          <td class="govuk-table__cell">Completed</td>
+          <td class="govuk-table__cell"><a href="#">Download report</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
