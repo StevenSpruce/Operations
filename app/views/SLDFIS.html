@@ -1,0 +1,126 @@
+{% extends "layoutsld.html" %}
+{% block pageTitle %}
+FIS (Funding Information Service) tool
+{% endblock %}
+{% block content %}
+<!-- Feedback Banner -->
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title">
+    <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title">LIVE</h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+        <p class="govuk-body">
+            <a class="govuk-link" href="#">Your feedback (opens in new tab)</a> will help us improve the service.
+        </p>
+    </div>
+</div>
+<!-- Back Link -->
+<a class="govuk-back-link" href="#">Back</a>
+<!-- Main Content -->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">FIS (Funding Information Service) tool</h1>
+        <p class="govuk-body">
+            FIS is a desktop application for the Department of Education’s data collections system.
+            Providers can use it to validate Individualised Learner Record (ILR) data.
+        </p>
+        <h2 class="govuk-heading-m">Filter by year</h2>
+        <p class="govuk-body">The page will refresh after you select each filter.</p>
+        <!-- Year Filters -->
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="filter-2024-2025" name="filter" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="filter-2024-2025">
+                    2024 to 2025
+                </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="filter-2023-2024" name="filter" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="filter-2023-2024">
+                    2023 to 2024
+                </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="filter-2022-2023" name="filter" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="filter-2022-2023">
+                    2022 to 2023
+                </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="filter-2021-2022" name="filter" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="filter-2021-2022">
+                    2021 to 2022
+                </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="filter-2020-2021" name="filter" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="filter-2020-2021">
+                    2020 to 2021
+                </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="filter-2019-2020" name="filter" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="filter-2019-2020">
+                    2019 to 2020
+                </label>
+            </div>
+        </div>
+        <!-- Academic Year 2024 to 2025 Table -->
+        <h2 class="govuk-heading-m">Academic year 2024 to 2025</h2>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header">Version</th>
+                    <th class="govuk-table__header">Date and time uploaded</th>
+                    <th class="govuk-table__header">Download Link</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">2425.7</td>
+                    <td class="govuk-table__cell">21 January 2025 at 5:28pm</td>
+                    <td class="govuk-table__cell"><a href="#" class="govuk-link">Download 2425.7</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">2425.6</td>
+                    <td class="govuk-table__cell">20 January 2025 at 3:41pm</td>
+                    <td class="govuk-table__cell"><a href="#" class="govuk-link">Download 2425.6</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">2425.5</td>
+                    <td class="govuk-table__cell">15 January 2025 at 4:18pm</td>
+                    <td class="govuk-table__cell"><a href="#" class="govuk-link">Download 2425.5</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Academic Year 2023 to 2024 Table -->
+        <h2 class="govuk-heading-m">Academic year 2023 to 2024</h2>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header">Version</th>
+                    <th class="govuk-table__header">Date and time uploaded</th>
+                    <th class="govuk-table__header">Download Link</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">2324.8</td>
+                    <td class="govuk-table__cell">15 April 2024 at 7:43am</td>
+                    <td class="govuk-table__cell"><a href="#" class="govuk-link">Download 2324.8</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">2324.7</td>
+                    <td class="govuk-table__cell">20 February 2024 at 9:51am</td>
+                    <td class="govuk-table__cell"><a href="#" class="govuk-link">Download 2324.7</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">2324.6</td>
+                    <td class="govuk-table__cell">14 February 2024 at 5:25pm</td>
+                    <td class="govuk-table__cell"><a href="#" class="govuk-link">Download 2324.6</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
