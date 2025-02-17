@@ -1,0 +1,119 @@
+{% extends "layoutsld.html" %}
+{% block pageTitle %}
+Adult Level 1 Award - Learning Aim Details
+{% endblock %}
+{% block content %}
+<!-- Breadcrumb Navigation -->
+<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Search Results</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+            Adult Level 1 Award
+        </li>
+    </ol>
+</nav>
+<!-- Main Content -->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Adult Level 1 Award</h1>
+        <p class="govuk-body">Reference: <strong>00289739</strong></p>
+    </div>
+</div>
+<!-- Academic Year Dropdown -->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <label class="govuk-label" for="academic-year">
+            Academic year
+        </label>
+        <select class="govuk-select" id="academic-year" name="academic-year">
+            <option value="2024">2024 to 2025</option>
+            <option value="2023">2023 to 2024</option>
+            <option value="2022">2022 to 2023</option>
+        </select>
+    </div>
+</div>
+<!-- Sidebar Navigation -->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+        <nav class="govuk-side-navigation">
+            <ul class="govuk-list">
+                <li><a href="#" class="govuk-link">Overview</a></li>
+                <li><a href="#" class="govuk-link">Funding</a></li>
+                <li><a href="#" class="govuk-link">Frameworks</a></li>
+                <li><a href="#" class="govuk-link">Category</a></li>
+                <li><a href="#" class="govuk-link">Basic skills</a></li>
+                <li><a href="#" class="govuk-link">Key dates</a></li>
+                <li><strong>LearnDirect class system</strong></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Main Content Area -->
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">HECoS Codes</h2>
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">HECoS code (1)</dt>
+                <dd class="govuk-summary-list__value">MG.11 - Association (Soccer) Football</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">HECoS code (2)</dt>
+                <dd class="govuk-summary-list__value">Not applicable</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">HECoS code (3)</dt>
+                <dd class="govuk-summary-list__value">Not applicable</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">HECoS code (4)</dt>
+                <dd class="govuk-summary-list__value">Not applicable</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">HECoS code (5)</dt>
+                <dd class="govuk-summary-list__value">Not applicable</dd>
+            </div>
+        </dl>
+    </div>
+</div>
+{% endblock %}
+{% block footer %}
+<footer class="govuk-footer" role="contentinfo">
+    <div class="govuk-width-container">
+        <div class="govuk-footer__meta">
+            <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+                <ul class="govuk-footer__inline-list">
+                    <li class="govuk-footer__inline-list-item">
+                        <a class="govuk-footer__link" href="#">Privacy policy</a>
+                    </li>
+                    <li class="govuk-footer__inline-list-item">
+                        <a class="govuk-footer__link" href="#">Terms and conditions</a>
+                    </li>
+                    <li class="govuk-footer__inline-list-item">
+                        <a class="govuk-footer__link" href="#">Accessibility statement</a>
+                    </li>
+                    <li class="govuk-footer__inline-list-item">
+                        <a class="govuk-footer__link" href="#">Cookies</a>
+                    </li>
+                </ul>
+                <p class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+                    All content is available under the
+                    <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">
+                        Open Government Licence v3.0
+                    </a>, except where otherwise stated.
+                </p>
+            </div>
+            <div class="govuk-footer__meta-item">
+                <a class="govuk-footer__link govuk-footer__link--no-visited-state" href="#">
+                    <svg class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" height="17" viewBox="0 0 41 17" fill="currentColor">
+                        <path d="M0 0h11l1 2h15l1-2h11v5H0z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}
