@@ -7,19 +7,20 @@ GOV.UK Prototype Kit
 
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
-<div class="govuk-warning-text">
-    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-    <strong class="govuk-warning-text__text">
-      <span class="govuk-visually-hidden">Warning</span>
-      The current scaled up salary for this staff member is £200,000. Is this correct? 
-      For more information on how we calulate FTE please visit www.FTECALC.gov.uk
-    </strong>
-  </div>
 
 
 <main class="govuk-main-wrapper" id="content" role="main">
 <div class="govuk-grid-row flex">
 <body>
+    <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          The current scaled up salary for this staff member is £200,000. Is this correct? 
+          For more information on how we calulate FTE please visit www.FTECALC.gov.uk
+        </strong>
+      </div>
+    
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
         <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
