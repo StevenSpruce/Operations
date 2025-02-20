@@ -1,0 +1,81 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+               
+                   
+<div class="govuk-grid-column-full">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+
+                <form method="post" action="/ConfirmMainContract">
+                    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+            
+
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                    <h1 class="govuk-fieldset__heading">What is their main type of contract?</h1>
+                </legend>
+            <div class="govuk-hint">
+                The main contract should be the one that is for the most hours. <mark>If the main contract specifies variable or zero hours then the contract type should be recorded as variable or zero hours.</mark>
+            </div>
+
+            <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId178" name="MainContract" value="Permanent" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId178" class="govuk-label govuk-radios__label">
+                                Permanent
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId179" name="MainContract" value="FixedTerm" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId179" class="govuk-label govuk-radios__label">
+                                Fixed term 
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId180" name="MainContract" value="Variable hours" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId180" class="govuk-label govuk-radios__label">
+                                Variable hours
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId181" name="MainContract" value="Zero hours" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId181" class="govuk-label govuk-radios__label">
+                                Zero hours 
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="LookupItemId182" name="MainContract" value="Other" class="govuk-radios__input" type="radio">
+                            <label for="LookupItemId182" class="govuk-label govuk-radios__label">
+                                Other
+                            </label>
+                        </div>
+
+            </div>
+            <br>
+        </fieldset>
+    </div>
+
+</div>
+</div>
+        <br>
+        <button class="govuk-button" type="submit">Save and continue</button>
+</div>
+</div>
+</div>
+</main>
+</body>
+
+
+{% endblock %}

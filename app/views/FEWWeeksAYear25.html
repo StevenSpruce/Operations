@@ -1,0 +1,67 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<main class="govuk-main-wrapper" id="content" role="main">
+<div class="govuk-grid-row flex">
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+
+        <h1 class="govuk-heading">Weeks a year contracted to work</h1>
+
+        <p class="govuk-body">
+            <strike>This data item records the number of weeks per year for which a member of staff is contracted to work, including any paid holiday</strike>. 
+        </p>
+        <p class="govuk-body">
+            <mark>Record the number of weeks per year the staff member is contracted to work, including any paid holiday</mark>. 
+        </p>
+
+        <form method="post" id="weekly-hours-form" action="/WeeksYearError">
+            <div class="govuk-form-group">
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1450">
+                <fieldset class="govuk-fieldset">
+ 
+                    <div class="govuk-form-group" id="weekly-Group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h2 class="govuk-fieldset__heading">
+                                What are their weeks per year?
+                            </h2>
+                        </legend>
+                        <div id="weekly-hours-hint" class="govuk-hint">
+                            Where a staff member is contracted to work for less than 52 weeks in a year but payments are spread equally over the year, it is the number of weeks contracted to work that should be entered.  For example, if someone is on a term-time only contract for 37 weeks per year but receives their pay in twelve monthly instalments, it is 37 weeks that should be entered, not 52.
+                        </div>
+
+                        
+                        <div class="govuk-input__wrapper">
+                            <input class="govuk-input govuk-input--width-5" id="weeksayear" type="text" inputmode="numeric" maxlength="5" name="weeksayear" value="">
+                            <div class="govuk-input__suffix" aria-hidden="true">weeks per year</div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+            <button class="govuk-button" type="submit" id="submit">Save and continue</button>
+
+    </div>
+</div>
+
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+
+{% endblock %}

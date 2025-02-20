@@ -1,0 +1,69 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                    
+
+                    
+
+<div class="govuk-grid-column-full">
+    <form method="post" action="/ConfirmSameOrg">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+
+                    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+
+
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l" 0="">
+                    <h1 class="govuk-fieldset__heading">
+Do they still work for the organisation?                    </h1>
+                </legend>
+            <div class="govuk-hint">
+                <strike>Select an option</strike><mark>Select No if the staff member left the organisation during the academic year.</mark>
+            </div>
+
+            <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input id="/FEWTimeCurrentRole" name="SameOrg" value="Yes" checked="" class="govuk-radios__input" type="radio">
+                            <label for="/FEWTimeCurrentRole" class="govuk-label govuk-radios__label">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input id="/FEWNoLongerWorks" name="SameOrg" value="No" class="govuk-radios__input" type="radio">
+                            <label for="/FEWNoLongerWorks" class="govuk-label govuk-radios__label">
+                                No
+                            </label>
+                        </div>
+            </div>
+            <br>
+        </fieldset>
+    </div>
+
+            </div>
+        </div>
+        <br>
+        
+        <button class="govuk-button" type="submit" id="submit">Save and continue</button>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+{% endblock %}

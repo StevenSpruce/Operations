@@ -1,0 +1,78 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                    
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+        <h1 class="govuk-heading">When did they start working for the organisation?</h1>
+        <form method="post" id="radio-group" action="/few/contracts/check-contract-start-date">
+            <div class="govuk-form-group">
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1450">
+                <fieldset class="govuk-fieldset">
+
+                    <div id="dob-hint" class="govuk-hint">
+                        For example, 4 10 2012. <br> <mark>If a staff member has had a number of periods of employment with the provider, then the start date should be the start date of the latest period of employment.
+
+                        For employee transfers, use the original employment start date from the transferring from employer in the case of TUPE transfers and modification orders.</mark> 
+                        
+                    </div>
+                    
+                    <div class="govuk-date-input" id="dob">
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="startDateDay">
+                                    Day
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="startDateDay" type="text" pattern="[0-9]*" inputmode="numeric" name="StartDateDay" value="1">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="startDateMonth">
+                                    Month
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="startDateMonth" type="text" pattern="[0-9]*" inputmode="numeric" name="StartDateMonth" value="1">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="startDateYear">
+                                    Year
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govsuk-input--width-4" id="startDateYear" type="text" pattern="[0-9]*" inputmode="numeric" name="StartDateYear" value="2021">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+            <button class="govuk-button" type="submit" formaction="/FEWSameOrg">Save and continue</button>
+
+    </div>
+</div>
+
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+
+
+{% endblock %}
