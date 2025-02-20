@@ -27,37 +27,36 @@ GOV.UK Prototype Kit
         <h1 class="govuk-heading">Employment Details</h1>
     
 
+        <h1 class="govuk-heading">Weekly contracted hours </h1>
+
+    
         <p class="govuk-body">
-            Record the number of weeks per year the staff member is contracted to work, including any paid holiday. 
+            For staff members with more than one contract, record weekly contracted hours using their main contract with the most hours.
         </p>
 
-        <form method="post" id="weekly-hours-form" action="/WeeksYearError">
+        <form method="post" id="weekly-hours-form" action="/few/contracts/check-weekly-contracted-hours">
             <div class="govuk-form-group">
-                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1450">
                 <fieldset class="govuk-fieldset">
- 
                     <div class="govuk-form-group" id="weekly-Group">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                             <h2 class="govuk-fieldset__heading">
-                                What are their weeks per year?
+                                What are their weekly contracted hours?
                             </h2>
                         </legend>
                         <div id="weekly-hours-hint" class="govuk-hint">
-                            Where a staff member is contracted to work for less than 52 weeks in a year but payments are spread equally over the year, it is the number of weeks contracted to work that should be entered.  For example, if someone is on a term-time only contract for 37 weeks per year but receives their pay in twelve monthly instalments, it is 37 weeks that should be entered, not 52.
+                            For example enter 32.5 for thirty two and a half
                         </div>
 
                         
                         <div class="govuk-input__wrapper">
-                            <input class="govuk-input govuk-input--width-5" id="weeksayear" type="text" inputmode="numeric" maxlength="5" name="weeksayear" value="">
-                            <div class="govuk-input__suffix" aria-hidden="true">weeks per year</div>
+                            <input class="govuk-input govuk-input--width-5" id="weekly-hours" type="text" inputmode="numeric" maxlength="5" name="WeeklyHours.Hours" value="">
+                            <div class="govuk-input__suffix" aria-hidden="true">hours per week</div>
                         </div>
                     </div>
                 </fieldset>
             </div>
 
             <br>
-            <button class="govuk-button" type="submit" id="submit">Save and continue</button>
-
     </div>
 </div>
 
