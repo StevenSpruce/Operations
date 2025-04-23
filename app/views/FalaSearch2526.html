@@ -20,7 +20,7 @@
           Search by title or reference number
         </label>
         <div class="govuk-input__wrapper">
-          <input class="govuk-input" id="search-title" name="search-title" type="text" value="construction quantity">
+          <input class="govuk-input" id="search-title" name="search-title" type="text" value="construction">
           <button class="govuk-button govuk-button--secondary govuk-input__button" data-module="govuk-button">
             <svg class="govuk-icon govuk-icon--search" xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 19 19">
               <path fill="currentColor" d="M13 16s-2 1-5 1-5-1-5-1V8h1v8s2 1 5 1 5-1 5-1V8h1v8zM11 3a4 4 0 1 0-8 0 4 4 0 0 0 8 0z"/>
@@ -38,7 +38,7 @@
         </label>
         <select class="govuk-select" id="type-of-learning" name="type-of-learning">
           <option value="" selected>Standards</option>
-          </select>
+        </select>
       </div>
     </div>
   </div>
@@ -47,25 +47,24 @@
     <div class="govuk-grid-column-one-quarter">
       <aside class="govuk-!-padding-right-5">
         <h2 class="govuk-heading-m">Filter results</h2>
-        <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__text">
-              Sector
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            </div>
-        </details>
 
-        <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__text">
-              Level
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            </div>
-        </details>
+        <a href="#" id="Sectors-Button" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19 filter-box-button" role="button" aria-expanded="false" aria-controls="Sectors-Content">
+          <svg class="govuk-details__summary-arrow" width="0" height="0" focusable="false" aria-hidden="true">
+            <path stroke="currentColor" fill="currentColor" stroke-width="2" d="M0 0l6.5 6.5-6.5 6.5"></path>
+          </svg>
+          Sector
+        </a>
+        <div class="filter-box-content" id="Sectors-Content" aria-hidden="true">
+          </div>
+
+        <a href="#" id="Levels-Button" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19 filter-box-button" role="button" aria-expanded="false" aria-controls="Levels-Content">
+          <svg class="govuk-details__summary-arrow" width="0" height="0" focusable="false" aria-hidden="true">
+            <path stroke="currentColor" fill="currentColor" stroke-width="2" d="M0 0l6.5 6.5-6.5 6.5"></path>
+          </svg>
+          Level
+        </a>
+        <div class="filter-box-content" id="Levels-Content" aria-hidden="true">
+          </div>
 
         <p class="govuk-body"><a class="govuk-link" href="#">Clear filters</a></p>
       </aside>
@@ -75,68 +74,112 @@
 
       <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-3 govuk-!-margin-bottom-3">
 
-      <ul class="govuk-list">
-        <li>
-          <h3 class="govuk-heading-s"><a class="govuk-link" href="#">Construction Quantity Surveying Technician</a></h3>
-          <p class="govuk-body govuk-!-margin-bottom-1">
-            <strong class="govuk-!-margin-right-2">Code:</strong> 468
-          </p>
-          <p class="govuk-body govuk-!-margin-bottom-1">
-            <strong class="govuk-!-margin-right-2">Level:</strong> 4
-          </p>
-          <p class="govuk-body govuk-!-margin-bottom-1">
-            <strong class="govuk-!-margin-right-2">Sector:</strong> 21 - Surveying
-            </p>
-            <p class="govuk-body govuk-!-margin-bottom-1">
-            <strong class="govuk-!-margin-right-2">Last date for new starts:</strong> Not set
-          </p>
-          <p class="govuk-body govuk-!-margin-bottom-1">
-            <strong class="govuk-!-margin-right-2">Effective from:</strong> 03 July 2019
-          </p>
-          <p class="govuk-body">
-            <strong class="govuk-!-margin-right-2">Effective to:</strong> Open
-          </p>
-        </li>
-        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-3 govuk-!-margin-bottom-3">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <div class="govuk-table__head">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Construction Quantity Surveying Technician</a></h3>
+          </div>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Code</dt>
+              <dd class="govuk-summary-list__value">468</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Level</dt>
+              <dd class="govuk-summary-list__value">4</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Sector</dt>
+              <dd class="govuk-summary-list__value">21 - Surveying</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Last date for new starts</dt>
+              <dd class="govuk-summary-list__value">Not set</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Effective from</dt>
+              <dd class="govuk-summary-list__value">03 July 2019</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Effective to</dt>
+              <dd class="govuk-summary-list__value">Open</dd>
+            </div>
+          </dl>
+          <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-3 govuk-!-margin-bottom-3">
+        </div>
+      </div>
 
-        <li>
-          <h3 class="govuk-heading-s"><a class="govuk-link" href="#">Construction Quantity Surveyor (degree)</a></h3>
-          <p class="govuk-body govuk-!-margin-bottom-1">
-            <strong class="govuk-!-margin-right-2">Code:</strong> 482
-            <strong class="govuk-!-margin-right-2">Level:</strong> 6
-          </p>
-          <p class="govuk-body govuk-!-margin-bottom-1">
-            <strong class="govuk-!-margin-right-2">Sector:</strong> 21 - Surveying
-            <strong class="govuk-!-margin-right-2">Last date for new starts:</strong> Not set
-          </p>
-          <p class="govuk-body govuk-!-margin-bottom-1">
-            <strong class="govuk-!-margin-right-2">Effective from:</strong> 11 July 2019
-          </p>
-          <p class="govuk-body">
-            <strong class="govuk-!-margin-right-2">Effective to:</strong> Open
-          </p>
-        </li>
-        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-3 govuk-!-margin-bottom-3">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <div class="govuk-table__head">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Construction Quantity Surveyor (degree)</a></h3>
+          </div>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Code</dt>
+              <dd class="govuk-summary-list__value">482</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Level</dt>
+              <dd class="govuk-summary-list__value">6</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Sector</dt>
+              <dd class="govuk-summary-list__value">21 - Surveying</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Last date for new starts</dt>
+              <dd class="govuk-summary-list__value">Not set</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Effective from</dt>
+              <dd class="govuk-summary-list__value">11 July 2019</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Effective to</dt>
+              <dd class="govuk-summary-list__value">Open</dd>
+            </div>
+          </dl>
+          <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-3 govuk-!-margin-bottom-3">
+        </div>
+      </div>
 
-        <li>
-          <h3 class="govuk-heading-s"><a class="govuk-link" href="#">Construction Site Management (degree)</a></h3>
-          <p class="govuk-body govuk-!-margin-bottom-1">
-            <strong class="govuk-!-margin-right-2">Code:</strong> 501
-            <strong class="govuk-!-margin-right-2">Level:</strong> 6
-          </p>
-          <p class="govuk-body govuk-!-margin-bottom-1">
-            <strong class="govuk-!-margin-right-2">Sector:</strong> 55 - Construction
-            <strong class="govuk-!-margin-right-2">Last date for new starts:</strong> Not set
-          </p>
-          <p class="govuk-body govuk-!-margin-bottom-1">
-            <strong class="govuk-!-margin-right-2">Effective from:</strong> 06 September 2019
-          </p>
-          <p class="govuk-body">
-            <strong class="govuk-!-margin-right-2">Effective to:</strong> Open
-          </p>
-        </li>
-      </ul>
-    </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <div class="govuk-table__head">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Construction Site Management (degree)</a></h3>
+          </div>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Code</dt>
+              <dd class="govuk-summary-list__value">501</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Level</dt>
+              <dd class="govuk-summary-list__value">6</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Sector</dt>
+              <dd class="govuk-summary-list__value">55 - Construction</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Last date for new starts</dt>
+              <dd class="govuk-summary-list__value">Not set</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Effective from</dt>
+              <dd class="govuk-summary-list__value">06 September 2019</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Effective to</dt>
+              <dd class="govuk-summary-list__value">Open</dd>
+            </div>
+          </dl>
+          <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-3 govuk-!-margin-bottom-3">
+        </div>
+      </div>
+
+      </div>
   </div>
 </main>
 
