@@ -1,52 +1,139 @@
 {% extends "layoutsld.html" %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Find a Learning Aim</title>
-    <link rel="stylesheet" href="/assets/stylesheets/application.css">
 
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Search Results</li>
+  </ol>
+</div>
 
-    <main class="govuk-main-wrapper govuk-width-container" id="main-content" role="main">
-        <h1 class="govuk-heading-xl">Search Standards</h1>
-        <form class="govuk-form-group">
-            <label class="govuk-label" for="search-term">Search by title or reference number</label>
-            <input class="govuk-input" id="search-term" name="search-term" type="text" value="construction quantity">
-            <button class="govuk-button" type="submit">Search</button>
-        </form>
+<main class="govuk-main-wrapper govuk-width-container" id="main-content" role="main">
+  <h1 class="govuk-heading-l">Search Standards</h1>
 
-        <h2 class="govuk-heading-l">Results</h2>
-        <ul class="govuk-list govuk-list--bullet">
-            <li>
-                <strong>Construction Quantity Surveying Technician</strong><br>
-                Code: 4R8<br>
-                Level: 4<br>
-                Sector: 21- Surveying<br>
-                Effective from: 03 July 2019<br>
-                Last date for new starts: Not set<br>
-                Status: Open
-            </li>
-            <li>
-                <strong>Construction Quantity Surveyor (degree)</strong><br>
-                Code: ST0041<br>
-                Level: 6<br>
-                Sector: Construction, Planning and the Built Environment<br>
-                Effective from: 11 July 2019<br>
-                Last date for new starts: Not set<br>
-                Status: Open
-            </li>
-            <li>
-                <strong>Construction Site Management (degree)</strong><br>
-                Code: ST0042<br>
-                Level: 6<br>
-                Sector: Construction<br>
-                Effective from: 06 September 2019<br>
-                Last date for new starts: Not set<br>
-                Status: Open
-            </li>
-        </ul>
-    </main>
-</body>
-</html>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="search-title">
+          Search by title or reference number
+        </label>
+        <div class="govuk-input__wrapper">
+          <input class="govuk-input" id="search-title" name="search-title" type="text" value="construction quantity">
+          <button class="govuk-button govuk-button--secondary govuk-input__button" data-module="govuk-button">
+            <svg class="govuk-icon govuk-icon--search" xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 19 19">
+              <path fill="currentColor" d="M13 16s-2 1-5 1-5-1-5-1V8h1v8s2 1 5 1 5-1 5-1V8h1v8zM11 3a4 4 0 1 0-8 0 4 4 0 0 0 8 0z"/>
+            </svg>
+            <span class="govuk-visually-hidden">Search</span>
+          </button>
+        </div>
+      </div>
+      <p class="govuk-body"><a class="govuk-link" href="#">Search using a wildcard</a></p>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="type-of-learning">
+          Type of learning
+        </label>
+        <select class="govuk-select" id="type-of-learning" name="type-of-learning">
+          <option value="" selected>Standards</option>
+          </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      <aside class="govuk-!-padding-right-5">
+        <h2 class="govuk-heading-m">Filter results</h2>
+        <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__text">
+              Sector
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            </div>
+        </details>
+
+        <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__text">
+              Level
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            </div>
+        </details>
+
+        <p class="govuk-body"><a class="govuk-link" href="#">Clear filters</a></p>
+      </aside>
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+      <h2 class="govuk-heading-s">19 results</h2>
+
+      <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-3 govuk-!-margin-bottom-3">
+
+      <ul class="govuk-list">
+        <li>
+          <h3 class="govuk-heading-s"><a class="govuk-link" href="#">Construction Quantity Surveying Technician</a></h3>
+          <p class="govuk-body govuk-!-margin-bottom-1">
+            <strong class="govuk-!-margin-right-2">Code:</strong> 468
+            <strong class="govuk-!-margin-right-2">Level:</strong> 4
+          </p>
+          <p class="govuk-body govuk-!-margin-bottom-1">
+            <strong class="govuk-!-margin-right-2">Sector:</strong> 21 - Surveying
+            <strong class="govuk-!-margin-right-2">Last date for new starts:</strong> Not set
+          </p>
+          <p class="govuk-body govuk-!-margin-bottom-1">
+            <strong class="govuk-!-margin-right-2">Effective from:</strong> 03 July 2019
+          </p>
+          <p class="govuk-body">
+            <strong class="govuk-!-margin-right-2">Effective to:</strong> Open
+          </p>
+        </li>
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-3 govuk-!-margin-bottom-3">
+
+        <li>
+          <h3 class="govuk-heading-s"><a class="govuk-link" href="#">Construction Quantity Surveyor (degree)</a></h3>
+          <p class="govuk-body govuk-!-margin-bottom-1">
+            <strong class="govuk-!-margin-right-2">Code:</strong> 482
+            <strong class="govuk-!-margin-right-2">Level:</strong> 6
+          </p>
+          <p class="govuk-body govuk-!-margin-bottom-1">
+            <strong class="govuk-!-margin-right-2">Sector:</strong> 21 - Surveying
+            <strong class="govuk-!-margin-right-2">Last date for new starts:</strong> Not set
+          </p>
+          <p class="govuk-body govuk-!-margin-bottom-1">
+            <strong class="govuk-!-margin-right-2">Effective from:</strong> 11 July 2019
+          </p>
+          <p class="govuk-body">
+            <strong class="govuk-!-margin-right-2">Effective to:</strong> Open
+          </p>
+        </li>
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-3 govuk-!-margin-bottom-3">
+
+        <li>
+          <h3 class="govuk-heading-s"><a class="govuk-link" href="#">Construction Site Management (degree)</a></h3>
+          <p class="govuk-body govuk-!-margin-bottom-1">
+            <strong class="govuk-!-margin-right-2">Code:</strong> 501
+            <strong class="govuk-!-margin-right-2">Level:</strong> 6
+          </p>
+          <p class="govuk-body govuk-!-margin-bottom-1">
+            <strong class="govuk-!-margin-right-2">Sector:</strong> 55 - Construction
+            <strong class="govuk-!-margin-right-2">Last date for new starts:</strong> Not set
+          </p>
+          <p class="govuk-body govuk-!-margin-bottom-1">
+            <strong class="govuk-!-margin-right-2">Effective from:</strong> 06 September 2019
+          </p>
+          <p class="govuk-body">
+            <strong class="govuk-!-margin-right-2">Effective to:</strong> Open
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
+
 {% endblock %}
