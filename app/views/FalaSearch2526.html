@@ -48,155 +48,140 @@
       <aside class="govuk-!-padding-right-5">
         <h2 class="govuk-heading-m">Filter results</h2>
 
-        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-          <div class="govuk-accordion__section ">
-            <div class="govuk-accordion__section-header">
-              <h2 class="govuk-accordion__section-heading">
-                <button type="button" class="govuk-accordion__show-hide" data-accordion-show-hide="show" data-track-count="accordionSection">
-                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                    Sector
-                  </span>
-                </button>
-              </h2>
+        <div class="filter-group">
+          <a href="#" id="Sectors-Button" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19 filter-box-button" role="button" aria-expanded="false" aria-controls="Sectors-Content">
+            <svg class="govuk-details__summary-arrow" width="0" height="0" focusable="false" aria-hidden="true">
+              <path stroke="currentColor" fill="currentColor" stroke-width="2" d="M0 0l6.5 6.5-6.5 6.5"></path>
+            </svg>
+            Sector
+          </a>
+          <div class="filter-box-content" id="Sectors-Content" aria-hidden="true">
             </div>
-            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-              <ul class="govuk-list govuk-list--checkboxes">
-                <li>
-                  <input class="govuk-checkboxes__input" id="sector-accountancy" name="sector" type="checkbox" value="accountancy">
-                  <label class="govuk-checkboxes__label" for="sector-accountancy">
-                    Accountancy
-                  </label>
-                </li>
-                <li>
-                  <input class="govuk-checkboxes__input" id="sector-actuarial" name="sector" type="checkbox" value="actuarial">
-                  <label class="govuk-checkboxes__label" for="sector-actuarial">
-                    Actuarial
-                  </label>
-                </li>
-                <li>
-                  <input class="govuk-checkboxes__input" id="sector-adult-care" name="sector" type="checkbox" value="adult-care">
-                  <label class="govuk-checkboxes__label" for="sector-adult-care">
-                    Adult Care
-                  </label>
-                </li>
-                <li>
-                  <input class="govuk-checkboxes__input" id="sector-advanced-manufacturing" name="sector" type="checkbox" value="advanced-manufacturing">
-                  <label class="govuk-checkboxes__label" for="sector-advanced-manufacturing">
-                    Advanced Manufacturing
-                  </label>
-                </li>
-                </ul>
-                <details class="govuk-details govuk-details--open">
-                  <summary class="govuk-details__summary">
-                    <span class="govuk-details__text">
-                      Show more
-                    </span>
-                  </summary>
-                  <div class="govuk-details__text">
-                    </div>
-                </details>
+        </div>
+
+        <div class="filter-group">
+          <a href="#" id="Levels-Button" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19 filter-box-button" role="button" aria-expanded="false" aria-controls="Levels-Content">
+            <svg class="govuk-details__summary-arrow" width="0" height="0" focusable="false" aria-hidden="true">
+              <path stroke="currentColor" fill="currentColor" stroke-width="2" d="M0 0l6.5 6.5-6.5 6.5"></path>
+            </svg>
+            Level
+          </a>
+          <div class="filter-box-content" id="Levels-Content" aria-hidden="true">
             </div>
-          </div>
-          <div class="govuk-accordion__section ">
-            <div class="govuk-accordion__section-header">
-              <h2 class="govuk-accordion__section-heading">
-                <button type="button" class="govuk-accordion__show-hide" data-accordion-show-hide="show" data-track-count="accordionSection">
-                  <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-                    Level
-                  </span>
-                </button>
-              </h2>
-            </div>
-            <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-              <ul class="govuk-list govuk-list--checkboxes">
-                <li>
-                  <input class="govuk-checkboxes__input" id="level-entry-level" name="level" type="checkbox" value="entry-level">
-                  <label class="govuk-checkboxes__label" for="level-entry-level">
-                    Entry Level
-                  </label>
-                </li>
-                <li>
-                  <input class="govuk-checkboxes__input" id="level-1" name="level" type="checkbox" value="1">
-                  <label class="govuk-checkboxes__label" for="level-1">
-                    Level 1
-                  </label>
-                </li>
-                <li>
-                  <input class="govuk-checkboxes__input" id="level-1-2" name="level" type="checkbox" value="1-2">
-                  <label class="govuk-checkboxes__label" for="level-1-2">
-                    Level 1/2
-                  </label>
-                </li>
-                <li>
-                  <input class="govuk-checkboxes__input" id="level-2" name="level" type="checkbox" value="2">
-                  <label class="govuk-checkboxes__label" for="level-2">
-                    Level 2
-                  </label>
-                </li>
-                </ul>
-                <details class="govuk-details govuk-details--open">
-                  <summary class="govuk-details__summary">
-                    <span class="govuk-details__text">
-                      Show more
-                    </span>
-                  </summary>
-                  <div class="govuk-details__text">
-                    </div>
-                </details>
-            </div>
-          </div>
         </div>
 
         <p class="govuk-body"><a class="govuk-link" href="#">Clear filters</a></p>
       </aside>
     </div>
+ 
 
 
-    <div class="govuk-grid-column-three-quarters">
-      <h2 class="govuk-heading-s">19 results</h2>
-
-      <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-3 govuk-!-margin-bottom-3">
-
-      {% for result in results %}
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
           <div class="govuk-table__head">
-            <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link" href="#">{{ result.title }}</a></h3>
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Construction Quantity Surveying Technician</a></h3>
           </div>
           <dl class="govuk-summary-list">
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">Code</dt>
-              <dd class="govuk-summary-list__value">{{ result.code }}</dd>
+              <dd class="govuk-summary-list__value">468</dd>
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">Level</dt>
-              <dd class="govuk-summary-list__value">{{ result.level }}</dd>
+              <dd class="govuk-summary-list__value">4</dd>
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">Sector</dt>
-              <dd class="govuk-summary-list__value">{{ result.sector }}</dd>
+              <dd class="govuk-summary-list__value">21 - Surveying</dd>
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">Last date for new starts</dt>
-              <dd class="govuk-summary-list__value">{{ result.last_date }}</dd>
+              <dd class="govuk-summary-list__value">Not set</dd>
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">Effective from</dt>
-              <dd class="govuk-summary-list__value">{{ result.effective_from }}</dd>
+              <dd class="govuk-summary-list__value">03 July 2019</dd>
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">Effective to</dt>
-              <dd class="govuk-summary-list__value">{{ result.effective_to }}</dd>
+              <dd class="govuk-summary-list__value">Open</dd>
             </div>
           </dl>
+
         </div>
       </div>
-      {% if not loop.last %}
-      <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-3 govuk-!-margin-bottom-3">
-      {% endif %}
-      {% endfor %}
 
-    </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <div class="govuk-table__head">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Construction Quantity Surveyor (degree)</a></h3>
+          </div>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Code</dt>
+              <dd class="govuk-summary-list__value">482</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Level</dt>
+              <dd class="govuk-summary-list__value">6</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Sector</dt>
+              <dd class="govuk-summary-list__value">21 - Surveying</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Last date for new starts</dt>
+              <dd class="govuk-summary-list__value">Not set</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Effective from</dt>
+              <dd class="govuk-summary-list__value">11 July 2019</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Effective to</dt>
+              <dd class="govuk-summary-list__value">Open</dd>
+            </div>
+          </dl>
+
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <div class="govuk-table__head">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Construction Site Management (degree)</a></h3>
+          </div>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Code</dt>
+              <dd class="govuk-summary-list__value">501</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Level</dt>
+              <dd class="govuk-summary-list__value">6</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Sector</dt>
+              <dd class="govuk-summary-list__value">55 - Construction</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Last date for new starts</dt>
+              <dd class="govuk-summary-list__value">Not set</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Effective from</dt>
+              <dd class="govuk-summary-list__value">06 September 2019</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Effective to</dt>
+              <dd class="govuk-summary-list__value">Open</dd>
+            </div>
+          </dl>
+
+        </div>
+      </div>
+
+      </div>
   </div>
 </main>
 
