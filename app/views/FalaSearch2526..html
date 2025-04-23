@@ -1,0 +1,85 @@
+{% extends "layoutsld.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find a Learning Aim</title>
+    <link rel="stylesheet" href="/assets/stylesheets/application.css">
+</head>
+<body>
+    <header class="govuk-header" role="banner" data-module="govuk-header">
+        <div class="govuk-header__container govuk-width-container">
+            <div class="govuk-header__logo">
+                <a href="/" class="govuk-header__link govuk-header__link--homepage">
+                    <span class="govuk-header__logotype">
+                        <img src="/assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown" alt="GOV.UK">
+                        <span class="govuk-header__logotype-text">GOV.UK</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="govuk-main-wrapper govuk-width-container" id="main-content" role="main">
+        <h1 class="govuk-heading-xl">Search Standards</h1>
+        <form class="govuk-form-group">
+            <label class="govuk-label" for="search-term">Search by title or reference number</label>
+            <input class="govuk-input" id="search-term" name="search-term" type="text" value="construction quantity">
+            <button class="govuk-button" type="submit">Search</button>
+        </form>
+
+        <h2 class="govuk-heading-l">Results</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+                <strong>Construction Quantity Surveying Technician</strong><br>
+                Code: 4R8<br>
+                Level: 4<br>
+                Sector: 21- Surveying<br>
+                Effective from: 03 July 2019<br>
+                Last date for new starts: Not set<br>
+                Status: Open
+            </li>
+            <li>
+                <strong>Construction Quantity Surveyor (degree)</strong><br>
+                Code: ST0041<br>
+                Level: 6<br>
+                Sector: Construction, Planning and the Built Environment<br>
+                Effective from: 11 July 2019<br>
+                Last date for new starts: Not set<br>
+                Status: Open
+            </li>
+            <li>
+                <strong>Construction Site Management (degree)</strong><br>
+                Code: ST0042<br>
+                Level: 6<br>
+                Sector: Construction<br>
+                Effective from: 06 September 2019<br>
+                Last date for new starts: Not set<br>
+                Status: Open
+            </li>
+        </ul>
+    </main>
+
+    <footer class="govuk-footer" role="contentinfo">
+        <div class="govuk-width-container">
+            <div class="govuk-footer__meta">
+                <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+                    <h2 class="govuk-visually-hidden">Support links</h2>
+                    <ul class="govuk-footer__inline-list">
+                        <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="#">Help</a></li>
+                        <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="#">Contact</a></li>
+                        <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="#">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="govuk-footer__meta-item">
+                    <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use-of-public-sector-information/">
+                        © Crown copyright
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+{% endblock %}
