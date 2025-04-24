@@ -1,6 +1,8 @@
 {% extends "layoutsld.html" %}
 {% block content %}
 
+{# Ensure GOV.UK Frontend CSS is correctly linked in layoutsld.html for grid layout to work #}
+
 <div class="govuk-breadcrumbs">
   <ol class="govuk-breadcrumbs__list">
     <li class="govuk-breadcrumbs__list-item">
@@ -9,9 +11,11 @@
     <li class="govuk-breadcrumbs__list-item" aria-current="page">Search Results</li>
   </ol>
 </div>
+
 <main class="govuk-main-wrapper govuk-width-container" id="main-content" role="main">
   <h1 class="govuk-heading-l">Search Standards</h1>
 
+  {# Search Input Row #}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
@@ -37,15 +41,20 @@
         </label>
         <select class="govuk-select" id="type-of-learning" name="type-of-learning">
           <option value="" selected>Standards</option>
-          </select>
+          {# Add other options if needed #}
+        </select>
       </div>
     </div>
   </div>
+
+  {# Filters and Results Row #}
   <div class="govuk-grid-row">
+
+    {# Filters Column #}
     <div class="govuk-grid-column-one-quarter">
       <h2 class="govuk-heading-m">Filter results</h2>
       <div class="govuk-accordion" data-module="govuk-accordion" id="filters-accordion">
-        <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section">
           <div class="govuk-accordion__section-header">
             <h2 class="govuk-accordion__section-heading">
               <span class="govuk-accordion__section-button" id="filters-accordion-heading-sector">
@@ -108,7 +117,8 @@
             </div>
           </div>
         </div>
-        <div class="govuk-accordion__section ">
+
+        <div class="govuk-accordion__section">
           <div class="govuk-accordion__section-header">
             <h2 class="govuk-accordion__section-heading">
               <span class="govuk-accordion__section-button" id="filters-accordion-heading-level">
@@ -173,120 +183,136 @@
                     Level 7
                   </label>
                 </div>
-                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div> <p class="govuk-body govuk-!-margin-top-4"><a class="govuk-link" href="#">Clear filters</a></p>
-     </div> <div class="govuk-grid-column-three-quarters">
-        <div class="govuk-!-margin-bottom-6"> <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Construction Quantity Surveying Technician</a></h3>
-          <dl class="govuk-summary-list govuk-summary-list--no-border">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Code</dt>
-              <dd class="govuk-summary-list__value">468</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Reference</dt>
-                <dd class="govuk-summary-list__value">ST0049</dd>
-              </div>
-            <div class="govuk-summary-list__row"></div>
-                <dt class="govuk-summary-list__key">Apprenticeship Type</dt>
-                <dd class="govuk-summary-list__value">ST0049</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Level</dt>
-              <dd class="govuk-summary-list__value">4</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Sector</dt>
-              <dd class="govuk-summary-list__value">21 - Surveying</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Last date for new starts</dt>
-              <dd class="govuk-summary-list__value">Not set</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Effective from</dt>
-              <dd class="govuk-summary-list__value">03 July 2019</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Effective to</dt>
-              <dd class="govuk-summary-list__value">Open</dd>
-            </div>
-          </dl>
-        </div>
-        <div class="govuk-!-margin-bottom-6"> <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Construction Quantity Surveyor (degree)</a></h3>
-          <dl class="govuk-summary-list govuk-summary-list--no-border">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Code</dt>
-              <dd class="govuk-summary-list__value">482</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Reference</dt>
-                <dd class="govuk-summary-list__value">ST0049</dd>
-              </div>
-            <div class="govuk-summary-list__row"></div>
-                <dt class="govuk-summary-list__key">Apprenticeship Type</dt>
-                <dd class="govuk-summary-list__value">ST0049</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Level</dt>
-              <dd class="govuk-summary-list__value">6</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Sector</dt>
-              <dd class="govuk-summary-list__value">21 - Surveying</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Last date for new starts</dt>
-              <dd class="govuk-summary-list__value">Not set</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Effective from</dt>
-              <dd class="govuk-summary-list__value">11 July 2019</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Effective to</dt>
-              <dd class="govuk-summary-list__value">Open</dd>
-            </div>
-          </dl>
-        </div>
-        <div class="govuk-!-margin-bottom-6"> <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Construction Site Management (degree)</a></h3>
-          <dl class="govuk-summary-list govuk-summary-list--no-border">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Code</dt>
-              <dd class="govuk-summary-list__value">501</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Reference</dt>
-                <dd class="govuk-summary-list__value">ST0049</dd>
-              </div>
-            <div class="govuk-summary-list__row"></div>
-                <dt class="govuk-summary-list__key">Apprenticeship Type</dt>
-                <dd class="govuk-summary-list__value">ST0049</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Level</dt>
-              <dd class="govuk-summary-list__value">6</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Sector</dt>
-              <dd class="govuk-summary-list__value">55 - Construction</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Last date for new starts</dt>
-              <dd class="govuk-summary-list__value">Not set</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Effective from</dt>
-              <dd class="govuk-summary-list__value">06 September 2019</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Effective to</dt>
-              <dd class="govuk-summary-list__value">Open</dd>
-            </div>
-          </dl>
-        </div>
+      </div> {# End Accordion #}
+      <p class="govuk-body govuk-!-margin-top-4"><a class="govuk-link" href="#">Clear filters</a></p>
+    </div> {# End Filters Column #}
 
-        </div> </div> </main>
+    {# Results Column #}
+    <div class="govuk-grid-column-three-quarters">
+
+      {# Result Item 1 #}
+      <div class="govuk-!-margin-bottom-6">
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Construction Quantity Surveying Technician</a></h3>
+        <dl class="govuk-summary-list govuk-summary-list--no-border">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Code</dt>
+            <dd class="govuk-summary-list__value">468</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Reference</dt>
+            <dd class="govuk-summary-list__value">ST0049</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Apprenticeship Type</dt>
+            <dd class="govuk-summary-list__value">ST0049</dd> {# Note: Same as Reference, check if correct #}
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Level</dt>
+            <dd class="govuk-summary-list__value">4</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Sector</dt>
+            <dd class="govuk-summary-list__value">21 - Surveying</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Last date for new starts</dt>
+            <dd class="govuk-summary-list__value">Not set</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Effective from</dt>
+            <dd class="govuk-summary-list__value">03 July 2019</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Effective to</dt>
+            <dd class="govuk-summary-list__value">Open</dd>
+          </div>
+        </dl>
+      </div>
+
+      {# Result Item 2 #}
+      <div class="govuk-!-margin-bottom-6">
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Construction Quantity Surveyor (degree)</a></h3>
+        <dl class="govuk-summary-list govuk-summary-list--no-border">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Code</dt>
+            <dd class="govuk-summary-list__value">482</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Reference</dt>
+            <dd class="govuk-summary-list__value">ST0049</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Apprenticeship Type</dt>
+            <dd class="govuk-summary-list__value">ST0049</dd> {# Note: Same as Reference, check if correct #}
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Level</dt>
+            <dd class="govuk-summary-list__value">6</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Sector</dt>
+            <dd class="govuk-summary-list__value">21 - Surveying</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Last date for new starts</dt>
+            <dd class="govuk-summary-list__value">Not set</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Effective from</dt>
+            <dd class="govuk-summary-list__value">11 July 2019</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Effective to</dt>
+            <dd class="govuk-summary-list__value">Open</dd>
+          </div>
+        </dl>
+      </div>
+
+      {# Result Item 3 #}
+      <div class="govuk-!-margin-bottom-6">
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Construction Site Management (degree)</a></h3>
+        <dl class="govuk-summary-list govuk-summary-list--no-border">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Code</dt>
+            <dd class="govuk-summary-list__value">501</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Reference</dt>
+            <dd class="govuk-summary-list__value">ST0049</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Apprenticeship Type</dt>
+            <dd class="govuk-summary-list__value">ST0049</dd> {# Note: Same as Reference, check if correct #}
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Level</dt>
+            <dd class="govuk-summary-list__value">6</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Sector</dt>
+            <dd class="govuk-summary-list__value">55 - Construction</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Last date for new starts</dt>
+            <dd class="govuk-summary-list__value">Not set</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Effective from</dt>
+            <dd class="govuk-summary-list__value">06 September 2019</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Effective to</dt>
+            <dd class="govuk-summary-list__value">Open</dd>
+          </div>
+        </dl>
+      </div>
+
+    </div> {# End Results Column #}
+  </div> {# End Filters and Results Row #}
+</main>
+
 {% endblock %}
