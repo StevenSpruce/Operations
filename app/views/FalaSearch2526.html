@@ -1,7 +1,6 @@
 {% extends "layoutsld.html" %}
 {% block content %}
 
-{# Ensure GOV.UK Frontend CSS is correctly linked in layoutsld.html for grid layout to work #}
 
 <div class="govuk-breadcrumbs">
   <ol class="govuk-breadcrumbs__list">
@@ -64,6 +63,7 @@
           </div>
           <div id="filters-accordion-content-sector" class="govuk-accordion__section-content" aria-labelledby="filters-accordion-heading-sector">
             <div class="govuk-form-group">
+              {# Note: This scrolling checkbox list is custom styling, ensure it works as intended #}
               <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="max-height: 200px; overflow-y: auto; border: 1px solid #b1b4b6; padding-left: 10px; padding-top: 10px;">
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="sector-1" name="sector" type="checkbox" value="accountancy">
@@ -128,6 +128,7 @@
           </div>
           <div id="filters-accordion-content-level" class="govuk-accordion__section-content" aria-labelledby="filters-accordion-heading-level">
             <div class="govuk-form-group">
+              {# Note: This scrolling checkbox list is custom styling, ensure it works as intended #}
               <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="max-height: 200px; overflow-y: auto; border: 1px solid #b1b4b6; padding-left: 10px; padding-top: 10px;">
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="level-entry" name="level" type="checkbox" value="entry">
@@ -194,9 +195,12 @@
     {# Results Column #}
     <div class="govuk-grid-column-three-quarters">
 
-      {# Result Item 1 #}
+      {# Result Item 1 - Updated with new fields #}
       <div class="govuk-!-margin-bottom-6">
-        <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Construction Quantity Surveying Technician</a></h3>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-1">
+          {# Updated link href with provided URL #}
+          <a class="govuk-link" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/st0049-v1-1">Construction Quantity Surveying Technician</a>
+        </h3>
         <dl class="govuk-summary-list govuk-summary-list--no-border">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Code</dt>
@@ -208,7 +212,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Apprenticeship Type</dt>
-            <dd class="govuk-summary-list__value">Other</dd> {# Note: Same as Reference, check if correct #}
+            <dd class="govuk-summary-list__value">Other</dd> {# Note: Same as Reference in original, kept as per provided data #}
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Level</dt>
@@ -224,18 +228,40 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Effective from</dt>
-            <dd class="govuk-summary-list__value">03 July 2019</dd>
+            {# Updated date as per provided data #}
+            <dd class="govuk-summary-list__value">01 September 2023</dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Effective to</dt>
             <dd class="govuk-summary-list__value">Open</dd>
           </div>
+          {# --- NEW FIELDS START --- #}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Sector subject area</dt>
+            <dd class="govuk-summary-list__value">5.00 – Construction, Planning and the Built Environment</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Sector subject area Tier 2</dt>
+            <dd class="govuk-summary-list__value">5.20 – Building and Construction</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Integrated degree standard</dt>
+            <dd class="govuk-summary-list__value">N</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Other body approval required</dt>
+            <dd class="govuk-summary-list__value">N</dd>
+          </div>
+           {# --- NEW FIELDS END --- #}
         </dl>
       </div>
 
-      {# Result Item 2 #}
+      {# Result Item 2 - Structure added for new fields #}
       <div class="govuk-!-margin-bottom-6">
-        <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Construction Quantity Surveyor (degree)</a></h3>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-1">
+          {# Placeholder link - update href dynamically #}
+          <a class="govuk-link" href="#">Construction Quantity Surveyor (degree)</a>
+        </h3>
         <dl class="govuk-summary-list govuk-summary-list--no-border">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Code</dt>
@@ -243,7 +269,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Reference</dt>
-            <dd class="govuk-summary-list__value">ST0049</dd>
+            <dd class="govuk-summary-list__value">ST0049</dd> {# Original data had same ref as item 1 #}
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Apprenticeship Type</dt>
@@ -269,12 +295,33 @@
             <dt class="govuk-summary-list__key">Effective to</dt>
             <dd class="govuk-summary-list__value">Open</dd>
           </div>
+          {# --- NEW FIELDS STRUCTURE (Placeholder data) --- #}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Sector subject area</dt>
+            <dd class="govuk-summary-list__value">[Data for Sector Subject Area]</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Sector subject area Tier 2</dt>
+            <dd class="govuk-summary-list__value">[Data for SSA Tier 2]</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Integrated degree standard</dt>
+            <dd class="govuk-summary-list__value">[Y/N]</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Other body approval required</dt>
+            <dd class="govuk-summary-list__value">[Y/N]</dd>
+          </div>
+           {# --- NEW FIELDS END --- #}
         </dl>
       </div>
 
-      {# Result Item 3 #}
+      {# Result Item 3 - Structure added for new fields #}
       <div class="govuk-!-margin-bottom-6">
-        <h3 class="govuk-heading-s govuk-!-margin-bottom-1"><a class="govuk-link" href="#">Construction Site Management (degree)</a></h3>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-1">
+          {# Placeholder link - update href dynamically #}
+          <a class="govuk-link" href="#">Construction Site Management (degree)</a>
+        </h3>
         <dl class="govuk-summary-list govuk-summary-list--no-border">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Code</dt>
@@ -282,7 +329,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Reference</dt>
-            <dd class="govuk-summary-list__value">ST0049</dd>
+            <dd class="govuk-summary-list__value">ST0049</dd> {# Original data had same ref as item 1 #}
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Apprenticeship Type</dt>
@@ -308,6 +355,24 @@
             <dt class="govuk-summary-list__key">Effective to</dt>
             <dd class="govuk-summary-list__value">Open</dd>
           </div>
+           {# --- NEW FIELDS STRUCTURE (Placeholder data) --- #}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Sector subject area</dt>
+            <dd class="govuk-summary-list__value">[Data for Sector Subject Area]</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Sector subject area Tier 2</dt>
+            <dd class="govuk-summary-list__value">[Data for SSA Tier 2]</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Integrated degree standard</dt>
+            <dd class="govuk-summary-list__value">[Y/N]</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Other body approval required</dt>
+            <dd class="govuk-summary-list__value">[Y/N]</dd>
+          </div>
+           {# --- NEW FIELDS END --- #}
         </dl>
       </div>
 
