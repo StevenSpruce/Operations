@@ -1,7 +1,6 @@
 {% extends "layoutsld.html" %}
 {% block content %}
 
-
 <div class="govuk-breadcrumbs">
   <ol class="govuk-breadcrumbs__list">
     <li class="govuk-breadcrumbs__list-item">
@@ -14,7 +13,6 @@
 <main class="govuk-main-wrapper govuk-width-container" id="main-content" role="main">
   <h1 class="govuk-heading-l">Search Standards</h1>
 
-  {# Search Input Row #}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
@@ -40,165 +38,154 @@
         </label>
         <select class="govuk-select" id="type-of-learning" name="type-of-learning">
           <option value="" selected>Standards</option>
-          {# Add other options if needed #}
         </select>
       </div>
     </div>
   </div>
 
-  {# Filters and Results Row #}
   <div class="govuk-grid-row">
 
-    {# Filters Column #}
     <div class="govuk-grid-column-one-quarter">
       <h2 class="govuk-heading-m">Filter results</h2>
-      <div class="govuk-accordion" data-module="govuk-accordion" id="filters-accordion">
-        <div class="govuk-accordion__section">
-          <div class="govuk-accordion__section-header">
-            <h2 class="govuk-accordion__section-heading">
-              <span class="govuk-accordion__section-button" id="filters-accordion-heading-sector">
-                Sector
-              </span>
-            </h2>
-          </div>
-          <div id="filters-accordion-content-sector" class="govuk-accordion__section-content" aria-labelledby="filters-accordion-heading-sector">
-            <div class="govuk-form-group">
-              {# Note: This scrolling checkbox list is custom styling, ensure it works as intended #}
-              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="max-height: 200px; overflow-y: auto; border: 1px solid #b1b4b6; padding-left: 10px; padding-top: 10px;">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="sector-1" name="sector" type="checkbox" value="accountancy">
-                  <label class="govuk-label govuk-checkboxes__label" for="sector-1">
-                    Accountancy
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="sector-2" name="sector" type="checkbox" value="actuarial">
-                  <label class="govuk-label govuk-checkboxes__label" for="sector-2">
-                    Actuarial
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="sector-3" name="sector" type="checkbox" value="adult-care">
-                  <label class="govuk-label govuk-checkboxes__label" for="sector-3">
-                    Adult Care
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="sector-4" name="sector" type="checkbox" value="advanced-manufacturing">
-                  <label class="govuk-label govuk-checkboxes__label" for="sector-4">
-                    Advanced Manufacturing
-                  </label>
-                </div>
-                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="sector-5" name="sector" type="checkbox" value="agriculture">
-                  <label class="govuk-label govuk-checkboxes__label" for="sector-5">
-                    Agriculture
-                  </label>
-                </div>
-                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="sector-6" name="sector" type="checkbox" value="aviation">
-                  <label class="govuk-label govuk-checkboxes__label" for="sector-6">
-                    Aviation
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="sector-21" name="sector" type="checkbox" value="surveying">
-                  <label class="govuk-label govuk-checkboxes__label" for="sector-21">
-                    Surveying
-                  </label>
-                </div>
-                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="sector-55" name="sector" type="checkbox" value="construction">
-                  <label class="govuk-label govuk-checkboxes__label" for="sector-55">
-                    Construction
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="govuk-accordion__section">
-          <div class="govuk-accordion__section-header">
-            <h2 class="govuk-accordion__section-heading">
-              <span class="govuk-accordion__section-button" id="filters-accordion-heading-level">
-                Level
+      <details class="govuk-details" data-module="govuk-details" id="filter-sector">
+          <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                  Sector
               </span>
-            </h2>
-          </div>
-          <div id="filters-accordion-content-level" class="govuk-accordion__section-content" aria-labelledby="filters-accordion-heading-level">
-            <div class="govuk-form-group">
-              {# Note: This scrolling checkbox list is custom styling, ensure it works as intended #}
-              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="max-height: 200px; overflow-y: auto; border: 1px solid #b1b4b6; padding-left: 10px; padding-top: 10px;">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="level-entry" name="level" type="checkbox" value="entry">
-                  <label class="govuk-label govuk-checkboxes__label" for="level-entry">
-                    Entry Level
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="level-1" name="level" type="checkbox" value="1">
-                  <label class="govuk-label govuk-checkboxes__label" for="level-1">
-                    Level 1
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="level-1-2" name="level" type="checkbox" value="1/2">
-                  <label class="govuk-label govuk-checkboxes__label" for="level-1-2">
-                    Level 1/2
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="level-2" name="level" type="checkbox" value="2">
-                  <label class="govuk-label govuk-checkboxes__label" for="level-2">
-                    Level 2
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="level-3" name="level" type="checkbox" value="3">
-                  <label class="govuk-label govuk-checkboxes__label" for="level-3">
-                    Level 3
-                  </label>
-                </div>
-                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="level-4" name="level" type="checkbox" value="4">
-                  <label class="govuk-label govuk-checkboxes__label" for="level-4">
-                    Level 4
-                  </label>
-                </div>
-                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="level-5" name="level" type="checkbox" value="5">
-                  <label class="govuk-label govuk-checkboxes__label" for="level-5">
-                    Level 5
-                  </label>
-                </div>
-                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="level-6" name="level" type="checkbox" value="6">
-                  <label class="govuk-label govuk-checkboxes__label" for="level-6">
-                    Level 6
-                  </label>
-                </div>
-                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="level-7" name="level" type="checkbox" value="7">
-                  <label class="govuk-label govuk-checkboxes__label" for="level-7">
-                    Level 7
-                  </label>
-                </div>
+          </summary>
+          <div class="govuk-details__text">
+              <div class="govuk-form-group">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="max-height: 200px; overflow-y: auto; border: 1px solid #b1b4b6; padding-left: 10px; padding-top: 10px;">
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="sector-1" name="sector" type="checkbox" value="accountancy">
+                          <label class="govuk-label govuk-checkboxes__label" for="sector-1">
+                              Accountancy
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="sector-2" name="sector" type="checkbox" value="actuarial">
+                          <label class="govuk-label govuk-checkboxes__label" for="sector-2">
+                              Actuarial
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="sector-3" name="sector" type="checkbox" value="adult-care">
+                          <label class="govuk-label govuk-checkboxes__label" for="sector-3">
+                              Adult Care
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="sector-4" name="sector" type="checkbox" value="advanced-manufacturing">
+                          <label class="govuk-label govuk-checkboxes__label" for="sector-4">
+                              Advanced Manufacturing
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="sector-5" name="sector" type="checkbox" value="agriculture">
+                          <label class="govuk-label govuk-checkboxes__label" for="sector-5">
+                              Agriculture
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="sector-6" name="sector" type="checkbox" value="aviation">
+                          <label class="govuk-label govuk-checkboxes__label" for="sector-6">
+                              Aviation
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="sector-21" name="sector" type="checkbox" value="surveying">
+                          <label class="govuk-label govuk-checkboxes__label" for="sector-21">
+                              Surveying
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="sector-55" name="sector" type="checkbox" value="construction">
+                          <label class="govuk-label govuk-checkboxes__label" for="sector-55">
+                              Construction
+                          </label>
+                      </div>
+                  </div>
               </div>
-            </div>
           </div>
-        </div>
-      </div> {# End Accordion #}
+      </details>
+
+      <details class="govuk-details" data-module="govuk-details" id="filter-level" open>
+          <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                  Level
+              </span>
+          </summary>
+          <div class="govuk-details__text">
+              <div class="govuk-form-group">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="max-height: 200px; overflow-y: auto; border: 1px solid #b1b4b6; padding-left: 10px; padding-top: 10px;">
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="level-entry" name="level" type="checkbox" value="entry">
+                          <label class="govuk-label govuk-checkboxes__label" for="level-entry">
+                              Entry Level
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="level-1" name="level" type="checkbox" value="1">
+                          <label class="govuk-label govuk-checkboxes__label" for="level-1">
+                              Level 1
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="level-1-2" name="level" type="checkbox" value="1/2">
+                          <label class="govuk-label govuk-checkboxes__label" for="level-1-2">
+                              Level 1/2
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="level-2" name="level" type="checkbox" value="2">
+                          <label class="govuk-label govuk-checkboxes__label" for="level-2">
+                              Level 2
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="level-3" name="level" type="checkbox" value="3">
+                          <label class="govuk-label govuk-checkboxes__label" for="level-3">
+                              Level 3
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="level-4" name="level" type="checkbox" value="4">
+                          <label class="govuk-label govuk-checkboxes__label" for="level-4">
+                              Level 4
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="level-5" name="level" type="checkbox" value="5">
+                          <label class="govuk-label govuk-checkboxes__label" for="level-5">
+                              Level 5
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="level-6" name="level" type="checkbox" value="6">
+                          <label class="govuk-label govuk-checkboxes__label" for="level-6">
+                              Level 6
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="level-7" name="level" type="checkbox" value="7">
+                          <label class="govuk-label govuk-checkboxes__label" for="level-7">
+                              Level 7
+                          </label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </details>
+
       <p class="govuk-body govuk-!-margin-top-4"><a class="govuk-link" href="#">Clear filters</a></p>
-    </div> {# End Filters Column #}
 
-    {# Results Column #}
+    </div>
+
     <div class="govuk-grid-column-three-quarters">
 
-      {# Result Item 1 - Updated with new fields #}
       <div class="govuk-!-margin-bottom-6">
         <h3 class="govuk-heading-s govuk-!-margin-bottom-1">
-          {# Updated link href with provided URL #}
           <a class="govuk-link" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/st0049-v1-1">Construction Quantity Surveying Technician</a>
         </h3>
         <dl class="govuk-summary-list govuk-summary-list--no-border">
@@ -212,7 +199,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Apprenticeship Type</dt>
-            <dd class="govuk-summary-list__value">Other</dd> {# Note: Same as Reference in original, kept as per provided data #}
+            <dd class="govuk-summary-list__value">Other</dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Level</dt>
@@ -228,14 +215,12 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Effective from</dt>
-            {# Updated date as per provided data #}
             <dd class="govuk-summary-list__value">01 September 2023</dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Effective to</dt>
             <dd class="govuk-summary-list__value">Open</dd>
           </div>
-          {# --- NEW FIELDS START --- #}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Sector subject area</dt>
             <dd class="govuk-summary-list__value">5.00 – Construction, Planning and the Built Environment</dd>
@@ -252,14 +237,11 @@
             <dt class="govuk-summary-list__key">Other body approval required</dt>
             <dd class="govuk-summary-list__value">N</dd>
           </div>
-           {# --- NEW FIELDS END --- #}
         </dl>
       </div>
 
-      {# Result Item 2 - Structure added for new fields #}
       <div class="govuk-!-margin-bottom-6">
         <h3 class="govuk-heading-s govuk-!-margin-bottom-1">
-          {# Placeholder link - update href dynamically #}
           <a class="govuk-link" href="#">Construction Quantity Surveyor (degree)</a>
         </h3>
         <dl class="govuk-summary-list govuk-summary-list--no-border">
@@ -269,11 +251,11 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Reference</dt>
-            <dd class="govuk-summary-list__value">ST0049</dd> {# Original data had same ref as item 1 #}
+            <dd class="govuk-summary-list__value">ST0049</dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Apprenticeship Type</dt>
-            <dd class="govuk-summary-list__value">Other</dd> {# Note: Same as Reference, check if correct #}
+            <dd class="govuk-summary-list__value">Other</dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Level</dt>
@@ -295,7 +277,6 @@
             <dt class="govuk-summary-list__key">Effective to</dt>
             <dd class="govuk-summary-list__value">Open</dd>
           </div>
-          {# --- NEW FIELDS STRUCTURE (Placeholder data) --- #}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Sector subject area</dt>
             <dd class="govuk-summary-list__value">[Data for Sector Subject Area]</dd>
@@ -312,14 +293,11 @@
             <dt class="govuk-summary-list__key">Other body approval required</dt>
             <dd class="govuk-summary-list__value">[Y/N]</dd>
           </div>
-           {# --- NEW FIELDS END --- #}
         </dl>
       </div>
 
-      {# Result Item 3 - Structure added for new fields #}
       <div class="govuk-!-margin-bottom-6">
         <h3 class="govuk-heading-s govuk-!-margin-bottom-1">
-          {# Placeholder link - update href dynamically #}
           <a class="govuk-link" href="#">Construction Site Management (degree)</a>
         </h3>
         <dl class="govuk-summary-list govuk-summary-list--no-border">
@@ -329,11 +307,11 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Reference</dt>
-            <dd class="govuk-summary-list__value">ST0049</dd> {# Original data had same ref as item 1 #}
+            <dd class="govuk-summary-list__value">ST0049</dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Apprenticeship Type</dt>
-            <dd class="govuk-summary-list__value">Other</dd> {# Note: Same as Reference, check if correct #}
+            <dd class="govuk-summary-list__value">Other</dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Level</dt>
@@ -355,7 +333,6 @@
             <dt class="govuk-summary-list__key">Effective to</dt>
             <dd class="govuk-summary-list__value">Open</dd>
           </div>
-           {# --- NEW FIELDS STRUCTURE (Placeholder data) --- #}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Sector subject area</dt>
             <dd class="govuk-summary-list__value">[Data for Sector Subject Area]</dd>
@@ -372,12 +349,11 @@
             <dt class="govuk-summary-list__key">Other body approval required</dt>
             <dd class="govuk-summary-list__value">[Y/N]</dd>
           </div>
-           {# --- NEW FIELDS END --- #}
         </dl>
       </div>
 
-    </div> {# End Results Column #}
-  </div> {# End Filters and Results Row #}
+    </div>
+  </div>
 </main>
 
 {% endblock %}
