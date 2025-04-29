@@ -47,7 +47,9 @@
 
     <div class="govuk-grid-column-one-quarter">
       <h2 class="govuk-heading-m">Filter results</h2>
-      <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-4 govuk-!-margin-bottom-4">
+
+      <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-2 govuk-!-margin-bottom-4">
+
       <details class="govuk-details" data-module="govuk-details" id="filter-sector">
           <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
@@ -109,8 +111,8 @@
               </div>
           </div>
       </details>
+
       <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-4 govuk-!-margin-bottom-4">
-      
 
       <details class="govuk-details" data-module="govuk-details" id="filter-level" open>
           <summary class="govuk-details__summary">
@@ -179,9 +181,48 @@
               </div>
           </div>
       </details>
+
       <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-4 govuk-!-margin-bottom-4">
+
+      <details class="govuk-details" data-module="govuk-details" id="filter-app-type">
+          <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                  Apprenticeship Type
+              </span>
+          </summary>
+          <div class="govuk-details__text">
+              <div class="govuk-form-group">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="max-height: 200px; overflow-y: auto; border: 1px solid #b1b4b6; padding-left: 10px; padding-top: 10px;">
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="app-type-standard" name="app-type" type="checkbox" value="standard">
+                          <label class="govuk-label govuk-checkboxes__label" for="app-type-standard">
+                              Standard
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="app-type-framework" name="app-type" type="checkbox" value="framework">
+                          <label class="govuk-label govuk-checkboxes__label" for="app-type-framework">
+                              Framework
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="app-type-degree" name="app-type" type="checkbox" value="degree">
+                          <label class="govuk-label govuk-checkboxes__label" for="app-type-degree">
+                              Integrated Degree
+                          </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="app-type-other" name="app-type" type="checkbox" value="other">
+                          <label class="govuk-label govuk-checkboxes__label" for="app-type-other">
+                              Other
+                          </label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </details>
+
       <p class="govuk-body govuk-!-margin-top-4"><a class="govuk-link" href="#">Clear filters</a></p>
-     
 
     </div>
 
