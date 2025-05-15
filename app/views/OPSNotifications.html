@@ -1,0 +1,183 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+  Notification details – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Tools</a> {# Assuming 'Tools' is a relevant preceding page based on the image #}
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Notification details</li>
+  </ol>
+</div>
+
+<main class="govuk-main-wrapper govuk-width-container" id="main-content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Notification details</h1>
+
+      {# Headline Input #}
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="headline">
+          Headline
+          <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-margin-top-1">optional</span>
+        </label>
+        <input class="govuk-input govuk-!-width-full" id="headline" name="headline" type="text">
+      </div>
+
+      {# Message Textarea #}
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="message">
+          Message
+        </label>
+        <span id="message-hint" class="govuk-hint">
+          <a href="#" class="govuk-link">Using a link in the message</a>
+        </span>
+        <textarea class="govuk-textarea" id="message" name="message" rows="5" aria-describedby="message-hint"></textarea>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        {# Date and Time Inputs #}
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="start-date-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <h2 class="govuk-fieldset__heading">
+                        Start date
+                    </h2>
+                </legend>
+                <div class="govuk-date-input" id="start-date">
+                    <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="start-day">
+                                Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-day" name="start-day" type="text" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="start-month">
+                                Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-month" name="start-month" type="text" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="start-year">
+                                Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-year" name="start-year" type="text" inputmode="numeric">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-!-font-weight-bold" for="start-time">
+            Start time
+          </label>
+          <div class="govuk-input__wrapper govuk-input--width-5">
+            <input class="govuk-input" id="start-time" name="start-time" type="text" value="--:--">
+             {# The clock icon is usually added via JS or is part of a specific time picker component in GDS.
+                For a basic prototype, a text input is often sufficient.
+                If you have a GDS timepicker component, integrate it here. #}
+          </div>
+        </div>
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="finish-date-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <h2 class="govuk-fieldset__heading">
+                        Finish date
+                    </h2>
+                </legend>
+                <div class="govuk-date-input" id="finish-date">
+                    <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="finish-day">
+                                Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="finish-day" name="finish-day" type="text" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="finish-month">
+                                Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="finish-month" name="finish-month" type="text" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="finish-year">
+                                Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="finish-year" name="finish-year" type="text" inputmode="numeric">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-!-font-weight-bold" for="finish-time">
+            Finish time
+          </label>
+          <div class="govuk-input__wrapper govuk-input--width-5">
+            <input class="govuk-input" id="finish-time" name="finish-time" type="text" value="--:--">
+            {# Similar to start time, a clock icon would typically be part of a JS component #}
+          </div>
+        </div>
+
+        {# Display Pages Checkboxes #}
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h2 class="govuk-fieldset__heading">
+                Display pages
+              </h2>
+            </legend>
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="display-home" name="display_pages" type="checkbox" value="home">
+                <label class="govuk-label govuk-checkboxes__label" for="display-home">
+                  Home
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="display-submission-options" name="display_pages" type="checkbox" value="submission_options">
+                <label class="govuk-label govuk-checkboxes__label" for="display-submission-options">
+                  Submission Options
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        {# Action Buttons #}
+        <div class="govuk-button-group govuk-!-margin-top-6">
+          <button class="govuk-button" data-module="govuk-button">
+            Save
+          </button>
+          <a class="govuk-link" href="#">Cancel</a>
+        </div>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
