@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<br>
+<a class="govuk-link" href="/reminders">Back</a>
+<br>
+<br>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+<div class="govuk-grid-row">
+
+<h1 class="govuk-heading-l">Add/edit reminder *test*</h1>
+
+<div>
+<span class="govuk-label govuk-!-font-weight-bold">Reminder description</span>
+<input class="govuk-input" id="event-name" name="event-name" type="text">
+</div>
+<br>
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-font-weight-bold" for="Reminder_ReminderDate">
+    Select reminder date test test test
+  </label>
+   <input class="govuk-input govuk-!-width-one-third" type="date" id="Reminder_ReminderDate" name="Reminder.ReminderDate" value="">
+</div>
+
+ <div class="govuk-form-group">
+   <label class="govuk-label govuk-!-font-weight-bold" for="Reminder_ReminderDate">
+     Select deadline date
+   </label>
+    <input class="govuk-input govuk-!-width-one-third" type="date" id="Reminder_ReminderDate" name="Reminder.ReminderDate" value="">
+ </div>
+
+<div class="govuk-form-group">
+<label class="govuk-label govuk-!-font-weight-bold" for="Reminder_Notes">
+  Notes
+</label>
+<textarea class="govuk-textarea" rows="5" id="Reminder_Notes" name="Reminder.Notes"></textarea>
+</div>
+
+<div class="govuk-form-group" id="emails-form-group" aria-describedby="emails-hint">
+
+<label class="govuk-label govuk-label--s" for="emails">
+  Who do you want to remind?
+</label>
+<div id="emails-hint" class="govuk-hint">
+  Please enter one or more valid email addresses, separated by ;
+</div>
+<input class="govuk-input" id="Emails" type="text" name="Emails" value="">
+<div id="email-suggestions" class="predict-text-wrapper"></div>
+</div>
+
+<a class="govuk-button" href="/reminders">Save</a>
+
+</div>
+</div>
+</div>
+
+{% endblock %}
