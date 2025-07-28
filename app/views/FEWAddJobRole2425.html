@@ -1,0 +1,109 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<main class="govuk-main-wrapper" id="content" role="main">
+        <div class="govuk-grid-row flex">
+
+<div class="govuk-grid-column-full">
+    <form method="post" action="">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+<span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">What are their job roles?</h1>
+                  </legend>
+                  <div class="govuk-hint">
+                    A staff member can have multiple job roles within the organisation, therefore select all options that are relevant to the staff member's job activities within the organisation.
+                </div>
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="JobRole" name="JobRole" type="checkbox" value="Senior Leader" {{ checked("JobRole", "Senior Leader") }} data-aria-controls="conditional-SeniorLeader">
+                      <label class="govuk-label govuk-checkboxes__label" for="SeniorLeader">
+                        Senior Leader
+                      </label>
+                      <div id="SeniorLeader-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                        Assistant Head, Assistent Principal, CEO, Director, Executive Head Teacher, Head Teacher, Managing Director, Principal, Senior Manager, Vice-Principal
+                      </div>
+                    </div>
+   
+
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="JobRole" name="JobRole" type="checkbox" value="Manager" {{ checked("JobRole", "Manager") }}  data-aria-controls="conditional-Manager">
+                      <label class="govuk-label govuk-checkboxes__label" for="Manager">
+                        Manager
+                      </label>
+                      <div id="Manager-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                        Curriculum Lead, Faculty Lead, Functional Manager, Head of Department, Programme Lead, Quality Assurance Manager
+                      </div>
+                    </div>
+
+                    
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="JobRole" name="JobRole" type="checkbox" value="Teacher" {{ checked("JobRole", "Teacher") }} data-aria-controls="conditional-Teacher">
+                      <label class="govuk-label govuk-checkboxes__label" for="Teacher">
+                        Teacher
+                      </label>
+                      <div id="Teacher-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                        Advanced Practitioner, Instructor, Lecturer, Practitioner, Teacher, Trainer, Tutor
+                      </div>
+                    </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="JobRole" name="JobRole" type="checkbox" value="Teaching Support" {{ checked("JobRole", "Teaching Support") }} data-aria-controls="conditional-TeachingSupport">
+                      <label class="govuk-label govuk-checkboxes__label" for="TeachingSupport">
+                        Support
+                      </label>
+                      <div id="Teaching-Support-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                        Assessor, Behaviour Specialist, Bilingual Support Assistant, Careers Advisor, Counsellor, Cover Supervisor, Education Welfare Officer, Higher Level Teaching Assistant
+                        Language Support, Learning Facilitator, Learning Mentor, Learning Support, Learning Support Assistant (SEN), Librarian, Pastoral Support, SEN Co-ordinator, Sports Coach,
+                        Teaching Assistant, Technician, Therapist
+                      </div>
+                    </div>
+
+
+
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="JobRole" name="JobRole" type="checkbox" value="Administration" {{ checked("JobRole", "Administration") }} data-aria-controls="conditional-Administration">
+                      <label class="govuk-label govuk-checkboxes__label" for="Administration">
+                        Administration
+                      </label>
+                      <div id="Administration-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                        Administrator, Admissions, Apprenticeships Administrator, Bursar, Business Manager, Clerk, Communication Support,
+                        Data Analyst, DSL and Safe Guarding Officer, Employer Engagement, Examinations Administrator, External Grants and Funding,
+                        Finance Officer, Human Resources (HR), ICT Network Manager, Information Services (MIS), Legal, Marketing Administrator, Office Manager,
+                        Payroll Administrator, Programme recruitment, Receptionist, Secretary, Technology Support 
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+
+    </div>
+
+            </div>
+        </div>
+        <br>
+        <button class="govuk-button" type="submit" formaction="/FEWAddSubRole">Save and continue</button><br>
+      </div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+
+{% endblock %}
