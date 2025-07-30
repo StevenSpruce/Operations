@@ -3,213 +3,115 @@
 {% block pageTitle %}
 GOV.UK Prototype Kit
 {% endblock %}
-{% block content %}
 
+{% block content %}
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
-
 <main class="govuk-main-wrapper" id="content" role="main">
-<div class="govuk-grid-row flex">
-<body>
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-        <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
-        <h1 class="govuk-heading">Employment details</h1>
-    
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            
+            <span class="govuk-caption-m"> {{ data['StaffMember.FirstName'] }} {{ data['StaffMember.LastName'] }}</span>
+            <h1 class="govuk-heading-l">Employment details</h1>
 
-        <h1 class="govuk-heading">Weekly contracted hours </h1>
+            <form method="post" action="/your-processing-route">
 
-    
-        <p class="govuk-body">
-            For staff members with more than one contract, record weekly contracted hours using their main contract with the most hours.
-        </p>
-
-        <form method="post" id="weekly-hours-form" action="/few/contracts/check-weekly-contracted-hours">
-            <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                    <div class="govuk-form-group" id="weekly-Group">
+                <h2 class="govuk-heading-m">Weekly contracted hours</h2>
+                <p class="govuk-body">For staff members with more than one contract, record weekly contracted hours using their main contract with the most hours.</p>
+                <div class="govuk-form-group" id="weekly-hours-group">
+                    <fieldset class="govuk-fieldset">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                            <h2 class="govuk-fieldset__heading">
-                                What are their weekly contracted hours?
-                            </h2>
+                            <h2 class="govuk-fieldset__heading">What are their weekly contracted hours?</h2>
                         </legend>
-                        <div id="weekly-hours-hint" class="govuk-hint">
-                            For example enter 32.5 for thirty two and a half
-                        </div>
-
-                        
+                        <div id="weekly-hours-hint" class="govuk-hint">For example enter 32.5 for thirty two and a half</div>
                         <div class="govuk-input__wrapper">
                             <input class="govuk-input govuk-input--width-5" id="weekly-hours" type="text" inputmode="numeric" maxlength="5" name="WeeklyHours.Hours" value="">
                             <div class="govuk-input__suffix" aria-hidden="true">hours per week</div>
                         </div>
-                    </div>
-                </fieldset>
-            </div>
-  <h1 class="govuk-heading">Weeks a year contracted to work</h1>
+                    </fieldset>
+                </div>
 
-        <p class="govuk-body">
-            <strike>This data item records the number of weeks per year for which a member of staff is contracted to work, including any paid holiday</strike>. 
-        </p>
-        <p class="govuk-body">
-            <mark>Record the number of weeks per year the staff member is contracted to work, including any paid holiday</mark>. 
-        </p>
-
-        <form method="post" id="weekly-hours-form" action="/WeeksYearError">
-            <div class="govuk-form-group">
-                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1450">
-                <fieldset class="govuk-fieldset">
- 
-                    <div class="govuk-form-group" id="weekly-Group">
+                <h2 class="govuk-heading-m">Weeks a year contracted to work</h2>
+                <p class="govuk-body"><strike>This data item records the number of weeks per year for which a member of staff is contracted to work, including any paid holiday</strike>.</p>
+                <p class="govuk-body"><mark>Record the number of weeks per year the staff member is contracted to work, including any paid holiday</mark>.</p>
+                <div class="govuk-form-group" id="weeks-year-group">
+                    <fieldset class="govuk-fieldset">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                            <h2 class="govuk-fieldset__heading">
-                                What are their weeks per year?
-                            </h2>
+                            <h2 class="govuk-fieldset__heading">What are their weeks per year?</h2>
                         </legend>
-                        <div id="weekly-hours-hint" class="govuk-hint">
-                            Where a staff member is contracted to work for less than 52 weeks in a year but payments are spread equally over the year, it is the number of weeks contracted to work that should be entered.  For example, if someone is on a term-time only contract for 37 weeks per year but receives their pay in twelve monthly instalments, it is 37 weeks that should be entered, not 52.
-                        </div>
-
-                        
+                        <div id="weeks-year-hint" class="govuk-hint">Where a staff member is contracted to work for less than 52 weeks in a year but payments are spread equally over the year, it is the number of weeks contracted to work that should be entered. For example, if someone is on a term-time only contract for 37 weeks per year but receives their pay in twelve monthly instalments, it is 37 weeks that should be entered, not 52.</div>
                         <div class="govuk-input__wrapper">
                             <input class="govuk-input govuk-input--width-5" id="weeksayear" type="text" inputmode="numeric" maxlength="5" name="weeksayear" value="">
                             <div class="govuk-input__suffix" aria-hidden="true">weeks per year</div>
                         </div>
-                    </div>
-                </fieldset>
-            </div>
-
-            <br>
-            <button class="govuk-button" type="submit" id="submit">Save and continue</button>
-
-    </div>
-</div>     <br>
-
-        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KWiH8TsmjJxmDRf2SjFdpKH1Hmn_4GNNII9GNYOXCsCnCjopZRC9HXYy9Dx2xBbt08JOJk47H6Ueao40Eqpj-DXm3yCFROrFqJ3xJTg52EFn0ileDs-boahbp8k47-XRkxoyuFLEn16g2VBpoA5xTAs2iDxPheANpXI6Sm2vTLnaA"></form>
-    </div>
-
-    
-
-
-
-    <h1 class="govuk-heading">Calculated full time equivalent (FTE)</h1>
-
-   
-    </p>
-    <p class="govuk-body">
-        Record the proportion of an FTE year for the staff member for the reporting period, calculated for all contracts.
-    </p>
-
-    <form method="post" id="fte-form" action="/few/contracts/check-calculated-full-time-equivalent-fte">
-        <div class="govuk-form-group">
-            <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1450">
-            <fieldset class="govuk-fieldset">
-                <div class="govuk-form-group" id="fte-Group">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                        <h2 class="govuk-fieldset__heading">
-                            What is their annual calculated full time equivalent (FTE)?
-                        </h2>
-                    </legend>
-                    <div id="weekly-hours-hint" class="govuk-hint">
-                        For example, if a member of staff works full time for the full year, their FTE is 1.0. 
-                        If a member of staff works 60% of a full time working week for the full year, their FTE is 0.6
-                    </div>
-
-                    
-                    <div class="govuk-input__wrapper">
-                        <input class="govuk-input govuk-input--width-5" id="fte" type="text" inputmode="numeric" maxlength="4" name="FTE" value="">
-                        <div class="govuk-input__suffix" aria-hidden="true">FTE</div>
-                    </div>
+                    </fieldset>
                 </div>
-            </fieldset>
-        </div>
 
-        <br>
-        
-        <button class="govuk-button" type="submit" formaction="/FEWemploymentWarning">Save and continue</button>
-    </div>
-    <h1 class="govuk-heading">Salary or hourly rate details</h1>
-
-        <p class="govuk-body">
-            The annual salary or hourly rate should be recorded for the main contract with the most hours.
-        </p>
-
-        <form method="post" id="salaryhourly-form" action="/few/contracts/check-annual-salary-hourly-rate">
-            <div class="govuk-form-group">
+                <h2 class="govuk-heading-m">Calculated full time equivalent (FTE)</h2>
+                <p class="govuk-body">Record the proportion of an FTE year for the staff member for the reporting period, calculated for all contracts.</p>
+                <div class="govuk-form-group" id="fte-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h2 class="govuk-fieldset__heading">What is their annual calculated full time equivalent (FTE)?</h2>
+                        </legend>
+                        <div id="fte-hint" class="govuk-hint">For example, if a member of staff works full time for the full year, their FTE is 1.0. If a member of staff works 60% of a full time working week for the full year, their FTE is 0.6</div>
+                        <div class="govuk-input__wrapper">
+                            <input class="govuk-input govuk-input--width-5" id="fte" type="text" inputmode="numeric" maxlength="4" name="FTE" value="">
+                            <div class="govuk-input__suffix" aria-hidden="true">FTE</div>
+                        </div>
+                    </fieldset>
+                </div>
+                
+                <h2 class="govuk-heading-m">Salary or hourly rate details</h2>
+                <p class="govuk-body">The annual salary or hourly rate should be recorded for the main contract with the most hours.</p>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="isannual-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h2 class="govuk-fieldset__heading">How is the staff member paid?</h2>
+                        </legend>
+                        <div id="isannual-hint" class="govuk-hint">Select an option to add details</div>
+                        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="is-annual-salary" type="radio" value="true" checked="checked" name="IsAnnualSalary" aria-controls="conditional-annual">
+                                <label class="govuk-label govuk-radios__label" for="is-annual-salary">Annual Salary</label>
+                            </div>
+                            <div class="govuk-radios__conditional" id="conditional-annual">
+                                <div class="govuk-form-group">
+                                    <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="annual-salary">What is their annual salary?</label></h3>
+                                    <div id="annual-salary-hint" class="govuk-hint">For example, 27420</div>
+                                    <div class="govuk-input__wrapper">
+                                        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                                        <input class="govuk-input govuk-input--width-10" id="annual-salary" type="text" spellcheck="false" maxlength="7" aria-describedby="annual-salary-hint" name="Salary" value="">
+                                        <div class="govuk-input__suffix" aria-hidden="true">per annum</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="is-hourly-rate" type="radio" value="false" name="IsAnnualSalary" aria-controls="conditional-hourly">
+                                <label class="govuk-label govuk-radios__label" for="is-hourly-rate">Hourly rate</label>
+                            </div>
+                            <div class="govuk-radios__conditional" id="conditional-hourly">
+                                <div class="govuk-form-group">
+                                    <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="hourly-rate">What is their hourly rate?</label></h3>
+                                    <div id="hourly-rate-hint" class="govuk-hint">For example, 11.36</div>
+                                    <div class="govuk-input__wrapper">
+                                        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                                        <input class="govuk-input govuk-input--width-10" id="hourly-rate" type="text" maxlength="6" name="Rate" value="">
+                                        <div class="govuk-input__suffix" aria-hidden="true">per hour</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KWiH8TsmjJxmDRf2SjFdpKH1Hmn_4GNNII9GNYOXCsCnCjopZRC9HXYy9Dx2xBbt08JOJk47H6Ueao40Eqpj-DXm3yCFROrFqJ3xJTg52EFn0ileDs-boahbp8k47-XRkxoyuFLEn16g2VBpoA5xTAs2iDxPheANpXI6Sm2vTLnaA">
                 <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1450">
-                <fieldset class="govuk-fieldset" aria-describedby="isannual-hint">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                        <h2 class="govuk-fieldset__heading">
-                            How is the staff member paid?
-                        </h2>
-                    </legend>
-                    <div id="isannual-hint" class="govuk-hint">
-                        Select an option to add details
-                    </div>
-                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-                        
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="is-annual-salary" type="radio" value="true" checked="checked" name="IsAnnualSalary" aria-controls="conditional-annual">
-                            <label class="govuk-label govuk-radios__label" for="is-annual-salary">
-                                Annual Salary
-                            </label>
-                        </div>
-                        <div class="govuk-radios__conditional govuk-radios__conditional" id="conditional-annual">
-                            <div class="govuk-form-group">
-                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
 
-                                    <h3 class="govuk-fieldset__heading">
-                                        What is their annual salary?
-                                    </h3>
-                                </legend>
-                                <div id="annual-salary-hint" class="govuk-hint">
-                                    For example, enter 27420 for a salary of twenty seven thousand four hundred and twenty pounds
-                                </div>
-                                
+                <button class="govuk-button" type="submit" id="submit">Save and continue</button>
 
-                                <div class="govuk-input__wrapper">
-                                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
-                                    <input class="govuk-input govuk-input--width-10" id="annual-salary" type="text" spellcheck="false" maxlength="7" aria-describedby="annual-salary-hint" name="Salary" value="">
-                                    <div class="govuk-input__suffix" aria-hidden="true">per annum</div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="is-annual-salary2" type="radio" value="false" name="IsAnnualSalary" aria-controls="conditional-hourly">
-                            <label class="govuk-label govuk-radios__label" for="is-annual-salary2">
-                                Hourly rate
-                            </label>
-                        </div>
-                        <div class="govuk-radios__conditional govuk-radios__conditional" id="conditional-hourly">
-                            <div class="govuk-form-group">
-                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-
-                                    <h3 class="govuk-fieldset__heading">
-                                        What is their hourly rate?
-                                    </h3>
-                                </legend>
-                                <div id="hourly-rate-hint" class="govuk-hint">
-                                    For example, enter 11.36 for an hourly rate of eleven pounds thirty six pence
-                                </div>
-                                
-
-                                <div class="govuk-input__wrapper">
-                                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
-                                    <input class="govuk-input govuk-input--width-10" id="hourly-rate" type="text" maxlength="6" aria-describedby="hourly-salary-hint" name="Rate" value="">
-                                    <div class="govuk-input__suffix" aria-hidden="true">per hour</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
+            </form>
             </div>
-
-            <br>
-            
     </div>
-</div>
-</body>
-
-
-
+</main>
 {% endblock %}
