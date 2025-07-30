@@ -45,13 +45,89 @@ GOV.UK Prototype Kit
                     </div>
                 </fieldset>
             </div>
+  <h1 class="govuk-heading">Weeks a year contracted to work</h1>
+
+        <p class="govuk-body">
+            <strike>This data item records the number of weeks per year for which a member of staff is contracted to work, including any paid holiday</strike>. 
+        </p>
+        <p class="govuk-body">
+            <mark>Record the number of weeks per year the staff member is contracted to work, including any paid holiday</mark>. 
+        </p>
+
+        <form method="post" id="weekly-hours-form" action="/WeeksYearError">
+            <div class="govuk-form-group">
+                <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1450">
+                <fieldset class="govuk-fieldset">
+ 
+                    <div class="govuk-form-group" id="weekly-Group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h2 class="govuk-fieldset__heading">
+                                What are their weeks per year?
+                            </h2>
+                        </legend>
+                        <div id="weekly-hours-hint" class="govuk-hint">
+                            Where a staff member is contracted to work for less than 52 weeks in a year but payments are spread equally over the year, it is the number of weeks contracted to work that should be entered.  For example, if someone is on a term-time only contract for 37 weeks per year but receives their pay in twelve monthly instalments, it is 37 weeks that should be entered, not 52.
+                        </div>
+
+                        
+                        <div class="govuk-input__wrapper">
+                            <input class="govuk-input govuk-input--width-5" id="weeksayear" type="text" inputmode="numeric" maxlength="5" name="weeksayear" value="">
+                            <div class="govuk-input__suffix" aria-hidden="true">weeks per year</div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
 
             <br>
+            <button class="govuk-button" type="submit" id="submit">Save and continue</button>
+
+    </div>
+</div>     <br>
 
         <input name="__RequestVerificationToken" type="hidden" value="CfDJ8L3yK0oY72BAjGq27RPv8KWiH8TsmjJxmDRf2SjFdpKH1Hmn_4GNNII9GNYOXCsCnCjopZRC9HXYy9Dx2xBbt08JOJk47H6Ueao40Eqpj-DXm3yCFROrFqJ3xJTg52EFn0ileDs-boahbp8k47-XRkxoyuFLEn16g2VBpoA5xTAs2iDxPheANpXI6Sm2vTLnaA"></form>
     </div>
 
-    <h1 class="govuk-heading">Salary or hourly rate details</h1>
+    
+
+
+
+    <h1 class="govuk-heading">Calculated full time equivalent (FTE)</h1>
+
+   
+    </p>
+    <p class="govuk-body">
+        Record the proportion of an FTE year for the staff member for the reporting period, calculated for all contracts.
+    </p>
+
+    <form method="post" id="fte-form" action="/few/contracts/check-calculated-full-time-equivalent-fte">
+        <div class="govuk-form-group">
+            <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1450">
+            <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group" id="fte-Group">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">
+                            What is their annual calculated full time equivalent (FTE)?
+                        </h2>
+                    </legend>
+                    <div id="weekly-hours-hint" class="govuk-hint">
+                        For example, if a member of staff works full time for the full year, their FTE is 1.0. 
+                        If a member of staff works 60% of a full time working week for the full year, their FTE is 0.6
+                    </div>
+
+                    
+                    <div class="govuk-input__wrapper">
+                        <input class="govuk-input govuk-input--width-5" id="fte" type="text" inputmode="numeric" maxlength="4" name="FTE" value="">
+                        <div class="govuk-input__suffix" aria-hidden="true">FTE</div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <br>
+        
+        <button class="govuk-button" type="submit" formaction="/FEWemploymentWarning">Save and continue</button>
+</div>
+<h1 class="govuk-heading">Salary or hourly rate details</h1>
 
         <p class="govuk-body">
             The annual salary or hourly rate should be recorded for the main contract with the most hours.
@@ -131,45 +207,6 @@ GOV.UK Prototype Kit
             <br>
             
     </div>
-
-
-
-    <h1 class="govuk-heading">Calculated full time equivalent (FTE)</h1>
-
-   
-    </p>
-    <p class="govuk-body">
-        Record the proportion of an FTE year for the staff member for the reporting period, calculated for all contracts.
-    </p>
-
-    <form method="post" id="fte-form" action="/few/contracts/check-calculated-full-time-equivalent-fte">
-        <div class="govuk-form-group">
-            <input type="hidden" data-val="true" data-val-required="The StaffId field is required." id="StaffId" name="StaffId" value="1450">
-            <fieldset class="govuk-fieldset">
-                <div class="govuk-form-group" id="fte-Group">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                        <h2 class="govuk-fieldset__heading">
-                            What is their annual calculated full time equivalent (FTE)?
-                        </h2>
-                    </legend>
-                    <div id="weekly-hours-hint" class="govuk-hint">
-                        For example, if a member of staff works full time for the full year, their FTE is 1.0. 
-                        If a member of staff works 60% of a full time working week for the full year, their FTE is 0.6
-                    </div>
-
-                    
-                    <div class="govuk-input__wrapper">
-                        <input class="govuk-input govuk-input--width-5" id="fte" type="text" inputmode="numeric" maxlength="4" name="FTE" value="">
-                        <div class="govuk-input__suffix" aria-hidden="true">FTE</div>
-                    </div>
-                </div>
-            </fieldset>
-        </div>
-
-        <br>
-        
-        <button class="govuk-button" type="submit" formaction="/FEWemploymentWarning">Save and continue</button>
-</div>
 </div>
 </body>
 
