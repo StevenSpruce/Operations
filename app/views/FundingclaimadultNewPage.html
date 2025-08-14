@@ -1,62 +1,78 @@
 {% extends "layoutsld.html" %}
 {% block pageTitle %}
-Submit learner data
+Submitting evidence for exceptional adjustments
 {% endblock %}
 {% block content %}
 <body class="govuk-template__body js-enabled">
-    <main class="govuk-main-wrapper" id="content" role="main">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full">
-                <a class="govuk-back-link" href="/fundingclaimsubmissions2425">Back</a>
-            </div>
-        </div>
+    <main class="govuk-main-wrapper" id="content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <a class="govuk-back-link" href="/fundingclaimsubmissions2425">Back</a>
+            </div>
+        </div>
 
-        <div class="govuk-grid-row govuk-!-display-flex govuk-!-justify-content-center">
-            <div style="max-width: 800px; margin: 0 auto;">
-                <p class="govuk-body">
-                    We may request further information and evidence relating to your claims
-                    that you have manually entered, including your Tailored Learning claim.
-                    Grant funding not used for its intended purposes must be excluded from the claim and returned to the ESFA.
-                    We will recover funding claimed in error.
-                </p>
-                <p class="govuk-body">
-                    Funding for learner support and learning support is included within your allocation.
-                    We will monitor the amount of funding you spend on support costs and may request evidence.
-                </p>
-                <p class="govuk-body">
-                    I certify that this funding claim is complete and accurate, and the funding has been spent
-                    in line with the conditions of grant and 2024 to 2025 funding and performance management rules.
-                </p>
-                <ul class="govuk-list govuk-list--bullet">
-                    <li><a href="https://www.gov.uk/government/publications/adult-skills-fund-funding-rules-for-2024-to-2025/adult-skills-fund-funding-rules-2024-to-2025" class="govuk-link">Adult education budget: funding and performance management rules 2024 to 2025</a></li>
-                    <li><a href="https://www.gov.uk/government/publications/advanced-learner-loans-funding-rules-2024-to-2025" class="govuk-link">Advanced learner loans funding rules: 2024 to 2025</a></li>
-                </ul>
-                <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" aria-describedby="conditions-hint">
-                        <div id="conditions-hint" class="govuk-hint">
-                            
-                        </div>
-                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                            <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="confirmation" name="confirmation" type="checkbox" value="confirmed">
-                                <label class="govuk-label govuk-checkboxes__label" for="confirmation">
-                                    I confirm this data is correct and the grant has been spent in line with the conditions and rules.
-                                </label>
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="govuk-button-group">
-                    <a class="govuk-button govuk-button--secondary" id="save" name="save" href="/FundingClaim2425FinishLater">
-                        Save and finish later
-                    </a>
-                    <a id="submit" name="submit" class="govuk-button" href="/fundingclaimconfirmation2425">
-                        Confirm and Submit
-                    </a>
-                </div>
-            </div>
-        </div>
-    </main>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-l">Submitting Evidence for Exceptional Adjustments</h1>
+                <p class="govuk-body">
+                    If you’ve included any exceptional adjustments in your final funding claim, you must send supporting evidence within <strong>5 working days</strong>.
+                </p>
+                <p class="govuk-body">
+                    Please submit your evidence via the Home - <a href="#" class="govuk-link">Customer Help Portal</a>, and clearly state that it relates to your <strong>2024 to 2025 final funding claim</strong>.
+                </p>
+                <p class="govuk-body">
+                    If you're submitting evidence for more than one adjustment, make sure it’s clear which evidence supports each adjustment. If this isn’t clear, it could delay the review of your case.
+                </p>
+                <p class="govuk-body">
+                    Your case will be reviewed, and the outcome will be shown in your <strong>final reconciliation statement</strong>.
+                </p>
+
+                <h2 class="govuk-heading-m">What to Include in Your Evidence</h2>
+                <p class="govuk-body">Please provide:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                        <strong>Why the adjustment was needed</strong>
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>Explain the issue and why you made the adjustment.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Proof of the error and its impact</strong>
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>
+                                Include learner-level details like:
+                                <ul class="govuk-list govuk-list--bullet">
+                                    <li>Unique Learner Number (ULN) or student reference numbers</li>
+                                    <li>Cost and/or spending details to support your claim</li>
+                                </ul>
+                            </li>
+                            <li>Do not include personal data (e.g. names, dates of birth, addresses) to comply with GDPR.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Any extra information</strong>
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>Add anything else that supports your case.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Confirmation of authorisation</strong>
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>
+                                Confirm whether you had approval to include the adjustment. As stated in the <a href="#" class="govuk-link">2024–2025 funding claims guidance</a>:
+                                <div class="govuk-inset-text">
+                                    "You must only use the ‘exceptional adjustments’ column in the final claim to make changes if you’ve agreed an exceptional adjustment with us beforehand. You must also retain relevant evidence (that we may request to validate your claim). Any unauthorised exceptional adjustments will not be included in your delivery figures."
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h2 class="govuk-heading-m">Important</h2>
+                <p class="govuk-body">If you don’t send your evidence within <strong>5 working days</strong>, your adjustment will be removed and won’t appear in your <strong>final reconciliation statement</strong>.</p>
+            </div>
+        </div>
+    </main>
 </body>
 {% endblock %}
-
