@@ -1,11 +1,11 @@
-{% extends "layout.html" %}
+{% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-  Reference data
+GOV.UK Prototype Kit
 {% endblock %}
 
+
 {% block content %}
-  {% include "./includes/nav.html" %}
 
   <a href="#" class="govuk-back-link">Back</a>
 
