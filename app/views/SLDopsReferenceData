@@ -1,7 +1,7 @@
 {% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-GOV.UK Prototype Kit
+  Reference data – GOV.UK Prototype Kit
 {% endblock %}
 
 
@@ -16,105 +16,93 @@ GOV.UK Prototype Kit
 
       <a class="govuk-button" href="#">Publish data</a>
 
-      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-reference-data">
-        
-        <div class="govuk-accordion__section">
-          <div class="govuk-accordion__section-header">
-            <h2 class="govuk-accordion__section-heading">
-              <span class="govuk-accordion__section-button" id="accordion-heading-1">
-                <table class="govuk-table">
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell govuk-!-width-two-thirds">
-                      <strong class="govuk-!-font-size-24">Validation Messages 25-26</strong>
-                    </td>
-                    <td class="govuk-summary-list__actions">
-                      <a href="#">Manage</a>
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-summary-list__value" colspan="2">
-                      Validation messages for 25/26 for all collection purposes.
-                    </td>
-                  </tr>
-                </table>
-              </span>
-            </h2>
+      <ul class="govuk-list">
+  
+        <li>
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">Validation Messages 25-26</h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action">
+                  <a class="govuk-link" href="#">
+                    Manage<span class="govuk-visually-hidden"> validation messages 25-26</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <p class="govuk-body">Validation messages for 25/26 for all collection purposes.</p>
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Last update
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    13 August 2025 at 2:59 pm
+                  </dd>
+                </div>
+              </dl>
+            </div>
           </div>
-          <div id="accordion-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-heading-1">
-            <dl class="govuk-summary-list">
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Last update</dt>
-                <dd class="govuk-summary-list__value">13 August 2025 at 2:59 pm</dd>
-              </div>
-            </dl>
+        </li>
+      
+        <li>
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">Devolved Contracts</h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action">
+                  <a class="govuk-link" href="#">
+                    Manage<span class="govuk-visually-hidden"> devolved contracts</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <p class="govuk-body">Devolved contract LARS/Fis for AEB/ALLB learners where funded by Devolved auths. Not returned by providers via SLD.</p>
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Last update
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    23 July 2025 at 2:47 pm
+                  </dd>
+                </div>
+              </dl>
+            </div>
           </div>
-        </div>
-
-        <div class="govuk-accordion__section">
-          <div class="govuk-accordion__section-header">
-            <h2 class="govuk-accordion__section-heading">
-              <span class="govuk-accordion__section-button" id="accordion-heading-2">
-                <table class="govuk-table">
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell govuk-!-width-two-thirds">
-                      <strong class="govuk-!-font-size-24">Devolved Contracts</strong>
-                    </td>
-                    <td class="govuk-summary-list__actions">
-                      <a href="#">Manage</a>
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-summary-list__value" colspan="2">
-                      Devolved contract LARS/Fis for AEB/ALLB learners where funded by Devolved auths. Not returned by providers via SLD.
-                    </td>
-                  </tr>
-                </table>
-              </span>
-            </h2>
+        </li>
+      
+        <li>
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">Validation Messages 24-25</h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action">
+                  <a class="govuk-link" href="#">
+                    Manage<span class="govuk-visually-hidden"> validation messages 24-25</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <p class="govuk-body">Validation messages for 24/25 for all collection purposes.</p>
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Last update
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    3 June 2025 at 5:23 pm
+                  </dd>
+                </div>
+              </dl>
+            </div>
           </div>
-          <div id="accordion-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-heading-2">
-            <dl class="govuk-summary-list">
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Last update</dt>
-                <dd class="govuk-summary-list__value">23 July 2025 at 2:47 pm</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-
-        <div class="govuk-accordion__section">
-          <div class="govuk-accordion__section-header">
-            <h2 class="govuk-accordion__section-heading">
-              <span class="govuk-accordion__section-button" id="accordion-heading-3">
-                <table class="govuk-table">
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell govuk-!-width-two-thirds">
-                      <strong class="govuk-!-font-size-24">Validation Messages 24-25</strong>
-                    </td>
-                    <td class="govuk-summary-list__actions">
-                      <a href="#">Manage</a>
-                    </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-summary-list__value" colspan="2">
-                      Validation messages for 24/25 for all collection purposes.
-                    </td>
-                  </tr>
-                </table>
-              </span>
-            </h2>
-          </div>
-          <div id="accordion-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-heading-3">
-            <dl class="govuk-summary-list">
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Last update</dt>
-                <dd class="govuk-summary-list__value">3 June 2025 at 5:23 pm</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-
-        </div>
+        </li>
+      
+      </ul>
 
     </div>
   </div>
