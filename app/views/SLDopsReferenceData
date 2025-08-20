@@ -1,0 +1,180 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+Reference data
+{% endblock %}
+
+{% block content %}
+<main class="govuk-main-wrapper" id="main-content" role="main">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Important
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <ul class="govuk-list">
+            <li>Check all return period dates has a deadline of 2025-08-01</li>
+            <li>Check topics and tasks has a deadline of 2025-08-15</li>
+            <li>MCA flags for new MCAs has a deadline of 2025-08-30</li>
+            <li>submitlearnerdata2024-25 has a deadline of 2025-09-21</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#home">
+              Home
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#collections">
+              Collections
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#dashboards">
+              Dashboards
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#period-end">
+              Period end
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#providers">
+              Providers
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#reference-data">
+              Reference data
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#reports">
+              Reports
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#sld-admin">
+              SLD admin
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">SLD</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">Reference data</li>
+        </ol>
+      </div>
+
+      <h1 class="govuk-heading-xl">Reference data</h1>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <ul class="govuk-list">
+            <li>
+              <h2 class="govuk-heading-m"><a href="#" class="govuk-link">Validation Messages 25-26</a></h2>
+              <p class="govuk-body">Validation messages for 25/26 for all collection purposes.</p>
+              <p class="govuk-body-s">Last update<br>13 August 2025 at 2:59 pm</p>
+            </li>
+            <li>
+              <h2 class="govuk-heading-m"><a href="#" class="govuk-link">Devolved Contracts</a></h2>
+              <p class="govuk-body">Devolved contract LARS/Fis for AEB/ALLB learners where funded by Devolved auths. Not returned by providers via SLD.</p>
+              <p class="govuk-body-s">Last update<br>23 July 2025 at 2:47 pm</p>
+            </li>
+            <li>
+              <h2 class="govuk-heading-m"><a href="#" class="govuk-link">Validation Messages 24-25</a></h2>
+              <p class="govuk-body">Validation messages for 24/25 for all collection purposes.</p>
+              <p class="govuk-body-s">Last update<br>3 June 2025 at 5:23 pm</p>
+            </li>
+            <li>
+              <h2 class="govuk-heading-m"><a href="#" class="govuk-link">NCS Outcome Rates</a></h2>
+              <p class="govuk-body">Rates used by the NCS funding calculation.</p>
+              <p class="govuk-body-s">Last update<br>19 April 2024 at 11:21 am</p>
+            </li>
+            <li>
+              <h2 class="govuk-heading-m"><a href="#" class="govuk-link">Short Term Funding Initiatives</a></h2>
+              <p class="govuk-body">LDM codes allowed for providers with short term funding initiatives.</p>
+              <p class="govuk-body-s">Last update<br>Data unavailable</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+          <ul class="govuk-list">
+            <li>
+              <h2 class="govuk-heading-m"><a href="#" class="govuk-link">Conditions of Funding Removal</a></h2>
+              <p class="govuk-body">Funding removal to be used by the collections.</p>
+              <p class="govuk-body-s">Last update<br>11 August 2025 at 12:55 pm</p>
+            </li>
+            <li>
+              <h2 class="govuk-heading-m"><a href="#" class="govuk-link">Skills Bootcamps dates</a></h2>
+              <p class="govuk-body">Deliverable dates for skills bootcamps funding calculation.</p>
+              <p class="govuk-body-s">Last update<br>8 July 2025 at 9:00 am</p>
+            </li>
+            <li>
+              <h2 class="govuk-heading-m"><a href="#" class="govuk-link">Skills Bootcamps Contracts</a></h2>
+              <p class="govuk-body">Calculation methods and waves for the Skills Bootcamp Contracts collection.</p>
+              <p class="govuk-body-s">Last update<br>28 March 2025 at 9:38 am</p>
+            </li>
+            <li>
+              <h2 class="govuk-heading-m"><a href="#" class="govuk-link">Campus Identifiers</a></h2>
+              <p class="govuk-body">Campus identifiers for validative and statistical purposes.</p>
+              <p class="govuk-body-s">Last update<br>22 November 2022 at 1:21 pm</p>
+            </li>
+            <li>
+              <h2 class="govuk-heading-m"><a href="#" class="govuk-link">1619 FundingClaims</a></h2>
+              <p class="govuk-body">Funding and performance claims for providers with only 1619 contracts.</p>
+              <p class="govuk-body-s">Last update<br>Data unavailable</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+          <ul class="govuk-list">
+            <li>
+              <h2 class="govuk-heading-m"><a href="#" class="govuk-link">OfS Providers</a></h2>
+              <p class="govuk-body">OfS providers for validation purposes.</p>
+              <p class="govuk-body-s">Last update<br>8 August 2025 at 2:06 pm</p>
+            </li>
+            <li>
+              <h2 class="govuk-heading-m"><a href="#" class="govuk-link">Funding Claims dates</a></h2>
+              <p class="govuk-body">Update the funding claim open and close dates.</p>
+              <p class="govuk-body-s">Last update<br>12 June 2025 at 4:32 pm</p>
+            </li>
+            <li>
+              <h2 class="govuk-heading-m"><a href="#" class="govuk-link">Devolved postcodes lookups</a></h2>
+              <p class="govuk-body">Linkage and mapping for MCA/GLA between local authority and local authorities.</p>
+              <p class="govuk-body-s">Last update<br>13 August 2025 at 1:13 pm</p>
+            </li>
+            <li>
+              <h2 class="govuk-heading-m"><a href="#" class="govuk-link">Provider Postcode Specialist Resources</a></h2>
+              <p class="govuk-body">Postcodes where specialist training can be claimed by a provider in London.</p>
+              <p class="govuk-body-s">Last update<br>8 August 2025 at 10:29 am</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <a href="#" class="govuk-link">Publish data</a>
+
+    </div>
+  </div>
+</main>
+{% endblock %}
