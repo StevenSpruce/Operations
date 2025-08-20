@@ -1,7 +1,7 @@
 {% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-  Reference data – GOV.UK Prototype Kit
+  GOV.UK Prototype Kit
 {% endblock %}
 
 
