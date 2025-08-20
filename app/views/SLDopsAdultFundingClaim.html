@@ -1,14 +1,27 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV Prototype Kit 
+  Adult funding claims
 {% endblock %}
 
 
 {% block content %}
-<p>Please not this page is to submit the adult funding claim on behalf of providers. This button will submit the funding claim for providers who have not submitted their claim. This button can only be used when the Funding Claim collection period is closed</p>
+
   <a href="#" class="govuk-back-link">Back</a>
 
- <a class="govuk-button" href="#">submit outstanding funding claims</a>
-  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-xl">Adult funding claims</h1>
+
+      <p class="govuk-body">
+        This section allows you to manage funding and performance claims for providers with adult funding contracts. Please select an option below to continue.
+      </p>
+
+      <a class="govuk-button" href="#">
+        Manage claims
+      </a>
+
+    </div>
+  </div>
 {% endblock %}
