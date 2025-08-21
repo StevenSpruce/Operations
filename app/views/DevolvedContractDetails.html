@@ -1,0 +1,89 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list app-width-container">
+
+    <li class="app-navigation__list-item app-navigation__list-item--current">
+      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_ContractList.html" data-topnav="Contracts">Contracts</a>
+    </li>
+
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Upload.html" data-topnav="Import">Import</a>
+    </li>
+
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Export.html" data-topnav="Export">Export</a>
+    </li>
+
+  </ul>
+</nav>
+
+<div class="govuk-width-container">
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">
+          Contract details
+        </h1>
+        
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="event-name">
+              What is the UKPRN of the provider that will be delivering the Skills Bootcamp?
+            </label>
+          </h2>
+          <label class="govuk-label govuk-date-input__label" for="assessment-price">
+            Skills Bootcamp provider UKPRN
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                What is your allocation type 
+              </h1>
+            </legend>
+            <div id="contact-hint" class="govuk-hint">
+              Please define allocation type 
+            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-radios__label" for="contact">
+                  Grant
+                </label>
+              </div>
+              <div class="govuk-radios__conditional" id="conditional-contact">
+                  <label class="govuk-label" for="contact-by-email">
+                    Your contract reference number 
+                  </label>
+                  <input class="govuk-input govuk-input--width-20" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" aria-describedby="contact-by-email-error" autocomplete="email">
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  Contract for services 
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <a class="govuk-button" href="SBRD_contractwaves.html">Continue</a>
+      </div>
+    </div>
+  </main>
+</div>
+
+ 
+
+{% endblock %}
