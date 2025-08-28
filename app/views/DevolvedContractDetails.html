@@ -1,24 +1,21 @@
 {% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-GOV.UK Prototype Kit
+Check your answers - GOV.UK Prototype Kit
 {% endblock %}
+
 {% block content %}
 <nav class="app-navigation govuk-clearfix">
   <ul class="app-navigation__list app-width-container">
-
     <li class="app-navigation__list-item app-navigation__list-item--current">
       <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_ContractList.html" data-topnav="Contracts">Contracts</a>
     </li>
-
     <li class="app-navigation__list-item">
       <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Upload.html" data-topnav="Import">Import</a>
     </li>
-
     <li class="app-navigation__list-item">
       <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Export.html" data-topnav="Export">Export</a>
     </li>
-
   </ul>
 </nav>
 
@@ -29,180 +26,75 @@ GOV.UK Prototype Kit
       <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-xl">
-          Contract details
+          Contracting information overview 
         </h1>
-        
 
-        <div class="govuk-form-group">
-          <h2 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="event-name">
-              What is the UKPRN of the provider that will be delivering this provision?
-            </label>
-          </h2>
-          <label class="govuk-label govuk-date-input__label" for="assessment-price">
-            Provider UKPRN
-          </label>
-          <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
-        </div>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Provider UKPRN
+            </dt>
+            <dd class="govuk-summary-list__value">
+              12345678
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Allocation type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Grant
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Contract type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Skills Bootcamps
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Contract start date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1 April 2024
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Contract end date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              31 March 2025
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Contract value
+            </dt>
+            <dd class="govuk-summary-list__value">
+              £150,000
+            </dd>
+          </div>
+        </dl>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h2 class="govuk-fieldset__heading">
-                What is your allocation type
-              </h2>
-            </legend>
-            <div id="contact-hint" class="govuk-hint">
-              Please define allocation type
-            </div>
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-                <label class="govuk-label govuk-radios__label" for="contact">
-                  Grant
-                </label>
-              </div>
-              <div class="govuk-radios__conditional" id="conditional-contact">
-                  <label class="govuk-label" for="contact-by-email">
-                    Your contract reference number
-                  </label>
-                  <input class="govuk-input govuk-input--width-20" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" aria-describedby="contact-by-email-error" autocomplete="email">
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-                <label class="govuk-label govuk-radios__label" for="contact-2">
-                  Contract for Services
-                </label>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h2 class="govuk-fieldset__heading">
-                What is the contract type
-              </h2>
-            </legend>
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-                  Adult Skills Fund
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-                  Free Courses for Jobs
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
-                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
-                  Skills Bootcamps
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="whereDoYouLive-4" name="whereDoYouLive" type="radio" value="northern-ireland">
-                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">
-                  ASF Innovation Fund
-                </label>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                <h2 class="govuk-fieldset__heading">
-                Enter the contract start date
-              </h2>
-            </legend>
-            <div id="passport-issued-hint" class="govuk-hint">
-              For example, 27 3 2007
-            </div>
-            <div class="govuk-date-input" id="passport-issued">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                    Day
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                    Month
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                    Year
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                </div>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                <h2 class="govuk-fieldset__heading">
-                Enter the contract end date
-              </h2>
-            </legend>
-            <div id="passport-issued-hint" class="govuk-hint">
-              For example, 27 3 2007
-            </div>
-            <div class="govuk-date-input" id="passport-issued">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                    Day
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                    Month
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                    Year
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                </div>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-        <div class="govuk-form-group">
-          <h2 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="event-name">
-              What is the contract value (£)
-            </label>
-          </h2>
-          <input class="govuk-input" id="event-name" name="eventName" type="text">
+        <h2 class="govuk-heading-m">Now submit your contract</h2>
+
+        <p class="govuk-body">By submitting this contract you are confirming that the details are correct.</p>
+
+        <div class="govuk-button-group">
+          <a href="#" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+            Submit
+          </a>
+          <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Edit
+          </a>
         </div>
 
-        <a class="govuk-button" href="DevolvedContractsSummary.html">Submit</a>
       </div>
     </div>
   </main>
 </div>
-
- 
-
 {% endblock %}
