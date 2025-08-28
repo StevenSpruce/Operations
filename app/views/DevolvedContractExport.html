@@ -1,0 +1,57 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<nav class="app-navigation govuk-clearfix">
+    <ul class="app-navigation__list app-width-container">
+  
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="DevolvedContractTable.html" data-topnav="Contracts">Contracts</a>
+      </li>
+
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="DevolvedContractsUpload.html" data-topnav="Import">Import</a>
+      </li>
+  
+      <li class="app-navigation__list-item app-navigation__list-item--current">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="DevolvedContractExport.html" data-topnav="Export">Export</a>
+      </li>
+  
+    </ul>
+  </nav>
+
+<div class="govuk-width-container"> 
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+<form method="post" enctype="multipart/form-data" id="ilrform" action="/MCA-GLA-FA/submission/MCA-GLA-FundedAims">
+   
+        <h1 class="govuk-heading-xl">
+            Export a devolved contracts data file
+        </h1>
+        <p>Export all of your devolved contract data as a .csv file.</p>
+
+         <p>
+            <a class="govuk-button" href="/SBRD">Export contracts</a>
+        </p>
+
+      </div>
+    </main>
+  </div>
+      
+
+
+
+</body>
+
+
+
+
+{% endblock %}
