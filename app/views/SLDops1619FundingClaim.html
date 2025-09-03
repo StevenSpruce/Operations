@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  1619 Funding Claims
+{% endblock %}
+
+{% block content %}
+
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-xl">1619 Funding Claims</h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--l" for="file-upload-1">
+          Choose 1619 providers file to upload
+        </label>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Upload
+      </button>
+
+      <h2 class="govuk-heading-l">Status</h2>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Date</th>
+            <th scope="col" class="govuk-table__header">Submitted by</th>
+            <th scope="col" class="govuk-table__header">Status</th>
+            <th scope="col" class="govuk-table__header">Errors</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">20/08/2025</td>
+            <td class="govuk-table__cell">Jane Doe</td>
+            <td class="govuk-table__cell">15 records 0 errors</td>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">15/07/2025</td>
+            <td class="govuk-table__cell">John Smith</td>
+            <td class="govuk-table__cell">20 records 5 errors</td>
+            <td class="govuk-table__cell">Yes</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">10/06/2025</td>
+            <td class="govuk-table__cell">Jane Doe</td>
+            <td class="govuk-table__cell">18 records 0 errors</td>
+            <td class="govuk-table__cell">No</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+{% endblock %}
+
+
