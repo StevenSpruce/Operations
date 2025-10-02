@@ -18,18 +18,38 @@ GOV.UK Prototype Kit
             This collection allows you to submit Devolved contracting data.
         </p>
 
-       <!-- <p class="govuk-body">
-              Data can be entered using the online form service or imported using the CSV file upload service:
-        </p>
-
-        <ul class="govuk-list govuk-list--bullet">
-            <li>the online form service allows you to add contract reference data individually</li>
-            <li>the CSV file upload service allows you to bulk upload contract reference data</li> 
-        </ul> 
-
-        <div class="govuk-inset-text">
-          Click <a href="/SBC_CollectionDetails.html" button class="govuk-link" data-module="govuk-button"> here </a> for information regarding contract waves and calculation methods 
-        </div> -->
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        How do you want to sign in?
+      </h1>
+    </legend>
+    <div id="signIn-hint" class="govuk-hint">
+      You’ll need an account to prove your identity and complete your Self Assessment
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+        <label class="govuk-label govuk-radios__label" for="signIn">
+          Sign in with Government Gateway
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          You’ll have a user ID if you’ve registered for Self Assessment or filed a tax return online before
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="signIn-2">
+          Sign in with GOV.UK One Login
+        </label>
+        <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+          If you don’t have a GOV.UK One Login, you can create one
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
 
         <a class="govuk-button" href="DevolvedContractsCollectionAdditionaInfo.html">
             Continue
