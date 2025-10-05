@@ -13,15 +13,15 @@ GOV.UK Prototype Kit
     <li class="app-navigation__list-item app-navigation__list-item--current">
         <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="DevolvedContractsUpload.html" data-topnav="Import">Import</a>
       </li>
-  
+
       <li class="app-navigation__list-item">
         <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="DevolvedContractTable.html" data-topnav="Online Form">Online Form</a>
       </li>
-  
+
       <li class="app-navigation__list-item">
         <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="DevolvedContractExport.html" data-topnav="Export">Export</a>
       </li>
-  
+
     </ul>
   </nav>
 
@@ -66,7 +66,14 @@ GOV.UK Prototype Kit
             <a class="govuk-button" href="DevolvedContractSubmitted.html">Import contracts</a>
         </p>
 
-       <table class="govuk-table">
+        <style>
+          .govuk-table__header,
+          .govuk-table__cell {
+            padding-top: 20px;    /* Adjust this value for vertical size */
+            padding-bottom: 20px; /* Adjust this value for vertical size */
+          }
+        </style>
+        <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Date</th>
