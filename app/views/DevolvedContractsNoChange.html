@@ -12,50 +12,72 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-heading-xl">Devolved Allocations</h1>
+        <form id="changes-form" method="post">
 
-    
-      <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-        Are there changes to your contracting data?
-      </h1>
-    </legend>
-    <div id="signIn-hint" class="govuk-hint">
-      If there have been changes to contrating please select yes and enter your updates through the online form or CSV upload
-    </div>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
-        <label class="govuk-label govuk-radios__label" for="signIn">
-          No, There is no changes to my contracting information
-        </label>
-        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
-          There have been no new contracts, or updated contract end dates since my previous submission 
-        </div>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
-        <label class="govuk-label govuk-radios__label" for="signIn-2">
-           Yes, there has been changes to my contracting information
-        </label>
-        <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
-          Yes, there has been changes to my contracting information
-        </div>
-      </div>
-    </div>
-  </fieldset>
-</div>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changes-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Are there changes to your contracting data?
+                </h1>
+              </legend>
+              <div id="changes-hint" class="govuk-hint">
+                If there have been changes to contracting please select yes and enter your updates through the online form or CSV upload.
+              </div>
 
-        <a class="govuk-button" href="DevolvedContractsCollectionAdditionaInfo.html">
+              <div class="govuk-radios" data-module="govuk-radios">
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changes-yes" name="contract-changes" type="radio" value="yes" aria-describedby="changes-yes-hint">
+                  <label class="govuk-label govuk-radios__label" for="changes-yes">
+                    Yes, there has been changes to my contracting information
+                  </label>
+                  <div id="changes-yes-hint" class="govuk-hint govuk-radios__hint">
+                    There have been new contracts or changes to existing contracts since my last submission.
+                  </div>
+                </div>
+                
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changes-no" name="contract-changes" type="radio" value="no" aria-describedby="changes-no-hint">
+                  <label class="govuk-label govuk-radios__label" for="changes-no">
+                    No, there are no changes to my contracting information
+                  </label>
+                  <div id="changes-no-hint" class="govuk-hint govuk-radios__hint">
+                    There have been no new contracts or updated contract end dates since my previous submission. 
+                  </div>
+                </div>
+
+              </div>
+            </fieldset>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
             Continue
-        </a>
+          </button>
+          
+        </form>
       </div>
     </div>
   </main>
 </div>
 
+<script>
+  document.getElementById('changes-form').addEventListener('submit', function(event) {
+    // Stop the form from submitting in the default way
+    event.preventDefault();
 
+    // Find the selected radio button
+    const selectedOption = document.querySelector('input[name="contract-changes"]:checked');
+
+    // If "No" is selected, go to the confirmation page
+    if (selectedOption && selectedOption.value === 'no') {
+      window.location.href = 'DevolvedContractConfirm.html';
+    } 
+    // Otherwise (if "Yes" is selected or nothing is selected), go to the additional info page
+    else {
+      window.location.href = 'DevolvedContractsCollectionAdditionaInfo.html';
+    }
+  });
+</script>
 
 {% endblock %}
