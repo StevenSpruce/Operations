@@ -8,24 +8,24 @@ GOV.UK Prototype Kit
 {% block content %}
 
 <nav class="app-navigation govuk-clearfix">
-    <ul class="app-navigation__list app-width-container">
+    <ul class="app-navigation__list app-width-container">
 
 
       <li class="app-navigation__list-item">
-        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="DevolvedContractTableCSV.html" data-topnav="Import">Import</a>
-      </li>
-  
-      <li class="app-navigation__list-item app-navigation__list-item--current">
-        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="DevolvedContractTable.html" data-topnav="Online Form">Online Form</a>
-      </li>
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="DevolvedContractTableCSV.html" data-topnav="Import">Import</a>
+      </li>
 
-  
-      <li class="app-navigation__list-item">
-        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="DevolvedContractExport.html" data-topnav="Export">Export</a>
-      </li>
-  
-    </ul>
-  </nav>
+      <li class="app-navigation__list-item app-navigation__list-item--current">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="DevolvedContractTable.html" data-topnav="Online Form">Online Form</a>
+      </li>
+
+
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="DevolvedContractExport.html" data-topnav="Export">Export</a>
+      </li>
+
+    </ul>
+  </nav>
 
 <div class="govuk-width-container">
     <a href="javascript:history.back()" class="govuk-back-link">Back</a>
@@ -86,6 +86,7 @@ GOV.UK Prototype Kit
                             <th scope="col" class="govuk-table__header">Contract start date</th>
                             <th scope="col" class="govuk-table__header">Contract end date</th>
                             <th scope="col" class="govuk-table__header" data-sort-type="numeric">Contract value (£)</th>
+                            <th scope="col" class="govuk-table__header">Status</th>
                             <th scope="col" class="govuk-table__header">Action</th>
                         </tr>
                     </thead>
@@ -97,6 +98,14 @@ GOV.UK Prototype Kit
                             <td class="govuk-table__cell">01/04/2024</td>
                             <td class="govuk-table__cell">31/03/2025</td>
                             <td class="govuk-table__cell">150,000</td>
+                            <td class="govuk-table__cell">
+                                <label class="govuk-label govuk-visually-hidden" for="status-12345678">Status for UKPRN 12345678</label>
+                                <select class="govuk-select" name="status-12345678" id="status-12345678">
+                                    <option value="active" selected>ACTIVE</option>
+                                    <option value="closed">CLOSED</option>
+                                    <option value="on-hold">ON HOLD</option>
+                                </select>
+                            </td>
                             <td class="govuk-table__cell"><a class="govuk-link" href="#">Manage</a></td>
                         </tr>
                         <tr class="govuk-table__row">
@@ -106,6 +115,14 @@ GOV.UK Prototype Kit
                             <td class="govuk-table__cell">01/08/2024</td>
                             <td class="govuk-table__cell">31/07/2025</td>
                             <td class="govuk-table__cell">250,000</td>
+                            <td class="govuk-table__cell">
+                                <label class="govuk-label govuk-visually-hidden" for="status-87654321">Status for UKPRN 87654321</label>
+                                <select class="govuk-select" name="status-87654321" id="status-87654321">
+                                    <option value="active">ACTIVE</option>
+                                    <option value="closed">CLOSED</option>
+                                    <option value="on-hold" selected>ON HOLD</option>
+                                </select>
+                            </td>
                             <td class="govuk-table__cell"><a class="govuk-link" href="#">Manage</a></td>
                         </tr>
                         <tr class="govuk-table__row">
@@ -115,6 +132,14 @@ GOV.UK Prototype Kit
                             <td class="govuk-table__cell">01/09/2024</td>
                             <td class="govuk-table__cell">31/08/2025</td>
                             <td class="govuk-table__cell">75,000</td>
+                            <td class="govuk-table__cell">
+                                <label class="govuk-label govuk-visually-hidden" for="status-19999999">Status for UKPRN 19999999</label>
+                                <select class="govuk-select" name="status-19999999" id="status-19999999">
+                                    <option value="active">ACTIVE</option>
+                                    <option value="closed" selected>CLOSED</option>
+                                    <option value="on-hold">ON HOLD</option>
+                                </select>
+                            </td>
                             <td class="govuk-table__cell"><a class="govuk-link" href="#">Manage</a></td>
                         </tr>
                     </tbody>
@@ -137,7 +162,7 @@ GOV.UK Prototype Kit
                 </a>
                 </li>
                 <li class="govuk-pagination__item govuk-pagination__item--current">
-                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-.current="page">
+                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
                     2
                 </a>
                 </li>
@@ -149,11 +174,4 @@ GOV.UK Prototype Kit
             </ul>
             <div class="govuk-pagination__next">
                 <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-                    <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-                    </svg></a>
-            </div>
-        </nav>
-    </main>
-</div>
-
-{% endblock %}
+                    <path d="m8.107-0.
