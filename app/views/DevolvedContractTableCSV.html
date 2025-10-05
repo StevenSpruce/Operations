@@ -23,94 +23,103 @@ GOV.UK Prototype Kit
       </li>
 
     </ul>
-  </nav>
+</nav>
 
 <div class="govuk-width-container">
   <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 <main class="govuk-main-wrapper">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
 
-<form method="post" enctype="multipart/form-data" id="ilrform" action="/MCA-GLA-FA/submission/MCA-GLA-FundedAims">
-    <div>
-        <h1 class="govuk-heading-xl">
-            Select and import a devolved contract data file
-        </h1>
-        
-        <p>Before importing your file you should make sure that:</p>
-        <ul class="govuk-list govuk-list--bullet">
-            <li>it’s in CSV format</li>
-            <li>the data it contains is as complete as possible</li>
-            <li>the data it contains is as accurate as possible</li>
-        </ul>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
 
-        <div class="govuk-form-group" id="controls">
-            <label class="govuk-label govuk-!-font-weight-bold" for="file">
-                Select a file to upload
-            </label>
-            
-            <input class="govuk-file-upload" name="file" id="file" type="file" accept=".csv">
+            <form method="post" enctype="multipart/form-data" id="ilrform" action="/MCA-GLA-FA/submission/MCA-GLA-FundedAims">
+                <div>
+                    <h1 class="govuk-heading-xl">
+                        Select and import a devolved contract data file
+                    </h1>
+                    
+                    <p>Before importing your file you should make sure that:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>it’s in CSV format</li>
+                        <li>the data it contains is as complete as possible</li>
+                        <li>the data it contains is as accurate as possible</li>
+                    </ul>
+
+                    <div class="govuk-form-group" id="controls">
+                        <label class="govuk-label govuk-!-font-weight-bold" for="file">
+                            Select a file to upload
+                        </label>
+                        
+                        <input class="govuk-file-upload" name="file" id="file" type="file" accept=".csv">
+
+                    </div>
+
+                    <div class="govuk-warning-text">
+                        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                        <strong class="govuk-warning-text__text">
+                          <span class="govuk-warning-text__assistive">Warning</span>
+                          Imported contracts that match the those currently saved will be rejected
+                        </strong>
+                    </div>
+
+                    <p>
+                        <a class="govuk-button" href="DevolvedContractSubmitted.html">Import contracts</a>
+                    </p>
+                </div>
+            </form>
 
         </div>
+    </div> <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            
+            <style>
+              .govuk-table__header,
+              .govuk-table__cell {
+                padding-top: 20px;
+                padding-bottom: 20px;
+              }
+            </style>
 
-        <div class="govuk-warning-text">
-            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-            <strong class="govuk-warning-text__text">
-              <span class="govuk-warning-text__assistive">Warning</span>
-              Imported contracts that match the those currently saved will be rejected
-            </strong>
-          </div>
-
-        <p>
-            <a class="govuk-button" href="DevolvedContractSubmitted.html">Import contracts</a>
-        </p>
-
-        <style>
-          .govuk-table__header,
-          .govuk-table__cell {
-            padding-top: 20px;    /* Adjust this value for vertical size */
-            padding-bottom: 20px; /* Adjust this value for vertical size */
-          }
-        </style>
-        <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Date</th>
-          <th scope="col" class="govuk-table__header">Submitted by</th>
-          <th scope="col" class="govuk-table__header">File</th>
-          <th scope="col" class="govuk-table__header">Reference</th>
-          <th scope="col" class="govuk-table__header">Status</th>
-          <th scope="col" class="govuk-table__header">Reports</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">10 Nov</td>
-          <td class="govuk-table__cell">Beau DurmTEST</td>
-          <td class="govuk-table__cell"><a href="#">10040002.csv</a></td>
-          <td class="govuk-table__cell">2074080</td>
-          <td class="govuk-table__cell">Completed</td>
-          <td class="govuk-table__cell"><a href="#">Download report</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">9 Nov</td>
-          <td class="govuk-table__cell">Beau DurmTEST</td>
-          <td class="govuk-table__cell"><a href="#">10040002.csv</a></td>
-          <td class="govuk-table__cell">2073079</td>
-          <td class="govuk-table__cell">Completed</td>
-          <td class="govuk-table__cell"><a href="#">Download report</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">8 Nov</td>
-          <td class="govuk-table__cell">Beau DurmTEST</td>
-          <td class="govuk-table__cell"><a href="#">10040002.csv</a></td>
-          <td class="govuk-table__cell">2071978</td>
-          <td class="govuk-table__cell">Completed</td>
-          <td class="govuk-table__cell"><a href="#">Download report</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Date</th>
+                    <th scope="col" class="govuk-table__header">Submitted by</th>
+                    <th scope="col" class="govuk-table__header">File</th>
+                    <th scope="col" class="govuk-table__header">Reference</th>
+                    <th scope="col" class="govuk-table__header">Status</th>
+                    <th scope="col" class="govuk-table__header">Reports</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">10 Nov</td>
+                    <td class="govuk-table__cell">Beau DurmTEST</td>
+                    <td class="govuk-table__cell"><a href="#">10040002.csv</a></td>
+                    <td class="govuk-table__cell">2074080</td>
+                    <td class="govuk-table__cell">Completed</td>
+                    <td class="govuk-table__cell"><a href="#">Download report</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">9 Nov</td>
+                    <td class="govuk-table__cell">Beau DurmTEST</td>
+                    <td class="govuk-table__cell"><a href="#">10040002.csv</a></td>
+                    <td class="govuk-table__cell">2073079</td>
+                    <td class="govuk-table__cell">Completed</td>
+                    <td class="govuk-table__cell"><a href="#">Download report</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">8 Nov</td>
+                    <td class="govuk-table__cell">Beau DurmTEST</td>
+                    <td class="govuk-table__cell"><a href="#">10040002.csv</a></td>
+                    <td class="govuk-table__cell">2071978</td>
+                    <td class="govuk-table__cell">Completed</td>
+                    <td class="govuk-table__cell"><a href="#">Download report</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> </main>
+</div>
 {% endblock %}
