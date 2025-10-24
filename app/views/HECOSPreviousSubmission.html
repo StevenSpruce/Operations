@@ -1,0 +1,87 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+HECOS Submissions
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+                <h1 class="govuk-heading-xl">Submissions</h1>
+                <p class="govuk-body-l">HECOS collections</p>
+
+                <h2 class="govuk-heading-l">Filter by year</h2>
+                <p class="govuk-body">The page will refresh after you select each filter.</p>
+
+                <div class="govuk-checkboxes govuk-checkboxes--small govuk-checkboxes--inline">
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="year-2526" name="year" type="checkbox" value="2526" checked>
+                        <label class="govuk-label govuk-checkboxes__label" for="year-2526">
+                            2025 to 2026
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="year-2425" name="year" type="checkbox" value="2425" checked>
+                        <label class="govuk-label govuk-checkboxes__label" for="year-2425">
+                            2024 to 2025
+                        </label>
+                    </div>
+                </div>
+
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+                <h2 class="govuk-heading-l">Academic Year 2025 to 2026</h2>
+                <h3 class="govuk-heading-m">HECOS data collection</h3>
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <!-- === "COMPLETED BY" COLUMN REMOVED === -->
+                            <th scope="col" class="govuk-table__header">Time and date</th>
+                            <th scope="col" class="govuk-table__header">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <!-- === "COMPLETED BY" CELL REMOVED === -->
+                            <td class="govuk-table__cell">Not Complete</td>
+                            <td class="govuk-table__cell"><a class="govuk-link" href="#">Complete collection</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="govuk-body"><a class="govuk-link" href="#">View your HECOS data</a></p>
+
+
+                <h2 class="govuk-heading-l govuk-!-margin-top-9">Academic Year 2024 to 2025</h2>
+                <h3 class="govuk-heading-m">HECOS data collection</h3>
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <!-- === "COMPLETED BY" COLUMN REMOVED === -->
+                            <th scope="col" class="govuk-table__header">Time and date</th>
+                            <th scope="col" class="govuk-table__header">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <!-- === "COMPLETED BY" CELL REMOVED === -->
+                            <td class="govuk-table__cell">05 October 2024 at 14:32</td>
+                            <td class="govuk-table__cell"><a class="govuk-link" href="#">View submission</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="govuk-body"><a class="govuk-link" href="#">View your HECOS data</a></p>
+
+            </div>
+        </div>
+    </main>
+</div>
+
+{% endblock %}
+
