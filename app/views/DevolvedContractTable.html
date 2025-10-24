@@ -27,9 +27,10 @@ GOV.UK Prototype Kit
     <main class="govuk-main-wrapper">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <h1 class="govuk-heading-xl">Submit devolved contracts using the online form</h1>
-                <a href="DevolvedContractDetails.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-                    Add a contract
+                <h1 class="govuk-heading-xl">Devolved Contracts</h1>
+                <p class="govuk-body">Upload contract by online form or CSV</p>
+                <a href="DevolovedContractsCollectionAdditionalInfo.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+                    Add contracts
                     <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" aria-hidden="true" focusable="false">
                         <path fill="currentColor" d="M11 0H8V8H0V11H8V19H11V11H19V8H11V0Z"></path>
                     </svg>
@@ -84,7 +85,8 @@ GOV.UK Prototype Kit
                                 <th scope="col" class="govuk-table__header">Contract end date</th>
                                 <th scope="col" class="govuk-table__header" data-sort-type="numeric">Contract value (£)</th>
                                 <th scope="col" class="govuk-table__header">Action</th>
-                                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Status</th>
+                                <th scope="col" class="govuk-table__header">On hold</th>
+                                <th scope="col" class="govuk-table__header">No Change</th>
                             </tr>
                         </thead>
                         <tbody class="govuk-table__body">
@@ -97,11 +99,17 @@ GOV.UK Prototype Kit
                                 <td class="govuk-table__cell">150,000</td>
                                 <td class="govuk-table__cell"><a class="govuk-link" href="#">Manage</a></td>
                                 <td class="govuk-table__cell">
-                                    <label class="govuk-label govuk-visually-hidden" for="status-12345678">Status for UKPRN 12345678</label>
-                                    <select class="govuk-select" name="status-19999999" id="status-19999999">
-                                        <option value="active">active</option>
-                                        <option value="closed" selected>closed</option>
-                                        <option value="on-hold">on hold</option>
+                                    <label class="govuk-label govuk-visually-hidden" for="on-hold-12345678">On hold for UKPRN 12345678</label>
+                                    <select class="govuk-select" name="on-hold-12345678" id="on-hold-12345678">
+                                        <option value="yes">Yes</option>
+                                        <option value="no" selected>No</option>
+                                    </select>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <label class="govuk-label govuk-visually-hidden" for="no-change-12345678">No Change for UKPRN 12345678</label>
+                                    <select class="govuk-select" name="no-change-12345678" id="no-change-12345678">
+                                        <option value="yes">Yes</option>
+                                        <option value="no" selected>No</option>
                                     </select>
                                 </td>
                             </tr>
@@ -113,12 +121,18 @@ GOV.UK Prototype Kit
                                 <td class="govuk-table__cell">31/07/2025</td>
                                 <td class="govuk-table__cell">250,000</td>
                                 <td class="govuk-table__cell"><a class="govuk-link" href="#">Manage</a></td>
-                                 <td class="govuk-table__cell">
-                                    <label class="govuk-label govuk-visually-hidden" for="status-87654321">Status for UKPRN 87654321</label>
-                                    <select class="govuk-select" name="status-19999999" id="status-19999999">
-                                        <option value="active">active</option>
-                                        <option value="closed" selected>closed</option>
-                                        <option value="on-hold">on hold</option>
+                                <td class="govuk-table__cell">
+                                    <label class="govuk-label govuk-visually-hidden" for="on-hold-87654321">On hold for UKPRN 87654321</label>
+                                    <select class="govuk-select" name="on-hold-87654321" id="on-hold-87654321">
+                                        <option value="yes">Yes</option>
+                                        <option value="no" selected>No</option>
+                                    </select>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <label class="govuk-label govuk-visually-hidden" for="no-change-87654321">No Change for UKPRN 87654321</label>
+                                    <select class="govuk-select" name="no-change-87654321" id="no-change-87654321">
+                                        <option value="yes">Yes</option>
+                                        <option value="no" selected>No</option>
                                     </select>
                                 </td>
                             </tr>
@@ -131,11 +145,17 @@ GOV.UK Prototype Kit
                                 <td class="govuk-table__cell">75,000</td>
                                 <td class="govuk-table__cell"><a class="govuk-link" href="#">Manage</a></td>
                                 <td class="govuk-table__cell">
-                                    <label class="govuk-label govuk-visually-hidden" for="status-19999999">Status for UKPRN 19999999</label>
-                                    <select class="govuk-select" name="status-19999999" id="status-19999999">
-                                        <option value="active">active</option>
-                                        <option value="closed" selected>closed</option>
-                                        <option value="on-hold">on hold</option>
+                                    <label class="govuk-label govuk-visually-hidden" for="on-hold-19999999">On hold for UKPRN 19999999</label>
+                                    <select class="govuk-select" name="on-hold-19999999" id="on-hold-19999999">
+                                        <option value="yes">Yes</option>
+                                        <option value="no" selected>No</option>
+                                    </select>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <label class="govuk-label govuk-visually-hidden" for="no-change-19999999">No Change for UKPRN 19999999</label>
+                                    <select class="govuk-select" name="no-change-19999999" id="no-change-19999999">
+                                        <option value="yes">Yes</option>
+                                        <option value="no" selected>No</option>
                                     </select>
                                 </td>
                             </tr>
@@ -157,7 +177,7 @@ GOV.UK Prototype Kit
                                 <th scope="col" class="govuk-table__header">Date time</th>
                                 <th scope="col" class="govuk-table__header">Submitted by</th>
                                 <th scope="col" class="govuk-table__header">File</th>
-                                <th scope="col" class="govuk-table__header">Reference</th>
+                                <th scope="col" classD="govuk-table__header">Reference</th>
                                 <th scope="col" class="govuk-table__header">Status</th>
                                 <th scope="col" class="govuk-table__header">Reports</th>
                             </tr>
