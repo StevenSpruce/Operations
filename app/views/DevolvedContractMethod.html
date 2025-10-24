@@ -13,7 +13,7 @@ Please select your submission method
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
 
-                <form action="#" method="post" novalidate>
+                <form id="submission-form" action="DevolvedContractDetails.html" method="post" novalidate>
                     
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset">
@@ -37,7 +37,7 @@ Please select your submission method
                                     </legend>
                                     <div class="govuk-radios" data-module="govuk-radios">
                                         <div class="govuk-radios__item">
-                                            <input class="govuk-radios__input" id="submission-method-online" name="submission-method" type="radio" value="online">
+                                            <input class="govuk-radios__input" id="submission-method-online" name="submission-method" type="radio" value="online" checked>
                                             <label class="govuk-label govuk-radios__label" for="submission-method-online">
                                                 Use the online form service
                                             </label>
@@ -65,5 +65,36 @@ Please select your submission method
         </div>
     </main>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('submission-form');
+        const onlineRadio = document.getElementById('submission-method-online');
+        const csvRadio = document.getElementById('submission-method-csv');
+
+        const onlineUrl = 'DevolvedContractDetails.html';
+        const csvUrl = 'DevolvedContractTableCSV.html';
+
+        // Set initial form action based on checked radio
+        if (csvRadio.checked) {
+            form.action = csvUrl;
+        } else {
+            form.action = onlineUrl; // Default
+        }
+
+        // Add event listeners to update action on change
+        onlineRadio.addEventListener('change', function() {
+            if (this.checked) {
+                form.action = onlineUrl;
+            }
+        });
+
+        csvRadio.addEventListener('change', function() {
+            if (this.checked) {
+                form.action = csvUrl;
+            }
+        });
+    });
+</script>
 
 {% endblock %}
