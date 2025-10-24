@@ -13,7 +13,7 @@ Please select your submission method
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
 
-                <form id="submission-form" action="DevolvedContractDetails.html" method="post" novalidate>
+                <form id="submission-form" novalidate>
                     
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset">
@@ -67,34 +67,28 @@ Please select your submission method
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('submission-form');
-        const onlineRadio = document.getElementById('submission-method-online');
-        const csvRadio = document.getElementById('submission-method-csv');
+  // Wait for the DOM to be ready before attaching event listeners
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    // Find the form and add a 'submit' event listener
+    document.getElementById('submission-form').addEventListener('submit', function(event) {
+      
+      // Stop the form from submitting in the default way
+      event.preventDefault();
 
-        const onlineUrl = 'DevolvedContractDetails.html';
-        const csvUrl = 'DevolvedContractTableCSV.html';
+      // Find the selected radio button
+      const selectedOption = document.querySelector('input[name="submission-method"]:checked');
 
-        // Set initial form action based on checked radio
-        if (csvRadio.checked) {
-            form.action = csvUrl;
-        } else {
-            form.action = onlineUrl; // Default
-        }
-
-        // Add event listeners to update action on change
-        onlineRadio.addEventListener('change', function() {
-            if (this.checked) {
-                form.action = onlineUrl;
-            }
-        });
-
-        csvRadio.addEventListener('change', function() {
-            if (this.checked) {
-                form.action = csvUrl;
-            }
-        });
+      // If "Upload a CSV file" is selected, go to the CSV page
+      if (selectedOption && selectedOption.value === 'csv') {
+        window.location.href = 'DevolvedContractTableCSV.html';
+      } 
+      // Otherwise (if "Use the online form service" is selected), go to the details page
+      else {
+        window.location.href = 'DevolvedContractDetails.html';
+      }
     });
+  });
 </script>
 
 {% endblock %}
