@@ -27,8 +27,10 @@ GOV.UK Prototype Kit
     <main class="govuk-main-wrapper">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
+                
+                <!-- === RETURN PERIOD MOVED ABOVE TITLE AND TEXT UPDATED === -->
+                <p class="govuk-heading-l govuk-hint">R02 25/26</p>
                 <h1 class="govuk-heading-xl">Devolved Contracts</h1>
-                <p class="govuk-body-m govuk-hint">return period: R02 2526</p>
                 
                 <p class="govuk-body">Upload contract by online form or CSV</p>
                 <a href="DevolvedContractsCollectionAdditionalInfo.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
@@ -40,6 +42,7 @@ GOV.UK Prototype Kit
             </div>
         </div>
 
+        <!-- Both tables are inside this full-width column to make them span the same width -->
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
                 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
@@ -76,111 +79,132 @@ GOV.UK Prototype Kit
                 </div>
 
                 <form method="post" action="/update-statuses">
-
-                    <table class="govuk-table" data-module="moj-sortable-table">
-                        <thead class="govuk-table__head">
-                            <tr class="govuk-table__row">
-                                <th scope="col" class="govuk-table__header">Provider UKPRN</th>
-                                <th scope="col" class="govuk-table__header">Allocation type</th>
-                                <th scope="col" class="govuk-table__header">Contract type</th>
-                                <th scope="col" class="govuk-table__header">Contract start date</th>
-                                <th scope="col" class="govuk-table__header">Contract end date</th>
-                                <th scope="col" class="govuk-table__header" data-sort-type="numeric">Contract value (£)</th>
-                                <th scope="col" class="govuk-table__header">Action</th>
-                                <th scope="col" class="govuk-table__header">On hold</th>
-                                <th scope="col" class="govuk-table__header">No Change</th>
-                            </tr>
-                        </thead>
-                        <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell">12345678</td>
-                                <td class="govuk-table__cell">Grant</td>
-                                <td class="govuk-table__cell">Skills Bootcamps</td>
-                                <td class="govuk-table__cell">01/04/2024</td>
-                                <td class="govuk-table__cell">31/03/2025</td>
-                                <td class="govuk-table__cell">150,000</td>
-                                <td class="govuk-table__cell"><a class="govuk-link" href="#">Manage</a></td>
-                                <td class="govuk-table__cell">
-                                    <div class="govuk-checkboxes">
-                                        <div class="govuk-checkboxes__item">
-                                            <input class="govuk-checkboxes__input" id="on-hold-12345678" name="on-hold-12345678" type="checkbox" value="yes">
-                                            <label class="govuk-label govuk-checkboxes__label" for="on-hold-12345678">
-                                                <span class="govuk-visually-hidden">On hold for UKPRN 12345678</span>
-                                            </label>
+                    
+                    <div class="govuk-table-container">
+                        <table class="govuk-table" data-module="moj-sortable-table">
+                            <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                    <th scope="col" class="govuk-table__header">Provider UKPRN</th>
+                                    <th scope="col" class="govuk-table__header">Allocation type</th>
+                                    <th scope="col" class="govuk-table__header">Contract type</th>
+                                    <th scope="col" class="govuk-table__header">Contract start date</th>
+                                    <th scope="col" class="govuk-table__header">Contract end date</th>
+                                    <th scope="col" class="govuk-table__header">Created by</th>
+                                    <th scope="col" class="govuk-table__header">Created date</th>
+                                    <th scope="col" class="govuk-table__header">Modified by</th>
+                                    <th scope="col" class="govuk-table__header">Modified date</th>
+                                    <th scope="col" class="govuk-table__header" data-sort-type="numeric">Contract value (£)</th>
+                                    <th scope="col" class="govuk-table__header">Action</th>
+                                    <th scope="col" class="govuk-table__header">On hold</th>
+                                    <th scope="col" class="govuk-table__header">No Change</th>
+                                </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">12345678</td>
+                                    <td class="govuk-table__cell">Grant</td>
+                                    <td class="govuk-table__cell">Skills Bootcamps</td>
+                                    <td class="govuk-table__cell">01/04/2024</td>
+                                    <td class="govuk-table__cell">31/03/2025</td>
+                                    <!-- === 'Created by' / 'Modified by' CELLS UPDATED === -->
+                                    <td class="govuk-table__cell">User One</td>
+                                    <td class="govuk-table__cell">01/04/2024</td>
+                                    <td class="govuk-table__cell">User Two</td>
+                                    <td class="govuk-table__cell">15/05/2024</td>
+                                    <td class="govuk-table__cell">150,000</td>
+                                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Manage</a></td>
+                                    <td class="govuk-table__cell">
+                                        <div class="govuk-checkboxes">
+                                            <div class="govuk-checkboxes__item">
+                                                <input class="govuk-checkboxes__input" id="on-hold-12345678" name="on-hold-12345678" type="checkbox" value="yes">
+                                                <label class="govuk-label govuk-checkboxes__label" for="on-hold-12345678">
+                                                    <span class="govuk-visually-hidden">On hold for UKPRN 12345678</span>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td class="govuk-table__cell">
-                                    <div class="govuk-checkboxes">
-                                        <div class="govuk-checkboxes__item">
-                                            <input class="govuk-checkboxes__input" id="no-change-12345678" name="no-change-12345678" type="checkbox" value="yes">
-                                            <label class="govuk-label govuk-checkboxes__label" for="no-change-12345678">
-                                                <span class="govuk-visually-hidden">No Change for UKPRN 12345678</span>
-                                            </label>
+                                    </td>
+                                    <td class="govuk-table__cell">
+                                        <div class="govuk-checkboxes">
+                                            <div class="govuk-checkboxes__item">
+                                                <input class="govuk-checkboxes__input" id="no-change-12345678" name="no-change-12345678" type="checkbox" value="yes">
+                                                <label class="govuk-label govuk-checkboxes__label" for="no-change-12345678">
+                                                    <span class="govuk-visually-hidden">No Change for UKPRN 12345678</span>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell">87654321</td>
-                                <td class="govuk-table__cell">Contract for Services</td>
-                                <td class="govuk-table__cell">Adult Skills Fund</td>
-                                <td class="govuk-table__cell">01/08/2024</td>
-                                <td class="govuk-table__cell">31/07/2025</td>
-                                <td class="govuk-table__cell">250,000</td>
-                                <td class="govuk-table__cell"><a class="govuk-link" href="#">Manage</a></td>
-                                <td class="govuk-table__cell">
-                                    <div class="govuk-checkboxes">
-                                        <div class="govuk-checkboxes__item">
-                                            <input class="govuk-checkboxes__input" id="on-hold-87654321" name="on-hold-87654321" type="checkbox" value="yes">
-                                            <label class="govuk-label govuk-checkboxes__label" for="on-hold-87654321">
-                                                <span class="govuk-visually-hidden">On hold for UKPRN 87654321</span>
-                                            </label>
+                                    </td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">87654321</td>
+                                    <td class="govuk-table__cell">Contract for Services</td>
+                                    <td class="govuk-table__cell">Adult Skills Fund</td>
+                                    <td class="govuk-table__cell">01/08/2024</td>
+                                    <td class="govuk-table__cell">31/07/2025</td>
+                                    <!-- === 'Created by' / 'Modified by' CELLS UPDATED === -->
+                                    <td class="govuk-table__cell">User One</td>
+                                    <td class="govuk-table__cell">01/08/2024</td>
+                                    <td class="govuk-table__cell">User One</td>
+                                    <td class="govuk-table__cell">01/08/2024</td>
+                                    <td class="govuk-table__cell">250,000</td>
+                                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Manage</a></td>
+                                    <td class="govuk-table__cell">
+                                        <div class="govuk-checkboxes">
+                                            <div class="govuk-checkboxes__item">
+                                                <input class="govuk-checkboxes__input" id="on-hold-87654321" name="on-hold-87654321" type="checkbox" value="yes">
+                                                <label class="govuk-label govuk-checkboxes__label" for="on-hold-8Test">
+                                                    <span class="govuk-visually-hidden">On hold for UKPRN 87654321</span>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td class="govuk-table__cell">
-                                    <div class="govuk-checkboxes">
-                                        <div class="govuk-checkboxes__item">
-                                            <input class="govuk-checkboxes__input" id="no-change-87654321" name="no-change-87654321" type="checkbox" value="yes">
-                                            <label class="govuk-label govuk-checkboxes__label" for="no-change-87654321">
-                                                <span class="govuk-visually-hidden">No Change for UKPRN 87654321</span>
-                                            </label>
+                                    </td>
+                                    <td class="govuk-table__cell">
+                                        <div class="govuk-checkboxes">
+                                            <div class="govuk-checkboxes__item">
+                                                <input class="govuk-checkboxes__input" id="no-change-87654321" name="no-change-87654321" type="checkbox" value="yes">
+                                                <label class="govuk-label govuk-checkboxes__label" for="no-change-87654321">
+                                                    <span class="govuk-visually-hidden">No Change for UKPRN 87654321</span>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell">19999999</td>
-                                <td class="govuk-table__cell">Grant</td>
-                                <td class="govuk-table__cell">Free Courses for Jobs</td>
-                                <td class="govuk-table__cell">01/09/2024</td>
-                                <td class="govuk-table__cell">31/08/2025</td>
-                                <td class="govuk-table__cell">75,000</td>
-                                <td class="govuk-table__cell"><a class="govuk-link" href="#">Manage</a></td>
-                                <td class="govuk-table__cell">
-                                    <div class="govuk-checkboxes">
-                                        <div class="govuk-checkboxes__item">
-                                            <input class="govuk-checkboxes__input" id="on-hold-19999999" name="on-hold-19999999" type="checkbox" value="yes">
-                                            <label class="govuk-label govuk-checkboxes__label" for="on-hold-19999999">
-                                                <span class="govuk-visually-hidden">On hold for UKPRN 19999999</span>
-                                            </label>
+                                    </td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">19999999</td>
+                                    <td class="govuk-table__cell">Grant</td>
+                                    <td class="govuk-table__cell">Free Courses for Jobs</td>
+                                    <td class="govuk-table__cell">01/09/2024</td>
+                                    <td class="govuk-table__cell">31/08/2025</td>
+                                    <!-- === 'Created by' / 'Modified by' CELLS UPDATED === -->
+                                    <td class="govuk-table__cell">User Three</td>
+                                    <td class="govuk-table__cell">02/09/2024</td>
+                                    <td class="govuk-table__cell">User Three</td>
+                                    <td class="govuk-table__cell">02/09/2024</td>
+                                    <td class="govuk-table__cell">75,000</td>
+                                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Manage</a></td>
+                                    <td class="govuk-table__cell">
+                                        <div class="govuk-checkboxes">
+                                            <div class="govuk-checkboxes__item">
+                                                <input class="govuk-checkboxes__input" id="on-hold-19999999" name="on-hold-19999999" type="checkbox" value="yes">
+                                                <label class="govuk-label govuk-checkboxes__label" for="on-hold-19999999">
+                                                    <span class="govuk-visually-hidden">On hold for UKPRN 19999999</span>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td class="govuk-table__cell">
-                                    <div class="govuk-checkboxes">
-                                        <div class="govuk-checkboxes__item">
-                                            <input class="govuk-checkboxes__input" id="no-change-19999999" name="no-change-19999999" type="checkbox" value="yes">
-                                            <label class="govuk-label govuk-checkboxes__label" for="no-change-19999999">
-                                                <span class="govuk-visually-hidden">No Change for UKPRN 19999999</span>
-                                            </label>
+                                    </td>
+                                    <td class="govuk-table__cell">
+                                        <div class="govuk-checkboxes">
+                                            <div class="govuk-checkboxes__item">
+                                                <input class="govuk-checkboxes__input" id="no-change-19999999" name="no-change-19999999" type="checkbox" value="yes">
+                                                <label class="govuk-label govuk-checkboxes__label" for="no-change-19999999">
+                                                    <span class="govuk-visually-hidden">No Change for UKPRN 19999999</span>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                     <button class="govuk-button" data-module="govuk-button">
                       confirm status
@@ -191,46 +215,52 @@ GOV.UK Prototype Kit
                     
                     <h2 class="govuk-heading-l">Submission history</h2>
     
-                    <table class="govuk-table">
-                        <thead class="govuk-table__head">
-                            <tr class="govuk-table__row">
-                                <th scope="col" class="govuk-table__header">Date time</th>
-                                <th scope="col" class="govuk-table__header">Submitted by</th>
-                                <th scope="col" class="govuk-table__header">File</th>
-                                <th scope="col" class="govuk-table__header">Reference</th>
-                                <th scope="col" class="govuk-table__header">Status</th>
-                                <th scope="col" class="govuk-table__header">Reports</th>
-                            </tr>
-                        </thead>
-                        <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell">05/10/2025</td>
-                                <td class="govuk-table__cell">Beau DurmTEST</td>
-                                <td class="govuk-table__cell"><a href="#" class="govuk-link">10040002.csv</a></td>
-                                <td class="govuk-table__cell">2074080</td>
-                                <td class="govuk-table__cell">Completed</td>
-                                <td class="govuk-table__cell"><a href="#" class="govuk-link">Download report</a></td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell">05/10/2025</td>
-                                <td class="govuk-table__cell">Beau DurmTEST</td>
-                                <td class="govuk-table__cell"><a href="#" class="govuk-link">10040002.csv</a></td>
-                                <td class="govuk-table__cell">2073079</td>
-                                <td class="govuk-table__cell">Completed</td>
-                                <td class="govuk-table__cell"><a href="#" class="govuk-link">Download report</a></td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell">05/10/2025</td>
-                                <td class="govuk-table__cell">Beau DurmTEST</td>
-                                <td class="govuk-table__cell"><a href="#" class="govuk-link">10040002.csv</a></td>
-                                <td class="govuk-table__cell">2071978</td>
-                                <td class="govuk-table__cell">Completed</td>
-                                <td class="govuk-table__cell"><a href="#" class="govuk-link">Download report</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
+                    <div class="govuk-table-container">
+                        <table class="govuk-table">
+                            <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                    <th scope="col" class="govuk-table__header">Submitted date time</th>
+                                    <th scope="col" class="govuk-table__header">Submitted by</th>
+                                    <th scope="col" class="govuk-table__header">File</th>
+                                    <th scope="col" class="govuk-table__header">Reference Data</th>
+                                    <th scope="col" class="govuk-table__header">Reference</th>
+                                    <th scope="col" class="govuk-table__header">Status</th>
+                                    <th scope="col" class="govuk-table__header">Reports</th>
+                                </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">05/10/2025 14:32</td>
+                                    <td class="govuk-table__cell">Beau DurmTEST</td>
+                                    <td class="govuk-table__cell"><a href="#" class="govuk-link">10040002.csv</a></td>
+                                    <td class="govuk-table__cell">R02 2526</td>
+                                    <td class="govuk-table__cell">2074080</td>
+                                    <td class="govuk-table__cell">Completed</td>
+                                    <td class="govuk-table__cell"><a href="#" class="govuk-link">Download report</a></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">05/10/2025 11:01</td>
+                                    <td class="govuk-table__cell">Beau DurmTEST</td>
+                                    <td class="govuk-table__cell"><a href="#" class="govuk-link">10040002.csv</a></td>
+                                    <td class="govuk-table__cell">R02 2526</td>
+                                    <td class="govuk-table__cell">2073079</td>
+                                    <td class="govuk-table__cell">Completed</td>
+                                    <td class="govuk-table__cell"><a href="#" class="govuk-link">Download report</a></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">05/10/2025 09:15</td>
+                                    <td class="govuk-table__cell">Beau DurmTEST</td>
+                                    <td class="govuk-table__cell"><a href="#" class="govuk-link">10040002.csv</a></td>
+                                    <td class="govuk-table__cell">R02 2526</td>
+                                    <td class="govuk-table__cell">2071978</td>
+                                    <td class="govuk-table__cell">Completed</td>
+                                    <td class="govuk-table__cell"><a href="#" class="govuk-link">Download report</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+
+                </div>
         </div>
 
         <nav class="govuk-pagination" role="navigation" aria-label="results">
@@ -268,3 +298,4 @@ GOV.UK Prototype Kit
 </div>
 
 {% endblock %}
+
