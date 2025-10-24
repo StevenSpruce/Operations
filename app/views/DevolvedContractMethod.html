@@ -1,0 +1,69 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+Please select your submission method
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <form action="#" method="post" novalidate>
+                    
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                                <h1 class="govuk-fieldset__heading">
+                                    Please select your submission method.
+                                </h1>
+                            </legend>
+
+                            <h2 class="govuk-heading-m govuk-!-margin-top-6">Overview</h2>
+                            <p class="govuk-body">Submissions must use either the online form or a CSV file.</p>
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li>Use the online form service to record contracts individually</li>
+                                <li>CSV file data can be prepared and generated from your own system for bulk uploading of data</li>
+                            </ul>
+
+                            <div class="govuk-form-group govuk-!-margin-top-6">
+                                <fieldset class="govuk-fieldset" aria-describedby="submission-method-hint">
+                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                        <h2 class="govuk-heading-l">Select an option</h2>
+                                    </legend>
+                                    <div class="govuk-radios" data-module="govuk-radios">
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="submission-method-online" name="submission-method" type="radio" value="online">
+                                            <label class="govuk-label govuk-radios__label" for="submission-method-online">
+                                                Use the online form service
+                                            </label>
+                                        </div>
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="submission-method-csv" name="submission-method" type="radio" value="csv">
+                                            <label class="govuk-label govuk-radios__label" for="submission-method-csv">
+                                                Upload a CSV file
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                        </fieldset>
+                    </div>
+
+                    <button class="govuk-button" data-module="govuk-button">
+                        Continue
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </main>
+</div>
+
+{% endblock %}
