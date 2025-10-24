@@ -20,7 +20,6 @@ HECOS Submissions
                 <h2 class="govuk-heading-l">Filter by year</h2>
                 <p class="govuk-body">The page will refresh after you select each filter.</p>
 
-                <!-- Checkboxes are now self-contained, fixing the layout -->
                 <div class="govuk-checkboxes govuk-checkboxes--small govuk-checkboxes--inline">
                     <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="year-2526" name="year" type="checkbox" value="2526" checked>
@@ -38,32 +37,17 @@ HECOS Submissions
 
                 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-                <!-- === SECTION FOR 2025-26 === -->
+                <!-- === SECTION FOR 2025-26 (Empty Return) === -->
                 <h2 class="govuk-heading-l">Academic Year 2025 to 2026</h2>
                 
-                <h3 class="govuk-heading-m">HECOS data collection</h3>
-                <p class="govuk-body"><a class="govuk-link" href="#">View your HECOS data</a></p>
-                <p class="govuk-body">Download your HECOS file</p>
+                <!-- === ELEMENTS REMOVED FROM HERE === -->
+                <!-- Removed: <h3 class="govuk-heading-m">HECOS data collection</h3> -->
+                <!-- Removed: <p class="govuk-body"><a class="govuk-link" href="#">View your HECOS data</a></p> -->
+                <!-- Removed: Table with "No submissions..." message -->
                 
-                <table class="govuk-table">
-                    <thead class="govuk-table__head">
-                        <tr class="govuk-table__row">
-                            <th scope="col" class="govuk-table__header">Date</th>
-                            <th scope="col" class="govuk-table__header">File</th>
-                            <th scope="col" class="govuk-table__header">Submitted by</th>
-                            <th scope="col" class="govuk-table__header">Reference</th>
-                            <th scope="col" class="govuk-table__header">Reports</th>
-                        </tr>
-                    </thead>
-                    <tbody class="govuk-table__body">
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell" colspan="5">No submissions for this academic year. <a href="#" class="govuk-link">Upload file</a>.</td>
-                        </tr>
-                    </tbody>
-                </table>
 
 
-                <!-- === SECTION FOR 2024-25 === -->
+                <!-- === SECTION FOR 2024-25 (Completed Return) === -->
                 <h2 class="govuk-heading-l govuk-!-margin-top-9">Academic Year 2024 to 2025</h2>
                 
                 <h3 class="govuk-heading-m">HECOS data collection</h3>
@@ -104,4 +88,6 @@ HECOS Submissions
 </div>
 
 {% endblock %}
+
+
 
