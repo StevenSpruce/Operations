@@ -1,0 +1,1341 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+
+<div class="govuk-grid-row">
+
+        <span class="govuk-caption-l">Academic year: 1 August 2025 to 31 July 2026</span>
+        <span class="govuk-caption-l">Return Period 3 (R03)</span>
+
+<div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    
+
+
+
+                    
+<form action="/periodendilr/validityPeriod" method="post">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl heading-bottom-margin">Validity Periods</h1>
+            <br>
+            <br>
+            <div id="typeFilter" class="govuk-checkboxes">
+                <div id="minusMargin" class="govuk-form-group margin-right">
+                    <label class="govuk-label">Collection year</label>
+
+                    <select class="govuk-select" id="collectionYear" name="collectionYear">
+                                <option value="1819">1819</option>
+                                <option value="1920">1920</option>
+                                <option value="2021">2021</option>
+                                <option value="2122">2122</option>
+                                <option value="2223">2223</option>
+                                <option value="2324">2324</option>
+                                <option value="2425">2425</option>
+                                <option value="2526" selected="">2526</option>
+                    </select>
+                </div>
+
+                <div id="minusMargin" class="govuk-form-group margin-right">
+                    <label class="govuk-label">Period number</label>
+                    <select class="govuk-select" id="period" name="period">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3" selected="">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                    </select>
+                </div>
+            </div>
+
+            <span id="spinner" class="loading-spinner" style="visibility: hidden;"><img src="/assets/images/loading-spinner.gif" alt="loading-icon"></span>
+        </div>
+    </div>
+
+    <div id="structureContainer">
+
+<hr>
+
+<ol class="app-task-list__items">
+    
+    
+    
+    <li>
+        <input type="hidden" class="hidden" id="path-0" name="items[0].Id" value="0">
+
+        <input type="hidden" class="hidden" id="type-0" name="items[0].EntityType" value="1">
+
+
+        <div class="checkbox-container">
+            <div class="checkbox-text govuk-!-font-weight-bold">
+                Critical Path
+            </div>
+            <div class="govuk-checkboxes">
+                <div class="flex">
+                    <div class="govuk-checkboxes__item">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="inner-list ">
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-10" name="items[1].Id" value="10">
+
+                <input type="hidden" class="hidden" id="type-0-10" name="items[1].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Period End Initiated
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[1].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-10" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-4" name="items[2].Id" value="4">
+
+                <input type="hidden" class="hidden" id="type-0-4" name="items[2].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Start Internal Reports SubPath <a href="#5" id="item_5">❯</a>
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-14" name="items[3].Id" value="14">
+
+                <input type="hidden" class="hidden" id="type-0-14" name="items[3].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Reference Data FCS
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[3].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-14" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-19" name="items[4].Id" value="19">
+
+                <input type="hidden" class="hidden" id="type-0-19" name="items[4].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Period End DC Summarisation
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[4].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-19" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-20" name="items[5].Id" value="20">
+
+                <input type="hidden" class="hidden" id="type-0-20" name="items[5].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Period End ESF Summarisation
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[5].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-20" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-122" name="items[6].Id" value="122">
+
+                <input type="hidden" class="hidden" id="type-0-122" name="items[6].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Period End Skills Bootcamp Summarisation
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[6].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-122" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-106" name="items[7].Id" value="106">
+
+                <input type="hidden" class="hidden" id="type-0-106" name="items[7].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Start FCS Handover Part 1 SubPath <a href="#11" id="item_11">❯</a>
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-21" name="items[8].Id" value="21">
+
+                <input type="hidden" class="hidden" id="type-0-21" name="items[8].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        MCA Reports
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[8].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-21" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-30" name="items[9].Id" value="30">
+
+                <input type="hidden" class="hidden" id="type-0-30" name="items[9].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Non MCA Devolved Reports
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[9].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-30" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-9" name="items[10].Id" value="9">
+
+                <input type="hidden" class="hidden" id="type-0-9" name="items[10].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        DAS Period End Submissions
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[10].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-9" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-112" name="items[11].Id" value="112">
+
+                <input type="hidden" class="hidden" id="type-0-112" name="items[11].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        DAS Period End Reprocessing
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[11].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-112" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-103" name="items[12].Id" value="103">
+
+                <input type="hidden" class="hidden" id="type-0-103" name="items[12].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        DAS Submission Window Period Validation
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[12].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-103" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-22" name="items[13].Id" value="22">
+
+                <input type="hidden" class="hidden" id="type-0-22" name="items[13].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        DAS Period End Processing <a href="#2" id="item_2">❯</a>
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[13].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-22" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-48" name="items[14].Id" value="48">
+
+                <input type="hidden" class="hidden" id="type-0-48" name="items[14].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        DAS Metrics
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[14].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-48" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-24" name="items[15].Id" value="24">
+
+                <input type="hidden" class="hidden" id="type-0-24" name="items[15].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Period End App Summarisation
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[15].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-24" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-25" name="items[16].Id" value="25">
+
+                <input type="hidden" class="hidden" id="type-0-25" name="items[16].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Start FCS Handover Part 2 SubPath <a href="#6" id="item_6">❯</a>
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-28" name="items[17].Id" value="28">
+
+                <input type="hidden" class="hidden" id="type-0-28" name="items[17].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Period End Data Extract Report
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[17].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-28" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-116" name="items[18].Id" value="116">
+
+                <input type="hidden" class="hidden" id="type-0-116" name="items[18].EntityType" value="3">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Period End Data Extract Report Email
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[18].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-116" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-31" name="items[19].Id" value="31">
+
+                <input type="hidden" class="hidden" id="type-0-31" name="items[19].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Internal Data Match Report
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[19].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-31" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-32" name="items[20].Id" value="32">
+
+                <input type="hidden" class="hidden" id="type-0-32" name="items[20].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        ACT Count Report
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[20].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-32" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-36" name="items[21].Id" value="36">
+
+                <input type="hidden" class="hidden" id="type-0-36" name="items[21].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        DAS Period End Report Preparation
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[21].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-36" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-37" name="items[22].Id" value="37">
+
+                <input type="hidden" class="hidden" id="type-0-37" name="items[22].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Apps Additional Payments Report
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[22].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-37" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-38" name="items[23].Id" value="38">
+
+                <input type="hidden" class="hidden" id="type-0-38" name="items[23].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Apps Co-Investment Contributions Report Beta
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[23].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-38" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-39" name="items[24].Id" value="39">
+
+                <input type="hidden" class="hidden" id="type-0-39" name="items[24].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Apps Monthly Payment Report
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[24].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-39" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-40" name="items[25].Id" value="40">
+
+                <input type="hidden" class="hidden" id="type-0-40" name="items[25].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Funding Summary Period End Report
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[25].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-40" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-41" name="items[26].Id" value="41">
+
+                <input type="hidden" class="hidden" id="type-0-41" name="items[26].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Apps Data Match Month End Report
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[26].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-41" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-111" name="items[27].Id" value="111">
+
+                <input type="hidden" class="hidden" id="type-0-111" name="items[27].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Cross Year Indicative Payments Report
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[27].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-111" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-49" name="items[28].Id" value="49">
+
+                <input type="hidden" class="hidden" id="type-0-49" name="items[28].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Learner Level View Report
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[28].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-49" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-120" name="items[29].Id" value="120">
+
+                <input type="hidden" class="hidden" id="type-0-120" name="items[29].EntityType" value="3">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Reports Available Email
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[29].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-120" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-0-46" name="items[30].Id" value="46">
+
+                <input type="hidden" class="hidden" id="type-0-46" name="items[30].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        DAS Period End Terminated
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[30].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-0-46" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <hr class="hr-bottom-margin">
+    </li>
+    
+    <li>
+        <input type="hidden" class="hidden" id="path-2" name="items[31].Id" value="2">
+
+        <input type="hidden" class="hidden" id="type-2" name="items[31].EntityType" value="1">
+
+
+        <div class="checkbox-container">
+            <div class="checkbox-text govuk-!-font-weight-bold">
+                <a href="#item_2" id="2">❮</a> DAS Started Path
+            </div>
+            <div class="govuk-checkboxes">
+                <div class="flex">
+                    <div class="govuk-checkboxes__item">
+
+                        <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" name="items[31].Enabled" id="ckpath-2" checked="" value="true">
+                        <label class="govuk-label govuk-checkboxes__label">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="inner-list ">
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-2-3" name="items[32].Id" value="3">
+
+                <input type="hidden" class="hidden" id="type-2-3" name="items[32].EntityType" value="3">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        DAS Started Email
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[32].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-2-3" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <hr class="hr-bottom-margin">
+    </li>
+    
+    <li>
+        <input type="hidden" class="hidden" id="path-5" name="items[33].Id" value="5">
+
+        <input type="hidden" class="hidden" id="type-5" name="items[33].EntityType" value="1">
+
+
+        <div class="checkbox-container">
+            <div class="checkbox-text govuk-!-font-weight-bold">
+                <a href="#item_5" id="5">❮</a> Internal Reports Path
+            </div>
+            <div class="govuk-checkboxes">
+                <div class="flex">
+                    <div class="govuk-checkboxes__item">
+
+                        <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" name="items[33].Enabled" id="ckpath-5" checked="" value="true">
+                        <label class="govuk-label govuk-checkboxes__label">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="inner-list ">
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-5-5" name="items[34].Id" value="5">
+
+                <input type="hidden" class="hidden" id="type-5-5" name="items[34].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Period End Data Quality Report
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[34].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-5-5" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-5-113" name="items[35].Id" value="113">
+
+                <input type="hidden" class="hidden" id="type-5-113" name="items[35].EntityType" value="3">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Period End Data Quality Report Email
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[35].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-5-113" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-5-6" name="items[36].Id" value="6">
+
+                <input type="hidden" class="hidden" id="type-5-6" name="items[36].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Provider Submissions Report
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[36].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-5-6" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-5-114" name="items[37].Id" value="114">
+
+                <input type="hidden" class="hidden" id="type-5-114" name="items[37].EntityType" value="3">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Provider Submissions Report Email
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[37].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-5-114" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-5-8" name="items[38].Id" value="8">
+
+                <input type="hidden" class="hidden" id="type-5-8" name="items[38].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Period End Collection Stats
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[38].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-5-8" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-5-50" name="items[39].Id" value="50">
+
+                <input type="hidden" class="hidden" id="type-5-50" name="items[39].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Period End ESFA Non-Contracted Devolved Adult Education Activity Report
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[39].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-5-50" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-5-115" name="items[40].Id" value="115">
+
+                <input type="hidden" class="hidden" id="type-5-115" name="items[40].EntityType" value="3">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Period End ESFA Non-Contracted Devolved Adult Education Activity Report Email
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[40].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-5-115" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <hr class="hr-bottom-margin">
+    </li>
+    
+    <li>
+        <input type="hidden" class="hidden" id="path-11" name="items[41].Id" value="11">
+
+        <input type="hidden" class="hidden" id="type-11" name="items[41].EntityType" value="1">
+
+
+        <div class="checkbox-container">
+            <div class="checkbox-text govuk-!-font-weight-bold">
+                <a href="#item_11" id="11">❮</a> FCS Hand Over Part 1 Path
+            </div>
+            <div class="govuk-checkboxes">
+                <div class="flex">
+                    <div class="govuk-checkboxes__item">
+
+                        <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" name="items[41].Enabled" id="ckpath-11" checked="" value="true">
+                        <label class="govuk-label govuk-checkboxes__label">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="inner-list ">
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-11-107" name="items[42].Id" value="107">
+
+                <input type="hidden" class="hidden" id="type-11-107" name="items[42].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Initiate FCS hand over part 1
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-11-26" name="items[43].Id" value="26">
+
+                <input type="hidden" class="hidden" id="type-11-26" name="items[43].EntityType" value="3">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        FCS Team Hand Over Part 1 Email
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[43].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-11-26" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <hr class="hr-bottom-margin">
+    </li>
+    
+    <li>
+        <input type="hidden" class="hidden" id="path-6" name="items[44].Id" value="6">
+
+        <input type="hidden" class="hidden" id="type-6" name="items[44].EntityType" value="1">
+
+
+        <div class="checkbox-container">
+            <div class="checkbox-text govuk-!-font-weight-bold">
+                <a href="#item_6" id="6">❮</a> FCS Hand Over Part 2 Path
+            </div>
+            <div class="govuk-checkboxes">
+                <div class="flex">
+                    <div class="govuk-checkboxes__item">
+
+                        <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" name="items[44].Enabled" id="ckpath-6" checked="" value="true">
+                        <label class="govuk-label govuk-checkboxes__label">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="inner-list ">
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-6-108" name="items[45].Id" value="108">
+
+                <input type="hidden" class="hidden" id="type-6-108" name="items[45].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Initiate FCS hand over part 2
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-6-27" name="items[46].Id" value="27">
+
+                <input type="hidden" class="hidden" id="type-6-27" name="items[46].EntityType" value="3">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        FCS Broadcast Hand Over Part 2 Email
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[46].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-6-27" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-6-110" name="items[47].Id" value="110">
+
+                <input type="hidden" class="hidden" id="type-6-110" name="items[47].EntityType" value="3">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        FCS Team Hand Over Part 2 Email
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[47].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-6-110" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-6-124" name="items[48].Id" value="124">
+
+                <input type="hidden" class="hidden" id="type-6-124" name="items[48].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        FCS Handover Complete
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-6-109" name="items[49].Id" value="109">
+
+                <input type="hidden" class="hidden" id="type-6-109" name="items[49].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Initiate Standard File
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-6-35" name="items[50].Id" value="35">
+
+                <input type="hidden" class="hidden" id="type-6-35" name="items[50].EntityType" value="3">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Standard File Email
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[50].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-6-35" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <input type="hidden" class="hidden" id="pathitem-6-34" name="items[51].Id" value="34">
+
+                <input type="hidden" class="hidden" id="type-6-34" name="items[51].EntityType" value="2">
+
+                <div class="checkbox-container">
+                    <div class="checkbox-text">
+                        Standard File
+                    </div>
+
+                    <div class="govuk-checkboxes">
+                        <div class="flex">
+                            <div class="govuk-checkboxes__item">
+                                <input type="hidden" name="items[51].Enabled" value="true">
+
+                                <input type="checkbox" class="govuk-checkboxes__input validityCheckbox" id="ckpathItem-6-34" checked="" value="true">
+                                <label class="govuk-label govuk-checkboxes__label">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <hr class="hr-bottom-margin">
+    </li>
+    
+</ol>
+
+<button type="submit" class="govuk-button" id="saveChanges">Save</button>
+</div>
+
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8KzGhLYDbzNLpAOEQ3T6Rjc2CP4i8rLfdZFtAVNkYYqStN7e17ZueP8CbCu9mf6M6xiAAC3MS5h-kivSlpDYE0EaguIA3uE-hPzaqTBAp7DVlEQYjbTLga_pEPuBCWXn2TbOsJefKj59Wfzxr0-5IXQJONJ4ZecBWhz-Oift4lwBfJrx40LRMTjkl3_HEv5Ndw"></form>
+
+<br>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">&nbsp;</div>
+    <div class="govuk-grid-column-two-thirds">
+        <label id="lastSync"></label>
+
+        <label id="state">Status: Connected</label>
+    </div>
+</div>
+
+
+
+    <script src="/lib/signalr/dist/browser/signalr.min.js?v=0YPy9NME7qQqfWeFNi6MlMCvFYO8EWu_v5QWbZsDnXM"></script>
+    <script src="/assets/js/periodEnd/validityPeriodController.min.js" type="module"></script>
+
+                </div>
+            </div>
+
+
+
+
+
+{% endblock %}
