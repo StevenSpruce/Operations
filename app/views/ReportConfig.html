@@ -25,59 +25,8 @@ GOV.UK Prototype Kit
       Select the submission reports that you want to receive.  The rule violation reports are mandatory and cannot be de-selected.
     </div>
 
-<details class="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Help with selecting your reports
-    </span>
-    </summary>
-
-  <div class="govuk-details__text">
-    This table gives a brief decription of each report.
-    <br>
- 
-  <table class="govuk-table">
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Report</th>
-      <th scope="col" class="govuk-table__header">Description</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">16-9 Funding Calculation Full Output Report</th>
-      <td class="govuk-table__cell">For funding model 25 (
-16-19 (excluding Apprenticeships)), this report details outputs from the funding calculation.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">16-19 Funding Claim Report</th>
-      <td class="govuk-table__cell">For funding model 25 (	
-16-19 (excluding Apprenticeships)), this report outputs learner counts and funding in the format of the funding claim form.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Adult Funding Claim Report</th>
-      <td class="govuk-table__cell">For funding models 35 (Adult skills), 38 (	
-Adult Skills Fund) and 99 (Non-funded), this report displays funding in the format of the funding claim form.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Adult Learner Loans Bursary Occupancy Report</th>
-      <td class="govuk-table__cell">For funding model 99 (Non-funded), this report details funding that is financed by an Advanced Learner Loan.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Apprenticeship Data Match Report</th>
-      <td class="govuk-table__cell">For funding model 36 (	
-Apprenticeships), this report details rule violations produced by the data lock process.</td>
-    </tr>
-  </tbody>
-</table>
- </div>
-</details>
-
-
-
 
   <table class="govuk-table">
-    <caption class="govuk-table__caption govuk-table__caption--m">Enable or disable tasks for "selected collection type"</caption>
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Required</th>
@@ -98,40 +47,62 @@ Apprenticeships), this report details rule violations produced by the data lock 
         <td class="govuk-table__cell">16-19 Funding Calculation Full Output Report</td>
         <td class="govuk-table__cell">For funding model 25 (16-19), this report details outputs from the funding calculation.</td>
       </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">16-19 Funding Claim Report</td>
+        <td class="govuk-table__cell">For funding model 25 (16-19), this report outputs learner counts and funding in the format of the funding claim form.</td>
+      </tr>
+          <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Adult Funding Claim Report</td>
+        <td class="govuk-table__cell">For funding models 35 (Adult skills), 38 (Adult Skills Fund) and 99 (Non-funded), this report displays funding in the format of the funding claim form.</td>
+      </tr>
+            <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Adult Learner Loans Bursary Occupancy Report</td>
+        <td class="govuk-table__cell">For funding model 99 (Non-funded), this report details funding that is financed by an Advanced Learner Loan.</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Apprenticeship Data Match Report</td>
+        <td class="govuk-table__cell">For funding model 36 (Apprenticeships), this report details rule violations produced by the data lock process.</td>
+      </tr>
  </table>
 
 
 
 
 
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          16-19 Funding Calculation Full Output Report
-      </label>
-    </div>     
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          16-19 Funding Claim Report
-      </label>
-    </div> 
+
+
      <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
         <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Adult Funding Claim Report
-        </label>
-      </div>
-     <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Adult Learner Loans Bursary Occupancy Report
-        </label>
-      </div>
-     <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Apprenticeship Data Match Report
+          
         </label>
       </div>
      <div class="govuk-checkboxes__item">
