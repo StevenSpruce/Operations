@@ -1,0 +1,349 @@
+
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<h1 class="govuk-heading-l">My report preferences</h1>
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Which reports do you want to receive?
+      </h1>
+    </legend>
+    <div id="waste-hint" class="govuk-hint">
+      Select the submission reports that you want to receive.  The rule violation reports are mandatory and cannot be de-selected.
+    </div>
+
+
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Required</th>
+        <th scope="col" class="govuk-table__header">Report</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+        
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">16-19 Funding Calculation Full Output Report</td>
+        <td class="govuk-table__cell">For funding model 25 (16-19), this report details outputs from the funding calculation.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">16-19 Funding Claim Report</td>
+        <td class="govuk-table__cell">For funding model 25 (16-19), this report outputs learner counts and funding in the format of the funding claim form.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">16-19 Summary of Funding by Student Report</td>
+        <td class="govuk-table__cell">For funding model 25 (16-19), this report outputs learner counts and funding in the format of the funding claim form.</td>
+      </tr>
+          <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Adult Funding Claim Report</td>
+        <td class="govuk-table__cell">For funding models 35 (Adult skills), 38 (Adult Skills Fund) and 99 (Non-funded), this report displays funding in the format of the funding claim form.</td>
+      </tr>
+            <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Adult Learner Loans Bursary Occupancy Report</td>
+        <td class="govuk-table__cell">For funding model 99 (Non-funded), this report details funding that is financed by an Advanced Learner Loan.</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Apprenticeship Data Match Report</td>
+        <td class="govuk-table__cell">For funding model 36 (Apprenticeships), this report details rule violations produced by the data lock process.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Apprenticeship Indicative Earnings Report</td>
+        <td class="govuk-table__cell">For funding model 36 (Apprenticeships), this report details learners, learning delivery and funding.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Community Learning Summary of Learners by Non-Single Budget Category Report</td>
+        <td class="govuk-table__cell">For funding model 10 (Community Learning), this report details counts of learners.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Devolved Adult Education Funding Summary Report</td>
+        <td class="govuk-table__cell">For funding models 35 (Adult skills) and 38 (Adult skills fund), this report details funding where the source of funding is a devolved organisation.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Devolved Adult Education Occupancy Report</td>
+        <td class="govuk-table__cell">For funding models 35 (Adult skills) and 38 (Adult skills fund), this report details learners, learning delivery and funding where the source of funding is a devolved organisation.</td>
+      </tr>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Devolved Skills Bootcamp Funding Summary Report</td>
+        <td class="govuk-table__cell">For funding models 37 (Skills Bootcamps), this report details funding where a contract number for a devolved contract is recorded in the ILR.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Devolved Skills Bootcamp Occupancy Report</td>
+        <td class="govuk-table__cell">For funding models 37 (Skills Bootcamps), this report details learners, learning delivery and funding where a devolved contract number is recorded in the ILR.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Funding Summary Report</td>
+        <td class="govuk-table__cell">For funding models 35 (Adult skills), 36 (Apprenticeships), 37 (Skills Bootcamps), 38 (Adult skills fund), 99 (Non-funded) or 81 (Other adult), this report details funding by funding line type.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">High Needs Student Detail Report</td>
+        <td class="govuk-table__cell">For funding model 25 (16-19), this report details the high needs status of learners attracting 16-19 funding.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">High Needs Student Summary Report</td>
+        <td class="govuk-table__cell">For funding model 25 (16-19), this report details counts of learners attracting 16-19 funding, by funding line type.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Main Occupancy Report</td>
+        <td class="govuk-table__cell">For funding models 35 (Adult skills) and 38 (Adult skills fund), this report details learners, learning delivery and funding.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Maths and English Report</td>
+        <td class="govuk-table__cell">For funding model 25 (16-19), this report details the GCSE status for both Maths and English for each student attracting 16-19 funding.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Non-Contracted Apprenticeships Activity Report</td>
+        <td class="govuk-table__cell">For funding model 36 (Apprenticeships), this report details learning delivery that has been successfully validated, and therefore had funding calculated, but for which the provider does not have a valid contract</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Non-Contracted Devolved Adult Education Occupancy Report</td>
+        <td class="govuk-table__cell">For funding models 10 (Community Learning), 11 (Tailored Learning), 35 (Adult skills) and 38 (Adult skills fund), this report details learning delivery that has a source of funding for a devolved organisation and there is no associated contract.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">OfS HE Quality Control Report</td>
+        <td class="govuk-table__cell">Where higher education (HE) data has been returned, this report assists in monitoring and improving the quality of the HE data.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Project S Skills Bootcamp Occupancy Report</td>
+        <td class="govuk-table__cell">For funding model 81 (Other adult), this report details Skills Bootcamp data where the learning delivery is recoded as 'Project S'.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Skills Bootcamp Funding Summary Report</td>
+        <td class="govuk-table__cell">For funding model 37 (Skills Bootcamps), this report details Skills Bootcamp funding by contract number.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Skills Bootcamp Occupancy Report</td>
+        <td class="govuk-table__cell">For funding model 37 (Skills Bootcamps), this report details learners, learning delivery and funding.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Summary of Funding Model 35 Funding Report</td>
+        <td class="govuk-table__cell">For funding model 35 (Adult skills), this report details funding by funding line type and period.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Summary of Funding Model 35 Funding Report</td>
+        <td class="govuk-table__cell">For funding model 35 (Adult skills), this report details funding by funding line type and period.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Trailblazer Apprenticeships Employer Incentives Report</td>
+        <td class="govuk-table__cell">For funding model 81 (Other adult), this report details funding at an employer level for Trailblazer Apprenticeships.</td>
+      </tr>
+        <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+           <label class="govuk-label govuk-checkboxes__label" for="waste">
+           </label>
+          </div>
+        </td>
+        <td class="govuk-table__cell">Trailblazer Apprenticeships Occupancy Report</td>
+        <td class="govuk-table__cell">For funding model 81 (Other adult), this report details learning, learning delivery and funding data for Trailblazer Apprenticeships.</td>
+      </tr>
+ </table>
+
+</div>
+</fieldset>
+
+
+
+  <a href="/ILRtopicstaskscheck" button class="govuk-button" data-module="govuk-button">
+    Save
+  </a>
+
+
+{% endblock %}
