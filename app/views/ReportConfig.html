@@ -1,5 +1,5 @@
 
-{% extends "layout.html" %}
+{% extends "layoutsld.html" %}
 
 {% block pageTitle %}
 GOV.UK Prototype Kit
@@ -7,7 +7,6 @@ GOV.UK Prototype Kit
 
 
 {% block content %}
-{% include "./includes/nav.html" %}
 
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
@@ -23,7 +22,7 @@ GOV.UK Prototype Kit
       </h1>
     </legend>
     <div id="waste-hint" class="govuk-hint">
-      Select the submission reports that you want to receive
+      Select the submission reports that you want to receive.  The rule violation reports are mandatory and cannot be de-selected.
     </div>
 
 <details class="govuk-details">
@@ -53,10 +52,34 @@ GOV.UK Prototype Kit
           Adult Funding Claim Report
         </label>
       </div>
+     <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Community Learning Report
+        </label>
+      </div>
     <div class="govuk-checkboxes__item">
       <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
       <label class="govuk-label govuk-checkboxes__label" for="waste-2">
           Devolved Adult Education Funding Summary Report
+      </label>
+    </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Devolved Skills Bootcamp Occupancy Report
+      </label>
+    </div>
+        <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Non Contracted Apps Activity Report
+      </label>
+    </div>
+        <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Non Contract Devolved Adult Education Occupancy Report
       </label>
     </div>
     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -66,6 +89,21 @@ GOV.UK Prototype Kit
           OfS HE Quality Control Report
         </label>
       </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Skills Bootcamp Funding Summary Report
+        </label>
+      </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Summary Of Funding By Student Report
+        </label>
+      </div>
+      
 
 
     </div>
@@ -73,19 +111,7 @@ GOV.UK Prototype Kit
 </div>
 
 
-
-
-TaskGenerateRuleViolationSummaryReport
 TaskGenerate
-TaskGenerate
-TaskGenerate
-TaskGenerateNonContractDevolvedAdultEducationOccupancyReport
-TaskGenerateSelfAssessmentReport
-TaskGenerateDevolvedSkillsBootcampOccupancyReport
-TaskGenerateNonContractedAppsActivityReport
-TaskGenerateSummaryOfFundingByStudentReport
-TaskGenerateSkillsBootcampFundingSummaryReport
-TaskGenerateCommunityLearningReport
 TaskGenerateFundingSummaryReport
 TaskGenerateProjectSSkillsBootcampOccupancyReport
 TaskGenerateAdultSkillsFundSTFInitiativesFundingSummaryReport
