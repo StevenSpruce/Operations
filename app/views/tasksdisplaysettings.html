@@ -20,43 +20,42 @@ GOV.UK Prototype Kit
       <span class="govuk-caption-m">Topic: ilr2122submissiontopic</span>
       <span class="govuk-caption-m">Collection year: 2122</span>
       <span class="govuk-caption-m">Subscription: FileValidation</span>
-      <h2 class="govuk-heading-l">Tasks</h2>
+       <span class="govuk-caption-m">Task: Process</span>
+      <h2 class="govuk-heading-l">Task display settings</h2>
   </div>
 
 <br>
-
-  <table class="govuk-table">
-    <caption class="govuk-table__caption govuk-table__caption--m">Enable or disable tasks</caption>
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Task name</th>
-        <th scope="col" class="govuk-table__header">Stage</th>
-        <th scope="col" class="govuk-table__header">Last updated on</th>
-        <th scope="col" class="govuk-table__header">Last updated by</th>
-        <th scope="col" class="govuk-table__header">Enabled</th>
-        <th scope="col" class="govuk-table__header">Action</th>
-        
-      </tr>
-    </thead>
-    <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">Process</td>
-        <td class="govuk-table__cell">1</td>
-        <td class="govuk-table__cell">28 April 2021</td>
-        <td class="govuk-table__cell">Russell Ball</td>
-        <td class="govuk-table__cell">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
-              <label class="govuk-label govuk-checkboxes__label" for="waste">
-              </label>
-            </div>
-        </td>
-                <td class="govuk-table__cell">
-          <a href="ilrfilevalidationtasks.html">Display settings</a>
-          </td>
-      </tr>
-    </tbody>
-  </table>
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      What is your address?
+    </h1>
+  </legend>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-1">
+      Address line 1
+    </label>
+    <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-2">
+      Address line 2 (optional)
+    </label>
+    <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-town">
+      Town or city
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-postcode">
+      Postcode
+    </label>
+    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+  </div>
+</fieldset>
 
   <a href="/ILRtopicstaskscheck" button class="govuk-button" data-module="govuk-button">
     Save
