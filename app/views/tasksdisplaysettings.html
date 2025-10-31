@@ -31,28 +31,38 @@ GOV.UK Prototype Kit
   </legend>
   <div class="govuk-form-group">
     <label class="govuk-label" for="address-line-1">
-      Address line 1
+      Display name
     </label>
     <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
   </div>
   <div class="govuk-form-group">
     <label class="govuk-label" for="address-line-2">
-      Address line 2 (optional)
+      Description
     </label>
     <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
   </div>
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-town">
-      Town or city
-    </label>
-    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
-  </div>
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="address-postcode">
-      Postcode
-    </label>
-    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
-  </div>
+
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Mandatory
+        </label>
+      </div>
+
+
+    </div>
+  </fieldset>
+</div>
+
+
+
+
+
+
+
+
+
 </fieldset>
 
   <a href="/ILRtopicstaskscheck" button class="govuk-button" data-module="govuk-button">
