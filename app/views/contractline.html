@@ -3,26 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Collections Operations - Contract Line Waves</title>
-    <link href="styles.css" rel="stylesheet">
+    <title>GOV.UK Data Collections Operations - Contract Line Waves</title>
+
+    <style>
+        /* Base GOV.UK Styling */
+        body {
+            font-family: "GDS Transport", "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #0b0c0c;
+            line-height: 1.25;
+            background-color: #ffffff; /* Page background is white */
+        }
+        
+        /* Utility Classes (Mimicking GOV.UK) */
+        .govuk-grid-row { display: flex; flex-wrap: wrap; }
+        .govuk-grid-column-full { width: 100%; }
+        .govuk-heading-xl { font-size: 48px; font-weight: 700; margin: 0 0 20px 0; }
+        .govuk-back-link { font-size: 16px; margin: 20px 0 20px 0; display: block; text-decoration: none; color: #1d70b8; }
+        .govuk-button {
+            padding: 8px 15px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            line-height: 1.25;
+            display: inline-block;
+            background-color: #00703c; /* GOV.UK Green */
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        /* --- Layout Containers --- */
+        .govuk-page-container {
+            max-width: 960px; /* Standard GOV.UK content width */
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* --- Header/Nav Styling (Simplified) --- */
+        .govuk-header {
+            background-color: #0b0c0c; /* Black */
+            color: white;
+            padding: 10px 0;
+            font-size: 19px;
+            font-weight: 700;
+            border-bottom: 1px solid #202020;
+        }
+        .govuk-header-content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .govuk-header-info {
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        /* --- Important Banner Styling --- */
+        .govuk-important-banner {
+            background-color: #b10e1e; /* Red/Maroon */
+            padding: 15px 0;
+        }
+        .govuk-important-content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 15px;
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .govuk-important-content strong {
+            background-color: white;
+            color: #0b0c0c;
+            padding: 3px 8px;
+            margin-right: 10px;
+            font-weight: 700;
+        }
+
+        /* --- Main Navigation Styling --- */
+        .govuk-main-nav {
+            background-color: white;
+            border-bottom: 1px solid #b1b4b6; 
+        }
+        .govuk-main-nav ul {
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+            max-width: 960px;
+            display: flex;
+        }
+        .govuk-main-nav li {
+            padding: 10px 0;
+            margin-right: 15px;
+        }
+        .govuk-main-nav a {
+            color: #1d70b8; 
+            text-decoration: none;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+        /* --- Data List (Summary List) Styling --- */
+        .govuk-heading-l {
+            font-size: 32px;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #b1b4b6; /* Separator line for Wave heading */
+            padding-bottom: 10px;
+        }
+
+        .govuk-summary-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .govuk-summary-list__row {
+            display: grid;
+            /* 3 columns by default: Key (30%), Value (55%), Actions (15%) */
+            grid-template-columns: 30% 55% 15%; 
+            border-top: 1px solid #b1b4b6;
+            padding: 10px 0;
+        }
+        
+        .govuk-summary-list__row:last-child {
+             border-bottom: 1px solid #b1b4b6; /* Add bottom border to last row */
+        }
+
+        .govuk-summary-list__key {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .govuk-summary-list__value, .govuk-summary-list__actions {
+            font-size: 16px;
+        }
+        
+        .govuk-summary-list__actions {
+            text-align: right;
+        }
+
+        /* Custom style for the Start Date / End Date row (4 columns) */
+        .date-pair-row {
+            grid-template-columns: 20% 30% 20% 30%; /* Key | Value | Key | Value */
+            padding-right: 15%; /* Keep the total width consistent with 3-column rows */
+        }
+        
+        .date-pair-row .govuk-summary-list__actions {
+            display: none; /* Hide the actions column for the date pair row */
+        }
+        
+        /* Adjusting Created by/Modified by rows to fill the space where the date used to be */
+        .two-item-row {
+            grid-template-columns: 30% 70%;
+        }
+        .two-item-row .govuk-summary-list__actions {
+            display: none;
+        }
+
+
+        /* --- Footer Styling --- */
+        .govuk-footer {
+            background-color: #f3f2f1;
+            border-top: 1px solid #b1b4b6;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        .govuk-footer-content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .govuk-footer-ogc strong {
+            font-weight: 700;
+            margin-right: 5px;
+        }
+        .govuk-footer-content a {
+            color: #1d70b8;
+        }
+
+        .govuk-crown-copyright {
+            display: flex;
+            align-items: center;
+        }
+        .govuk-crown-copyright img {
+            height: 30px; /* Placeholder for crown logo */
+            margin-right: 5px;
+            content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#0b0c0c"/><path fill="#fff" d="M50 5c-15 0-27.4 9-32 20.3L50 45.4l32-20.1C77.4 14 65 5 50 5zm-32 30c-5.5 12-5.5 25.5 0 37.5L50 85l32-12.5c5.5-12 5.5-25.5 0-37.5L50 45.4zM50 90c-15 0-27.4-9-32-20.3L50 55.4l32 20.1C77.4 81 65 90 50 90z"/></svg>');
+        }
+        
+    </style>
 </head>
 <body>
 
     <header class="govuk-header">
         <div class="govuk-header-content">
-            <span class="govuk-logo">GOV.UK</span>
-            <span class="govuk-service-name">Data Collections Operations</span>
-            <div class="govuk-user-info">
+            <span>GOV.UK Data Collections Operations</span>
+            <div class="govuk-header-info">
                 <span>Beau Durman</span>
-                <a href="#">Sign out</a>
+                <a href="#" style="color:white; margin-left:10px;">Sign out</a>
             </div>
         </div>
     </header>
 
     <div class="govuk-important-banner">
         <div class="govuk-important-content">
-            <span class="govuk-important-label">Important</span>
-            <span class="govuk-important-text">submitlearnerdatabeta2024-25 has a deadline of 2025-09-21</span>
+            <strong>Important</strong>
+            <span>submitlearnerdatabeta2024-25 has a deadline of 2025-09-21</span>
         </div>
     </div>
 
@@ -40,76 +238,85 @@
         </ul>
     </nav>
 
-    <div class="govuk-main-wrapper">
-        <div class="govuk-content-container">
-            <p class="govuk-back-link"><a href="#">&lt; Back</a></p>
+    <div class="govuk-page-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
 
-            <h1 class="govuk-heading-xl">Contract line waves</h1>
+                <a href="#" class="govuk-back-link">&lt; Back</a>
 
-            <div class="govuk-button-container">
-                <button class="govuk-button govuk-button-green">
+                <h1 class="govuk-heading-xl">Contract line waves</h1>
+
+                <a class="govuk-button" href="#">
                     Add a new contract line wave
-                </button>
+                </a>
+
+                <section>
+                    <h2 class="govuk-heading-l">Wave 6</h2>
+                    <dl class="govuk-summary-list">
+                        
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">Description</dt>
+                            <dd class="govuk-summary-list__value">Wave 6 for financial year 01 April 2025 to 31 March 2026 (2025-26).</dd>
+                            <dd class="govuk-summary-list__actions"><a href="#">Manage</a></dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row date-pair-row">
+                            <dt class="govuk-summary-list__key">Start date</dt>
+                            <dd class="govuk-summary-list__value">01-04-2025</dd>
+                            <dt class="govuk-summary-list__key">End date</dt>
+                            <dd class="govuk-summary-list__value">31-03-2026</dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row two-item-row">
+                            <dt class="govuk-summary-list__key">Created by</dt>
+                            <dd class="govuk-summary-list__value">Steven Spruce</dd>
+                            </div>
+                        
+                        <div class="govuk-summary-list__row two-item-row">
+                            <dt class="govuk-summary-list__key">Modified by</dt>
+                            <dd class="govuk-summary-list__value">Steven Spruce</dd>
+                            </div>
+                    </dl>
+                </section>
+
+                <section>
+                    <h2 class="govuk-heading-l">Wave 5</h2>
+                    <dl class="govuk-summary-list">
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">Description</dt>
+                            <dd class="govuk-summary-list__value">Wave 5 for financial year 01 April 2024 to 31 March 2025 (2024-25).</dd>
+                            <dd class="govuk-summary-list__actions"><a href="#">Manage</a></dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row date-pair-row">
+                            <dt class="govuk-summary-list__key">Start date</dt>
+                            <dd class="govuk-summary-list__value">01-04-2024</dd>
+                            <dt class="govuk-summary-list__key">End date</dt>
+                            <dd class="govuk-summary-list__value">31-03-2025</dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row two-item-row">
+                            <dt class="govuk-summary-list__key">Created by</dt>
+                            <dd class="govuk-summary-list__value">Steven Spruce</dd>
+                            </div>
+                        
+                        <div class="govuk-summary-list__row two-item-row">
+                            <dt class="govuk-summary-list__key">Modified by</dt>
+                            <dd class="govuk-summary-list__value">Steven Spruce</dd>
+                            </div>
+                    </dl>
+                </section>
+
             </div>
-
-            <section class="wave-section">
-                <h2 class="govuk-heading-l">Wave 6</h2>
-                <div class="govuk-data-list">
-                    <div class="data-list-row">
-                        <div class="data-list-key">Description</div>
-                        <div class="data-list-value">Wave 6 for financial year 01 April 2025 to 31 March 2026 (2025-26).</div>
-                        <div class="data-list-action"><a href="#">Manage</a></div>
-                    </div>
-                    <div class="data-list-row">
-                        <div class="data-list-key">Start date</div>
-                        <div class="data-list-value">01-04-2025</div>
-                        <div class="data-list-key">End date</div>
-                        <div class="data-list-value">31-03-2026</div>
-                    </div>
-                    <div class="data-list-row">
-                        <div class="data-list-key">Created by</div>
-                        <div class="data-list-value">Steven Spruce</div>
-                    </div>
-                    <div class="data-list-row">
-                        <div class="data-list-key">Modified by</div>
-                        <div class="data-list-value">Steven Spruce</div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="wave-section">
-                <h2 class="govuk-heading-l">Wave 5</h2>
-                <div class="govuk-data-list">
-                    <div class="data-list-row">
-                        <div class="data-list-key">Description</div>
-                        <div class="data-list-value">Wave 5 for financial year 01 April 2024 to 31 March 2025 (2024-25).</div>
-                        <div class="data-list-action"><a href="#">Manage</a></div>
-                    </div>
-                    <div class="data-list-row">
-                        <div class="data-list-key">Start date</div>
-                        <div class="data-list-value">01-04-2024</div>
-                        <div class="data-list-key">End date</div>
-                        <div class="data-list-value">31-03-2025</div>
-                    </div>
-                    <div class="data-list-row">
-                        <div class="data-list-key">Created by</div>
-                        <div class="data-list-value">Steven Spruce</div>
-                    </div>
-                    <div class="data-list-row">
-                        <div class="data-list-key">Modified by</div>
-                        <div class="data-list-value">Steven Spruce</div>
-                    </div>
-                </div>
-            </section>
-
         </div>
     </div>
 
     <footer class="govuk-footer">
         <div class="govuk-footer-content">
-            <span class="govuk-footer-ogc">OGL</span> All content is available under the <a href="#">Open Government Licence v3.0</a>, except where otherwise stated
+            <span class="govuk-footer-ogc"><strong>OGL</strong> All content is available under the <a href="#">Open Government Licence v3.0</a>, except where otherwise stated</span>
             <span class="govuk-crown-copyright">
-                <img src="crown_logo.png" alt="Crown logo">
+                <img alt="Crown logo">
                 &copy; Crown copyright
             </span>
         </div>
