@@ -1,83 +1,119 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collections Operations - Contract Line Waves</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
 
-{% block pageTitle %}
-  Start page example
-{% endblock %}
-
-
-{% block content %}
-{% include "./includes/nav.html" %}
-
-<a href="/OPSRefDataSBCSelection" class="govuk-back-link">Back</a>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-      
-<br>
-<div class="govuk-grid-column-full">
-<h1 class="govuk-heading-xl">Contract line </h1>
-
-<a class="govuk-button" href="/AddContractLine">Add a new contract line</a>
-
-
-<div class="govuk-body">
-      <section>
-       <strong class="govuk-!-font-size-24">
-            Adult Skills Fund
-        </strong>
-        <dl class="govuk-summary-list govuk-!-margin-bottom-1">
-            <div class="govuk-summary-list__row no-border-bottom">
-                <dt class="govuk-summary-list__value">
-                
-                <dd class="govuk-summary-list__value">
-                </dd>
-                </dt>
-                
-                
+    <header class="govuk-header">
+        <div class="govuk-header-content">
+            <span class="govuk-logo">GOV.UK</span>
+            <span class="govuk-service-name">Data Collections Operations</span>
+            <div class="govuk-user-info">
+                <span>Beau Durman</span>
+                <a href="#">Sign out</a>
             </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__value">
-                    <strong> Created by</strong>
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    David Bloggs
-                </dd>
+        </div>
+    </header>
 
-               
-                <dt class="govuk-summary-list__value">
-                    <strong> Date created</strong>
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    15-09-2025
-                </dd>
-                <dd class="govuk-summary-list__actions">
+    <div class="govuk-important-banner">
+        <div class="govuk-important-content">
+            <span class="govuk-important-label">Important</span>
+            <span class="govuk-important-text">submitlearnerdatabeta2024-25 has a deadline of 2025-09-21</span>
+        </div>
+    </div>
 
-                </dd>
+    <nav class="govuk-main-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Dashboards</a></li>
+            <li><a href="#">Period end</a></li>
+            <li><a href="#">Providers</a></li>
+            <li><a href="#">Reference data</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">SLD admin</a></li>
+            <li><a href="#">Tools</a></li>
+        </ul>
+    </nav>
+
+    <div class="govuk-main-wrapper">
+        <div class="govuk-content-container">
+            <p class="govuk-back-link"><a href="#">&lt; Back</a></p>
+
+            <h1 class="govuk-heading-xl">Contract line waves</h1>
+
+            <div class="govuk-button-container">
+                <button class="govuk-button govuk-button-green">
+                    Add a new contract line wave
+                </button>
             </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__value">
-                    <strong> Modified by</strong>
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    Mary Smith
-                    <dd class="govuk-summary-list__value">
-    
-                </dd></dt>
-                </dd>
-                <dt class="govuk-summary-list__value">
-                    <strong> Last modified</strong>
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    21-07-2026
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                </dd>
-            </div>
-        </dl>
-      </section>
-  </div>
-</div>
 
-{% endblock %}
+            <section class="wave-section">
+                <h2 class="govuk-heading-l">Wave 6</h2>
+                <div class="govuk-data-list">
+                    <div class="data-list-row">
+                        <div class="data-list-key">Description</div>
+                        <div class="data-list-value">Wave 6 for financial year 01 April 2025 to 31 March 2026 (2025-26).</div>
+                        <div class="data-list-action"><a href="#">Manage</a></div>
+                    </div>
+                    <div class="data-list-row">
+                        <div class="data-list-key">Start date</div>
+                        <div class="data-list-value">01-04-2025</div>
+                        <div class="data-list-key">End date</div>
+                        <div class="data-list-value">31-03-2026</div>
+                    </div>
+                    <div class="data-list-row">
+                        <div class="data-list-key">Created by</div>
+                        <div class="data-list-value">Steven Spruce</div>
+                    </div>
+                    <div class="data-list-row">
+                        <div class="data-list-key">Modified by</div>
+                        <div class="data-list-value">Steven Spruce</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="wave-section">
+                <h2 class="govuk-heading-l">Wave 5</h2>
+                <div class="govuk-data-list">
+                    <div class="data-list-row">
+                        <div class="data-list-key">Description</div>
+                        <div class="data-list-value">Wave 5 for financial year 01 April 2024 to 31 March 2025 (2024-25).</div>
+                        <div class="data-list-action"><a href="#">Manage</a></div>
+                    </div>
+                    <div class="data-list-row">
+                        <div class="data-list-key">Start date</div>
+                        <div class="data-list-value">01-04-2024</div>
+                        <div class="data-list-key">End date</div>
+                        <div class="data-list-value">31-03-2025</div>
+                    </div>
+                    <div class="data-list-row">
+                        <div class="data-list-key">Created by</div>
+                        <div class="data-list-value">Steven Spruce</div>
+                    </div>
+                    <div class="data-list-row">
+                        <div class="data-list-key">Modified by</div>
+                        <div class="data-list-value">Steven Spruce</div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <footer class="govuk-footer">
+        <div class="govuk-footer-content">
+            <span class="govuk-footer-ogc">OGL</span> All content is available under the <a href="#">Open Government Licence v3.0</a>, except where otherwise stated
+            <span class="govuk-crown-copyright">
+                <img src="crown_logo.png" alt="Crown logo">
+                &copy; Crown copyright
+            </span>
+        </div>
+    </footer>
+
+</body>
+</html>
