@@ -17,57 +17,161 @@
 
     <div class="govuk-body">
 
-        {# ----------------- WAVE 6 ----------------- #}
+        {# ----------------- WAVE 6 ----------------- #}
         <section>
             <h2 class="govuk-heading-l">Wave 6</h2>
-            {# The H2 heading uses govuk-heading-l in the image, not govuk-heading-m #}
-
+            
             <dl class="govuk-summary-list">
-                {# Description Row with Manage link #}
-                <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+                
+                {# Description Row with Manage link on the right (Standard Row) #}
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Description</dt>
+                    <dd class="govuk-summary-list__value">Wave 6 for financial year 01 April 2025 to 31 March 2026 (2025-26).</dd>
+                    <dd class="govuk-summary-list__actions">
                         <a class="govuk-link" href="#">Manage</a>
                     </dd>
                 </div>
-                
-                {# Created by / Date created Row (Requires custom class for 4-column layout) #}
-                <div class="govuk-summary-list__row four-column-row">
-                    <dt class="govuk-summary-list__key">Created by</dt>
-                    <dd class="govuk-summary-list__value">Steven Spruce</dd>
-                    <dt class="govuk-summary-list__key">Date created</dt>
-                    <dd class="govuk-summary-list__value">20-03-2025</dd>
-                </div>
 
-                {# Modified by / Last modified Row (Requires custom class for 4-column layout) #}
-                <div class="govuk-summary-list__row four-column-row">
-                    <dt class="govuk-summary-list__key">Modified by</dt>
-                    <dd class="govuk-summary-list__value">Steven Spruce</dd>
-                    <dt class="govuk-summary-list__key">Last modified</dt>
-                    <dd class="govuk-summary-list__value">20-03-2025</dd>
-                </div>
+                {# Start Date / End Date Row - WORKAROUND USING WIDTH UTILITIES #}
+                <div class="govuk-summary-list__row">
+                    {# Combining Start date/value and End date/value into one visual row. 
+                       This row's key column is hidden, and the value column contains the entire content. #}
+                    <dt class="govuk-summary-list__key govuk-visually-hidden">Dates</dt>
+                    <dd class="govuk-summary-list__value govuk-!-width-full">
+                        <div class="govuk-grid-row">
+                            {# First pair (Start date) #}
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-summary-list__key govuk-!-font-weight-bold">Start date</strong>
+                                <br>
+                                <span>01-04-2025</span>
+                            </div>
+                            {# Second pair (End date) #}
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-summary-list__key govuk-!-font-weight-bold">End date</strong>
+                                <br>
+                                <span>31-03-2026</span>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions"></dd> 
+                </div>
+                
+                {# Created by / Date created Row - WORKAROUND USING WIDTH UTILITIES #}
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key govuk-visually-hidden">Creation Info</dt>
+                    <dd class="govuk-summary-list__value govuk-!-width-full">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-summary-list__key govuk-!-font-weight-bold">Created by</strong>
+                                <br>
+                                <span>Steven Spruce</span>
+                            </div>
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-summary-list__key govuk-!-font-weight-bold">Date created</strong>
+                                <br>
+                                <span>20-03-2025</span>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions"></dd> 
+                </div>
+
+                {# Modified by / Last modified Row - WORKAROUND USING WIDTH UTILITIES #}
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key govuk-visually-hidden">Modification Info</dt>
+                    <dd class="govuk-summary-list__value govuk-!-width-full">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-summary-list__key govuk-!-font-weight-bold">Modified by</strong>
+                                <br>
+                                <span>Steven Spruce</span>
+                            </div>
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-summary-list__key govuk-!-font-weight-bold">Last modified</strong>
+                                <br>
+                                <span>20-03-2025</span>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions"></dd> 
+                </div>
             </dl>
         </section>
 
-        {# ----------------- WAVE 5 ----------------- #}
+        {# ----------------- WAVE 5 (Structure repeated) ----------------- #}
         <section>
             <h2 class="govuk-heading-l">Wave 5</h2>
 
             <dl class="govuk-summary-list">
                 
-                {# Created by / Date created Row (Requires custom class for 4-column layout) #}
-                <div class="govuk-summary-list__row four-column-row">
-                    <dt class="govuk-summary-list__key">Created by</dt>
-                    <dd class="govuk-summary-list__value">Steven Spruce</dd>
-                    <dt class="govuk-summary-list__key">Date created</dt>
-                    <dd class="govuk-summary-list__value">15-07-2024</dd>
+                {# Description Row with Manage link on the right (Standard Row) #}
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Description</dt>
+                    <dd class="govuk-summary-list__value">Wave 5 for financial year 01 April 2024 to 31 March 2025 (2024-25).</dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">Manage</a>
+                    </dd>
                 </div>
 
-                {# Modified by / Last modified Row (Requires custom class for 4-column layout) #}
-                <div class="govuk-summary-list__row four-column-row">
-                    <dt class="govuk-summary-list__key">Modified by</dt>
-                    <dd class="govuk-summary-list__value">Steven Spruce</dd>
-                    <dt class="govuk-summary-list__key">Last modified</dt>
-                    <dd class="govuk-summary-list__value">15-07-2024</dd>
-                </div>
+                {# Start Date / End Date Row - WORKAROUND #}
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key govuk-visually-hidden">Dates</dt>
+                    <dd class="govuk-summary-list__value govuk-!-width-full">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-summary-list__key govuk-!-font-weight-bold">Start date</strong>
+                                <br>
+                                <span>01-04-2024</span>
+                            </div>
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-summary-list__key govuk-!-font-weight-bold">End date</strong>
+                                <br>
+                                <span>31-03-2025</span>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions"></dd> 
+                </div>
+
+                {# Created by / Date created Row - WORKAROUND #}
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key govuk-visually-hidden">Creation Info</dt>
+                    <dd class="govuk-summary-list__value govuk-!-width-full">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-summary-list__key govuk-!-font-weight-bold">Created by</strong>
+                                <br>
+                                <span>Steven Spruce</span>
+                            </div>
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-summary-list__key govuk-!-font-weight-bold">Date created</strong>
+                                <br>
+                                <span>15-07-2024</span>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions"></dd> 
+                </div>
+
+                {# Modified by / Last modified Row - WORKAROUND #}
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key govuk-visually-hidden">Modification Info</dt>
+                    <dd class="govuk-summary-list__value govuk-!-width-full">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-summary-list__key govuk-!-font-weight-bold">Modified by</strong>
+                                <br>
+                                <span>Steven Spruce</span>
+                            </div>
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-summary-list__key govuk-!-font-weight-bold">Last modified</strong>
+                                <br>
+                                <span>15-07-2024</span>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions"></dd> 
+                </div>
             </dl>
         </section>
     </div>
