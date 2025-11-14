@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOV.UK Data Collections Operations - Contract Line Waves</title>
+    <title>GOV.UK Data Collections Operations - Contract Funding Waves</title>
 
     <style>
         /* Base GOV.UK Styles and Fonts */
@@ -164,27 +164,17 @@
             font-weight: normal; /* Key is NOT bold for Description */
         }
 
-        /* Custom style for the Start Date / End Date row (4 columns) */
-        .date-pair-row {
-            /* This is the key change for the start/end date alignment */
+        /* Custom style for 4-column rows (Start Date/End Date & Created/Modified with Dates) */
+        .four-column-row {
+            /* This is the key change for the multi-item alignment */
             grid-template-columns: 15% 30% 15% 30%; /* Key | Value | Key | Value (approximate widths) */
             padding-right: 10%; /* Makes the entire row width match the 3-column rows */
         }
         
-        .date-pair-row .govuk-summary-list__actions {
+        .four-column-row .govuk-summary-list__actions {
             display: none; /* Hide the actions column for the date pair row */
         }
         
-        /* Custom style for Created by/Modified by rows where the date is removed */
-        .two-item-row {
-            /* Make this row span just Key and Value, maintaining the visual grid */
-            grid-template-columns: 30% 70%;
-        }
-        .two-item-row .govuk-summary-list__actions {
-            display: none;
-        }
-
-
         /* --- Footer Styling --- */
         .govuk-footer {
             background-color: #f3f2f1;
@@ -260,10 +250,10 @@
     <div class="govuk-main-wrapper">
         <a href="#" class="govuk-back-link">&lt; Back</a>
 
-        <h1 class="govuk-heading-xl">Contract line waves</h1>
+        <h1 class="govuk-heading-xl">Contract funding waves</h1>
 
         <a class="govuk-button" href="#">
-            Add a new contract line wave
+            Add a new contract funding wave
         </a>
 
         <section>
@@ -276,7 +266,7 @@
                     <dd class="govuk-summary-list__actions"><a href="#">Manage</a></dd>
                 </div>
 
-                <div class="govuk-summary-list__row date-pair-row">
+                <div class="govuk-summary-list__row four-column-row">
                     <dt class="govuk-summary-list__key">Start date</dt>
                     <dd class="govuk-summary-list__value">01-04-2025</dd>
                     <dt class="govuk-summary-list__key">End date</dt>
@@ -284,14 +274,20 @@
                     <dd class="govuk-summary-list__actions"></dd> 
                 </div>
 
-                <div class="govuk-summary-list__row two-item-row">
+                <div class="govuk-summary-list__row four-column-row">
                     <dt class="govuk-summary-list__key">Created by</dt>
                     <dd class="govuk-summary-list__value">Steven Spruce</dd>
+                    <dt class="govuk-summary-list__key">Date created</dt>
+                    <dd class="govuk-summary-list__value">20-03-2025</dd>
+                    <dd class="govuk-summary-list__actions"></dd> 
                 </div>
                 
-                <div class="govuk-summary-list__row two-item-row">
+                <div class="govuk-summary-list__row four-column-row">
                     <dt class="govuk-summary-list__key">Modified by</dt>
                     <dd class="govuk-summary-list__value">Steven Spruce</dd>
+                    <dt class="govuk-summary-list__key">Last modified</dt>
+                    <dd class="govuk-summary-list__value">20-03-2025</dd>
+                    <dd class="govuk-summary-list__actions"></dd> 
                 </div>
             </dl>
         </section>
@@ -306,7 +302,7 @@
                     <dd class="govuk-summary-list__actions"><a href="#">Manage</a></dd>
                 </div>
 
-                <div class="govuk-summary-list__row date-pair-row">
+                <div class="govuk-summary-list__row four-column-row">
                     <dt class="govuk-summary-list__key">Start date</dt>
                     <dd class="govuk-summary-list__value">01-04-2024</dd>
                     <dt class="govuk-summary-list__key">End date</dt>
@@ -314,14 +310,20 @@
                     <dd class="govuk-summary-list__actions"></dd> 
                 </div>
 
-                <div class="govuk-summary-list__row two-item-row">
+                <div class="govuk-summary-list__row four-column-row">
                     <dt class="govuk-summary-list__key">Created by</dt>
                     <dd class="govuk-summary-list__value">Steven Spruce</dd>
+                    <dt class="govuk-summary-list__key">Date created</dt>
+                    <dd class="govuk-summary-list__value">15-07-2024</dd>
+                    <dd class="govuk-summary-list__actions"></dd> 
                 </div>
                 
-                <div class="govuk-summary-list__row two-item-row">
+                <div class="govuk-summary-list__row four-column-row">
                     <dt class="govuk-summary-list__key">Modified by</dt>
                     <dd class="govuk-summary-list__value">Steven Spruce</dd>
+                    <dt class="govuk-summary-list__key">Last modified</dt>
+                    <dd class="govuk-summary-list__value">15-07-2024</dd>
+                    <dd class="govuk-summary-list__actions"></dd> 
                 </div>
             </dl>
         </section>
