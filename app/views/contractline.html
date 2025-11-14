@@ -7,64 +7,120 @@
 {% block content %}
 {% include "./includes/nav.html" %}
 
-<a href="/OPSRefDataSBCSelection" class="govuk-back-link">Back</a>
+<a href="#" class="govuk-back-link">Back</a>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-xl">Contract funding waves</h1>
 
-    <a class="govuk-button" href="/AddContractLine">Add a new contract funding wave</a>
+    <a class="govuk-button govuk-!-margin-bottom-4" href="#">Add a new contract funding wave</a>
 
     <div class="govuk-body">
 
+        {# ----------------- SKILLS BOOTCAMPS ----------------- #}
         <section>
-            <h2 class="govuk-heading-l">Skills Bootcamps</h2>
-            {# The H2 heading uses govuk-heading-l in the image, not govuk-heading-m #}
-            <dl class="govuk-summary-list">
-                <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
-                        <a class="govuk-link" href="#">                                          Manage</a>
+            <h2 class="govuk-heading-l govuk-!-margin-bottom-3">Skills Bootcamps</h2>
+            
+            {# Using margin utilities on the DL to tighten vertical space #}
+            <dl class="govuk-summary-list govuk-!-margin-bottom-4">
+                
+                {# Manage Link Row (Uses standard 3-column structure) #}
+                <div class="govuk-summary-list__row govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+                    <dt class="govuk-summary-list__key">Description</dt>
+                    <dd class="govuk-summary-list__value">Wave 6 for financial year...</dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">Manage</a>
                     </dd>
                 </div>
-                
-                {# Created by / Date created Row (Requires custom class for 4-column layout) #}
-                <div class="govuk-summary-list__row four-column-row">
-                    <dt class="govuk-summary-list__key">Created by</dt>
-                    <dd class="govuk-summary-list__value">Janet William</dd>
-                    <dt class="govuk-summary-list__key">Date created</dt>
-                    <dd class="govuk-summary-list__value">20-03-2025</dd>
-                </div>
 
-                {# Modified by / Last modified Row (Requires custom class for 4-column layout) #}
-                <div class="govuk-summary-list__row four-column-row">
-                    <dt class="govuk-summary-list__key">Modified by</dt>
-                    <dd class="govuk-summary-list__value">Mary Block</dd>
-                    <dt class="govuk-summary-list__key">Last modified</dt>
-                    <dd class="govuk-summary-list__value">20-03-2025</dd>
-                </div>
+                {# Created by / Date created Row - WORKAROUND using GOV.UK Grid inside value column #}
+                <div class="govuk-summary-list__row govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+                    <dt class="govuk-summary-list__key govuk-visually-hidden">Creation Info</dt>
+                    <dd class="govuk-summary-list__value govuk-!-width-full">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-!-font-weight-bold govuk-!-display-inline-block govuk-!-width-one-third">Created by</strong>
+                                <span class="govuk-!-display-inline-block govuk-!-width-two-thirds">Janet William</span>
+                            </div>
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-!-font-weight-bold govuk-!-display-inline-block govuk-!-width-one-half">Date created</strong>
+                                <span class="govuk-!-display-inline-block govuk-!-width-one-half">20-03-2025</span>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions"></dd> 
+                </div>
+
+                {# Modified by / Last modified Row - WORKAROUND using GOV.UK Grid inside value column #}
+                <div class="govuk-summary-list__row govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+                    <dt class="govuk-summary-list__key govuk-visually-hidden">Modification Info</dt>
+                    <dd class="govuk-summary-list__value govuk-!-width-full">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-!-font-weight-bold govuk-!-display-inline-block govuk-!-width-one-third">Modified by</strong>
+                                <span class="govuk-!-display-inline-block govuk-!-width-two-thirds">Mary Block</span>
+                            </div>
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-!-font-weight-bold govuk-!-display-inline-block govuk-!-width-one-half">Last modified</strong>
+                                <span class="govuk-!-display-inline-block govuk-!-width-one-half">20-03-2025</span>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions"></dd> 
+                </div>
             </dl>
         </section>
 
-        {# ----------------- WAVE 5 ----------------- #}
+        {# ----------------- ADULT SKILLS FUND ----------------- #}
         <section>
-            <h2 class="govuk-heading-l">Adult Skills Fund</h2>
+            <h2 class="govuk-heading-l govuk-!-margin-bottom-3">Adult Skills Fund</h2>
 
             <dl class="govuk-summary-list">
                 
-                {# Created by / Date created Row (Requires custom class for 4-column layout) #}
-                <div class="govuk-summary-list__row four-column-row">
-                    <dt class="govuk-summary-list__key">Created by</dt>
-                    <dd class="govuk-summary-list__value">Lucy Steven</dd>
-                    <dt class="govuk-summary-list__key">Date created</dt>
-                    <dd class="govuk-summary-list__value">15-07-2024</dd>
+                {# Manage Link Row (Uses standard 3-column structure) #}
+                <div class="govuk-summary-list__row govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+                    <dt class="govuk-summary-list__key">Description</dt>
+                    <dd class="govuk-summary-list__value">Wave 5 for financial year...</dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">Manage</a>
+                    </dd>
                 </div>
+                
+                {# Created by / Date created Row - WORKAROUND #}
+                <div class="govuk-summary-list__row govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+                    <dt class="govuk-summary-list__key govuk-visually-hidden">Creation Info</dt>
+                    <dd class="govuk-summary-list__value govuk-!-width-full">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-!-font-weight-bold govuk-!-display-inline-block govuk-!-width-one-third">Created by</strong>
+                                <span class="govuk-!-display-inline-block govuk-!-width-two-thirds">Lucy Steven</span>
+                            </div>
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-!-font-weight-bold govuk-!-display-inline-block govuk-!-width-one-half">Date created</strong>
+                                <span class="govuk-!-display-inline-block govuk-!-width-one-half">15-07-2024</span>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions"></dd> 
+                </div>
 
-                {# Modified by / Last modified Row (Requires custom class for 4-column layout) #}
-                <div class="govuk-summary-list__row four-column-row">
-                    <dt class="govuk-summary-list__key">Modified by</dt>
-                    <dd class="govuk-summary-list__value">Alan Stick</dd>
-                    <dt class="govuk-summary-list__key">Last modified</dt>
-                    <dd class="govuk-summary-list__value">15-07-2024</dd>
-                </div>
+                {# Modified by / Last modified Row - WORKAROUND #}
+                <div class="govuk-summary-list__row govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+                    <dt class="govuk-summary-list__key govuk-visually-hidden">Modification Info</dt>
+                    <dd class="govuk-summary-list__value govuk-!-width-full">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-!-font-weight-bold govuk-!-display-inline-block govuk-!-width-one-third">Modified by</strong>
+                                <span class="govuk-!-display-inline-block govuk-!-width-two-thirds">Alan Stick</span>
+                            </div>
+                            <div class="govuk-grid-column-one-half">
+                                <strong class="govuk-!-font-weight-bold govuk-!-display-inline-block govuk-!-width-one-half">Last modified</strong>
+                                <span class="govuk-!-display-inline-block govuk-!-width-one-half">15-07-2024</span>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd class="govuk-summary-list__actions"></dd> 
+                </div>
             </dl>
         </section>
     </div>
