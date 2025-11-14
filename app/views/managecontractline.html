@@ -1,69 +1,55 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Start page example
+  Manage contract line
 {% endblock %}
-
 
 {% block content %}
 {% include "./includes/nav.html" %}
 
-<div class="govuk-width-container">
-    <a href="#" class="govuk-back-link">Back</a>
-    <main class="govuk-main-wrapper">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">      
-    
-            <h1 class="govuk-heading-l">Manage contract line</h1>
-            <table class="govuk-table">
-                <tbody class="govuk-table__body">
-                    <tr class="govuk-table__row">
-                        </td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                        <td class="govuk-table__cell govuk-!-font-weight-bold">
-                            <label for="ContractFundingWaveDescription">
-                                Change the contract line
-                            </label>
-                            <a class="govuk-button" type="delete" id="deleteButton" name="delete" class="govuk-button" value="Edit">Delete</a
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-</style>
+  	<a href="#" class="govuk-back-link">Back</a>
 
-                            <label class="govuk-label">
-                        </td>
-                    </tr>
-                        <td class="govuk-table__cell govuk-!-font-weight-bold">
-                            <tr class="govuk-table__row">
-                        <td class="govuk-table__cell govuk-!-font-weight-bold">
-                            <label for="display-in-sld">
-                                Display in SLD
-                            </label>
-                        </td>
-                        <td class="govuk-table__cell">
-                            <div class="govuk-checkboxes__item margin-bottom-5">
-                                <input class="govuk-checkboxes__input" id="display-in-sld" type="checkbox" checked="checked" data-val="true" data-val-required="The DisplayInSLD field is required." name="DisplayInSLD" value="true">
-                                <span class="govuk-label govuk-checkboxes__label" for="display-in-sld">
-                                </span>
-                            </div>
-                            </label>
-                                </span>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="govuk-button-group">
-                <a class="govuk-button" type="submit" id="submitButton" href="/contractline" name="save" class="govuk-button" value="save">Save</a>
-                <a class="govuk-link" href="/contractline">Cancel</a>
-            </div>
-                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8G7gS31nNThAl6QmW19BnUEPc9YVU5v4vWNDd9GW8TniHGmAUn13M7Vg3LzEKRBceUQiyoaozbAjT6giudod8lWnp-p00WUvYdCTPkTI_rDrvIVAU95vRUHb84ywKWQ3y6Umg2OhSzYs_PpKQPqETaJY3oPdErwhxfhvppBMJJ0VO5hdAQGwQF4aJe6yYoDndw"></form>
+  	<h1 class="govuk-heading-l">Manage contract line</h1>
 
-                </div>
-            </main>
-        </div>
+  	  	  	<div class="govuk-form-group" style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #b1b4b6; padding-bottom: 20px; margin-bottom: 30px;">
+  		<span class="govuk-body" style="font-weight: 700;">
+  			Change the contract line
+  		</span>
+  		
+  		  		<form action="/delete-action-url" method="post" novalidate style="margin-bottom: 0;">
+  			  			<button class="govuk-button govuk-button--warning" data-module="govuk-button">
+  				Delete
+  			</button>
+  		</form>
+  	</div>
 
-    </main>
+  	  	<form action="/save-action-url" method="post" novalidate>
+
+  		  		<div class="govuk-form-group">
+  			<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+  				<div class="govuk-checkboxes__item">
+  					<input class="govuk-checkboxes__input" id="display-in-sld" name="DisplayInSLD" type="checkbox" value="true" checked>
+  					<label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="display-in-sld">
+  						Display in SLD
+  					</label>
+  				</div>
+  			</div>
+  		</div>
+
+  		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+  		  		<div class="govuk-button-group">
+  			  			<button class="govuk-button" data-module="govuk-button" type="submit">
+		        Save
+		    </button>
+  			
+  			  			<a class="govuk-link" href="/contractline">Cancel</a>
+  		</div>
+
+  	</form>   </div>
 </div>
-
 
 {% endblock %}
