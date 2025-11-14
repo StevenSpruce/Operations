@@ -11,55 +11,93 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-  	<h1 class="govuk-heading-xl">Contract funding waves</h1>
+    <h1 class="govuk-heading-xl">Contract funding waves</h1>
 
-  	<a class="govuk-button" href="/AddContractLine">Add a new contract funding wave</a>
+    <a class="govuk-button" href="/AddContractLine">Add a new contract funding wave</a>
 
-  	<div class="govuk-body">
-  		<section>
-  			<h2 class="govuk-heading-m">Wave 6</h2>
-  			<dl class="govuk-summary-list govuk-!-margin-bottom-1">
-  				<div class="govuk-summary-list__row">
-  					  					<dt class="govuk-summary-list__key govuk-!-width-one-quarter govuk-!-white-space-nowrap">Created by</dt>
-  					<dd class="govuk-summary-list__value govuk-!-width-one-sixth">Steven Spruce</dd>
-  					<dt class="govuk-summary-list__key govuk-!-width-one-quarter govuk-!-white-space-nowrap">Date created</dt>
-  					<dd class="govuk-summary-list__value govuk-!-width-one-sixth">20-03-2025</dd>
-  					<dd class="govuk-summary-list__actions govuk-!-width-one-sixth">
-  						<a class="govuk-link" href="#">Manage</a>
-  					</dd>
-  				</div>
-  				<div class="govuk-summary-list__row">
-  					<dt class="govuk-summary-list__key govuk-!-width-one-quarter govuk-!-white-space-nowrap">Modified by</dt>
-  					<dd class="govuk-summary-list__value govuk-!-width-one-sixth">Steven Spruce</dd>
-  					<dt class="govuk-summary-list__key govuk-!-width-one-quarter govuk-!-white-space-nowrap">Last modified</dt>
-  					<dd class="govuk-summary-list__value govuk-!-width-one-sixth">20-03-2025</dd>
-  					  					<dd class="govuk-summary-list__actions govuk-!-width-one-sixth"></dd>
-  				</div>
-  			</dl>
-  		</section>
+    <div class="govuk-body">
 
-  		<section>
-  			<h2 class="govuk-heading-m">Wave 5</h2>
-  			<dl class="govuk-summary-list govuk-!-margin-bottom-1">
-  				<div class="govuk-summary-list__row">
-  					<dt class="govuk-summary-list__key govuk-!-width-one-quarter govuk-!-white-space-nowrap">Created by</dt>
-  					<dd class="govuk-summary-list__value govuk-!-width-one-sixth">Steven Spruce</dd>
-  					<dt class="govuk-summary-list__key govuk-!-width-one-quarter govuk-!-white-space-nowrap">Date created</dt>
-  					<dd class="govuk-summary-list__value govuk-!-width-one-sixth">15-07-2024</dd>
-  					<dd class="govuk-summary-list__actions govuk-!-width-one-sixth">
-  						<a class="govuk-link" href="#">Manage</a>
-  					</dd>
-  				</div>
-  				<div class="govuk-summary-list__row">
-  					<dt class="govuk-summary-list__key govuk-!-width-one-quarter govuk-!-white-space-nowrap">Modified by</dt>
-  					<dd class="govuk-summary-list__value govuk-!-width-one-sixth">Steven Spruce</dd>
-  					<dt class="govuk-summary-list__key govuk-!-width-one-quarter govuk-!-white-space-nowrap">Last modified</dt>
-  					<dd class="govuk-summary-list__value govuk-!-width-one-sixth">15-07-2024</dd>
-  					  					<dd class="govuk-summary-list__actions govuk-!-width-one-sixth"></dd>
-  				</div>
-  			</dl>
-  		</section>
-  	</div>
+        {# ----------------- WAVE 6 ----------------- #}
+        <section>
+            <h2 class="govuk-heading-l">Wave 6</h2>
+            {# The H2 heading uses govuk-heading-l in the image, not govuk-heading-m #}
+
+            <dl class="govuk-summary-list">
+                {# Description Row with Manage link #}
+                <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+                    <dt class="govuk-summary-list__key">Description</dt>
+                    <dd class="govuk-summary-list__value">Wave 6 for financial year 01 April 2025 to 31 March 2026 (2025-26).</dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">Manage</a>
+                    </dd>
+                </div>
+
+                {# Start Date / End Date Row (Requires custom class for 4-column layout) #}
+                <div class="govuk-summary-list__row four-column-row">
+                    <dt class="govuk-summary-list__key">Start date</dt>
+                    <dd class="govuk-summary-list__value">01-04-2025</dd>
+                    <dt class="govuk-summary-list__key">End date</dt>
+                    <dd class="govuk-summary-list__value">31-03-2026</dd>
+                </div>
+                
+                {# Created by / Date created Row (Requires custom class for 4-column layout) #}
+                <div class="govuk-summary-list__row four-column-row">
+                    <dt class="govuk-summary-list__key">Created by</dt>
+                    <dd class="govuk-summary-list__value">Steven Spruce</dd>
+                    <dt class="govuk-summary-list__key">Date created</dt>
+                    <dd class="govuk-summary-list__value">20-03-2025</dd>
+                </div>
+
+                {# Modified by / Last modified Row (Requires custom class for 4-column layout) #}
+                <div class="govuk-summary-list__row four-column-row">
+                    <dt class="govuk-summary-list__key">Modified by</dt>
+                    <dd class="govuk-summary-list__value">Steven Spruce</dd>
+                    <dt class="govuk-summary-list__key">Last modified</dt>
+                    <dd class="govuk-summary-list__value">20-03-2025</dd>
+                </div>
+            </dl>
+        </section>
+
+        {# ----------------- WAVE 5 ----------------- #}
+        <section>
+            <h2 class="govuk-heading-l">Wave 5</h2>
+
+            <dl class="govuk-summary-list">
+                {# Description Row with Manage link #}
+                <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+                    <dt class="govuk-summary-list__key">Description</dt>
+                    <dd class="govuk-summary-list__value">Wave 5 for financial year 01 April 2024 to 31 March 2025 (2024-25).</dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">Manage</a>
+                    </dd>
+                </div>
+
+                {# Start Date / End Date Row (Requires custom class for 4-column layout) #}
+                <div class="govuk-summary-list__row four-column-row">
+                    <dt class="govuk-summary-list__key">Start date</dt>
+                    <dd class="govuk-summary-list__value">01-04-2024</dd>
+                    <dt class="govuk-summary-list__key">End date</dt>
+                    <dd class="govuk-summary-list__value">31-03-2025</dd>
+                </div>
+                
+                {# Created by / Date created Row (Requires custom class for 4-column layout) #}
+                <div class="govuk-summary-list__row four-column-row">
+                    <dt class="govuk-summary-list__key">Created by</dt>
+                    <dd class="govuk-summary-list__value">Steven Spruce</dd>
+                    <dt class="govuk-summary-list__key">Date created</dt>
+                    <dd class="govuk-summary-list__value">15-07-2024</dd>
+                </div>
+
+                {# Modified by / Last modified Row (Requires custom class for 4-column layout) #}
+                <div class="govuk-summary-list__row four-column-row">
+                    <dt class="govuk-summary-list__key">Modified by</dt>
+                    <dd class="govuk-summary-list__value">Steven Spruce</dd>
+                    <dt class="govuk-summary-list__key">Last modified</dt>
+                    <dd class="govuk-summary-list__value">15-07-2024</dd>
+                </div>
+            </dl>
+        </section>
+    </div>
   </div>
 </div>
 
