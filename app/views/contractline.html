@@ -17,17 +17,30 @@
 
     <div class="govuk-body">
 
-        {# ----------------- WAVE 6 ----------------- #}
+        {# ----------------- WAVE 6 ----------------- #}
         <section>
             <h2 class="govuk-heading-l">Wave 6</h2>
-            {# The H2 heading uses govuk-heading-l in the image, not govuk-heading-m #}
+            
             <dl class="govuk-summary-list">
-                <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+                
+                {# Description Row with Manage link on the right (Replicates the link location from the image) #}
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Description</dt>
+                    <dd class="govuk-summary-list__value">Wave 6 for financial year 01 April 2025 to 31 March 2026 (2025-26).</dd>
+                    <dd class="govuk-summary-list__actions">
                         <a class="govuk-link" href="#">Manage</a>
                     </dd>
                 </div>
-                
-                {# Created by / Date created Row (Requires custom class for 4-column layout) #}
+
+                {# Start Date / End Date Row (Using the four-column-row custom class from earlier) #}
+                <div class="govuk-summary-list__row four-column-row">
+                    <dt class="govuk-summary-list__key">Start date</dt>
+                    <dd class="govuk-summary-list__value">01-04-2025</dd>
+                    <dt class="govuk-summary-list__key">End date</dt>
+                    <dd class="govuk-summary-list__value">31-03-2026</dd>
+                </div>
+                
+                {# Created by / Date created Row #}
                 <div class="govuk-summary-list__row four-column-row">
                     <dt class="govuk-summary-list__key">Created by</dt>
                     <dd class="govuk-summary-list__value">Steven Spruce</dd>
@@ -35,7 +48,7 @@
                     <dd class="govuk-summary-list__value">20-03-2025</dd>
                 </div>
 
-                {# Modified by / Last modified Row (Requires custom class for 4-column layout) #}
+                {# Modified by / Last modified Row #}
                 <div class="govuk-summary-list__row four-column-row">
                     <dt class="govuk-summary-list__key">Modified by</dt>
                     <dd class="govuk-summary-list__value">Steven Spruce</dd>
@@ -45,13 +58,30 @@
             </dl>
         </section>
 
-        {# ----------------- WAVE 5 ----------------- #}
+        {# ----------------- WAVE 5 ----------------- #}
         <section>
             <h2 class="govuk-heading-l">Wave 5</h2>
 
             <dl class="govuk-summary-list">
                 
-                {# Created by / Date created Row (Requires custom class for 4-column layout) #}
+                {# Description Row with Manage link on the right (NEWLY ADDED) #}
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Description</dt>
+                    <dd class="govuk-summary-list__value">Wave 5 for financial year 01 April 2024 to 31 March 2025 (2024-25).</dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">Manage</a>
+                    </dd>
+                </div>
+                
+                {# Start Date / End Date Row #}
+                <div class="govuk-summary-list__row four-column-row">
+                    <dt class="govuk-summary-list__key">Start date</dt>
+                    <dd class="govuk-summary-list__value">01-04-2024</dd>
+                    <dt class="govuk-summary-list__key">End date</dt>
+                    <dd class="govuk-summary-list__value">31-03-2025</dd>
+                </div>
+
+                {# Created by / Date created Row #}
                 <div class="govuk-summary-list__row four-column-row">
                     <dt class="govuk-summary-list__key">Created by</dt>
                     <dd class="govuk-summary-list__value">Steven Spruce</dd>
@@ -59,7 +89,7 @@
                     <dd class="govuk-summary-list__value">15-07-2024</dd>
                 </div>
 
-                {# Modified by / Last modified Row (Requires custom class for 4-column layout) #}
+                {# Modified by / Last modified Row #}
                 <div class="govuk-summary-list__row four-column-row">
                     <dt class="govuk-summary-list__key">Modified by</dt>
                     <dd class="govuk-summary-list__value">Steven Spruce</dd>
