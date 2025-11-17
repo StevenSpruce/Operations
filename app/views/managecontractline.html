@@ -4,56 +4,104 @@
   Manage contract line
 {% endblock %}
 
+{% block header %}
+  {#
+    The GOV.UK header component is usually rendered here via the layout.html file.
+    We'll ensure the service name matches the image.
+  #}
+  {% include "includes/header.html" %}
+{% endblock %}
+
+
+{% block beforeContent %}
+    {# Custom Secondary Navigation Bar based on the image #}
+    <div class="govuk-width-container govuk-!-padding-top-2">
+        <nav class="app-sub-navigation">
+            <ul class="app-sub-navigation__list">
+                <li class="app-sub-navigation__item">
+                    <a class="app-sub-navigation__link" href="#">Home</a>
+                </li>
+                <li class="app-sub-navigation__item">
+                    <a class="app-sub-navigation__link" href="#">Collections</a>
+                </li>
+                <li class="app-sub-navigation__item">
+                    <a class="app-sub-navigation__link" href="#">Dashboards</a>
+                </li>
+                <li class="app-sub-navigation__item">
+                    <a class="app-sub-navigation__link" href="#">Period end</a>
+                </li>
+                <li class="app-sub-navigation__item">
+                    <a class="app-sub-navigation__link" href="#">Providers</a>
+                </li>
+                <li class="app-sub-navigation__item">
+                    <a class="app-sub-navigation__link" href="#">Reference data</a>
+                </li>
+                <li class="app-sub-navigation__item">
+                    <a class="app-sub-navigation__link" href="#">Reports</a>
+                </li>
+                <li class="app-sub-navigation__item">
+                    <a class="app-sub-navigation__link" href="#">SLD admin</a>
+                </li>
+                <li class="app-sub-navigation__item">
+                    <a class="app-sub-navigation__link" href="#">Tools</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" class="govuk-back-link">Back</a>
+    </div>
+
+{% endblock %}
+
+
 {% block content %}
-{% include "./includes/nav.html" %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-full">
+    
+    <h1 class="govuk-heading-xl">Manage contract line</h1>
 
-  	<a href="#" class="govuk-back-link">Back</a>
+    <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="change-contract-line">
+            Change the contract line
+        </label>
+        
+        {# Text Input (Placeholder for the contract line field itself) #}
+        <input class="govuk-input govuk-!-width-one-half" id="change-contract-line" name="change-contract-line" type="text" value="">
+        
+        {# Delete Button (Red, floats right) #}
+        <button class="govuk-button govuk-button--warning govuk-!-margin-left-2" data-module="govuk-button">
+            Delete
+        </button>
 
-  	<h1 class="govuk-heading-l">Manage contract line</h1>
+    </div>
 
-  	  	<div class="govuk-grid-row" style="display: flex; align-items: center; border-bottom: 1px solid #b1b4b6; padding-bottom: 20px; margin-bottom: 30px;">
-  		<div class="govuk-grid-column-one-half">
-  			<span class="govuk-body" style="font-weight: 700;">
-  				Change the contract line
-  			</span>
-  		</div>
-  		<div class="govuk-grid-column-one-half" style="text-align: right;">
-  			  			<form action="/delete-action-url" method="post" novalidate style="margin-bottom: 0;">
-  				  				<button class="govuk-button govuk-button--warning" data-module="govuk-button">
-  					Delete
-  				</button>
-  			</form>
-  		</div>
-  	</div>
+    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
 
+    {# Checkbox for "Display in SLD" #}
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="display-hint">
+            <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="display-in-sld" name="display-in-sld" type="checkbox" value="yes" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="display-in-sld">
+                        Display in SLD
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+    </div>
 
-  	  	<form action="/save-action-url" method="post" novalidate>
+    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--l">
+    
+    {# Action Buttons (Save/Cancel) #}
+    <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+            Save
+        </button>
+        <a class="govuk-link" href="#">Cancel</a>
+    </div>
 
-  		  		<div class="govuk-form-group">
-  			<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-  				<div class="govuk-checkboxes__item">
-  					<input class="govuk-checkboxes__input" id="display-in-sld" name="DisplayInSLD" type="checkbox" value="true" checked>
-  					<label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="display-in-sld">
-  						Display in SLD
-  					</label>
-  				</div>
-  			</div>
-  		</div>
-  		
-  		  		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-  		  		<div class="govuk-button-group">
-  			  			<button class="govuk-button" data-module="govuk-button" type="submit">
-		        Save
-		    </button>
-  			
-  			  			<a class="govuk-link" href="/contractline">Cancel</a>
-  		</div>
-
-  	</form>   </div>
+  </div>
 </div>
 
 {% endblock %}
