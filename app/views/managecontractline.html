@@ -1,61 +1,69 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Manage contract line
+  Staff list
 {% endblock %}
 
 {% block content %}
 {% include "./includes/nav.html" %}
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <a href="#" class="govuk-back-link">Back</a>
+    <a href="/dashboard" class="govuk-back-link">Return to dashboard</a>
 
-    <h1 class="govuk-heading-l">Manage contract line</h1>
+    <h1 class="govuk-heading-l">Staff list</h1>
 
-        <div class="govuk-grid-row" style="display: flex; align-items: center; border-bottom: 1px solid #b1b4b6; padding-bottom: 10px; margin-bottom: 10px;">
-                        <div class="govuk-grid-column-one-half">
-                <span class="govuk-body" style="font-weight: 700;">
-                    Delete the contract line
-                </span>
-            </div>
-            <div class="govuk-grid-column-one-half" style="text-align: right;">
-                <form action="/delete-action-url" method="post" novalidate style="margin-bottom: 0; display: inline;">
-                    <button class="govuk-button govuk-button--warning" data-module="govuk-button" style="margin-bottom: 0;">
-                        Delete
-                    </button>
-                </form>
-            </div>
+    <h2 class="govuk-heading-m">Staff data completion details</h2>
+
+        <div class="govuk-grid-row" style="display: flex; align-items: center; border-bottom: 1px solid #b1b4b6; padding-bottom: 10px; margin-bottom: 20px;">
+        <div class="govuk-grid-column-one-half">
+            <span class="govuk-body" style="font-weight: 700;">
+                Complete the staff collection
+            </span>
         </div>
-        
-        <form action="/save-action-url" method="post" novalidate>
-            <div class="govuk-grid-row govuk-form-group" style="align-items: center; margin-bottom: 20px;">
-                <div class="govuk-grid-column-one-half">
-                    <label class="govuk-label govuk-!-font-weight-bold" for="display-in-sld">
-                        Display in SLD
-                    </label>
-                </div>
-                <div class="govuk-grid-column-one-half" style="text-align: right;">
-                    <div class="govuk-checkboxes" data-module="govuk-checkboxes" style="display: inline-block;">
-                        <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="display-in-sld" name="DisplayInSLD" type="checkbox" value="true" checked>
-                            <label class="govuk-label govuk-checkboxes__label" for="display-in-sld" style="position: absolute; width: 1px; height: 1px; margin: 0; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">
-                                Display in SLD
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-                <div class="govuk-button-group">
-                        <button class="govuk-button" data-module="govuk-button" type="submit">
-                Save
-            </button>
-                        <a class="govuk-link" href="/contractline">Cancel</a>
+        <div class="govuk-grid-column-one-half" style="text-align: right;">
+                        <form action="/complete-collection-url" method="post" novalidate style="margin-bottom: 0; display: inline;">
+                <button class="govuk-button govuk-button--warning" data-module="govuk-button" style="margin-bottom: 0;">
+                    Complete
+                </button>
+            </form>
         </div>
+    </div>
+            <p class="govuk-body"><a href="#">Completed staff members</a></p>
+    <p class="govuk-body"><a href="#">Incomplete staff members</a></p>
 
-    </form>   </div>
+    <p class="govuk-body">All staff data is complete</p>
+    <p class="govuk-body">There are 3 completed staff members recorded</p>
+
+        <table class="govuk-table">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Name</th>
+                <th scope="col" class="govuk-table__header">Date of birth</th>
+                <th scope="col" class="govuk-table__header">Action</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">test Test</td>
+                <td class="govuk-table__cell">03 March 1980</td>
+                <td class="govuk-table__cell"><a href="#">Change</a> <a href="#">Delete</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Test Test</td>
+                <td class="govuk-table__cell">29 October 1996</td>
+                <td class="govuk-table__cell"><a href="#">Change</a> <a href="#">Delete</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Test testt</td>
+                <td class="govuk-table__cell">03 March 1980</td>
+                <td class="govuk-table__cell"><a href="#">Change</a> <a href="#">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="#" class="govuk-button govuk-button--secondary">Add another staff member</a>
+
+  </div>
 </div>
-
 {% endblock %}
