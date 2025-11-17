@@ -1,100 +1,73 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Contract Funding Waves
+    Contract funding line
 {% endblock %}
 
 {% block content %}
 {% include "./includes/nav.html" %}
 
-<a href="#" class="govuk-back-link">Back</a>
-
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <h1 class="govuk-heading-xl">Contract funding line</h1>
+  <div class="govuk-grid-column-two-thirds">
 
-    <a class="govuk-button govuk-!-margin-bottom-4" href="/AddContractLine">Add a new contract line</a>
+    <a href="#" class="govuk-back-link">Back</a>
 
-    <div class="govuk-body">
+    <h1 class="govuk-heading-l">Contract funding line</h1>
 
-        {# ----------------- SKILLS BOOTCAMPS ----------------- #}
-        <section>
-            <h2 class="govuk-heading-l govuk-!-margin-bottom-3">Skills Bootcamps</h2>
-            
-            {# MANAGE LINK ROW - Placed on the right above the data list #}
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full govuk-!-text-align-right govuk-!-margin-bottom-2">
-                    <a class="govuk-link" href="/managecontractline">Manage</a>
-                </div>
-            </div>
+    <a href="#" class="govuk-button">Add a new contract line</a>
 
-            <dl class="govuk-summary-list">
-                
-                {# Row 1: Created by (Standard 2-column, fixes wrapping) #}
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">Created by</dt>
-                    <dd class="govuk-summary-list__value">Janet William</dd>
-                </div>
-                
-                {# Row 2: Date created (Standard 2-column, fixes wrapping) #}
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">Date created</dt>
-                    <dd class="govuk-summary-list__value">20-03-2025</dd>
-                </div>
+    <div class="govuk-!-margin-top-6">
+        <h2 class="govuk-heading-m">Skills Bootcamps</h2>
+        <p class="govuk-body" style="float: right; margin-top: -30px;"><a href="#">Manage</a></p> 
 
-                {# Row 3: Modified by (Standard 2-column, fixes wrapping) #}
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">Modified by</dt>
-                    <dd class="govuk-summary-list__value">Mary Block</dd>
-                </div>
+        {{ govukSummaryList({
+            rows: [
+                {
+                    key: { text: "Created by" },
+                    value: { text: "Janet William" }
+                },
+                {
+                    key: { text: "Date created" },
+                    value: { text: "20-03-2025" }
+                },
+                {
+                    key: { text: "Modified by" },
+                    value: { text: "Mary Block" }
+                },
+                {
+                    key: { text: "Last modified" },
+                    value: { text: "20-03-2025" }
+                }
+            ]
+        }) }}
+    </div>
 
-                {# Row 4: Last modified (Standard 2-column, fixes wrapping) #}
-                <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">Last modified</dt>
-                    <dd class="govuk-summary-list__value">20-03-2025</dd>
-                </div>
-            </dl>
-        </section>
+    <div class="govuk-!-margin-top-6">
+        <h2 class="govuk-heading-m">Adult Skills Fund</h2>
+        <p class="govuk-body" style="float: right; margin-top: -30px;"><a href="#">Manage</a></p>
 
-        {# ----------------- ADULT SKILLS FUND ----------------- #}
-        <section>
-            <h2 class="govuk-heading-l govuk-!-margin-bottom-3">Adult Skills Fund</h2>
+        {{ govukSummaryList({
+            rows: [
+                {
+                    key: { text: "Created by" },
+                    value: { text: "Lucy Steven" }
+                },
+                {
+                    key: { text: "Date created" },
+                    value: { text: "15-07-2024" }
+                },
+                {
+                    key: { text: "Modified by" },
+                    value: { text: "Alan Stick" }
+                },
+                {
+                    key: { text: "Last modified" },
+                    value: { text: "15-07-2024" }
+                }
+            ]
+        }) }}
+    </div>
 
-            {# MANAGE LINK ROW - Placed on the right above the data list #}
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full govuk-!-text-align-right govuk-!-margin-bottom-2">
-                    <a class="govuk-link" href="/managecontractline">Manage</a>
-                </div>
-            </div>
-            
-            <dl class="govuk-summary-list">
-                
-                {# Row 1: Created by (Standard 2-column, fixes wrapping) #}
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">Created by</dt>
-                    <dd class="govuk-summary-list__value">Lucy Steven</dd>
-                </div>
-
-                {# Row 2: Date created (Standard 2-column, fixes wrapping) #}
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">Date created</dt>
-                    <dd class="govuk-summary-list__value">15-07-2024</dd>
-                </div>
-
-                {# Row 3: Modified by (Standard 2-column, fixes wrapping) #}
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">Modified by</dt>
-                    <dd class="govuk-summary-list__value">Alan Stick</dd>
-                </div>
-
-                {# Row 4: Last modified (Standard 2-column, fixes wrapping) #}
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">Last modified</dt>
-                    <dd class="govuk-summary-list__value">15-07-2024</dd>
-                </div>
-            </dl>
-        </section>
-    </div>
   </div>
 </div>
 
