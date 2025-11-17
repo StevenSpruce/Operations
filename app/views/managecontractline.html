@@ -5,49 +5,32 @@
 {% endblock %}
 
 {% block header %}
-  {#
-    The GOV.UK header component is usually rendered here via the layout.html file.
-    We'll ensure the service name matches the image.
-  #}
+  {# Assuming the GOV.UK Header with "Data Collections Operations" is included here #}
   {% include "includes/header.html" %}
 {% endblock %}
 
 
 {% block beforeContent %}
-    {# Custom Secondary Navigation Bar based on the image #}
+    {# Custom Secondary Navigation Bar - relies heavily on your existing layout.html and Prototype Kit CSS #}
     <div class="govuk-width-container govuk-!-padding-top-2">
         <nav class="app-sub-navigation">
             <ul class="app-sub-navigation__list">
-                <li class="app-sub-navigation__item">
-                    <a class="app-sub-navigation__link" href="#">Home</a>
-                </li>
-                <li class="app-sub-navigation__item">
-                    <a class="app-sub-navigation__link" href="#">Collections</a>
-                </li>
-                <li class="app-sub-navigation__item">
-                    <a class="app-sub-navigation__link" href="#">Dashboards</a>
-                </li>
-                <li class="app-sub-navigation__item">
-                    <a class="app-sub-navigation__link" href="#">Period end</a>
-                </li>
-                <li class="app-sub-navigation__item">
-                    <a class="app-sub-navigation__link" href="#">Providers</a>
-                </li>
-                <li class="app-sub-navigation__item">
-                    <a class="app-sub-navigation__link" href="#">Reference data</a>
-                </li>
-                <li class="app-sub-navigation__item">
-                    <a class="app-sub-navigation__link" href="#">Reports</a>
-                </li>
-                <li class="app-sub-navigation__item">
-                    <a class="app-sub-navigation__link" href="#">SLD admin</a>
-                </li>
-                <li class="app-sub-navigation__item">
-                    <a class="app-sub-navigation__link" href="#">Tools</a>
-                </li>
+                {# This navigation structure assumes existing Prototype Kit CSS handles the horizontal layout #}
+                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">Home</a></li>
+                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">Collections</a></li>
+                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">Dashboards</a></li>
+                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">Period end</a></li>
+                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">Providers</a></li>
+                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">Reference data</a></li>
+                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">Reports</a></li>
+                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">SLD admin</a></li>
+                <li class="app-sub-navigation__item govuk-!-margin-top-2"><a class="app-sub-navigation__link" href="#">Tools</a></li>
             </ul>
         </nav>
         <a href="#" class="govuk-back-link">Back</a>
+    </div>
+    <div class="govuk-width-container">
+        {# Important banner would go here if needed #}
     </div>
 
 {% endblock %}
@@ -60,46 +43,55 @@
     
     <h1 class="govuk-heading-xl">Manage contract line</h1>
 
-    <div class="govuk-form-group">
-        <label class="govuk-label govuk-label--m" for="change-contract-line">
-            Change the contract line
-        </label>
-        
-        {# Text Input (Placeholder for the contract line field itself) #}
-        <input class="govuk-input govuk-!-width-one-half" id="change-contract-line" name="change-contract-line" type="text" value="">
-        
-        {# Delete Button (Red, floats right) #}
-        <button class="govuk-button govuk-button--warning govuk-!-margin-left-2" data-module="govuk-button">
-            Delete
-        </button>
+    {# Form Group for Change Contract Line and Delete Button #}
+    <form method="post">
+        <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="change-contract-line">
+                Change the contract line
+            </label>
+            
+            {# Field and Delete Button on the same visual line #}
+            <div class="govuk-!-display-inline-block govuk-!-width-one-half">
+                <input class="govuk-input" id="change-contract-line" name="change-contract-line" type="text" value="">
+            </div>
 
-    </div>
+            {# Delete Button (Red, uses margin-left to push away from the field) #}
+            <button class="govuk-button govuk-button--warning govuk-!-margin-left-2 govuk-!-margin-top-0" data-module="govuk-button" formaction="/delete-contract-line">
+                Delete
+            </button>
 
-    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+        </div>
+    </form>
+    
+    {# Horizontal Rule using GDS component #}
+    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">
 
     {# Checkbox for "Display in SLD" #}
-    <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="display-hint">
-            <div class="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="display-in-sld" name="display-in-sld" type="checkbox" value="yes" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="display-in-sld">
-                        Display in SLD
-                    </label>
+    <form method="post">
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="display-hint">
+                <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="display-in-sld" name="display-in-sld" type="checkbox" value="yes" checked>
+                        <label class="govuk-label govuk-checkboxes__label" for="display-in-sld">
+                            Display in SLD
+                        </label>
+                    </div>
                 </div>
-            </div>
-        </fieldset>
-    </div>
+            </fieldset>
+        </div>
 
-    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--l">
-    
-    {# Action Buttons (Save/Cancel) #}
-    <div class="govuk-button-group">
-        <button class="govuk-button" data-module="govuk-button">
-            Save
-        </button>
-        <a class="govuk-link" href="#">Cancel</a>
-    </div>
+        {# Horizontal Rule #}
+        <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--l govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+        
+        {# Action Buttons (Save/Cancel) #}
+        <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+                Save
+            </button>
+            <a class="govuk-link" href="#">Cancel</a>
+        </div>
+    </form>
 
   </div>
 </div>
