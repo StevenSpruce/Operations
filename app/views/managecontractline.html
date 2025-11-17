@@ -1,302 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage contract line</title>
+{% extends "layout.html" %}
 
-    <style>
-        /* Base GOV.UK Styles and Fonts */
-        body {
-            font-family: "GDS Transport", "Arial", sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #0b0c0c;
-            line-height: 1.25;
-            background-color: #f3f2f1; /* Light grey background outside content area */
-        }
-        
-        /* Layout Containers */
-        .govuk-main-wrapper {
-            max-width: 960px; 
-            margin: 0 auto;
-            padding: 30px 15px;
-            background-color: white; /* Content area is white */
-            min-height: 80vh;
-        }
+{% block pageTitle %}
+  Manage contract line
+{% endblock %}
 
-        /* --- Header Styling (Main Black Bar) --- */
-        .govuk-header {
-            background-color: #0b0c0c; 
-            color: white;
-            padding: 10px 0;
-        }
-        .govuk-header-content {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 19px;
-            font-weight: 700;
-        }
-        .govuk-logo {
-            font-size: 20px;
-            font-weight: 700;
-            border-right: 1px solid white;
-            padding-right: 10px;
-            margin-right: 10px;
-        }
-        .govuk-header-info a {
-            color: white;
-            text-decoration: underline;
-            margin-left: 10px;
-            font-size: 16px;
-            font-weight: 400;
-        }
+{% block content %}
+{% include "./includes/nav.html" %}
 
-        /* --- Secondary Navigation Bar --- */
-        .app-sub-navigation-wrapper {
-            background-color: white;
-            border-bottom: 1px solid #b1b4b6; 
-        }
-        .app-sub-navigation {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        .app-sub-navigation__list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .app-sub-navigation__item {
-            padding-right: 15px;
-            padding-bottom: 5px;
-        }
-        .app-sub-navigation__item:nth-child(9) {
-            /* The 'Tools' link needs to force a new line below the others */
-            width: 100%; 
-            padding-top: 5px;
-            border-top: 1px solid #b1b4b6;
-        }
-        .app-sub-navigation__link {
-            color: #1d70b8; /* Default GOV.UK link color */
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 700;
-            padding-top: 10px;
-            display: block;
-        }
-        .app-sub-navigation__link[href*="Reports"] {
-            color: #0b0c0c; /* Black color for active/visited links */
-        }
-        .app-sub-navigation__item:nth-child(8) .app-sub-navigation__link {
-             color: #0b0c0c; /* Black color for active/visited links */
-        }
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-        /* --- Content Headings/Links --- */
-        .govuk-back-link { 
-            font-size: 16px; 
-            margin: 20px 0;
-            display: block; 
-            text-decoration: none; 
-            color: #1d70b8; 
-        }
-        .govuk-heading-xl {
-            font-size: 48px;
-            font-weight: 700;
-            margin: 0 0 30px 0;
-        }
-        .govuk-label--m {
-            font-size: 24px;
-            font-weight: 700;
-            margin-right: 15px;
-        }
+  	<a href="#" class="govuk-back-link">Back</a>
 
-        /* --- Form Elements and Buttons --- */
-        .govuk-input {
-            padding: 8px 12px;
-            border: 2px solid #0b0c0c;
-            box-sizing: border-box;
-            font-size: 19px;
-            width: 100%;
-        }
-        .govuk-button {
-            padding: 8px 15px;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            line-height: 1.25;
-            display: inline-block;
-        }
-        .govuk-button--warning {
-            background-color: #d4351c; /* Red */
-            color: white;
-        }
-        .govuk-button--green {
-            background-color: #00703c; /* Green */
-            color: white;
-        }
-        .govuk-button-group a {
-            color: #1d70b8;
-            text-decoration: underline;
-            padding-left: 20px;
-            font-size: 19px;
-        }
-        
-        /* Checkbox Styling */
-        .govuk-checkboxes__item {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 38px;
-            line-height: 1.3157894737;
-            display: block;
-        }
-        .govuk-checkboxes__input {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 28px;
-            height: 28px;
-            opacity: 0;
-            z-index: 1;
-        }
-        .govuk-checkboxes__label {
-            font-size: 19px;
-            font-weight: 400;
-            padding-top: 5px;
-            cursor: pointer;
-        }
-        .govuk-checkboxes__label::before {
-            content: "";
-            border: 2px solid #0b0c0c;
-            width: 28px;
-            height: 28px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: white;
-            box-sizing: border-box;
-        }
-        .govuk-checkboxes__label::after {
-            content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13"><path fill="%23000" d="M12.33 3.33L5.33 10.33 0.67 5.67l1.33-1.33 3.33 3.33 5.67-5.67z"/></svg>');
-            width: 13px;
-            height: 13px;
-            position: absolute;
-            top: 7px;
-            left: 7px;
-            display: none;
-        }
-        .govuk-checkboxes__input:checked + .govuk-checkboxes__label::after {
-            display: block;
-        }
-        
-        /* Separator Lines */
-        .govuk-hr {
-            border: 0;
-            height: 1px;
-            background-color: #b1b4b6;
-            margin: 40px 0;
-        }
-        
-        /* Custom layout for Change Contract Line and Delete */
-        .field-delete-container {
-            display: flex;
-            align-items: flex-start;
-            margin-top: 10px; /* Space below the label */
-        }
-        .field-delete-container .input-wrapper {
-            flex-grow: 1;
-            max-width: 450px; /* Approximate width of one-half column */
-        }
-        .field-delete-container .govuk-button--warning {
-            margin-left: 15px;
-            margin-top: 0; /* Align with the top of the input field */
-        }
-    </style>
-</head>
-<body>
+  	<h1 class="govuk-heading-l">Manage contract line</h1>
 
-    <header class="govuk-header">
-        <div class="govuk-header-content">
-            <span class="govuk-logo">GOV.UK</span>
-            <span>Data Collections Operations</span>
-            <div class="govuk-header-info">
-                <span>Beau Durman</span>
-                <a href="#">Sign out</a>
-            </div>
-        </div>
-    </header>
+  	  	<div class="govuk-grid-row" style="display: flex; align-items: center; border-bottom: 1px solid #b1b4b6; padding-bottom: 20px; margin-bottom: 30px;">
+  		<div class="govuk-grid-column-one-half">
+  			<span class="govuk-body" style="font-weight: 700;">
+ 			Delete the contract line
+  			</span>
+  		</div>
+  		<div class="govuk-grid-column-ten" style="text-align: left;">
+  			  			<form action="/delete-action-url" method="post" novalidate style="margin-bottom: 0;">
+  				  				<button class="govuk-button govuk-button--warning" data-module="govuk-button">
+  					Delete
+  				</button>
+  			</form>
+  		</div>
+  	</div>
+  	  	<form action="/save-action-url" method="post" novalidate>
+  		  		<div class="govuk-form-group">
+  			<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+  				<div class="govuk-checkboxes__item">
+  					<input class="govuk-checkboxes__input" id="display-in-sld" name="DisplayInSLD" type="checkbox" value="true" checked>
+  					<label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="display-in-sld">
+  						Display in SLD
+  					</label>
+  				</div>
+  			</div>
+  		</div>
+  		  		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+  		  		<div class="govuk-button-group">
+  			  			<button class="govuk-button" data-module="govuk-button" type="submit">
+		        Save
+		    </button>
+  			  			<a class="govuk-link" href="/contractline">Cancel</a>
+  		</div>
 
-    <div class="app-sub-navigation-wrapper">
-        <nav class="app-sub-navigation">
-            <ul class="app-sub-navigation__list">
-                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">Home</a></li>
-                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">Collections</a></li>
-                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">Dashboards</a></li>
-                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">Period end</a></li>
-                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">Providers</a></li>
-                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">Reference data</a></li>
-                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">Reports</a></li>
-                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">SLD admin</a></li>
-                <li class="app-sub-navigation__item"><a class="app-sub-navigation__link" href="#">Tools</a></li>
-            </ul>
-        </nav>
-    </div>
+  	</form>   </div>
+</div>
 
-    <div class="govuk-main-wrapper">
-        <a href="#" class="govuk-back-link">Back</a>
-        <h1 class="govuk-heading-xl">Manage contract line</h1>
-
-        <form>
-            <div class="govuk-form-group">
-                <label class="govuk-label govuk-label--m" for="change-contract-line">
-                    Change the contract line
-                </label>
-                
-                <div class="field-delete-container">
-                    <div class="input-wrapper">
-                        <input class="govuk-input" id="change-contract-line" name="change-contract-line" type="text" value="[Current contract line name]">
-                    </div>
-                    
-                    <button class="govuk-button govuk-button--warning">
-                        Delete
-                    </button>
-                </div>
-            </div>
-
-            <hr class="govuk-hr">
-
-            <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                    <div class="govuk-checkboxes">
-                        <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="display-in-sld" name="display-in-sld" type="checkbox" value="yes" checked>
-                            <label class="govuk-label govuk-checkboxes__label" for="display-in-sld">
-                                Display in SLD
-                            </label>
-                        </div>
-                    </div>
-                </fieldset>
-            </div>
-
-            <hr class="govuk-hr">
-            
-            <div class="govuk-button-group">
-                <button class="govuk-button govuk-button--green">
-                    Save
-                </button>
-                <a class="govuk-link" href="#">Cancel</a>
-            </div>
-        </form>
-
-    </div>
-
-</body>
-</html>
+{% endblock %}
