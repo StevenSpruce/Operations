@@ -41,36 +41,6 @@
             ]
         }) }}
     </div>
-
-    <div class="govuk-!-margin-top-6">
-        <h2 class="govuk-heading-m">Adult Skills Fund</h2>
-        <p class="govuk-body" style="float: right; margin-top: -30px;"><a href="#">Manage</a></p>
-
-        {{ govukSummaryList({
-            rows: [
-                {
-                    key: { text: "Created by" },
-                    value: { text: "Lucy Steven" }
-                },
-                {
-                    key: { text: "Date created" },
-                    value: { text: "15-07-2024" }
-                },
-                {
-                    key: { text: "Modified by" },
-                    value: { text: "Alan Stick" }
-                },
-                {
-                    key: { text: "Last modified" },
-                    value: { text: "15-07-2024" }
-                }
-            ]
-        }) }}
-    </div>
-
-  </div>
-</div>
-
 <table class="govuk-table">
   <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption>
   <thead class="govuk-table__head">
@@ -95,4 +65,4 @@
   </tbody>
 </table>
 
-<endblock>
+{% endblock %}
