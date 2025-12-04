@@ -17,7 +17,7 @@
     <a href="#" class="govuk-button">Allocation Type</a>
 
     <div class="govuk-!-margin-top-6">
-        <h2 class="govuk-heading-m">Skills Bootcamps</h2>
+        <h2 class="govuk-heading-m">Contract Services</h2>
         <p class="govuk-body" style="float: right; margin-top: -30px;"><a href="#">Manage</a></p> 
 
         {{ govukSummaryList({
