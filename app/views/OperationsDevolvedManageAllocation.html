@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    Manage allocation type
+{% endblock %}
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <a href="#" class="govuk-back-link">Back</a>
+
+        <h1 class="govuk-heading-l">Manage allocation type</h1>
+
+        <div class="govuk-grid-row" style="display: flex; align-items: center; border-bottom: 1px solid #b1b4b6; padding-bottom: 10px; margin-bottom: 15px;">
+            <div class="govuk-grid-column-one-half">
+                <span class="govuk-body" style="font-weight: 700;">
+                    Delete the allocation type
+                </span>
+            </div>
+            <div class="govuk-grid-column-one-half" style="text-align: right;">
+                <form action="/delete-action-url" method="post" novalidate style="margin-bottom: 0; display: inline-block;">
+                    <button class="govuk-button govuk-button--warning" data-module="govuk-button" style="margin-bottom: 0;">
+                        Delete
+                    </button>
+                </form>
+            </div>
+        </div>
+        <form action="/save-action-url" method="post" novalidate>
+            <div class="govuk-form-group" style="margin-bottom: 20px;">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="display-in-sld" name="DisplayInSLD" type="checkbox" value="true" checked>
+                        <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="display-in-sld">
+                            Display in SLD
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="govuk-button-group">
+                <button class="govuk-button" data-module="govuk-button" type="submit">
+                    Save
+                </button>
+                <a class="govuk-link" href="/contractline">Cancel</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
