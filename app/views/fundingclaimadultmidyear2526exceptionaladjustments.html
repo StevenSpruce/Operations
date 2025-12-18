@@ -1,0 +1,77 @@
+<body class="govuk-template__body js-enabled">
+    <main class="govuk-main-wrapper" id="content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <a class="govuk-back-link" href="/fundingclaimsubmissions2425">Back</a>
+            </div>
+        </div>
+
+        <div class="govuk-grid-row govuk-!-display-flex govuk-!-justify-content-center">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <p class="govuk-body">
+                    If you do include any exceptional adjustments in your final funding claim, you must send supporting evidence within 5 working days of your claim being submitted. Your evidence must be submitted via the customer help portal, and clearly marked as relating to your 2025 to 2026 final funding claim. 
+                    If you're submitting evidence for more than one adjustment, make sure it’s clear which evidence supports each adjustment. If this isn’t clear, it could delay the review of your case. 
+                    Your case will be reviewed to confirm whether the exceptional adjustment reflects a data error affecting 5% or more of the appropriate contract value e.g. 
+                    •	Your adult skills fund contract value is £100,000.  We would only consider your exceptional adjustment if the amount you enter is more than £5,000. 
+                    •	Your advanced learner loans bursary contract value is £50,000. We would only consider your exceptional adjustment if the amount you enter is more than £2,500.  
+                    Adjustments below the threshold will normally be rejected. However, negative adjustments where you are due to return funding will still be accepted. All exceptional adjustments are subject to affordability, and the outcome of your case will be reflected in your final reconciliation statement. 
+                    What to Include in Your Evidence 
+                    Please provide: 
+                    1.	Why the adjustment was needed 
+                    •	Explain the issue and why you made the adjustment. 
+                    2.	Proof of the error and its impact 
+                    •	Include learner-level details like: 
+                    •	Unique Learner Number (ULN) or student reference numbers 
+                    •	Cost and/or spending details to support your claim 
+                    •	Do not include personal data (e.g. names, dates of birth, addresses) to comply with GDPR. 
+                    3.	Any extra information 
+                    •	Add anything else that supports your case.  
+                    Important 
+                    If you don’t send your evidence within 5 working days, your adjustment will be removed and won’t appear in your final reconciliation statement. 
+{% extends "layoutsld.html" %}
+{% block pageTitle %}
+Submit learner data
+{% endblock %}
+{% block content %}
+                </p>
+                <p class="govuk-body">
+                    Funding for learner support and learning support is included within your allocation.
+                    We will monitor the amount of funding you spend on support costs and may request evidence.
+                </p>
+                <p class="govuk-body">
+                    I certify that this funding claim is complete and accurate, and the funding has been spent
+                    in line with the conditions of grant and 2024 to 2025 funding and performance management rules.
+                </p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="https://www.gov.uk/government/publications/adult-skills-fund-funding-rules-for-2024-to-2025/adult-skills-fund-funding-rules-2024-to-2025" class="govuk-link">Adult education budget: funding and performance management rules 2024 to 2025</a></li>
+                    <li><a href="https://www.gov.uk/government/publications/advanced-learner-loans-funding-rules-2024-to-2025" class="govuk-link">Advanced learner loans funding rules: 2024 to 2025</a></li>
+                </ul>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="conditions-hint">
+                        <div id="conditions-hint" class="govuk-hint">
+                            
+                        </div>
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="confirmation" name="confirmation" type="checkbox" value="confirmed">
+                                <label class="govuk-label govuk-checkboxes__label" for="confirmation">
+                                    I confirm this data is correct and the grant has been spent in line with the conditions and rules.
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="govuk-button-group">
+                    <a class="govuk-button govuk-button--secondary" id="save" name="save" href="/FundingClaim2425FinishLater">
+                        Save and finish later
+                    </a>
+                    <a id="submit" name="submit" class="govuk-button" href="/fundingclaimconfirmation2425">
+                        Confirm and Submit
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+{% endblock %}
+
