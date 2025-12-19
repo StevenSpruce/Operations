@@ -1,139 +1,104 @@
 {% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-GOV.UK Prototype Kit
+  Teacher FTE Snapshot - GOV.UK Prototype Kit
 {% endblock %}
-
 
 {% block content %}
 
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
-        <main class="govuk-main-wrapper" id="content" role="main">
-            <div class="govuk-grid-row flex">
+<main class="govuk-main-wrapper" id="content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
-<div class="govuk-grid-row">
+      <span class="govuk-caption-l">Academic year: 1 August 2025 to 31 July 2026</span>
+      <h1 class="govuk-heading-l">
+        Teacher FTE Snapshot Collection
+      </h1>
 
-        <span class="govuk-caption-l">Academic year: 1 August 2025 to 31 July 2026</span>
-        <span class="govuk-caption-l">Return Period 3 (R03)</span>
-
-        <h1 class="govuk-heading-l">
-            What is your estimated number of Further Education (FE) Staff?
-        </h1>
-
-
-        <details class="govuk-details">
+      <details class="govuk-details">
         <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-            Help with your estimate
-            </span>
+          <span class="govuk-details__summary-text">
+            Help with your FTE estimate
+          </span>
         </summary>
         <div class="govuk-details__text">
-                    <p class="govuk-body">Your estimate should include FE staff that:</p>
-                <ul class="govuk-list govuk-list--bullet">
-                <li>will have at least one funding model 25 and source of funding 107 learning aims</li>
-                <li>will meet the criteria to count as a start for funding purposes</li>
-                <li>will have an earliest start date on or before the 1 November 2025</li>
-                <li>will fall within one of these 4 funding line types:</li>
-                <ul>
-                    <li>19+ Continuing Students (excluding EHCP)</li>
-                    <li>19-24 Students with an EHCP</li>
-                    <li>16-19 High Needs Students</li>
-                    <li>16-19 Students (excluding High Needs Students)</li>
-                </ul>
-                </ul>
+          <p class="govuk-body">Your estimate should include the total teacher FTE (Full Time Equivalent) for staff who:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>are on <strong>permanent</strong> or <strong>fixed-term</strong> contracts</li>
+            <li>are employed by General FE Colleges, Sixth Form Colleges, or school-based providers</li>
+          </ul>
+          <p class="govuk-body">Do not include agency staff or staff on casual contracts.</p>
         </div>
-        </details>
+      </details>
 
+      <form method="post" action="/fteSnapshotSuccess">
 
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="fte-2025-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                1. Confirm your Teacher FTE for 19 January 2025
+              </h2>
+            </legend>
+            
+            <div id="fte-2025-hint" class="govuk-hint">
+              Based on your AY24/25 FEWDC return, we have calculated your Teacher FTE as <strong>125.5</strong>.
+            </div>
 
-    
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="fte2025-accurate-yes" name="fte2025Accurate" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="fte2025-accurate-yes">
+                  Yes, 125.5 is accurate
+                </label>
+              </div>
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="fte2025-accurate-no" name="fte2025Accurate" type="radio" value="no" data-aria-controls="conditional-fte-correction">
+                <label class="govuk-label govuk-radios__label" for="fte2025-accurate-no">
+                  No, I need to correct this figure
+                </label>
+              </div>
 
-
-
-
-        <form method="post">
-            <div class="govuk-form-group">
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-fte-correction">
                 <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset">
-                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                            <h1 class="govuk-fieldset__heading">
-                                Estimated number of FE staff
-                            </h1>
-                        </legend>
-                        
-                        <input class="govuk-input govuk-input--width-4" id="count" name="count" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
-
-                    </fieldset>
+                  <label class="govuk-label" for="corrected-fte-2025">
+                    Enter the correct Teacher FTE for 19 January 2025
+                  </label>
+                  <div class="govuk-input__wrapper">
+                    <input class="govuk-input govuk-input--width-5" id="corrected-fte-2025" name="correctedFte2025" type="text" spellcheck="false" inputmode="decimal">
+                  </div>
                 </div>
+              </div>
             </div>
 
+          </fieldset>
+        </div>
 
-<table class="govuk-table">
-  <caption class="govuk-table__caption govuk-table__caption--m">Estimated FE staff counts</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header" width="150">Academic year</th>
-      <th scope="col" class="govuk-table__header" width="150">Return period</th>
-      <th scope="col" class="govuk-table__header" width="150">Estimate</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-        <td class="govuk-table__cell">2025 to 2026</td>
-        <td class="govuk-table__cell">R02</td>
-        <td class="govuk-table__cell">10,000</td>
-    </tr>
-  </tbody>
-</table>
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="fte-2026">
+              2. Estimated Teacher FTE for 19 January 2026
+            </label>
+          </h2>
+          <div id="fte-2026-hint" class="govuk-hint">
+            Enter your estimate for the current academic year (AY25/26) based on the same definition (permanent or fixed-term contracts).
+          </div>
+          <input class="govuk-input govuk-input--width-5" id="fte-2026" name="fte2026" type="text" spellcheck="false" aria-describedby="fte-2026-hint" inputmode="decimal">
+        </div>
 
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
 
+      </form>
 
-<table class="govuk-table">
-  <caption class="govuk-table__caption govuk-table__caption--m">Actual 16-19 student counts at R04</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header" width="150">Academic year</th>
-      <th scope="col" class="govuk-table__header" width="150">Number of 16-19 students</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">2024 to 2025</th>
-      <td class="govuk-table__cell">10,250</td>
-    </tr>
-        <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">2023 to 2024</th>
-      <td class="govuk-table__cell">10,100</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">2022 to 2023</th>
-      <td class="govuk-table__cell">9,500</td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-
-
-
-
-
-            <button class="govuk-button" type="submit" formaction="/1619AutumnSurveyDataEntrySuccess">
-                Save and continue
-            </button>
     </div>
-</div>
-
-
-                </div>
-            </div>
-        </main>
-    </div>
-</body>
-
-
+  </div>
+</main>
 
 {% endblock %}
