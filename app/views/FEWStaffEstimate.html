@@ -17,19 +17,32 @@
         Teacher FTE Snapshot Collection
       </h1>
 
+      <div class="govuk-inset-text">
+        <p class="govuk-body">
+          We are collecting this snapshot to track teacher numbers earlier in the academic year. 
+          This data will act as a leading indicator for progress toward the 6,500 teacher recruitment target 
+          and help inform decision-making before the full FE Workforce Data Collection (FEWDC).
+        </p>
+      </div>
+
       <details class="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
-            Help with your FTE estimate
+            Who should complete this and who to include
           </span>
         </summary>
         <div class="govuk-details__text">
-          <p class="govuk-body">Your estimate should include the total teacher FTE (Full Time Equivalent) for staff who:</p>
+          <h3 class="govuk-heading-s">Which providers are in scope?</h3>
+          <p class="govuk-body">This collection is required for:</p>
           <ul class="govuk-list govuk-list--bullet">
-            <li>are on <strong>permanent</strong> or <strong>fixed-term</strong> contracts</li>
-            <li>are employed by General FE Colleges, Sixth Form Colleges, or school-based providers</li>
+            <li>General FE Colleges (including Tertiary)</li>
+            <li>Sixth Form Colleges</li>
+            <li>School-based providers (e.g. ex-Sixth form colleges converted to 16-19 academies)</li>
           </ul>
-          <p class="govuk-body">Do not include agency staff or staff on casual contracts.</p>
+          <p class="govuk-body"><strong>Do not</strong> complete this if you are an Independent Training Provider (ITP), Special Post-16 institution, or Local Authority provider.</p>
+
+          <h3 class="govuk-heading-s">Staff definition</h3>
+          <p class="govuk-body">Include <strong>Full-Time Equivalent (FTE)</strong> for teachers on <strong>permanent</strong> or <strong>fixed-term</strong> contracts.</p>
         </div>
       </details>
 
@@ -44,7 +57,7 @@
             </legend>
             
             <div id="fte-2025-hint" class="govuk-hint">
-              Based on your AY24/25 FEWDC return, we have calculated your Teacher FTE as <strong>125.5</strong>.
+              Based on your 2024/25 FE Workforce Data Collection (FEWDC) return, we have calculated your Teacher FTE as <strong>125.5</strong>.
             </div>
 
             <div class="govuk-radios" data-module="govuk-radios">
@@ -58,7 +71,7 @@
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="fte2025-accurate-no" name="fte2025Accurate" type="radio" value="no" data-aria-controls="conditional-fte-correction">
                 <label class="govuk-label govuk-radios__label" for="fte2025-accurate-no">
-                  No, I need to correct this figure
+                  No, I need to edit this figure
                 </label>
               </div>
 
@@ -86,7 +99,7 @@
             </label>
           </h2>
           <div id="fte-2026-hint" class="govuk-hint">
-            Enter your estimate for the current academic year (AY25/26) based on the same definition (permanent or fixed-term contracts).
+            Enter your estimate for the current academic year (2025/26) using the same definition (permanent or fixed-term contracts).
           </div>
           <input class="govuk-input govuk-input--width-5" id="fte-2026" name="fte2026" type="text" spellcheck="false" aria-describedby="fte-2026-hint" inputmode="decimal">
         </div>
