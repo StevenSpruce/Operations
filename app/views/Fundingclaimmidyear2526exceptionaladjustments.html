@@ -5,20 +5,32 @@ Submit learner data
 {% endblock %}
 
 {% block content %}
+
+<div class="govuk-width-container">
+    
+    <div class="govuk-phase-banner">
+        <p class="govuk-phase-banner__content">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+                Beta
+            </strong>
+            <span class="govuk-phase-banner__text">
+                This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+            </span>
+        </p>
+    </div>
+
+    <a class="govuk-back-link" href="/fundingclaimsubmissions2425">Back</a>
+
     <main class="govuk-main-wrapper" id="content" role="main">
         <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full">
-                <a class="govuk-back-link" href="/fundingclaimsubmissions2425">Back</a>
-            </div>
-        </div>
+            <div class="govuk-grid-column-two-thirds">
 
-        <div class="govuk-grid-row govuk-!-display-flex govuk-!-justify-content-center">
-            <div style="max-width: 800px; margin: 0 auto;">
-                
+                <h1 class="govuk-heading-l">Exceptional adjustments guidance</h1>
+
                 <p class="govuk-body">
                     If you do include any exceptional adjustments in your final funding claim, you must send supporting evidence within 5 working days of your claim being submitted. Your evidence must be submitted via the customer help portal, and clearly marked as relating to your 2025 to 2026 final funding claim.
                 </p>
-                
+
                 <p class="govuk-body">
                     If you're submitting evidence for more than one adjustment, make sure it’s clear which evidence supports each adjustment. If this isn’t clear, it could delay the review of your case.
                 </p>
@@ -67,17 +79,43 @@ Submit learner data
                 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
                 <p class="govuk-body">
-                    I certify that this funding claim is complete and accurate, and the funding has been spent
-                    in line with the conditions of grant and 2024 to 2025 funding and performance management rules.
+                    I certify that this funding claim is complete and accurate, and the funding has been spent in line with the conditions of grant and 2024 to 2025 funding and performance management rules.
                 </p>
 
                 <ul class="govuk-list govuk-list--bullet">
-                    <li><a href="https://www.gov.uk/government/publications/adult-skills-fund-funding-rules-for-2024-to-2025/adult-skills-fund-funding-rules-2024-to-2025" class="govuk-link">Adult education budget: funding and performance management rules 2024 to 2025</a></li>
-                    <li><a href="https://www.gov.uk/government/publications/advanced-learner-loans-funding-rules-2024-to-2025" class="govuk-link">Advanced learner loans funding rules: 2024 to 2025</a></li>
+                    <li><a href="https://www.gov.uk/government/publications/adult-skills-fund-funding-rules-for-2024-to-2025/adult-skills-fund-funding-rules-2024-to-2025" class="govuk-link" rel="noreferrer noopener" target="_blank">Adult education budget: funding and performance management rules 2024 to 2025 (opens in new tab)</a></li>
+                    <li><a href="https://www.gov.uk/government/publications/advanced-learner-loans-funding-rules-2024-to-2025" class="govuk-link" rel="noreferrer noopener" target="_blank">Advanced learner loans funding rules: 2024 to 2025 (opens in new tab)</a></li>
                 </ul>
 
-                <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" aria-describedby="conditions-hint">
-                        <div id="conditions-hint" class="govuk-hint"></div>
-                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                            <div class="govuk-checkboxes__item
+                <form action="/fundingclaimconfirmation2425" method="post" novalidate>
+                    
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="confirmation" name="confirmation" type="checkbox" value="confirmed">
+                                    <label class="govuk-label govuk-checkboxes__label" for="confirmation">
+                                        I confirm this data is correct and the grant has been spent in line with the conditions and rules.
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="govuk-button-group">
+                        <a class="govuk-button govuk-button--secondary" href="/FundingClaim2425FinishLater">
+                            Save and finish later
+                        </a>
+                        <button class="govuk-button" data-module="govuk-button">
+                            Confirm and Submit
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </main>
+</div>
+
+{% endblock %}
