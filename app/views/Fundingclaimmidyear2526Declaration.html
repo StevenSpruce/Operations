@@ -1,44 +1,49 @@
 {% extends "layoutsld.html" %}
+
 {% block pageTitle %}
-Submit learner data
+  Submit learner data
 {% endblock %}
+
 {% block content %}
 <body class="govuk-template__body js-enabled">
     <main class="govuk-main-wrapper" id="content" role="main">
+        
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
                 <a class="govuk-back-link" href="/fundingclaimsubmissions2425">Back</a>
             </div>
         </div>
 
-        <div class="govuk-grid-row govuk-!-display-flex govuk-!-justify-content-center">
-            <div style="max-width: 800px; margin: 0 auto;">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds" style="float: none; margin: 0 auto;">
+                
                 <p class="govuk-body">
                     We may request further information and evidence relating to your claims that you have manually entered, including your Tailored Learning claim. Grant funding not used for its intended purposes must be excluded from the claim and returned. We will recover funding claimed in error.
                 </p>
+                
                 <p class="govuk-body">
                     Funding for learner support and learning support is included within your allocation. We will monitor the amount of funding you spend on support costs and may request evidence.
                 </p>
+                
                 <p class="govuk-body">
                     I certify that this funding claim is complete and accurate, and the funding has been spent in line with the conditions of grant and 2025 to 2026 funding and performance management rules.
                 </p>
+                
                 <ul class="govuk-list govuk-list--bullet">
                     <li>
-                        <a href="https://www.gov.uk/government/publications/adult-skills-fund-funding-rules/adult-skills-fund-funding-rules-2025-to-2026"> class="govuk-link">
+                        <a href="https://www.gov.uk/government/publications/adult-skills-fund-funding-rules/adult-skills-fund-funding-rules-2025-to-2026" class="govuk-link">
                             Adult skills fund: funding and performance management rules 2025 to 2026
                         </a>
                     </li>
                     <li>
-                         <a href="https://www.gov.uk/government/publications/advanced-learner-loans-funding-and-performance-management-rules/advanced-learner-loans-funding-and-performance-management-rules-2025-to-2026" class="govuk-link">
+                        <a href="https://www.gov.uk/government/publications/advanced-learner-loans-funding-and-performance-management-rules/advanced-learner-loans-funding-and-performance-management-rules-2025-to-2026" class="govuk-link">
                             Advanced learner loans funding and performance management rules: 2025 to 2026
                         </a>
                     </li>
                 </ul>
+
                 <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" aria-describedby="conditions-hint">
-                        <div id="conditions-hint" class="govuk-hint">
-                            
-                        </div>
+                    <fieldset class="govuk-fieldset">
                         <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                             <div class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" id="confirmation" name="confirmation" type="checkbox" value="confirmed">
@@ -49,14 +54,16 @@ Submit learner data
                         </div>
                     </fieldset>
                 </div>
+
                 <div class="govuk-button-group">
-                    <a class="govuk-button govuk-button--secondary" id="save" name="save" href="/FundingClaim2526FinishLater">
+                    <a class="govuk-button govuk-button--secondary" id="save" name="save" href="/FundingClaim2425FinishLater">
                         Save and finish later
                     </a>
                     <a id="submit" name="submit" class="govuk-button" href="/fundingclaimconfirmation2425">
                         Confirm and Submit
                     </a>
                 </div>
+
             </div>
         </div>
     </main>
