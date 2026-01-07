@@ -1,0 +1,70 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+  Teacher FTE Snapshot - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="/FETeacherSnapshotCollectionOverview" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper" id="content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Academic year: 1 August 2025 to 31 July 2026</span>
+      <h1 class="govuk-heading-l">
+        FE Teacher FTE Snapshot Collection
+      </h1>
+
+      <div class="govuk-inset-text">
+        This snapshot acts as a leading indicator for progress toward the 6,500 teacher recruitment target. It helps inform decision-making earlier in the academic year before the full FE Workforce Data Collection.
+      </div>
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Who should complete this and who to include
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body"><strong>Provider Scope:</strong> You should complete this if you are a:</p>
+          <ul class="govuk-list govuk-list--bullet">
+             <li>General FE College (including Tertiary)</li>
+             <li>Sixth Form College</li>
+             <li>School-based provider (e.g., former sixth form colleges that converted have 16-19 academies)</li>
+          </ul>
+  
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <p class="govuk-body"><strong>Staff Definition:</strong> Your estimate should include the total <strong>Full-Time Equivalent (FTE)</strong> for teachers on <strong>permanent</strong> or <strong>fixed-term</strong> contracts.</p>
+        </div>
+      </details>
+
+      <form method="post" action="/FETeacherSnapshotCollectionSuccess">
+
+        <div class="govuk-form-group">
+            <h2 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--m" for="fte-2026">
+                   FE Teacher FTE for 2024/25
+                </label>
+            </h2>
+            <div id="fte-2026-hint" class="govuk-hint">
+                Enter the total <strong>Full-Time Equivalent (FTE)</strong>, not the headcount. 
+                <br>For example, two staff members working 0.5 FTE each should be recorded as <strong>1.0</strong>.
+            </div>
+            <input class="govuk-input govuk-input--width-5" id="fte-2026" name="fte2026" type="text" spellcheck="false" aria-describedby="fte-2026-hint" inputmode="decimal">
+        </div>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        
+        <button class="govuk-button" data-module="govuk-button">
+            Save and continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
