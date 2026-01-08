@@ -1,195 +1,94 @@
 {% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-GOV.UK Prototype Kit
+Check your answers - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
 
+</nav>
 
+<div class="govuk-width-container">
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
 
-        <main class="govuk-main-wrapper" id="content" role="main">
-            <div class="govuk-grid-row flex">
-                <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+          Contracting information overview
+        </h1>
 
-
-<a class="govuk-link" aria-labelledby="returntodashboard" href="/FEWHomeOpen">Return to dashboard</a>
-<br>
-<br>
-
-<span class="govuk-caption-l">Academic year: 1 August 2022 to 31 July 2023</span>
-
-<div>
-<h2 class="govuk-heading">Vacancy and recruitment data completion details</h2>
-
-<table class="govuk-table">
-    <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Completed by</th>
-        <th scope="col" class="govuk-table__header">Time and date</th>
-        <th scope="col" class="govuk-table__header"></th>
-    </tr>
-    </thead>
-
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">Not complete</td>
-<td class="govuk-table__cell">Not complete</td>
-<td class="govuk-table__cell">
-     <a class="govuk-link" aria-labelledby="changestaffmember" href="/FEWCompleteVacancyCollection">Complete collection</a>
-</td>
-</tr>
- </tbody>
-
-</table>
-</div>
-
-<h1 class="govuk-heading-l">Check your answers</h1>
-
-<p>Summary of details recorded for vacancy and recruitment data</p>
-<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default"><div class="govuk-accordion__controls"><button type="button" class="govuk-accordion__open-all" aria-expanded="false">Open all<span class="govuk-visually-hidden"> sections</span></button></div>
-        <div class="govuk-accordion__section">
-            <div class="govuk-accordion__section-header">
-                <h2 class="govuk-accordion__section-heading">
-                    
-                <button type="button" id="accordion-default-heading-1" aria-controls="accordion-default-content-1" class="govuk-accordion__section-button" aria-expanded="false">
-                        Senior leader and management role vacancies
-                    <span class="govuk-accordion__icon" aria-hidden="true"></span></button></h2>
-
-            </div>
-            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                <ul class="govuk-list govuk-list--bullet">
-                    <li>100 vacancies</li>
-                        <li>50 filled</li>
-                </ul>
-            </div>
-        </div>
-        <div class="govuk-accordion__section">
-            <div class="govuk-accordion__section-header">
-                <h2 class="govuk-accordion__section-heading">
-                    
-                <button type="button" id="accordion-default-heading-1" aria-controls="accordion-default-content-2" class="govuk-accordion__section-button" aria-expanded="false">
-                        Were there any teaching vacancies during the academic year?
-                    <span class="govuk-accordion__icon" aria-hidden="true"></span></button></h2>
-
-            </div>
-            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                <p>Yes</p>
-            </div>
-        </div>
-        <div class="govuk-accordion__section">
-            <div class="govuk-accordion__section-header">
-                <h2 class="govuk-accordion__section-heading">
-                    
-                <button type="button" id="accordion-default-heading-2" aria-controls="accordion-default-content-3" class="govuk-accordion__section-button" aria-expanded="false">
-                        Teaching vacancy and recruitment details
-                    <span class="govuk-accordion__icon" aria-hidden="true"></span></button></h2>
-            </div>
-            <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-
-                    <h3 class="govuk-heading-m"> Academic subjects</h3>
-                        <ul class="govuk-list govuk-list--bullet">
-                            <li>100 Ancient Languages vacancies</li>
-                                <li>50 filled</li>
-
-                        </ul>
-                    <h3 class="govuk-heading-m"> Vocational programmes</h3>
-                        <ul class="govuk-list govuk-list--bullet">
-                            <li>100 Accounting and Finance vacancies</li>
-                                <li>50 filled</li>
-
-                        </ul>
-                    <h3 class="govuk-heading-m"> Other learning programmes</h3>
-                        <ul class="govuk-list govuk-list--bullet">
-                            <li>100 Functional Skills English vacancies</li>
-                                <li>50 filled</li>
-
-                        </ul>
-            </div>
+        <div class="govuk-summary-card govuk-!-margin-bottom-9">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">Contract details</h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Provider UKPRN
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  12345678
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Allocation type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Grant
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Funding Line
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Skills Bootcamps
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Contract start date
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  1 April 2024
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Contract end date
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  31 March 2025
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Contract value
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £150,000
+                </dd>
+              </div>
+            </dl>
+          </div>
         </div>
 
-        <div class="govuk-accordion__section">
-            <div class="govuk-accordion__section-header">
-                <h2 class="govuk-accordion__section-heading">
-                    
-                <button type="button" id="accordion-default-heading-1" aria-controls="accordion-default-content-4" class="govuk-accordion__section-button" aria-expanded="false">
-                        Did you have difficulty recruiting for any teaching vacancies during the academic year?
-                    <span class="govuk-accordion__icon" aria-hidden="true"></span></button></h2>
-            </div>
-            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                <p>Yes</p>
-            </div>
+        
+
+        <div class="govuk-button-group">
+          <a href="DevolvedContractSubmitted.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+            Submit
+          </a>
+          <a href="DevolvedContractDetails.html" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Edit
+          </a>
         </div>
 
-        <div class="govuk-accordion__section">
-            <div class="govuk-accordion__section-header">
-                <h2 class="govuk-accordion__section-heading">
-                    
-                <button type="button" id="accordion-default-heading-3" aria-controls="accordion-default-content-5" class="govuk-accordion__section-button" aria-expanded="false">
-                        Which teaching vacancies were difficult to recruit for?
-                    <span class="govuk-accordion__icon" aria-hidden="true"></span></button></h2>
-            </div>
-            <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-                        <h3 class="govuk-heading-m">Ancient Languages vacancies</h3>
-                        <ul class="govuk-list govuk-list--bullet">
-                                <li>No applicants</li>
-                        </ul>
-                        <h3 class="govuk-heading-m">Accounting and Finance vacancies</h3>
-                        <ul class="govuk-list govuk-list--bullet">
-                                <li>No applicants</li>
-                        </ul>
-                        <h3 class="govuk-heading-m">Functional Skills English vacancies</h3>
-                        <ul class="govuk-list govuk-list--bullet">
-                                <li>A lack of teaching experience or skills</li>
-                        </ul>
-            </div>
-        </div>
-
-        <div class="govuk-accordion__section">
-            <div class="govuk-accordion__section-header">
-                <h2 class="govuk-accordion__section-heading">
-                    
-                <button type="button" id="accordion-default-heading-4" aria-controls="accordion-default-content-6" class="govuk-accordion__section-button" aria-expanded="false">
-                        How many apprentices worked for the organisation?
-                    <span class="govuk-accordion__icon" aria-hidden="true"></span></button></h2>
-
-            </div>
-            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
-
-                <p class="govuk-body">1 apprentice</p>
-            </div>
-        </div>
-        <div class="govuk-accordion__section">
-            <div class="govuk-accordion__section-header">
-                <h2 class="govuk-accordion__section-heading">
-                    
-                <button type="button" id="accordion-default-heading-4" aria-controls="accordion-default-content-7" class="govuk-accordion__section-button" aria-expanded="false">
-                        Does the organisation provide counselling services?
-                    <span class="govuk-accordion__icon" aria-hidden="true"></span></button></h2>
-
-            </div>
-            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
-
-                <p class="govuk-body">No</p>
-            </div>
-        </div>
-</div>
-
-<a href="/few/organisation/check-senior-leader-and-management-vacancies">
-    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Edit answers
-    </button>
-</a>
-</div>
-
-
-
-
-
-                </div>
-            </div>
-        </main>
+      </div>
     </div>
-</body>
-
+  </main>
+</div>
 {% endblock %}
