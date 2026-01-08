@@ -20,7 +20,8 @@
               Providers are asked to return their total teacher FTEs for staff on permanent or fixed-term contracts.
             </p>
             <p class="govuk-body">
-              <strong>For the 2024/25 academic year:</strong> We will pre-populate your total teacher FTE as of <strong> 20 January 2025</strong> if you submitted a valid 2024/25 FE Workforce return. You can change this data if it is not accurate. If you did not submit a 2024/25 FE Workforce return, or it was invalid, the data will not be pre-populated, and you must enter it manually. 
+              <strong>For the 2024/25 academic year:</strong> We will pre-populate your total teacher FTE as of <strong>20 January 2025</strong> if you submitted a valid 2024/25 FE Workforce return. You can change this data if it is not accurate. If you did not submit a 2024/25 FE Workforce return, or it was invalid, the data will not be pre-populated, and you must enter it manually. 
+            </p>
             <p class="govuk-body">
               <strong>For the 2025/26 academic year:</strong> You must provide your total teacher FTE as at <strong>19 January 2026</strong>.
             </p>
@@ -30,8 +31,6 @@
               <li><strong>include</strong> staff employed on the snapshot date who are absent (for example, off sick or on leave)</li>
               <li><strong>exclude</strong> teachers who left employment before the snapshot date or started after the snapshot date</li>
             </ul>
-
-            
 
             <h2 class="govuk-heading-m">Definitions</h2>
             
@@ -53,11 +52,38 @@
               <li>Trainer</li>
               <li>Tutor</li>
             </ul>
-            </p>
 
-            <a class="govuk-button" href="/FETeacherSnapshot2526" role="button">
-              Continue
-            </a>
+            <form action="/check-submission-status" method="post" class="govuk-!-margin-top-8">
+              
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h2 class="govuk-fieldset__heading">
+                      Did you submit a valid FE Workforce return for the 2024/25 academic year?
+                    </h2>
+                  </legend>
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="submitted-yes" name="submittedReturn" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="submitted-yes">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="submitted-no" name="submittedReturn" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="submitted-no">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <button class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+
+            </form>
 
           </div>
         </div>
