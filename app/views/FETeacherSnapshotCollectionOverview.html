@@ -53,7 +53,7 @@
               <li>Tutor</li>
             </ul>
 
-            <form action="/check-submission-status" method="post" class="govuk-!-margin-top-8">
+            <form id="routing-form" class="govuk-!-margin-top-8">
               
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
@@ -79,13 +79,12 @@
                 </fieldset>
               </div>
 
-              <button class="govuk-button" data-module="govuk-button">
+              <button class="govuk-button" data-module="govuk-button" id="continue-button">
                 Continue
               </button>
 
             </form>
-
-          </div>
+            </div>
         </div>
       </div>
 
@@ -95,23 +94,40 @@
             Help &amp; Support
           </h2>
           <p class="govuk-!-font-size-16">
-            Find further information at the <a href="https://esfahelp.education.gov.uk/hc/en-gb/articles/7443637756946">Customer Help Centre</a> where you can <a href="https://customerhelp.education.gov.uk/hc/en-gb/categories/360002506639-Articles">read our help articles</a>, talk to our Community, chat to our <a href="https://askonline.education.gov.uk/chatbot/davina?regional=true">Virtual assistant</a> or submit an enquiry.
+            Find further information at the <a href="https://esfahelp.education.gov.uk/hc/en-gb/articles/7443637756946">Customer Help Centre</a>.
           </p>
-
-          <h2 class="govuk-heading-m" id="subsection-title">
-            Related content
-          </h2>
-          <nav role="navigation" aria-labelledby="subsection-title">
-            <ul class="govuk-list govuk-!-font-size-16">
-              <li>
-                <a href="#" target="_blank">
-                  FE Workforce Data Collection guide
-                </a>
-              </li>
-            </ul>
-          </nav>
         </aside>
       </div>
     </div>
   </main>
+
+  <script>
+    document.getElementById('continue-button').addEventListener('click', function(e) {
+      e.preventDefault(); // Stop the form from submitting normally
+      
+      // Get the selected radio button
+      var radios = document.getElementsByName('submittedReturn');
+      var selectedValue;
+      
+      for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+          selectedValue = radios[i].value;
+          break;
+        }
+      }
+
+      // Route based on the selection
+      if (selectedValue === 'yes') {
+        // CHANGE THIS to your "Yes" page filename
+        window.location.href = '/FETeacherSnapshot2526_PrePopulated'; 
+      } else if (selectedValue === 'no') {
+        // CHANGE THIS to your "No" page filename
+        window.location.href = '/FETeacherSnapshot2526_Manual'; 
+      } else {
+        // Optional: Alert if nothing is selected
+        alert('Select an option to continue');
+      }
+    });
+  </script>
+
 {% endblock %}
