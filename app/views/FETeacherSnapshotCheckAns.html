@@ -1,12 +1,10 @@
 {% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-Check your answers - GOV.UK Prototype Kit
+  Check your answers - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-
-</nav>
 
 <div class="govuk-width-container">
   <a href="javascript:history.back()" class="govuk-back-link">Back</a>
@@ -21,7 +19,16 @@ Check your answers - GOV.UK Prototype Kit
         <div class="govuk-summary-card govuk-!-margin-bottom-9">
           <div class="govuk-summary-card__title-wrapper">
             <h2 class="govuk-summary-card__title">FE Teacher FTE</h2>
+            
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action">
+                <a class="govuk-link" href="DevolvedContractDetails.html">
+                  Edit<span class="govuk-visually-hidden"> FE Teacher FTE</span>
+                </a>
+              </li>
+            </ul>
           </div>
+          
           <div class="govuk-summary-card__content">
             <dl class="govuk-summary-list">
               <div class="govuk-summary-list__row">
@@ -44,16 +51,11 @@ Check your answers - GOV.UK Prototype Kit
           </div>
         </div>
 
-        
-
         <div class="govuk-button-group">
           <a href="DevolvedContractSubmitted.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
             Submit
           </a>
-          <a href="DevolvedContractDetails.html" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-            Edit
-          </a>
-        </div>
+          </div>
 
       </div>
     </div>
