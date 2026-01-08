@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block content %}
+{% include "./includes/nav.html" %}
+
+        <div class="govuk-width-container">
+            <a href="/referencedata.html" class="govuk-back-link">Back</a>
+            <div class="govuk-grid-row">
+                <main class="govuk-main-wrapper">
+
+                    <h1 class="gem-c-heading govuk-heading-l">Devolved Authority Allocations reference data</h1>
+
+                    <div class="govuk-grid-row govuk-!-margin-top-6">
+
+                        <div class="govuk-grid-column-one-third">
+                            <ul class="govuk-list">
+                                <li>
+                                    <h3 class="home-services__heading"><a class="govuk-link" href="/OperationsDevolvedAllocationType.html">Allocation Type/a></h3>
+                                    <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Create, read and update Devolved Authority allocation types.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="govuk-grid-column-one-third">
+                            <ul class="govuk-list">
+                                <li>
+                                    <h3 class="home-services__heading"><a class="govuk-link" href="OperationsDevolvedContractLine.html">Contract Line</a></h3>
+                                    <p class="govuk-body govuk-!-font-weight-regular govuk-!-margin-bottom-1">Create, read and update Devolved Authority contract lines.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+{% endblock %}
