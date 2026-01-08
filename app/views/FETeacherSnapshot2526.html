@@ -1,7 +1,7 @@
 {% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-  Teacher FTE Snapshot - GOV.UK Prototype Kit
+  Record FE Teacher FTE - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
@@ -12,86 +12,38 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <span class="govuk-caption-l">Academic year: 1 August 2025 to 31 July 2026</span>
-      <h1 class="govuk-heading-l">
-        FE Teacher FTE Snapshot Collection
-      </h1>
-
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Who should complete this and who to include
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body"><strong>Provider Scope:</strong> You should complete this if you are a:</p>
-          <ul class="govuk-list govuk-list--bullet">
-             <li>General FE College (including Tertiary)</li>
-             <li>Sixth Form College</li>
-             <li>School-based provider (e.g., former sixth form colleges that converted have 16-19 academies)</li>
-          </ul>
-  
-          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-          <p class="govuk-body"><strong>Staff Definition:</strong> Your estimate should include the total <strong>Full-Time Equivalent (FTE)</strong> for teachers on <strong>permanent</strong> or <strong>fixed-term</strong> contracts.</p>
-        </div>
-      </details>
-
       <form method="post" action="/FETeacherSnapshotCollectionSuccess">
 
+        <span class="govuk-caption-l">Academic year: 1 August 2025 to 31 July 2026</span>
+        
         <div class="govuk-form-group">
-            <h2 class="govuk-label-wrapper">
-                <label class="govuk-label govuk-label--m" for="fte-2026">
-                   FE Teacher FTE for 2025/26
+            <h1 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--l" for="fte-2026">
+                    Record FE Teacher FTE for 2025/26
                 </label>
-            </h2>
+            </h1>
+
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Who to include in this figure
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p class="govuk-body">Your estimate should include the total <strong>Full-Time Equivalent (FTE)</strong> for teachers on:</p>
+                  <ul class="govuk-list govuk-list--bullet">
+                      <li>permanent contracts</li>
+                      <li>fixed-term contracts</li>
+                  </ul>
+                </div>
+            </details>
+
             <div id="fte-2026-hint" class="govuk-hint">
                 Enter the total <strong>Full-Time Equivalent (FTE)</strong>, not the headcount. 
                 <br>For example, two staff members working 0.50 FTE each should be recorded as <strong>1.00</strong>.
             </div>
+
             <input class="govuk-input govuk-input--width-5" id="fte-2026" name="fte2026" type="text" spellcheck="false" aria-describedby="fte-2026-hint" inputmode="decimal">
-        </div>
-
-        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-        <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="fte-2025-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                    <h2 class="govuk-fieldset__heading">
-                       FE Teacher FTE for 2024/25
-                    </h2>
-                </legend>
-                
-                <div id="fte-2025-hint" class="govuk-hint">
-                    Based on your 2024/25 FE Workforce Data Collection (FEWDC) return, your FTE was calculated as <strong>125</strong>. Is this accurate?
-                </div>
-
-                <div class="govuk-radios" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="fte2025-accurate-yes" name="fte2025Accurate" type="radio" value="yes">
-                        <label class="govuk-label govuk-radios__label" for="fte2025-accurate-yes">
-                            Yes 
-                        </label>
-                    </div>
-                    
-                    <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="fte2025-accurate-no" name="fte2025Accurate" type="radio" value="no" data-aria-controls="conditional-fte-correction">
-                        <label class="govuk-label govuk-radios__label" for="fte2025-accurate-no">
-                            No, I need to edit this figure
-                        </label>
-                    </div>
-
-                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-fte-correction">
-                        <div class="govuk-form-group">
-                            <label class="govuk-label" for="corrected-fte-2025">
-                                Enter the correct Teacher FTE for 2024/25
-                            </label>
-                            <div class="govuk-input__wrapper">
-                                <input class="govuk-input govuk-input--width-5" id="corrected-fte-2025" name="correctedFte2025" type="text" spellcheck="false" inputmode="decimal">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </fieldset>
         </div>
 
         <button class="govuk-button" data-module="govuk-button">
