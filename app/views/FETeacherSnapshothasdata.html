@@ -18,7 +18,7 @@
             <fieldset class="govuk-fieldset" aria-describedby="fte-2025-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                     <h1 class="govuk-fieldset__heading">
-                        Record FE Teacher FTE for 2024/25 
+                        Record FE Teacher FTE for 2024/25
                     </h1>
                 </legend>
                 
@@ -38,7 +38,7 @@
                 </details>
 
                 <div id="fte-2025-hint" class="govuk-hint">
-                    Based on your 2024/25 FE Workforce Data Collection (FEWDC) return, your FTE was calculated as <strong>125</strong>. Is this accurate?
+                    Based on your 2024/25 FE Workforce Data Collection (FEWDC) return, your FTE was calculated as <strong>125</strong>. Is this accurate? 
                 </div>
 
                 <div class="govuk-radios" data-module="govuk-radios">
@@ -66,4 +66,22 @@
                                 <br>For example, two staff members working 0.50 FTE each should be recorded as <strong>1.00</strong>.
                             </div>
                             <div class="govuk-input__wrapper">
-                                <input class="govuk-input gov
+                                <input class="govuk-input govuk-input--width-5" id="corrected-fte-2025" name="correctedFte2025" type="text" spellcheck="false" inputmode="decimal" aria-describedby="corrected-fte-2025-hint">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+            Save and continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
