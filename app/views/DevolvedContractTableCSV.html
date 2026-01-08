@@ -1,84 +1,58 @@
-<div class="govuk-grid-column-two-thirds">
+{% extends "layoutsld.html" %}
 
-    <form method="post" action="/submit-fte-snapshot"> <span class="govuk-caption-xl">Academic year: 1 August 2025 to 31 July 2026</span>
-        <h1 class="govuk-heading-xl">
-            FE Teacher FTE Snapshot Collection
-        </h1>
+{% block pageTitle %}
+Upload a devolved contracts file
+{% endblock %}
 
-        <div class="govuk-inset-text">
-            This snapshot acts as a leading indicator for progress toward the 6,500 teacher recruitment target. It helps inform decision-making earlier in the academic year before the full FE Workforce Data Collection.
-        </div>
 
-        <details class="govuk-details" data-module="govuk-details">
-            <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                    Who should complete this and who to include
-                </span>
-            </summary>
-            <div class="govuk-details__text">
-                <p class="govuk-body"><strong>Provider Scope:</strong> You should complete this if you are a:</p>
-                <ul class="govuk-list govuk-list--bullet">
-                    <li>General FE College (including Tertiary)</li>
-                    <li>Sixth Form College</li>
-                    <li>School-based provider (e.g., former sixth form colleges that converted have 16-19 academies)</li>
-                </ul>
-                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-                <p class="govuk-body"><strong>Staff Definition:</strong> Your estimate should include the total <strong>Full-Time Equivalent (FTE)</strong> for teachers on <strong>permanent</strong> or <strong>fixed-term</strong> contracts.</p>
-            </div>
-        </details>
+{% block content %}
 
-        <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--l" for="fte-2025">
-                FE Teacher FTE for 2025/26
-            </label>
-            <div id="fte-2025-hint" class="govuk-hint">
-                Enter the total Full-Time Equivalent (FTE), not the headcount. For example, two staff members working 0.5 FTE each should be recorded as <strong>1.0</strong>.
-            </div>
-            <input class="govuk-input govuk-input--width-5" id="fte-2025" name="fte2025" type="text" aria-describedby="fte-2025-hint">
-        </div>
+<div class="govuk-width-container">
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
-        <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="fte-2024-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                    <h1 class="govuk-fieldset__heading">
-                        FE Teacher FTE for 2024/25
+<main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <form method="get" action="DevolvedCSVSubmitted.html">
+                <div>
+                    <h1 class="govuk-heading-xl">
+                        Select a CSV file to upload
                     </h1>
-                </legend>
-                <div id="fte-2024-hint" class="govuk-hint">
-                    Based on your 2024/25 FE Workforce Data Collection (FEWDC) return, your FTE was calculated as <strong>125</strong>. Is this accurate?
-                </div>
-                
-                <div class="govuk-radios" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="accurate-yes" name="accuracy" type="radio" value="yes">
-                        <label class="govuk-label govuk-radios__label" for="accurate-yes">
-                            Yes, 125 is accurate
-                        </label>
-                    </div>
                     
-                    <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="accurate-no" name="accuracy" type="radio" value="no" data-aria-controls="conditional-accuracy">
-                        <label class="govuk-label govuk-radios__label" for="accurate-no">
-                            No, I need to edit this figure
-                        </label>
-                    </div>
+                    <h2 class="govuk-heading-m">Before you start</h2>
+                    <p class="govuk-body">Make sure the file is:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>accurate</li>
+                        <li>complete</li>
+                        <li>in CSV format</li>
+                        <li>using the specified file name format</li>
+                    </ul>
                     
-                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-accuracy">
-                        <div class="govuk-form-group">
-                            <label class="govuk-label" for="corrected-figure">
-                                Enter the correct Teacher FTE for 2024/25
-                            </label>
-                            <input class="govuk-input govuk-input--width-5" id="corrected-figure" name="correctedFigure" type="text">
-                        </div>
-                    </div>
+                <!-- File Upload Section -->
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-!-font-weight-bold" for="file-upload">
+                        Select a file to upload
+                    </label>
+                    <input class="govuk-file-upload" id="file-upload" name="file-upload" type="file">
                 </div>
-            </fieldset>
+                <a href="DevolvedContractConfirm.html" class="govuk-button">Upload</a>
+                <p class="govuk-body">
+                    
+                </div>
+            </form>
+
         </div>
+    </div> 
+    
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-        <button class="govuk-button" data-module="govuk-button">
-            Save and continue
-        </button>
-
-    </form>
-
+           
+    </div> 
+</main>
 </div>
+{% endblock %}
