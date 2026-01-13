@@ -1,0 +1,57 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+  Record FE Teacher FTE - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="/FETeacherSnapshotCollectionOverview" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper" id="content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" action="/FETeacherSnapshot2526">
+        
+        <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--l" for="fte-2026">
+                    Record FE Teacher FTE for 2024/25
+                </label>
+            </h1>
+
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Who to include in this figure
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p class="govuk-body">The figure should include the total Full-Time-Equivalent (FTE) for teachers employed on 15th January 2024 who were on:
+                  <ul class="govuk-list govuk-list--bullet">
+                      <li>Permanent contracts</li>
+                      <li>Fixed-term contracts</li>
+                  </ul>
+                </div>
+            </details>
+
+            <div id="fte-2026-hint" class="govuk-hint">
+                Enter the total <strong>Full-Time Equivalent (FTE)</strong>, not the headcount. 
+                <br>For example, two staff members working 0.50 FTE each should be recorded as <strong>1.00</strong>.
+            </div>
+
+            <input class="govuk-input govuk-input--width-5" id="fte-2026" name="fte2026" type="text" spellcheck="false" aria-describedby="fte-2026-hint" inputmode="decimal">
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+            Save and continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
