@@ -20,38 +20,19 @@
               Providers are asked to return their total teacher FTEs for staff on permanent or fixed-term contracts.
             </p>
             <p class="govuk-body">
-              <strong>For the 2024/25 academic year:</strong> We will pre-populate your total teacher FTE as of <strong>20 January 2025</strong> if you submitted a valid 2024/25 FE Workforce return. You can change this data if it is not accurate. If you did not submit a 2024/25 FE Workforce return the data will not be pre-populated, and you must enter it manually. 
+                <strong>For the 2023/24 academic year:</strong> You must provide your total teacher FTE as at <strong>15 January 2024</strong>.
             </p>
             <p class="govuk-body">
-              <strong>For the 2025/26 academic year:</strong> You must provide your total teacher FTE as at <strong>19 January 2026</strong>.
+              <strong>For the 2024/25 academic year:</strong> We will pre-populate your total teacher FTE as of <strong>20 January 2025</strong> if you submitted a valid 2024/25 FE Workforce return.
             </p>
-
-            <p class="govuk-body">Your count should:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li><strong>include</strong> teachers employed on the snapshot date who are absent (for example, off sick or on leave)</li>
-              <li><strong>exclude</strong> teachers who left employment before the snapshot date or started after the snapshot date</li>
-            </ul>
 
             <h2 class="govuk-heading-m">Definitions</h2>
-            
-            <h3 class="govuk-heading-s">FTE (Full-Time Equivalent)</h3>
             <p class="govuk-body">
-              This is the proportion of a standard week that a member of staff is contracted to work. 1.0 FTE is what the organisation deems to be ‘full time’. Where a member of staff has more than one contract, the FTE should be the combined percentage for all contracts.
+              <strong>FTE (Full-Time Equivalent):</strong> The proportion of a standard week that a member of staff is contracted to work. 1.0 FTE is ‘full time’.
             </p>
-
-            <h3 class="govuk-heading-s">Teacher</h3>
             <p class="govuk-body">
-              A teacher is a member of staff whose main role is a teaching role. This includes anyone whose main role is recorded in the FE workforce collection as:
+              <strong>Teacher:</strong> A member of staff whose main role is a teaching role (e.g. Lecturer, Tutor, Trainer).
             </p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>Advanced Practitioner</li>
-              <li>Instructor</li>
-              <li>Lecturer</li>
-              <li>Practitioner</li>
-              <li>Teacher</li>
-              <li>Trainer</li>
-              <li>Tutor</li>
-            </ul>
 
             <form id="routing-form" class="govuk-!-margin-top-8">
               
@@ -59,19 +40,43 @@
                 <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                     <h2 class="govuk-fieldset__heading">
-                      Did you submit a valid FE Workforce return for the 2024/25 academic year?
+                      Did you submit a valid FE Workforce return for the <strong>2023/24</strong> academic year?
                     </h2>
                   </legend>
                   <div class="govuk-radios" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="submitted-yes" name="submittedReturn" type="radio" value="yes">
-                      <label class="govuk-label govuk-radios__label" for="submitted-yes">
+                      <input class="govuk-radios__input" id="submitted2324-yes" name="submittedReturn2324" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="submitted2324-yes">
                         Yes
                       </label>
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="submitted-no" name="submittedReturn" type="radio" value="no">
-                      <label class="govuk-label govuk-radios__label" for="submitted-no">
+                      <input class="govuk-radios__input" id="submitted2324-no" name="submittedReturn2324" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="submitted2324-no">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h2 class="govuk-fieldset__heading">
+                      Did you submit a valid FE Workforce return for the <strong>2024/25</strong> academic year?
+                    </h2>
+                  </legend>
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="submitted2425-yes" name="submittedReturn2425" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="submitted2425-yes">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="submitted2425-no" name="submittedReturn2425" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="submitted2425-no">
                         No
                       </label>
                     </div>
@@ -90,11 +95,9 @@
 
       <div class="govuk-grid-column-one-third">
         <aside class="app-related-items" role="complementary">
-          <h2 class="govuk-heading-m" id="subsection-title">
-            Help &amp; Support
-          </h2>
+          <h2 class="govuk-heading-m">Help &amp; Support</h2>
           <p class="govuk-!-font-size-16">
-            Find further information at the <a href="https://esfahelp.education.gov.uk/hc/en-gb/articles/7443637756946">Customer Help Centre</a>.
+            Find further information at the <a href="#">Customer Help Centre</a>.
           </p>
         </aside>
       </div>
@@ -103,32 +106,37 @@
 
   <script>
     document.getElementById('continue-button').addEventListener('click', function(e) {
-      e.preventDefault(); // Stop the form from submitting normally
+      e.preventDefault(); 
       
-      // Get the selected radio button
-      var radios = document.getElementsByName('submittedReturn');
-      var selectedValue;
-      
-      for (var i = 0; i < radios.length; i++) {
-        if (radios[i].checked) {
-          selectedValue = radios[i].value;
-          break;
+      // Helper function to get value from radio group
+      function getRadioValue(name) {
+        var radios = document.getElementsByName(name);
+        for (var i = 0; i < radios.length; i++) {
+          if (radios[i].checked) {
+            return radios[i].value;
+          }
         }
+        return null;
       }
 
-      // Route based on the selection
-      if (selectedValue === 'yes' || selectedValue === 'no') {
-        
-        // 1. Save the answer to session storage so it isn't lost
-        // You can retrieve this on the next page using sessionStorage.getItem('submittedReturn')
-        sessionStorage.setItem('submittedReturn', selectedValue);
+      // 1. Get both values
+      var status2324 = getRadioValue('submittedReturn2324');
+      var status2425 = getRadioValue('submittedReturn2425');
 
-        // 2. Redirect to the intermediate page FIRST
-        window.location.href = '/FETeacherSnapshot2324'; 
+      // 2. Check if both are selected
+      if (status2324 && status2425) {
+        
+        // 3. Save BOTH answers to session storage
+        sessionStorage.setItem('status2324', status2324);
+        sessionStorage.setItem('status2425', status2425);
+
+        // 4. Redirect to the first data page (23/24)
+        // Note: You can now check sessionStorage in FESnapshot2324 to see if 
+        // you should show the manual form (No) or pre-filled (Yes).
+        window.location.href = '/FESnapshot2324'; 
 
       } else {
-        // Alert if nothing is selected
-        alert('Select an option to continue');
+        alert('Please select an option for both academic years');
       }
     });
   </script>
