@@ -22,6 +22,7 @@
 
             <p class="govuk-body">
               <strong>For the 2023/24 academic year:</strong> We will pre-populate your total teacher FTE as of <strong>15 January 2024</strong> if you submitted a 2023/24 FE Workforce return. You can change this data if it is not accurate. If you did not submit a 2023/24 FE Workforce return the data will not be pre-populated, and you must enter it manually. 
+            </p>
 
             <p class="govuk-body">
               <strong>For the 2024/25 academic year:</strong> We will pre-populate your total teacher FTE as of <strong>20 January 2025</strong> if you submitted a 2024/25 FE Workforce return. You can change this data if it is not accurate. If you did not submit a 2024/25 FE Workforce return the data will not be pre-populated, and you must enter it manually. 
@@ -155,10 +156,15 @@
         sessionStorage.setItem('status2324', status2324);
         sessionStorage.setItem('status2425', status2425);
 
-        // 4. Redirect to the first data page (23/24)
-        // Note: You can now check sessionStorage in FESnapshot2324 to see if 
-        // you should show the manual form (No) or pre-filled (Yes).
-        window.location.href = '/FESnapshot2324hasdata'; 
+        // 4. ROUTE BASED ON THE FIRST QUESTION (2023/24)
+        if (status2324 === 'yes') {
+            // Redirect to the pre-filled page
+            window.location.href = '/FESnapshot2324hasdata'; 
+        } else {
+            // Redirect to the manual entry page
+            // CHANGE THIS filename to your manual entry page if different
+            window.location.href = '/FESnapshot2324NoData'; 
+        }
 
       } else {
         alert('Please select an option for both academic years');
