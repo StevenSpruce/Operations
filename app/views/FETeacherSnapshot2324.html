@@ -12,7 +12,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form method="post" action="/FETeacherSnapshot2526">
+      <form id="fte-form">
         
         <div class="govuk-form-group">
             <h1 class="govuk-label-wrapper">
@@ -44,7 +44,7 @@
             <input class="govuk-input govuk-input--width-5" id="fte-2026" name="fte2026" type="text" spellcheck="false" aria-describedby="fte-2026-hint" inputmode="decimal">
         </div>
 
-        <button class="govuk-button" data-module="govuk-button">
+        <button class="govuk-button" data-module="govuk-button" id="continue-button">
             Save and continue
         </button>
 
@@ -53,5 +53,27 @@
     </div>
   </div>
 </main>
+
+<script>
+  document.getElementById('continue-button').addEventListener('click', function(e) {
+    e.preventDefault(); // Stop the form from submitting normally
+    
+    // 1. Retrieve the answer saved from the previous page
+    var previousAnswer = sessionStorage.getItem('submittedReturn');
+
+    // 2. Check the answer and redirect
+    if (previousAnswer === 'yes') {
+        // If they said YES on the previous page
+        window.location.href = '/FETeacherSnapshothasdata'; 
+    } else if (previousAnswer === 'no') {
+        // If they said NO on the previous page
+        window.location.href = '/FETeacherSnapshotNoData';
+    } else {
+        // Fallback if no data was found (e.g. they went straight to this page)
+        // You can default to one path, or log an error.
+        window.location.href = '/FETeacherSnapshotNoData';
+    }
+  });
+</script>
 
 {% endblock %}
