@@ -1,0 +1,87 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+  Confirm FE Teacher FTE for 2024/25 - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="/FETeacherSnapshotCollectionOverview" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper" id="content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" action="/FETeacherSnapshot2526">
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="fte-2025-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                        Record FE Teacher FTE for 2024/25
+                    </h1>
+                </legend>
+                
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        Who to include in this figure
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      <p class="govuk-body">The figure should include the total Full-Time-Equivalent (FTE) for teachers employed on 15th January 2024 who were on:
+                      <ul class="govuk-list govuk-list--bullet">
+                          <li>Permanent contracts</li>
+                          <li>Fixed-term contracts</li>
+                      </ul>
+                    </div>
+                </details>
+
+                <div id="fte-2025-hint" class="govuk-hint">
+                    Based on your 2023/24 FE Workforce Data Collection (FEWDC) return, your FTE was calculated as <strong>110</strong>. Is this correct? 
+                </div>
+
+                <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="fte2025-accurate-yes" name="fte2025Accurate" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="fte2025-accurate-yes">
+                            Yes 
+                        </label>
+                    </div>
+                    
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="fte2025-accurate-no" name="fte2025Accurate" type="radio" value="no" data-aria-controls="conditional-fte-correction">
+                        <label class="govuk-label govuk-radios__label" for="fte2025-accurate-no">
+                            No, I need to edit this figure
+                        </label>
+                    </div>
+
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-fte-correction">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="corrected-fte-2025">
+                                Enter the correct Teacher FTE for 2023/24
+                            </label>
+                            <div id="corrected-fte-2025-hint" class="govuk-hint">
+                                Enter the total <strong>Full-Time Equivalent (FTE)</strong>, not the headcount. 
+                                <br>For example, two staff members working 0.50 FTE each should be recorded as <strong>1.00</strong>.
+                            </div>
+                            <div class="govuk-input__wrapper">
+                                <input class="govuk-input govuk-input--width-5" id="corrected-fte-2025" name="correctedFte2025" type="text" spellcheck="false" inputmode="decimal" aria-describedby="corrected-fte-2025-hint">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+            Save and continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
