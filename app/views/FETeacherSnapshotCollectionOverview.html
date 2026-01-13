@@ -117,14 +117,17 @@
       }
 
       // Route based on the selection
-      if (selectedValue === 'yes') {
-        // CHANGE THIS to your "Yes" page filename
-        window.location.href = '/FETeacherSnapshothasdata'; 
-      } else if (selectedValue === 'no') {
-        // CHANGE THIS to your "No" page filename
-        window.location.href = '/FETeacherSnapshotNoData'; 
+      if (selectedValue === 'yes' || selectedValue === 'no') {
+        
+        // 1. Save the answer to session storage so it isn't lost
+        // You can retrieve this on the next page using sessionStorage.getItem('submittedReturn')
+        sessionStorage.setItem('submittedReturn', selectedValue);
+
+        // 2. Redirect to the intermediate page FIRST
+        window.location.href = '/FESnapshot2324'; 
+
       } else {
-        // Optional: Alert if nothing is selected
+        // Alert if nothing is selected
         alert('Select an option to continue');
       }
     });
