@@ -16,7 +16,7 @@
         
         <div class="govuk-form-group">
             <h1 class="govuk-label-wrapper">
-                <label class="govuk-label govuk-label--l" for="fte-2026">
+                <label class="govuk-label govuk-label--l" for="fte-2024">
                     Record FE Teacher FTE for 2023/24
                 </label>
             </h1>
@@ -36,12 +36,12 @@
                 </div>
             </details>
 
-            <div id="fte-2026-hint" class="govuk-hint">
+            <div id="fte-2024-hint" class="govuk-hint">
                 Enter the total <strong>Full-Time Equivalent (FTE)</strong>, not the headcount. 
                 <br>For example, two staff members working 0.50 FTE each should be recorded as <strong>1.00</strong>.
             </div>
 
-            <input class="govuk-input govuk-input--width-5" id="fte-2026" name="fte2026" type="text" spellcheck="false" aria-describedby="fte-2026-hint" inputmode="decimal">
+            <input class="govuk-input govuk-input--width-5" id="fte-2024" name="fte2024" type="text" spellcheck="false" aria-describedby="fte-2024-hint" inputmode="decimal">
         </div>
 
         <button class="govuk-button" data-module="govuk-button" id="continue-button">
@@ -58,19 +58,16 @@
   document.getElementById('continue-button').addEventListener('click', function(e) {
     e.preventDefault(); // Stop the form from submitting normally
     
-    // 1. Retrieve the answer saved from the previous page
-    var previousAnswer = sessionStorage.getItem('submittedReturn');
+    // 1. Retrieve the status for the NEXT year (24/25) 
+    // This looks at the second radio button answer from the start page
+    var nextStatus = sessionStorage.getItem('status2425');
 
     // 2. Check the answer and redirect
-    if (previousAnswer === 'yes') {
-        // If they said YES on the previous page
+    if (nextStatus === 'yes') {
+        // If they said YES for 24/25, go to the pre-filled page
         window.location.href = '/FETeacherSnapshot2425hasdata'; 
-    } else if (previousAnswer === 'no') {
-        // If they said NO on the previous page
-        window.location.href = '/FETeacherSnapshot2425NoData';
     } else {
-        // Fallback if no data was found (e.g. they went straight to this page)
-        // You can default to one path, or log an error.
+        // If they said NO for 24/25, go to the manual entry page
         window.location.href = '/FETeacherSnapshot2425NoData';
     }
   });
