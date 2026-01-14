@@ -1,0 +1,157 @@
+{% extends "layouts/main.html" %}
+
+{% set serviceName = "Find a Learning Aim" %}
+
+{% block pageTitle %}
+  (10 credit) Award in Hospitality Skills - Find a Learning Aim - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Search Results",
+        href: "#"
+      },
+      {
+        text: "(10 credit) Award in Hospitality Skills"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .app-sub-navigation {
+    list-style: none;
+    padding-left: 0;
+    border-left: 1px solid #b1b4b6;
+  }
+  .app-sub-navigation__item {
+    padding: 10px 15px;
+  }
+  .app-sub-navigation__link {
+    text-decoration: none;
+    font-size: 19px;
+  }
+  /* The active state styling */
+  .app-sub-navigation__item--current {
+    border-left: 5px solid #1d70b8; 
+    padding-left: 10px; /* Adjust padding to account for thicker border */
+    margin-left: -1px; /* Overlap the grey border */
+    font-weight: bold;
+  }
+  .app-sub-navigation__item--current a {
+    color: #0b0c0c; /* Black text for active */
+    text-decoration: none;
+  }
+  .reference-text {
+    color: #505a5f;
+    font-size: 24px;
+    margin-top: -15px;
+    margin-bottom: 30px;
+  }
+</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">
+      (10 credit) Award in Hospitality Skills
+    </h1>
+    <p class="reference-text">Reference: 6016444X</p>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    {{ govukSelect({
+      id: "academic-year",
+      name: "academic-year",
+      label: {
+        text: "Academic year"
+      },
+      items: [
+        {
+          value: "2025-2026",
+          text: "2025 to 2026",
+          selected: true
+        },
+        {
+          value: "2024-2025",
+          text: "2024 to 2025"
+        }
+      ]
+    }) }}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <ul class="app-sub-navigation">
+      <li class="app-sub-navigation__item">
+        <a class="govuk-link app-sub-navigation__link" href="#">Overview</a>
+      </li>
+      <li class="app-sub-navigation__item app-sub-navigation__item--current">
+        <a class="govuk-link app-sub-navigation__link" href="#">Funding</a>
+      </li>
+      <li class="app-sub-navigation__item">
+        <a class="govuk-link app-sub-navigation__link" href="#">Frameworks</a>
+      </li>
+      <li class="app-sub-navigation__item">
+        <a class="govuk-link app-sub-navigation__link" href="#">Category</a>
+      </li>
+      <li class="app-sub-navigation__item">
+        <a class="govuk-link app-sub-navigation__link" href="#">Basic skills</a>
+      </li>
+      <li class="app-sub-navigation__item">
+        <a class="govuk-link app-sub-navigation__link" href="#">Key dates</a>
+      </li>
+      <li class="app-sub-navigation__item">
+        <a class="govuk-link app-sub-navigation__link" href="#">LearnDirect class system</a>
+      </li>
+      <li class="app-sub-navigation__item">
+        <a class="govuk-link app-sub-navigation__link" href="#">HECoS Code</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">Funding approved for selected year</h2>
+
+    {{ govukAccordion({
+      id: "funding-accordion",
+      showAllSectionsText: "Show all sections",
+      hideAllSectionsText: "Hide all sections",
+      items: [
+        {
+          heading: {
+            text: "14-16 EFA"
+          },
+          summary: {
+            text: "Last date for new start: 30 June 2025"
+          },
+          content: {
+            html: "<p class='govuk-body'>Detailed funding information for 14-16 EFA would go here.</p>"
+          }
+        },
+        {
+          heading: {
+            text: "Other"
+          },
+          summary: {
+            text: "Last date for new start: 30 June 2025"
+          },
+          content: {
+            html: "<p class='govuk-body'>Detailed funding information for Other would go here.</p>"
+          }
+        }
+      ]
+    }) }}
+
+  </div>
+</div>
+
+{% endblock %}
