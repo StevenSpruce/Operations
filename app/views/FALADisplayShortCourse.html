@@ -1,313 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(10 credit) Award in Hospitality Skills</title>
-    <style>
-        /* --- GOV.UK STYLE RESET & BASICS --- */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+{% extends "layouts/main.html" %}
+
+{% set serviceName = "Find a Learning Aim" %}
+
+{% block pageTitle %}
+  (10 credit) Award in Hospitality Skills - Find a Learning Aim - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Search Results",
+        href: "#"
+      },
+      {
+        text: "(10 credit) Award in Hospitality Skills"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .app-sub-navigation {
+    list-style: none;
+    padding-left: 0;
+    border-left: 1px solid #b1b4b6;
+  }
+  .app-sub-navigation__item {
+    padding: 10px 15px;
+  }
+  .app-sub-navigation__link {
+    text-decoration: none;
+    font-size: 19px;
+  }
+  /* The active state styling */
+  .app-sub-navigation__item--current {
+    border-left: 5px solid #1d70b8; 
+    padding-left: 10px; /* Adjust padding to account for thicker border */
+    margin-left: -1px; /* Overlap the grey border */
+    font-weight: bold;
+  }
+  .app-sub-navigation__item--current a {
+    color: #0b0c0c; /* Black text for active */
+    text-decoration: none;
+  }
+  .reference-text {
+    color: #505a5f;
+    font-size: 24px;
+    margin-top: -15px;
+    margin-bottom: 30px;
+  }
+</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">
+      (10 credit) Award in Hospitality Skills
+    </h1>
+    <p class="reference-text">Reference: 6016444X</p>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    {{ govukSelect({
+      id: "academic-year",
+      name: "academic-year",
+      label: {
+        text: "Academic year"
+      },
+      items: [
+        {
+          value: "2025-2026",
+          text: "2025 to 2026",
+          selected: true
+        },
+        {
+          value: "2024-2025",
+          text: "2024 to 2025"
         }
+      ]
+    }) }}
+  </div>
+</div>
 
-        body {
-            font-family: "Arial", "Helvetica", sans-serif; /* Fallback for GDS Transport */
-            -webkit-font-smoothing: antialiased;
-            color: #0b0c0c;
-            line-height: 1.25; /* Slightly tighter line height for headings */
-            background-color: #ffffff;
-            padding: 20px 40px;
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <ul class="app-sub-navigation">
+      <li class="app-sub-navigation__item">
+        <a class="govuk-link app-sub-navigation__link" href="#">Overview</a>
+      </li>
+      <li class="app-sub-navigation__item app-sub-navigation__item--current">
+        <a class="govuk-link app-sub-navigation__link" href="#">Funding</a>
+      </li>
+      <li class="app-sub-navigation__item">
+        <a class="govuk-link app-sub-navigation__link" href="#">Frameworks</a>
+      </li>
+      <li class="app-sub-navigation__item">
+        <a class="govuk-link app-sub-navigation__link" href="#">Category</a>
+      </li>
+      <li class="app-sub-navigation__item">
+        <a class="govuk-link app-sub-navigation__link" href="#">Basic skills</a>
+      </li>
+      <li class="app-sub-navigation__item">
+        <a class="govuk-link app-sub-navigation__link" href="#">Key dates</a>
+      </li>
+      <li class="app-sub-navigation__item">
+        <a class="govuk-link app-sub-navigation__link" href="#">LearnDirect class system</a>
+      </li>
+      <li class="app-sub-navigation__item">
+        <a class="govuk-link app-sub-navigation__link" href="#">HECoS Code</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">Funding approved for selected year</h2>
+
+    {{ govukAccordion({
+      id: "funding-accordion",
+      showAllSectionsText: "Show all sections",
+      hideAllSectionsText: "Hide all sections",
+      items: [
+        {
+          heading: {
+            text: "14-16 EFA"
+          },
+          summary: {
+            text: "Last date for new start: 30 June 2025"
+          },
+          content: {
+            html: "<p class='govuk-body'>Detailed funding information for 14-16 EFA would go here.</p>"
+          }
+        },
+        {
+          heading: {
+            text: "Other"
+          },
+          summary: {
+            text: "Last date for new start: 30 June 2025"
+          },
+          content: {
+            html: "<p class='govuk-body'>Detailed funding information for Other would go here.</p>"
+          }
         }
+      ]
+    }) }}
 
-        /* Standard Text styling */
-        p, li, div {
-            font-size: 19px;
-            line-height: 1.31579;
-        }
+  </div>
+</div>
 
-        a {
-            color: #1d70b8;
-            text-decoration: underline;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 2px;
-            cursor: pointer;
-        }
-
-        a:hover {
-            color: #003078;
-            text-decoration-thickness: 3px;
-        }
-
-        /* --- LAYOUT --- */
-        .breadcrumbs {
-            font-size: 16px;
-            margin-bottom: 50px;
-            color: #0b0c0c;
-            line-height: 1.25;
-        }
-        
-        .breadcrumbs a {
-            color: #0b0c0c;
-        }
-
-        .header-container {
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .header-title h1 {
-            font-size: 48px; /* Large Title */
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.04167;
-            letter-spacing: -1px;
-        }
-
-        .reference {
-            font-size: 19px;
-            color: #505a5f;
-            margin-bottom: 0;
-        }
-
-        /* Dropdown positioning */
-        .dropdown-wrapper {
-            position: absolute;
-            right: 0;
-            top: 10px;
-        }
-
-        .dropdown-wrapper label {
-            display: block;
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-
-        .dropdown-wrapper select {
-            font-size: 16px;
-            padding: 5px;
-            min-width: 200px;
-            border: 2px solid #0b0c0c;
-        }
-
-        .main-grid {
-            display: grid;
-            grid-template-columns: 200px 1fr; /* Narrower sidebar */
-            gap: 60px;
-        }
-
-        /* --- SIDEBAR --- */
-        .sidebar ul {
-            list-style: none;
-            border-top: 1px solid #b1b4b6; /* Optional: some designs have this */
-        }
-
-        .sidebar li {
-            font-size: 16px;
-            line-height: 1.25;
-            padding: 8px 0;
-            border-bottom: 0; /* Removing lines to match image accurately */
-        }
-
-        .sidebar li a {
-            text-decoration: none;
-            display: block;
-        }
-
-        .sidebar li a:hover {
-            text-decoration: underline;
-        }
-
-        .sidebar li.active {
-            border-left: 5px solid #1d70b8;
-            padding-left: 15px;
-            font-weight: 700;
-        }
-        
-        .sidebar li.active a {
-            color: #0b0c0c; 
-        }
-
-        /* --- MAIN CONTENT AREA --- */
-        .content-area h2 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            line-height: 1.11111;
-        }
-
-        /* Toggle Links */
-        .toggle-action {
-            display: inline-flex;
-            align-items: center;
-            font-size: 16px;
-            color: #1d70b8;
-            cursor: pointer;
-            margin-bottom: 20px;
-            text-decoration: underline;
-        }
-
-        .toggle-icon {
-            width: 0; 
-            height: 0; 
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-bottom: 8px solid #1d70b8; /* Triangle pointing up */
-            margin-right: 5px;
-        }
-
-        hr {
-            border: 0;
-            border-bottom: 1px solid #b1b4b6;
-            margin: 20px 0 30px 0;
-        }
-
-        /* Data Sections */
-        .section-header {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            line-height: 1.25;
-        }
-
-        .primary-meta {
-            margin-bottom: 10px;
-        }
-        
-        .primary-meta strong {
-            font-weight: 700;
-        }
-
-        .hide-link-wrapper {
-            margin-bottom: 30px; /* CRITICAL SPACER */
-        }
-
-        /* Sub-sections (Course validity, etc) */
-        .sub-block {
-            margin-top: 30px; /* CRITICAL SPACER */
-        }
-
-        .sub-header {
-            font-size: 19px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .data-row {
-            margin-bottom: 5px;
-        }
-
-        .data-row strong {
-            font-weight: 700;
-            margin-right: 3px;
-        }
-
-        /* Responsive */
-        @media (max-width: 800px) {
-            .header-container { flex-direction: column; }
-            .dropdown-wrapper { position: static; margin-top: 20px; }
-            .main-grid { grid-template-columns: 1fr; }
-            .header-title h1 { font-size: 32px; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="breadcrumbs">
-        <a href="#">Home</a> <span> &gt; </span>
-        <a href="#">Search Results</a> <span> &gt; </span>
-        <span style="color: #505a5f;">(10 credit) Award in Hospitality Skills</span>
-    </div>
-
-    <header class="header-container">
-        <div class="header-title">
-            <h1>(10 credit) Award in Hospitality Skills</h1>
-            <p class="reference">Reference: 6016444X</p>
-        </div>
-        <div class="dropdown-wrapper">
-            <label for="year">Academic year</label>
-            <select id="year">
-                <option>2025 to 2026</option>
-                <option>2024 to 2025</option>
-            </select>
-        </div>
-    </header>
-
-    <div class="main-grid">
-        
-        <nav class="sidebar">
-            <ul>
-                <li><a href="#">Overview</a></li>
-                <li class="active"><a href="#">Funding</a></li>
-                <li><a href="#">Frameworks</a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Basic skills</a></li>
-                <li><a href="#">Key dates</a></li>
-                <li><a href="#">LearnDirect class system</a></li>
-                <li><a href="#">HECoS Code</a></li>
-            </ul>
-        </nav>
-
-        <main class="content-area">
-            <h2>Funding approved for selected year</h2>
-            
-            <div class="toggle-action">
-                <div class="toggle-icon"></div> Hide all sections
-            </div>
-
-            <hr>
-
-            <div>
-                <h3 class="section-header">Growth and Skills – Short Courses</h3>
-                <p class="primary-meta"><strong>Last date for new starts:</strong> Not set</p>
-                
-                <div class="hide-link-wrapper">
-                    <span class="toggle-action" style="margin-bottom: 0;">
-                        <div class="toggle-icon"></div> Hide
-                    </span>
-                </div>
-
-                <div class="sub-block">
-                    <div class="sub-header">Course validity</div>
-                    <p class="data-row"><strong>Valid from:</strong> 01 April 2026</p>
-                    <p class="data-row"><strong>Valid to:</strong> Open</p>
-                </div>
-
-                <div class="sub-block">
-                    <div class="sub-header">Growth and Skills – Short Courses</div>
-                    <p class="data-row"><strong>Effective from:</strong> 01 April 2026</p>
-                    <p class="data-row"><strong>Effective to:</strong> </p>
-                    <p class="data-row"><strong>Adult skills funding band:</strong> N/A</p>
-                    <p class="data-row"><strong>Funded guided learning hours:</strong> </p>
-                    <p class="data-row"><strong>Weighted rate:</strong> £630.00</p>
-                    <p class="data-row"><strong>Unweighted rate:</strong> £630.00</p>
-                </div>
-            </div>
-
-            <hr>
-
-            <div>
-                <h3 class="section-header">Other</h3>
-                <p class="primary-meta"><strong>Last date for new start:</strong> 30 June 2025</p>
-                
-                <div class="hide-link-wrapper">
-                    <span class="toggle-action" style="margin-bottom: 0;">
-                        <div class="toggle-icon"></div> Hide
-                    </span>
-                </div>
-
-                <div class="sub-block">
-                    <div class="sub-header">Course validity</div>
-                    <p class="data-row"><strong>Valid from:</strong> 01 July 2015</p>
-                    <p class="data-row"><strong>Valid to:</strong> 30 June 2027</p>
-                </div>
-            </div>
-            
-            <hr>
-
-        </main>
-    </div>
-
-</body>
-</html>
+{% endblock %}
