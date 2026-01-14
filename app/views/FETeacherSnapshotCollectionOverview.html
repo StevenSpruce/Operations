@@ -58,121 +58,28 @@
               <li>Tutor</li>
             </ul>
 
-            <form id="routing-form" class="govuk-!-margin-top-8">
-              
-              <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                    <h2 class="govuk-fieldset__heading">
-                      Did you submit a valid FE Workforce return for the <strong>2023/24</strong> academic year?
-                    </h2>
-                  </legend>
-                  <div class="govuk-radios" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="submitted2324-yes" name="submittedReturn2324" type="radio" value="yes">
-                      <label class="govuk-label govuk-radios__label" for="submitted2324-yes">
-                        Yes
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="submitted2324-no" name="submittedReturn2324" type="radio" value="no">
-                      <label class="govuk-label govuk-radios__label" for="submitted2324-no">
-                        No
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-
-              <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                    <h2 class="govuk-fieldset__heading">
-                      Did you submit a valid FE Workforce return for the <strong>2024/25</strong> academic year?
-                    </h2>
-                  </legend>
-                  <div class="govuk-radios" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="submitted2425-yes" name="submittedReturn2425" type="radio" value="yes">
-                      <label class="govuk-label govuk-radios__label" for="submitted2425-yes">
-                        Yes
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="submitted2425-no" name="submittedReturn2425" type="radio" value="no">
-                      <label class="govuk-label govuk-radios__label" for="submitted2425-no">
-                        No
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-
+            <form action="/NEXT-PAGE-URL-HERE" method="post" class="govuk-!-margin-top-8">
               <button class="govuk-button" data-module="govuk-button" id="continue-button">
                 Continue
               </button>
-
             </form>
-            </div>
+
+          </div>
         </div>
       </div>
 
-                  <div class="govuk-grid-column-one-third">
-                      <aside class="app-related-items" role="complementary">
-                          <h2 class="govuk-heading-m" id="subsection-title">
-                              Help &amp; Support
-                          </h2>
-                            <p class="govuk-!-font-size-16">
-                                Find further information at the <a href="https://esfahelp.education.gov.uk/hc/en-gb/articles/7443637756946">Customer Help Centre</a> where you can <a href="https://customerhelp.education.gov.uk/hc/en-gb/categories/360002506639-Articles">read our help articles</a>, talk to our Community, chat to our <a href="https://askonline.education.gov.uk/chatbot/davina?regional=true">Virtual assistant</a> or submit an enquiry.
-                            </p>
-
-                      </aside>
-                  </div>
-          </div>
-      </main>
-  </div>
-</body>
-
-  <script>
-    document.getElementById('continue-button').addEventListener('click', function(e) {
-      e.preventDefault(); 
-      
-      // Helper function to get value from radio group
-      function getRadioValue(name) {
-        var radios = document.getElementsByName(name);
-        for (var i = 0; i < radios.length; i++) {
-          if (radios[i].checked) {
-            return radios[i].value;
-          }
-        }
-        return null;
-      }
-
-      // 1. Get both values
-      var status2324 = getRadioValue('submittedReturn2324');
-      var status2425 = getRadioValue('submittedReturn2425');
-
-      // 2. Check if both are selected
-      if (status2324 && status2425) {
-        
-        // 3. Save BOTH answers to session storage
-        sessionStorage.setItem('status2324', status2324);
-        sessionStorage.setItem('status2425', status2425);
-
-        // 4. ROUTE BASED ON THE FIRST QUESTION (2023/24)
-        if (status2324 === 'yes') {
-            // Redirect to the pre-filled page
-            window.location.href = '/FETeacherSnapshot2324hasdata'; 
-        } else {
-            // Redirect to the manual entry page
-            // CHANGE THIS filename to your manual entry page if different
-            window.location.href = '/FETeacherSnapshotnodata2324'; 
-        }
-
-      } else {
-        alert('Please select an option for both academic years');
-      }
-    });
-  </script>
+      <div class="govuk-grid-column-one-third">
+          <aside class="app-related-items" role="complementary">
+              <h2 class="govuk-heading-m" id="subsection-title">
+                  Help &amp; Support
+              </h2>
+                <p class="govuk-!-font-size-16">
+                    Find further information at the <a href="https://esfahelp.education.gov.uk/hc/en-gb/articles/7443637756946">Customer Help Centre</a> where you can <a href="https://customerhelp.education.gov.uk/hc/en-gb/categories/360002506639-Articles">read our help articles</a>, talk to our Community, chat to our <a href="https://askonline.education.gov.uk/chatbot/davina?regional=true">Virtual assistant</a> or submit an enquiry.
+                </p>
+          </aside>
+      </div>
+    </div>
+  </main>
+</div>
 
 {% endblock %}
