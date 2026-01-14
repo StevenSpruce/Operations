@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>(10 credit) Award in Hospitality Skills</title>
     <style>
-        /* General Reset */
+        /* --- GOV.UK STYLE RESET & BASICS --- */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -13,95 +13,112 @@
         }
 
         body {
-            font-family: "Arial", sans-serif;
+            font-family: "Arial", "Helvetica", sans-serif; /* Fallback for GDS Transport */
+            -webkit-font-smoothing: antialiased;
             color: #0b0c0c;
-            line-height: 1.5;
+            line-height: 1.25; /* Slightly tighter line height for headings */
             background-color: #ffffff;
             padding: 20px 40px;
+        }
+
+        /* Standard Text styling */
+        p, li, div {
+            font-size: 19px;
+            line-height: 1.31579;
         }
 
         a {
             color: #1d70b8;
             text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
             cursor: pointer;
         }
 
         a:hover {
             color: #003078;
+            text-decoration-thickness: 3px;
         }
 
-        /* Breadcrumbs */
+        /* --- LAYOUT --- */
         .breadcrumbs {
-            font-size: 14px;
-            margin-bottom: 30px;
+            font-size: 16px;
+            margin-bottom: 50px;
             color: #0b0c0c;
+            line-height: 1.25;
         }
-
+        
         .breadcrumbs a {
-            text-decoration: underline;
             color: #0b0c0c;
         }
 
-        .breadcrumbs span {
-            margin: 0 5px;
-        }
-
-        /* Header Area */
         .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            position: relative;
         }
 
         .header-title h1 {
-            font-size: 36px;
+            font-size: 48px; /* Large Title */
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            line-height: 1.04167;
+            letter-spacing: -1px;
         }
 
         .reference {
             font-size: 19px;
             color: #505a5f;
+            margin-bottom: 0;
         }
 
-        .dropdown-container label {
+        /* Dropdown positioning */
+        .dropdown-wrapper {
+            position: absolute;
+            right: 0;
+            top: 10px;
+        }
+
+        .dropdown-wrapper label {
             display: block;
             font-size: 16px;
             margin-bottom: 5px;
         }
 
-        .dropdown-container select {
-            padding: 8px;
+        .dropdown-wrapper select {
             font-size: 16px;
+            padding: 5px;
             min-width: 200px;
             border: 2px solid #0b0c0c;
         }
 
-        /* Main Layout Grid */
-        .main-content {
+        .main-grid {
             display: grid;
-            grid-template-columns: 250px 1fr;
-            gap: 40px;
+            grid-template-columns: 200px 1fr; /* Narrower sidebar */
+            gap: 60px;
         }
 
-        /* Sidebar Navigation */
+        /* --- SIDEBAR --- */
         .sidebar ul {
             list-style: none;
+            border-top: 1px solid #b1b4b6; /* Optional: some designs have this */
         }
 
         .sidebar li {
-            padding: 10px 0;
             font-size: 16px;
+            line-height: 1.25;
+            padding: 8px 0;
+            border-bottom: 0; /* Removing lines to match image accurately */
         }
 
         .sidebar li a {
             text-decoration: none;
-            color: #1d70b8;
             display: block;
         }
 
-        /* Active Sidebar Item */
+        .sidebar li a:hover {
+            text-decoration: underline;
+        }
+
         .sidebar li.active {
             border-left: 5px solid #1d70b8;
             padding-left: 15px;
@@ -110,190 +127,67 @@
         
         .sidebar li.active a {
             color: #0b0c0c; 
-            text-decoration: none;
         }
 
-        /* Right Content Area */
+        /* --- MAIN CONTENT AREA --- */
         .content-area h2 {
-            font-size: 32px;
+            font-size: 36px;
+            font-weight: 700;
             margin-bottom: 15px;
+            line-height: 1.11111;
         }
 
-        .toggle-all {
-            display: flex;
+        /* Toggle Links */
+        .toggle-action {
+            display: inline-flex;
             align-items: center;
             font-size: 16px;
-            margin-bottom: 20px;
             color: #1d70b8;
+            cursor: pointer;
+            margin-bottom: 20px;
+            text-decoration: underline;
         }
 
         .toggle-icon {
-            border: solid #1d70b8;
-            border-width: 0 2px 2px 0;
-            display: inline-block;
-            padding: 3px;
-            transform: rotate(-135deg);
-            margin-right: 8px;
-            margin-top: 4px;
+            width: 0; 
+            height: 0; 
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 8px solid #1d70b8; /* Triangle pointing up */
+            margin-right: 5px;
         }
 
         hr {
             border: 0;
-            border-top: 1px solid #b1b4b6;
-            margin: 20px 0;
+            border-bottom: 1px solid #b1b4b6;
+            margin: 20px 0 30px 0;
         }
 
-        /* Funding Section Styling */
-        .funding-section h3 {
+        /* Data Sections */
+        .section-header {
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 10px;
+            line-height: 1.25;
         }
 
-        .funding-detail {
-            font-size: 19px;
+        .primary-meta {
             margin-bottom: 10px;
         }
         
-        .funding-detail strong {
+        .primary-meta strong {
             font-weight: 700;
         }
 
-        .hide-toggle {
-            display: flex;
-            align-items: center;
-            color: #1d70b8;
-            font-size: 16px;
-            margin-bottom: 20px;
-            cursor: pointer;
-        }
-        
-        .hide-toggle .toggle-icon {
-             margin-right: 5px;
+        .hide-link-wrapper {
+            margin-bottom: 30px; /* CRITICAL SPACER */
         }
 
-        /* Info Block Styling (Validity and Rates) */
-        .info-block {
-            margin-top: 25px;
+        /* Sub-sections (Course validity, etc) */
+        .sub-block {
+            margin-top: 30px; /* CRITICAL SPACER */
         }
 
-        .info-title {
-            font-weight: 700;
+        .sub-header {
             font-size: 19px;
-            margin-bottom: 10px;
-        }
-
-        .info-row {
-            font-size: 19px;
-            margin-bottom: 5px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-            .header-container {
-                flex-direction: column;
-            }
-            .dropdown-container {
-                margin-top: 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <nav class="breadcrumbs">
-        <a href="#">Home</a> <span>></span>
-        <a href="#">Search Results</a> <span>></span>
-        <span>(10 credit) Award in Hospitality Skills</span>
-    </nav>
-
-    <header class="header-container">
-        <div class="header-title">
-            <h1>(10 credit) Award in Hospitality Skills</h1>
-            <p class="reference">Reference: 6016444X</p>
-        </div>
-        <div class="dropdown-container">
-            <label for="year">Academic year</label>
-            <select id="year">
-                <option>2025 to 2026</option>
-                <option>2024 to 2025</option>
-            </select>
-        </div>
-    </header>
-
-    <div class="main-content">
-        
-        <aside class="sidebar">
-            <ul>
-                <li><a href="#">Overview</a></li>
-                <li class="active"><a href="#">Funding</a></li>
-                <li><a href="#">Frameworks</a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Basic skills</a></li>
-                <li><a href="#">Key dates</a></li>
-                <li><a href="#">LearnDirect class system</a></li>
-                <li><a href="#">HECoS Code</a></li>
-            </ul>
-        </aside>
-
-        <section class="content-area">
-            <h2>Funding approved for selected year</h2>
-            
-            <div class="toggle-all">
-                <span class="toggle-icon"></span> Hide all sections
-            </div>
-
-            <hr>
-
-            <div class="funding-section">
-                <h3>Growth and Skills – Short Courses</h3>
-                <p class="funding-detail"><strong>Last date for new starts:</strong> Not set</p>
-                
-                <div class="hide-toggle">
-                    <span class="toggle-icon"></span> Hide
-                </div>
-
-                <div class="info-block">
-                    <p class="info-title">Course validity</p>
-                    <p class="info-row"><strong>Valid from:</strong> 01 April 2026</p>
-                    <p class="info-row"><strong>Valid to:</strong> Open</p>
-                </div>
-
-                <div class="info-block">
-                    <p class="info-title">Growth and Skills – Short Courses</p>
-                    <p class="info-row"><strong>Effective from:</strong> 01 April 2026</p>
-                    <p class="info-row"><strong>Effective to:</strong> </p>
-                    <p class="info-row"><strong>Adult skills funding band:</strong> N/A</p>
-                    <p class="info-row"><strong>Funded guided learning hours:</strong> </p>
-                    <p class="info-row"><strong>Weighted rate:</strong> £630.00</p>
-                    <p class="info-row"><strong>Unweighted rate:</strong> £630.00</p>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="funding-section">
-                <h3>Other</h3>
-                <p class="funding-detail"><strong>Last date for new start:</strong> 30 June 2025</p>
-                
-                <div class="hide-toggle">
-                    <span class="toggle-icon"></span> Hide
-                </div>
-
-                <div class="info-block">
-                    <p class="info-title">Course validity</p>
-                    <p class="info-row"><strong>Valid from:</strong> 01 July 2015</p>
-                    <p class="info-row"><strong>Valid to:</strong> 30 June 2027</p>
-                </div>
-            </div>
-            
-            <hr>
-
-        </section>
-    </div>
-
-</body>
-</html>
+            font-weight: 700
