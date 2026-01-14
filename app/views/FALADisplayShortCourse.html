@@ -188,3 +188,126 @@
             margin-top: 30px; /* CRITICAL SPACER */
         }
 
+        .sub-header {
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .data-row {
+            margin-bottom: 5px;
+        }
+
+        .data-row strong {
+            font-weight: 700;
+            margin-right: 3px;
+        }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+            .header-container { flex-direction: column; }
+            .dropdown-wrapper { position: static; margin-top: 20px; }
+            .main-grid { grid-template-columns: 1fr; }
+            .header-title h1 { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="breadcrumbs">
+        <a href="#">Home</a> <span> &gt; </span>
+        <a href="#">Search Results</a> <span> &gt; </span>
+        <span style="color: #505a5f;">(10 credit) Award in Hospitality Skills</span>
+    </div>
+
+    <header class="header-container">
+        <div class="header-title">
+            <h1>(10 credit) Award in Hospitality Skills</h1>
+            <p class="reference">Reference: 6016444X</p>
+        </div>
+        <div class="dropdown-wrapper">
+            <label for="year">Academic year</label>
+            <select id="year">
+                <option>2025 to 2026</option>
+                <option>2024 to 2025</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="main-grid">
+        
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li class="active"><a href="#">Funding</a></li>
+                <li><a href="#">Frameworks</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Basic skills</a></li>
+                <li><a href="#">Key dates</a></li>
+                <li><a href="#">LearnDirect class system</a></li>
+                <li><a href="#">HECoS Code</a></li>
+            </ul>
+        </nav>
+
+        <main class="content-area">
+            <h2>Funding approved for selected year</h2>
+            
+            <div class="toggle-action">
+                <div class="toggle-icon"></div> Hide all sections
+            </div>
+
+            <hr>
+
+            <div>
+                <h3 class="section-header">Growth and Skills – Short Courses</h3>
+                <p class="primary-meta"><strong>Last date for new starts:</strong> Not set</p>
+                
+                <div class="hide-link-wrapper">
+                    <span class="toggle-action" style="margin-bottom: 0;">
+                        <div class="toggle-icon"></div> Hide
+                    </span>
+                </div>
+
+                <div class="sub-block">
+                    <div class="sub-header">Course validity</div>
+                    <p class="data-row"><strong>Valid from:</strong> 01 April 2026</p>
+                    <p class="data-row"><strong>Valid to:</strong> Open</p>
+                </div>
+
+                <div class="sub-block">
+                    <div class="sub-header">Growth and Skills – Short Courses</div>
+                    <p class="data-row"><strong>Effective from:</strong> 01 April 2026</p>
+                    <p class="data-row"><strong>Effective to:</strong> </p>
+                    <p class="data-row"><strong>Adult skills funding band:</strong> N/A</p>
+                    <p class="data-row"><strong>Funded guided learning hours:</strong> </p>
+                    <p class="data-row"><strong>Weighted rate:</strong> £630.00</p>
+                    <p class="data-row"><strong>Unweighted rate:</strong> £630.00</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3 class="section-header">Other</h3>
+                <p class="primary-meta"><strong>Last date for new start:</strong> 30 June 2025</p>
+                
+                <div class="hide-link-wrapper">
+                    <span class="toggle-action" style="margin-bottom: 0;">
+                        <div class="toggle-icon"></div> Hide
+                    </span>
+                </div>
+
+                <div class="sub-block">
+                    <div class="sub-header">Course validity</div>
+                    <p class="data-row"><strong>Valid from:</strong> 01 July 2015</p>
+                    <p class="data-row"><strong>Valid to:</strong> 30 June 2027</p>
+                </div>
+            </div>
+            
+            <hr>
+
+        </main>
+    </div>
+
+</body>
+</html>
