@@ -93,4 +93,17 @@
     var nextStatus = sessionStorage.getItem('status2425');
 
     // Debugging: This will log the value to your browser console so you can check it
-    console.log("Status for 24/25
+    console.log("Status for 24/25 is: " + nextStatus);
+
+    // 2. Route accordingly
+    if (nextStatus === 'yes') {
+        // If they selected YES for 24/25, go to the pre-filled data page
+        window.location.href = '/FETeacherSnapshot2425hasdata'; 
+    } else {
+        // If they selected NO (or nothing was found), go to the manual entry page
+        window.location.href = '/FETeacherSnapshot2425NoData'; 
+    }
+  });
+</script>
+
+{% endblock %}
