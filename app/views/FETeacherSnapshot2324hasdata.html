@@ -25,15 +25,27 @@
                 <details class="govuk-details" data-module="govuk-details">
                     <summary class="govuk-details__summary">
                       <span class="govuk-details__summary-text">
-                        Who to include in this figure
+                        Who to include and how this figure is calculated
                       </span>
                     </summary>
                     <div class="govuk-details__text">
-                      <p class="govuk-body">The figure should include the total Full-Time-Equivalent (FTE) for teachers employed on 15th January 2024 who were on:
+                      <p class="govuk-body">The figure should include the total Full-Time-Equivalent (FTE) for teachers employed on <strong>20th January 2025</strong> who were on:</p>
                       <ul class="govuk-list govuk-list--bullet">
                           <li>Permanent contracts</li>
                           <li>Fixed-term contracts</li>
                       </ul>
+
+                      <p class="govuk-body">The prepopulated numbers for 2024/25 are calculated using the logic below:</p>
+                      
+                      <div class="govuk-inset-text">
+                        <p class="govuk-body">
+                            Sum of FTE<br>
+                            Where MainRole = (17,18,19,20,21,22,23)<br>
+                            And ContractType = (1 or 2)<br>
+                            And EmploymentStartDate <= [20th January 2025]<br>
+                            And (EmploymentEndDate >= [20th January 2025] or EmploymentEndDate is null)
+                        </p>
+                      </div>
                     </div>
                 </details>
 
