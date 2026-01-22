@@ -29,7 +29,7 @@
                       </span>
                     </summary>
                     <div class="govuk-details__text">
-                      <p class="govuk-body">The figure should include the total Full-Time-Equivalent (FTE) for teachers employed on 20th January 2025 who were on:</p>
+                      <p class="govuk-body">The figure should include the total Full-Time-Equivalent (FTE) for teachers employed on <strong>20th January 2025</strong> who were on:</p>
                       <ul class="govuk-list govuk-list--bullet">
                           <li>Permanent contracts</li>
                           <li>Fixed-term contracts</li>
@@ -37,11 +37,15 @@
 
                       <p class="govuk-body">The prepopulated numbers for 2024/2025 are calculated using the logic below:</p>
                       
-                      <pre class="govuk-body" style="background-color: #f3f2f1; padding: 15px; border-left: 5px solid #b1b4b6; font-family: monospace; white-space: pre-wrap;">Sum of FTE
-WHERE MainRole IN (17,18,19,20,21,22,23) 
-AND ContractType IN (1, 2) 
-AND EmploymentStartDate <= [ReferenceDate] 
-AND (EmploymentEndDate >= [ReferenceDate] OR EmploymentEndDate IS NULL)</pre>
+                      <div class="govuk-inset-text">
+                        <p class="govuk-body">
+                            Sum of FTE<br>
+                            WHERE MainRole IN (17,18,19,20,21,22,23)<br>
+                            AND ContractType IN (1, 2)<br>
+                            AND EmploymentStartDate <= [ReferenceDate]<br>
+                            AND (EmploymentEndDate >= [ReferenceDate] OR EmploymentEndDate IS NULL)
+                        </p>
+                      </div>
 
                       <p class="govuk-body"><strong>Note:</strong> The [ReferenceDate] is 20 January 2025.</p> 
                     </div>
