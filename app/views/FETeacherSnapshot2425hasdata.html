@@ -29,16 +29,20 @@
                       </span>
                     </summary>
                     <div class="govuk-details__text">
-                      <p class="govuk-body">The figure should include the total Full-Time-Equivalent (FTE) for teachers employed on 20th January 2025 who were on:
+                      <p class="govuk-body">The figure should include the total Full-Time-Equivalent (FTE) for teachers employed on <strong>20th January 2025</strong> who were on:</p>
                       <ul class="govuk-list govuk-list--bullet">
                           <li>Permanent contracts</li>
                           <li>Fixed-term contracts</li>
                       </ul>
-                      <p class="govuk-body">The prepopulated numbers for 2024/2025 are calculated as below:
-                        <p class="govuk-body">Sum of FTE
-                        <p class="govuk-body">where MainRole = (17,18,19,20,21,22,23) and EmploymentStartDate <= [ReferenceDate] And ContractType = (1 or 2) And (EmploymentEndDate >= [ReferenceDate] or EmploymentEndDate is Null)</li>
-                        <p class="govuk-body">Reference date is 20 January 2025.</li> 
-                        <ul>
+
+                      <p class="govuk-body"><strong>How the prepopulated number is calculated</strong></p>
+                      <p class="govuk-body">We calculate the sum of FTE for staff who meet all the following criteria:</p>
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li><strong>Role:</strong> Their main role is listed as code 17 to 23 (teaching or teaching-related roles)</li>
+                        <li><strong>Contract:</strong> Their contract type is code 1 (Permanent) or 2 (Fixed-term)</li>
+                        <li><strong>Dates:</strong> Their employment started on or before 20 January 2025</li>
+                        <li><strong>Active Status:</strong> Their employment ended on or after 20 January 2025 (or is still ongoing)</li>
+                      </ul>
                     </div>
                 </details>
 
