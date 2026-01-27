@@ -10,7 +10,7 @@ FE Teacher FTE submitted
                 <div class="govuk-panel govuk-panel--confirmation">
                     <h1 class="govuk-panel__title">FE Teacher FTE Snapshot submitted</h1>
                     <div class="govuk-panel__body">
-                    </div>
+                        </div>
                 </div>
                 <p class="govuk-body"><strong>Submitted by:</strong> TEST TEST</p>
                 <p class="govuk-body"><strong>At:</strong> 10:35am on Monday 11 November 2024</p>
@@ -31,10 +31,14 @@ FE Teacher FTE submitted
         </div>
     </details>
                 </p>
-                <p class="govuk-body">
-    <a href="FETeacherSnapshotCollectionOpen.html" class="govuk-link">Submit another data return</a>
-                </p>
+                
+                <form action="/dashboard" method="get">
+                    <button class="govuk-button" data-module="govuk-button">
+                        Finish
+                    </button>
+                </form>
+
             </div>
-            </div>
+        </div>
     </main>
 {% endblock %}
