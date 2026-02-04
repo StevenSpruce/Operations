@@ -1,215 +1,118 @@
 {% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-GOV.UK Prototype Kit
+Staff list - GOV.UK Prototype Kit
 {% endblock %}
 
-
 {% block content %}
-       <main class="govuk-main-wrapper" id="content" role="main">
-            <div class="govuk-grid-row flex">
-                <div class="govuk-grid-column-two-thirds">
-                    <form method="post"</form>
+<main class="govuk-main-wrapper" id="content" role="main">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
 
+            <a class="govuk-link" href="/FEWHomeOpen">Return to dashboard</a>
 
-<a class="govuk-link" aria-labelledby="returntodashboard" href="/FEWHomeOpen">Return to dashboard</a>
-<br>                 
-<br>
-<h1 class="govuk-heading-xl">Staff list</h1>
+            <h1 class="govuk-heading-xl govuk-!-margin-top-6">Staff list</h1>
 
-{% if ("Complete" == data["CompleteStaffCollection"]) %}
+            <h2 class="govuk-heading-m">Staff data completion details</h2>
 
-<h2 class="govuk-heading">Staff data completion details</h2>
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Completed by</th>
+                        <th scope="col" class="govuk-table__header">Time and date</th>
+                        <th scope="col" class="govuk-table__header"><span class="govuk-visually-hidden">Action</span></th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    {% if data["CompleteStaffCollection"] == "Complete" %}
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">Robert Smith</td>
+                            <td class="govuk-table__cell">11:21am on Friday 19 October 2023</td>
+                            <td class="govuk-table__cell"></td>
+                        </tr>
+                    {% else %}
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">Not complete</td>
+                            <td class="govuk-table__cell">Not complete</td>
+                            <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/FEWCompleteStaffCollection">Complete collection</a>
+                            </td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
 
-<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                        <h2 class="govuk-fieldset__heading">
-                            Has the organisation merged or restructured this year?
-                        </h2>
-                    </legend>
-                    <div id="merge-hint" class="govuk-hint">
-                        Select yes if your organisation has merged with another provider or undergone a significant restructuring that affects your staff data.
-                    </div>
-                    <div class="govuk-radios" data-module="govuk-radios">
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="merged-yes" name="orgMerged" type="radio" value="yes">
-                            <label class="govuk-label govuk-radios__label" for="merged-yes">
-                                Yes
-                            </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="merged-no" name="orgMerged" type="radio" value="no">
-                            <label class="govuk-label govuk-radios__label" for="merged-no">
-                                No
-                            </label>
-                        </div>
-                    </div>
+            <h2 class="govuk-heading-m">Staff members</h2>
 
-<table class="govuk-table">
-    <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Completed by</th>
-        <th scope="col" class="govuk-table__header">Time and date</th>
-        <th scope="col" class="govuk-table__header"></th>
-    </tr>
-    </thead>
+            <div class="govuk-tabs" data-module="govuk-tabs">
+                <h2 class="govuk-tabs__title">Contents</h2>
+                <ul class="govuk-tabs__list" role="tablist">
+                    <li class="govuk-tabs__list-item" role="presentation">
+                        <a class="govuk-tabs__tab" href="#completed" id="tab_completed" role="tab" aria-controls="completed">
+                            Completed staff members
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" role="presentation">
+                        <a class="govuk-tabs__tab" href="#incomplete" id="tab_incomplete" role="tab" aria-controls="incomplete" aria-selected="true">
+                            Incomplete staff members
+                        </a>
+                    </li>
+                </ul>
 
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">Robert Smith</td>
-<td class="govuk-table__cell">11:21am on Friday 19 October 2023</td>
-<td class="govuk-table__cell">
-</td>
-</tr>
- </tbody>
-</table>
-{% endif%}
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="completed" role="tabpanel" aria-labelledby="tab_completed">
+                    <p class="govuk-body">There are 14 completed staff members recorded</p>
+                    <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Name</th>
+                                <th scope="col" class="govuk-table__header">Date of birth</th>
+                                <th scope="col" class="govuk-table__header"><span class="govuk-visually-hidden">Actions</span></th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">OctPPRegFour FourTestDataLastName</td>
+                                <td class="govuk-table__cell">13 August 1981</td>
+                                <td class="govuk-table__cell">
+                                    <a class="govuk-link" href="/few/staff/task-list-staff-member-data/1437">Change<span class="govuk-visually-hidden"> for OctPPRegFour FourTestDataLastName</span></a>
+                                    <a class="govuk-link govuk-!-margin-left-2" href="/few/staff/delete-staff-member/1437">Delete<span class="govuk-visually-hidden"> OctPPRegFour FourTestDataLastName</span></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                    </table>
+                </div>
 
-{% if ("Complete" != data["CompleteStaffCollection"]) %}
-
-<h2 class="govuk-heading">Staff data completion details</h2>
-
-<table class="govuk-table">
-    <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Completed by</th>
-        <th scope="col" class="govuk-table__header">Time and date</th>
-        <th scope="col" class="govuk-table__header"></th>
-    </tr>
-    </thead>
-
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">Not complete</td>
-<td class="govuk-table__cell">Not complete</td>
-<td class="govuk-table__cell">
-     <a class="govuk-link" aria-labelledby="changestaffmember" href="/FEWCompleteStaffCollection">Complete collection</a>
-</td>
-</tr>
- </tbody>
-
-</table>
-
-{% endif%}
-
-<h2 class="govuk-heading">Staff members</h2>
-<div class="govuk-tabs" data-module="govuk-tabs">
-    <h2 class="govuk-tabs__title">
-        Contents
-    </h2>
-    <ul class="govuk-tabs__list" role="tablist">
-        <li class="govuk-tabs__list-item" role="presentation">
-            <label class="govuk-visually-hidden" id="completedstaffmembers">List of completed staff members</label>
-            <a class="govuk-tabs__tab" href="#completed" aria-labelledby="completedstaffmembers" id="tab_completed" role="tab" aria-controls="completed" aria-selected="false" tabindex="-1">
-                Completed staff members
-            </a>
-        </li>
-        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" role="presentation">
-            <label class="govuk-visually-hidden" id="incompletestaffmembers">List of incomplete staff members</label>
-            <a class="govuk-tabs__tab" href="#incomplete" aria-labelledby="incompletestaffmembers" id="tab_incomplete" role="tab" aria-controls="incomplete" aria-selected="true" tabindex="0">
-                Incomplete staff members
-            </a>
-        </li>
-    </ul>
-    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="completed" role="tabpanel" aria-labelledby="tab_completed">
-        <p class="govuk-body">
-            There are 14 completed staff members recorded
-        </p>
-        
-    <table class="govuk-table">
-        <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Name</th>
-            <th scope="col" class="govuk-table__header">Date of birth</th>
-            <th scope="col" class="govuk-table__header"></th>
-        </tr>
-        </thead>
-
-        <tbody class="govuk-table__body">
-
-<tr class="govuk-table__row">
-    <td class="govuk-table__cell">OctPPRegFour FourTestDataLastName</td>
-    <td class="govuk-table__cell">13 August 1981</td>
-    <td class="govuk-table__cell">
-        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member OctPPRegFour FourTestDataLastName 13 August 1981</label>
-        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1437">Change</a>
-        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record OctPPRegFour FourTestDataLastName 13 August 1981</label>
-        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1437">Delete</a>
-    </td>
-</tr>
-<tr class="govuk-table__row">
-    <td class="govuk-table__cell">Samantha Incomplete</td>
-    <td class="govuk-table__cell">15 January 1990</td>
-    <td class="govuk-table__cell">
-        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member Samantha Incomplete 15 January 1990</label>
-        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1446">Change</a>
-        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record Samantha Incomplete 15 January 1990</label>
-        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1446">Delete</a>
-    </td>
-</tr>
-<tr class="govuk-table__row">
-    <td class="govuk-table__cell">OneHourlyrateFirstNamee OneHourlyrateTestDataLastName</td>
-    <td class="govuk-table__cell">13 August 1981</td>
-    <td class="govuk-table__cell">
-        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member OneHourlyrateFirstNamee OneHourlyrateTestDataLastName 13 August 1981</label>
-        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1439">Change</a>
-        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record OneHourlyrateFirstNamee OneHourlyrateTestDataLastName 13 August 1981</label>
-        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1439">Delete</a>
-    </td>
-</tr>
-      
-</tbody>
-
-    </table>
-
-
-    </div>
-    <div class="govuk-tabs__panel" id="incomplete" role="tabpanel" aria-labelledby="tab_incomplete">
-        <p class="govuk-body">
-                <span>There is 1 incomplete staff member recorded</span>
-
-        </p>
-        
-    <table class="govuk-table">
-        <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Name</th>
-            <th scope="col" class="govuk-table__header">Date of birth</th>
-            <th scope="col" class="govuk-table__header"></th>
-        </tr>
-        </thead>
-
-        <tbody class="govuk-table__body">
-
-<tr class="govuk-table__row">
-    <td class="govuk-table__cell">peter  test </td>
-    <td class="govuk-table__cell">09 October 1990</td>
-    <td class="govuk-table__cell">
-        <label class="govuk-visually-hidden" id="changestaffmember">Make changes for staff member peter  test  09 October 1990</label>
-        <a class="govuk-link" aria-labelledby="changestaffmember" href="/few/staff/task-list-staff-member-data/1448">Change</a>
-        <label class="govuk-visually-hidden" id="deletestaffmember">Delete staff member record peter  test  09 October 1990</label>
-        <a class="govuk-link padding-left-11" aria-labelledby="deletestaffmember" href="/few/staff/delete-staff-member/1448">Delete</a>
-    </td>
-</tr>        </tbody>
-
-    </table>
-
-
-    </div>
-
-</div>
-
-<p class="govuk-body"></p>
-<div class="govuk-button-group">
-           <a class="govuk-button" aria-labelledby="addstaffmember" href="/FEWAddStaffMember.html">Add another staff member</a>
-</div>
-
-
+                <div class="govuk-tabs__panel" id="incomplete" role="tabpanel" aria-labelledby="tab_incomplete">
+                    <p class="govuk-body">There is 1 incomplete staff member recorded</p>
+                    <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Name</th>
+                                <th scope="col" class="govuk-table__header">Date of birth</th>
+                                <th scope="col" class="govuk-table__header"><span class="govuk-visually-hidden">Actions</span></th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">Peter Test</td>
+                                <td class="govuk-table__cell">09 October 1990</td>
+                                <td class="govuk-table__cell">
+                                    <a class="govuk-link" href="/few/staff/task-list-staff-member-data/1448">Change<span class="govuk-visually-hidden"> for Peter Test</span></a>
+                                    <a class="govuk-link govuk-!-margin-left-2" href="/few/staff/delete-staff-member/1448">Delete<span class="govuk-visually-hidden"> Peter Test</span></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </main>
+
+            <div class="govuk-button-group">
+                <a class="govuk-button" data-module="govuk-button" href="/FEWAddStaffMember">
+                    Add another staff member
+                </a>
+            </div>
+
+        </div>
     </div>
-</body>
-
-
-
+</main>
 {% endblock %}
