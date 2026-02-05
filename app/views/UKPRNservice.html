@@ -3,55 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOV.UK - Application Status</title>
+    <title>GOV.UK Prototype</title>
     <style>
+        /* GDS Transport is the official font; Arial is the standard fallback */
         body {
             font-family: "GDS Transport", arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
             margin: 0;
             padding: 0;
             color: #0b0c0c;
-            background-color: #ffffff;
-            -webkit-font-smoothing: antialiased;
         }
 
-        /* Blue Header */
+        /* 1. Official GOV.UK Header */
         .govuk-header {
             background-color: #1d70b8;
             padding: 10px 0;
             border-bottom: 10px solid #000000;
         }
 
-        .header-content {
+        .header-inner {
             max-width: 960px;
             margin: 0 auto;
             padding: 0 15px;
+        }
+
+        .govuk-logo {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 30px;
+            text-decoration: none;
             display: flex;
             align-items: center;
         }
 
-        .govuk-logo {
-            font-size: 30px;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-
-        /* Sub-header Banner */
-        .govuk-banner {
+        /* 2. Service Banner */
+        .service-banner {
             border-bottom: 1px solid #b1b4b6;
             padding: 15px 0;
         }
 
-        .banner-content {
+        .banner-inner {
             max-width: 960px;
             margin: 0 auto;
             padding: 0 15px;
-            font-weight: bold;
             font-size: 19px;
+            font-weight: bold;
         }
 
-        /* Main Content Area */
-        .main-container {
+        /* 3. Main Content Spacing */
+        .main-content {
             max-width: 960px;
             margin: 40px auto;
             padding: 0 15px;
@@ -59,92 +59,77 @@
 
         h1 {
             font-size: 48px;
-            font-weight: 700;
             line-height: 1.1;
             margin: 0 0 30px 0;
+            font-weight: 700;
         }
 
         p {
             font-size: 19px;
             line-height: 1.31579;
             margin: 0 0 20px 0;
-            max-width: 680px;
         }
 
-        .bold-text {
-            font-weight: 700;
-        }
-
-        /* Action Section */
-        .button-group {
+        /* 4. Button Layout (GDS System) */
+        .govuk-button-group {
             display: flex;
-            align-items: baseline;
-            gap: 25px;
+            align-items: center;
+            gap: 15px;
             margin-top: 35px;
         }
 
-        /* The specific 3D Green Button */
+        /* Primary Green Button */
         .govuk-button {
             background-color: #00703c;
             color: #ffffff;
             font-size: 19px;
-            font-weight: 400;
             padding: 8px 15px 5px;
             border: none;
-            border-bottom: 3px solid #002d18; /* Darker bottom edge from SS */
+            border-bottom: 3px solid #002d18; /* The 3D effect shadow */
             cursor: pointer;
             text-decoration: none;
-            display: inline-block;
         }
 
         .govuk-button:hover {
             background-color: #005a30;
         }
 
-        .govuk-button:active {
-            position: relative;
-            top: 2px;
-            border-bottom: none;
-            margin-bottom: 3px;
-        }
-
-        /* Secondary Link Action */
-        .govuk-link {
+        /* Secondary Grey Button (Matching image_10d7fe.png) */
+        .govuk-button--secondary {
+            background-color: #f3f2f1;
+            color: #0b0c0c;
+            border-bottom: 3px solid #b1b4b6;
+            padding: 8px 15px 5px;
             font-size: 19px;
-            color: #1d70b8;
-            text-decoration: underline;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
+            text-decoration: none;
         }
 
-        .govuk-link:hover {
-            color: #003078;
+        .govuk-button--secondary:hover {
+            background-color: #dbdad9;
         }
     </style>
 </head>
 <body>
 
     <header class="govuk-header">
-        <div class="header-content">
-            <div class="govuk-logo">GOV.UK</div>
+        <div class="header-inner">
+            <span class="govuk-logo">GOV.UK</span>
         </div>
     </header>
 
-    <div class="govuk-banner">
-        <div class="banner-content">
+    <div class="service-banner">
+        <div class="banner-inner">
             Apply for a UK Provider Reference Number (UKPRN) for your organisation
         </div>
     </div>
 
-    <main class="main-container">
+    <main class="main-content">
         <h1>You cannot use this reference number as part of your application</h1>
         
         <p>
             We cannot accept the company number you entered because your 
             organisation's status on the Companies House register is currently set to 
-            <span class="bold-text">Inactive</span>.
+            <strong>Inactive</strong>.
         </p>
 
         <p>
@@ -152,9 +137,9 @@
             other registers you have selected.
         </p>
 
-        <div class="button-group">
+        <div class="govuk-button-group">
             <button class="govuk-button">Continue</button>
-            <a href="#" class="govuk-link">Select a different register</a>
+            <button class="govuk-button--secondary">Select a different register</button>
         </div>
     </main>
 
