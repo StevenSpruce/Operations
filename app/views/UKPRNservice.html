@@ -3,20 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UKPRN Already Applied</title>
+    <title>GOV.UK - Application Status</title>
     <style>
         body {
-            /* Using the standard GOV.UK font stack */
             font-family: "GDS Transport", arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
             margin: 0;
             padding: 0;
             color: #0b0c0c;
+            background-color: #ffffff;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .container {
+        /* Blue Header */
+        .govuk-header {
+            background-color: #1d70b8;
+            padding: 10px 0;
+            border-bottom: 10px solid #000000;
+        }
+
+        .header-content {
             max-width: 960px;
-            margin: 50px auto;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .govuk-logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Sub-header Banner */
+        .govuk-banner {
+            border-bottom: 1px solid #b1b4b6;
+            padding: 15px 0;
+        }
+
+        .banner-content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 15px;
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        /* Main Content Area */
+        .main-container {
+            max-width: 960px;
+            margin: 40px auto;
             padding: 0 15px;
         }
 
@@ -30,28 +67,31 @@
         p {
             font-size: 19px;
             line-height: 1.31579;
-            margin: 0 0 30px 0;
-            color: #0b0c0c;
-            max-width: 700px;
+            margin: 0 0 20px 0;
+            max-width: 680px;
         }
 
-        /* Button and Link Container */
+        .bold-text {
+            font-weight: 700;
+        }
+
+        /* Action Section */
         .button-group {
             display: flex;
             align-items: baseline;
-            gap: 20px;
+            gap: 25px;
+            margin-top: 35px;
         }
 
-        /* The 3D Green Button */
+        /* The specific 3D Green Button */
         .govuk-button {
             background-color: #00703c;
             color: #ffffff;
             font-size: 19px;
-            line-height: 1;
             font-weight: 400;
-            padding: 8px 15px 5px; /* Offset padding for the 3D effect */
+            padding: 8px 15px 5px;
             border: none;
-            border-bottom: 3px solid #002d18; /* The dark 'shadow' at bottom */
+            border-bottom: 3px solid #002d18; /* Darker bottom edge from SS */
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
@@ -61,13 +101,20 @@
             background-color: #005a30;
         }
 
-        /* The blue link */
+        .govuk-button:active {
+            position: relative;
+            top: 2px;
+            border-bottom: none;
+            margin-bottom: 3px;
+        }
+
+        /* Secondary Link Action */
         .govuk-link {
             font-size: 19px;
             color: #1d70b8;
             text-decoration: underline;
-            border: none;
             background: none;
+            border: none;
             cursor: pointer;
             padding: 0;
         }
@@ -79,20 +126,37 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>This organisation has already applied for a UK Provider Reference Number</h1>
+    <header class="govuk-header">
+        <div class="header-content">
+            <div class="govuk-logo">GOV.UK</div>
+        </div>
+    </header>
+
+    <div class="govuk-banner">
+        <div class="banner-content">
+            Apply for a UK Provider Reference Number (UKPRN) for your organisation
+        </div>
+    </div>
+
+    <main class="main-container">
+        <h1>You cannot use this reference number as part of your application</h1>
         
         <p>
-            The verification code 12345 is already registered against UKPRN 10001234. 
-            Please contact your super user. If you continue with the verification 
-            process, this verification code will be saved against your application.
+            We cannot accept the company number you entered because your 
+            organisation's status on the Companies House register is currently set to 
+            <span class="bold-text">Inactive</span>.
+        </p>
+
+        <p>
+            You can still submit your application using the reference numbers for the 
+            other registers you have selected.
         </p>
 
         <div class="button-group">
             <button class="govuk-button">Continue</button>
             <a href="#" class="govuk-link">Select a different register</a>
         </div>
-    </div>
+    </main>
 
 </body>
 </html>
