@@ -3,81 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UKPRN Already Applied</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            /* Using the standard GOV.UK font stack */
+            font-family: "GDS Transport", arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
             margin: 0;
-            padding: 40px;
+            padding: 0;
             color: #0b0c0c;
         }
 
-        .content-wrapper {
+        .container {
             max-width: 960px;
+            margin: 50px auto;
+            padding: 0 15px;
         }
 
         h1 {
             font-size: 48px;
-            font-weight: bold;
+            font-weight: 700;
             line-height: 1.1;
-            margin-bottom: 30px;
+            margin: 0 0 30px 0;
         }
 
         p {
             font-size: 19px;
-            line-height: 1.3;
-            color: #505a5f;
-            margin-bottom: 25px;
+            line-height: 1.31579;
+            margin: 0 0 30px 0;
+            color: #0b0c0c;
             max-width: 700px;
         }
 
-        /* Fixed Button Container */
-        .actions {
+        /* Button and Link Container */
+        .button-group {
             display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-top: 30px;
+            align-items: baseline;
+            gap: 20px;
         }
 
-        /* Green "Continue" Button Style */
-        .gov-button {
-            background-color: #00703c; /* Specific GOV green */
-            color: white;
-            padding: 8px 18px;
+        /* The 3D Green Button */
+        .govuk-button {
+            background-color: #00703c;
+            color: #ffffff;
             font-size: 19px;
+            line-height: 1;
             font-weight: 400;
+            padding: 8px 15px 5px; /* Offset padding for the 3D effect */
             border: none;
-            border-bottom: 3px solid #002d18; /* Darker bottom border */
+            border-bottom: 3px solid #002d18; /* The dark 'shadow' at bottom */
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
         }
 
-        .gov-button:hover {
+        .govuk-button:hover {
             background-color: #005a30;
         }
 
-        .gov-button:active {
-            top: 2px;
-            border-bottom: none;
-            margin-bottom: 3px;
-        }
-
-        /* Blue Link Style */
-        .gov-link {
+        /* The blue link */
+        .govuk-link {
             font-size: 19px;
             color: #1d70b8;
             text-decoration: underline;
+            border: none;
+            background: none;
             cursor: pointer;
+            padding: 0;
         }
 
-        .gov-link:hover {
+        .govuk-link:hover {
             color: #003078;
         }
     </style>
 </head>
 <body>
 
-    <div class="content-wrapper">
+    <div class="container">
         <h1>This organisation has already applied for a UK Provider Reference Number</h1>
         
         <p>
@@ -86,9 +88,9 @@
             process, this verification code will be saved against your application.
         </p>
 
-        <div class="actions">
-            <button class="gov-button">Continue</button>
-            <a href="#" class="gov-link">Select a different register</a>
+        <div class="button-group">
+            <button class="govuk-button">Continue</button>
+            <a href="#" class="govuk-link">Select a different register</a>
         </div>
     </div>
 
