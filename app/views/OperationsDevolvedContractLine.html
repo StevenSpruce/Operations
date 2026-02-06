@@ -1,81 +1,84 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-    Funding line type
+    Funding Line
 {% endblock %}
 
 {% block content %}
 {% include "./includes/nav.html" %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-two-thirds">
 
-    <a href="/AddContractLine" class="govuk-back-link">Back</a>
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
-    <h1 class="govuk-heading-l">Funding Line</h1>
+    <h1 class="govuk-heading-l">Funding Line</h1>
 
-    <a href="#" class="govuk-button">Add a new funding line</a>
+    <a href="#" class="govuk-button">Add a new funding line</a>
 
-<table class="govuk-table">
-    <caption class="govuk-table__caption govuk-table__caption--m">Skills Bootcamps</caption>
-<thead class="govuk-table__head">
-   <tr class="govuk-table__row">
-  <th scope="row" class="govuk-table__header">Created by</th>
-  <td class="govuk-table__cell">
-     Janet Williams
-     <a href="#" class="govuk-link" style="float: right;">Manage</a>
-  </td>
-</tr>
-  </thead>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Date Created</th>
-      <td class="govuk-table__cell">20/03/2025</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Modified By</th>
-      <td class="govuk-table__cell">Janet Williams</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Last Modified</th>
-      <td class="govuk-table__cell">20/03/2025</td>
-    </tr>
-  </tbody>
-</table>
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Skills Bootcamps</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Created by</th>
+          <td class="govuk-table__cell">
+             Janet Williams
+             <a href="#" class="govuk-link" style="float: right;">Manage</a>
+          </td>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Date Created</th>
+          <td class="govuk-table__cell">20/03/2025</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Modified By</th>
+          <td class="govuk-table__cell">Janet Williams</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Last Modified</th>
+          <td class="govuk-table__cell">20/03/2025</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Display on SLD</th>
+          <td class="govuk-table__cell">Yes</td>
+        </tr>
+      </tbody>
+    </table>
 
-<table class="govuk-table">
-  <caption class="govuk-table__caption govuk-table__caption--m">Adult Skills Fund</caption>
-<thead class="govuk-table__head">
-   <tr class="govuk-table__row">
-  <th scope="row" class="govuk-table__header">Created by</th>
-  <td class="govuk-table__cell">
-     Lucy Stevens
-     <a href="#" class="govuk-link" style="float: right;">Manage</a>
-  </td>
-</tr>
-  </thead>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Date Created</th>
-      <td class="govuk-table__cell">15/07/2025</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Modified By</th>
-      <td class="govuk-table__cell">Alan Stick</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Last Modified</th>
-      <td class="govuk-table__cell">23/08/2025</td>
-    </tr>
-  </tbody>
-</table>
-    </div>
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Adult Skills Fund</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Created by</th>
+          <td class="govuk-table__cell">
+             Lucy Stevens
+             <a href="#" class="govuk-link" style="float: right;">Manage</a>
+          </td>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Date Created</th>
+          <td class="govuk-table__cell">15/07/2025</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Modified By</th>
+          <td class="govuk-table__cell">Alan Stick</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Last Modified</th>
+          <td class="govuk-table__cell">23/08/2025</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Display on SLD</th>
+          <td class="govuk-table__cell">No</td>
+        </tr>
+      </tbody>
+    </table>
 
-  </div>
+  </div>
 </div>
 
 {% endblock %}
