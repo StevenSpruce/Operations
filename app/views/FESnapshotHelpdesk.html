@@ -4,15 +4,16 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">
-      CHIEF EXECUTIVE OF SKILLS FUNDING
+      ENERGY AND UTILITY SKILLS LIMITED
     </h1>
     <p class="govuk-body govuk-!-font-size-19 govuk-!-margin-bottom-6">
-      UKPRN: 10033670, UPIN: 119745
+      UKPRN: 10009688, UPIN: 115184
     </p>
 
-    <p class="govuk-body">
-      <strong>Collection types:</strong> FEW , FEW-GOV
-    </p>
+    <div class="govuk-body">
+      <strong class="govuk-!-margin-right-1">Collection types:</strong>
+      <span class="govuk-body-s">ILR , EAS , FC , ESF , MCA-GLA , FEW , FEW-GOV , SBC , HECoS , EDRS , 1619-Est , ESFR , ELDImport , LDCS , FE-TeacherSnapshot</span>
+    </div>
   </div>
 </div>
 
@@ -24,30 +25,77 @@
       <li><a class="govuk-link govuk-link--no-visited-state" href="#">Unsubmitted files</a></li>
       <li><a class="govuk-link govuk-link--no-visited-state" href="#">FRM reports</a></li>
       <li><a class="govuk-link govuk-link--no-visited-state" href="#">FM36 summary</a></li>
+      <li><a class="govuk-link govuk-link--no-visited-state" href="#">Funding claims</a></li>
+      <li><a class="govuk-link govuk-link--no-visited-state" href="#">NCS reports</a></li>
+      <li><a class="govuk-link govuk-link--no-visited-state" href="#">NCS reports history</a></li>
       <li><a class="govuk-link govuk-link--no-visited-state" href="#">Reports archive</a></li>
       <li><a class="govuk-link govuk-link--no-visited-state" href="#">FE Workforce</a></li>
       <li><a class="govuk-link govuk-link--no-visited-state" href="#">16-19 estimate</a></li>
-      <li><a class="govuk-link govuk-link--no-visited-state" href="#">FE FTE Snapshot </a></li>
+      <li><a class="govuk-link govuk-link--no-visited-state" href="#">FE FTE Snapshot Collection</a></li>
+      
       <li><a class="govuk-link govuk-link--no-visited-state" href="#">Understand your funding</a></li>
+      <li><a class="govuk-link govuk-link--no-visited-state" href="#">Learning Directory Classification System</a></li>
+      <li><a class="govuk-link govuk-link--no-visited-state" href="#">Skills Bootcamp contracts</a></li>
+      <li><a class="govuk-link govuk-link--no-visited-state" href="#">Higher Education Classification of Subjects</a></li>
     </ul>
   </div>
 
   <div class="govuk-grid-column-two-thirds">
-    <h2 class="govuk-heading-l">Latest submissions</h2>
+    <h2 class="govuk-heading-l">Historical submissions and reports</h2>
     
     <p class="govuk-body">
-      View your submissions from the last 90 days and see your updated reports. After 90 days you can find your reports for each collection period in 'submission history'.
+      The final submission reports download includes the reports and submission files.
     </p>
     
-    <p class="govuk-body">
-      Download the reports of your most recent submission to see your latest figures
+    <p class="govuk-body govuk-hint govuk-!-margin-bottom-6">
+      Filter by year. The page will refresh after you select.
     </p>
 
-    <h3 class="govuk-heading-m govuk-!-margin-top-8">Filter your submission types</h3>
+    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="year-1" name="years" type="checkbox" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="year-1">2025 to 2026</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="year-2" name="years" type="checkbox">
+            <label class="govuk-label govuk-checkboxes__label" for="year-2">2022 to 2023</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="year-3" name="years" type="checkbox">
+            <label class="govuk-label govuk-checkboxes__label" for="year-3">2019 to 2020</label>
+          </div>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="year-4" name="years" type="checkbox">
+            <label class="govuk-label govuk-checkboxes__label" for="year-4">2024 to 2025</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="year-5" name="years" type="checkbox">
+            <label class="govuk-label govuk-checkboxes__label" for="year-5">2021 to 2022</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="year-6" name="years" type="checkbox">
+            <label class="govuk-label govuk-checkboxes__label" for="year-6">2018 to 2019</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="govuk-heading-m govuk-!-margin-top-9">Academic Collection Year 2025 to 2026</h2>
     
-    <p class="govuk-body govuk-hint">
-      Choosing a filter will result in the page refreshing automatically
-    </p>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Return period</th>
+          <th scope="col" class="govuk-table__header">Download</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        </tbody>
+    </table>
   </div>
 </div>
 {% endblock %}
