@@ -1,0 +1,76 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+  Record FE Teacher FTE - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="/FETeacherSnapshotCollectionOverview" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper" id="content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form id="fte-form">
+        
+        <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--l" for="fte-2024">
+                    Record FE Teacher FTE for 2023/24
+                </label>
+            </h1>
+
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Who to include in this figure
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p class="govuk-body">The figure should include the total Full-Time-Equivalent (FTE) for staff members whose main role is teacher and were employed on 15th January 2024 who were on:
+                  <ul class="govuk-list govuk-list--bullet">
+                      <li>Permanent contracts</li>
+                      <li>Fixed-term contracts</li>
+                  </ul>
+                </div>
+            </details>
+
+            <div id="fte-2024-hint" class="govuk-hint">
+                Enter the total <strong>Full-Time Equivalent (FTE)</strong>, not the headcount. 
+                <br>For example, two staff members working 0.50 FTE each should be recorded as <strong>1.00</strong>.
+            </div>
+
+            <input class="govuk-input govuk-input--width-5" id="fte-2024" name="fte2024" type="text" spellcheck="false" aria-describedby="fte-2024-hint" inputmode="decimal">
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button" id="continue-button">
+            Save and continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+<script>
+  document.getElementById('continue-button').addEventListener('click', function(e) {
+    e.preventDefault(); // Stop the form from submitting normally
+    
+    // 1. Retrieve the status for the NEXT year (24/25) 
+    // This looks at the second radio button answer from the start page
+    var nextStatus = sessionStorage.getItem('status2425');
+
+    // 2. Check the answer and redirect
+    if (nextStatus === 'yes') {
+        // If they said YES for 24/25, go to the pre-filled page
+        window.location.href = '/FETeacherSnapshot2425hasdata'; 
+    } else {
+        // If they said NO for 24/25, go to the manual entry page
+        window.location.href = '/FETeacherSnapshot2425NoData';
+    }
+  });
+</script>
+
+{% endblock %}
