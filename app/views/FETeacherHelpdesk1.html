@@ -30,37 +30,40 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+        <span class="govuk-caption-l">FE Teacher FTE Snapshot Collection</span>
         <h1 class="govuk-heading-l">Submissions</h1>
-        
-        <p class="govuk-body-l">
-            FE Teacher FTE Snapshot Collection
-        </p>
 
         <form method="get">
-            <h2 class="govuk-heading-m">Filter by year</h2>
-            <div id="filter-hint" class="govuk-hint">
-                The page will refresh after you select each filter.
-            </div>
-
-            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="year-2526" name="years" type="checkbox" value="2526" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="year-2526">
-                        2025 to 2026
-                    </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="year-2425" name="years" type="checkbox" value="2425" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="year-2425">
-                        2024 to 2025
-                    </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="year-2324" name="years" type="checkbox" value="2324">
-                    <label class="govuk-label govuk-checkboxes__label" for="year-2324">
-                        2023 to 2024
-                    </label>
-                </div>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        Filter by year
+                    </legend>
+                    <div id="filter-hint" class="govuk-hint">
+                        The page will refresh after you select each filter.
+                    </div>
+                    
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="year-2526" name="years" type="checkbox" value="2526" checked>
+                            <label class="govuk-label govuk-checkboxes__label" for="year-2526">
+                                2025 to 2026
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="year-2425" name="years" type="checkbox" value="2425" checked>
+                            <label class="govuk-label govuk-checkboxes__label" for="year-2425">
+                                2024 to 2025
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="year-2324" name="years" type="checkbox" value="2324">
+                            <label class="govuk-label govuk-checkboxes__label" for="year-2324">
+                                2023 to 2024
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
             </div>
         </form>
 
@@ -70,7 +73,7 @@
         <p class="govuk-body">
             There is no data currently submitted for the 2025 to 2026 academic year.
         </p>
-        <p class="govuk-body">
+        <p class="govuk-body govuk-!-margin-bottom-7">
             <a href="/start-snapshot-2526" class="govuk-link">Submit FTE Snapshot data</a>
         </p>
 
