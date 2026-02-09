@@ -1,42 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energy and Utility Skills Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>ENERGY AND UTILITY SKILLS LIMITED</h1>
-            <p class="sub-header">UKPRN: 10009688, UPIN: 115184</p>
-            <p class="collection"><strong>Collection types:</strong> FEW , FEW-GOV</p>
-        </header>
+{% extends "layouts/main.html" %}
 
-        <div class="main-layout">
-            <nav class="sidebar">
-                <ul>
-                    <li><a href="#" class="active">Latest submissions</a></li>
-                    <li><a href="#">Submission history</a></li>
-                    <li><a href="#">Unsubmitted files</a></li>
-                    <li><a href="#">FRM reports</a></li>
-                    <li><a href="#">FM36 summary</a></li>
-                    <li><a href="#">Reports archive</a></li>
-                    <li><a href="#" class="highlight">FE Workforce</a></li>
-                    <li><a href="#">Understand your funding</a></li>
-                </ul>
-            </nav>
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">
+      ENERGY AND UTILITY SKILLS LIMITED
+    </h1>
+    <p class="govuk-body govuk-!-font-size-19 govuk-!-margin-bottom-6">
+      UKPRN: 10009688, UPIN: 115184
+    </p>
 
-            <main class="content">
-                <h2>Latest submissions</h2>
-                <p>View your submissions from the last 90 days and see your updated reports. After 90 days you can find your reports for each collection period in 'submission history'.</p>
-                <p>Download the reports of your most recent submission to see your latest figures</p>
-                
-                <h3>Filter your submission types</h3>
-                <p class="filter-note">Choosing a filter will result in the page refreshing automatically</p>
-            </main>
-        </div>
-    </div>
-</body>
-</html>
+    <p class="govuk-body">
+      <strong>Collection types:</strong> FEW , FEW-GOV
+    </p>
+  </div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-top-6">
+  <div class="govuk-grid-column-one-third">
+    <ul class="govuk-list">
+      <li><a class="govuk-link govuk-link--no-visited-state" href="#">Latest submissions</a></li>
+      <li><a class="govuk-link govuk-link--no-visited-state" href="#">Submission history</a></li>
+      <li><a class="govuk-link govuk-link--no-visited-state" href="#">Unsubmitted files</a></li>
+      <li><a class="govuk-link govuk-link--no-visited-state" href="#">FRM reports</a></li>
+      <li><a class="govuk-link govuk-link--no-visited-state" href="#">FM36 summary</a></li>
+      <li><a class="govuk-link govuk-link--no-visited-state" href="#">Reports archive</a></li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="#" style="outline: 3px solid #d4351c; padding: 2px 4px;">
+          FE Workforce
+        </a>
+      </li>
+      <li><a class="govuk-link govuk-link--no-visited-state" href="#">Understand your funding</a></li>
+    </ul>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">Latest submissions</h2>
+    
+    <p class="govuk-body">
+      View your submissions from the last 90 days and see your updated reports. After 90 days you can find your reports for each collection period in 'submission history'.
+    </p>
+    
+    <p class="govuk-body">
+      Download the reports of your most recent submission to see your latest figures
+    </p>
+
+    <h3 class="govuk-heading-m govuk-!-margin-top-6">Filter your submission types</h3>
+    
+    <p class="govuk-body govuk-hint">
+      Choosing a filter will result in the page refreshing automatically
+    </p>
+  </div>
+</div>
+{% endblock %}
