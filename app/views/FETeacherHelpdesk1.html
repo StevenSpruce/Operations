@@ -41,7 +41,15 @@
                 <br>For example, two staff members working 0.50 FTE each should be recorded as <strong>1.00</strong>.
             </div>
 
-            <input class="govuk-input govuk-input--width-5" id="fte-2024" name="fte2024" type="text" spellcheck="false" aria-describedby="fte-2024-hint" inputmode="decimal">
+            {# The 'value' attribute below makes the number appear automatically #}
+            <input class="govuk-input govuk-input--width-5" 
+                   id="fte-2024" 
+                   name="fte2024" 
+                   type="text" 
+                   value="1.00"
+                   spellcheck="false" 
+                   aria-describedby="fte-2024-hint" 
+                   inputmode="decimal">
         </div>
 
         <button class="govuk-button" data-module="govuk-button" id="continue-button">
@@ -56,18 +64,13 @@
 
 <script>
   document.getElementById('continue-button').addEventListener('click', function(e) {
-    e.preventDefault(); // Stop the form from submitting normally
+    e.preventDefault();
     
-    // 1. Retrieve the status for the NEXT year (24/25) 
-    // This looks at the second radio button answer from the start page
     var nextStatus = sessionStorage.getItem('status2425');
 
-    // 2. Check the answer and redirect
     if (nextStatus === 'yes') {
-        // If they said YES for 24/25, go to the pre-filled page
         window.location.href = '/FETeacherSnapshot2425hasdata'; 
     } else {
-        // If they said NO for 24/25, go to the manual entry page
         window.location.href = '/FETeacherSnapshot2425NoData';
     }
   });
