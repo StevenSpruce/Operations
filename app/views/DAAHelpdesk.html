@@ -133,26 +133,153 @@
         </p>
 
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+{% extends "layoutsld.html" %}
 
-        <h2 class="govuk-heading-m">Academic Year 2023 to 2024</h2>
-        
-        <dl class="govuk-summary-list">
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Status</dt>
-                   <dd class="govuk-summary-list__value">Submitted
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Submitted by</dt>
-                <dd class="govuk-summary-list__value">Test Test</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Date</dt>
-                <dd class="govuk-summary-list__value">10 February 2026 at 10:15am</dd>
-            </div>
-             <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Total FTE</dt>
-                <dd class="govuk-summary-list__value">13.00</dd>
+{% block pageTitle %}
+  Allocations - Submit learner data
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Live
+    </strong>
+    <span class="govuk-phase-banner__text">
+      Your <a class="govuk-link" href="#" target="_blank">feedback (opens in new tab)</a> will help us improve the service.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full govuk-!-text-align-right govuk-!-padding-top-2">
+        <span class="govuk-body">Niamh Gallagher UKPRN:10033670</span>
+        <a href="#" class="govuk-link govuk-!-margin-left-2">Sign out</a>
+    </div>
+</div>
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper" id="content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full"> <h1 class="govuk-heading-l">Allocations</h1>
+
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Provider UKPRN</th>
+                    <th scope="col" class="govuk-table__header">Award type</th>
+                    <th scope="col" class="govuk-table__header">Funding Line</th>
+                    <th scope="col" class="govuk-table__header">Allocation start date</th>
+                    <th scope="col" class="govuk-table__header">Allocation end date</th>
+                    <th scope="col" class="govuk-table__header">Allocation value (£)</th>
+                    <th scope="col" class="govuk-table__header">Action</th>
+                    <th scope="col" class="govuk-table__header">Allocation Ended</th>
+                    <th scope="col" class="govuk-table__header">On hold</th>
+                    <th scope="col" class="govuk-table__header">No Change</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">12345678</td>
+                    <td class="govuk-table__cell">Grant</td>
+                    <td class="govuk-table__cell">Skills Bootcamps</td>
+                    <td class="govuk-table__cell">01/04/2024</td>
+                    <td class="govuk-table__cell">31/03/2025</td>
+                    <td class="govuk-table__cell">150,000</td>
+                    <td class="govuk-table__cell">
+                        <a href="#" class="govuk-link">Edit</a>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                            <input class="govuk-checkboxes__input" id="ended-1" name="ended-1" type="checkbox" value="yes">
+                            <label class="govuk-label govuk-checkboxes__label" for="ended-1"><span class="govuk-visually-hidden">Allocation Ended</span></label>
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                            <input class="govuk-checkboxes__input" id="hold-1" name="hold-1" type="checkbox" value="yes">
+                            <label class="govuk-label govuk-checkboxes__label" for="hold-1"><span class="govuk-visually-hidden">On hold</span></label>
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                            <input class="govuk-checkboxes__input" id="nochange-1" name="nochange-1" type="checkbox" value="yes">
+                            <label class="govuk-label govuk-checkboxes__label" for="nochange-1"><span class="govuk-visually-hidden">No Change</span></label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">87654321</td>
+                    <td class="govuk-table__cell">Contract for Services</td>
+                    <td class="govuk-table__cell">Adult Skills Fund</td>
+                    <td class="govuk-table__cell">01/08/2024</td>
+                    <td class="govuk-table__cell">31/07/2025</td>
+                    <td class="govuk-table__cell">250,000</td>
+                    <td class="govuk-table__cell">
+                        <a href="#" class="govuk-link">Edit</a>
+                    </td>
+                    <td class="govuk-table__cell">
+                         <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                            <input class="govuk-checkboxes__input" id="ended-2" name="ended-2" type="checkbox" value="yes">
+                            <label class="govuk-label govuk-checkboxes__label" for="ended-2"><span class="govuk-visually-hidden">Allocation Ended</span></label>
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                         <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                            <input class="govuk-checkboxes__input" id="hold-2" name="hold-2" type="checkbox" value="yes">
+                            <label class="govuk-label govuk-checkboxes__label" for="hold-2"><span class="govuk-visually-hidden">On hold</span></label>
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                         <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                            <input class="govuk-checkboxes__input" id="nochange-2" name="nochange-2" type="checkbox" value="yes">
+                            <label class="govuk-label govuk-checkboxes__label" for="nochange-2"><span class="govuk-visually-hidden">No Change</span></label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">19999999</td>
+                    <td class="govuk-table__cell">Grant</td>
+                    <td class="govuk-table__cell">Free Courses for Jobs</td>
+                    <td class="govuk-table__cell">01/09/2024</td>
+                    <td class="govuk-table__cell">31/08/2025</td>
+                    <td class="govuk-table__cell">75,000</td>
+                    <td class="govuk-table__cell">
+                        <a href="#" class="govuk-link">Edit</a>
+                    </td>
+                    <td class="govuk-table__cell">
+                         <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                            <input class="govuk-checkboxes__input" id="ended-3" name="ended-3" type="checkbox" value="yes">
+                            <label class="govuk-label govuk-checkboxes__label" for="ended-3"><span class="govuk-visually-hidden">Allocation Ended</span></label>
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                         <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                            <input class="govuk-checkboxes__input" id="hold-3" name="hold-3" type="checkbox" value="yes">
+                            <label class="govuk-label govuk-checkboxes__label" for="hold-3"><span class="govuk-visually-hidden">On hold</span></label>
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                         <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                            <input class="govuk-checkboxes__input" id="nochange-3" name="nochange-3" type="checkbox" value="yes">
+                            <label class="govuk-label govuk-checkboxes__label" for="nochange-3"><span class="govuk-visually-hidden">No Change</span></label>
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
             </div>
         </dl>
         
