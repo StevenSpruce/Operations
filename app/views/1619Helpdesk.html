@@ -31,7 +31,7 @@
     <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-l">
-            Estimated 16-19 student counts
+            What is your estimated number of 16–19 year-old students at the close of R04?
         </h1>
 
         <details class="govuk-details" data-module="govuk-details">
@@ -47,79 +47,35 @@
             </div>
         </details>
 
-        <form method="get">
-            <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                        Filter by year
-                    </legend>
-                    <div id="filter-hint" class="govuk-hint">
-                        The page will refresh after you select each filter.
-                    </div>
-                    
-                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                        <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="year-2526" name="years" type="checkbox" value="2526" checked>
-                            <label class="govuk-label govuk-checkboxes__label" for="year-2526">
-                                2025 to 2026
-                            </label>
-                        </div>
-                    </div>
-                </fieldset>
-            </div>
+        <h2 class="govuk-heading-m">Estimated 16-19 student counts</h2>
+
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Academic year</th>
+                    <th scope="col" class="govuk-table__header">Return period</th>
+                    <th scope="col" class="govuk-table__header">Estimate</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">2025 to 2026</td>
+                    <td class="govuk-table__cell">R03</td>
+                    <td class="govuk-table__cell">799</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">2025 to 2026</td>
+                    <td class="govuk-table__cell">R02</td>
+                    <td class="govuk-table__cell">798</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form action="/dashboard" method="post">
+            <button class="govuk-button" data-module="govuk-button">
+                Finish
+            </button>
         </form>
-
-        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-        <h2 class="govuk-heading-m">Academic Year 2025 to 2026 (R03)</h2>
-        
-        <dl class="govuk-summary-list">
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Status</dt>
-                <dd class="govuk-summary-list__value">
-                    Submitted
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Return period</dt>
-                <dd class="govuk-summary-list__value">R03</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Estimate</dt>
-                <dd class="govuk-summary-list__value">799</dd>
-            </div>
-        </dl>
-        
-        <p class="govuk-body">
-            <a href="#" class="govuk-link">View or amend submission</a>
-        </p>
-
-        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-        <h2 class="govuk-heading-m">Academic Year 2025 to 2026 (R02)</h2>
-        
-        <dl class="govuk-summary-list">
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Status</dt>
-                <dd class="govuk-summary-list__value">
-                    Submitted
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Return period</dt>
-                <dd class="govuk-summary-list__value">R02</dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Estimate</dt>
-                <dd class="govuk-summary-list__value">798</dd>
-            </div>
-        </dl>
-        
-        <p class="govuk-body">
-            <a href="#" class="govuk-link">View or amend submission</a>
-        </p>
-        
-        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
     </div>
   </div>
