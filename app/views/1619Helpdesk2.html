@@ -47,7 +47,29 @@
             </div>
         </details>
 
-        <h2 class="govuk-heading-m">Academic Year 2025 to 2026</h2>
+        <form action="/submit-estimate" method="post">
+            <div class="govuk-form-group">
+                <h2 class="govuk-label-wrapper">
+                    <label class="govuk-label govuk-label--m" for="estimate-input">
+                        Enter estimate for Return Period R04
+                    </label>
+                </h2>
+                <div id="estimate-hint" class="govuk-hint">
+                    Enter the total number of students.
+                </div>
+                <input class="govuk-input govuk-input--width-5" id="estimate-input" name="estimateInput" type="text" spellcheck="false" inputmode="numeric">
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">
+                Save and submit
+            </button>
+        </form>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Submission history</h2>
+
+        <h3 class="govuk-heading-s">Academic Year 2025 to 2026</h3>
         <table class="govuk-table">
             <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -57,24 +79,43 @@
                 </tr>
             </thead>
             <tbody class="govuk-table__body">
+                
                 <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">R03</td>
-                    <td class="govuk-table__cell">799</td>
+                    <td class="govuk-table__cell govuk-!-padding-top-3">R03</td>
+                    <td class="govuk-table__cell">
+                        <span id="view-val-R03">799</span>
+                        <input id="edit-input-R03" class="govuk-input govuk-input--width-4 govuk-!-display-none" type="text" value="799">
+                    </td>
                     <td class="govuk-table__cell govuk-table__cell--numeric">
-                        <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> R03 estimate</span></a>
+                        <a href="#" id="change-link-R03" class="govuk-link" onclick="toggleEdit('R03'); return false;">
+                            Change<span class="govuk-visually-hidden"> R03 estimate</span>
+                        </a>
+                        <a href="#" id="save-link-R03" class="govuk-link govuk-!-display-none" onclick="saveEdit('R03'); return false;">
+                            Save
+                        </a>
                     </td>
                 </tr>
+
                 <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">R02</td>
-                    <td class="govuk-table__cell">798</td>
+                    <td class="govuk-table__cell govuk-!-padding-top-3">R02</td>
+                    <td class="govuk-table__cell">
+                        <span id="view-val-R02">798</span>
+                        <input id="edit-input-R02" class="govuk-input govuk-input--width-4 govuk-!-display-none" type="text" value="798">
+                    </td>
                     <td class="govuk-table__cell govuk-table__cell--numeric">
-                         <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> R02 estimate</span></a>
+                         <a href="#" id="change-link-R02" class="govuk-link" onclick="toggleEdit('R02'); return false;">
+                            Change<span class="govuk-visually-hidden"> R02 estimate</span>
+                        </a>
+                        <a href="#" id="save-link-R02" class="govuk-link govuk-!-display-none" onclick="saveEdit('R02'); return false;">
+                            Save
+                        </a>
                     </td>
                 </tr>
+
             </tbody>
         </table>
 
-        <h2 class="govuk-heading-m govuk-!-margin-top-8">Academic Year 2024 to 2025</h2>
+        <h3 class="govuk-heading-s govuk-!-margin-top-6">Academic Year 2024 to 2025</h3>
         <table class="govuk-table">
             <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -85,32 +126,55 @@
             </thead>
             <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">R04</td>
+                    <td class="govuk-table__cell">R14</td>
                     <td class="govuk-table__cell">750</td>
                     <td class="govuk-table__cell govuk-table__cell--numeric">
-                        <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> R03 estimate</span></a>
+                        <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> R14 estimate</span></a>
                     </td>
                 </tr>
                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">R03</td>
+                    <td class="govuk-table__cell">R13</td>
                     <td class="govuk-table__cell">743</td>
                     <td class="govuk-table__cell govuk-table__cell--numeric">
-                        <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> R02 estimate</span></a>
-                    </td>
-                     <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">R04</td>
-                    <td class="govuk-table__cell">745</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric">
-                        <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> R02 estimate</span></a>
+                        <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> R13 estimate</span></a>
                     </td>
                 </tr>
             </tbody>
         </table>
-
-        </form>
 
     </div>
   </div>
 </main>
+
+<script>
+    function toggleEdit(rowId) {
+        // Hide View elements
+        document.getElementById('view-val-' + rowId).classList.add('govuk-!-display-none');
+        document.getElementById('change-link-' + rowId).classList.add('govuk-!-display-none');
+
+        // Show Edit elements
+        document.getElementById('edit-input-' + rowId).classList.remove('govuk-!-display-none');
+        document.getElementById('save-link-' + rowId).classList.remove('govuk-!-display-none');
+        
+        // Focus on input
+        document.getElementById('edit-input-' + rowId).focus();
+    }
+
+    function saveEdit(rowId) {
+        // Get new value
+        var newVal = document.getElementById('edit-input-' + rowId).value;
+        
+        // Update view text
+        document.getElementById('view-val-' + rowId).innerText = newVal;
+
+        // Hide Edit elements
+        document.getElementById('edit-input-' + rowId).classList.add('govuk-!-display-none');
+        document.getElementById('save-link-' + rowId).classList.add('govuk-!-display-none');
+
+        // Show View elements
+        document.getElementById('view-val-' + rowId).classList.remove('govuk-!-display-none');
+        document.getElementById('change-link-' + rowId).classList.remove('govuk-!-display-none');
+    }
+</script>
 
 {% endblock %}
