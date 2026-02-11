@@ -1,70 +1,19 @@
-{% extends "layoutsld.html" %}
-
-{% block pageTitle %}
-  Estimated 16-19 student counts - Submit learner data
-{% endblock %}
-
-{% block content %}
-
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      Live
-    </strong>
-    <span class="govuk-phase-banner__text">
-      Your <a class="govuk-link" href="#" target="_blank">feedback (opens in new tab)</a> will help us improve the service.
-    </span>
-  </p>
-</div>
-
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full govuk-!-text-align-right govuk-!-padding-top-2">
-        <span class="govuk-body">Niamh Gallagher UKPRN:10033670</span>
-        <a href="#" class="govuk-link govuk-!-margin-left-2">Sign out</a>
-    </div>
-</div>
-
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
-
-<main class="govuk-main-wrapper" id="content" role="main">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-        <h1 class="govuk-heading-l">
-            Estimated 16-19 student counts
-        </h1>
-
-        <details class="govuk-details" data-module="govuk-details">
-            <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                    Help with your estimate
-                </span>
-            </summary>
-            <div class="govuk-details__text">
-                <p class="govuk-body">
-                    The estimate should relate to the number of 16-19 year old students you expect to have on roll for the academic year.
-                </p>
-            </div>
-        </details>
-
-        <h2 class="govuk-heading-m">Academic Year 2025 to 2026</h2>
+<h2 class="govuk-heading-m">Academic Year 2025 to 2026</h2>
         <table class="govuk-table">
             <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header">Return period</th>
-                    <th scope="col" class="govuk-table__header">Estimate</th>
+                    <th scope="col" class="govuk-table__header" style="width: 30%;">Return period</th>
+                    <th scope="col" class="govuk-table__header" style="width: 20%;">Estimate</th>
                     <th scope="col" class="govuk-table__header"><span class="govuk-visually-hidden">Action</span></th>
                 </tr>
             </thead>
             <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
                     <td class="govuk-table__cell">R03</td>
-                    <td class="govuk-table__cell">  <input class="govuk-input" id="contract-end-date-12345678" name="rows[0][endDate]" type="text" value="799" style="width: 30%;">
-                    </div>
-                  </td>
-                  <td class="govuk-table__cell">
-                    <div class="govuk-form-group govuk-!-margin-bottom-0">
+                    <td class="govuk-table__cell">
+                        <input class="govuk-input" id="estimate-r03" name="estimate-r03" type="text" value="799" style="width: 70px; margin: 0;">
                     </td>
+                    <td class="govuk-table__cell"></td>
                 </tr>
                 <tr class="govuk-table__row">
                     <td class="govuk-table__cell">R02</td>
@@ -80,8 +29,8 @@
         <table class="govuk-table">
             <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header">Return period</th>
-                    <th scope="col" class="govuk-table__header">Estimate</th>
+                    <th scope="col" class="govuk-table__header" style="width: 30%;">Return period</th>
+                    <th scope="col" class="govuk-table__header" style="width: 20%;">Estimate</th>
                     <th scope="col" class="govuk-table__header"><span class="govuk-visually-hidden">Action</span></th>
                 </tr>
             </thead>
@@ -90,16 +39,17 @@
                     <td class="govuk-table__cell">R04</td>
                     <td class="govuk-table__cell">750</td>
                     <td class="govuk-table__cell govuk-table__cell--numeric">
-                        <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> R03 estimate</span></a>
+                        <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> R04 estimate</span></a>
                     </td>
                 </tr>
-                 <tr class="govuk-table__row">
+                <tr class="govuk-table__row">
                     <td class="govuk-table__cell">R03</td>
                     <td class="govuk-table__cell">743</td>
                     <td class="govuk-table__cell govuk-table__cell--numeric">
-                        <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> R02 estimate</span></a>
+                        <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> R03 estimate</span></a>
                     </td>
-                     <tr class="govuk-table__row">
+                </tr>
+                <tr class="govuk-table__row">
                     <td class="govuk-table__cell">R02</td>
                     <td class="govuk-table__cell">745</td>
                     <td class="govuk-table__cell govuk-table__cell--numeric">
@@ -108,11 +58,3 @@
                 </tr>
             </tbody>
         </table>
-
-        </form>
-
-    </div>
-  </div>
-</main>
-
-{% endblock %}
