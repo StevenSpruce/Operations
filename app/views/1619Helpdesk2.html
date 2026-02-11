@@ -47,84 +47,42 @@
             </div>
         </details>
 
-        <form action="/submit-estimate" method="post">
-            <div class="govuk-form-group">
-                <h2 class="govuk-label-wrapper">
-                    <label class="govuk-label govuk-label--m" for="estimate-input">
-                        Enter estimate for Return Period R04
-                    </label>
-                </h2>
-                <div id="estimate-hint" class="govuk-hint">
-                    Enter the total number of students.
-                </div>
-                <input class="govuk-input govuk-input--width-5" id="estimate-input" name="estimateInput" type="text" spellcheck="false" inputmode="numeric">
-            </div>
-
-            <button class="govuk-button" data-module="govuk-button">
-                Save and submit
-            </button>
-        </form>
-
-        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-        <h2 class="govuk-heading-m">Submission history</h2>
-
-        <h3 class="govuk-heading-s">Academic Year 2025 to 2026</h3>
+        <h2 class="govuk-heading-m">Academic Year 2025 to 2026</h2>
         <table class="govuk-table">
             <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Return period</th>
-                    <th scope="col" class="govuk-table__header govuk-!-width-one-half">Estimate</th>
-                    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"><span class="govuk-visually-hidden">Action</span></th>
+                    <th scope="col" class="govuk-table__header">Return period</th>
+                    <th scope="col" class="govuk-table__header">Estimate</th>
+                    <th scope="col" class="govuk-table__header"><span class="govuk-visually-hidden">Action</span></th>
                 </tr>
             </thead>
             <tbody class="govuk-table__body">
-                
                 <tr class="govuk-table__row">
-                    <td class="govuk-table__cell govuk-!-padding-top-3">R03</td>
-                    <td class="govuk-table__cell">
-                        <span id="view-val-R03" class="govuk-body" style="display: block; padding-top: 5px;">799</span>
-                        
-                        <div id="edit-group-R03" class="govuk-!-display-none">
-                            <label class="govuk-label govuk-visually-hidden" for="input-R03">Estimate for R03</label>
-                            <input class="govuk-input govuk-input--width-5" id="input-R03" type="text" value="799" inputmode="numeric">
-                        </div>
-                    </td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric">
-                        <a href="#" id="change-link-R03" class="govuk-link" onclick="toggleEdit('R03'); return false;">
-                            Change<span class="govuk-visually-hidden"> R03 estimate</span>
-                        </a>
-                        
-                        <div id="save-group-R03" class="govuk-!-display-none">
-                            <a href="#" class="govuk-link" onclick="saveEdit('R03'); return false;">Save</a>
-                            <br>
-                            <a href="#" class="govuk-link govuk-link--no-visited-state" style="color: #d4351c; font-size: 16px;" onclick="cancelEdit('R03'); return false;">Cancel</a>
-                        </div>
+                    <td class="govuk-table__cell">R03</td>
+                    <td class="govuk-table__cell">  <input class="govuk-input" id="contract-end-date-12345678" name="rows[0][endDate]" type="text" value="799" style="width: 30%;">
+                    </div>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-form-group govuk-!-margin-bottom-0">
                     </td>
                 </tr>
-
                 <tr class="govuk-table__row">
-                    <td class="govuk-table__cell govuk-!-padding-top-3">R02</td>
-                    <td class="govuk-table__cell">
-                        <span class="govuk-body" style="display: block; padding-top: 5px;">798</span>
-                    </td>
+                    <td class="govuk-table__cell">R02</td>
+                    <td class="govuk-table__cell">798</td>
                     <td class="govuk-table__cell govuk-table__cell--numeric">
-                        <a href="#" class="govuk-link">
-                            Change<span class="govuk-visually-hidden"> R02 estimate</span>
-                        </a>
+                         <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> R02 estimate</span></a>
                     </td>
                 </tr>
-
             </tbody>
         </table>
 
-        <h3 class="govuk-heading-s govuk-!-margin-top-6">Academic Year 2024 to 2025</h3>
+        <h2 class="govuk-heading-m govuk-!-margin-top-8">Academic Year 2024 to 2025</h2>
         <table class="govuk-table">
             <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Return period</th>
-                    <th scope="col" class="govuk-table__header govuk-!-width-one-half">Estimate</th>
-                    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"><span class="govuk-visually-hidden">Action</span></th>
+                    <th scope="col" class="govuk-table__header">Return period</th>
+                    <th scope="col" class="govuk-table__header">Estimate</th>
+                    <th scope="col" class="govuk-table__header"><span class="govuk-visually-hidden">Action</span></th>
                 </tr>
             </thead>
             <tbody class="govuk-table__body">
@@ -132,17 +90,16 @@
                     <td class="govuk-table__cell">R04</td>
                     <td class="govuk-table__cell">750</td>
                     <td class="govuk-table__cell govuk-table__cell--numeric">
-                        <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> R04 estimate</span></a>
+                        <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> R03 estimate</span></a>
                     </td>
                 </tr>
                  <tr class="govuk-table__row">
                     <td class="govuk-table__cell">R03</td>
                     <td class="govuk-table__cell">743</td>
                     <td class="govuk-table__cell govuk-table__cell--numeric">
-                        <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> R03 estimate</span></a>
+                        <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> R02 estimate</span></a>
                     </td>
-                </tr>
-                 <tr class="govuk-table__row">
+                     <tr class="govuk-table__row">
                     <td class="govuk-table__cell">R02</td>
                     <td class="govuk-table__cell">745</td>
                     <td class="govuk-table__cell govuk-table__cell--numeric">
@@ -152,37 +109,10 @@
             </tbody>
         </table>
 
+        </form>
+
     </div>
   </div>
 </main>
 
-<script>
-    function toggleEdit(id) {
-        // Hide View elements
-        document.getElementById('view-val-' + id).classList.add('govuk-!-display-none');
-        document.getElementById('change-link-' + id).classList.add('govuk-!-display-none');
-
-        // Show Edit elements
-        document.getElementById('edit-group-' + id).classList.remove('govuk-!-display-none');
-        document.getElementById('save-group-' + id).classList.remove('govuk-!-display-none');
-        
-        // Focus input
-        document.getElementById('input-' + id).focus();
-    }
-
-    function saveEdit(id) {
-        // Update the view text with the input value
-        var newVal = document.getElementById('input-' + id).value;
-        document.getElementById('view-val-' + id).innerText = newVal;
-
-        // Reset to View Mode
-        cancelEdit(id);
-    }
-
-    function cancelEdit(id) {
-        // Hide Edit elements
-        document.getElementById('edit-group-' + id).classList.add('govuk-!-display-none');
-        document.getElementById('save-group-' + id).classList.add('govuk-!-display-none');
-
-        // Show View elements
-        document.getElementById('view-val-' + id).classList.remove('govuk-!-display-
+{% endblock %}
