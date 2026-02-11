@@ -47,7 +47,30 @@
             </div>
         </details>
 
-        <h2 class="govuk-heading-m">Academic Year 2025 to 2026</h2>
+        <form action="/submit-estimate" method="post">
+            
+            <div class="govuk-form-group">
+                <h2 class="govuk-label-wrapper">
+                    <label class="govuk-label govuk-label--m" for="estimate-input">
+                        Enter estimate for Return Period R04
+                    </label>
+                </h2>
+                <div id="estimate-hint" class="govuk-hint">
+                    Enter the total number of students.
+                </div>
+                <input class="govuk-input govuk-input--width-5" id="estimate-input" name="estimateInput" type="text" spellcheck="false" inputmode="numeric">
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">
+                Save and submit
+            </button>
+
+        </form>
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Submission history</h2>
+
+        <h3 class="govuk-heading-s">Academic Year 2025 to 2026</h3>
         <table class="govuk-table">
             <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -74,7 +97,7 @@
             </tbody>
         </table>
 
-        <h2 class="govuk-heading-m govuk-!-margin-top-8">Academic Year 2024 to 2025</h2>
+        <h3 class="govuk-heading-s govuk-!-margin-top-6">Academic Year 2024 to 2025</h3>
         <table class="govuk-table">
             <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -85,29 +108,21 @@
             </thead>
             <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">R04</td>
+                    <td class="govuk-table__cell">R14</td>
                     <td class="govuk-table__cell">750</td>
                     <td class="govuk-table__cell govuk-table__cell--numeric">
-                        <a href="/1619Helpdesk2" class="govuk-link">Change<span class="govuk-visually-hidden"> R03 estimate</span></a>
+                        <a href="/1619Helpdesk2" class="govuk-link">Change<span class="govuk-visually-hidden"> R14 estimate</span></a>
                     </td>
                 </tr>
                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">R03</td>
+                    <td class="govuk-table__cell">R13</td>
                     <td class="govuk-table__cell">743</td>
                     <td class="govuk-table__cell govuk-table__cell--numeric">
-                        <a href="/1619Helpdesk2" class="govuk-link">Change<span class="govuk-visually-hidden"> R02 estimate</span></a>
-                    </td>
-                     <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">R04</td>
-                    <td class="govuk-table__cell">745</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric">
-                        <a href="/1619Helpdesk2" class="govuk-link">Change<span class="govuk-visually-hidden"> R02 estimate</span></a>
+                        <a href="/1619Helpdesk2" class="govuk-link">Change<span class="govuk-visually-hidden"> R13 estimate</span></a>
                     </td>
                 </tr>
             </tbody>
         </table>
-
-        </form>
 
     </div>
   </div>
