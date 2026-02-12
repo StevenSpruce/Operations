@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Edit allocation for 12345678 - Skills Bootcamps
+  Edit allocation details - 12345678 - Skills Bootcamps
 {% endblock %}
 
 {% block beforeContent %}
@@ -12,7 +12,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-      <span class="govuk-caption-l">Provider UKPRN: 12345678</span>
+      <span class="govuk-caption-l">Skills Bootcamps (UKPRN: 12345678)</span>
       <h1 class="govuk-heading-l">Edit allocation details</h1>
 
       <form action="/path-to-your-handler" method="post">
@@ -21,6 +21,9 @@
           label: {
             text: "Allocation value",
             classes: "govuk-label--m"
+          },
+          hint: {
+            text: "Enter the total amount in pounds"
           },
           id: "allocation-value",
           name: "allocationValue",
@@ -32,28 +35,22 @@
           value: "150,000"
         }) }}
 
-        {{ govukRadios({
-          name: "allocationStatus",
+        {{ govukDateInput({
+          id: "start-date",
+          namePrefix: "start-date",
           fieldset: {
             legend: {
-              text: "Allocation status",
+              text: "Allocation start date",
               classes: "govuk-fieldset__legend--m"
             }
           },
+          hint: {
+            text: "For example, 1 4 2024"
+          },
           items: [
-            {
-              value: "active",
-              text: "Active",
-              checked: true
-            },
-            {
-              value: "on-hold",
-              text: "On hold"
-            },
-            {
-              value: "ended",
-              text: "Ended"
-            }
+            { name: "day", classes: "govuk-input--width-2", value: "01" },
+            { name: "month", classes: "govuk-input--width-2", value: "04" },
+            { name: "year", classes: "govuk-input--width-4", value: "2024" }
           ]
         }) }}
 
@@ -78,7 +75,7 @@
 
         <div class="govuk-button-group">
           {{ govukButton({
-            text: "Save and continue"
+            text: "Update allocation"
           }) }}
 
           <a class="govuk-link" href="#">Cancel</a>
