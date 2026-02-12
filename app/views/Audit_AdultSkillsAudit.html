@@ -1,0 +1,16 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+ html <!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Survey Form</title> </head> <body> <h2>Simple Survey</h2> <form> <!-- Question 1 --> <div> <p>1. How satisfied are you?</p> <label> <input type="radio" name="q1" value="Very Satisfied"> Very Satisfied </label><br> <label> <input type="radio" name="q1" value="Satisfied"> Satisfied </label><br> <label> <input type="radio" name="q1" value="Not Satisfied"> Not Satisfied </label><br> <label for="q1_comment">Comment:</label><br> <textarea id="q1_comment" name="q1_comment" rows="3" cols="40"></textarea> </div> <hr> <!-- Question 2 --> <div> <p>2. Was the guidance clear?</p> <label> <input type="radio" name="q2" value="Yes"> Yes </label><br> <label> <input type="radio" name="q2" value="Partly"> Partly </label><br> <label> <input type="radio" name="q2" value="No"> No </label><br> <label for="q2_comment">Comment:</label><br> <textarea id="q2_comment" name="q2_comment" rows="3" cols="40"></textarea> </div> <hr> <!-- Question 3 --> <div> <p>3. Would you recommend us?</p> <label> <input type="radio" name="q3" value="Definitely"> Definitely </label><br> <label> <input type="radio" name="q3" value="Maybe"> Maybe </label><br> <label> <input type="radio" name="q3" value="No"> No </label><br> <label for="q3_comment">Comment:</label><br> <textarea id="q3_comment" name="q3_comment" rows="3" cols="40"></textarea> </div> <br> <button type="submit">Submit</button> </form> </body> </html>  
+
+
+ <a class="govuk-button" href="Audit_Summary.html">Continue</a>
+
+{% endblock %}
