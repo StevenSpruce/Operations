@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Edit allocation for 12345678 - Skills Bootcamps
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="#" class="govuk-back-link">Back to allocations</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <span class="govuk-caption-l">Provider UKPRN: 12345678</span>
+      <h1 class="govuk-heading-l">Edit allocation details</h1>
+
+      <form action="/path-to-your-handler" method="post">
+
+        {{ govukInput({
+          label: {
+            text: "Allocation value",
+            classes: "govuk-label--m"
+          },
+          id: "allocation-value",
+          name: "allocationValue",
+          prefix: {
+            text: "£"
+          },
+          classes: "govuk-input--width-10",
+          spellcheck: false,
+          value: "150,000"
+        }) }}
+
+        {{ govukRadios({
+          name: "allocationStatus",
+          fieldset: {
+            legend: {
+              text: "Allocation status",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "active",
+              text: "Active",
+              checked: true
+            },
+            {
+              value: "on-hold",
+              text: "On hold"
+            },
+            {
+              value: "ended",
+              text: "Ended"
+            }
+          ]
+        }) }}
+
+        {{ govukDateInput({
+          id: "end-date",
+          namePrefix: "end-date",
+          fieldset: {
+            legend: {
+              text: "Allocation end date",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          hint: {
+            text: "For example, 31 3 2025"
+          },
+          items: [
+            { name: "day", classes: "govuk-input--width-2", value: "31" },
+            { name: "month", classes: "govuk-input--width-2", value: "03" },
+            { name: "year", classes: "govuk-input--width-4", value: "2025" }
+          ]
+        }) }}
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Save and continue"
+          }) }}
+
+          <a class="govuk-link" href="#">Cancel</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+{% endblock %}
