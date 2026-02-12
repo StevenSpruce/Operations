@@ -4,9 +4,10 @@
   Edit allocation details - 12345678 - Skills Bootcamps
 {% endblock %}
 
-{% block beforeContent %}
-  <a href="#" class="govuk-back-link">Back to allocations</a>
-{% endblock %}
+{{ govukBackLink({
+  text: "Back",
+  href: "/path-to-previous-page"
+}) }}
 
 {% block content %}
   <div class="govuk-grid-row">
