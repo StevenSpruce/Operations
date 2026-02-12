@@ -36,25 +36,6 @@
         }) }}
 
         {{ govukDateInput({
-          id: "start-date",
-          namePrefix: "start-date",
-          fieldset: {
-            legend: {
-              text: "Allocation start date",
-              classes: "govuk-fieldset__legend--m"
-            }
-          },
-          hint: {
-            text: "For example, 1 4 2024"
-          },
-          items: [
-            { name: "day", classes: "govuk-input--width-2", value: "01" },
-            { name: "month", classes: "govuk-input--width-2", value: "04" },
-            { name: "year", classes: "govuk-input--width-4", value: "2024" }
-          ]
-        }) }}
-
-        {{ govukDateInput({
           id: "end-date",
           namePrefix: "end-date",
           fieldset: {
