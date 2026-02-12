@@ -1,0 +1,85 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">
+          Audit details
+        </h1>
+        
+        <div class="govuk-form-group">
+         
+          <label class="govuk-label govuk-date-input__label" for="assessment-price">
+            Provider UKPRN
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+        </div>
+
+                <div class="govuk-form-group">
+         
+          <label class="govuk-label govuk-date-input__label" for="assessment-price">
+            Audit name
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+        </div>
+
+                <div class="govuk-form-group">
+         
+          <label class="govuk-label govuk-date-input__label" for="assessment-price">
+            Audit description
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Which funding models are you auditing?
+      </h1>
+    </legend>
+    <div id="waste-hint" class="govuk-hint">
+      Select all that apply
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          16-19 (excluding Apprenticeships)
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Adult Skills Fund
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Apprenticeships
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+        <a class="govuk-button" href="SBRD_contractwaves.html">Continue</a>
+      </div>
+    </div>
+  </main>
+</div>
+
+ 
+
+{% endblock %}
