@@ -7,64 +7,82 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
+
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
  <dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
+    <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Name
+      Provider UKPRN
     </dt>
     <dd class="govuk-summary-list__value">
-      Sarah Philips
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+      12345678
     </dd>
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Date of birth
+      Provider name
     </dt>
     <dd class="govuk-summary-list__value">
-      5 January 1978
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+      Coventry City Football Club
     </dd>
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Address
+      ILR file
     </dt>
     <dd class="govuk-summary-list__value">
-      72 Guild Street<br>London<br>SE23 6FH
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+      ILR-1111111111-2526-20260114-100251-01
     </dd>
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Contact details
+      Funding organisation
     </dt>
     <dd class="govuk-summary-list__value">
-      <p class="govuk-body">07700 900457</p>
-      <p class="govuk-body">sarah.phillips@example.com</p>
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <ul class="govuk-summary-list__actions-list">
-        <li class="govuk-summary-list__actions-list-item">
-          <a class="govuk-link" href="#">Add<span class="govuk-visually-hidden"> contact details</span></a>
-        </li>
-        <li class="govuk-summary-list__actions-list-item">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
-        </li>
-      </ul>
+      ESFA
     </dd>
   </div>
 </dl>  
     
 
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Funding categories</th>
+      <th scope="col" class="govuk-table__header">Population value</th>
+      <th scope="col" class="govuk-table__header">Learner numbers</th>
+      <th scope="col" class="govuk-table__header">Sample size</th>
+      <th scope="col" class="govuk-table__header">Sample value</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Adult Skills Fund</th>
+      <td class="govuk-table__cell">£457,772.03</td>
+      <td class="govuk-table__cell">283</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">£100,000.03</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Adult Skills Fund (FM38)</th>
+      <td class="govuk-table__cell">£457,772.03</td>
+      <td class="govuk-table__cell">283</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">£100,000.03</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Adult Skills Fund (FM35)</th>
+      <td class="govuk-table__cell">£457,772.03</td>
+      <td class="govuk-table__cell">283</td>
+      <td class="govuk-table__cell">30</td>
+      <td class="govuk-table__cell">£100,000.03</td>
+    </tr>    
 
+  </tbody>
+</table>
+
+
+ <a class="govuk-button" href="Audit_D1.html">Continue</a>
 
 {% endblock %}
