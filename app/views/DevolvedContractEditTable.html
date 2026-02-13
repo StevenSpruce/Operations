@@ -1,7 +1,7 @@
 {% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-  Allocation details - Submit learner data
+  Edit allocation details - Submit learner data
 {% endblock %}
 
 {% block content %}
@@ -31,65 +31,91 @@
     <div class="govuk-grid-column-two-thirds">
 
         <span class="govuk-caption-l">Devolved Authority Allocations</span>
-        <h1 class="govuk-heading-l">Allocation details</h1>
+        <h1 class="govuk-heading-l">Edit allocation details</h1>
 
-        <dl class="govuk-summary-list">
+        <form action="/update-allocation" method="post">
+
+            <h2 class="govuk-heading-m">Allocation details</h2>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+                
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Provider UKPRN</dt>
+                    <dd class="govuk-summary-list__value">12345678</dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Award type</dt>
+                    <dd class="govuk-summary-list__value">Grant</dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Funding Line</dt>
+                    <dd class="govuk-summary-list__value">Skills Bootcamps</dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Allocation start date</dt>
+                    <dd class="govuk-summary-list__value">1 April 2024</dd>
+                </div>
+                
+            </dl>
+
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
             
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Provider UKPRN
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    12345678
-                </dd>
-            </div>
+            <h2 class="govuk-heading-m">Update values</h2>
 
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Award type
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    Grant
-                </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Funding Line
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    Skills Bootcamps
-                </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Allocation start date
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    1 April 2024
-                </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Allocation end date
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    31 March 2025
-                </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--s" for="allocation-value">
                     Allocation value
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    £150,000
-                </dd>
+                </label>
+                <div id="value-hint" class="govuk-hint">
+                    Enter the total amount in pounds.
+                </div>
+                <div class="govuk-input__wrapper">
+                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-input--width-10" id="allocation-value" name="allocationValue" type="text" spellcheck="false" value="150,000">
+                </div>
             </div>
 
-        </dl>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="end-date-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        Allocation end date
+                    </legend>
+                    <div id="end-date-hint" class="govuk-hint">
+                        For example, 31 3 2025
+                    </div>
+                    <div class="govuk-date-input" id="end-date">
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="end-date-day">Day</label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-date-day" name="end-date-day" type="text" inputmode="numeric" value="31">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="end-date-month">Month</label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-date-month" name="end-date-month" type="text" inputmode="numeric" value="03">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="end-date-year">Year</label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="end-date-year" name="end-date-year" type="text" inputmode="numeric" value="2025">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="govuk-button-group">
+                <button class="govuk-button" data-module="govuk-button">
+                    Update allocation
+                </button>
+                <a class="govuk-link" href="javascript:history.back()">Cancel</a>
+            </div>
+
+        </form>
 
     </div>
   </div>
