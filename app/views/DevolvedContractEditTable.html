@@ -33,35 +33,33 @@
         <span class="govuk-caption-l">Devolved Authority Allocations</span>
         <h1 class="govuk-heading-l">Edit allocation details</h1>
 
+        <h2 class="govuk-heading-m">Allocation details</h2>
+        
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Provider UKPRN</dt>
+                <dd class="govuk-summary-list__value">12345678</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Award type</dt>
+                <dd class="govuk-summary-list__value">Grant</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Funding Line</dt>
+                <dd class="govuk-summary-list__value">Skills Bootcamps</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Allocation start date</dt>
+                <dd class="govuk-summary-list__value">1 April 2024</dd>
+            </div>
+        </dl>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Update values</h2>
+
         <form action="/update-allocation" method="post">
-
-            <h2 class="govuk-heading-m">Allocation details</h2>
-            <dl class="govuk-summary-list govuk-!-margin-bottom-7">
-                
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">Provider UKPRN</dt>
-                    <dd class="govuk-summary-list__value">12345678</dd>
-                </div>
-
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">Award type</dt>
-                    <dd class="govuk-summary-list__value">Grant</dd>
-                </div>
-
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">Funding Line</dt>
-                    <dd class="govuk-summary-list__value">Skills Bootcamps</dd>
-                </div>
-
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">Allocation start date</dt>
-                    <dd class="govuk-summary-list__value">1 April 2024</dd>
             
-                    
-            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-            
-            <h2 class="govuk-heading-m">Update values</h2>
-
             <div class="govuk-form-group">
                 <label class="govuk-label govuk-label--s" for="allocation-value">
                     Allocation value
