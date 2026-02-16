@@ -95,18 +95,62 @@ GOV.UK Prototype Kit
   </div>
 </div>
 
-<h1 class="govuk-heading-l">1) Does evidence exist to confirm that the learner is eligible for ESFA funding?</h1>
+<h1 class="govuk-heading-l">1) Is the programme as designed eligible for funding and is the correct funding being claimed?</h1>
 
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
       <h2 class="govuk-fieldset__heading">
-        i) Eligibility for funding
+        i) Full/co funding and approved qualifications
       </h2>
     </legend>
     <div id="contact-hint" class="govuk-hint">
-      Does the learner satisfy the ESFA's eligibility criteria?
+      Are claims for full or co funding made in accordance with the eligibility, entitlement and age criteria?<br>
+     Is the learner working towards an applicable approved qualification? 
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-phone">
+            Comment
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
+        <label class="govuk-label govuk-radios__label" for="contact-3">
+          Not applicable
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<br>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+        ii) Level 3 FCFJ
+      </h2>
+    </legend>
+    <div id="contact-hint" class="govuk-hint">
+      Are claims under the FCFJ offer in accordance with the eligibility criteria for the age of the learner?<br>Is the learner working towards an approved qualification? 
     </div>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
@@ -141,6 +185,7 @@ GOV.UK Prototype Kit
 
 
 
- <a class="govuk-button" href="Audit_AdultSkillsAudit_P2.html">Continue</a>
+
+ <a class="govuk-button" href="Audit_Summary.html">Continue</a>
 
 {% endblock %}
