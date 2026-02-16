@@ -95,12 +95,12 @@ GOV.UK Prototype Kit
   </div>
 </div>
 
-<h2 class="govuk-heading-m">Does evidence exist to confirm that the learner is eligible for ESFA funding?</h2>
+<h2 class="govuk-heading-l">Does evidence exist to confirm that the learner is eligible for ESFA funding?</h2>
 
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
       <h2 class="govuk-fieldset__heading">
         Eligibility for funding
       </h2>
@@ -121,21 +121,19 @@ GOV.UK Prototype Kit
           No
         </label>
       </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="no">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="contact-by-email">
-            Comment
-          </label>
-          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" autocomplete="email">
-        </div>
-      </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="no">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-phone">
-            Not applicable
+            Comment
           </label>
-          <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+          <input class="govuk-input govuk-!-width-full" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
         </div>
+      </div>
+       <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="no" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+          Not applicable
+        </label>
       </div>
     </div>
   </fieldset>
