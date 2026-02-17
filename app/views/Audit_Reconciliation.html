@@ -1,0 +1,244 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<nav class="app-navigation govuk-clearfix">
+    <ul class="app-navigation__list app-width-container">
+  
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="Audit_D1.html" data-topnav="WP">Working papers</a>
+      </li>
+
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="Audit_Feedback.html" data-topnav="feedback">Feedback</a>
+      </li>
+
+           <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="Audit_Analysis.html" data-topnav="feedback">Analysis</a>
+      </li>
+  
+      <li class="app-navigation__list-item app-navigation__list-item--current">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="Audit_Reconciliation.html" data-topnav="recon">Reconciliation</a>
+      </li>
+  
+    </ul>
+  </nav>
+  <br>
+
+
+<h1 class="govuk-heading-l">Reconciliation statement</h1>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Overall total</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Ref</th>      
+      <th scope="col" class="govuk-table__header">Description</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Overall total</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">a.</td>
+      <td class="govuk-table__cell">Balance from reviewed ILR</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">b.</td>
+      <td class="govuk-table__cell">Adjustments from assurance review</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">c.</td>
+      <td class="govuk-table__cell">Provider adjustments</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">d.</td>
+      <th scope="row" class="govuk-table__header">Balance as per closing ILR</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">e.</td>
+      <td class="govuk-table__cell">Manual adjustments</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">f.</td>
+      <th scope="row" class="govuk-table__header">Total value of funding claimed</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Adult Skills Fund</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Ref</th>      
+      <th scope="col" class="govuk-table__header">Description</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">FM38</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">FM35</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Total Adult Skills Fund</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">a.</td>
+      <td class="govuk-table__cell">Balance from reviewed ILR</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£450,374.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£7,398.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">b.</td>
+      <td class="govuk-table__cell">Adjustments from assurance review</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£450,374.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£7,398.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">c.</td>
+      <td class="govuk-table__cell">Provider adjustments</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£450,374.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£7,398.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">d.</td>
+      <th scope="row" class="govuk-table__header">Balance as per closing ILR</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£450,374.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£7,398.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">e.</td>
+      <td class="govuk-table__cell">Manual adjustments</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£450,374.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£7,398.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">f.</td>
+      <th scope="row" class="govuk-table__header">Total value of funding claimed</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£450,374.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£7,398.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">16 to 19 provision</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Ref</th>      
+      <th scope="col" class="govuk-table__header">Description</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">16 to 19 study programmes</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">T Level programmes</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Total 16 to 19 provision</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">a.</td>
+      <td class="govuk-table__cell">Balance from reviewed ILR</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£450,374.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£7,398.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">b.</td>
+      <td class="govuk-table__cell">Adjustments from assurance review</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£450,374.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£7,398.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">c.</td>
+      <td class="govuk-table__cell">Provider adjustments</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£450,374.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£7,398.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">d.</td>
+      <th scope="row" class="govuk-table__header">Balance as per closing ILR</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£450,374.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£7,398.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">e.</td>
+      <td class="govuk-table__cell">Manual adjustments</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£450,374.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£7,398.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">f.</td>
+      <th scope="row" class="govuk-table__header">Total value of funding claimed</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£450,374.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£7,398.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Apprenticeships</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Ref</th>      
+      <th scope="col" class="govuk-table__header">Description</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Total apprenticeships</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">a.</td>
+      <td class="govuk-table__cell">Balance from reviewed ILR</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">b.</td>
+      <td class="govuk-table__cell">Adjustments from assurance review</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">c.</td>
+      <td class="govuk-table__cell">Provider adjustments</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">d.</td>
+      <th scope="row" class="govuk-table__header">Balance as per closing ILR</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">e.</td>
+      <td class="govuk-table__cell">Manual adjustments</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">f.</td>
+      <th scope="row" class="govuk-table__header">Total value of funding claimed</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.00</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+{% endblock %}
