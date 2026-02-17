@@ -10,49 +10,80 @@ GOV.UK Prototype Kit
 
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
-<h1 class="govuk-heading-xl">
+<nav class="app-navigation govuk-clearfix">
+    <ul class="app-navigation__list app-width-container">
+
+      <li class="app-navigation__list-item app-navigation__list-item--current">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="Audit_Summary.html" data-topnav="Sum">Sample summary</a>
+      </li>
+
+  
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="Audit_D1.html" data-topnav="WP">Working papers</a>
+      </li>
+
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="Audit_Feedback.html" data-topnav="feedback">Feedback</a>
+      </li>
+
+           <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="Audit_Analysis.html" data-topnav="feedback">Analysis</a>
+      </li>
+  
+      <li class="app-navigation__list-item">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="Audit_Reconciliation.html" data-topnav="Recon">Reconciliation</a>
+      </li>
+  
+    </ul>
+  </nav>
+  <br>
+
+
+<h1 class="govuk-heading-l">
         Sample summary
       </h1>
 
- <dl class="govuk-summary-list">
-    <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Provider UKPRN
-    </dt>
-    <dd class="govuk-summary-list__value">
-      12345678
-    </dd>
+
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      Coventry City Football Club         <strong class="govuk-tag govuk-tag--orange">
+           Audit in progress
+        </strong>
+    </h2>
   </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Provider name
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Coventry City Football Club
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Audit name
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Month 6 audit
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Audit description
-    </dt>
-    <dd class="govuk-summary-list__value">
-      some description of what the audit is for
-    </dd>
-  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Provider UKPRN
+        </dt>
+        <dd class="govuk-summary-list__value">
+          12345678
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Audit name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          	Audit of adult skills for 2026
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Audit description
+        </dt>
+        <dd class="govuk-summary-list__value">
+          	some description of what the audit is for
+        </dd>
+      </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
       ILR file
     </dt>
     <dd class="govuk-summary-list__value">
-      ILR-1111111111-2526-20260114-100251-01
+      ILR-12345678-2526-20260114-100251-01
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -63,69 +94,93 @@ GOV.UK Prototype Kit
       ESFA
     </dd>
   </div>
-</dl>  
-    
+    </dl>
+  </div>
+</div>
+
+
 
 <table class="govuk-table">
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Funding categories</th>
-      <th scope="col" class="govuk-table__header">Population value*</th>
-      <th scope="col" class="govuk-table__header">Learner numbers**</th>
-      <th scope="col" class="govuk-table__header">Sample size</th>
-      <th scope="col" class="govuk-table__header">Sample value*</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Population value*</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Learner numbers**</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Sample size</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Sample value*</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Adult Skills Fund</th>
-      <td class="govuk-table__cell">£457,772.03</td>
-      <td class="govuk-table__cell">283</td>
-      <td class="govuk-table__cell">30</td>
-      <td class="govuk-table__cell">£100,000.03</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.03</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">283</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£100,000.03</td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Adult Skills Fund (FM38)</th>
-      <td class="govuk-table__cell">£457,772.03</td>
-      <td class="govuk-table__cell">283</td>
-      <td class="govuk-table__cell">30</td>
-      <td class="govuk-table__cell">£100,000.03</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">Adult Skills Fund (FM38):</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£457,772.03</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">283</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">30</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£100,000.03</td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Adult Skills Fund (FM35)</th>
-      <td class="govuk-table__cell">£457,772.03</td>
-      <td class="govuk-table__cell">283</td>
-      <td class="govuk-table__cell">30</td>
-      <td class="govuk-table__cell">£100,000.03</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">Adult Skills Fund (FM35):</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Apprenticeships (from May 2017)***</th>
-      <td class="govuk-table__cell">£457,772.03</td>
-      <td class="govuk-table__cell">283</td>
-      <td class="govuk-table__cell">30</td>
-      <td class="govuk-table__cell">£100,000.03</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
     </tr>      
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Advanced Learner Loans & Loans Bursary</th>
-      <td class="govuk-table__cell">£457,772.03</td>
-      <td class="govuk-table__cell">283</td>
-      <td class="govuk-table__cell">30</td>
-      <td class="govuk-table__cell">£100,000.03</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Learners attracting Loans Bursary funding:</th>
-      <td class="govuk-table__cell">£457,772.03</td>
-      <td class="govuk-table__cell">283</td>
-      <td class="govuk-table__cell">30</td>
-      <td class="govuk-table__cell">£100,000.03</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">Learners attracting Loans Bursary funding:</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
     </tr>
      <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Learners not attracting Loans Bursary funding:</th>
-      <td class="govuk-table__cell">£457,772.03</td>
-      <td class="govuk-table__cell">283</td>
-      <td class="govuk-table__cell">30</td>
-      <td class="govuk-table__cell">£100,000.03</td>
-    </tr>          
+      <td class="govuk-table__cell govuk-table__cell--numeric">Learners not attracting Loans Bursary funding:</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+    </tr>    
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">16 to 19 provision</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-table__cell--numeric">16 to 19 study programmes:</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+    </tr>
+     <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-table__cell--numeric">T Level programmes:</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+    </tr>       
   </tbody>
 </table>
 
@@ -138,6 +193,6 @@ GOV.UK Prototype Kit
 
 
 
- <a class="govuk-button" href="Audit_D1.html">Continue</a>
+
 
 {% endblock %}
