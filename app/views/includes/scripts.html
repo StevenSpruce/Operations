@@ -1,5 +1,4 @@
 <!-- Javascript -->
-<script src="/public/javascripts/jquery-1.11.3.js"></script>
 
 {% for scriptConfig in pluginConfig.scripts %}
   {% if scriptConfig.type|length %}
@@ -10,7 +9,3 @@
 {% endfor %}
 
 <script src="/public/javascripts/application.js"></script>
-
-{% if useAutoStoreData %}
-  <script src="/public/javascripts/auto-store-data.js"></script>
-{% endif %}

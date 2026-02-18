@@ -12,11 +12,18 @@ GOV.UK Prototype Kit
 
 
 <div class="govuk-summary-card">
-  <div class="govuk-summary-card__title-wrapper">
-    <h2 class="govuk-summary-card__title">
-      Ethan Carter
-    </h2>
-  </div>
+<div class="govuk-summary-card__title-wrapper">
+  <div class="govuk-summary-card__status-wrapper">
+  <h2 class="govuk-summary-card__title">Ethan Carter</h2>
+</div>
+    <ul class="govuk-summary-card__actions">
+  <li class="govuk-summary-card__action">
+    <a id="personal-information-change" tabindex="0" href="Audit_AdultSkillsFeedbackUpdate.html" class="govuk-link govuk-link--no-visited-state" data-module="">
+      Change
+    </a>
+  </li>
+  </ul>
+</div>
   <div class="govuk-summary-card__content">
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
@@ -65,8 +72,7 @@ GOV.UK Prototype Kit
           Provider response
         </dt>
         <dd class="govuk-summary-list__value">
-           <div class="govuk-form-group">
-           <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="3" aria-describedby="more-detail-hint"</textarea>Acknowledged - CPD is delivered throughout the year with curriculum highlighting the impact of timely data management.</textarea>  
+          Acknowledged - CPD is delivered throughout the year with curriculum highlighting the impact of timely data management.  
        </dd>
       </div>
      <div class="govuk-summary-list__row">
@@ -74,12 +80,7 @@ GOV.UK Prototype Kit
           Accept provider response?
         </dt>
         <dd class="govuk-summary-list__value">
-           <select class="govuk-select" id="sort" name="sort">
-           <option value="published" selected>Choose option</option>
-           <option value="updated">Yes</option>
-           <option value="views">No</option>
-           <option value="comments">N/A</option>
-           </select>
+          No
         </dd>
       </div>
      <div class="govuk-summary-list__row">
@@ -87,12 +88,7 @@ GOV.UK Prototype Kit
           Error cleared?
         </dt>
         <dd class="govuk-summary-list__value">
-           <select class="govuk-select" id="sort" name="sort">
-           <option value="published" selected>Choose option</option>
-           <option value="updated">Yes</option>
-           <option value="views">No</option>
-           <option value="comments">N/A</option>
-           </select>
+          No
         </dd>
       </div>
      <div class="govuk-summary-list__row">
@@ -100,12 +96,7 @@ GOV.UK Prototype Kit
           Has a sub-population of learners with the same error characteristics as the error in the main sample been identified?
         </dt>
         <dd class="govuk-summary-list__value">
-            <select class="govuk-select" id="sort" name="sort">
-           <option value="published" selected>Choose option</option>
-           <option value="updated">Yes</option>
-           <option value="views">No</option>
-           <option value="comments">N/A</option>
-           </select>
+          No
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -113,8 +104,7 @@ GOV.UK Prototype Kit
           Describe the sub-population affected?
         </dt>
         <dd class="govuk-summary-list__value">
-           <div class="govuk-form-group">
-           <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="3" aria-describedby="more-detail-hint"</textarea>All 16-18 yr/olds.</textarea>  
+         All 16-18 yr/olds.  
        </dd>
       </div>
     </dl>
@@ -123,8 +113,6 @@ GOV.UK Prototype Kit
 
 
 
-
-
- <a class="govuk-button" href="Audit_AdultSkillsAudit_P2.html">Save and continue</a>
+ <a class="govuk-button" href="#">Next</a>
 
 {% endblock %}

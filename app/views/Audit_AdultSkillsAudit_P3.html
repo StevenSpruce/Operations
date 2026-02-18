@@ -11,176 +11,118 @@ GOV.UK Prototype Kit
 <h1 class="govuk-heading-l">Adult skills fund</h1>
 
 
-<div class="govuk-summary-card">
-  <div class="govuk-summary-card__title-wrapper">
-    <h2 class="govuk-summary-card__title">
-      Ethan Carter
-    </h2>
-  </div>
-  <div class="govuk-summary-card__content">
-    <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-           Transaction number
-        </dt>
-        <dd class="govuk-summary-list__value">
-          1
-        </dd>
+<div class="govuk-width-container">
+
+  
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+        <h2 class="govuk-heading-m">Personal details</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+           <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Transaction number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1
+            </dd>
+          </div>         
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Ethan Carter
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Learner reference number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              482
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Unique learner number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              123456789
+            </dd>
+          </div>
+       </dl>
+
+
+
+
+
+
+
+        <h2 class="govuk-heading-m">Audit details</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key govuk-!-width-one-half">
+              Does the learner satisfy the ESFA's eligibility criteria?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> previous application number</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Are claims for full or co funding made in accordance with the eligibility, entitlement and age criteria?
+Is the learner working towards an applicable approved qualification?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> licence type</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Are claims under the FCFJ offer in accordance with the eligibility criteria for the age of the learner?<br>Is the learner working towards an approved qualification? 
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> home address</span></a>
+            </dd>
+          </div>
+            <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Does the learner's age and prior attainment meet the eligibility criteria required to claim full funding as part of the learner's legal entitlement?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> home address</span></a>
+            </dd>
+          </div>
+        </dl>
+
+
+
+        <h2 class="govuk-heading-m">Now send your application</h2>
+        <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+        <form action="/form-handler" method="post" novalidate>
+          <input type="hidden" name="answers-checked" value="true">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Accept and send
+          </button>
+        </form>
       </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Learner reference number
-        </dt>
-        <dd class="govuk-summary-list__value">
-          482
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Unique learner number
-        </dt>
-        <dd class="govuk-summary-list__value">
-          123456789
-        </dd>
-      </div>
-     <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Date of birth
-        </dt>
-        <dd class="govuk-summary-list__value">
-          26 Jan 1970
-        </dd>
-      </div>
-     <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          NI number
-        </dt>
-        <dd class="govuk-summary-list__value">
-          NI123456XA
-        </dd>
-      </div>
-     <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Postcode prior to enrolment
-        </dt>
-        <dd class="govuk-summary-list__value">
-          CV1 1DG
-        </dd>
-      </div>
-     <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Disadvantage uplift factor
-        </dt>
-        <dd class="govuk-summary-list__value">
-          1.0000
-        </dd>
-      </div>
-     <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          FM38 funding (YTD)
-        </dt>
-        <dd class="govuk-summary-list__value">
-          £7,482.91
-        </dd>
-      </div>
-     <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          FM35 funding (YTD)
-        </dt>
-        <dd class="govuk-summary-list__value">
-          £0.00
-        </dd>
-      </div>
-    </dl>
-  </div>
+    </div>
+  </main>
 </div>
-
-<h2 class="govuk-heading-m">2)  Is the programme eligible for funding and is the correct funding being claimed?</h2>
-
-
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-      <h3 class="govuk-fieldset__heading">
-        i)  Full/co funding and approved qualifications
-      </h3>
-    </legend>
-    <div id="contact-hint" class="govuk-hint">
-      Are claims for full or co funding made in accordance with the eligibility, entitlement and age criteria?<br>
-     Is the learner working towards an applicable approved qualification? 
-    </div>
-    <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="funding-1" name="funding" type="radio" value="email" data-aria-controls="conditional-contact">
-        <label class="govuk-label govuk-radios__label" for="funding-1">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="funding-2" name="funding" type="radio" value="phone" data-aria-controls="2i">
-        <label class="govuk-label govuk-radios__label" for="funding-2">
-          No
-        </label>
-      </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="2i">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="contact-by-phone">
-            Comment
-          </label>
-          <input class="govuk-input govuk-!-width-full" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
-        </div>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="funding-3" name="funding" type="radio" value="text" data-aria-controls="conditional-contact-3">
-        <label class="govuk-label govuk-radios__label" for="funding-3">
-          Not applicable
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
-
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-      <h3 class="govuk-fieldset__heading">
-        ii)  Level 3 FCFJ
-      </h3>
-    </legend>
-    <div id="contact-hint" class="govuk-hint">
-      Are claims under the FCFJ offer in accordance with the eligibility criteria for the age of the learner?<br>Is the learner working towards an approved qualification? 
-    </div>
-    <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="FCFJ-1" name="FCFJ" type="radio" value="email">
-        <label class="govuk-label govuk-radios__label" for="FCFJ-1">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="FCFJ-2" name="FCFJ" type="radio" value="phone" data-aria-controls="2ii">
-        <label class="govuk-label govuk-radios__label" for="FCFJ-2">
-          No
-        </label>
-      </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="2ii">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="contact-by-phone">
-            Comment
-          </label>
-          <input class="govuk-input govuk-!-width-full" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
-        </div>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="FCFJ-3" name="FCFJ" type="radio" value="text">
-        <label class="govuk-label govuk-radios__label" for="FCFJ-3">
-          Not applicable
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
-
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -347,6 +289,6 @@ GOV.UK Prototype Kit
 
 
 
- <a class="govuk-button" href="Audit_AdultSkillsAudit_P3.html">Finish</a>
+ <a class="govuk-button" href="Audit_Summary.html">Finish</a>
 
 {% endblock %}

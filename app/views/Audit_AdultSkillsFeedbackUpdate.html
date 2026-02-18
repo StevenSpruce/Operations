@@ -1,0 +1,189 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<h1 class="govuk-heading-l">Adult skills fund</h1>
+
+
+
+
+
+
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      Ethan Carter
+    </h2>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+           Id
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1(2i)
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Learner reference number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          482
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Issue
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Full/co funding and approved qualifications
+        </dd>
+      </div>
+     <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Description
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Claims for full or co funding are made in accordance with the eligibility, entitlement and age criteria. The learner is working towards an applicable approved qualification. 
+        </dd>
+      </div>
+     <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Audit comment
+        </dt>
+        <dd class="govuk-summary-list__value">
+          60089143 – Award in Progression: According to the evidence pack, the learner has withdrawn from the learning aim, with the last date of learning recorded as 26/03/2025, which was also the planned end date. 
+          The college MIS was notified of the withdrawal on 05/09/2025; however, the withdrawal was not processed in a timely manner.
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+
+
+<div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="more-detail">
+      Provider response
+    </label>
+  </h2>
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+    
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Accept provider response?
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="Accept" name="Accept" type="radio" value="month">
+        <label class="govuk-label govuk-radios__label" for="Accept">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="Accept-2" name="Accept" type="radio" value="year">
+        <label class="govuk-label govuk-radios__label" for="Accept-2">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="Accept-3" name="Accept" type="radio" value="year">
+        <label class="govuk-label govuk-radios__label" for="Accept-2">
+          N/A
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Error cleared?
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="cleared" name="cleared" type="radio" value="month">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="cleared-2" name="cleared" type="radio" value="year">
+        <label class="govuk-label govuk-radios__label" for="cleared-2">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="cleared-3" name="cleared" type="radio" value="year">
+        <label class="govuk-label govuk-radios__label" for="cleared-3">
+          N/A
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+       Has a sub-population of learners with the same error characteristics as the error in the main sample been identified?
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="characteristics" name="characteristics" type="radio" value="month">
+        <label class="govuk-label govuk-radios__label" for="characteristics">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="characteristics-2" name="characteristics" type="radio" value="year">
+        <label class="govuk-label govuk-radios__label" for="characteristics-2">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="characteristics-3" name="characteristics" type="radio" value="year">
+        <label class="govuk-label govuk-radios__label" for="characteristics-3">
+          N/A
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+<div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="more-detail">
+      Describe the sub-population affected?
+    </label>
+  </h2>
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+
+
+ <a class="govuk-button" href="Audit_AdultSkillsFeedback.html">Save</a>
+
+{% endblock %}
