@@ -1,0 +1,186 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">
+          Select sample 
+        </h1>
+        
+ <div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Select source of funding
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">ESFA</option>
+    <option value="updated">Greater Manchester Combined Authority</option>
+    <option value="updated">Liverpool City Region Combined Authority</option>
+  </select>
+</div>
+
+
+ <div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Select partner UKPRN(s)
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">All</option>
+    <option value="updated">10000001</option>
+    <option value="updated">10000002</option>
+  </select>
+</div>
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Select funding period
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="01">01</option>
+    <option value="02">02</option>
+    <option value="03">03</option>
+    <option value="04">04</option>
+    <option value="05">05</option>
+    <option value="06">06</option>
+    <option value="07">07</option>
+    <option value="08">08</option>
+    <option value="09">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">11</option>
+  </select>
+</div>
+
+
+<div class="govuk-grid-column-full">
+<table class="govuk-table">
+<thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+
+<th scope="col" class="govuk-table__header">Funding category</th>
+<th scope="col" class="govuk-table__header">Number of learners</th>
+<th scope="col" class="govuk-table__header no-sort-header">Sample size</th>
+
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell ">
+      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="learner-1106956" name="LearnerName" type="checkbox" value="1106956">
+          <label class="govuk-label govuk-checkboxes__label" for="learner-1106956">Adult skills fund</label>
+        </div>
+      </div>
+    </td>
+    <td class="govuk-table__cell">2500</td>
+    <td class="govuk-table__cell">
+     <div class="govuk-form-group">
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">29</option>
+    <option value="updated" selected>30</option>
+    <option value="views">31</option>
+    <option value="comments">32</option>
+  </select>
+</div> 
+</td>
+</tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell ">
+      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="learner-1106956" name="LearnerName" type="checkbox" value="1106956">
+          <label class="govuk-label govuk-checkboxes__label" for="learner-1106956">Apprenticeships</label>
+        </div>
+      </div>
+    </td>
+    <td class="govuk-table__cell">0</td>
+    <td class="govuk-table__cell">
+     <div class="govuk-form-group">
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">29</option>
+    <option value="updated" selected>0</option>
+    <option value="views">31</option>
+    <option value="comments">32</option>
+  </select>
+</div> 
+</td>
+</tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell ">
+      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="learner-1106956" name="LearnerName" type="checkbox" value="1106956">
+          <label class="govuk-label govuk-checkboxes__label" for="learner-1106956">Advanced learner loans</label>
+        </div>
+      </div>
+    </td>
+    <td class="govuk-table__cell">0</td>
+    <td class="govuk-table__cell">
+     <div class="govuk-form-group">
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">29</option>
+    <option value="updated" selected>0</option>
+    <option value="views">31</option>
+    <option value="comments">32</option>
+  </select>
+</div> 
+</td>
+</tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell ">
+      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="learner-1106956" name="LearnerName" type="checkbox" value="1106956">
+          <label class="govuk-label govuk-checkboxes__label" for="learner-1106956">16 to 19 provision</label>
+        </div>
+      </div>
+    </td>
+    <td class="govuk-table__cell">0</td>
+    <td class="govuk-table__cell">
+     <div class="govuk-form-group">
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">29</option>
+    <option value="updated" selected>0</option>
+    <option value="views">31</option>
+    <option value="comments">32</option>
+  </select>
+</div> 
+</td>
+</tr>
+
+</tbody>
+</table>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+        <a class="govuk-button" href="Audit_Summary.html">Generate sample</a>
+      </div>
+    </div>
+  </main>
+</div>
+
+ 
+
+{% endblock %}

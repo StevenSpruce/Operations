@@ -1,0 +1,29 @@
+{% macro multiselectAutocomplete(params) %}
+
+<div class="govuk-form-group {{ params.formGroupClasses }}">
+  
+  {% if params.label %}
+    <label class="govuk-label {{ params.label.classes }}" for="{{ params.id }}">
+      {{ params.label.text }}
+    </label>
+  {% endif %}
+
+  {% if params.hint %}
+    <div class="govuk-hint">
+      {{ params.hint.text }}
+    </div>
+  {% endif %}
+
+  <div 
+    id="{{ params.id }}-container"
+    class="multiselect-autocomplete"
+    data-module="multiselect-autocomplete"
+    data-id="{{ params.id }}"
+    data-name="{{ params.name }}"
+    data-items="{{ params.items | dump }}">
+  </div>
+
+  <div id="{{ params.id }}-selected" class="govuk-!-margin-top-2"></div>
+</div>
+
+{% endmacro %}
