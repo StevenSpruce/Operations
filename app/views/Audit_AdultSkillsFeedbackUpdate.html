@@ -184,6 +184,73 @@ GOV.UK Prototype Kit
 
 
 
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="cost">
+      Sample error
+    </label>
+  </h1>
+    <div id="account-number-hint" class="govuk-hint">
+    Record funding errors for learners in the sample as positive values.
+  </div>
+  <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
+  </div>
+</div>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="cost">
+      Other errors outside sample but within population
+    </label>
+  </h1>
+      <div id="account-number-hint" class="govuk-hint">
+    Record funding errors for learners outside the sample:
+    <ul>
+      <li>with the same error characteristics as the learner in the sample, or</li>
+        <li>where the error has not been identified in the main sample</li>
+    </ul>
+    Only include learners with net funding errors (positive values).
+  </div>
+  <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
+  </div>
+</div>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+     <label class="govuk-label govuk-label--m" for="cost">
+      Errors relating to prior funding years
+     </label>
+  </h1>
+         <div id="account-number-hint" class="govuk-hint">
+      Record the value of funding errors relating to prior funding years.
+         </div>
+  <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
+  </div>
+</div>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="cost">
+      Under-claims
+    </label>
+  </h1>
+        <div id="account-number-hint" class="govuk-hint">
+      Record under-claims for learners both inside the sample and outside the sample with the same under-claim characteristics.<br>Only include learners with net under-claims (negative values).
+        </div>
+  <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
+  </div>
+</div>
+
+
+
  <a class="govuk-button" href="Audit_AdultSkillsFeedback.html">Save</a>
 
 {% endblock %}
