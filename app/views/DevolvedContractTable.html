@@ -224,47 +224,12 @@ GOV.UK Prototype Kit
               </tbody>
             </table>
           </div>
-
-<style>
-  /* Force the GOV.UK style if the framework isn't loading correctly */
-  .govuk-button {
-    background-color: #00703c !important; /* The GOV.UK Green */
-    color: #ffffff !important;
-    
-    /* 1. THE BOLDNESS YOU'RE LOOKING FOR */
-    font-family: "GDS Transport", arial, sans-serif !important;
-    font-weight: 700 !important; /* Bold weight */
-    font-size: 19px !important;
-    line-height: 1 !important;
-    
-    /* 2. THE 3D "CHUNKY" LOOK */
-    border: none !important;
-    box-shadow: 0 2px 0 #002d18 !important; /* Dark green bottom lip */
-    padding: 8px 10px 7px !important;
-    
-    /* 3. ALIGNMENT */
-    display: inline-block !important;
-    cursor: pointer !important;
-    text-decoration: none !important;
-    vertical-align: top !important;
-  }
-
-  /* Add the hover effect seen on the 'Search' button */
-  .govuk-button:hover {
-    background-color: #005a30 !important;
-  }
-
-  /* Make it feel like a real button when clicked */
-  .govuk-button:active {
-    top: 2px !important;
-    box-shadow: none !important;
-    position: relative !important;
-  }
-</style>
-
-<button class="govuk-button" data-module="govuk-button">
-  Confirm
-</button>
+            <button id="search" type="search" class="govuk-button govuk-button--start govuk-!-margin-bottom-0">
+              Confirm
+              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="14.5" height="17" viewBox="0 0 33 40" role="presentation" focusable="false">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+              </svg>
+            </button>
         </form>
         
       </div>
