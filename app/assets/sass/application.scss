@@ -295,6 +295,16 @@ html {
 
 
 
+
+/* When GOV.UK Frontend removes underline, we force it back */
+.govuk-service-navigation__item.app-service-nav__item--active .govuk-service-navigation__link,
+.govuk-service-navigation__link[aria-current="page"],
+.govuk-service-navigation__item[aria-current="page"] .govuk-service-navigation__link {
+  text-decoration: underline !important;    /* <- required */
+  font-weight: 600;                          /* optional */
+}
+
+
 @import "patterns/_summary-card";
 
 @import "patterns/_top-nav";
