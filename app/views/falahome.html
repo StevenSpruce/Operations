@@ -1,0 +1,169 @@
+{% extends "layoutfala.html" %}
+
+{% block pageTitle %}
+
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<body class="govuk-template__body govuk-frontend-supported js-enabled">
+
+  
+    <div class="app-masthead govuk-!-margin-top-4">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-column-two-thirds no-padding">
+                <h1 class="govuk-heading-xl white-text">
+                    Find a learning aim
+                </h1>
+                <p class="govuk-body-l white-text">Find the latest information on available Qualifications, Standards, Apprenticeships, T Levels and Units.</p>
+                <p class="govuk-body white-text">Standards will show you information on funding, dates and common components. Qualifications and Units show you funding streams for courses and the last date learners can start. Apprenticeships and T Levels show you pathways, dates, and common components.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="govuk-width-container">
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    
+
+                    
+
+<div class="govuk-grid-row" id="homeApp">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="govuk-form-group" id="searchForm" action="/find-a-learning-aim" method="post">
+            <label for="autocomplete-overlay" class="govuk-label">Search by <strong>title</strong> or <strong>reference number</strong></label>
+            <div id="tt-overlay" class="autocomplete-wrapper" aria-label="Search by name or reference number">
+                <div class="autocomplete__wrapper" role="combobox" aria-expanded="false" aria-label="Search for learning">
+                    <div aria-atomic="true" aria-live="polite" role="status" class="polite">
+                        Enter keyword or reference number.<span>,,</span>
+                    </div>
+                    <input aria-owns="autocomplete-overlay__listbox" autocomplete="off" class="govuk-input" id="autocomplete-overlay" name="searchTerm" placeholder="" type="text" role="textbox">
+                    <ul class="autocomplete__menu autocomplete__menu--overlay autocomplete__menu--hidden" id="autocomplete-overlay__listbox" role="listbox">
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <details class="govuk-details govuk-!-margin-bottom-1" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+            Search using a wildcard
+        </span>
+    </summary>
+    <div class="govuk-details__text">
+        A wildcard search allows you to search using the asterisk * symbol.
+    </div>
+</details>
+
+            <br>
+            <div class="flex space-between">
+                <div id="typeOfLearning" class="govuk-form-group flex-1">
+                    <label class="govuk-label" for="searchType">
+                        Type of learning
+                    </label>
+                    <select class="govuk-select full-width" id="searchType" name="searchType" data-val="true" data-val-required="The SearchType field is required.">
+                    <option selected="selected" value="0">Qualifications</option>
+<option value="1">Frameworks</option>
+<option value="2">Units</option>
+<option value="3">Standards</option>
+<option value="4">T Levels</option>
+</select>
+                </div>
+                <div class="govuk-form-group flex-1 js-only" id="academicYear" hidden="">
+                    <label class="govuk-label" for="TeachingYear">
+                        Academic Year
+                    </label>
+                        <select class="govuk-select full-width" name="TeachingYear" id="TeachingYear">
+                                    <option value="2627">2026 to 2027</option>
+                                    <option value="2526" selected="">2025 to 2026</option>
+                                    <option value="2425">2024 to 2025</option>
+                                    <option value="2324">2023 to 2024</option>
+                                    <option value="2223">2022 to 2023</option>
+                                    <option value="2122">2021 to 2022</option>
+                                    <option value="2021">2020 to 2021</option>
+                                    <option value="1920">2019 to 2020</option>
+                                    <option value="1819">2018 to 2019</option>
+                                    <option value="1718">2017 to 2018</option>
+                                    <option value="1617">2016 to 2017</option>
+                                    <option value="1516">2015 to 2016</option>
+                        </select>
+                </div>
+            </div>
+
+            <div id="EFAFundingConditions" class="govuk-form-group funding-conditions govuk-!-padding-bottom-2 js-only" hidden="">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">
+                            EFA funding condition
+                        </h2>
+                    </legend>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="EFACONFUNDENGLISH" data-description="English" name="EFAFundingConditions" type="checkbox" value="EFACONFUNDENGLISH">
+                                <label class="govuk-label govuk-checkboxes__label" for="EFACONFUNDENGLISH">
+                                    English
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="EFACONFUNDMATHS" data-description="Maths" name="EFAFundingConditions" type="checkbox" value="EFACONFUNDMATHS">
+                                <label class="govuk-label govuk-checkboxes__label" for="EFACONFUNDMATHS">
+                                    Maths
+                                </label>
+                            </div>
+                    </div>
+                </fieldset>
+                <input id="hasClientSideFilters" name="hasClientSideFilters" type="hidden">
+            </div>
+
+            <button id="search" type="search" class="govuk-button govuk-button--start govuk-!-margin-bottom-0">
+                Search
+                <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+                    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+                </svg>
+            </button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8ETopjWjBOFGlc_4VOQXUp_jbjXg73vG1xRwKpncm7v8dCfTLa_tEEb1fXSdwYjLwyuld0ByATyWHLW5oSoh5P-2fNeCCEMn7XOEyq4FKRA11BAkw4pI4OVdUiEq3s4PQjuZ46JGxvnantNYTM4CIvg"></form>
+        </div>
+    
+    <div class="govuk-grid-column-one-third">
+        <div class="white-side-bar">
+            <h2 class="govuk-heading-s" id="subsection-title">
+                Database downloads
+            </h2>
+            <nav role="navigation" aria-labelledby="subsection-title">
+                <ul class="govuk-list govuk-!-font-size-16">
+                    <li>
+                        <a class="govuk-link govuk-link govuk-link--no-visited-state" href="/find-a-learning-aim/DownloadData">
+                            View current downloads
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-third">&nbsp;</div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <ul class="govuk-list" id="validationErrors"></ul>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    
+   
+
+
+</body>
+
+{% endblock %}

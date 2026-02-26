@@ -1,6 +1,42 @@
-{#
-For guidance on how to use layouts see:
-https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
-#}
-
+{# app/views/layout.html #}
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+{# ------------------------ HEADER ------------------------ #}
+{% block header %}
+  {{ govukHeader({
+     homepageUrl: "/",
+    classes: "govuk-header--full-width-border"
+  }) }}
+
+  {{ govukServiceNavigation({
+    serviceName: "Find a Learning Aim",
+    serviceUrl: "/find-a-learning-aim/"
+  }) }}
+{% endblock %}
+
+{# ------------------------ PAGE TITLE ------------------------ #}
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{# ------------------------ MAIN CONTENT ------------------------ #}
+{% block content %}{% endblock %}
+
+{# ------------------------ GLOBAL CSS ------------------------ #}
+{% block stylesheets %}
+  {{ super() }}
+  {# Example:
+  /public/css/site.min.css
+  #}
+{% endblock %}
+
+{# ------------------------ GLOBAL JS ------------------------ #}
+{% block scripts %}
+  {{ super() }}
+  {# Example:
+  /public/javascripts/global.js</script>
+  #}
+{% endblock %}

@@ -1,0 +1,987 @@
+{% extends "layoutfala.html" %}
+
+{% block pageTitle %}
+  Find a learning aim
+{% endblock %}
+
+{% block content %}
+
+<!-- FILTER BUTTON -->
+
+
+<!-- BACKDROP -->
+<div id="filter-backdrop" class="filter-backdrop" onclick="closeFilters()"></div>
+
+<!-- SLIDE-OUT PANEL -->
+<aside id="filter-panel" class="filter-panel govuk-!-padding-4" aria-labelledby="filters-heading">
+
+<div class="moj-filter" data-module="moj-filter">
+  <div class="moj-filter__header">
+    <div class="moj-filter__header-title">
+      <h2 class="govuk-heading-m">Filter</h2>
+    </div>
+    <div class="moj-filter__header-action">
+    </div>
+  </div>
+  <div class="moj-filter__content">
+    <div class="moj-filter__options">
+<button class="govuk-button" type="button" onclick="applyFilters()">Apply filters</button>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Funding stream
+          </legend>
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="funding-1" name="funding" type="checkbox" value="14-16 EFA">
+              <label class="govuk-label govuk-checkboxes__label" for="funding-1">
+                14-16 EFA
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="funding-2" name="funding" type="checkbox" value="16-19 EFA">
+              <label class="govuk-label govuk-checkboxes__label" for="funding-2">
+                16-19 EFA
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="funding-3" name="funding" type="checkbox" value="Adult Skills">
+              <label class="govuk-label govuk-checkboxes__label" for="funding-3">
+                Adult Skills
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="funding-4" name="funding" type="checkbox" value="Advanced Learner Loan">
+              <label class="govuk-label govuk-checkboxes__label" for="funding-4">
+                Advanced Learner Loan
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="funding-5" name="funding" type="checkbox" value="Apprenticeships">
+              <label class="govuk-label govuk-checkboxes__label" for="funding-5">
+                Apprenticeships
+              </label>
+            </div>  
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="funding-6" name="funding" type="checkbox" value="Community Learning">
+              <label class="govuk-label govuk-checkboxes__label" for="funding-6">
+                Community Learning
+              </label>
+            </div>  
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="funding-7" name="funding" type="checkbox" value="EFA Funding condition - English qualification validity">
+              <label class="govuk-label govuk-checkboxes__label" for="funding-7">
+                EFA Funding condition - English qualification validity
+              </label>
+            </div>  
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="funding-8" name="funding" type="checkbox" value="EFA Funding condition - Maths qualification validity">
+              <label class="govuk-label govuk-checkboxes__label" for="funding-8">
+                EFA Funding condition - Maths qualification validity
+              </label>
+            </div>  
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="funding-9" name="funding" type="checkbox" value="Free Courses for Jobs">
+              <label class="govuk-label govuk-checkboxes__label" for="funding-9">
+                Free Courses for Jobs
+              </label>
+            </div>  
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="funding-10" name="funding" type="checkbox" value="MCA/GLA">
+              <label class="govuk-label govuk-checkboxes__label" for="funding-10">
+                MCA/GLA
+              </label>
+            </div>     
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="funding-11" name="funding" type="checkbox" value="Other">
+              <label class="govuk-label govuk-checkboxes__label" for="funding-11">
+                Other
+              </label>
+            </div> 
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="funding-12" name="funding" type="checkbox" value="Tailored Learning">
+              <label class="govuk-label govuk-checkboxes__label" for="funding-12">
+                Tailored Learning
+              </label>
+            </div>                                                                                                        
+          </div>
+        </fieldset>
+      </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Level
+          </legend>
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="level-1" name="level" type="checkbox" value="complete">
+              <label class="govuk-label govuk-checkboxes__label" for="level-1">
+                Entry Level
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="level-2" name="level" type="checkbox" value="incomplete">
+              <label class="govuk-label govuk-checkboxes__label" for="level-2">
+                Level 1
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="level-3" name="level" type="checkbox" value="inprogress">
+              <label class="govuk-label govuk-checkboxes__label" for="level-3">
+                Level 2
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="level-4" name="level" type="checkbox" value="inprogress">
+              <label class="govuk-label govuk-checkboxes__label" for="level-4">
+                Level 3
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="level-5" name="level" type="checkbox" value="inprogress">
+              <label class="govuk-label govuk-checkboxes__label" for="level-5">
+                Level 4
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="level-6" name="level" type="checkbox" value="inprogress">
+              <label class="govuk-label govuk-checkboxes__label" for="level-6">
+                Level 5
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="level-7" name="level" type="checkbox" value="inprogress">
+              <label class="govuk-label govuk-checkboxes__label" for="level-7">
+                Level 6
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="level-8" name="level" type="checkbox" value="inprogress">
+              <label class="govuk-label govuk-checkboxes__label" for="level-8">
+                Level 7
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="level-9" name="level" type="checkbox" value="inprogress">
+              <label class="govuk-label govuk-checkboxes__label" for="level-9">
+                Level 8
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="level-10" name="level" type="checkbox" value="inprogress">
+              <label class="govuk-label govuk-checkboxes__label" for="level-10">
+                Mixed Level 
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="level-11" name="level" type="checkbox" value="inprogress">
+              <label class="govuk-label govuk-checkboxes__label" for="level-11">
+                Not Applicable/Not Known 
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+ <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Category
+          </legend>
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-1" name="category" type="checkbox" value="A-Level qualifications attracting Low programme cost weighting for 16 to 19">
+              <label class="govuk-label govuk-checkboxes__label" for="category-1">
+                A-Level qualifications attracting Low programme cost weighting for 16 to 19
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-2" name="category" type="checkbox" value="lass Code Category M: Conversion Codes between Higher National Qualifications">
+              <label class="govuk-label govuk-checkboxes__label" for="category-2">
+                Class Code Category M: Conversion Codes between Higher National Qualifications
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-3" name="category" type="checkbox" value="Digital Skills">
+              <label class="govuk-label govuk-checkboxes__label" for="category-3">
+                Digital Skills
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-4" name="category" type="checkbox" value="Free Courses for Jobs – MCA and GLA only flexible delivery qualifications">
+              <label class="govuk-label govuk-checkboxes__label" for="category-4">
+                Free Courses for Jobs – MCA and GLA only flexible delivery qualifications
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-5" name="category" type="checkbox" value="Free Courses for Jobs rate 1">
+              <label class="govuk-label govuk-checkboxes__label" for="category-5">
+                Free Courses for Jobs rate 1
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-6" name="category" type="checkbox" value="Free Courses for Jobs rate 2">
+              <label class="govuk-label govuk-checkboxes__label" for="category-6">
+                Free Courses for Jobs rate 2
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-7" name="category" type="checkbox" value="Free Courses for Jobs short">
+              <label class="govuk-label govuk-checkboxes__label" for="category-7">
+                Free Courses for Jobs short
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-8" name="category" type="checkbox" value="HE aim with a foundation year - OfS purposes only">
+              <label class="govuk-label govuk-checkboxes__label" for="category-8">
+                HE aim with a foundation year - OfS purposes only
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-9" name="category" type="checkbox" value="HGV">
+              <label class="govuk-label govuk-checkboxes__label" for="category-9">
+                HGV
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-10" name="category" type="checkbox" value="Higher Technical Qualification">
+              <label class="govuk-label govuk-checkboxes__label" for="category-10">
+                Higher Technical Qualification
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-11" name="category" type="checkbox" value="Legal Entitlement-English and Maths">
+              <label class="govuk-label govuk-checkboxes__label" for="category-11">
+                Legal Entitlement-English and Maths
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-12" name="category" type="checkbox" value="Legal Entitlement-Level 2">
+              <label class="govuk-label govuk-checkboxes__label" for="category-12">
+                Legal Entitlement-Level 2
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-13" name="category" type="checkbox" value="Licence To Practise - Security">
+              <label class="govuk-label govuk-checkboxes__label" for="category-13">
+                Licence To Practise - Security
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-14" name="category" type="checkbox" value="Local Flexibility">
+              <label class="govuk-label govuk-checkboxes__label" for="category-14">
+                Local Flexibility
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-15" name="category" type="checkbox" value="Mayoral Combined Authorities (MCA) and Greater London Authority (GLA) Provision">
+              <label class="govuk-label govuk-checkboxes__label" for="category-15">
+                Mayoral Combined Authorities (MCA) and Greater London Authority (GLA) Provision
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-16" name="category" type="checkbox" value="Only for Legal Entitlement at Level 3">
+              <label class="govuk-label govuk-checkboxes__label" for="category-16">
+                Only for Legal Entitlement at Level 3
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-17" name="category" type="checkbox" value="SFA Work Preparation">
+              <label class="govuk-label govuk-checkboxes__label" for="category-17">
+                SFA Work Preparation
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-18" name="category" type="checkbox" value="Standalone">
+              <label class="govuk-label govuk-checkboxes__label" for="category-18">
+                Standalone
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-19" name="category" type="checkbox" value="Standalone and Licence To Practise">
+              <label class="govuk-label govuk-checkboxes__label" for="category-19">
+                Standalone and Licence To Practise
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-20" name="category" type="checkbox" value="Trades Union Congress">
+              <label class="govuk-label govuk-checkboxes__label" for="category-20">
+                Trades Union Congress
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="category-21" name="category" type="checkbox" value="Work Preparation-SFA Traineeships">
+              <label class="govuk-label govuk-checkboxes__label" for="category-21">
+                Work Preparation-SFA Traineeships
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</aside>
+
+                    
+<div class="govuk-breadcrumbs">
+    <ol id="breadCrumbs" class="govuk-breadcrumbs__list"><li class="govuk-breadcrumbs__list-item"><a class="govuk-breadcrumbs__link" href="falaqualhome.html">Search results</a></li></ol>
+</div>
+
+
+
+<div id="Quals" class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            Search units
+        <span class="govuk-caption-l">Units show you funding streams for courses and the last date learners can start.</span>
+        </h1>
+    </div>
+</div>
+
+
+
+<div class="govuk-form-group">
+   <label class="govuk-label" for="academicYear">Academic year</label>
+<form action="/find-a-learning-aim/LearningAimDetails" class="govuk-form-group" id="academicYearForm" method="post">                <input type="hidden" name="learnAimRef" value="4000935X">
+                <input type="hidden" name="Section" value="Overview">
+                <select class="govuk-select" id="academicYear" name="AcademicYear">
+                                            
+                            <option value="2526"selected="">2025 to 2026</option>
+                            <option value="2425">2024 to 2025</option>
+                            <option value="2324">2023 to 2024</option>
+                </select>
+
+
+<br>
+<br>
+<div class="moj-search">
+  
+    <div class="govuk-form-group">
+      <label for="autocomplete-overlay" class="govuk-label">Search by <strong>title</strong> or <strong>reference number</strong></label>
+
+           <!-- Flex row JUST for the input + button -->
+      <div style="display:flex; align-items:stretch;">
+        <input
+          class="govuk-input moj-search__input"
+          id="search"
+          name="search"
+          type="search"
+          aria-describedby="search-hint"
+          style="flex:1 1 auto; min-width:0;">  <!-- IMPORTANT -->
+
+        <button
+          type="submit"
+          class="govuk-button moj-search__button govuk-!-margin-left-2"
+          data-module="govuk-button"
+          style="flex:0 0 auto;">               <!-- Optional but tidy -->
+          Search
+        </button>
+      </div>
+
+
+<details class="govuk-details govuk-!-margin-bottom-1" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+            Search using a wildcard
+        </span>
+    </summary>
+    <div class="govuk-details__text">
+        A wildcard search allows you to search using the asterisk * symbol.
+    </div>
+</details>
+    </div>
+  </form>
+</div>
+<br>
+
+<button class="govuk-button govuk-button filter-button"
+        type="button"
+        onclick="openFilters()">
+  Filter results
+</button>
+
+
+
+<div id="applied-filters" class="app-applied-filters govuk-!-margin-bottom-4" style="display:none;">
+  <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Applied filters</h2>
+  <div id="applied-filters-list">
+ </div>
+
+  <!-- MAIN PAGE CLEAR BUTTON -->
+  <div id="clear-main-filters" style="margin-top: 10px; display:none;">
+            <div class="moj-filter__heading-action">
+          <p><a class="govuk-link govuk-link--no-visited-state" type="button" onclick="clearAllFilters()">Clear filters</a></p>
+        </div>
+  </div>
+</div>
+
+
+            <div class="govuk-grid-column-full">
+                
+                <p class="govuk-body flex space-between" aria-live="assertive">
+                    <span id="resultsCount" data-count="36389">36389 results</span>
+                </p>
+               <hr class="colour-black govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                    <div id="resultList" class="govuk-list">
+                
+    <div class="search-item">
+        <h3 class="govuk-!-margin-0">
+            <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline govuk-!-font-size-19" href="falaqual.html">2D Animation Production</a>
+        </h3>
+<dl class="govuk-summary-list govuk-summary-list--no-border">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Reference
+    </dt>
+    <dd class="govuk-summary-list__value">
+      J5025663
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Level
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Level 3
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Awarding body
+    </dt>
+    <dd class="govuk-summary-list__value">
+      MULTI
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Guided learning hours
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Not provided
+    </dd>
+  </div>
+</dl>
+
+
+
+   <h4 class="govuk-heading-s govuk-!-font-size-16 govuk-!-margin-bottom-0 govuk-!-margin-top-2">Available funding streams for academic year 2025 to 2026:</h4>
+           <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                14-16 EFA
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                Other
+                            </dd>
+                    </div>
+            </dl>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+                <div class="govuk-summary-list__row govuk-!-font-size-16">
+                    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                        Last date for new start
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Varies - see listing for dates
+                    </dd>
+                </div>
+            </dl>
+    </div>
+
+
+
+
+
+    <div class="search-item">
+        <h3 class="govuk-!-margin-0">
+            <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline govuk-!-font-size-19" href="/find-a-learning-aim/LearningAimSearchResult/RedirectToDetails?learnAimRef=60177238&amp;academicYear=2526">(3 Credit) Award in WorkSkills</a>
+        </h3>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+            <div class="govuk-summary-list__row govuk-!-font-size-16">
+                <dt class="govuk-summary-list__key">
+                    Reference
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    60177238
+                </dd>
+                <dt class="govuk-summary-list__key">
+                    Level
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    Level 1
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-!-font-size-16">
+                <dt class="govuk-summary-list__key">
+                    Awarding body
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    ICQ
+                </dd>
+                <dt class="govuk-summary-list__key">
+                    Guided learning hours
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    20
+                </dd>
+            </div>
+        </dl>
+
+            <h4 class="govuk-heading-s govuk-!-font-size-16 govuk-!-margin-bottom-0 govuk-!-margin-top-2">Available funding streams for academic year 2025 to 2026:</h4>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                14-16 EFA
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                16-19 EFA
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                Adult Skills
+                            </dd>
+                    </div>
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                Other
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                Community Learning
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                MCA/GLA
+                            </dd>
+                    </div>
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                Tailored Learning
+                            </dd>
+                    </div>
+            </dl>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+                <div class="govuk-summary-list__row govuk-!-font-size-16">
+                    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                        Last date for new start
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Varies - see listing for dates
+                    </dd>
+                </div>
+            </dl>
+    </div>
+    <div class="search-item">
+        <h3 class="govuk-!-margin-0">
+            <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline govuk-!-font-size-19" href="/find-a-learning-aim/LearningAimSearchResult/RedirectToDetails?learnAimRef=60163999&amp;academicYear=2526">(3 credit) Award in WorkSkills</a>
+        </h3>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+            <div class="govuk-summary-list__row govuk-!-font-size-16">
+                <dt class="govuk-summary-list__key">
+                    Reference
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    60163999
+                </dd>
+                <dt class="govuk-summary-list__key">
+                    Level
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    Level 2
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-!-font-size-16">
+                <dt class="govuk-summary-list__key">
+                    Awarding body
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    ICQ
+                </dd>
+                <dt class="govuk-summary-list__key">
+                    Guided learning hours
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    25
+                </dd>
+            </div>
+        </dl>
+
+            <h4 class="govuk-heading-s govuk-!-font-size-16 govuk-!-margin-bottom-0 govuk-!-margin-top-2">Available funding streams for academic year 2025 to 2026:</h4>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                14-16 EFA
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                16-19 EFA
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                Adult Skills
+                            </dd>
+                    </div>
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                Other
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                Community Learning
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                MCA/GLA
+                            </dd>
+                    </div>
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                Tailored Learning
+                            </dd>
+                    </div>
+            </dl>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+                <div class="govuk-summary-list__row govuk-!-font-size-16">
+                    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                        Last date for new start
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Varies - see listing for dates
+                    </dd>
+                </div>
+            </dl>
+    </div>
+    <div class="search-item">
+        <h3 class="govuk-!-margin-0">
+            <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline govuk-!-font-size-19" href="/find-a-learning-aim/LearningAimSearchResult/RedirectToDetails?learnAimRef=60125172&amp;academicYear=2526">(6 Credit) Award in Personal Development and Employability Skills</a>
+        </h3>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+            <div class="govuk-summary-list__row govuk-!-font-size-16">
+                <dt class="govuk-summary-list__key">
+                    Reference
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    60125172
+                </dd>
+                <dt class="govuk-summary-list__key">
+                    Level
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    Level 1
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-!-font-size-16">
+                <dt class="govuk-summary-list__key">
+                    Awarding body
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    ICQ
+                </dd>
+                <dt class="govuk-summary-list__key">
+                    Guided learning hours
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    56
+                </dd>
+            </div>
+        </dl>
+
+            <h4 class="govuk-heading-s govuk-!-font-size-16 govuk-!-margin-bottom-0 govuk-!-margin-top-2">Available funding streams for academic year 2025 to 2026:</h4>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                14-16 EFA
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                16-19 EFA
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                Adult Skills
+                            </dd>
+                    </div>
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                Other
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                Community Learning
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                MCA/GLA
+                            </dd>
+                    </div>
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                Tailored Learning
+                            </dd>
+                    </div>
+            </dl>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+                <div class="govuk-summary-list__row govuk-!-font-size-16">
+                    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                        Last date for new start
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Varies - see listing for dates
+                    </dd>
+                </div>
+            </dl>
+    </div>
+    <div class="search-item">
+        <h3 class="govuk-!-margin-0">
+            <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline govuk-!-font-size-19" href="/find-a-learning-aim/LearningAimSearchResult/RedirectToDetails?learnAimRef=60164013&amp;academicYear=2526">(6 credit) Award in WorkSkills</a>
+        </h3>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+            <div class="govuk-summary-list__row govuk-!-font-size-16">
+                <dt class="govuk-summary-list__key">
+                    Reference
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    60164013
+                </dd>
+                <dt class="govuk-summary-list__key">
+                    Level
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    Level 2
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-!-font-size-16">
+                <dt class="govuk-summary-list__key">
+                    Awarding body
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    ICQ
+                </dd>
+                <dt class="govuk-summary-list__key">
+                    Guided learning hours
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    40
+                </dd>
+            </div>
+        </dl>
+
+            <h4 class="govuk-heading-s govuk-!-font-size-16 govuk-!-margin-bottom-0 govuk-!-margin-top-2">Available funding streams for academic year 2025 to 2026:</h4>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                14-16 EFA
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                Other
+                            </dd>
+                    </div>
+            </dl>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+                <div class="govuk-summary-list__row govuk-!-font-size-16">
+                    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                        Last date for new start
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Varies - see listing for dates
+                    </dd>
+                </div>
+            </dl>
+    </div>
+    <div class="search-item">
+        <h3 class="govuk-!-margin-0">
+            <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline govuk-!-font-size-19" href="/find-a-learning-aim/LearningAimSearchResult/RedirectToDetails?learnAimRef=6017724X&amp;academicYear=2526">(6 credit) Award in WorkSkills</a>
+        </h3>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+            <div class="govuk-summary-list__row govuk-!-font-size-16">
+                <dt class="govuk-summary-list__key">
+                    Reference
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    6017724X
+                </dd>
+                <dt class="govuk-summary-list__key">
+                    Level
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    Level 1
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-!-font-size-16">
+                <dt class="govuk-summary-list__key">
+                    Awarding body
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    ICQ
+                </dd>
+                <dt class="govuk-summary-list__key">
+                    Guided learning hours
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    30
+                </dd>
+            </div>
+        </dl>
+
+            <h4 class="govuk-heading-s govuk-!-font-size-16 govuk-!-margin-bottom-0 govuk-!-margin-top-2">Available funding streams for academic year 2025 to 2026:</h4>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                14-16 EFA
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                Other
+                            </dd>
+                    </div>
+            </dl>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+                <div class="govuk-summary-list__row govuk-!-font-size-16">
+                    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                        Last date for new start
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Varies - see listing for dates
+                    </dd>
+                </div>
+            </dl>
+    </div>
+    <div class="search-item">
+        <h3 class="govuk-!-margin-0">
+            <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline govuk-!-font-size-19" href="/find-a-learning-aim/LearningAimSearchResult/RedirectToDetails?learnAimRef=60177251&amp;academicYear=2526">(9 Credit) Award in WorkSkills</a>
+        </h3>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+            <div class="govuk-summary-list__row govuk-!-font-size-16">
+                <dt class="govuk-summary-list__key">
+                    Reference
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    60177251
+                </dd>
+                <dt class="govuk-summary-list__key">
+                    Level
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    Level 1
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-!-font-size-16">
+                <dt class="govuk-summary-list__key">
+                    Awarding body
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    ICQ
+                </dd>
+                <dt class="govuk-summary-list__key">
+                    Guided learning hours
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    60
+                </dd>
+            </div>
+        </dl>
+
+            <h4 class="govuk-heading-s govuk-!-font-size-16 govuk-!-margin-bottom-0 govuk-!-margin-top-2">Available funding streams for academic year 2025 to 2026:</h4>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                14-16 EFA
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                16-19 EFA
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                Adult Skills
+                            </dd>
+                    </div>
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                Other
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                Community Learning
+                            </dd>
+                            <dd class="govuk-summary-list__value custom">
+                                MCA/GLA
+                            </dd>
+                    </div>
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                Tailored Learning
+                            </dd>
+                    </div>
+            </dl>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+                <div class="govuk-summary-list__row govuk-!-font-size-16">
+                    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                        Last date for new start
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Varies - see listing for dates
+                    </dd>
+                </div>
+            </dl>
+    </div>
+
+            <h4 class="govuk-heading-s govuk-!-font-size-16 govuk-!-margin-bottom-0 govuk-!-margin-top-2">Available funding streams for academic year 2025 to 2026:</h4>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                Other
+                            </dd>
+                    </div>
+            </dl>
+            
+    </div>
+    <div class="search-item">
+        <h3 class="govuk-!-margin-0">
+            <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold no-underline govuk-!-font-size-19" href="/find-a-learning-aim/LearningAimSearchResult/RedirectToDetails?learnAimRef=00280039&amp;academicYear=2526">A WAY WITH WORDS - LEVEL 2 - READING</a>
+        </h3>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+            <div class="govuk-summary-list__row govuk-!-font-size-16">
+                <dt class="govuk-summary-list__key">
+                    Reference
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    00280039
+                </dd>
+                <dt class="govuk-summary-list__key">
+                    Level
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    Level 2
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-!-font-size-16">
+                <dt class="govuk-summary-list__key">
+                    Awarding body
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    LEARNDCT
+                </dd>
+                <dt class="govuk-summary-list__key">
+                    Guided learning hours
+                </dt>
+                <dd class="govuk-summary-list__value wide-col">
+                    Not Provided
+                </dd>
+            </div>
+        </dl>
+
+            <h4 class="govuk-heading-s govuk-!-font-size-16 govuk-!-margin-bottom-0 govuk-!-margin-top-2">Available funding streams for academic year 2025 to 2026:</h4>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-0 govuk-summary-list--no-border">
+                    <div class="govuk-summary-list__row custom-row govuk-!-font-size-16">
+                            <dd class="govuk-summary-list__value custom">
+                                Other
+                            </dd>
+                    </div>
+            </dl>
+     
+    </div>
+   </div>
+ </div>
+</div>
+
+
+
+
+
+ 
+{% endblock %}

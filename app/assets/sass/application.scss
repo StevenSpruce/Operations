@@ -189,8 +189,112 @@ html {
   stroke: govuk-colour("red");
 }
 
+.filter-backdrop {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:rgba(0,0,0,0.4);
+  z-index: 1500;
+  transition: opacity 1.0s ease-in-out;
+}
+
+.filter-backdrop.visible {
+  display: block;
+  opacity: 1;
+}
+
+.filter-panel {
+  position: fixed;
+  top: 0;
+  width: 420px;
+  right: -484px; /* Corrected offset due to padding */
+  height: 100%;
+  background: #f3f2f1;
+  box-shadow: -3px 0 8px rgba(0,0,0,0.3);
+  overflow-y: auto;
+  transition: right 1.0s ease-in-out;
+  z-index: 2000;
+}
+
+.filter-panel.open {
+  right: 0;
+}
+
+/* Pill container */
+.app-filter-chip {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;          /* ensures left-to-right layout */
+  padding: 4px 12px;
+  gap: 6px;                      /* space between X and text */
+  border: 1px solid #b1b4b6;
+  border-radius: 20px;
+  background: #ffffff;
+  font-family: "GDS Transport", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+/* The X button (left) */
+.app-filter-chip__remove {
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;               /* similar size to screenshot */
+  line-height: 1;
+  cursor: pointer;
+  color: #505a5f;
+}
+
+.app-filter-chip__remove:hover {
+  color: #0b0c0c;
+}
+
+/* GOV.UK-style focus ring */
+.app-filter-chip__remove:focus {
+  outline: 3px solid transparent;
+  background: #fd0;               /* GOV.UK yellow */
+  box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+  border-radius: 2px;
+}
+
+/* Text label */
+.app-filter-chip__label {
+  margin: 0;
+  padding: 0;
+}
+
+/* Space chips neatly inside */
+#applied-filters-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* GOV.UK style focus ring */
+.app-filter-chip__remove:focus {
+  outline: 3px solid transparent;
+  background: #fd0;               /* GOV.UK focus yellow */
+  box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+  border-radius: 2px;
+}
+
+/* Light grey panel for applied filters */
+.app-applied-filters {
+  background: #f3f2f1;               /* GOV.UK light grey */
+  padding: 15px 20px;
+  border-radius: 4px;
+}
+
+
 
 @import "patterns/_summary-card";
 
 @import "patterns/_top-nav";
-
