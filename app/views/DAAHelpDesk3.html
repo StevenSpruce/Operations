@@ -1,128 +1,209 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Manage Contract</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #ffffff; color: #0b0c0c; }
-        .gov-header { border-bottom: 1px solid #b1b4b6; margin-bottom: 20px; }
-        .section-box { border: 1px solid #b1b4b6; margin-bottom: 30px; }
-        .section-header { background-color: #f3f2f1; padding: 10px 15px; font-weight: bold; border-bottom: 1px solid #b1b4b6; }
-        .row { display: flex; padding: 12px 15px; border-bottom: 1px solid #b1b4b6; }
-        .row:last-child { border-bottom: none; }
-        .label { width: 40%; font-weight: bold; }
-        .value { width: 60%; }
-        .btn-save { background-color: #00703c; color: white; padding: 8px 16px; font-weight: bold; border-bottom: 3px solid #004020; }
-        .btn-secondary { background-color: #f3f2f1; border: 1px solid #b1b4b6; padding: 8px 16px; box-shadow: 0 2px 0 #0b0c0c; }
-    </style>
-</head>
-<body class="p-8 max-w-3xl mx-auto">
+{% extends "layoutsld.html" %}
 
-    <a href="#" class="text-sm underline text-blue-800 decoration-1 hover:text-red-700"> < Back</a>
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list app-width-container">
 
-    <h1 class="text-4xl font-extrabold my-8">Manage contract</h1>
+    <li class="app-navigation__list-item app-navigation__list-item--current">
+      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_ContractList.html" data-topnav="Contracts">Contracts</a>
+    </li>
 
-    <div class="section-box">
-        <div class="section-header">ILR contract reference number</div>
-        <div class="p-4 font-semibold">XSB-90001221-A000001</div>
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Upload.html" data-topnav="Import">Import</a>
+    </li>
+
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Export.html" data-topnav="Export">Export</a>
+    </li>
+
+  </ul>
+</nav>
+
+<div class="govuk-width-container">
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column">
+        <h1 class="govuk-heading-xl">Manage contract</h1>
+      </div>
+    
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-summary-card govuk-!-margin-bottom-9">
+        <div class="govuk-summary-card__title-wrapper">
+          <div class="govuk-summary-card__status-wrapper">
+            <h2 class="govuk-summary-card__title">ILR contract reference number
+            </h2>
+          </div>
+        </div>
+      
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                XSB-90001221-A000001
+              </dt>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card govuk-!-margin-bottom-9">
+        <div class="govuk-summary-card__title-wrapper">
+          <div class="govuk-summary-card__status-wrapper">
+            <h2 class="govuk-summary-card__title">Contract details
+            </h2>
+          </div>
+        </div>
+      
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Skills Bootcamp name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Bootcamp 1
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Skills Bootcamp provider UKPRN</dt>
+              <dd class="govuk-summary-list__value">
+                12345678 
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+              Your contract reference number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                90000010/1234
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    
+    <div class="govuk-summary-card govuk-!-margin-bottom-9">
+      <div class="govuk-summary-card__title-wrapper">
+        <div class="govuk-summary-card__status-wrapper">
+          <h2 class="govuk-summary-card__title">Contract wave</h2>
+        </div>
+      </div>
+    
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Contract funding wave</dt>
+            <dd class="govuk-summary-list__value">DPS Round 1</dd>
+          </div>
+        </dl>
+      </div>
     </div>
 
-    <div class="section-box">
-        <div class="section-header">Contract details</div>
-        <div class="row">
-            <div class="label">Skills Bootcamp name</div>
-            <div class="value">Bootcamp 1</div>
+    <div class="govuk-summary-card govuk-!-margin-bottom-9">
+      <div class="govuk-summary-card__title-wrapper">
+        <div class="govuk-summary-card__status-wrapper">
+          <h2 class="govuk-summary-card__title">Calculation method</h2>
         </div>
-        <div class="row">
-            <div class="label">Skills Bootcamp provider UKPRN</div>
-            <div class="value">12345678</div>
-        </div>
-        <div class="row">
-            <div class="label">Your contract reference number</div>
-            <div class="value">90000010/1234</div>
-        </div>
+      </div>
+    
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Calculation method</dt>
+            <dd class="govuk-summary-list__value">SBC01</dd>
+          </div>
+        </dl>
+      </div>
     </div>
 
-    <div class="section-box">
-        <div class="section-header">Contract wave</div>
-        <div class="row">
-            <div class="label">Contract funding wave</div>
-            <div class="value">DPS Round 1</div>
+    <div class="govuk-summary-card govuk-!-margin-bottom-9">  
+      <div class="govuk-summary-card__title-wrapper">
+        <div class="govuk-summary-card__status-wrapper">
+          <h2 class="govuk-summary-card__title">Contract dates and unit cost</h2>
         </div>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Contract start date</dt>
+            <dd class="govuk-summary-list__value">1 August 2023</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Contract end date</dt>
+            <dd class="govuk-summary-list__value">31 July 2024</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Unit cost</dt>
+            <dd class="govuk-summary-list__value">£2500.00</dd>
+          </div>
+        </dl>
+      </div>
     </div>
 
-    <div class="section-box">
-        <div class="section-header">Calculation method</div>
-        <div class="row">
-            <div class="label">Calculation method</div>
-            <div class="value">SBC01</div>
+    <div class="govuk-summary-card govuk-!-margin-bottom-9">
+      <div class="govuk-summary-card__title-wrapper">
+        <div class="govuk-summary-card__status-wrapper">
+          <h2 class="govuk-summary-card__title">Payment details</h2>
         </div>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Qualifying period</dt>
+            <dd class="govuk-summary-list__value">5 days</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Start payment percentage</dt>
+            <dd class="govuk-summary-list__value">20 %</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Last date for start payment</dt>
+            <dd class="govuk-summary-list__value">01 December 2024</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Mid-course payment percentage</dt>
+            <dd class="govuk-summary-list__value">30 %</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Last date for mid-course payment</dt>
+            <dd class="govuk-summary-list__value">03 January 2025</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Completion payment percentage</dt>
+            <dd class="govuk-summary-list__value">10 %</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Last date for completion payment</dt>
+            <dd class="govuk-summary-list__value">01 December 2024</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Outcome payment percentage</dt>
+            <dd class="govuk-summary-list__value">40 %</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Last date for outcome payment</dt>
+            <dd class="govuk-summary-list__value">03 January 2025</dd>
+          </div>
+        </dl>
+      </div>
     </div>
 
-    <div class="section-box">
-        <div class="section-header">Contract dates and unit cost</div>
-        <div class="row">
-            <div class="label">Contract start date</div>
-            <div class="value">1 August 2023</div>
-        </div>
-        <div class="row">
-            <div class="label">Contract end date</div>
-            <div class="value">31 July 2024</div>
-        </div>
-        <div class="row">
-            <div class="label">Unit cost</div>
-            <div class="value">£2500.00</div>
-        </div>
+
+    <div class="govuk-button-group">
+     <a href="/SBRD_ContractList.html" id="EditLink" class="govuk-button">Save contract</a> 
+     <a href="/SBRD_contractdetails.html" id="EditLink" class="govuk-button govuk-button--secondary">Edit contract</a> 
+     <a href="/SBRD_ContractList.html" id="EditLink" class="govuk-link">Delete contract</a> 
+     <a href="/SBRD_ContractList.html" id="EditLink" class="govuk-link">Cancel</a> 
     </div>
 
-    <div class="section-box">
-        <div class="section-header">Payment details</div>
-        <div class="row">
-            <div class="label">Qualifying period</div>
-            <div class="value">5 days</div>
-        </div>
-        <div class="row">
-            <div class="label">Start payment percentage</div>
-            <div class="value">20 %</div>
-        </div>
-        <div class="row">
-            <div class="label">Last date for start payment</div>
-            <div class="value">01 December 2024</div>
-        </div>
-        <div class="row">
-            <div class="label">Mid-course payment percentage</div>
-            <div class="value">30 %</div>
-        </div>
-        <div class="row">
-            <div class="label">Last date for mid-course payment</div>
-            <div class="value">03 January 2025</div>
-        </div>
-        <div class="row">
-            <div class="label">Completion payment percentage</div>
-            <div class="value">10 %</div>
-        </div>
-        <div class="row">
-            <div class="label">Last date for completion payment</div>
-            <div class="value">01 December 2024</div>
-        </div>
-        <div class="row">
-            <div class="label">Outcome payment percentage</div>
-            <div class="value">40 %</div>
-        </div>
-        <div class="row">
-            <div class="label">Last date for outcome payment</div>
-            <div class="value">03 January 2025</div>
-        </div>
-    </div>
+  </div>
+</main>
+</div>
 
-    <div class="flex items-center gap-4 mt-8">
-        <button class="btn-save px-6 py-2">Save contract</button>
-        <button class="btn-secondary">Edit contract</button>
-        <a href="#" class="text-blue-800 underline ml-4">Delete contract</a>
-        <a href="#" class="text-blue-800 underline ml-4">Cancel</a>
-    </div>
 
-</body>
-</html>
+{% endblock %}
