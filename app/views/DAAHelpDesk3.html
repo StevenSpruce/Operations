@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Manage Contract</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #ffffff; color: #0b0c0c; }
+        .gov-header { border-bottom: 1px solid #b1b4b6; margin-bottom: 20px; }
+        .section-box { border: 1px solid #b1b4b6; margin-bottom: 30px; }
+        .section-header { background-color: #f3f2f1; padding: 10px 15px; font-weight: bold; border-bottom: 1px solid #b1b4b6; }
+        .row { display: flex; padding: 12px 15px; border-bottom: 1px solid #b1b4b6; }
+        .row:last-child { border-bottom: none; }
+        .label { width: 40%; font-weight: bold; }
+        .value { width: 60%; }
+        .btn-save { background-color: #00703c; color: white; padding: 8px 16px; font-weight: bold; border-bottom: 3px solid #004020; }
+        .btn-secondary { background-color: #f3f2f1; border: 1px solid #b1b4b6; padding: 8px 16px; box-shadow: 0 2px 0 #0b0c0c; }
+    </style>
+</head>
+<body class="p-8 max-w-3xl mx-auto">
+
+    <a href="#" class="text-sm underline text-blue-800 decoration-1 hover:text-red-700"> < Back</a>
+
+    <h1 class="text-4xl font-extrabold my-8">Manage contract</h1>
+
+    <div class="section-box">
+        <div class="section-header">ILR contract reference number</div>
+        <div class="p-4 font-semibold">XSB-90001221-A000001</div>
+    </div>
+
+    <div class="section-box">
+        <div class="section-header">Contract details</div>
+        <div class="row">
+            <div class="label">Skills Bootcamp name</div>
+            <div class="value">Bootcamp 1</div>
+        </div>
+        <div class="row">
+            <div class="label">Skills Bootcamp provider UKPRN</div>
+            <div class="value">12345678</div>
+        </div>
+        <div class="row">
+            <div class="label">Your contract reference number</div>
+            <div class="value">90000010/1234</div>
+        </div>
+    </div>
+
+    <div class="section-box">
+        <div class="section-header">Contract wave</div>
+        <div class="row">
+            <div class="label">Contract funding wave</div>
+            <div class="value">DPS Round 1</div>
+        </div>
+    </div>
+
+    <div class="section-box">
+        <div class="section-header">Calculation method</div>
+        <div class="row">
+            <div class="label">Calculation method</div>
+            <div class="value">SBC01</div>
+        </div>
+    </div>
+
+    <div class="section-box">
+        <div class="section-header">Contract dates and unit cost</div>
+        <div class="row">
+            <div class="label">Contract start date</div>
+            <div class="value">1 August 2023</div>
+        </div>
+        <div class="row">
+            <div class="label">Contract end date</div>
+            <div class="value">31 July 2024</div>
+        </div>
+        <div class="row">
+            <div class="label">Unit cost</div>
+            <div class="value">£2500.00</div>
+        </div>
+    </div>
+
+    <div class="section-box">
+        <div class="section-header">Payment details</div>
+        <div class="row">
+            <div class="label">Qualifying period</div>
+            <div class="value">5 days</div>
+        </div>
+        <div class="row">
+            <div class="label">Start payment percentage</div>
+            <div class="value">20 %</div>
+        </div>
+        <div class="row">
+            <div class="label">Last date for start payment</div>
+            <div class="value">01 December 2024</div>
+        </div>
+        <div class="row">
+            <div class="label">Mid-course payment percentage</div>
+            <div class="value">30 %</div>
+        </div>
+        <div class="row">
+            <div class="label">Last date for mid-course payment</div>
+            <div class="value">03 January 2025</div>
+        </div>
+        <div class="row">
+            <div class="label">Completion payment percentage</div>
+            <div class="value">10 %</div>
+        </div>
+        <div class="row">
+            <div class="label">Last date for completion payment</div>
+            <div class="value">01 December 2024</div>
+        </div>
+        <div class="row">
+            <div class="label">Outcome payment percentage</div>
+            <div class="value">40 %</div>
+        </div>
+        <div class="row">
+            <div class="label">Last date for outcome payment</div>
+            <div class="value">03 January 2025</div>
+        </div>
+    </div>
+
+    <div class="flex items-center gap-4 mt-8">
+        <button class="btn-save px-6 py-2">Save contract</button>
+        <button class="btn-secondary">Edit contract</button>
+        <a href="#" class="text-blue-800 underline ml-4">Delete contract</a>
+        <a href="#" class="text-blue-800 underline ml-4">Cancel</a>
+    </div>
+
+</body>
+</html>
