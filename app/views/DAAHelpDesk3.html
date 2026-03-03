@@ -1,209 +1,245 @@
 {% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-GOV.UK Prototype Kit
+  View allocations - Submit learner data
 {% endblock %}
+
 {% block content %}
-<nav class="app-navigation govuk-clearfix">
-  <ul class="app-navigation__list app-width-container">
 
-    <li class="app-navigation__list-item app-navigation__list-item--current">
-      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_ContractList.html" data-topnav="Contracts">Contracts</a>
-    </li>
-
-    <li class="app-navigation__list-item">
-      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Upload.html" data-topnav="Import">Import</a>
-    </li>
-
-    <li class="app-navigation__list-item">
-      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="SBRD_Export.html" data-topnav="Export">Export</a>
-    </li>
-
-  </ul>
-</nav>
-
-<div class="govuk-width-container">
-  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
-  <main class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column">
-        <h1 class="govuk-heading-xl">Manage contract</h1>
-      </div>
-    
-    <div class="govuk-grid-column-two-thirds">
-
-      <div class="govuk-summary-card govuk-!-margin-bottom-9">
-        <div class="govuk-summary-card__title-wrapper">
-          <div class="govuk-summary-card__status-wrapper">
-            <h2 class="govuk-summary-card__title">ILR contract reference number
-            </h2>
-          </div>
-        </div>
-      
-        <div class="govuk-summary-card__content">
-          <dl class="govuk-summary-list">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                XSB-90001221-A000001
-              </dt>
-            </div>
-          </dl>
-        </div>
-      </div>
-
-      <div class="govuk-summary-card govuk-!-margin-bottom-9">
-        <div class="govuk-summary-card__title-wrapper">
-          <div class="govuk-summary-card__status-wrapper">
-            <h2 class="govuk-summary-card__title">Contract details
-            </h2>
-          </div>
-        </div>
-      
-        <div class="govuk-summary-card__content">
-          <dl class="govuk-summary-list">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Skills Bootcamp name
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Bootcamp 1
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Skills Bootcamp provider UKPRN</dt>
-              <dd class="govuk-summary-list__value">
-                12345678 
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-              Your contract reference number
-              </dt>
-              <dd class="govuk-summary-list__value">
-                90000010/1234
-              </dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-    
-    <div class="govuk-summary-card govuk-!-margin-bottom-9">
-      <div class="govuk-summary-card__title-wrapper">
-        <div class="govuk-summary-card__status-wrapper">
-          <h2 class="govuk-summary-card__title">Contract wave</h2>
-        </div>
-      </div>
-    
-      <div class="govuk-summary-card__content">
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Contract funding wave</dt>
-            <dd class="govuk-summary-list__value">DPS Round 1</dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-
-    <div class="govuk-summary-card govuk-!-margin-bottom-9">
-      <div class="govuk-summary-card__title-wrapper">
-        <div class="govuk-summary-card__status-wrapper">
-          <h2 class="govuk-summary-card__title">Calculation method</h2>
-        </div>
-      </div>
-    
-      <div class="govuk-summary-card__content">
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Calculation method</dt>
-            <dd class="govuk-summary-list__value">SBC01</dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-
-    <div class="govuk-summary-card govuk-!-margin-bottom-9">  
-      <div class="govuk-summary-card__title-wrapper">
-        <div class="govuk-summary-card__status-wrapper">
-          <h2 class="govuk-summary-card__title">Contract dates and unit cost</h2>
-        </div>
-      </div>
-      <div class="govuk-summary-card__content">
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Contract start date</dt>
-            <dd class="govuk-summary-list__value">1 August 2023</dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Contract end date</dt>
-            <dd class="govuk-summary-list__value">31 July 2024</dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Unit cost</dt>
-            <dd class="govuk-summary-list__value">£2500.00</dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-
-    <div class="govuk-summary-card govuk-!-margin-bottom-9">
-      <div class="govuk-summary-card__title-wrapper">
-        <div class="govuk-summary-card__status-wrapper">
-          <h2 class="govuk-summary-card__title">Payment details</h2>
-        </div>
-      </div>
-      <div class="govuk-summary-card__content">
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Qualifying period</dt>
-            <dd class="govuk-summary-list__value">5 days</dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Start payment percentage</dt>
-            <dd class="govuk-summary-list__value">20 %</dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Last date for start payment</dt>
-            <dd class="govuk-summary-list__value">01 December 2024</dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Mid-course payment percentage</dt>
-            <dd class="govuk-summary-list__value">30 %</dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Last date for mid-course payment</dt>
-            <dd class="govuk-summary-list__value">03 January 2025</dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Completion payment percentage</dt>
-            <dd class="govuk-summary-list__value">10 %</dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Last date for completion payment</dt>
-            <dd class="govuk-summary-list__value">01 December 2024</dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Outcome payment percentage</dt>
-            <dd class="govuk-summary-list__value">40 %</dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Last date for outcome payment</dt>
-            <dd class="govuk-summary-list__value">03 January 2025</dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-
-
-    <div class="govuk-button-group">
-     <a href="/SBRD_ContractList.html" id="EditLink" class="govuk-button">Save contract</a> 
-     <a href="/SBRD_contractdetails.html" id="EditLink" class="govuk-button govuk-button--secondary">Edit contract</a> 
-     <a href="/SBRD_ContractList.html" id="EditLink" class="govuk-link">Delete contract</a> 
-     <a href="/SBRD_ContractList.html" id="EditLink" class="govuk-link">Cancel</a> 
-    </div>
-
-  </div>
-</main>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Live
+    </strong>
+    <span class="govuk-phase-banner__text">
+      Your <a class="govuk-link" href="#" target="_blank">feedback (opens in new tab)</a> will help us improve the service.
+    </span>
+  </p>
 </div>
 
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full govuk-!-text-align-right govuk-!-padding-top-2">
+        <span class="govuk-body">Niamh Gallagher UKPRN:10033670</span>
+        <a href="#" class="govuk-link govuk-!-margin-left-2">Sign out</a>
+    </div>
+</div>
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper" id="content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-l">View allocations</h1>
+        
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="search-input">
+                Select an allocation to view
+              </label>
+              <div id="search-hint" class="govuk-hint">
+                Filter by <strong>allocation type</strong>, <strong>award type</strong> or <strong>provider UKPRN</strong>
+              </div>
+              <input class="govuk-input govuk-!-width-three-quarters" id="search-input" name="search-input" type="text" aria-describedby="search-hint">
+            </div>
+
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+              Search
+              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="govuk-grid-row govuk-!-margin-top-4">
+          <div class="govuk-grid-column-one-third">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="show-allocations">
+                Show allocations
+              </label>
+              <select class="govuk-select" id="show-allocations" name="show-allocations">
+                <option value="10" selected>10 allocations per page</option>
+                <option value="25">25 allocations per page</option>
+                <option value="50">50 allocations per page</option>
+                <option value="all">Show all allocations</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Provider UKPRN</th>
+                    <th scope="col" class="govuk-table__header">Award type</th>
+                    <th scope="col" class="govuk-table__header">Allocation type</th>
+                    <th scope="col" class="govuk-table__header">Allocation start date</th>
+                    <th scope="col" class="govuk-table__header">Allocation end date</th>
+                    <th scope="col" class="govuk-table__header">Allocation value (£)</th>
+                    <th scope="col" class="govuk-table__header">Action</th>
+                    <th scope="col" class="govuk-table__header">Allocation Ended</th>
+                    <th scope="col" class="govuk-table__header">On hold</th>
+                    <th scope="col" class="govuk-table__header">No Change</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">12345678</td>
+                    <td class="govuk-table__cell">Grant</td>
+                    <td class="govuk-table__cell">Skills Bootcamps</td>
+                    <td class="govuk-table__cell">01/04/2024</td>
+                    <td class="govuk-table__cell">31/03/2025</td>
+                    <td class="govuk-table__cell">150,000</td>
+                    <td class="govuk-table__cell">
+                        <a href="#" class="govuk-link">View</a>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="ended-1" name="ended-1" type="checkbox">
+                                <label class="govuk-label govuk-checkboxes__label" for="ended-1"></label>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hold-1" name="hold-1" type="checkbox">
+                                <label class="govuk-label govuk-checkboxes__label" for="hold-1"></label>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="nochange-1" name="nochange-1" type="checkbox">
+                                <label class="govuk-label govuk-checkboxes__label" for="nochange-1"></label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">87654321</td>
+                    <td class="govuk-table__cell">Contract for Services</td>
+                    <td class="govuk-table__cell">Adult Skills Fund</td>
+                    <td class="govuk-table__cell">01/08/2024</td>
+                    <td class="govuk-table__cell">31/07/2025</td>
+                    <td class="govuk-table__cell">250,000</td>
+                    <td class="govuk-table__cell">
+                        <a href="#" class="govuk-link">View</a>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="ended-2" name="ended-2" type="checkbox">
+                                <label class="govuk-label govuk-checkboxes__label" for="ended-2"></label>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hold-2" name="hold-2" type="checkbox">
+                                <label class="govuk-label govuk-checkboxes__label" for="hold-2"></label>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="nochange-2" name="nochange-2" type="checkbox">
+                                <label class="govuk-label govuk-checkboxes__label" for="nochange-2"></label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">19999999</td>
+                    <td class="govuk-table__cell">Grant</td>
+                    <td class="govuk-table__cell">Free Courses for Jobs</td>
+                    <td class="govuk-table__cell">01/09/2024</td>
+                    <td class="govuk-table__cell">31/08/2025</td>
+                    <td class="govuk-table__cell">75,000</td>
+                    <td class="govuk-table__cell">
+                        <a href="#" class="govuk-link">View</a>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="ended-3" name="ended-3" type="checkbox">
+                                <label class="govuk-label govuk-checkboxes__label" for="ended-3"></label>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hold-3" name="hold-3" type="checkbox">
+                                <label class="govuk-label govuk-checkboxes__label" for="hold-3"></label>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="nochange-3" name="nochange-3" type="checkbox">
+                                <label class="govuk-label govuk-checkboxes__label" for="nochange-3"></label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <nav class="govuk-pagination" role="navigation" aria-label="Pagination">
+          <div class="govuk-pagination__prev">
+            <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+              <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+              </svg>
+              <span class="govuk-pagination__link-title">
+                Previous<span class="govuk-visually-hidden"> page</span>
+              </span>
+            </a>
+          </div>
+          <ul class="govuk-pagination__list">
+            <li class="govuk-pagination__item">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+                1
+              </a>
+            </li>
+            <li class="govuk-pagination__item govuk-pagination__item--current">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+                2
+              </a>
+            </li>
+            <li class="govuk-pagination__item">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                3
+              </a>
+            </li>
+          </ul>
+          <div class="govuk-pagination__next">
+            <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+              <span class="govuk-pagination__link-title">
+                Next<span class="govuk-visually-hidden"> page</span>
+              </span>
+              <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+        </div>
+  </div>
+</main>
 
 {% endblock %}
