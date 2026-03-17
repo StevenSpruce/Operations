@@ -1,118 +1,108 @@
-{% extends "layoutsld.html" %}
+{% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-GOV.UK Prototype Kit
+  Submit learner data – GOV.UK
 {% endblock %}
 
 {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Make a submission</h1>
+  </div>
+</div>
 
-<body class="govuk-template__body js-enabled">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="submission-tile">
+      <div class="tile-header">
+        <h3 class="govuk-heading-s">FE Workforce</h3>
+        <p class="govuk-body-s">Staff and vacancy data collections</p>
+      </div>
+      <div class="tile-status">22/23 Open</div>
+    </div>
+  </div>
 
-    <main class="govuk-main-wrapper" id="content" role="main">
-        <div class="govuk-grid-row flex">
-            
-            <div class="govuk-grid-column-three-quarters">
+  <div class="govuk-grid-column-one-third">
+    <div class="submission-tile">
+      <div class="tile-header">
+        <h3 class="govuk-heading-s">FE Workforce</h3>
+        <p class="govuk-body-s">Governor data collection</p>
+      </div>
+      <div class="tile-status">22/23 Open</div>
+    </div>
+  </div>
 
-                <h1 id="makeSubmission" class="govuk-heading-l">
-                    Make a submission
-                </h1>
+  <div class="govuk-grid-column-one-third">
+    <div class="submission-tile">
+      <div class="tile-header">
+        <h3 class="govuk-heading-s">HECOS</h3>
+        <p class="govuk-body-s">Higher Education Classification of Subjects</p>
+      </div>
+      <div class="tile-status">23/24 Open</div>
+    </div>
+  </div>
+</div>
 
-                <a class="govuk-link" href="/FEWCollectionOverview"> 
-                    <img src="/public/images/FEWOpen.PNG" width="180" height="120">
-                </a> 
-                <a class="govuk-link" href="/FEWGStart"> 
-                    <img src="/public/images/FEWG.PNG" width="180" height="120">
-                </a> 
-                <a class="govuk-link" href="/HecosExport"> 
-                    <img src="/public/images/HECOSTile.png" width="180" height="115">
-                </a> 
-                <a class="govuk-link" href="/fundingclaimsubmissions"> 
-                    <img src="/public/images/fundingclaims.jpg" width="180" height="120">
-                </a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="submission-tile">
+      <div class="tile-header">
+        <h3 class="govuk-heading-s">Funding Claims</h3>
+        <p class="govuk-body-s">Submit Funding Claims</p>
+      </div>
+      <div class="tile-status">Open</div>
+    </div>
+  </div>
 
-                <a class="govuk-link" href="/DAAllocations" style="text-decoration: none; display: inline-block; vertical-align: top;">
-                    <div style="width: 180px; height: 120px; background-color: #1d70b8; color: white; position: relative; font-family: 'GDS Transport', arial, sans-serif;">
-                        <div style="padding: 10px 10px 0 10px;">
-                            <div style="font-weight: bold; font-size: 19px; line-height: 1.2;">DA Allocations</div>
-                            <div style="font-size: 14px; margin-top: 5px; line-height: 1.2;">Devolved Authority Allocations</div>
-                        </div>
-                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 28px; background-color: #00703c; padding: 4px 10px; box-sizing: border-box;">
-                            <span style="font-weight: bold; font-size: 16px;">R01 Open</span>
-                        </div>
-                    </div>
-                </a>
+  <div class="govuk-grid-column-one-third">
+    <div class="submission-tile">
+      <div class="tile-header">
+        <h3 class="govuk-heading-s">DA Allocations</h3>
+        <p class="govuk-body-s">Devolved Authority Allocations</p>
+      </div>
+      <div class="tile-status">R01 Open</div>
+    </div>
+  </div>
+</div>
 
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-                <h1 class="govuk-heading-l">Reports and data</h1>
+<h2 class="govuk-heading-l">Reports and data</h2>
 
-                <a class="govuk-link" href="/ReportsMenu"> 
-                    <img src="/public/images/reports.png" width="180" height="120">
-                </a>
-                <a class="govuk-link" href="/FEWSubmissionHistory"> 
-                    <img src="/public/images/FEWClosed.PNG" width="180" height="120">
-                </a> 
-                <a class="govuk-link" href="/FEWGovernorSubmissions"> 
-                    <img src="/public/images/FEWGClosed.PNG" width="180" height="120">
-                </a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="report-card">
+      <div class="report-card-top">
+        <a href="#" class="govuk-link govuk-heading-s">Reports</a>
+      </div>
+      <div class="report-card-bottom">
+        <a href="#" class="govuk-link">View reports</a>
+      </div>
+    </div>
+  </div>
 
-                <a class="govuk-link" href="/powerbidashboards"> 
-                    <img src="/public/images/dashboards.jpg" width="180" height="120">
-                </a> 
+  <div class="govuk-grid-column-one-third">
+    <div class="report-card">
+      <div class="report-card-top">
+        <a href="#" class="govuk-link govuk-heading-s">FE Workforce</a>
+        <p class="govuk-body-s">Staff and vacancy data collections</p>
+      </div>
+      <div class="report-card-bottom">
+        <a href="#" class="govuk-link">View submissions</a>
+      </div>
+    </div>
+  </div>
 
-            </div>
-
-            <div class="govuk-grid-column-one-quarter">
-                <aside class="app-related-items" role="complementary">
-                    <h2 class="govuk-heading-m" id="subsection-title-help">
-                        Help and support
-                    </h2>
-                    <p class="govuk-!-font-size-16">
-                        Find further information at the <a href="https://esfahelp.education.gov.uk/hc/en-gb/articles/7443637756946">Customer Help Centre</a> 
-                        where you can <a href="https://customerhelp.education.gov.uk/hc/en-gb/categories/360002506639-Articles">read our help articles</a>, 
-                        talk to our Community, chat to our <a href="https://askonline.education.gov.uk/chatbot/davina?regional=true">Virtual assistant</a> 
-                        or submit an enquiry.
-                    </p>
-
-                    <h2 class="govuk-heading-m" id="subsection-title-tools-and-services">
-                        Tools and services
-                    </h2>
-                    <nav role="navigation" aria-labelledby="subsection-title-tools-and-services">
-                        <ul class="govuk-list govuk-!-font-size-16">
-                            <li>
-                                <a href="/publicdownloads/Desktop">FIS (Funding Information Service)</a>
-                            </li>
-                            <li>
-                                <a href="https://tst.submit-learner-data.service.gov.uk/find-a-learning-aim/" target="_blank">
-                                    Find a Learning Aim
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/publicdownloads/LearnerEntry">ILR Learner entry tool</a>
-                            </li>
-                            <li>
-                                <a href="/publicdownloads/FileMerge">ILR FileMerge</a>
-                            </li>
-                            <li few-download-link-switch="">
-                                <a href="/publicdownloads/FEWorkforceStaffentrytool">FE staff data desktop application</a>
-                            </li>
-                        </ul>
-
-                        <h2 class="govuk-heading-m" id="subsection-title-tools-and-services">
-                            My settings
-                        </h2>
-                        <nav role="navigation" aria-labelledby="subsection-title-tools-and-services">
-                            <ul class="govuk-list govuk-!-font-size-16">
-                                <li>
-                                    <a href="/ReportConfig.html">ILR submission reports</a>
-                                </li>
-                                <li>
-                                    </li>
-                            </ul>
-                        </nav>
-                </aside>
-            </div>
-        </div>
-    </main>
-</body>
-
+  <div class="govuk-grid-column-one-third">
+    <div class="report-card">
+      <div class="report-card-top">
+        <a href="#" class="govuk-link govuk-heading-s">FE Workforce</a>
+        <p class="govuk-body-s">Governor data collection</p>
+      </div>
+      <div class="report-card-bottom">
+        <a href="#" class="govuk-link">View submissions</a>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
