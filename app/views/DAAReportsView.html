@@ -30,8 +30,8 @@
   <div class="govuk-grid-column-one-quarter">
     <nav class="moj-side-navigation" aria-label="Side navigation">
       <ul class="moj-side-navigation__list">
-        <li class="moj-side-navigation__item">
-          <a href="fm36-summary">Error Reports</a>
+        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+          <a href="fm36-summary" aria-current="location">Error Reports</a>
         </li>
         <li class="moj-side-navigation__item">
           <a href="#">Total MCA Allocations Report</a>
@@ -41,37 +41,54 @@
   </div>
 
   <div class="govuk-grid-column-three-quarters">
-    <h1 class="govuk-heading-xl">DAA Reports</h1>
+    <h1 class="govuk-heading-xl">Error reports</h1>
 
     <p class="govuk-body">
-      These reports allow you to review Devolved Authority Allocation 
+      Review and download error reports for your recent Devolved Authority Allocation (DAA) submissions.
     </p>
 
-    <h2 class="govuk-heading-l">Summary reports for year 2025 to 2026</h2>
+    <h2 class="govuk-heading-l">Submissions for year 2025 to 2026</h2>
 
     <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Submission error history</caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Return period</th>
-          <th scope="col" class="govuk-table__header">Summary Link</th>
+          <th scope="col" class="govuk-table__header">Date submitted</th>
+          <th scope="col" class="govuk-table__header">Status</th>
+          <th scope="col" class="govuk-table__header">Report</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">R07</th>
-          <td class="govuk-table__cell"><a href="#" class="govuk-link">DAA report for R07</a></td>
+          <td class="govuk-table__cell">15 March 2026</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">Errors found</strong>
+          </td>
+          <td class="govuk-table__cell">
+            <a href="#" class="govuk-link">Download R07 error report (CSV, 12KB)</a>
+          </td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">R06</th>
-          <td class="govuk-table__cell"><a href="#" class="govuk-link">DAA report for R06</a></td>
+          <td class="govuk-table__cell">12 February 2026</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--green">Clean</strong>
+          </td>
+          <td class="govuk-table__cell">
+            <span class="govuk-hint">No errors to report</span>
+          </td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">R05</th>
-          <td class="govuk-table__cell"><a href="#" class="govuk-link">DAA report for R05</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">R04</th>
-          <td class="govuk-table__cell"><span class="govuk-hint">No report available</span></td>
+          <td class="govuk-table__cell">10 January 2026</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">Errors found</strong>
+          </td>
+          <td class="govuk-table__cell">
+            <a href="#" class="govuk-link">Download R05 error report (CSV, 45KB)</a>
+          </td>
         </tr>
       </tbody>
     </table>
