@@ -1,0 +1,93 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  DAA Reports – Submit learner data – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: { text: "LIVE" },
+    html: 'Your <a class="govuk-link" href="#">feedback (opens in new tab)</a> will help us improve the service.'
+  }) }}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div style="text-align: right; margin-bottom: 10px;" class="govuk-body-s">
+        Niamh Gallagher UKPRN:10007511 | <a href="#" class="govuk-link">Sign out</a>
+      </div>
+    </div>
+  </div>
+
+  {{ govukBackLink({
+    text: "Back to Homepage",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  
+  <div class="govuk-grid-column-one-quarter">
+    <nav class="moj-side-navigation" aria-label="Side navigation">
+      <ul class="moj-side-navigation__list">
+        <li class="moj-side-navigation__item">
+          <a href="latest-submissions">Latest submissions</a>
+        </li>
+        <li class="moj-side-navigation__item">
+          <a href="#">Submission history</a>
+        </li>
+        <li class="moj-side-navigation__item">
+          <a href="#">FRM reports</a>
+        </li>
+        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+          <a href="#" aria-current="location">DAA Reports</a>
+        </li>
+        <li class="moj-side-navigation__item">
+          <a href="fm36-summary">FM36 summary</a>
+        </li>
+        <li class="moj-side-navigation__item">
+          <a href="#">Reports archive</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <h1 class="govuk-heading-xl">DAA Reports</h1>
+
+    <p class="govuk-body">
+      These reports allow you to review your Data Aim Analysis (DAA) and validation results.
+    </p>
+
+    <h2 class="govuk-heading-l">Summary reports for year 2025 to 2026</h2>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Return period</th>
+          <th scope="col" class="govuk-table__header">Summary Link</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">R07</th>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">DAA report for R07</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">R06</th>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">DAA report for R06</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">R05</th>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">DAA report for R05</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">R04</th>
+          <td class="govuk-table__cell"><span class="govuk-hint">No report available</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+{% endblock %}
