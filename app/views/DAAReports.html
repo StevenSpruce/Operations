@@ -1,40 +1,18 @@
-{% extends "layouts/main.html" %}
-
-{% block pageTitle %}
-  Latest submissions – Submit learner data – GOV.UK
-{% endblock %}
-
-{% block beforeContent %}
-  {{ govukPhaseBanner({
-    tag: { text: "LIVE" },
-    html: 'Your <a class="govuk-link" href="#">feedback (opens in new tab)</a> will help us improve the service.'
-  }) }}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      <div style="text-align: right; margin-bottom: 10px;" class="govuk-body-s">
-        Niamh Gallagher UKPRN:10007511 | <a href="#" class="govuk-link">Sign out</a>
-      </div>
-    </div>
-  </div>
-
-  {{ govukBackLink({
-    text: "Back to Homepage",
-    href: "#"
-  }) }}
-{% endblock %}
-
 {% block content %}
 <div class="govuk-grid-row">
   
+  {# Side Navigation #}
   <div class="govuk-grid-column-one-quarter">
     <nav class="moj-side-navigation" aria-label="Side navigation">
       <ul class="moj-side-navigation__list">
-        <li class="moj-side-navigation__item moj-side-navigation__item--active">
-          <a href="#" aria-current="location">Latest submissions</a>
+        <li class="moj-side-navigation__item">
+          <a href="#">Latest submissions</a>
         </li>
         <li class="moj-side-navigation__item">
           <a href="#">Submission history</a>
+        </li>
+        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+          <a href="#" aria-current="location">DA Allocations Submissions</a>
         </li>
         <li class="moj-side-navigation__item">
           <a href="#">FRM reports</a>
@@ -52,22 +30,46 @@
     </nav>
   </div>
 
+  {# Main Content #}
   <div class="govuk-grid-column-three-quarters">
-    <h1 class="govuk-heading-xl">Latest submissions</h1>
+    <h1 class="govuk-heading-xl">DA Allocations Submissions</h1>
 
     <p class="govuk-body">
-      View your submissions from the last 90 days and see your updated reports. After 90 days you can find your reports for each collection period in 'submission history'.
+      These reports allow you to review your submission results, error reports, and funding summaries.
     </p>
 
-    <p class="govuk-body">
-      Download the reports of your most recent submission to see your latest figures
-    </p>
+    <h2 class="govuk-heading-l">Summary reports for year 2025 to 2026</h2>
 
-    <h3 class="govuk-heading-m">Filter your submission types</h3>
-    
-    <p class="govuk-body" style="color: #505a5f;">
-      Choosing a filter will result in the page refreshing automatically
-    </p>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Return period</th>
+          <th scope="col" class="govuk-table__header">Error Reports</th>
+          <th scope="col" class="govuk-table__header">Total Allocation MCA Funding Report</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">R07</th>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">Error report for R07</a></td>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">MCA Funding report for R07</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">R06</th>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">Error report for R06</a></td>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">MCA Funding report for R06</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">R05</th>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">Error report for R05</a></td>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">MCA Funding report for R05</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">R04</th>
+          <td class="govuk-table__cell govuk-hint" colspan="2">No reports available</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
 </div>
