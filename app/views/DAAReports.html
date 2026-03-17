@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit learner data - GOV.UK</title>
+    <style>
+        body {
+            font-family: "GDS Transport", arial, sans-serif;
+            margin: 0;
+            color: #0b0c0c;
+            background-color: #ffffff;
+        }
+
+        /* Header Styling */
+        .govuk-header {
+            background-color: #1d70b8;
+            color: white;
+            padding: 10px 40px;
+            display: flex;
+            align-items: center;
+            border-bottom: 10px solid #1d70b8;
+        }
+        
+        .govuk-header__logotype {
+            font-weight: bold;
+            font-size: 30px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Sub-header area */
+        .service-header {
+            padding: 15px 40px;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 1px solid #b1b4b6;
+        }
+
+        /* Phase Banner */
+        .phase-banner {
+            padding: 10px 40px;
+            font-size: 16px;
+        }
+        .phase-tag {
+            background: #1d70b8;
+            color: white;
+            padding: 2px 5px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* User Info */
+        .user-info {
+            text-align: right;
+            padding: 10px 40px;
+            font-size: 16px;
+        }
+
+        /* Layout Grid */
+        .container {
+            display: flex;
+            padding: 20px 40px;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 250px;
+            flex-shrink: 0;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin-bottom: 12px;
+        }
+        .sidebar a {
+            color: #1d70b8;
+            text-decoration: underline;
+            font-size: 19px;
+        }
+        .sidebar a.active {
+            font-weight: bold;
+            text-decoration: none;
+            color: #0b0c0c;
+            border-left: 4px solid #1d70b8;
+            padding-left: 10px;
+            margin-left: -14px;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex-grow: 1;
+            padding-left: 60px;
+            max-width: 800px;
+        }
+
+        h1 { font-size: 48px; margin-top: 0; }
+        p { font-size: 19px; line-height: 1.5; margin-bottom: 20px; }
+        .filter-heading { font-weight: bold; margin-top: 30px; }
+        
+        .back-link {
+            display: block;
+            margin: 20px 40px;
+            color: #0b0c0c;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="govuk-header">
+        <span class="govuk-header__logotype">GOV.UK</span>
+    </header>
+
+    <div class="service-header">Submit learner data</div>
+
+    <div class="phase-banner">
+        <span class="phase-tag">LIVE</span> Your <a href="#">feedback (opens in new tab)</a> will help us improve the service.
+    </div>
+
+    <div class="user-info">
+        Niamh Gallagher UKPRN:10007511 | <a href="#">Sign out</a>
+    </div>
+
+    <a href="#" class="back-link">&lt; Back to Homepage</a>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" class="active">Latest submissions</a></li>
+                <li><a href="#">Submission history</a></li>
+                <li><a href="#">FRM reports</a></li>
+                <li><a href="#">DAA Reports</a></li>
+                <li><a href="#">FM36 summary</a></li>
+                <li><a href="#">Reports archive</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <h1>Latest submissions</h1>
+            <p>View your submissions from the last 90 days and see your updated reports. After 90 days you can find your reports for each collection period in 'submission history'.</p>
+            <p>Download the reports of your most recent submission to see your latest figures</p>
+            
+            <p class="filter-heading">Filter your submission types</p>
+            <p style="color: #505a5f;">Choosing a filter will result in the page refreshing automatically</p>
+        </main>
+    </div>
+
+</body>
+</html>
