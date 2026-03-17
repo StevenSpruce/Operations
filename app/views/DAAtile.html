@@ -6,76 +6,164 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
+<style>
+    /* Custom styles to match the provided layout precisely */
+    .tile-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    /* Submission Tiles (Blue/Green) */
+    .submission-tile {
+        width: 190px;
+        height: 125px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        font-family: "GDS Transport", arial, sans-serif;
+    }
+
+    .sub-tile-top {
+        background-color: #1d70b8;
+        color: white;
+        padding: 10px;
+        flex-grow: 1;
+    }
+
+    .sub-tile-bottom {
+        background-color: #00703c;
+        color: white;
+        padding: 4px 10px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    /* Report Tiles (Grey/White) */
+    .report-tile {
+        width: 190px;
+        height: 125px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #b1b4b6;
+        font-family: "GDS Transport", arial, sans-serif;
+    }
+
+    .rep-tile-top {
+        background-color: #f3f2f1; /* Light grey header */
+        padding: 10px;
+        flex-grow: 1;
+    }
+
+    .rep-tile-bottom {
+        background-color: #ffffff;
+        padding: 5px 10px;
+        border-top: 1px solid #b1b4b6;
+        color: #0b0c0c;
+        font-size: 16px;
+    }
+
+    .tile-title { font-weight: bold; font-size: 16px; margin-bottom: 2px; display: block; }
+    .tile-desc { font-size: 13px; line-height: 1.2; display: block; }
+    .blue-text { color: #1d70b8; }
+</style>
+
 <body class="govuk-template__body js-enabled">
-
     <main class="govuk-main-wrapper" id="content" role="main">
-        <div class="govuk-grid-row flex">
-            
-            <div class="govuk-grid-column-three-quarters">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
 
-                <h1 id="makeSubmission" class="govuk-heading-l">
-                    Make a submission
-                </h1>
-
-                <a class="govuk-link" href="/FEWCollectionOverview"> 
-                    <img src="/public/images/FEWOpen.PNG" width="180" height="120">
-                </a> 
-                <a class="govuk-link" href="/FEWGStart"> 
-                    <img src="/public/images/FEWG.PNG" width="180" height="120">
-                </a> 
-                <a class="govuk-link" href="/HecosExport"> 
-                    <img src="/public/images/HECOSTile.png" width="180" height="115">
-                </a> 
-                <a class="govuk-link" href="/fundingclaimsubmissions"> 
-                    <img src="/public/images/fundingclaims.jpg" width="180" height="120">
-                </a>
-
-                <a class="govuk-link" href="/DAAllocations" style="text-decoration: none; display: inline-block; vertical-align: top;">
-                    <div style="width: 180px; height: 120px; background-color: #1d70b8; color: white; position: relative; font-family: 'GDS Transport', arial, sans-serif;">
-                        <div style="padding: 10px 10px 0 10px;">
-                            <div style="font-weight: bold; font-size: 19px; line-height: 1.2;">DA Allocations</div>
-                            <div style="font-size: 14px; margin-top: 5px; line-height: 1.2;">Devolved Authority Allocations</div>
+                <h1 class="govuk-heading-l">Make a submission</h1>
+                
+                <div class="tile-container">
+                    <a href="#" class="submission-tile">
+                        <div class="sub-tile-top">
+                            <span class="tile-title">FE Workforce</span>
+                            <span class="tile-desc">Staff and vacancy data collections</span>
                         </div>
-                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 28px; background-color: #00703c; padding: 4px 10px; box-sizing: border-box;">
-                            <span style="font-weight: bold; font-size: 16px;">R01 Open</span>
+                        <div class="sub-tile-bottom">22/23 Open</div>
+                    </a>
+
+                    <a href="#" class="submission-tile">
+                        <div class="sub-tile-top">
+                            <span class="tile-title">FE Workforce</span>
+                            <span class="tile-desc">Governor data collection</span>
                         </div>
-                    </div>
-                </a>
+                        <div class="sub-tile-bottom">22/23 Open</div>
+                    </a>
+
+                    <a href="#" class="submission-tile">
+                        <div class="sub-tile-top">
+                            <span class="tile-title">HECOS</span>
+                            <span class="tile-desc">Higher Education Classification of Subjects</span>
+                        </div>
+                        <div class="sub-tile-bottom">23/24 Open</div>
+                    </a>
+
+                    <a href="#" class="submission-tile">
+                        <div class="sub-tile-top">
+                            <span class="tile-title">Funding Claims</span>
+                            <span class="tile-desc">Submit Funding Claims</span>
+                        </div>
+                        <div class="sub-tile-bottom">Open</div>
+                    </a>
+
+                    <a href="/DAAllocations" class="submission-tile">
+                        <div class="sub-tile-top">
+                            <span class="tile-title">DA Allocations</span>
+                            <span class="tile-desc">Devolved Authority Allocations</span>
+                        </div>
+                        <div class="sub-tile-bottom">R01 Open</div>
+                    </a>
+                </div>
 
                 <h1 class="govuk-heading-l">Reports and data</h1>
 
-                <a class="govuk-link" href="/FEWSubmissionHistory"> 
-                    <img src="/public/images/FEWClosed.PNG" width="180" height="120">
-                </a> 
-
-                <a class="govuk-link" href="/DAASubmissionHistory" style="text-decoration: none; display: inline-block; vertical-align: top;">
-                    <div style="width: 215px; height: 125px; border: 1px solid #b1b4b6; font-family: 'GDS Transport', arial, sans-serif; box-sizing: border-box;">
-                        <div style="background-color: #f8f8f8; padding: 12px 10px; height: 80px; box-sizing: border-box;">
-                            <div style="font-weight: bold; font-size: 18px; line-height: 1.2; color: #1d70b8;">DA Allocations</div>
-                            <div style="font-weight: bold; font-size: 16px; line-height: 1.2; color: #1d70b8; margin-top: 2px;">Devolved Authority Allocations</div>
+                <div class="tile-container">
+                    <a href="#" class="report-tile">
+                        <div class="rep-tile-top">
+                            <span class="tile-title blue-text">FE Workforce</span>
+                            <span class="tile-desc blue-text">Staff and vacancy data collections</span>
                         </div>
-                        <div style="background-color: #ffffff; height: 43px; padding: 8px 10px; border-top: 1px solid #b1b4b6; box-sizing: border-box;">
-                            <span style="font-size: 19px; color: #0b0c0c;">View submissions</span>
+                        <div class="rep-tile-bottom">View submissions</div>
+                    </a>
+
+                    <a href="/DAASubmissionHistory" class="report-tile">
+                        <div class="rep-tile-top">
+                            <span class="tile-title blue-text">DA Allocations</span>
+                            <span class="tile-desc blue-text">Devolved Authority Allocations</span>
                         </div>
-                    </div>
-                </a>
+                        <div class="rep-tile-bottom">View submissions</div>
+                    </a>
 
-                <a class="govuk-link" href="/ReportsMenu"> 
-                    <img src="/public/images/reports.png" width="180" height="120">
-                </a>
-                
-                <a class="govuk-link" href="/FEWGovernorSubmissions"> 
-                    <img src="/public/images/FEWGClosed.PNG" width="180" height="120">
-                </a>
+                    <a href="#" class="report-tile">
+                        <div class="rep-tile-top">
+                            <span class="tile-title blue-text">Reports</span>
+                        </div>
+                        <div class="rep-tile-bottom">View reports</div>
+                    </a>
+                </div>
 
-                <a class="govuk-link" href="/powerbidashboards"> 
-                    <img src="/public/images/dashboards.jpg" width="180" height="120">
-                </a> 
+                <div class="tile-container">
+                    <a href="#" class="report-tile">
+                        <div class="rep-tile-top">
+                            <span class="tile-title blue-text">FE Workforce</span>
+                            <span class="tile-desc blue-text">Governor data collection</span>
+                        </div>
+                        <div class="rep-tile-bottom">View submissions</div>
+                    </a>
+
+                    <a href="#" class="report-tile">
+                        <div class="rep-tile-top">
+                            <span class="tile-title blue-text">Dashboards</span>
+                        </div>
+                        <div class="rep-tile-bottom">View dashboards</div>
+                    </a>
+                </div>
 
             </div>
-            
-            <div class="govuk-grid-column-one-quarter">
-                </div>
         </div>
     </main>
 </body>
