@@ -27,7 +27,20 @@
 {% block content %}
 <div class="govuk-grid-row">
   
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-one-quarter">
+    <nav class="moj-side-navigation" aria-label="Side navigation">
+      <ul class="moj-side-navigation__list">
+        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+          <a href="#" aria-current="location">Error Reports</a>
+        </li>
+        <li class="moj-side-navigation__item">
+          <a href="#">MCA Reports</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
     <h1 class="govuk-heading-xl">DAA Reports</h1>
 
     <p class="govuk-body">
@@ -47,23 +60,23 @@
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">R07</th>
-          <td class="govuk-table__cell"><a href="#" class="govuk-link">Download Error Report for R07</a></td>
-          <td class="govuk-table__cell"><a href="#" class="govuk-link">Download MCA Report for R07</a></td>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">Error report (CSV)</a></td>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">MCA report (CSV)</a></td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">R06</th>
-          <td class="govuk-table__cell"><a href="#" class="govuk-link">Download Error Report for R06</a></td>
-          <td class="govuk-table__cell"><a href="#" class="govuk-link">Download MCA Report for R06</a></td>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">Error report (CSV)</a></td>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">MCA report (CSV)</a></td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">R05</th>
-          <td class="govuk-table__cell"><a href="#" class="govuk-link">Download Error Report for R05</a></td>
-          <td class="govuk-table__cell"><a href="#" class="govuk-link">Download MCA Report for R05</a></td>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">Error report (CSV)</a></td>
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">MCA report (CSV)</a></td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">R04</th>
-          <td class="govuk-table__cell"><span class="govuk-hint">No report available</span></td>
-          <td class="govuk-table__cell"><span class="govuk-hint">No report available</span></td>
+          <td class="govuk-table__cell"><span class="govuk-hint">Not available</span></td>
+          <td class="govuk-table__cell"><span class="govuk-hint">Not available</span></td>
         </tr>
       </tbody>
     </table>
