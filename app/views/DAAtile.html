@@ -1,109 +1,93 @@
-{% extends "layouts/main.html" %}
+{% extends "layoutsld.html" %}
 
-{% block pageTitle %}Data Collections Operations – GOV.UK{% endblock %}
+{% block pageTitle %}
+Submit learner data
+{% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <h1 class="govuk-heading-l">Make a submission</h1>
-    
-    <div class="govuk-grid-row">
-      
-      <div class="govuk-grid-column-one-third" style="margin-bottom: 25px;">
-        <div style="background-color: #1d70b8; padding: 15px; min-height: 100px;">
-          <h2 class="govuk-heading-s" style="color: #ffffff; margin: 0;">FE Workforce</h2>
-          <p class="govuk-body-s" style="color: #ffffff; margin: 5px 0 0 0;">Staff and vacancy data collections</p>
-        </div>
-        <div style="background-color: #00703c; padding: 10px 15px;">
-          <strong style="color: #ffffff; font-size: 16px; font-family: sans-serif;">22/23 Open</strong>
-        </div>
-      </div>
 
-      <div class="govuk-grid-column-one-third" style="margin-bottom: 25px;">
-        <div style="background-color: #1d70b8; padding: 15px; min-height: 100px;">
-          <h2 class="govuk-heading-s" style="color: #ffffff; margin: 0;">FE Workforce</h2>
-          <p class="govuk-body-s" style="color: #ffffff; margin: 5px 0 0 0;">Governor data collection</p>
-        </div>
-        <div style="background-color: #00703c; padding: 10px 15px;">
-          <strong style="color: #ffffff; font-size: 16px; font-family: sans-serif;">22/23 Open</strong>
-        </div>
-      </div>
+<body class="govuk-template__body js-enabled">
 
-      <div class="govuk-grid-column-one-third" style="margin-bottom: 25px;">
-        <div style="background-color: #1d70b8; padding: 15px; min-height: 100px;">
-          <h2 class="govuk-heading-s" style="color: #ffffff; margin: 0;">HECOS</h2>
-          <p class="govuk-body-s" style="color: #ffffff; margin: 5px 0 0 0;">Higher Education Classification of Subjects</p>
-        </div>
-        <div style="background-color: #00703c; padding: 10px 15px;">
-          <strong style="color: #ffffff; font-size: 16px; font-family: sans-serif;">23/24 Open</strong>
-        </div>
-      </div>
+    <main class="govuk-main-wrapper" id="content" role="main">
+        <div class="govuk-grid-row flex">
+            
+            <div class="govuk-grid-column-three-quarters">
 
-    </div>
+                <h1 id="makeSubmission" class="govuk-heading-l">
+                    Make a submission
+                </h1>
 
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-third" style="margin-bottom: 25px;">
-        <div style="background-color: #1d70b8; padding: 15px; min-height: 100px;">
-          <h2 class="govuk-heading-s" style="color: #ffffff; margin: 0;">Funding Claims</h2>
-          <p class="govuk-body-s" style="color: #ffffff; margin: 5px 0 0 0;">Submit Funding Claims</p>
-        </div>
-        <div style="background-color: #00703c; padding: 10px 15px;">
-          <strong style="color: #ffffff; font-size: 16px; font-family: sans-serif;">Open</strong>
-        </div>
-      </div>
+                <a class="govuk-link" href="/FEWCollectionOverview"> 
+                    <img src="/public/images/FEWOpen.PNG" width="180" height="120" alt="FE Workforce">
+                </a> 
+                <a class="govuk-link" href="/FEWGStart"> 
+                    <img src="/public/images/FEWG.PNG" width="180" height="120" alt="FE Workforce Governor">
+                </a> 
+                <a class="govuk-link" href="/HecosExport"> 
+                    <img src="/public/images/HECOSTile.png" width="180" height="115" alt="HECOS">
+                </a> 
+                <a class="govuk-link" href="/fundingclaimsubmissions"> 
+                    <img src="/public/images/fundingclaims.jpg" width="180" height="120" alt="Funding Claims">
+                </a>
 
-      <div class="govuk-grid-column-one-third" style="margin-bottom: 25px;">
-        <div style="background-color: #1d70b8; padding: 15px; min-height: 100px;">
-          <h2 class="govuk-heading-s" style="color: #ffffff; margin: 0;">DA Allocations</h2>
-          <p class="govuk-body-s" style="color: #ffffff; margin: 5px 0 0 0;">Devolved Authority Allocations</p>
-        </div>
-        <div style="background-color: #00703c; padding: 10px 15px;">
-          <strong style="color: #ffffff; font-size: 16px; font-family: sans-serif;">R01 Open</strong>
-        </div>
-      </div>
-    </div>
+                <a class="govuk-link" href="/DAAStart" style="text-decoration: none; display: inline-block; vertical-align: top;">
+                    <div style="width: 180px; height: 120px; background-color: #1d70b8; color: white; position: relative; font-family: 'GDS Transport', arial, sans-serif;">
+                        <div style="padding: 10px 10px 0 10px;">
+                            <div style="font-weight: bold; font-size: 19px; line-height: 1.2;">DA Allocations</div>
+                            <div style="font-size: 14px; margin-top: 5px; line-height: 1.2;">Devolved Authority Allocations</div>
+                        </div>
+                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 28px; background-color: #00703c; padding: 4px 10px; box-sizing: border-box;">
+                            <span style="font-weight: bold; font-size: 16px;">R01 Open</span>
+                        </div>
+                    </div>
+                </a>
 
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+                <h1 class="govuk-heading-l govuk-!-margin-top-6">Reports and data</h1>
 
-    <h2 class="govuk-heading-l">Reports and data</h2>
-    
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-third" style="margin-bottom: 25px;">
-        <div style="border: 1px solid #b1b4b6;">
-          <div style="padding: 15px; min-height: 90px;">
-            <a href="#" class="govuk-link govuk-heading-s" style="display: block; margin-bottom: 0;">Reports</a>
-          </div>
-          <div style="padding: 10px 15px; border-top: 1px solid #b1b4b6; background-color: #ffffff;">
-            <a href="#" class="govuk-link" style="font-size: 16px;">View reports</a>
-          </div>
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                        <a class="govuk-link" href="/ReportsMenu"> 
+                            <img src="/public/images/reports.png" width="180" height="120" alt="Reports">
+                        </a>
+
+                        <a class="govuk-link" href="/DAAHistory" style="text-decoration: none; display: inline-block; vertical-align: top;">
+                            <div style="width: 180px; height: 120px; border: 1px solid #b1b4b6; padding: 10px; box-sizing: border-box; font-family: 'GDS Transport', arial, sans-serif; color: #1d70b8;">
+                                <div style="font-weight: bold; font-size: 16px;">DA Allocations</div>
+                                <div style="font-size: 13px; color: #0b0c0c; margin-bottom: 15px;">Devolved Authority Allocations</div>
+                                <div style="font-size: 14px; text-decoration: underline;">View submissions</div>
+                            </div>
+                        </a>
+
+                        <a class="govuk-link" href="/FEWSubmissionHistory"> 
+                            <img src="/public/images/FEWClosed.PNG" width="180" height="120" alt="FE Workforce History">
+                        </a> 
+                        <a class="govuk-link" href="/powerbidashboards"> 
+                            <img src="/public/images/dashboards.jpg" width="180" height="120" alt="Dashboards">
+                        </a> 
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="govuk-grid-column-one-quarter">
+                <aside class="app-related-items" role="complementary">
+                    <h2 class="govuk-heading-m" id="subsection-title-help">Help and support</h2>
+                    <p class="govuk-!-font-size-16">
+                        Find further information at the <a href="#">Customer Help Centre</a>.
+                    </p>
+
+                    <h2 class="govuk-heading-m">Tools and services</h2>
+                    <ul class="govuk-list govuk-!-font-size-16">
+                        <li><a href="#">FIS (Funding Information Service)</a></li>
+                        <li><a href="#">Find a Learning Aim</a></li>
+                        <li><a href="#">ILR Learner entry tool</a></li>
+                        <li><a href="#">ILR FileMerge</a></li>
+                        <li><a href="#">FE staff data desktop application</a></li>
+                    </ul>
+                </aside>
+            </div>
         </div>
-      </div>
+    </main>
+</body>
 
-      <div class="govuk-grid-column-one-third" style="margin-bottom: 25px;">
-        <div style="border: 1px solid #b1b4b6;">
-          <div style="padding: 15px; min-height: 90px;">
-            <a href="#" class="govuk-link govuk-heading-s" style="display: block; margin-bottom: 5px;">FE Workforce</a>
-            <p class="govuk-body-s" style="margin: 0; color: #505a5f;">Staff and vacancy data collections</p>
-          </div>
-          <div style="padding: 10px 15px; border-top: 1px solid #b1b4b6; background-color: #ffffff;">
-            <a href="#" class="govuk-link" style="font-size: 16px;">View submissions</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="govuk-grid-column-one-third" style="margin-bottom: 25px;">
-        <div style="border: 1px solid #b1b4b6;">
-          <div style="padding: 15px; min-height: 90px;">
-            <a href="#" class="govuk-link govuk-heading-s" style="display: block; margin-bottom: 5px;">FE Workforce</a>
-            <p class="govuk-body-s" style="margin: 0; color: #505a5f;">Governor data collection</p>
-          </div>
-          <div style="padding: 10px 15px; border-top: 1px solid #b1b4b6; background-color: #ffffff;">
-            <a href="#" class="govuk-link" style="font-size: 16px;">View submissions</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
 {% endblock %}
