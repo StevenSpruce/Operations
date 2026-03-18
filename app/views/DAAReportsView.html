@@ -1,7 +1,13 @@
 {% extends "layouts/main.html" %}
 
-{# This block ensures the blue header banner shows the correct service name #}
-{% set serviceName = "Submit learner data" %}
+{# Force the header to show "Submit learner data" #}
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Submit learner data",
+    serviceUrl: "/"
+  }) }}
+{% endblock %}
 
 {% block pageTitle %}
   DAA Reports – Submit learner data – GOV.UK
@@ -91,6 +97,5 @@
       </tbody>
     </table>
   </div>
-
 </div>
 {% endblock %}
