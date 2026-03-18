@@ -1,18 +1,16 @@
 {% extends "layouts/main.html" %}
 
+{# Force the header to show "Submit learner data" #}
 {% block header %}
   {{ govukHeader({
-    containerClasses: "govuk-width-container",
-    navigationClasses: "govuk-header__navigation--end",
-    productName: "Submit learner data",
-    homepageUrl: "https://www.gov.uk",
+    homepageUrl: "/",
     serviceName: "Submit learner data",
-    serviceUrl: "#"
+    serviceUrl: "/"
   }) }}
 {% endblock %}
 
 {% block pageTitle %}
-  MCA Total Allocations Reports – Submit learner data – GOV.UK
+  DAA Reports – Submit learner data – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
