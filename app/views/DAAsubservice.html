@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: "GDS Transport", Arial, sans-serif;
+            color: #0b0c0c;
+            line-height: 1.5;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            text-decoration: underline;
+            font-size: 16px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        .table-container {
+            border-top: 1px solid #b1b4b6;
+            margin-bottom: 40px;
+        }
+
+        .header-row {
+            display: flex;
+            font-weight: bold;
+            padding: 10px 0;
+            border-bottom: 2px solid #0b0c0c;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #b1b4b6;
+        }
+
+        .col-select { width: 60px; text-align: center; }
+        .col-service { flex-grow: 1; font-weight: bold; font-size: 18px; }
+
+        .highlight {
+            background-color: #fff200;
+            padding: 2px 5px;
+        }
+
+        input[type="checkbox"] {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .warning-box {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .warning-icon {
+            background: #000;
+            color: #fff;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-continue {
+            background-color: #00703c;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 19px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 0 #002d18;
+        }
+
+        .btn-cancel {
+            background-color: #f3f2f1;
+            color: #0b0c0c;
+            border: 1px solid #b1b4b6;
+            padding: 10px 25px;
+            font-size: 19px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="back-link">&lt; Back</div>
+
+    <h1>Select a sub-service for: Submit Learner Data</h1>
+    
+    <p>Select a minimum of 1 role. Some services ask you to select a sub-service, role, or form to better define how you will use them.</p>
+
+    <div class="table-container">
+        <div class="header-row">
+            <div class="col-select">Select</div>
+            <div class="col-service">Sub-service</div>
+        </div>
+
+        <div class="row">
+            <div class="col-select"><input type="checkbox"></div>
+            <div class="col-service">Submit Learner Data - EDS</div>
+        </div>
+
+        <div class="row">
+            <div class="col-select"><input type="checkbox"></div>
+            <div class="col-service">Submit Learner Data - Enter Learning Data</div>
+        </div>
+
+        <div class="row">
+            <div class="col-select"><input type="checkbox" checked></div>
+            <div class="col-service">Submit Learner Data - FE Workforce</div>
+        </div>
+
+        <div class="row">
+            <div class="col-select"><input type="checkbox" checked></div>
+            <div class="col-service">Submit Learner Data - FE Workforce Governor</div>
+        </div>
+
+        <div class="row">
+            <div class="col-select"><input type="checkbox" checked></div>
+            <div class="col-service"><span class="highlight">Submit Learner Data - FE Teacher FTE</span></div>
+        </div>
+
+        <div class="row">
+            <div class="col-select"><input type="checkbox" checked></div>
+            <div class="col-service">Submit Learner Data - Standard Submissions</div>
+        </div>
+
+        <div class="row">
+            <div class="col-select"><input type="checkbox"></div>
+            <div class="col-service">Submit Learner Data - DA Allocations</div>
+        </div>
+    </div>
+
+    <div class="warning-box">
+        <div class="warning-icon">!</div>
+        <div>If you deselect a role that you currently have access to and this request is approved, you will lose access to that sub-service.</div>
+    </div>
+
+    <div class="button-group">
+        <button class="btn-continue">Continue</button>
+        <button class="btn-cancel">Cancel</button>
+    </div>
+
+</body>
+</html>
