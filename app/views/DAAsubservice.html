@@ -1,76 +1,75 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Select a sub-service for: Submit Learner Data – {{ serviceName }} – GOV.UK Prototype Kit
+  Select a sub-service for: Submit Learner Data
 {% endblock %}
 
 {% block beforeContent %}
-  {{ govukBackLink({
-    text: "Back",
-    href: "javascript:window.history.back()"
-  }) }}
+  <a href="#" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="/path-to-next-page" method="post" novalidate>
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
+        Select a sub-service for: Submit Learner Data
+      </h1>
+      
+      <p class="govuk-body govuk-!-margin-bottom-7">
+        Select a minimum of 1 role. Some services ask you to select a sub-service, role, or form to better define how you will use them.
+      </p>
 
-        {{ govukCheckboxes({
-          name: "subService",
-          fieldset: {
-            legend: {
-              text: "Select a sub-service for: Submit Learner Data",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--l"
-            }
-          },
-          hint: {
-            text: "Select a minimum of 1 role. Some services ask you to select a sub-service, role, or form to better define how you will use them."
-          },
-          items: [
-            {
-              value: "eds",
-              text: "Submit Learner Data - EDS"
-            },
-            {
-              value: "enter-learning-data",
-              text: "Submit Learner Data - Enter Learning Data"
-            },
-            {
-              value: "fe-workforce",
-              text: "Submit Learner Data - FE Workforce",
-              checked: true
-            },
-            {
-              value: "fe-workforce-governor",
-              text: "Submit Learner Data - FE Workforce Governor",
-              checked: true
-            },
-            {
-              value: "standard-submissions",
-              text: "Submit Learner Data - Standard Submissions",
-              checked: true
-            }
-          ]
-        }) }}
+      <form action="#" method="post">
+        
+        <div class="govuk-grid-row govuk-!-font-weight-bold govuk-!-padding-bottom-2" style="border-bottom: 2px solid #b1b4b6;">
+          <div class="govuk-grid-column-one-quarter" style="width: 10%;">
+            Select
+          </div>
+          <div class="govuk-grid-column-three-quarters">
+            Sub-service
+          </div>
+        </div>
 
-        {{ govukWarningText({
-          text: "If you deselect a role that you currently have access to and this request is approved, you will lose access to that sub-service.",
-          iconFallbackText: "Warning"
-        }) }}
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            
+            {% set services = [
+              { name: "Submit Learner Data - EDS", checked: false },
+              { name: "Submit Learner Data - Enter Learning Data", checked: false },
+              { name: "Submit Learner Data - FE Workforce", checked: true },
+              { name: "Submit Learner Data - FE Workforce Governor", checked: true },
+              { name: "Submit Learner Data - Standard Submissions", checked: true }
+            ] %}
+
+            {% for item in services %}
+            <div class="govuk-checkboxes__item" style="border-bottom: 1px solid #b1b4b6; padding: 10px 0;">
+              <input class="govuk-checkboxes__input" id="service-{{ loop.index }}" name="services" type="checkbox" value="{{ item.name }}" {{ "checked" if item.checked }}>
+              <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="service-{{ loop.index }}">
+                {{ item.name }}
+              </label>
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+
+        <div class="govuk-warning-text govuk-!-margin-top-8">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-visually-hidden">Warning</span>
+            If you deselect a role that you currently have access to and this request is approved, you will lose access to that sub-service.
+          </strong>
+        </div>
 
         <div class="govuk-button-group">
-          {{ govukButton({
-            text: "Continue"
-          }) }}
-
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
           <a class="govuk-link" href="#">Cancel</a>
         </div>
 
       </form>
-
     </div>
   </div>
 {% endblock %}
