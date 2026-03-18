@@ -1,16 +1,18 @@
 {% extends "layouts/main.html" %}
 
-{# This block forces the blue header banner to update #}
 {% block header %}
   {{ govukHeader({
-    homepageUrl: "/",
+    containerClasses: "govuk-width-container",
+    navigationClasses: "govuk-header__navigation--end",
+    productName: "Submit learner data",
+    homepageUrl: "https://www.gov.uk",
     serviceName: "Submit learner data",
-    serviceUrl: "/"
+    serviceUrl: "#"
   }) }}
 {% endblock %}
 
 {% block pageTitle %}
-  DAA Reports – Submit learner data – GOV.UK
+  MCA Total Allocations Reports – Submit learner data – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -85,6 +87,5 @@
       </tbody>
     </table>
   </div>
-
 </div>
 {% endblock %}
