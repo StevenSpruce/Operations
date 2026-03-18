@@ -9,67 +9,69 @@
 {% endblock %}
 
 {% block content %}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
-        Select a sub-service for: Submit Learner Data
-      </h1>
+    <h1 class="govuk-heading-l">Select a sub-service for: Submit Learner Data</h1>
+    <p class="govuk-body">Select a minimum of 1 role. Some services ask you to select a sub-service, role, or form to better define how you will use them.</p>
+
+    <form action="#" method="post">
       
-      <p class="govuk-body govuk-!-margin-bottom-7">
-        Select a minimum of 1 role. Some services ask you to select a sub-service, role, or form to better define how you will use them.
-      </p>
+      <table class="govuk-table govuk-!-margin-top-6">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" style="width: 40px; border-bottom: 2px solid #0b0c0c;">Select</th>
+            <th scope="col" class="govuk-table__header" style="border-bottom: 2px solid #0b0c0c;">Sub-service</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          
+          {# Array of services minus the highlighted one #}
+          {% set services = [
+            { id: "eds", name: "Submit Learner Data - EDS", checked: false },
+            { id: "enter", name: "Submit Learner Data - Enter Learning Data", checked: false },
+            { id: "workforce", name: "Submit Learner Data - FE Workforce", checked: true },
+            { id: "governor", name: "Submit Learner Data - FE Workforce Governor", checked: true },
+            { id: "standard", name: "Submit Learner Data - Standard Submissions", checked: true }
+          ] %}
 
-      <form action="#" method="post">
-        
-        <div class="govuk-grid-row govuk-!-font-weight-bold govuk-!-padding-bottom-2" style="border-bottom: 2px solid #b1b4b6;">
-          <div class="govuk-grid-column-one-quarter" style="width: 10%;">
-            Select
-          </div>
-          <div class="govuk-grid-column-three-quarters">
-            Sub-service
-          </div>
-        </div>
+          {% for item in services %}
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="{{ item.id }}" name="sub-services" type="checkbox" value="{{ item.id }}" {{ "checked" if item.checked }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="{{ item.id }}">
+                    <span class="govuk-visually-hidden">Select {{ item.name }}</span>
+                  </label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell govuk-!-font-weight-bold" style="vertical-align: middle; padding-top: 15px; padding-bottom: 15px;">
+              {{ item.name }}
+            </td>
+          </tr>
+          {% endfor %}
 
-        <div class="govuk-form-group">
-          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-            
-            {% set services = [
-              { name: "Submit Learner Data - EDS", checked: false },
-              { name: "Submit Learner Data - Enter Learning Data", checked: false },
-              { name: "Submit Learner Data - FE Workforce", checked: true },
-              { name: "Submit Learner Data - FE Workforce Governor", checked: true },
-              { name: "Submit Learner Data - Standard Submissions", checked: true }
-            ] %}
+        </tbody>
+      </table>
 
-            {% for item in services %}
-            <div class="govuk-checkboxes__item" style="border-bottom: 1px solid #b1b4b6; padding: 10px 0;">
-              <input class="govuk-checkboxes__input" id="service-{{ loop.index }}" name="services" type="checkbox" value="{{ item.name }}" {{ "checked" if item.checked }}>
-              <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="service-{{ loop.index }}">
-                {{ item.name }}
-              </label>
-            </div>
-            {% endfor %}
+      <div class="govuk-warning-text govuk-!-margin-top-8">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          If you deselect a role that you currently have access to and this request is approved, you will lose access to that sub-service.
+        </strong>
+      </div>
 
-          </div>
-        </div>
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="#">Cancel</a>
+      </div>
 
-        <div class="govuk-warning-text govuk-!-margin-top-8">
-          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-          <strong class="govuk-warning-text__text">
-            <span class="govuk-visually-hidden">Warning</span>
-            If you deselect a role that you currently have access to and this request is approved, you will lose access to that sub-service.
-          </strong>
-        </div>
-
-        <div class="govuk-button-group">
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-          <a class="govuk-link" href="#">Cancel</a>
-        </div>
-
-      </form>
-    </div>
+    </form>
   </div>
+</div>
 {% endblock %}
