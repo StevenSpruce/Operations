@@ -1,16 +1,8 @@
+{% set serviceName = "Submit learner data" %}
 {% extends "layouts/main.html" %}
 
-{# Force the header to show "Submit learner data" #}
-{% block header %}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: "Submit learner data",
-    serviceUrl: "/"
-  }) }}
-{% endblock %}
-
 {% block pageTitle %}
-  DAA Reports – Submit learner data – GOV.UK
+  MCA Total Allocations Reports – Submit learner data – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
