@@ -1,5 +1,14 @@
 {% extends "layouts/main.html" %}
 
+{# This block forces the blue header banner to update #}
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Submit learner data",
+    serviceUrl: "/"
+  }) }}
+{% endblock %}
+
 {% block pageTitle %}
   DAA Reports – Submit learner data – GOV.UK
 {% endblock %}
@@ -33,8 +42,8 @@
         <li class="moj-side-navigation__item">
           <a href="fm36-summary">Error Reports</a>
         </li>
-        <li class="moj-side-navigation__item">
-          <a href="#">MCA Total Allocations Reports</a>
+        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+          <a href="#" aria-current="location">MCA Total Allocations Reports</a>
         </li>
       </ul>
     </nav>
@@ -44,7 +53,7 @@
     <h1 class="govuk-heading-xl">MCA Total Allocations Reports</h1>
 
     <p class="govuk-body">
-      These reports give you an accumulated view of common providers 
+      These reports give you an accumulated view of common providers.
     </p>
 
     <h2 class="govuk-heading-l">Summary reports for year 2025 to 2026</h2>
