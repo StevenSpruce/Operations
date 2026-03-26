@@ -26,9 +26,11 @@
           <td class="govuk-table__cell">01 February 2026</td>
           <td class="govuk-table__cell">01 September 2026</td>
           <td class="govuk-table__cell">£1</td>
+          
           <td class="govuk-table__cell">
-            <a href="#" class="govuk-link govuk-link--no-visited-state">Edit</a>
+            <span style="color: #b1b4b6; text-decoration: underline; cursor: not-allowed;">Edit</span>
           </td>
+
           <td class="govuk-table__cell">
             <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
@@ -39,10 +41,11 @@
               </div>
             </div>
           </td>
+
           <td class="govuk-table__cell">
             <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="on-hold" name="on-hold" type="checkbox" value="hold">
+              <div class="govuk-checkboxes__item" style="opacity: 0.5;">
+                <input class="govuk-checkboxes__input" id="on-hold" name="on-hold" type="checkbox" value="hold" disabled style="cursor: not-allowed;">
                 <label class="govuk-label govuk-checkboxes__label" for="on-hold">
                   <span class="govuk-visually-hidden">On hold</span>
                 </label>
@@ -53,9 +56,9 @@
       </tbody>
     </table>
 
-    {{ govukButton({
-      text: "Confirm"
-    }) }}
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Confirm
+    </button>
 
     <nav class="govuk-pagination" role="navigation" aria-label="results">
       <div class="govuk-pagination__prev">
@@ -67,9 +70,7 @@
       </div>
       <ul class="govuk-pagination__list">
         <li class="govuk-pagination__item govuk-pagination__item--current">
-          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
-            1
-          </a>
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">1</a>
         </li>
       </ul>
       <div class="govuk-pagination__next">
