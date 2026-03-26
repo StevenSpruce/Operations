@@ -16,6 +16,7 @@
           <th scope="col" class="govuk-table__header">Action</th>
           <th scope="col" class="govuk-table__header">Allocation Ended</th>
           <th scope="col" class="govuk-table__header">On hold</th>
+          <th scope="col" class="govuk-table__header">No change</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
@@ -52,6 +53,18 @@
               </div>
             </div>
           </td>
+
+          <td class="govuk-table__cell">
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="no-change" name="no-change" type="checkbox" value="no-change">
+                <label class="govuk-label govuk-checkboxes__label" for="no-change">
+                  <span class="govuk-visually-hidden">No change</span>
+                </label>
+              </div>
+            </div>
+          </td>
+
         </tr>
       </tbody>
     </table>
