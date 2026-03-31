@@ -9,13 +9,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      {# 1. Error Summary #}
+      {# 1. Error Summary at the top #}
       {{ govukErrorSummary({
         titleText: "There is a problem",
         errorList: [
           {
             text: "You must complete all staff members before closing the collection",
-            href: "#completion-error-message"
+            href: "#staff-members-error"
           }
         ]
       }) }}
@@ -24,74 +24,75 @@
 
       <h1 class="govuk-heading-l">Staff list</h1>
 
-      {# 2. Wrap the section in a form-group--error div to get the red vertical line #}
+      <h2 class="govuk-heading-m">Staff data completion details</h2>
+
+      {# 2. Completion Table (Now without error styling) #}
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Completed by</th>
+            <th scope="col" class="govuk-table__header">Time and date</th>
+            <th scope="col" class="govuk-table__header"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Not complete</td>
+            <td class="govuk-table__cell">Not complete</td>
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="#">Complete collection</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      {# 3. Wrap Staff Members in the Error Gutter #}
       <div class="govuk-form-group govuk-form-group--error">
         
-        <h2 class="govuk-heading-m">Staff data completion details</h2>
+        <h2 class="govuk-heading-m" id="staff-members-section">Staff members</h2>
 
         {# The red error text #}
         {{ govukErrorMessage({
           text: "You must complete all staff members before closing the collection",
-          id: "completion-error-message"
+          id: "staff-members-error"
         }) }}
 
-        {# The table inside the red line area #}
-        <table class="govuk-table">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Completed by</th>
-              <th scope="col" class="govuk-table__header">Time and date</th>
-              <th scope="col" class="govuk-table__header"></th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Not complete</td>
-              <td class="govuk-table__cell">Not complete</td>
-              <td class="govuk-table__cell">
-                <a class="govuk-link" href="#">Complete collection</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        {# Tabs section inside the red line #}
+        <div class="govuk-tabs" data-module="govuk-tabs">
+          <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#completed">Completed staff members</a>
+            </li>
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+              <a class="govuk-tabs__tab" href="#incomplete">Incomplete staff members</a>
+            </li>
+          </ul>
 
-      <h2 class="govuk-heading-m govuk-!-margin-top-9">Staff members</h2>
-
-      {# Tabs section #}
-      <div class="govuk-tabs" data-module="govuk-tabs">
-        <ul class="govuk-tabs__list">
-          <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#completed">Completed staff members</a>
-          </li>
-          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-            <a class="govuk-tabs__tab" href="#incomplete">Incomplete staff members</a>
-          </li>
-        </ul>
-
-        <div class="govuk-tabs__panel" id="incomplete">
-          <p class="govuk-body">There is 1 incomplete staff member recorded</p>
-          <table class="govuk-table">
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Name</th>
-                <th scope="col" class="govuk-table__header">Date of birth</th>
-                <th scope="col" class="govuk-table__header"></th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">peter test</td>
-                <td class="govuk-table__cell">09 October 1990</td>
-                <td class="govuk-table__cell">
-                  <a class="govuk-link" href="#">Change</a> 
-                  <a class="govuk-link govuk-!-margin-left-2" href="#">Delete</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="govuk-tabs__panel" id="incomplete">
+            <p class="govuk-body">There is 1 incomplete staff member recorded</p>
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Name</th>
+                  <th scope="col" class="govuk-table__header">Date of birth</th>
+                  <th scope="col" class="govuk-table__header"></th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">peter test</td>
+                  <td class="govuk-table__cell">09 October 1990</td>
+                  <td class="govuk-table__cell">
+                    <a class="govuk-link" href="#">Change</a> 
+                    <a class="govuk-link govuk-!-margin-left-2" href="#">Delete</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
+
+      </div> {# End of error wrapper #}
 
       {{ govukButton({
         text: "Add another staff member",
