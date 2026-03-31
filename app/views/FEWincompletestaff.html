@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Error: Allocation details – {{ serviceName }} – GOV.UK
+  Error: Staff list – {{ serviceName }} – GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -9,61 +9,89 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      {# 1. Error Summary Component #}
+      {# 1. Error Summary at the top of the page #}
       {{ govukErrorSummary({
         titleText: "There is a problem",
         errorList: [
           {
-            text: "Enter a Provider UKPRN",
-            href: "#provider-ukprn"
-          },
-          {
-            text: "Please select an option",
-            href: "#option-1"
-          },
-          {
-            text: "Please select an option",
-            href: "#option-2"
-          },
-          {
-            text: "Enter a start date",
-            href: "#start-date"
-          },
-          {
-            text: "Enter an end date",
-            href: "#end-date"
-          },
-          {
-            text: "Enter an allocation value",
-            href: "#allocation-value"
+            text: "You must complete all staff members before closing the collection",
+            href: "#completion-error"
           }
         ]
       }) }}
 
-      <h1 class="govuk-heading-l">Allocation details</h1>
+      <p><a href="/dashboard" class="govuk-back-link">Return to dashboard</a></p>
 
-      {# 2. Input with Error Message #}
-      {{ govukInput({
-        label: {
-          text: "What is the UKPRN of the provider that will be delivering this provision?",
-          classes: "govuk-label--m",
-          isPageHeading: false
-        },
-        hint: {
-          text: "Provider UKPRN"
-        },
-        id: "provider-ukprn",
-        name: "providerUkprn",
-        errorMessage: {
-          text: "Enter a Provider UKPRN"
-        },
-        classes: "govuk-input--width-10"
+      <h1 class="govuk-heading-l">Staff list</h1>
+
+      <h2 class="govuk-heading-m">Staff data completion details</h2>
+
+      {# 2. The Inline Error Message #}
+      {{ govukErrorMessage({
+        text: "You must complete all staff members before closing the collection",
+        id: "completion-error"
       }) }}
 
-      {# Add the rest of your form fields here using the same pattern #}
+      {# 3. Completion Table #}
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Completed by</th>
+            <th scope="col" class="govuk-table__header">Time and date</th>
+            <th scope="col" class="govuk-table__header"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Not complete</td>
+            <td class="govuk-table__cell">Not complete</td>
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="#">Complete collection</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="govuk-heading-m">Staff members</h2>
+
+      {# 4. Tabs for staff list #}
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#completed">Completed staff members</a>
+          </li>
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#incomplete">Incomplete staff members</a>
+          </li>
+        </ul>
+
+        <div class="govuk-tabs__panel" id="incomplete">
+          <p class="govuk-body">There is 1 incomplete staff member recorded</p>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Name</th>
+                <th scope="col" class="govuk-table__header">Date of birth</th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">peter test</td>
+                <td class="govuk-table__cell">09 October 1990</td>
+                <td class="govuk-table__cell">
+                  <a class="govuk-link" href="#">Change</a> 
+                  <a class="govuk-link govuk-!-margin-left-2" href="#">Delete</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
       {{ govukButton({
-        text: "Continue"
+        text: "Add another staff member",
+        classes: "govuk-button--secondary"
       }) }}
 
     </div>
