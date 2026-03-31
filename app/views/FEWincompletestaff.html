@@ -9,13 +9,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      {# 1. Error Summary at the top of the page #}
+      {# 1. Error Summary #}
       {{ govukErrorSummary({
         titleText: "There is a problem",
         errorList: [
           {
             text: "You must complete all staff members before closing the collection",
-            href: "#completion-error"
+            href: "#completion-error-message"
           }
         ]
       }) }}
@@ -24,37 +24,41 @@
 
       <h1 class="govuk-heading-l">Staff list</h1>
 
-      <h2 class="govuk-heading-m">Staff data completion details</h2>
+      {# 2. Wrap the section in a form-group--error div to get the red vertical line #}
+      <div class="govuk-form-group govuk-form-group--error">
+        
+        <h2 class="govuk-heading-m">Staff data completion details</h2>
 
-      {# 2. The Inline Error Message #}
-      {{ govukErrorMessage({
-        text: "You must complete all staff members before closing the collection",
-        id: "completion-error"
-      }) }}
+        {# The red error text #}
+        {{ govukErrorMessage({
+          text: "You must complete all staff members before closing the collection",
+          id: "completion-error-message"
+        }) }}
 
-      {# 3. Completion Table #}
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Completed by</th>
-            <th scope="col" class="govuk-table__header">Time and date</th>
-            <th scope="col" class="govuk-table__header"></th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Not complete</td>
-            <td class="govuk-table__cell">Not complete</td>
-            <td class="govuk-table__cell">
-              <a class="govuk-link" href="#">Complete collection</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+        {# The table inside the red line area #}
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Completed by</th>
+              <th scope="col" class="govuk-table__header">Time and date</th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Not complete</td>
+              <td class="govuk-table__cell">Not complete</td>
+              <td class="govuk-table__cell">
+                <a class="govuk-link" href="#">Complete collection</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-      <h2 class="govuk-heading-m">Staff members</h2>
+      <h2 class="govuk-heading-m govuk-!-margin-top-9">Staff members</h2>
 
-      {# 4. Tabs for staff list #}
+      {# Tabs section #}
       <div class="govuk-tabs" data-module="govuk-tabs">
         <ul class="govuk-tabs__list">
           <li class="govuk-tabs__list-item">
