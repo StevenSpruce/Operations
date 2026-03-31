@@ -1,0 +1,109 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Error: Staff list – {{ serviceName }} – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {# 1. Error Summary Component #}
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "You must complete or remove incomplete staff members before closing this collection.",
+            href: "#incomplete-staff-tab"
+          }
+        ]
+      }) }}
+
+      <p><a href="/dashboard" class="govuk-back-link">Return to dashboard</a></p>
+
+      <h1 class="govuk-heading-l">Staff list</h1>
+
+      <h2 class="govuk-heading-m">Staff data completion details</h2>
+
+      {# 2. Completion Table #}
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Completed by</th>
+            <th scope="col" class="govuk-table__header">Time and date</th>
+            <th scope="col" class="govuk-table__header"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Not complete</td>
+            <td class="govuk-table__cell">Not complete</td>
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="#">Complete collection</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="govuk-heading-m">Staff members</h2>
+
+      {# 3. Tabs Component #}
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#completed">
+              Completed staff members
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#incomplete" id="incomplete-staff-tab">
+              Incomplete staff members
+            </a>
+          </li>
+        </ul>
+
+        {# Incomplete Tab Content #}
+        <div class="govuk-tabs__panel" id="incomplete">
+          <p class="govuk-body">There is 1 incomplete staff member recorded</p>
+          
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Name</th>
+                <th scope="col" class="govuk-table__header">Date of birth</th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">peter test</td>
+                <td class="govuk-table__cell">09 October 1990</td>
+                <td class="govuk-table__cell">
+                  <a class="govuk-link" href="#">Change</a> 
+                  <a class="govuk-link govuk-!-margin-left-2" href="#">Delete</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        {# Placeholder for Completed Tab #}
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="completed">
+           <p class="govuk-body">No completed staff members.</p>
+        </div>
+      </div>
+
+      {# 4. Add Button #}
+      {{ govukButton({
+        text: "Add another staff member",
+        classes: "govuk-button--secondary"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}
