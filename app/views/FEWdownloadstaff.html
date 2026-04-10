@@ -1,213 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff list - Submit learner data</title>
-    <style>
-        body {
-            font-family: "GDS Transport", arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #0b0c0c;
-            background-color: #ffffff;
-            -webkit-font-smoothing: antialiased;
-        }
+{% extends "layouts/main.html" %}
 
-        /* Top Blue Header */
-        .govuk-header {
-            background-color: #1d70b8;
-            padding: 10px 30px;
-            color: white;
-            display: flex;
-            align-items: center;
-            height: 40px;
-        }
-        
-        .govuk-logo {
-            font-size: 24px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: white;
-        }
+{% set pageName = "Staff list" %}
 
-        /* Service Name Area */
-        .service-container {
-            padding: 15px 30px;
-        }
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
 
-        .service-name {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
-        /* Phase Banner Line */
-        .phase-banner {
-            border-bottom: 1px solid #b1b4b6;
-            padding-bottom: 10px;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-        }
+      <span class="govuk-caption-l">Academic year: 1 August 2024 to 31 July 2025</span>
+      <h1 class="govuk-heading-l">Staff list</h1>
 
-        .phase-tag {
-            background: #1d70b8;
-            color: #ffffff;
-            padding: 2px 5px;
-            font-weight: bold;
-            font-size: 14px;
-            margin-right: 8px;
-        }
+      <h2 class="govuk-heading-m">Download all staff</h2>
+      <p class="govuk-body">
+        <a href="#" class="govuk-link">Download all staff records (CSV)</a>
+      </p>
 
-        /* User Identity Line */
-        .user-identity {
-            text-align: right;
-            padding: 15px 30px 5px 30px;
-            font-size: 16px;
-        }
-        
-        .user-identity a {
-            color: #1d70b8;
-            text-decoration: underline;
-            margin-left: 10px;
-        }
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Date of birth</th>
+            <th scope="col" class="govuk-table__header">Status</th>
+            <th scope="col" class="govuk-table__header"><span class="govuk-visually-hidden">Actions</span></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">niamh gall</td>
+            <td class="govuk-table__cell">12 March 1967</td>
+            <td class="govuk-table__cell">Complete</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">
+              <a href="#" class="govuk-link">View</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">test test</td>
+            <td class="govuk-table__cell">31 March 1967</td>
+            <td class="govuk-table__cell">Complete</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">
+              <a href="#" class="govuk-link">View</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-        /* Content Body */
-        .main-content {
-            padding: 0 30px;
-            max-width: 960px;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin: 10px 0 35px 0;
-            font-size: 16px;
-            color: #0b0c0c;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        .academic-year {
-            color: #6f777b; /* The specific grey from your screenshot */
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin: 0 0 30px 0;
-        }
-
-        /* New Download Section */
-        .download-all {
-            margin-bottom: 30px;
-        }
-
-        .download-all h2 {
-            font-size: 24px;
-            font-weight: 700;
-            margin: 0 0 5px 0;
-        }
-
-        .download-all a {
-            font-size: 16px;
-            font-weight: bold;
-            color: #1d70b8;
-            text-decoration: underline;
-        }
-
-        /* Staff Table */
-        .staff-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-
-        .staff-table th {
-            text-align: left;
-            border-bottom: 1px solid #0b0c0c;
-            padding: 10px 0;
-            font-size: 19px;
-            font-weight: 700;
-        }
-
-        .staff-table td {
-            padding: 12px 0;
-            border-bottom: 1px solid #b1b4b6;
-            font-size: 19px;
-        }
-
-        .view-link {
-            text-align: right;
-        }
-
-        .view-link a {
-            color: #1d70b8;
-            text-decoration: underline;
-        }
-
-    </style>
-</head>
-<body>
-
-    <header class="govuk-header">
-        <div class="govuk-logo">
-            GOV.UK
-        </div>
-    </header>
-
-    <div class="service-container">
-        <div class="service-name">Submit learner data</div>
-        <div class="phase-banner">
-            <span class="phase-tag">LIVE</span> 
-            Your <a href="#" style="color:#1d70b8;">feedback (opens in new tab)</a> will help us improve the service.
-        </div>
     </div>
-
-    <div class="user-identity">
-        Niamh Gallagher UKPRN:10007511 <a href="#">Sign out</a>
-    </div>
-
-    <main class="main-content">
-        <div class="back-link"> &lt; <u>Back</u></div>
-
-        <div class="academic-year">Academic year: 1 August 2024 to 31 July 2025</div>
-        <h1>Staff list</h1>
-
-        <section class="download-all">
-            <h2>Download all staff</h2>
-            <a href="#">Download all staff records (CSV)</a>
-        </section>
-
-        <table class="staff-table">
-            <thead>
-                <tr>
-                    <th style="width: 35%;">Name</th>
-                    <th style="width: 30%;">Date of birth</th>
-                    <th style="width: 25%;">Status</th>
-                    <th style="width: 10%;"></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>niamh gall</td>
-                    <td>12 March 1967</td>
-                    <td>Complete</td>
-                    <td class="view-link"><a href="#">View</a></td>
-                </tr>
-                <tr>
-                    <td>test test</td>
-                    <td>31 March 1967</td>
-                    <td>Complete</td>
-                    <td class="view-link"><a href="#">View</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
-
-</body>
-</html>
+  </div>
+{% endblock %}
