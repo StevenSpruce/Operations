@@ -11,158 +11,184 @@
             padding: 0;
             color: #0b0c0c;
             background-color: #ffffff;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Top Blue Bar */
+        /* Top Blue Header */
         .govuk-header {
             background-color: #1d70b8;
             padding: 10px 30px;
             color: white;
-            font-weight: bold;
-            font-size: 30px;
             display: flex;
             align-items: center;
+            height: 40px;
         }
-
-        /* Service Name Section */
-        .service-header {
-            padding: 25px 30px 15px 30px;
-        }
-
-        .service-title {
+        
+        .govuk-logo {
             font-size: 24px;
             font-weight: bold;
-            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
         }
 
-        /* Phase Banner */
+        /* Service Name Area */
+        .service-container {
+            padding: 15px 30px;
+        }
+
+        .service-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        /* Phase Banner Line */
         .phase-banner {
-            padding: 10px 0;
-            border-top: 1px solid #b1b4b6;
+            border-bottom: 1px solid #b1b4b6;
+            padding-bottom: 10px;
             font-size: 16px;
+            display: flex;
+            align-items: center;
         }
 
         .phase-tag {
             background: #1d70b8;
             color: #ffffff;
-            padding: 2px 8px;
+            padding: 2px 5px;
             font-weight: bold;
-            margin-right: 10px;
             font-size: 14px;
+            margin-right: 8px;
         }
 
-        /* User Info Bar */
-        .user-info {
+        /* User Identity Line */
+        .user-identity {
             text-align: right;
-            padding: 10px 30px;
-            font-size: 19px;
+            padding: 15px 30px 5px 30px;
+            font-size: 16px;
         }
-
-        .user-info a {
+        
+        .user-identity a {
             color: #1d70b8;
             text-decoration: underline;
+            margin-left: 10px;
         }
 
-        /* Main Layout */
+        /* Content Body */
         .main-content {
-            padding: 0 30px 50px 30px;
+            padding: 0 30px;
             max-width: 960px;
         }
 
         .back-link {
             display: inline-block;
-            margin: 20px 0;
-            font-size: 19px;
+            margin: 10px 0 35px 0;
+            font-size: 16px;
             color: #0b0c0c;
             text-decoration: underline;
+            cursor: pointer;
         }
 
         .academic-year {
-            color: #505a5f;
-            font-size: 19px;
+            color: #6f777b; /* The specific grey from your screenshot */
+            font-size: 24px;
             margin-bottom: 10px;
         }
 
         h1 {
             font-size: 48px;
+            font-weight: 700;
+            margin: 0 0 30px 0;
+        }
+
+        /* New Download Section */
+        .download-all {
+            margin-bottom: 30px;
+        }
+
+        .download-all h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 0 5px 0;
+        }
+
+        .download-all a {
+            font-size: 16px;
             font-weight: bold;
-            margin: 0 0 40px 0;
+            color: #1d70b8;
+            text-decoration: underline;
         }
 
-        /* Download Section Styling */
-        .download-container {
-            margin-bottom: 35px;
-        }
-
-        .download-container h2 {
-            font-size: 27px;
-            margin: 0 0 10px 0;
-        }
-
-        /* Table Styling */
-        table {
+        /* Staff Table */
+        .staff-table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 10px;
         }
 
-        th {
+        .staff-table th {
             text-align: left;
-            border-bottom: 2px solid #0b0c0c;
+            border-bottom: 1px solid #0b0c0c;
             padding: 10px 0;
             font-size: 19px;
+            font-weight: 700;
         }
 
-        td {
-            padding: 15px 0;
+        .staff-table td {
+            padding: 12px 0;
             border-bottom: 1px solid #b1b4b6;
             font-size: 19px;
-            vertical-align: top;
         }
 
-        .link-column {
+        .view-link {
             text-align: right;
         }
 
-        a {
+        .view-link a {
             color: #1d70b8;
+            text-decoration: underline;
         }
+
     </style>
 </head>
 <body>
 
     <header class="govuk-header">
-        GOV.UK
+        <div class="govuk-logo">
+            GOV.UK
+        </div>
     </header>
 
-    <div class="service-header">
-        <div class="service-title">Submit learner data</div>
+    <div class="service-container">
+        <div class="service-name">Submit learner data</div>
         <div class="phase-banner">
             <span class="phase-tag">LIVE</span> 
-            Your <a href="#">feedback (opens in new tab)</a> will help us improve the service.
+            Your <a href="#" style="color:#1d70b8;">feedback (opens in new tab)</a> will help us improve the service.
         </div>
     </div>
 
-    <div class="user-info">
+    <div class="user-identity">
         Niamh Gallagher UKPRN:10007511 <a href="#">Sign out</a>
     </div>
 
     <main class="main-content">
-        <a href="#" class="back-link">&lt; Back</a>
+        <div class="back-link"> &lt; <u>Back</u></div>
 
         <div class="academic-year">Academic year: 1 August 2024 to 31 July 2025</div>
         <h1>Staff list</h1>
 
-        <div class="download-container">
+        <section class="download-all">
             <h2>Download all staff</h2>
-            <a href="#" style="font-weight: bold; font-size: 16px;">Download all staff records (CSV)</a>
-        </div>
+            <a href="#">Download all staff records (CSV)</a>
+        </section>
 
-        <table>
+        <table class="staff-table">
             <thead>
                 <tr>
-                    <th style="width: 40%;">Name</th>
+                    <th style="width: 35%;">Name</th>
                     <th style="width: 30%;">Date of birth</th>
-                    <th style="width: 20%;">Status</th>
+                    <th style="width: 25%;">Status</th>
                     <th style="width: 10%;"></th>
                 </tr>
             </thead>
@@ -171,13 +197,13 @@
                     <td>niamh gall</td>
                     <td>12 March 1967</td>
                     <td>Complete</td>
-                    <td class="link-column"><a href="#">View</a></td>
+                    <td class="view-link"><a href="#">View</a></td>
                 </tr>
                 <tr>
                     <td>test test</td>
                     <td>31 March 1967</td>
                     <td>Complete</td>
-                    <td class="link-column"><a href="#">View</a></td>
+                    <td class="view-link"><a href="#">View</a></td>
                 </tr>
             </tbody>
         </table>
