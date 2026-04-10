@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff list - Submit learner data</title>
+    <style>
+        body {
+            font-family: "GDS Transport", arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #0b0c0c;
+        }
+
+        /* Header */
+        .govuk-header {
+            background-color: #1d70b8;
+            padding: 10px 30px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .govuk-header img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        /* Sub-navigation */
+        .sub-nav {
+            padding: 15px 30px;
+            border-bottom: 1px solid #b1b4b6;
+        }
+
+        .service-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .phase-banner {
+            font-size: 16px;
+        }
+
+        .phase-tag {
+            background: #1d70b8;
+            color: #ffffff;
+            padding: 2px 5px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        /* User Bar */
+        .user-bar {
+            text-align: right;
+            padding: 10px 30px;
+            font-size: 16px;
+        }
+
+        /* Content */
+        .content {
+            padding: 0 30px;
+            max-width: 960px;
+        }
+
+        .back-link {
+            display: block;
+            margin: 20px 0;
+            text-decoration: underline;
+            font-size: 16px;
+        }
+
+        .academic-year {
+            color: #505a5f;
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 0 0 40px 0;
+        }
+
+        /* New Download Section */
+        .download-section {
+            margin-bottom: 30px;
+        }
+
+        .download-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            text-align: left;
+            border-bottom: 2px solid #0b0c0c;
+            padding: 10px 0;
+            font-size: 19px;
+        }
+
+        td {
+            padding: 15px 0;
+            border-bottom: 1px solid #b1b4b6;
+            font-size: 19px;
+        }
+
+        a {
+            color: #1d70b8;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="govuk-header">
+        <span>GOV.UK</span>
+    </header>
+
+    <div class="sub-nav">
+        <div class="service-name">Submit learner data</div>
+        <div class="phase-banner">
+            <span class="phase-tag">LIVE</span> 
+            Your <a href="#">feedback (opens in new tab)</a> will help us improve the service.
+        </div>
+    </div>
+
+    <div class="user-bar">
+        Niamh Gallagher UKPRN:10007511 <a href="#">Sign out</a>
+    </div>
+
+    <main class="content">
+        <a href="#" class="back-link">&lt; Back</a>
+
+        <div class="academic-year">Academic year: 1 August 2024 to 31 July 2025</div>
+        <h1>Staff list</h1>
+
+        <div class="download-section">
+            <h2>Download all staff</h2>
+            <p><a href="#" style="font-weight: bold;">Download all staff records (CSV)</a></p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date of birth</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>niamh gall</td>
+                    <td>12 March 1967</td>
+                    <td>Complete</td>
+                    <td style="text-align: right;"><a href="#">View</a></td>
+                </tr>
+                <tr>
+                    <td>test test</td>
+                    <td>31 March 1967</td>
+                    <td>Complete</td>
+                    <td style="text-align: right;"><a href="#">View</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+</html>
