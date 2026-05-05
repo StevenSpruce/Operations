@@ -1,11 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% block beforeContent %}
-  {{ govukBackLink({
-    text: "Back",
-    href: "/FEWGovernorHelpdesk"
-  }) }}
-{% endblock %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 {% block content %}
   <div class="govuk-grid-row">
