@@ -1,19 +1,28 @@
 {% extends "layouts/main.html" %}
 
-<a href="/FEWGovernorHelpdesk" class="govuk-back-link">Back</a>
+{% set pageName = "Submissions" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">
+      {# Primary Heading #}
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-7">
         Submissions
       </h1>
 
+      {# Filter Section #}
       {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
       {{ govukCheckboxes({
-        name: "filter-by-year",
+        name: "filter-year",
         fieldset: {
           legend: {
             text: "Filter by year",
@@ -32,16 +41,20 @@
         ]
       }) }}
 
-      <div class="govuk-section-break--xl govuk-section-break--visible govuk-!-margin-top-9"></div>
+      {# Visual Divider #}
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible govuk-!-margin-top-9">
 
-      <span class="govuk-caption-m govuk-!-margin-top-6">Governor data collection</span>
-      <h2 class="govuk-heading-l">
-        Academic Year 2024 to 2025
-      </h2>
+      {# Results Section #}
+      <div class="govuk-!-margin-top-7">
+        <span class="govuk-caption-m">Governor data collection</span>
+        <h2 class="govuk-heading-l">
+          Academic Year 2024 to 2025
+        </h2>
 
-      <p class="govuk-body">
-        <a href="#" class="govuk-link">View your governor data</a>
-      </p>
+        <p class="govuk-body">
+          <a href="#" class="govuk-link">View your governor data</a>
+        </p>
+      </div>
 
     </div>
   </div>
