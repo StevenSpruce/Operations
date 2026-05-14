@@ -1,0 +1,152 @@
+
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  
+  <script>
+    document.body.className =
+      document.body.className
+        ? document.body.className + ' js-enabled'
+        : 'js-enabled';
+  </script>
+
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper">
+
+      
+
+       <img src="/public/images/logo_crest.png" width="73" height="67">
+      <br>
+      <span style="font-family:'helvetica';font-size:160%;">Department <br>for Education</span>
+      <br> 
+      <br>
+      <h1 class="govuk-heading-l">
+            Funding Information System (Funding Year 2025-2026)
+      </h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload">
+          Please import an XML or Zip file
+        </label>
+
+        <input
+          class="govuk-file-upload"
+          id="file-upload"
+          name="file-upload"
+          type="file">
+      </div>
+
+        <!-- Progress bar -->
+      <div
+        id="progress-container"
+        class="govuk-!-margin-bottom-4"
+        style="display: none;" aria-live="polite">
+
+        <p class="govuk-body">
+          <span id="updating-message">Reference Data</span>  <span id="progress-percent">0%</span>
+        </p>
+
+        
+        <div style="height:20px; width:100%;">
+          <div
+            id="progress-bar"
+            style="height:20px; width:0%; background-color:#1d70b8;"> 
+          </div>
+        </div>
+      </div>
+
+      
+      <button
+        class="govuk-button"
+        id="continue-button"
+        disabled>
+        Process
+      </button>
+
+      </br>
+      <button
+        class="govuk-button"
+        id="download-report-button"
+        style="display: none;">
+        Download Reports
+      </button>
+
+      
+
+    </main>
+  </div>
+
+  <script>
+    const fileInput = document.getElementById('file-upload');
+    const continueButton = document.getElementById('continue-button');
+    const progressContainer = document.getElementById('progress-container');
+    const progressBar = document.getElementById('progress-bar');
+    const progressPercent = document.getElementById('progress-percent');
+    const updatingMessage = document.getElementById('updating-message');
+    const downloadReportButton = document.getElementById('download-report-button');
+
+    fileInput.addEventListener('change', function () {
+      
+      if (fileInput.files.length > 0) {
+        continueButton.disabled = false;
+      } else {
+        continueButton.disabled = true;
+      }
+    });
+
+    // Start progress on button click
+    continueButton.addEventListener('click', function (event) {
+      event.preventDefault(); // stop form navigation in prototype
+      startFakeUpload();
+    });
+
+    downloadReportButton.addEventListener('click', function (event) {
+      
+       event.preventDefault(); // stop form navigation in prototype
+      window.location.href = "/public/files/ILR-10000840-2526-20260302-103009-02.zip"; 
+    });
+
+    
+    function startFakeUpload() {
+
+      progressContainer.style.display = 'block';
+      progressBar.style.display = 'block';
+     
+      let progress = 0;
+      progressBar.style.width = '0%';
+      progressPercent.textContent = '0%';
+
+      const interval = setInterval(() => {
+        
+        progress += 10;
+        progressBar.style.width = progress + '%';
+        progressPercent.textContent = progress + '%';
+
+        if (progress >= 10 && progress <= 20) {
+         updatingMessage.textContent = "Validation";
+        }
+
+         if (progress >= 20 && progress <= 30) {
+         updatingMessage.textContent = "Funding Calculation";
+        }
+
+        if (progress >= 80 && progress <= 100) {
+         updatingMessage.textContent = "Report Generation";
+        }
+
+        if (progress >= 100) {
+          clearInterval(interval);
+          continueButton.disabled = true;
+          downloadReportButton.style.display = 'block';
+        }
+      }, 300);
+    }
+    
+  </script>
+
+{% endblock %}
+

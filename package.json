@@ -10,9 +10,12 @@
     "npm": "10.x"
   },
   "dependencies": {
+    "@govuk-prototype-kit/common-templates": "3.0.0",
     "@govuk-prototype-kit/step-by-step": "^2.1.0",
+    "@govuk-prototype-kit/task-list": "2.0.0",
     "govuk-frontend": "^6.0.0",
-    "govuk-prototype-kit": "^13.6.0",
+    "govuk-prototype-kit": "^13.20.0",
+    "hmrc-frontend": "7.8.0",
     "jquery": "^3.6.4",
     "notifications-node-client": "^5.2.3"
   }
