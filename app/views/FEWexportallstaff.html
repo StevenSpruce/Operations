@@ -1,0 +1,122 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+  Submissions - FE staff and vacancy collections
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper" id="content" role="main">
+    
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">Submissions</h1>
+        <p class="govuk-body">FE staff and vacancy collections</p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h2 class="govuk-fieldset__heading">
+                Filter by year
+              </h2>
+            </legend>
+            <div id="filter-hint" class="govuk-hint">
+              The page will refresh after you select each filter.
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="year-24-25" name="yearFilter" type="checkbox" value="2024-2025">
+                <label class="govuk-label govuk-checkboxes__label" for="year-24-25">
+                  2024 to<br>2025
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+      <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l">Academic Year 2024 to 2025</h2>
+
+        <h3 class="govuk-heading-m">Vacancy data collection</h3>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Completed by</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Time and date</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Not Complete</td>
+              <td class="govuk-table__cell">Not Complete</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="govuk-body govuk-!-margin-bottom-8">
+          <a href="#" class="govuk-link">View your vacancy and recruitment data</a>
+        </p>
+
+        <h3 class="govuk-heading-m">Staff data collection</h3>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Completed by</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Time and date</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Not Complete</td>
+              <td class="govuk-table__cell">Not Complete</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="govuk-body govuk-!-margin-bottom-8">
+          <a href="/FEWdownloadstaff" class="govuk-link">View your staff data</a>
+        </p>
+
+        <p class="govuk-body">Download your XML file</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Date</th>
+              <th scope="col" class="govuk-table__header">File</th>
+              <th scope="col" class="govuk-table__header">Submitted by</th>
+              <th scope="col" class="govuk-table__header">Reference</th>
+              <th scope="col" class="govuk-table__header">Reports</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong>8 December 2025 at<br>8:46am</strong>
+              </td>
+              <td class="govuk-table__cell">
+                <a href="#" class="govuk-link">FEW-10007511-2425-20251123-<br>114724-01.XML</a>
+              </td>
+              <td class="govuk-table__cell">Niamh<br>Gallagher</td>
+              <td class="govuk-table__cell">2159729</td>
+              <td class="govuk-table__cell">
+                <a href="#" class="govuk-link">Download<br>reports</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}
