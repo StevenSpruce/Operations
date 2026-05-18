@@ -1,0 +1,27 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper">
+
+    <h2 class="gem-c-heading govuk-heading-xl govuk-!-margin-bottom-6">OfS data quality reporting</h2>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Academic year
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published" selected>2025 to 2026</option>
+  </select>
+</div>
+
+  <img src="public/images/ofspowerbi.png" height="auto" width="900">
+
+</main>
+
+{% endblock %}
