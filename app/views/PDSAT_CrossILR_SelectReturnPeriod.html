@@ -76,8 +76,22 @@ function handleSelect(radio) {
         
     break;
   default:
+   
     break;
   }
+   document.getElementById("continueBtn").disabled = true;
+    
+    if (document.getElementById("period2_selection2").checked) 
+      document.getElementById("continueBtn").disabled = false;
+    else if (document.getElementById("period3_selection2").checked) 
+      document.getElementById("continueBtn").disabled = false;
+    else if (document.getElementById("period4_selection2").checked) 
+      document.getElementById("continueBtn").disabled = false;
+    else if (document.getElementById("period5_selection2").checked) 
+      document.getElementById("continueBtn").disabled = false;
+    else if (document.getElementById("period6_selection2").checked) 
+      document.getElementById("continueBtn").disabled = false;
+    
 }
 </script>
 
@@ -275,7 +289,7 @@ function handleSelect(radio) {
 
         </div>
 
-        <button class="govuk-button govuk-button--start" data-module="govuk-button">
+        <button class="govuk-button govuk-button--start" id="continueBtn" data-module="govuk-button" disabled>
           Continue
           <svg class="govuk-button__start-icon"
               xmlns="http://www.w3.org/2000/svg"
