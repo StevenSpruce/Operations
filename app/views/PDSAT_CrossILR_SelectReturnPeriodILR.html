@@ -18,7 +18,7 @@ function handleSelect(radio) {
     document.getElementById("period4_selection2").disabled = false;
     document.getElementById("period5_selection2").disabled = false;
     document.getElementById("period6_selection2").disabled = false;
-
+    break;
         
   case "2":
     if (radio.value=="1")
@@ -93,6 +93,12 @@ function handleSelect(radio) {
       document.getElementById("continueBtn").disabled = false;
     
 }
+
+
+function handleBtnClick(btn) {
+  alert("testtt");
+  window.location.href = "./PDSAT_CrossILR_SelectReturnPeriod2.html";
+}
 </script>
 
 
@@ -104,15 +110,15 @@ function handleSelect(radio) {
 
     <div class="govuk-grid-column-full">
 
-      <h1 class="govuk-heading-xl">Cross ILR</h1>
+      <h1 class="govuk-heading-xl">Cross ILR Compare</h1>
 
       <form>
 
-        <div class="govuk-form-group">
+        <div class="govuk-form-group" disabled>
 
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              Select two ILR files to compare
+              Select two files to compare
             </legend>
 
             
@@ -136,7 +142,7 @@ function handleSelect(radio) {
                     R01
                   </td>
                    <td class="govuk-table__cell">
-                    ILR-10001919-2526-20250903-163112-01
+                    ILR-10001919-2526-20250903-163112
                   </td>
                   <td class="govuk-table__cell govuk-!-text-align-centre">
                     <div class="govuk-radios__item">
@@ -161,7 +167,7 @@ function handleSelect(radio) {
                     R02
                   </td>
                    <td class="govuk-table__cell">
-                    ILR-10001919-2526-20251205-153142-02
+                    ILR-10001919-2526-20251205-153142
                   </td>
                   <td class="govuk-table__cell govuk-!-text-align-centre">
                     <div class="govuk-radios__item">
@@ -186,7 +192,7 @@ function handleSelect(radio) {
                     R03
                   </td>
                    <td class="govuk-table__cell">
-                    ILR-10001919-2526-20251104-080712-03
+                    ILR-10001919-2526-20251104-080712
                   </td>
                   <td class="govuk-table__cell govuk-!-text-align-centre">
                     <div class="govuk-radios__item">
@@ -211,7 +217,7 @@ function handleSelect(radio) {
                     R04
                   </td>
                    <td class="govuk-table__cell">
-                    ILR-10001919-2526-20251204-132448-04
+                    ILR-10001919-2526-20251204-132448
                   </td>
                   <td class="govuk-table__cell govuk-!-text-align-centre">
                     <div class="govuk-radios__item">
@@ -236,7 +242,7 @@ function handleSelect(radio) {
                     R05
                   </td>
                    <td class="govuk-table__cell">
-                    ILR-10001919-2526-20260106-100915-05
+                    ILR-10001919-2526-20260106-100915
                   </td>
                   <td class="govuk-table__cell govuk-!-text-align-centre">
                     <div class="govuk-radios__item">
@@ -261,7 +267,7 @@ function handleSelect(radio) {
                     R06
                   </td>
                    <td class="govuk-table__cell">
-                    ILR-10001919-2526-20260204-152318-06
+                    ILR-10001919-2526-20260204-152318
                   </td>
                   <td class="govuk-table__cell govuk-!-text-align-centre">
                     <div class="govuk-radios__item">
@@ -289,7 +295,14 @@ function handleSelect(radio) {
 
         </div>
 
-        <button class="govuk-button govuk-button--start" id="continueBtn" data-module="govuk-button" disabled>
+        
+<button 
+  type="button"
+  class="govuk-button govuk-button--start"
+  id="continueBtn"
+  disabled
+  onclick="handleBtnClick(this)">
+
           Continue
           <svg class="govuk-button__start-icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -306,9 +319,7 @@ function handleSelect(radio) {
 
     </div>
 
-    
-
-    </div>
+   </div>
 
   </div>
 

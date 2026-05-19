@@ -1,0 +1,327 @@
+
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<script>
+function handleSelect(radio) {
+
+  switch(radio.value) {
+  case "1": 
+    document.getElementById("period2_selection2").disabled = false; 
+    document.getElementById("period3_selection2").disabled = false;
+    document.getElementById("period4_selection2").disabled = false;
+    document.getElementById("period5_selection2").disabled = false;
+    document.getElementById("period6_selection2").disabled = false;
+    break;
+        
+  case "2":
+    if (radio.value=="1")
+    { 
+      document.getElementById("period2_selection2").disabled = false;
+    }
+    else
+    {
+      document.getElementById("period2_selection2").disabled = true;
+    }
+   
+    document.getElementById("period3_selection2").disabled = false;
+    document.getElementById("period4_selection2").disabled = false;
+    document.getElementById("period5_selection2").disabled = false;      
+    document.getElementById("period6_selection2").disabled = false;
+    document.getElementById("period2_selection2").checked = false;
+    break;
+
+  case "3": 
+
+    document.getElementById("period2_selection2").disabled = true;
+    document.getElementById("period3_selection2").disabled = true;
+    document.getElementById("period4_selection2").disabled = false;
+    document.getElementById("period5_selection2").disabled = false;
+    document.getElementById("period6_selection2").disabled = false;
+    document.getElementById("period3_selection2").checked = false;
+    document.getElementById("period2_selection2").checked = false;
+    
+    break;
+
+  case "4":    
+
+    document.getElementById("period2_selection2").disabled = true;
+    document.getElementById("period3_selection2").disabled = true;
+    document.getElementById("period4_selection2").disabled = true;
+    document.getElementById("period5_selection2").disabled = false;      
+    document.getElementById("period6_selection2").disabled = false;
+
+    document.getElementById("period4_selection2").checked = false;
+    document.getElementById("period3_selection2").checked = false;
+    document.getElementById("period2_selection2").checked = false;
+    break;
+
+  case "5":
+      
+    document.getElementById("period2_selection2").disabled = true;
+    document.getElementById("period3_selection2").disabled = true;
+    document.getElementById("period4_selection2").disabled = true;
+    document.getElementById("period5_selection2").disabled = true;
+
+    document.getElementById("period5_selection2").checked = false;
+    document.getElementById("period4_selection2").checked = false;
+    document.getElementById("period3_selection2").checked = false;
+    document.getElementById("period2_selection2").checked = false;
+        
+    break;
+  default:
+   
+    break;
+  }
+   document.getElementById("continueBtn").disabled = true;
+    
+    if (document.getElementById("period2_selection2").checked) 
+      document.getElementById("continueBtn").disabled = false;
+    else if (document.getElementById("period3_selection2").checked) 
+      document.getElementById("continueBtn").disabled = false;
+    else if (document.getElementById("period4_selection2").checked) 
+      document.getElementById("continueBtn").disabled = false;
+    else if (document.getElementById("period5_selection2").checked) 
+      document.getElementById("continueBtn").disabled = false;
+    else if (document.getElementById("period6_selection2").checked) 
+      document.getElementById("continueBtn").disabled = false;
+    
+}
+
+function handleBtnClick(btn) {
+  alert("testtt");
+  window.location.href = "./PDSAT_CrossILR_SelectReturnPeriod2.html";
+}
+</script>
+
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper" id="content" role="main">
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">Cross ILR</h1>
+
+      <form>
+
+        <div class="govuk-form-group">
+
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Select two files to compare
+            </legend>
+
+            
+
+            <!-- TABLE (recommended GOV pattern) -->
+            <table class="govuk-table">
+
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header">Return Period</th>
+                  <th class="govuk-table__header">Files submitted</th>
+                  <th class="govuk-table__header">File 1</th>
+                  <th class="govuk-table__header">File 2</th>
+                </tr>
+              </thead>
+
+              <tbody class="govuk-table__body">
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    R01
+                  </td>
+                   <td class="govuk-table__cell">
+                    FIS-CSV 20260519-163112
+                  </td>
+                  <td class="govuk-table__cell govuk-!-text-align-centre">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="period1_selection1" value=1 name="File1" type="radio" onclick="handleSelect(this)">
+                      <label class="govuk-label govuk-radios__label">
+                      
+                      </label>
+                    </div>
+                  </td>
+                  <td class="govuk-table__cell govuk-!-text-align-centre">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="period1_selection2" type="radio" unchecked disabled>
+                      <label class="govuk-label govuk-radios__label">
+                      
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    R02
+                  </td>
+                   <td class="govuk-table__cell">
+                    FIS-CSV 20251205-153142
+                  </td>
+                  <td class="govuk-table__cell govuk-!-text-align-centre">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="period2_selection1" value=2 name="File1" type="radio" onclick="handleSelect(this)" >
+                      <label class="govuk-label govuk-radios__label">
+                      
+                      </label>
+                    </div>
+                  </td>
+                  <td class="govuk-table__cell govuk-!-text-align-centre">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="period2_selection2" value=6 name="File2" type="radio" onclick="handleSelect(this)" unchecked disabled>
+                      <label class="govuk-label govuk-radios__label">
+                      
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    R03
+                  </td>
+                   <td class="govuk-table__cell">
+                    FIS-CSV 20251104-080712
+                  </td>
+                  <td class="govuk-table__cell govuk-!-text-align-centre">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="period3_selection1" value=3 name="File1" type="radio" onclick="handleSelect(this)">
+                      <label class="govuk-label govuk-radios__label">
+                      
+                      </label>
+                    </div>
+                  </td>
+                  <td class="govuk-table__cell govuk-!-text-align-centre">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="period3_selection2" value=7 name="File2" type="radio" onclick="handleSelect(this)" unchecked disabled>
+                      <label class="govuk-label govuk-radios__label">
+                      
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    R04
+                  </td>
+                   <td class="govuk-table__cell">
+                    FIS-CSV 20251204-132448
+                  </td>
+                  <td class="govuk-table__cell govuk-!-text-align-centre">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="period4_selection1" value=4 name="File1" type="radio" onclick="handleSelect(this)">
+                      <label class="govuk-label govuk-radios__label">
+                      
+                      </label>
+                    </div>
+                  </td>
+                  <td class="govuk-table__cell govuk-!-text-align-centre">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="period4_selection2" value=9 name="File2" type="radio" onclick="handleSelect(this)" unchecked disabled>
+                      <label class="govuk-label govuk-radios__label">
+                      
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+
+                 <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    R05
+                  </td>
+                   <td class="govuk-table__cell">
+                    FIS-CSV 20260106-100915
+                  </td>
+                  <td class="govuk-table__cell govuk-!-text-align-centre">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="period5_selection1" value=5 name="File1" type="radio" onclick="handleSelect(this)">
+                      <label class="govuk-label govuk-radios__label">
+                      
+                      </label>
+                    </div>
+                  </td>
+                  <td class="govuk-table__cell govuk-!-text-align-centre">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="period5_selection2" value=10 name="File2" type="radio" onclick="handleSelect(this)" unchecked disabled >
+                      <label class="govuk-label govuk-radios__label">
+                      
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    R06
+                  </td>
+                   <td class="govuk-table__cell">
+                    FIS-CSV 20260204-152318
+                  </td>
+                  <td class="govuk-table__cell govuk-!-text-align-centre">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="period6_selection1" name="File1" type="radio" unchecked disabled>
+                      <label class="govuk-label govuk-radios__label">
+                      
+                      </label>
+                    </div>
+                  </td>
+                  <td class="govuk-table__cell govuk-!-text-align-centre">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="period6_selection2" name="File2" type="radio" onclick="handleSelect(this)" unchecked disabled>
+                      <label class="govuk-label govuk-radios__label">
+                      
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </fieldset>
+
+        </div>
+
+        <button 
+  type="button"
+  class="govuk-button govuk-button--start"
+  id="continueBtn"
+  disabled
+  onclick="handleBtnClick(this)">
+          Continue
+          <svg class="govuk-button__start-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="17.5"
+              height="19"
+              viewBox="0 0 33 40"
+              aria-hidden="true"
+              focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+          </svg>
+        </button>
+
+      </form>
+
+    </div>
+
+    
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}
