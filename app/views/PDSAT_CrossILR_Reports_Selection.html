@@ -1,0 +1,168 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<script>
+
+  function handleSelect(checkbox) {
+    if (document.getElementById("report-26X-001").checked) 
+      document.getElementById("continueBtn").disabled = false;
+    else if (document.getElementById("report-26X-002").checked) 
+      document.getElementById("continueBtn").disabled = false;
+    else if (document.getElementById("report-26X-003").checked) 
+      document.getElementById("continueBtn").disabled = false;
+
+    if (!document.getElementById("report-26X-001").checked && !document.getElementById("report-26X-002").checked && !document.getElementById("report-26X-003").checked) {
+      document.getElementById("continueBtn").disabled = true;
+    }
+  }
+
+
+  function handleBtnClick(btn) {
+    window.location.href = "./PDSAT_CrossILR_SelectReturnPeriod2.html";
+  }
+</script>
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+      <main class="govuk-main-wrapper" id="content" role="main">
+          <div class="govuk-grid-row flex">
+              <div class="govuk-grid-column-full">
+                
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">Cross ILR Reports Selection</h1>
+
+
+<div class="govuk-table-container">
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">
+      Please select the report(s) you wish to generate
+    </caption>
+
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header">Report ID</th>
+        <th scope="col" class="govuk-table__header">Report description</th>
+      </tr>
+    </thead>
+
+    <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="report-26X-001"
+                name="reports"
+                type="checkbox"
+                value="26X-001"
+                onclick="handleSelect(this)">
+              <label class="govuk-label govuk-checkboxes__label" for="report-26X-001">
+                Select
+              </label>
+            </div>
+          </div>
+        </td>
+        <td class="govuk-table__cell">26X-001</td>
+        <td class="govuk-table__cell">Funding reconciliation</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="report-26X-002"
+                name="reports"
+                type="checkbox"
+                value="26X-002"
+                onclick="handleSelect(this)">
+              <label class="govuk-label govuk-checkboxes__label" for="report-26X-002">
+                Select
+              </label>
+            </div>
+          </div>
+        </td>
+        <td class="govuk-table__cell">26X-002</td>
+        <td class="govuk-table__cell">Changes to data and funding between ILRs</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="report-26X-003"
+                name="reports"
+                type="checkbox"
+                value="26X-003"
+                onclick="handleSelect(this)">
+              <label class="govuk-label govuk-checkboxes__label" for="report-26X-003">
+                Select
+              </label>
+            </div>
+          </div>
+        </td>
+        <td class="govuk-table__cell">26X-003</td>
+        <td class="govuk-table__cell">Continuance between ILRs</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+<button 
+  type="button"
+  class="govuk-button govuk-button--start"
+  id="continueBtn"
+  disabled
+  onclick="handleBtnClick(this)">
+
+          Continue
+          <svg class="govuk-button__start-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="17.5"
+              height="19"
+              viewBox="0 0 33 40"
+              aria-hidden="true"
+              focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+          </svg>
+        </button>
+
+      </form>
+
+    </div>
+
+
+
+</div>
+</div>
+</div>
+
+
+                  
+                  </div>
+          </div>
+      </main>
+  </div>
+</body>
+
+
+{% endblock %}
