@@ -1,78 +1,4 @@
-{% extends "layouts/main.html" %}
-
-{% block pageTitle %}
-  (Technical) Diploma In Engineering (VRQ) - GOV.UK
-{% endblock %}
-
-{% block beforeContent %}
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Home",
-        href: "#"
-      },
-      {
-        text: "Search Results",
-        href: "#"
-      },
-      {
-        text: "(Technical) Diploma In Engineering (VRQ)"
-      }
-    ]
-  }) }}
-{% endblock %}
-
-{% block content %}
-  <div class="govuk-grid-row govuk-!-margin-bottom-6">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
-        (Technical) Diploma In Engineering (VRQ)
-      </h1>
-      <p class="govuk-body-l govuk-!-color-dark-grey">
-        Reference: 60145067
-      </p>
-    </div>
-    <div class="govuk-grid-column-one-third">
-      <div style="float: right;">
-        {{ govukSelect({
-          id: "academic-year",
-          name: "academicYear",
-          label: {
-            text: "Academic year"
-          },
-          items: [
-            {
-              value: "2025-2026",
-              text: "2025 to 2026",
-              selected: true
-            }
-          ]
-        }) }}
-      </div>
-    </div>
-  </div>
-
-  <div class="govuk-grid-row">
-    
-    <div class="govuk-grid-column-one-quarter">
-      <nav aria-label="Sub navigation">
-        <ul class="govuk-list govuk-!-font-size-16">
-          <li class="govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--no-visited-state" href="#">Overview</a></li>
-          <li class="govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--no-visited-state" href="#">Funding</a></li>
-          <li class="govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--no-visited-state" href="#">Frameworks</a></li>
-          <li class="govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--no-visited-state" href="#">Category</a></li>
-          <li class="govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--no-visited-state" href="#">Basic skills</a></li>
-          <li class="govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--no-visited-state" href="#">Key dates</a></li>
-          <li class="govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--no-visited-state" href="#">LearnDirect class system</a></li>
-          
-          <li class="govuk-!-margin-bottom-3" style="border-left: 4px solid #1d70b8; padding-left: 10px; margin-left: -14px;">
-            <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold" href="#">HECoS Code</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="govuk-grid-column-three-quarters">
+<div class="govuk-grid-column-three-quarters">
       <h2 class="govuk-heading-l">HECoS Code</h2>
 
       {{ govukTable({
@@ -100,21 +26,31 @@
             { text: "Not Applicable" },
             { text: "Not Applicable" },
             { text: "Not Applicable" }
-          ],
-          [
-            { text: "HECoS code 4" },
-            { text: "Not Applicable" },
-            { text: "Not Applicable" },
-            { text: "Not Applicable" }
-          ],
-          [
-            { text: "HECoS code 5" },
-            { text: "Not Applicable" },
-            { text: "Not Applicable" },
-            { text: "Not Applicable" }
           ]
         ]
       }) }}
+
+      {{ govukPagination({
+        previous: {
+          href: "#"
+        },
+        next: {
+          href: "#"
+        },
+        items: [
+          {
+            number: 1,
+            current: true,
+            href: "#"
+          },
+          {
+            number: 2,
+            href: "#"
+          },
+          {
+            number: 3,
+            href: "#"
+          }
+        ]
+      }) }}
     </div>
-  </div>
-{% endblock %}
