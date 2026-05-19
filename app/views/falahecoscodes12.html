@@ -1,99 +1,120 @@
-{% extends "layoutsld.html" %}
+{% extends "layouts/main.html" %}
+
 {% block pageTitle %}
-Professional Graduate Certificate in Education (Professional Diploma in Teaching - Further Education and Skills) - TEC Partnership - HECoS Codes
+  (Technical) Diploma In Engineering (VRQ) - GOV.UK
 {% endblock %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Search Results",
+        href: "#"
+      },
+      {
+        text: "(Technical) Diploma In Engineering (VRQ)"
+      }
+    ]
+  }) }}
+{% endblock %}
+
 {% block content %}
-<!-- Breadcrumb Navigation -->
-<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
-    <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="#">Home</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="#">Search Results</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item" aria-current="page">
-            Professional Graduate Certificate in Education (Professional Diploma in Teaching - Further Education and Skills) - TEC Partnership
-        </li>
-    </ol>
-</nav>
-<!-- Main Content -->
-<div class="govuk-grid-row">
+  <div class="govuk-grid-row govuk-!-margin-bottom-6">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Professional Graduate Certificate in Education (Professional Diploma in Teaching - Further Education and Skills) - TEC Partnership</h1>
-        <p class="govuk-body govuk-caption-l">Reference: 00306398</p>
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
+        (Technical) Diploma In Engineering (VRQ)
+      </h1>
+      <p class="govuk-body-l govuk-!-color-dark-grey">
+        Reference: 60145067
+      </p>
     </div>
-    <!-- Academic Year Dropdown Positioned Correctly -->
-    <div class="govuk-grid-column-one-third govuk-!-text-align-right">
-        <label class="govuk-label" for="academic-year">
-            Academic year
-        </label>
-        <select class="govuk-select" id="academic-year" name="academic-year">
-            <option value="2024">2024 to 2025</option>
-            <option value="2023">2023 to 2024</option>
-            <option value="2022">2022 to 2023</option>
-        </select>
-    </div>
-</div>
-<!-- Sidebar Navigation -->
-<div class="govuk-grid-row">
     <div class="govuk-grid-column-one-third">
-        <nav class="govuk-side-navigation">
-            <ul class="govuk-list">
-                <li><a href="#" class="govuk-link">Overview</a></li>
-                <li><a href="#" class="govuk-link">Funding</a></li>
-                <li><a href="#" class="govuk-link">Frameworks</a></li>
-                <li><a href="#" class="govuk-link">Category</a></li>
-                <li><a href="#" class="govuk-link">Basic skills</a></li>
-                <li><a href="#" class="govuk-link">Key dates</a></li>
-                <li><a href="#" class="govuk-link">Learn Direct Class system</a></li>
-                <li><strong>HECoS Code</strong></li>
-            </ul>
-        </nav>
+      <div style="float: right;">
+        {{ govukSelect({
+          id: "academic-year",
+          name: "academicYear",
+          label: {
+            text: "Academic year"
+          },
+          items: [
+            {
+              value: "2025-2026",
+              text: "2025 to 2026",
+              selected: true
+            }
+          ]
+        }) }}
+      </div>
     </div>
-    <!-- Main Content Area -->
-    <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-m">HECoS Codes</h2>
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-half">
-                <p><strong>HECoS code (1)</strong></p>
-            </div>
-            <div class="govuk-grid-column-one-half">
-                <p>100454 - Adult Education</p>
-            </div>
-        </div>
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-half">
-                <p><strong>HECoS code (2)</strong></p>
-            </div>
-            <div class="govuk-grid-column-one-half">
-                <p>100459 - Education Studies</p>
-            </div>
-        </div>
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-half">
-                <p><strong>HECoS code (3)</strong></p>
-            </div>
-            <div class="govuk-grid-column-one-half">
-                <p>100460 - Further Education</p>
-            </div>
-        </div>
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-half">
-                <p><strong>HECoS code (4)</strong></p>
-            </div>
-            <div class="govuk-grid-column-one-half">
-                <p>Not applicable</p>
-            </div>
-        </div>
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-half">
-                <p><strong>HECoS code (5)</strong></p>
-            </div>
-            <div class="govuk-grid-column-one-half">
-                <p>Not applicable</p>
-            </div>
-        </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    
+    <div class="govuk-grid-column-one-quarter">
+      <nav aria-label="Sub navigation">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li class="govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--no-visited-state" href="#">Overview</a></li>
+          <li class="govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--no-visited-state" href="#">Funding</a></li>
+          <li class="govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--no-visited-state" href="#">Frameworks</a></li>
+          <li class="govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--no-visited-state" href="#">Category</a></li>
+          <li class="govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--no-visited-state" href="#">Basic skills</a></li>
+          <li class="govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--no-visited-state" href="#">Key dates</a></li>
+          <li class="govuk-!-margin-bottom-3"><a class="govuk-link govuk-link--no-visited-state" href="#">LearnDirect class system</a></li>
+          
+          <li class="govuk-!-margin-bottom-3" style="border-left: 4px solid #1d70b8; padding-left: 10px; margin-left: -14px;">
+            <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold" href="#">HECoS Code</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-</div>
+
+    <div class="govuk-grid-column-three-quarters">
+      <h2 class="govuk-heading-l">HECoS Code</h2>
+
+      {{ govukTable({
+        head: [
+          { text: "Code" },
+          { text: "Description" },
+          { text: "Effective From" },
+          { text: "Effective To" }
+        ],
+        rows: [
+          [
+            { text: "HECoS code 1" },
+            { text: "Not Applicable" },
+            { text: "Not Applicable" },
+            { text: "Not Applicable" }
+          ],
+          [
+            { text: "HECoS code 2" },
+            { text: "Not Applicable" },
+            { text: "Not Applicable" },
+            { text: "Not Applicable" }
+          ],
+          [
+            { text: "HECoS code 3" },
+            { text: "Not Applicable" },
+            { text: "Not Applicable" },
+            { text: "Not Applicable" }
+          ],
+          [
+            { text: "HECoS code 4" },
+            { text: "Not Applicable" },
+            { text: "Not Applicable" },
+            { text: "Not Applicable" }
+          ],
+          [
+            { text: "HECoS code 5" },
+            { text: "Not Applicable" },
+            { text: "Not Applicable" },
+            { text: "Not Applicable" }
+          ]
+        ]
+      }) }}
+    </div>
+  </div>
 {% endblock %}
