@@ -257,104 +257,108 @@ GOV.UK Prototype Kit
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  const dropdowns = document.querySelectorAll(".dropdown");
-  const dropdown1 = document.getElementById("dropdown1");
-  const dropdown2 = document.getElementById("dropdown2");
+    try{
+        const dropdowns = document.querySelectorAll(".dropdown");
+        const dropdown1 = document.getElementById("dropdown1");
+        const dropdown2 = document.getElementById("dropdown2");
 
-  dropdowns.forEach(dropdown => {
-    const button = dropdown.querySelector(".dropdown-btn");
-    const options = dropdown.querySelectorAll(".option");
-    const searchBox = dropdown.querySelector(".search-box");
-    const groups = dropdown.querySelectorAll(".group");
+        dropdowns.forEach(dropdown => {
+            const button = dropdown.querySelector(".dropdown-btn");
+            const options = dropdown.querySelectorAll(".option");
+            const searchBox = dropdown.querySelector(".search-box");
+            const groups = dropdown.querySelectorAll(".group");
 
-    // Toggle dropdown
-    button.addEventListener("click", () => {
-    
-      if (dropdown.classList.contains("disabled")) 
-      {          
-        return;
-      }
-        
-      dropdown.classList.toggle("open");
-      if (searchBox) searchBox.focus();
-    }); 
-
-    // Select option
-    options.forEach(option => {
-      option.addEventListener("click", () => {
-        options.forEach(o => o.classList.remove("selected"));
-        option.classList.add("selected");
-
-        button.textContent = option.textContent;
-        dropdown.classList.remove("open");
-
-        // Enable dropdown 2 when dropdown 1 is selected
-        if (dropdown.id == "dropdown1") {
-          dropdown2.classList.remove("disabled");
-                            
-          const selectedOption = document.querySelector("#dropdown1 .option.selected");
-
-          if (selectedOption) {
-            let foundMatch = false;
-
-            dropdown2.querySelectorAll(".option").forEach(option => {
-
-              if (!foundMatch) {
-                option.classList.add("hidden");
-              }
-
-              if (selectedOption.textContent === option.textContent) {
-                foundMatch = true;
-
-                if ((parseInt(selectedOption.id) + 10) >= parseInt(option.selectedOption.id)) {
-                  foundMatch = true;
-                }
-              }
-            });
-          }
-        }
-      });
-    });
-
-    // Search/filter
-    if (searchBox) {
-      searchBox.addEventListener("input", () => {
-        const value = searchBox.value.toLowerCase();
-
-        groups.forEach(group => {
-          let hasVisible = false;
-          const groupOptions = group.querySelectorAll(".option");
-
-          groupOptions.forEach(option => {
-            const text = option.textContent.toLowerCase();
-
-            if (text.includes(value)) {
-              option.classList.remove("hidden");
-              hasVisible = true;
-            } else {
-              option.classList.add("hidden");
+            // Toggle dropdown
+            button.addEventListener("click", () => {
+                
+            if (dropdown.classList.contains("disabled")) 
+            {          
+                return;
             }
-          });
+                    
+            dropdown.classList.toggle("open");
+            if (searchBox) searchBox.focus();
+         }); 
 
-          group.style.display = hasVisible ? "block" : "none";
-        });
-      });
-    }
-  });
+         // Select option
+         options.forEach(option => {
+            option.addEventListener("click", () => {
+            options.forEach(o => o.classList.remove("selected"));
+            option.classList.add("selected");
 
-  // Close dropdowns if clicking outside
-  document.addEventListener("click", (e) => {
-    document.querySelectorAll(".dropdown").forEach(dropdown => {
-      if (!dropdown.contains(e.target)) {
-        dropdown.classList.remove("open");
-      }
+            button.textContent = option.textContent;
+            dropdown.classList.remove("open");
+
+            // Enable dropdown 2 when dropdown 1 is selected
+            if (dropdown.id == "dropdown1") {
+            dropdown2.classList.remove("disabled");
+                                
+            const selectedOption = document.querySelector("#dropdown1 .option.selected");
+
+            if (selectedOption) {
+                let foundMatch = false;
+
+                dropdown2.querySelectorAll(".option").forEach(option => {
+
+                if (!foundMatch) {
+                    option.classList.add("hidden");
+                }
+
+                if (selectedOption.textContent === option.textContent) {
+                    foundMatch = true;
+
+                    if ((parseInt(selectedOption.id) + 10) >= parseInt(option.selectedOption.id)) {
+                    foundMatch = true;
+                    }
+                }
+                });
+                }
+                }
+            });
+            });
+
+            // Search/filter
+            if (searchBox) {
+            searchBox.addEventListener("input", () => {
+                const value = searchBox.value.toLowerCase();
+
+                groups.forEach(group => {
+                let hasVisible = false;
+                const groupOptions = group.querySelectorAll(".option");
+
+                groupOptions.forEach(option => {
+                    const text = option.textContent.toLowerCase();
+
+                    if (text.includes(value)) {
+                    option.classList.remove("hidden");
+                    hasVisible = true;
+                    } else {
+                    option.classList.add("hidden");
+                    }
+                });
+
+                group.style.display = hasVisible ? "block" : "none";
+                });
+            });
+            }
     });
-  });
 
+    // Close dropdowns if clicking outside
+    document.addEventListener("click", (e) => {
+        document.querySelectorAll(".dropdown").forEach(dropdown => {
+        if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove("open");
+        }
+        });
+    });
+
+    
+
+        updateContinueButton();
   
-
-  updateContinueButton();
-
+    }catch {
+        console.log(error.message);
+    }
 });
 
 function updateContinueButton() {
@@ -371,9 +375,9 @@ function updateContinueButton() {
 
 function handleSelect(dropDown) {
   
-
-   const dropdown2 = document.getElementById("dropdown2");
-   // Enable dropdown 2 when dropdown 1 is selected
+    try{
+        const dropdown2 = document.getElementById("dropdown2");
+        // Enable dropdown 2 when dropdown 1 is selected
         if (dropDown.id === "dropdown1") {         
           
           const selectedOption = document.querySelector("#dropdown1 .option.selected");
@@ -393,8 +397,8 @@ function handleSelect(dropDown) {
               }
 
               
-const num1 = parseInt(selectedOption.id);
-const num2 = parseInt(selectedOption2.id);
+            const num1 = parseInt(selectedOption.id);
+            const num2 = parseInt(selectedOption2.id);
 
             if (num1 >= num2) {
                   foundMatch = true;
@@ -404,22 +408,32 @@ const num2 = parseInt(selectedOption2.id);
           }
         }
       updateContinueButton();
+ 
+    }catch {
+        console.log(error.message);
+    }
+     
 }
 
 
 
 function checkEnableTab() {
-    
-    const file1Selected = document.querySelector("#dropdown1 .option.selected");
-    const file2Selected = document.querySelector("#dropdown2 .option.selected");
+    try {
+        const tab2 = document.getElementById("tab_filters");
+        const file1Selected = document.querySelector("#dropdown1 .option.selected");
+        const file2Selected = document.querySelector("#dropdown2 .option.selected");
 
-    if (file1Selected && file2Selected) {
-      tab2.classList.remove("govuk-tabs__tab--disabled");
-      tab2.removeAttribute("aria-disabled");
-      //tab2.setAttribute("tabindex", "0");
-    }else{
-        tab2.classList.add("govuk-tabs__tab--disabled");
-        tab2.addAttribute("aria-disabled");
+        if (file1Selected && file2Selected) {
+        tab2.classList.remove("govuk-tabs__tab--disabled");
+        tab2.removeAttribute("aria-disabled");
+        //tab2.setAttribute("tabindex", "0");
+        }else{
+            tab2.classList.add("govuk-tabs__tab--disabled");
+            tab2.addAttribute("aria-disabled");
+        }
+
+    } catch (error) {
+        console.log(error.message);
     }
   }
 
