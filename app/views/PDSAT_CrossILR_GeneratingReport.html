@@ -1,0 +1,102 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<head>
+<meta charset="UTF-8">
+<title>Loading Spinner Example</title>
+
+<link rel="stylesheet" href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-5.0.0.min.css">
+
+
+<style>
+/* Spinner */
+.loading-spinner {
+  border: 10px solid #dee0e2;
+  border-top-color: #1d70b8;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1.2s linear infinite;
+  margin: 30px auto;
+}
+
+/* Animation */
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Center content */
+.loading-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.timer {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+}
+
+</style>
+
+</head>
+
+<body class="govuk-template__body">
+
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper" role="main">
+
+    <div class="loading-container" role="status" aria-live="polite">
+
+      <!-- Spinner -->
+      <div class="loading-spinner"></div>
+
+      <!-- Heading (important for GOV pattern) -->
+      <h1 class="govuk-heading-m">
+        Generating cross ILR report
+      </h1>
+
+      <!-- Supporting text -->
+      <p class="govuk-body">
+        This may take a few seconds. Please do not refresh the page.
+      </p>
+        <div class="timer" id="timer"></div>
+    </div>
+
+  </main>
+
+</div>
+
+</body>
+</html>
+
+
+
+<script>
+
+
+let timeLeft = 4;
+const timer = document.getElementById("timer");
+
+const countdown = setInterval(() => {
+timeLeft--;
+timer.textContent = timeLeft;
+
+if (timeLeft <= 0) {
+    clearInterval(countdown);
+    window.location.href = "./PDSAT_CrossILR_CompareHistory2.html";
+}
+}, 1000);
+
+
+</script>
+
+{% endblock %}
