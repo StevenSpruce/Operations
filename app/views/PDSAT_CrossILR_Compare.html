@@ -97,25 +97,25 @@ Cross ILR Year
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
               <!-- Dropdown 1 -->
-            <div class="dropdown" id="dropdown1">
+            <div class="dropdown" id="dropdown1" onclick="handleSelect(this)">
               <div class="dropdown-btn">Please select ILR File 1</div>
               <div class="dropdown-list">
                 <input type="text" class="search-box" placeholder="Search...">
 
                 <div class="group">
                   <div class="group-title">Select ILR File 1</div>
-                  <div class="option" id="R01">R01 - ILR-10001919-2526-20250903-163112</div>
-                  <div class="option" id="R02">R02 - ILR-10001919-2526-20251205-153142</div>
-                  <div class="option" id="R03">R03 - ILR-10001919-2526-20251104-080712</div>
-                  <div class="option" id="R04">R04 - ILR-10001919-2526-20251204-132448</div>
-                  <div class="option" id="R05">R05 - ILR-10001919-2526-20260106-100915</div>                  
+                  <div class="option" id="1">R01 - ILR-10001919-2526-20250903-163112</div>
+                  <div class="option" id="2">R02 - ILR-10001919-2526-20251205-153142</div>
+                  <div class="option" id="3">R03 - ILR-10001919-2526-20251104-080712</div>
+                  <div class="option" id="4">R04 - ILR-10001919-2526-20251204-132448</div>
+                  <div class="option" id="5">R05 - ILR-10001919-2526-20260106-100915</div>                  
                 </div>
               </div>
             </div>
           </td>
           <td class="govuk-table__cell">
             <!-- Dropdown 1 -->
-            <div class="dropdown" id="fundingPeriod1">
+            <div class="dropdown" id="fundingPeriod1"  onclick="handleSelect(this)">
               <div class="dropdown-btn">Please select funding period</div>
               <div class="dropdown-list">
                 <input type="text" class="search-box" placeholder="Search...">
@@ -142,25 +142,25 @@ Cross ILR Year
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             <!-- Dropdown 2 -->
-            <div class="dropdown disabled" id="dropdown2">
+            <div class="dropdown disabled" id="dropdown2"  onclick="handleSelect(this)">
               <div class="dropdown-btn">Please select ILR File 2</div>
               <div class="dropdown-list">
                 <input type="text" class="search-box" placeholder="Search...">
 
                 <div class="group">
                   <div class="group-title">Select ILR File 2</div>
-                  <div class="option" id="R02">R02 - ILR-10001919-2526-20251205-153142</div>
-                  <div class="option" id="R03">R03 - ILR-10001919-2526-20251104-080712</div>
-                  <div class="option" id="R04">R04 - ILR-10001919-2526-20251204-132448</div>
-                  <div class="option" id="R05">R05 - ILR-10001919-2526-20260106-100915</div>
-                  <div class="option" id="R06">R06 - ILR-10001919-2526-20260204-152318</div>
+                  <div class="option" id="12">R02 - ILR-10001919-2526-20251205-153142</div>
+                  <div class="option" id="13">R03 - ILR-10001919-2526-20251104-080712</div>
+                  <div class="option" id="14">R04 - ILR-10001919-2526-20251204-132448</div>
+                  <div class="option" id="15">R05 - ILR-10001919-2526-20260106-100915</div>
+                  <div class="option" id="16">R06 - ILR-10001919-2526-20260204-152318</div>
                 </div>
               </div>
             </div>
           </td>
           <td class="govuk-table__cell">
             <!-- Dropdown 1 -->
-            <div class="dropdown" id="fundingPeriod1">
+            <div class="dropdown" id="fundingPeriod2"  onclick="handleSelect(this)">
               <div class="dropdown-btn">Please select funding period</div>
               <div class="dropdown-list">
                 <input type="text" class="search-box" placeholder="Search...">
@@ -206,8 +206,6 @@ Cross ILR Year
           </svg>
         </button>
 
-      </form>
-
     </div>
 
    </div>
@@ -220,6 +218,7 @@ Cross ILR Year
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
+  alert("calll");
   const dropdowns = document.querySelectorAll(".dropdown");
   const dropdown1 = document.getElementById("dropdown1");
   const dropdown2 = document.getElementById("dropdown2");
@@ -251,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.textContent = option.textContent;
         dropdown.classList.remove("open");
 
-        // ✅ Enable dropdown 2 when dropdown 1 is selected
+        // Enable dropdown 2 when dropdown 1 is selected
         if (dropdown.id == "dropdown1") {
           dropdown2.classList.remove("disabled");
                             
@@ -266,8 +265,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 option.classList.add("hidden");
               }
 
-              if (selectedOption.id === option.id) {
+              if (selectedOption.textContent === option.textContent) {
                 foundMatch = true;
+alert (parseInt(option.selectedOption.id));
+                if ((parseInt(selectedOption.id) + 10) >= parseInt(option.selectedOption.id)) {
+                  foundMatch = true;
+                }
               }
             });
           }
@@ -311,17 +314,67 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   
-const continueBtn = document.getElementById("continueBtn");
 
-continueBtn.disabled = !(
-  document.querySelector("#dropdown1 .option.selected") &&
-  document.querySelector("#dropdown2 .option.selected") &&
-  document.querySelector("#fundingPeriod1 .option.selected") &&
-  document.querySelector("#fundingPeriod2 .option.selected")
-);
-
+  updateContinueButton();
 
 });
+
+function updateContinueButton() {
+  
+  const continueBtn = document.getElementById("continueBtn");
+
+  continueBtn.disabled = !(
+    document.querySelector("#dropdown1 .option.selected") &&
+    document.querySelector("#dropdown2 .option.selected") &&
+    document.querySelector("#fundingPeriod1 .option.selected") &&
+    document.querySelector("#fundingPeriod2 .option.selected")
+  );
+}
+
+function handleSelect(dropDown) {
+  
+
+   const dropdown2 = document.getElementById("dropdown2");
+   // Enable dropdown 2 when dropdown 1 is selected
+        if (dropDown.id === "dropdown1") {         
+          
+          const selectedOption = document.querySelector("#dropdown1 .option.selected");
+          const selectedOption2 = document.querySelector("#dropdown2 .option.selected");
+
+          if (selectedOption) {
+            let foundMatch = false;
+
+            alert(selectedOption2.id);
+
+            dropdown2.querySelectorAll(".option").forEach(option => {
+
+              if (!foundMatch) {
+                option.classList.add("hidden");
+              }
+              else
+              {
+                option.classList.remove("hidden");
+              }
+
+alert("check");
+              
+const num1 = parseInt(selectedOption.id);
+const num2 = parseInt(selectedOption2.id);
+alert(num1);
+alert(num2);
+
+            if (num1 >= num2) {
+                  foundMatch = true;
+                  alert("yes");
+             }
+
+            }); 
+          }
+        }
+      updateContinueButton();
+}
+
+
 </script>
 
 {% endblock %}
