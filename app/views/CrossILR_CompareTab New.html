@@ -1,0 +1,857 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-5.0.0.min.css">
+
+<style>
+  .return-card {
+    border: 1px solid #b1b4b6;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    background: #fff;
+  }
+/* FILTER PANEL */
+.moj-filter {
+  border: 1px solid #b1b4b6;
+}
+
+.moj-filter__header {
+  background: #b1b4b6;
+  padding: 10px 15px;
+}
+
+.moj-filter__content {
+  background: #f3f2f1;
+  padding: 15px;
+}
+
+/* Selected filters */
+.moj-filter__selected-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.moj-filter__group {
+  margin-top: 20px;
+}
+
+.moj-filter-tag {
+  display: inline-block;
+  border: 1px solid #0b0c0c;
+  background: #ffffff;
+  padding: 5px 10px;
+  margin: 5px 10px 0 0;
+  cursor: pointer;
+}
+
+/* Layout */
+.filter-layout {
+  display: flex;
+  gap: 40px;
+}
+
+.filter-sidebar {
+  width: 300px;
+}
+
+.filter-results {
+  flex-grow: 1;
+}
+
+
+    .dropdown {
+  width: 400px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.dropdown-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #b1b4b6;
+  cursor: pointer;
+  background: #fff;
+  text-align: left;
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  width: 100%;
+  border: 1px solid #b1b4b6;
+  background: #fff;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.dropdown.open .dropdown-list {
+  display: block;
+}
+
+.search-box {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #b1b4b6;
+  box-sizing: border-box;
+}
+
+.group-title {
+  padding: 8px;
+  font-weight: bold;
+  background: #f3f2f1;
+}
+
+.option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background: #f3f2f1;
+}
+
+.option.selected {
+  background: #1d70b8;
+  color: white;
+}
+
+.dropdown.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Disabled tab */
+.govuk-tabs__tab--disabled {
+  pointer-events: none;
+  color: #6f777b;
+  cursor: not-allowed;
+}
+</style>
+
+<main class="govuk-main-wrapper" id="content" role="main">
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+
+<a  href="/CrossILR_ReportsHistory" class="govuk-back-link">Back</a>
+
+<h2 class="govuk-heading">Cross ILR Compare</h2>
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+
+<ul class="govuk-tabs__list">
+
+<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+<a class="govuk-tabs__tab"
+   href="#files"
+   id="tab_files">
+  ILR files to compare
+</a>
+</li>
+
+<li class="govuk-tabs__list-item">
+<a class="govuk-tabs__tab govuk-tabs__tab--disabled"
+   href="#filters"
+   id="tab_filters"
+   aria-disabled="true"
+   tabindex="-1">
+  Cross ILR filters
+</a>
+</li>
+
+</ul>
+
+<!-- PANEL 1 -->
+<div class="govuk-tabs__panel" id="files">
+
+  <h2 class="govuk-summary-card__title">
+      ILR File Selection 1
+  </h2>
+
+  <div class="return-card">
+    
+      <!-- Dropdown 1 -->
+    <div class="dropdown" id="dropdownRtn1" onclick="handleSelect(this)">
+      <div class="dropdown-btn">Select return period</div>
+      <div class="dropdown-list">
+        <input type="text" class="search-box" placeholder="Search...">
+
+        <div class="group">
+          <!--<div class="group-title">Select Return Period 1</div>-->
+          <div class="option" id="1">R01</div>
+          <div class="option" id="2">R02</div>
+          <div class="option" id="3">R03</div>
+          <div class="option" id="4">R04</div>
+          <div class="option" id="5">R05</div>                  
+        </div>
+      </div>
+    </div>
+          
+    <!-- TABLE (recommended GOV pattern) -->
+    <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header"></th>
+          <th class="govuk-table__header"></th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+          <td class="govuk-table__cell">
+              <!-- Dropdown 1 -->
+            <div class="dropdown disabled" id="dropdownILR1" onclick="handleSelect(this)">
+              <div class="dropdown-btn">Select ILR File</div>
+              <div class="dropdown-list">
+                <input type="text" class="search-box" placeholder="Search...">
+
+                <div class="group">
+                  <!--<div class="group-title">Select ILR File 1</div>-->
+                  <div class="option" id="1">ILR-10001919-2526-20250903-163112</div>
+                  <div class="option" id="2">ILR-10001919-2526-20251205-153142</div>
+                  <div class="option" id="3">ILR-10001919-2526-20251104-080712</div>             
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="govuk-table__cell">
+            <!-- Dropdown 1 -->
+            <div class="dropdown disabled" id="fundingPeriod1"  onclick="handleSelect(this)">
+              <div class="dropdown-btn">Select funding period</div>
+              <div class="dropdown-list">
+                <input type="text" class="search-box" placeholder="Search...">
+
+                <div class="group">
+                  <!--<div class="group-title">Select funding period</div>-->
+                  <div class="option" id="01">01</div>
+                  <div class="option" id="02">02</div>
+                  <div class="option" id="03">03</div>
+                  <div class="option" id="04">04</div>
+                  <div class="option" id="05">05</div>
+                  <div class="option" id="06">06</div>
+                  <div class="option" id="07">07</div>
+                  <div class="option" id="08">08</div>
+                  <div class="option" id="09">09</div>
+                  <div class="option" id="10">10</div>
+                  <div class="option" id="11">11</div>
+                  <div class="option" id="12">12</div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="govuk-summary-card__title">
+      ILR File Selection 2
+  </h2>
+
+  <div class="return-card">
+  
+      <!-- Dropdown 1 -->
+    <div class="dropdown disabled" id="dropdownRtn2" onclick="handleSelect(this)">
+      <div class="dropdown-btn">Select return period</div>
+      <div class="dropdown-list">
+        <input type="text" class="search-box" placeholder="Search...">
+
+        <div class="group">
+          <!--<div class="group-title">Please select Return Period 2</div>-->
+          <div class="option" id="11">R01</div>
+          <div class="option" id="12">R02</div>
+          <div class="option" id="13">R03</div>
+          <div class="option" id="14">R04</div>
+          <div class="option" id="15">R05</div>                  
+        </div>
+      </div>
+    </div>
+
+    <!-- TABLE 2 (recommended GOV pattern) -->
+    <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header"></th>
+          <th class="govuk-table__header"></th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+
+        
+          
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <!-- Dropdown 2 -->
+            <div class="dropdown disabled" id="dropdownILR2"  onclick="handleSelect(this)">
+              <div class="dropdown-btn">Select ILR file</div>
+              <div class="dropdown-list">
+                <input type="text" class="search-box" placeholder="Search...">
+
+                <div class="group">
+                  <!--<div class="group-title">Select ILR File 2</div>-->
+                  <div class="option" id="12">ILR-10001919-2526-20251205-153142</div>
+                  <div class="option" id="13">ILR-10001919-2526-20251104-080712</div>
+                  <div class="option" id="14">ILR-10001919-2526-20251204-132448</div>
+                  <div class="option" id="15">ILR-10001919-2526-20260106-100915</div>
+                  <div class="option" id="16">ILR-10001919-2526-20260204-152318</div>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="govuk-table__cell">
+            <!-- Dropdown 2 -->
+            <div class="dropdown disabled" id="fundingPeriod2"  onclick="handleSelect(this)">
+              <div class="dropdown-btn">Select funding period</div>
+              <div class="dropdown-list">
+                <input type="text" class="search-box" placeholder="Search...">
+
+                <div class="group">
+                  <!--<div class="group-title">Select funding period</div>-->
+                  <div class="option">01</div>
+                  <div class="option">02</div>
+                  <div class="option">03</div>
+                  <div class="option">04</div>
+                  <div class="option">05</div>
+                  <div class="option">06</div>
+                  <div class="option">07</div>
+                  <div class="option">08</div>
+                  <div class="option">09</div>
+                  <div class="option">10</div>
+                  <div class="option">11</div>
+                  <div class="option">12</div>
+                </div>
+              </div>
+            </div>
+          </td>
+          </tr> 
+      </tbody>
+    </table>
+    </div>
+</div>
+
+
+<!-- PANEL 2 -->
+<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="filters">
+ <div class="filter-layout">
+
+    <!-- LEFT: FILTER FORM -->
+    <div class="filter-sidebar">
+      <form id="filter-form">
+
+        <div class="moj-filter">
+
+          <div class="moj-filter__header">
+            <h2 class="govuk-heading-m">Filter</h2>
+          </div>
+
+          <div class="moj-filter__content">
+
+            <!-- TYPE -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-heading-s">Partner UKPRN</legend>
+
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="PartnerUKPRN NULL" name="type" checked>
+                    <label class="govuk-label govuk-checkboxes__label">PartnerUKPRN NULL</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="10006005" name="type" checked>
+                    <label class="govuk-label govuk-checkboxes__label">10006005</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="10065710" name="type" checked>
+                    <label class="govuk-label govuk-checkboxes__label">10065710</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <!-- STATUS -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-heading-s">Funding Filters</legend>
+
+                <div class="govuk-checkboxes">
+                   <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="DEF"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">DEF</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="All Sources"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">All Sources</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="MCA/GLA"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">MCA/GLA</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="110"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">110</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="111"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">111</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="112"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">112</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="113"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">113</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="114"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">114</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="115"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">115</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="116"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">116</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="117"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">117</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="118"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">118</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="119"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">119</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="120"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">120</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="121"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">121</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="122"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">122</label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox" value="123"  name="status" checked>
+                    <label class="govuk-label govuk-checkboxes__label">123</label>
+                  </div>
+
+                </div>
+              </fieldset>
+            </div>
+
+            <button class="govuk-button" type="submit">
+              Apply filters
+            </button>
+
+            <a href="#" id="clearFilters" class="govuk-link">
+              Clear filters
+            </a>
+
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+
+    <!-- RIGHT: RESULTS + SELECTED FILTERS -->
+    <div class="filter-results">
+
+      <div class="moj-filter">
+
+        <div class="moj-filter__header">
+          <h2 class="govuk-heading-m">Filters</h2>
+        </div>
+
+        <div class="moj-filter__content">
+
+          <div class="moj-filter__selected-header">
+            <h3 class="govuk-heading-m">Selected filters</h3>
+            <a href="#" id="clearFiltersTop" class="govuk-link">Clear filters</a>
+          </div>
+
+     
+          <div class="moj-filter__group" id="type-output">
+            <h4 class="govuk-heading-s">Partner UKPRN</h4>
+          </div>
+
+      
+          <div class="moj-filter__group" id="status-output">
+            <h4 class="govuk-heading-s">Funding Filters</h4>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<button 
+  type="button"
+  class="govuk-button govuk-button--start"
+  id="continueBtn"
+  disabled
+  onclick="handleBtnClick(this)">
+
+          Compare ILRs
+          <svg class="govuk-button__start-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="17.5"
+              height="19"
+              viewBox="0 0 33 40"
+              aria-hidden="true"
+              focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+          </svg>
+        </button>
+</main>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    try {
+
+        const dropdowns = document.querySelectorAll(".dropdown");
+        const dropdownRtn1 = document.getElementById("dropdownRtn1");
+        const dropdownRtn2 = document.getElementById("dropdownRtn2");
+
+        dropdowns.forEach(dropdown => {
+            const button = dropdown.querySelector(".dropdown-btn");
+            const options = dropdown.querySelectorAll(".option");
+            const searchBox = dropdown.querySelector(".search-box");
+            const groups = dropdown.querySelectorAll(".group");
+
+            // Toggle dropdown
+            button.addEventListener("click", () => {
+
+                if (dropdown.classList.contains("disabled")) {
+                    return;
+                }
+
+                dropdown.classList.toggle("open");
+
+                if (searchBox) {
+                    searchBox.focus();
+                }
+
+            });
+
+            // Select option
+            options.forEach(option => {
+
+                option.addEventListener("click", () => {
+
+                    options.forEach(o => o.classList.remove("selected"));
+                    option.classList.add("selected");
+
+                    button.textContent = option.textContent;
+                    dropdown.classList.remove("open");
+
+                    // Enable dropdown 2 when dropdown 1 is selected
+                    if (dropdown.id == "dropdownRtn1") {
+
+                        const selectedOption = document.querySelector("#dropdownRtn1 .option.selected");
+
+                        if (selectedOption) {
+
+                            let foundMatch = false;
+
+                            dropdownRtn2.querySelectorAll(".option").forEach(option => {
+                                if (selectedOption.textContent === option.textContent) {
+                                    foundMatch = true
+                                }
+
+                                if (!foundMatch) {
+                                    option.classList.add("hidden");
+                                }
+                            });
+
+                        }
+
+                    }
+
+                });
+
+            });
+
+            // Search/filter
+            if (searchBox) {
+
+                searchBox.addEventListener("input", () => {
+
+                    const value = searchBox.value.toLowerCase();
+
+                    groups.forEach(group => {
+
+                        let hasVisible = false;
+                        const groupOptions = group.querySelectorAll(".option");
+
+                        groupOptions.forEach(option => {
+
+                            const text = option.textContent.toLowerCase();
+                              
+                            if (text.includes(value)) {
+                                option.classList.remove("hidden");
+                                hasVisible = true;
+                            } else {
+                                option.classList.add("hidden");
+                                //alert(text);
+                            }
+
+                        });
+
+                        group.style.display = hasVisible ? "block" : "none";
+
+                    });
+
+                });
+
+            }
+
+        });
+
+        // Close dropdowns if clicking outside
+        document.addEventListener("click", (e) => {
+
+            document.querySelectorAll(".dropdown").forEach(dropdown => {
+
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove("open");
+                }
+
+            });
+
+        });
+
+        updateContinueButton();
+
+    } catch (error) {
+        console.log(error.message);
+    }
+
+});
+
+function updateContinueButton() {
+  
+    try{
+        const continueBtn = document.getElementById("continueBtn");
+
+        continueBtn.disabled = !(
+          document.querySelector("#dropdownRtn1 .option.selected") &&
+          document.querySelector("#dropdownRtn2 .option.selected") &&
+          document.querySelector("#dropdownILR1 .option.selected") &&
+          document.querySelector("#dropdownILR2 .option.selected") &&
+          document.querySelector("#fundingPeriod1 .option.selected") &&
+          document.querySelector("#fundingPeriod2 .option.selected")
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+    checkEnableTab();
+}
+
+function handleSelect(dropDown) {
+  
+    try{
+
+      checkILRFileSelectionEnableDropdown();
+        
+
+        const dropdownILR2 = document.getElementById("dropdownILR2");
+        // Enable dropdown 2 when dropdown 1 is selected
+        if (dropDown.id === "dropdownILR1") {         
+          
+          const selectedOption = document.querySelector("#dropdownILR1 .option.selected");
+          const selectedOption2 = document.querySelector("#dropdownILR2 .option.selected");
+
+          if (selectedOption) {
+            let foundMatch = false;
+
+            dropdownILR2.querySelectorAll(".option").forEach(option => {
+
+            if (!foundMatch) {
+                option.classList.add("hidden");
+            }
+            else
+            {
+                option.classList.remove("hidden");
+            }
+            
+                try{
+                    const num1 = parseInt(selectedOption.id);
+                    const num2 = parseInt(selectedOption2.id);
+
+                    if (num1 >= num2) {
+                        foundMatch = true;
+                    }
+                
+                }catch {
+                    console.log(error.message);
+                }
+
+            }); 
+          }
+        }
+      updateContinueButton();
+ 
+    }catch {
+        console.log(error.message);
+    }     
+}
+
+function checkILRFileSelectionEnableDropdown() {
+  try {
+    const selectedOptionRtn1 = document.querySelector("#dropdownRtn1 .option.selected");
+    // Enable dropdowns for selection 1 when rtn1 dropdown is selected
+    if (selectedOptionRtn1) {
+      document.getElementById("dropdownILR1").classList.remove("disabled");
+      document.getElementById("fundingPeriod1").classList.remove("disabled");
+      document.getElementById("dropdownRtn2").classList.remove("disabled");
+    } 
+
+    const selectedOptionRtn2 = document.querySelector("#dropdownRtn2 .option.selected");
+
+    if (selectedOptionRtn2) {
+      document.getElementById("dropdownILR2").classList.remove("disabled");
+      document.getElementById("fundingPeriod2").classList.remove("disabled");
+    }
+  } catch (error) {
+      console.log(error.message);
+  }
+}
+
+
+function checkEnableTab() {
+    try {
+        const tab2 = document.getElementById("tab_filters");
+        const file1Selected = document.querySelector("#dropdownILR1 .option.selected");
+        const file2Selected = document.querySelector("#dropdownILR2 .option.selected");
+
+        if (file1Selected && file2Selected) {
+        tab2.classList.remove("govuk-tabs__tab--disabled");
+        tab2.removeAttribute("aria-disabled");
+        //tab2.setAttribute("tabindex", "0");
+        }else{
+            tab2.classList.add("govuk-tabs__tab--disabled");
+            tab2.addAttribute("aria-disabled");
+        }
+
+    } catch (error) {
+        console.log(error.message);
+    }
+  }
+
+
+// Apply filters
+document.getElementById("filter-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  updateFilters();
+});
+
+function updateFilters() {
+  const typeOutput = document.getElementById("type-output");
+  const statusOutput = document.getElementById("status-output");
+
+  // reset
+  typeOutput.innerHTML = "<h4 class='govuk-heading-s'>Partner UKPRN</h4>";
+  statusOutput.innerHTML = "<h4 class='govuk-heading-s'>Funding</h4>";
+
+  const checked = document.querySelectorAll("input[type=checkbox]:checked");
+
+  checked.forEach(input => {
+    const group = input.name === "type" ? typeOutput : statusOutput;
+
+    const tag = document.createElement("button");
+    tag.className = "moj-filter-tag";
+    tag.type = "button";
+    tag.textContent = input.value + " ×";
+
+    tag.addEventListener("click", () => {
+      input.checked = false;
+      updateFilters();
+    });
+
+    group.appendChild(tag);
+  });
+}
+
+// Clear filters
+function clearAll() {
+  document.querySelectorAll("input[type=checkbox]").forEach(cb => cb.checked = false);
+  updateFilters();
+}
+
+document.getElementById("clearFilters").addEventListener("click", function(e) {
+  e.preventDefault();
+  clearAll();
+});
+
+document.getElementById("clearFiltersTop").addEventListener("click", function(e) {
+  e.preventDefault();
+  clearAll();
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  updateFilters();
+});
+
+
+function handleBtnClick(btn) {
+  window.location.href = "./CrossILR_GeneratingReport.html";
+}
+
+
+</script>
+
+{% endblock %}
