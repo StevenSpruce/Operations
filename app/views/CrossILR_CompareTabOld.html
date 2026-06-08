@@ -9,13 +9,6 @@ GOV.UK Prototype Kit
 <link rel="stylesheet" href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-5.0.0.min.css">
 
 <style>
-  .return-card {
-    border: 1px solid #b1b4b6;
-    padding: 20px;
-    margin-bottom: 30px;
-    border-radius: 6px;
-    background: #fff;
-  }
 /* FILTER PANEL */
 .moj-filter {
   border: 1px solid #b1b4b6;
@@ -177,65 +170,46 @@ GOV.UK Prototype Kit
 <!-- PANEL 1 -->
 <div class="govuk-tabs__panel" id="files">
 
-  <h2 class="govuk-summary-card__title">
-      ILR File Selection 1
-  </h2>
-
-  <div class="return-card">
-    
-      <!-- Dropdown 1 -->
-    <div class="dropdown" id="dropdownRtn1" onclick="handleSelect(this)">
-      <div class="dropdown-btn">Select return period</div>
-      <div class="dropdown-list">
-        <input type="text" class="search-box" placeholder="Search...">
-
-        <div class="group">
-          <!--<div class="group-title">Select Return Period 1</div>-->
-          <div class="option" id="1">R01</div>
-          <div class="option" id="2">R02</div>
-          <div class="option" id="3">R03</div>
-          <div class="option" id="4">R04</div>
-          <div class="option" id="5">R05</div>                  
-        </div>
-      </div>
-    </div>
-          
-    <!-- TABLE (recommended GOV pattern) -->
+<!-- TABLE (recommended GOV pattern) -->
     <table class="govuk-table">
 
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th class="govuk-table__header"></th>
-          <th class="govuk-table__header"></th>
+          <th class="govuk-table__header">ILR file</th>
+          <th class="govuk-table__header">Funding period</th>
         </tr>
       </thead>
 
       <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row">
           <td class="govuk-table__cell">
               <!-- Dropdown 1 -->
-            <div class="dropdown disabled" id="dropdownILR1" onclick="handleSelect(this)">
-              <div class="dropdown-btn">Select ILR File</div>
+            <div class="dropdown" id="dropdown1" onclick="handleSelect(this)">
+              <div class="dropdown-btn">Please select ILR File 1</div>
               <div class="dropdown-list">
                 <input type="text" class="search-box" placeholder="Search...">
 
                 <div class="group">
-                  <!--<div class="group-title">Select ILR File 1</div>-->
-                  <div class="option" id="1">ILR-10001919-2526-20250903-163112</div>
-                  <div class="option" id="2">ILR-10001919-2526-20251205-153142</div>
-                  <div class="option" id="3">ILR-10001919-2526-20251104-080712</div>             
+                  <div class="group-title">Select ILR File 1</div>
+                  <div class="option" id="1">R01 - ILR-10001919-2526-20250903-163112</div>
+                  <div class="option" id="2">R02 - ILR-10001919-2526-20251205-153142</div>
+                  <div class="option" id="3">R03 - ILR-10001919-2526-20251104-080712</div>
+                  <div class="option" id="4">R04 - ILR-10001919-2526-20251204-132448</div>
+                  <div class="option" id="5">R05 - ILR-10001919-2526-20260106-100915</div>                  
                 </div>
               </div>
             </div>
           </td>
           <td class="govuk-table__cell">
             <!-- Dropdown 1 -->
-            <div class="dropdown disabled" id="fundingPeriod1"  onclick="handleSelect(this)">
-              <div class="dropdown-btn">Select funding period</div>
+            <div class="dropdown" id="fundingPeriod1"  onclick="handleSelect(this)">
+              <div class="dropdown-btn">Please select funding period</div>
               <div class="dropdown-list">
                 <input type="text" class="search-box" placeholder="Search...">
 
                 <div class="group">
-                  <!--<div class="group-title">Select funding period</div>-->
+                  <div class="group-title">Select funding period</div>
                   <div class="option" id="01">01</div>
                   <div class="option" id="02">02</div>
                   <div class="option" id="03">03</div>
@@ -253,75 +227,34 @@ GOV.UK Prototype Kit
             </div>
           </td>
         </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2 class="govuk-summary-card__title">
-      ILR File Selection 2
-  </h2>
-
-  <div class="return-card">
-  
-      <!-- Dropdown 1 -->
-    <div class="dropdown disabled" id="dropdownRtn2" onclick="handleSelect(this)">
-      <div class="dropdown-btn">Select return period</div>
-      <div class="dropdown-list">
-        <input type="text" class="search-box" placeholder="Search...">
-
-        <div class="group">
-          <!--<div class="group-title">Please select Return Period 2</div>-->
-          <div class="option" id="11">R01</div>
-          <div class="option" id="12">R02</div>
-          <div class="option" id="13">R03</div>
-          <div class="option" id="14">R04</div>
-          <div class="option" id="15">R05</div>                  
-        </div>
-      </div>
-    </div>
-
-    <!-- TABLE 2 (recommended GOV pattern) -->
-    <table class="govuk-table">
-
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th class="govuk-table__header"></th>
-          <th class="govuk-table__header"></th>
-        </tr>
-      </thead>
-
-      <tbody class="govuk-table__body">
-
-        
-          
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             <!-- Dropdown 2 -->
-            <div class="dropdown disabled" id="dropdownILR2"  onclick="handleSelect(this)">
-              <div class="dropdown-btn">Select ILR file</div>
+            <div class="dropdown disabled" id="dropdown2"  onclick="handleSelect(this)">
+              <div class="dropdown-btn">Please select ILR File 2</div>
               <div class="dropdown-list">
                 <input type="text" class="search-box" placeholder="Search...">
 
                 <div class="group">
-                  <!--<div class="group-title">Select ILR File 2</div>-->
-                  <div class="option" id="12">ILR-10001919-2526-20251205-153142</div>
-                  <div class="option" id="13">ILR-10001919-2526-20251104-080712</div>
-                  <div class="option" id="14">ILR-10001919-2526-20251204-132448</div>
-                  <div class="option" id="15">ILR-10001919-2526-20260106-100915</div>
-                  <div class="option" id="16">ILR-10001919-2526-20260204-152318</div>
+                  <div class="group-title">Select ILR File 2</div>
+                  <div class="option" id="12">R02 - ILR-10001919-2526-20251205-153142</div>
+                  <div class="option" id="13">R03 - ILR-10001919-2526-20251104-080712</div>
+                  <div class="option" id="14">R04 - ILR-10001919-2526-20251204-132448</div>
+                  <div class="option" id="15">R05 - ILR-10001919-2526-20260106-100915</div>
+                  <div class="option" id="16">R06 - ILR-10001919-2526-20260204-152318</div>
                 </div>
               </div>
             </div>
           </td>
           <td class="govuk-table__cell">
-            <!-- Dropdown 2 -->
-            <div class="dropdown disabled" id="fundingPeriod2"  onclick="handleSelect(this)">
-              <div class="dropdown-btn">Select funding period</div>
+            <!-- Dropdown 1 -->
+            <div class="dropdown" id="fundingPeriod2"  onclick="handleSelect(this)">
+              <div class="dropdown-btn">Please select funding period</div>
               <div class="dropdown-list">
                 <input type="text" class="search-box" placeholder="Search...">
 
                 <div class="group">
-                  <!--<div class="group-title">Select funding period</div>-->
+                  <div class="group-title">Select funding period</div>
                   <div class="option">01</div>
                   <div class="option">02</div>
                   <div class="option">03</div>
@@ -341,9 +274,7 @@ GOV.UK Prototype Kit
           </tr> 
       </tbody>
     </table>
-    </div>
 </div>
-
 
 <!-- PANEL 2 -->
 <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="filters">
@@ -561,10 +492,11 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
 
         const dropdowns = document.querySelectorAll(".dropdown");
-        const dropdownRtn1 = document.getElementById("dropdownRtn1");
-        const dropdownRtn2 = document.getElementById("dropdownRtn2");
+        const dropdown1 = document.getElementById("dropdown1");
+        const dropdown2 = document.getElementById("dropdown2");
 
         dropdowns.forEach(dropdown => {
+
             const button = dropdown.querySelector(".dropdown-btn");
             const options = dropdown.querySelectorAll(".option");
             const searchBox = dropdown.querySelector(".search-box");
@@ -597,22 +529,36 @@ document.addEventListener("DOMContentLoaded", function () {
                     dropdown.classList.remove("open");
 
                     // Enable dropdown 2 when dropdown 1 is selected
-                    if (dropdown.id == "dropdownRtn1") {
+                    if (dropdown.id == "dropdown1") {
 
-                        const selectedOption = document.querySelector("#dropdownRtn1 .option.selected");
+                        dropdown2.classList.remove("disabled");
+
+                        const selectedOption = document.querySelector("#dropdown1 .option.selected");
 
                         if (selectedOption) {
 
                             let foundMatch = false;
 
-                            dropdownRtn2.querySelectorAll(".option").forEach(option => {
-                                if (selectedOption.textContent === option.textContent) {
-                                    foundMatch = true
-                                }
+                            dropdown2.querySelectorAll(".option").forEach(option => {
 
                                 if (!foundMatch) {
                                     option.classList.add("hidden");
                                 }
+
+                                if (selectedOption.textContent === option.textContent) {
+
+                                    foundMatch = true;
+
+                                    try {
+                                        if ((parseInt(selectedOption.id) + 10) >= parseInt(option.selectedOption.id)) {
+                                            foundMatch = true;
+                                        }
+                                    } catch (error) {
+                                        console.log(error.message);
+                                    }
+
+                                }
+
                             });
 
                         }
@@ -638,13 +584,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         groupOptions.forEach(option => {
 
                             const text = option.textContent.toLowerCase();
-                              
+
                             if (text.includes(value)) {
                                 option.classList.remove("hidden");
                                 hasVisible = true;
                             } else {
                                 option.classList.add("hidden");
-                                //alert(text);
                             }
 
                         });
@@ -686,12 +631,10 @@ function updateContinueButton() {
         const continueBtn = document.getElementById("continueBtn");
 
         continueBtn.disabled = !(
-          document.querySelector("#dropdownRtn1 .option.selected") &&
-          document.querySelector("#dropdownRtn2 .option.selected") &&
-          document.querySelector("#dropdownILR1 .option.selected") &&
-          document.querySelector("#dropdownILR2 .option.selected") &&
-          document.querySelector("#fundingPeriod1 .option.selected") &&
-          document.querySelector("#fundingPeriod2 .option.selected")
+        document.querySelector("#dropdown1 .option.selected") &&
+        document.querySelector("#dropdown2 .option.selected") &&
+        document.querySelector("#fundingPeriod1 .option.selected") &&
+        document.querySelector("#fundingPeriod2 .option.selected")
         );
     } catch (error) {
         console.log(error.message);
@@ -702,21 +645,17 @@ function updateContinueButton() {
 function handleSelect(dropDown) {
   
     try{
-
-      checkILRFileSelectionEnableDropdown();
-        
-
-        const dropdownILR2 = document.getElementById("dropdownILR2");
+        const dropdown2 = document.getElementById("dropdown2");
         // Enable dropdown 2 when dropdown 1 is selected
-        if (dropDown.id === "dropdownILR1") {         
+        if (dropDown.id === "dropdown1") {         
           
-          const selectedOption = document.querySelector("#dropdownILR1 .option.selected");
-          const selectedOption2 = document.querySelector("#dropdownILR2 .option.selected");
+          const selectedOption = document.querySelector("#dropdown1 .option.selected");
+          const selectedOption2 = document.querySelector("#dropdown2 .option.selected");
 
           if (selectedOption) {
             let foundMatch = false;
 
-            dropdownILR2.querySelectorAll(".option").forEach(option => {
+            dropdown2.querySelectorAll(".option").forEach(option => {
 
             if (!foundMatch) {
                 option.classList.add("hidden");
@@ -748,33 +687,13 @@ function handleSelect(dropDown) {
     }     
 }
 
-function checkILRFileSelectionEnableDropdown() {
-  try {
-    const selectedOptionRtn1 = document.querySelector("#dropdownRtn1 .option.selected");
-    // Enable dropdowns for selection 1 when rtn1 dropdown is selected
-    if (selectedOptionRtn1) {
-      document.getElementById("dropdownILR1").classList.remove("disabled");
-      document.getElementById("fundingPeriod1").classList.remove("disabled");
-      document.getElementById("dropdownRtn2").classList.remove("disabled");
-    } 
-
-    const selectedOptionRtn2 = document.querySelector("#dropdownRtn2 .option.selected");
-
-    if (selectedOptionRtn2) {
-      document.getElementById("dropdownILR2").classList.remove("disabled");
-      document.getElementById("fundingPeriod2").classList.remove("disabled");
-    }
-  } catch (error) {
-      console.log(error.message);
-  }
-}
 
 
 function checkEnableTab() {
     try {
         const tab2 = document.getElementById("tab_filters");
-        const file1Selected = document.querySelector("#dropdownILR1 .option.selected");
-        const file2Selected = document.querySelector("#dropdownILR2 .option.selected");
+        const file1Selected = document.querySelector("#dropdown1 .option.selected");
+        const file2Selected = document.querySelector("#dropdown2 .option.selected");
 
         if (file1Selected && file2Selected) {
         tab2.classList.remove("govuk-tabs__tab--disabled");
