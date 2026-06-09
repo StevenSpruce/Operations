@@ -1,0 +1,127 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<script>
+  
+function continueBtnClick() {       
+  try {
+      if ((document.getElementById("academicYear1").checked) || (document.getElementById("academicYear2").checked) || (document.getElementById("academicYear3").checked) || (document.getElementById("academicYear3").checked))
+      {
+        window.location.href = "./provider-selection.html";
+      }
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+</script>
+
+
+<section aria-label="Service information" class="govuk-service-navigation"
+         data-module="govuk-service-navigation">
+    <div class="govuk-width-container">
+        <div class="govuk-service-navigation__container">
+            <span class="govuk-service-navigation__service-name">
+                <a href="/" class="govuk-service-navigation__link">
+                    Submit learner data
+                </a>
+            </span>
+        </div>
+    </div>
+</section>
+        <div class="govuk-body account-info">
+        <div>
+            <span class="your-name" id="bannerUserName">
+                Rajesh PATEL
+ UKPRN:10000222             </span>
+            <a class="account-link" href="/Account/SignOut">Sign out</a>
+        </div>
+    </div>
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+            There’s a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                    <a href="#controls" autofocus="">Check data you want to submit</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+      <main class="govuk-main-wrapper" id="content" role="main">
+          <div class="govuk-grid-row flex">
+              <div class="govuk-grid-column-full">
+                
+
+
+
+<div class="govuk-form-group  govuk-form-group--error">
+
+        <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                    Select academic year
+                </h1>
+            </legend>
+
+            <div><span class="govuk-error-message">Choose an option from the list</span></div>
+
+            <input type="hidden" id="submissionType" value="ILR" name="collectionType">
+            <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="academicYear1" name="academicYear" type="radio" value="2026">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          2026 to 2027
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="academicYear2" name="academicYear" type="radio" value="2025">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+          2025 to 2026
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="academicYear3" name="academicYear" type="radio" value="2024">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+          2024 to 2025
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="academicYear4" name="academicYear" type="radio" value="2023">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">
+          2023 to 2024
+        </label>
+      </div>
+        </fieldset>
+
+    </div>
+
+
+
+<a draggable="false" class="govuk-button" onclick="continueBtnClick()">Continue</a>
+
+</div>
+</div>
+</div>
+
+
+                  <div class="govuk-grid-column-one-third">
+                        <br><br><br><br><br>
+     
+            
+                  </div>
+          </div>
+      </main>
+  </div>
+</body>
+
+
+{% endblock %}
