@@ -49,9 +49,9 @@ GOV.UK Prototype Kit
 
       <select
         class="govuk-select"
-        id="subject"
-        name="subject"
-        aria-describedby="subject-hint"
+        id="provideSelection"
+        name="Provide selection"
+        aria-describedby="Provide-hint"
       >
         <option value="choose" selected>Choose provider</option>
 <option value="10000020 ">10000020 - 5 E LTD.</option>
@@ -2123,7 +2123,21 @@ GOV.UK Prototype Kit
 <script>
 
   function handleBtnClick(btn) {
-    window.location.href = "./reports-history.html";
+   
+    try {
+      const select = document.getElementById("provideSelection");
+      const selectedValue = select.value;
+      if (selectedValue ==='choose')
+      {
+        window.location.href = "/cias/reports/provider-selection-error";
+      }
+      else
+      {
+        window.location.href = "/cias/reports/compare";
+      }
+  } catch (error) {
+    console.log(error.message);
+  }
 }
 </script>
 

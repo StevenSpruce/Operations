@@ -13,11 +13,11 @@ function continueBtnClick() {
   try {
       if ((document.getElementById("academicYear1").checked) || (document.getElementById("academicYear2").checked) || (document.getElementById("academicYear3").checked) || (document.getElementById("academicYear3").checked))
       {
-        window.location.href = "./provider-selection.html";
+        window.location.href = "/cias/reports/provider-selection";
       }
       else
       {
-        window.location.href = "./select-academic-year-error.html";
+        window.location.href = "/cias/reports/select-academic-year-error";
       }
   } catch (error) {
     console.log(error.message);
@@ -58,7 +58,6 @@ function continueBtnClick() {
 
       <h1 class="govuk-heading-xl">Select academic year</h1>
 
-<div class="govuk-form-group  govuk-form-group--error">
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">

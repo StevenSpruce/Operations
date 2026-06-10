@@ -9,7 +9,7 @@ GOV.UK Prototype Kit
 
 <script>
   function handleBtnClick(btn) {
-    window.location.href = "./CrossILR_CompareTab.html";
+    window.location.href = "/cias/reports/compare";
   }
 </script>
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
@@ -61,22 +61,12 @@ GOV.UK Prototype Kit
                 </tbody>
             </table>
 
-              <button 
-  type="button"
-  class="govuk-button govuk-button--start"
-  id="crossILRCompare"
-  onclick="handleBtnClick(this)">
-
-          Cross ILR Compare
-          <svg class="govuk-button__start-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              width="17.5"
-              height="19"
-              viewBox="0 0 33 40"
-              aria-hidden="true"
-              focusable="false">
-            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-          </svg>
+        <button 
+            type="button"
+            class="govuk-button"
+            id="crossILRCompare"
+            onclick="handleBtnClick(this)">
+            Cross ILR Compare
         </button>
 
     </main>
