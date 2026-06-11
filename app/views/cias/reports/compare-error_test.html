@@ -96,7 +96,20 @@ GOV.UK Prototype Kit
         </div>
     </div>
 
-
+ <div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#returnPeriod1">Please select a return period for selection 1</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
 <a  href="/reports-history" class="govuk-back-link">Back</a>
 
 <h2 class="govuk-heading">Cross ILR Compare</h2>
@@ -132,10 +145,22 @@ GOV.UK Prototype Kit
   </h2>
 
   <div class="return-card">
+
+    <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                  <span class="govuk-warning-text__assistive">Warning</span>
+                  There are incomplete staff records.
+                </strong>
+              </div>
+
     
-    <label class="govuk-label" for="location">
-      Return period 1
-    </label>
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                      Complete your staff collection
+                    </h1>
+                  </legend>
     <!-- Dropdown 1 -->
    <select
         class="govuk-select"
@@ -149,6 +174,7 @@ GOV.UK Prototype Kit
         <option value="4">R04</option>
         <option value="5">R05</option>
     </select>
+</fieldset>
 
           
     <!-- TABLE (recommended GOV pattern) -->
@@ -161,12 +187,16 @@ GOV.UK Prototype Kit
         </tr>
       </thead>
 
-      
       <tbody class="govuk-table__body">
           <td class="govuk-table__cell">
-            <label class="govuk-label" for="location">
-                ILR file 1
-            </label>
+          <div class="govuk-form-group govuk-form-group--error">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
+              <p id="passport-issued-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span>Confirm the staff data is complete</p>
+                    <div class="govuk-date-input" id="passport-issued">
+                    <label class="govuk-label" for="location">
+                        ILR file
+                    </label>
               <!-- Dropdown 1 -->
               <select
                 class="govuk-select"
@@ -179,12 +209,11 @@ GOV.UK Prototype Kit
                 <option value="2">ILR-10001919-2526-20251205-153142</option>
                 <option value="3">ILR-10001919-2526-20251104-080712</option>
               </select>
+            </div>
+            </fieldset>
+          </div>
           </td>
           <td class="govuk-table__cell">
-            <label class="govuk-label" for="location">
-                Funding period 1
-            </label>
-
             <!-- Dropdown 1 -->
              <select
                 class="govuk-select"
@@ -192,6 +221,7 @@ GOV.UK Prototype Kit
                 name="Funding selection"
                 aria-describedby="Provide-hint"
               >
+                <option value="choose" selected>Select funding period</option>
                 <option value="01">01</option>
                 <option value="02">02</option>
                 <option value="03">03</option>
@@ -217,9 +247,6 @@ GOV.UK Prototype Kit
 
   <div class="return-card">
   
-    <label class="govuk-label" for="location">
-      Return period 2
-    </label>
       <!-- Dropdown 1 -->
     <select
         class="govuk-select"
@@ -251,11 +278,8 @@ GOV.UK Prototype Kit
           
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
-            <label class="govuk-label" for="location">
-                ILR file 2
-            </label>
             <!-- Dropdown 2 -->
-
+             <!-- Dropdown 1 -->
               <select
                 class="govuk-select"
                 id="ilrSelection2"
@@ -272,16 +296,15 @@ GOV.UK Prototype Kit
             
           </td>
           <td class="govuk-table__cell">
-             <label class="govuk-label" for="location">
-                Funding period 2
-            </label>
             <!-- Dropdown 2 -->
+            <!-- Dropdown 1 -->
              <select
                 class="govuk-select"
                 id="fundingSelection2"
                 name="Funding selection"
                 aria-describedby="Provide-hint"
               >
+                <option value="choose" selected>Select funding period</option>
                 <option value="01">01</option>
                 <option value="02">02</option>
                 <option value="03">03</option>
@@ -752,7 +775,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function handleBtnClick(btn) {
 
-  checkILRFileSelections();
   
   //window.location.href = "./generating-report.html";
 }
@@ -760,13 +782,11 @@ function handleBtnClick(btn) {
 
 function checkILRFileSelections() {
   try {
-    
-    const dropdownRtn1Value = document.getElementById("returnPeriod1").value;
-    if (dropdownRtn1Value === 'Choose') {
+    const selectedOptionRtn1 = document.querySelector("#dropdownRtn1 .option.selected");
+    // Enable dropdowns for selection 1 when rtn1 dropdown is selected
+    if (!selectedOptionRtn1) {
       
     } 
-
-    alert(dropdownRtn1Value);
 
     const selectedOptionRtn2 = document.querySelector("#dropdownRtn2 .option.selected");
 
@@ -776,7 +796,6 @@ function checkILRFileSelections() {
     }
   } catch (error) {
       console.log(error.message);
-      alert("error");
   }
 }
 

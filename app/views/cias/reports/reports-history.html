@@ -4,15 +4,8 @@
 GOV.UK Prototype Kit
 {% endblock %}
 
+
 {% block content %}
-
-
-<script>
-  function handleBtnClick(btn) {
-    window.location.href = "/cias/reports/compare";
-  }
-</script>
-
 
 <section aria-label="Service information" class="govuk-service-navigation"
          data-module="govuk-service-navigation">
@@ -34,68 +27,142 @@ GOV.UK Prototype Kit
             <a class="account-link" href="/Account/SignOut">Sign out</a>
         </div>
     </div>
-
+  </br>
 
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
-
-    <main class="govuk-main-wrapper" id="content" role="main">
-        <div class="govuk-grid-row flex">
+    <div class="govuk-grid-row">
+    
+        <div class="govuk-grid-column">
+            <h1 class="govuk-heading-xl">Cross ILR</h1>
+    
+            <a href="select-academic-year.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+                 Generate cross ILR report
+                <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M11 0H8V8H0V11H8V19H11V11H19V8H11V0Z"></path>
+                </svg></a>
+    
+        </div>
+    </div>
+    
+    
+    <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            <h2 class="govuk-heading-l">
+                Historical ILR reports created
+            </h2>
+            <p class="govuk-body">Select a ILR report to view</p>
+            <div class="govuk-input-group">
+                <div class="govuk-form-group titan-filter">
+                  <label class="govuk-label" for="event-name">
+                      Filter by <strong>Academic year, reporting period, or cross ILR filename</strong>
+                  </label>
+                  <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text">
+            </div>
+            <div>
+              <button id="search" type="search" class="govuk-button govuk-button--start govuk-!-margin-bottom-0">
+              Search
+              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+                  <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+              </svg>
+              </button>
+            </div>
 
-        <h1 class="govuk-heading">Cross ILR Reports</h1>
+            <br>
+                
+            <div class="govuk-form-group titan-filter">
+                    <label class="govuk-label" for="sort">
+                        Show cross ILR reports
+                    </label>
+                    <select class="govuk-select" id="sort" name="sort">
+                        <option value="updated" selected="">10 cross ILR reports per page</option>
+                        <option value="published">20 cross ILR reports per page</option>
+                        <option value="views">30 cross ILR reports per page</option>
+                    </select>
+                </div>
+            </div>
+ 
 
-            <table class="govuk-table">
-                <caption class="govuk-table__caption govuk-visually-hidden">Table R09</caption>
+            <input name="selected-course" value="" style="display:none">
+            <table class="govuk-table" data-module="moj-sortable-table">
                 <thead class="govuk-table__head">
-                    <tr class="govuk-table__row">
-                        <th class="govuk-table__header" scope="col">Filename</th>
-                        <th class="govuk-table__header" scope="col">Uploaded By</th>
-                        <th class="govuk-table__header" scope="col">Generated At</th>
-                        <th class="govuk-table__header" scope="col">Status</th>
-                        <th class="govuk-table__header" scope="col">Download Link</th>
-
-                    </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Academic year</th>
+                    <th scope="col" class="govuk-table__header">Reporting period </th>
+                    <th scope="col" class="govuk-table__header">Filename</th>
+                    <th scope="col" class="govuk-table__header">Created by</th>
+                    <th scope="col" class="govuk-table__header">Status</th>
+                    <th scope="col" class="govuk-table__header">Download Link</th>
+                  </tr>
                 </thead>
                 <tbody class="govuk-table__body">
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell" scope="row">CrossILR-ILR-10001919-2526-20251205-153142-02_ILR-10001919-2526-20251104-080712-03.xlsx</td>
-                            <td class="govuk-table__cell" scope="row">Rajesh Patel</td>
-                            <td class="govuk-table__cell" scope="row">26/05/2026</td>
-                            <td class="govuk-table__cell" scope="row">Success</td>
-                            <td class="govuk-table__cell">
-                                    <a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">
-                                        Download reports
-                                    </a>
-                            </td>
-                        </tr>
-                        
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell" scope="row">CrossILR-ILR-10001919-2526-20260204-152318-05_ILR-10001919-2526-20260204-152318-06.xlsx</td>
-                            <td class="govuk-table__cell" scope="row">Rajesh Patel</td>
-                            <td class="govuk-table__cell" scope="row">29/05/2026</td>
-                            <td class="govuk-table__cell" scope="row">Fail</td>
-                            <td class="govuk-table__cell">
-                                    <a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">
-                                        Contact Helpdesk
-                                    </a>
-                            </td>
-                        </tr>
-
+                  <tr class="govuk-table__row">     
+                    <td class="govuk-table__cell">2025 to 2026</td>
+                    <td class="govuk-table__cell">R01</td>
+                    <td class="govuk-table__cell">CrossILR-ILR-10001919-2526-20251205-153142-02_ILR-10001919-2526-20251104-080712-03.xlsx</td>    
+                    <td class="govuk-table__cell">Rajesh Patel</td>
+                    <td class="govuk-table__cell">Success</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">2025 to 2026</td>
+                    <td class="govuk-table__cell">R01</td>
+                    <td class="govuk-table__cell">CrossILR-ILR-10001919-2526-20251205-153142-02_ILR-10001919-2526-20251104-080712-03.xlsx</td>    
+                    <td class="govuk-table__cell">Rajesh Patel</td>
+                    <td class="govuk-table__cell">Success</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">2025 to 2026</td>
+                    <td class="govuk-table__cell">R01</td>
+                    <td class="govuk-table__cell">CrossILR-ILR-10001919-2526-20251205-153142-02_ILR-10001919-2526-20251104-080712-03.xlsx</td>    
+                    <td class="govuk-table__cell">Rajesh Patel</td>
+                    <td class="govuk-table__cell">Success</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
+                  </tr>
                 </tbody>
             </table>
+     
+        </div>
+    </div>
+    
+    
+    <nav class="govuk-pagination" role="navigation" aria-label="results">
+        <div class="govuk-pagination__prev">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            <span class="govuk-pagination__link-title">Previous</span></a>
+        </div>
+        <ul class="govuk-pagination__list">
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+              1
+            </a>
+          </li>
+          <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+              2
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-pagination__next">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg></a>
+        </div>
+      </nav>
 
-        <button 
-            type="button"
-            class="govuk-button"
-            id="crossILRCompare"
-            onclick="handleBtnClick(this)">
-            Cross ILR Compare
-        </button>
+    
+            </main>
 
-    </main>
-
-</body>
 
 
 {% endblock %}
