@@ -1,0 +1,101 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<script>
+  function handleBtnClick(btn) {
+    window.location.href = "/cias/reports/compare";
+  }
+</script>
+
+
+<section aria-label="Service information" class="govuk-service-navigation"
+         data-module="govuk-service-navigation">
+    <div class="govuk-width-container">
+        <div class="govuk-service-navigation__container">
+            <span class="govuk-service-navigation__service-name">
+                <a href="/" class="govuk-service-navigation__link">
+                    Submit learner data
+                </a>
+            </span>
+        </div>
+    </div>
+</section>
+        <div class="govuk-body account-info">
+        <div>
+            <span class="your-name" id="bannerUserName">
+                Rajesh PATEL
+ UKPRN:10000222             </span>
+            <a class="account-link" href="/Account/SignOut">Sign out</a>
+        </div>
+    </div>
+
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+    <main class="govuk-main-wrapper" id="content" role="main">
+        <div class="govuk-grid-row flex">
+        <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading">Cross ILR Reports</h1>
+
+            <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-visually-hidden">Table R09</caption>
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col">Filename</th>
+                        <th class="govuk-table__header" scope="col">Uploaded By</th>
+                        <th class="govuk-table__header" scope="col">Generated At</th>
+                        <th class="govuk-table__header" scope="col">Status</th>
+                        <th class="govuk-table__header" scope="col">Download Link</th>
+
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" scope="row">CrossILR-ILR-10001919-2526-20251205-153142-02_ILR-10001919-2526-20251104-080712-03.xlsx</td>
+                            <td class="govuk-table__cell" scope="row">Rajesh Patel</td>
+                            <td class="govuk-table__cell" scope="row">26/05/2026</td>
+                            <td class="govuk-table__cell" scope="row">Success</td>
+                            <td class="govuk-table__cell">
+                                    <a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">
+                                        Download reports
+                                    </a>
+                            </td>
+                        </tr>
+                        
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" scope="row">CrossILR-ILR-10001919-2526-20260204-152318-05_ILR-10001919-2526-20260204-152318-06.xlsx</td>
+                            <td class="govuk-table__cell" scope="row">Rajesh Patel</td>
+                            <td class="govuk-table__cell" scope="row">29/05/2026</td>
+                            <td class="govuk-table__cell" scope="row">Fail</td>
+                            <td class="govuk-table__cell">
+                                    <a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">
+                                        Contact Helpdesk
+                                    </a>
+                            </td>
+                        </tr>
+
+                </tbody>
+            </table>
+
+        <button 
+            type="button"
+            class="govuk-button"
+            id="crossILRCompare"
+            onclick="handleBtnClick(this)">
+            Cross ILR Compare
+        </button>
+
+    </main>
+
+</body>
+
+
+{% endblock %}

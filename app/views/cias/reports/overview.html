@@ -1,0 +1,71 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+Cross ILR overview
+{% endblock %}
+
+{% block content %}
+
+
+<section aria-label="Service information" class="govuk-service-navigation"
+         data-module="govuk-service-navigation">
+    <div class="govuk-width-container">
+        <div class="govuk-service-navigation__container">
+            <span class="govuk-service-navigation__service-name">
+                <a href="/" class="govuk-service-navigation__link">
+                    Submit learner data
+                </a>
+            </span>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <div class="govuk-width-container">
+
+            <div class="govuk-body account-info">
+        <div>
+            <span class="your-name" id="bannerUserName">
+                Rajesh PATEL
+ UKPRN:10000222             </span>
+            <a class="account-link" href="/Account/SignOut">Sign out</a>
+        </div>
+    </div>
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <div class="govuk-grid-column-full">
+                    
+
+                    
+        <form method="get" action="/cias/reports/reports-history">
+            <h1 class="govuk-heading-xl">Cross ILR reporting</h1>
+        <p class="govuk-body">
+                This service enables you to identify changes between two ILR submissions and assess their impact on funding.
+            </p>
+
+            <p class="govuk-body">
+                You will be prompted to select an academic year, then a return period, and finally the ILR files to compare, which are filtered by that return period.
+            </p>
+
+            <p class="govuk-body">The funding period defaults to 12, but you can select any period from 1 to 12.
+The funding shown in the report is cumulative, up to and including the selected period.
+        </p>
+            <p class="govuk-body">Additional filters allow you to select sub-contract UKPRNs and Source of Funding.</p>
+            
+            <button class="govuk-button">Continue</button>
+        </form>           
+        </main>
+    </div>
+
+</body>
+</html>
+
+
+
+
+{% endblock %}
