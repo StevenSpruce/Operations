@@ -1,13 +1,32 @@
 {% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-GOV.UK Prototype Kit
+Cross ILR overview
 {% endblock %}
-
 
 {% block content %}
 
-<section aria-label="Service information" class="govuk-service-navigation"
+<!DOCTYPE html><!DOCTYPE html="en">
+<head>
+  
+  <!-- GOV.UK CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/govuk-frontend@4.7.0/dist/govuk/all.css">
+
+  <!-- MOJ CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/@ministryofjustice/frontend@1.6.0/moj/all.css">
+
+  <style>
+    .table-container {
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body class="govuk-template__body">
+
+  <main class="govuk-main-wrapper">
+
+    <section aria-label="Service information" class="govuk-service-navigation"
          data-module="govuk-service-navigation">
     <div class="govuk-width-container">
         <div class="govuk-service-navigation__container">
@@ -34,7 +53,9 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-row">
     
         <div class="govuk-grid-column">
-            <h1 class="govuk-heading-xl">Cross ILR</h1>
+            
+        <h1 class="govuk-heading-l">Cross ILR Reports</h1>
+
     
             <a href="select-academic-year.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
                  Generate cross ILR report
@@ -52,14 +73,49 @@ GOV.UK Prototype Kit
             <h2 class="govuk-heading-l">
                 Historical ILR reports created
             </h2>
-            <p class="govuk-body">Select a ILR report to view</p>
-            <div class="govuk-input-group">
+
+             <label class="govuk-label">
+                Select academic year
+            </label>
+              <!-- Dropdown 1 -->
+              <select
+                class="govuk-select"
+                id="academicYearSelection"
+                name="Academic year selection"
+                aria-describedby="Provide-hint"
+              >
+                <option value="1">2026 to 2027</option>
+                <option value="choose" selected>2025 to 2026</option>
+                <option value="2">2024 to 2025</option>
+                <option value="3">2023 to 2024</option>
+              </select>
+            </br>
+            </br>
+
+            <div class="filters">
+             <div class="govuk-form-group">
                 <div class="govuk-form-group titan-filter">
                   <label class="govuk-label" for="event-name">
-                      Filter by <strong>Academic year, reporting period, or cross ILR filename</strong>
+                      Filter by <strong>reporting period, or cross ILR filename</strong>
                   </label>
                   <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text">
             </div>
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="rows">
+                Rows per page
+                </label>
+                <select class="govuk-select" id="rows">
+                <option selected>10</option>
+                <option>20</option>
+                <option>30</option>
+                <option>40</option>
+                <option>50</option>
+                </select>
+            </div>
+
+            </div>
+            
             <div>
               <button id="search" type="search" class="govuk-button govuk-button--start govuk-!-margin-bottom-0">
               Search
@@ -70,78 +126,95 @@ GOV.UK Prototype Kit
             </div>
 
             <br>
-                
-            <div class="govuk-form-group titan-filter">
-                    <label class="govuk-label" for="sort">
-                        Show cross ILR reports
-                    </label>
-                    <select class="govuk-select" id="sort" name="sort">
-                        <option value="updated" selected="">10 cross ILR reports per page</option>
-                        <option value="published">20 cross ILR reports per page</option>
-                        <option value="views">30 cross ILR reports per page</option>
-                    </select>
-                </div>
-            </div>
- 
+    
+    <!--Table -->
+    <div class="table-container">
 
-            <input name="selected-course" value="" style="display:none">
-            <table class="govuk-table" data-module="moj-sortable-table">
-                <thead class="govuk-table__head">
-                  <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header">Academic year</th>
-                    <th scope="col" class="govuk-table__header">Report periods </th>
-                    <th scope="col" class="govuk-table__header">ILR files</th>
-                    <th scope="col" class="govuk-table__header">Funding periods</th>
-                    <th scope="col" class="govuk-table__header">Created by</th>
-                    <th scope="col" class="govuk-table__header">Status</th>
-                    <th scope="col" class="govuk-table__header">Download link</th>
-                  </tr>
-                </thead>
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">     
-                    <td class="govuk-table__cell">2025 to 2026</td>
-                    <td class="govuk-table__cell">R01<br>R03</td>
-                    <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>    
-                    <td class="govuk-table__cell">12<br>12</td>
-                    <td class="govuk-table__cell">Rajesh Patel</td>
-                    <td class="govuk-table__cell">Success</td>
-                    <td class="govuk-table__cell"><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">2025 to 2026</td>
-                    <td class="govuk-table__cell">R01<br>R04</td>
-                    <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml<br>ILR-10001919-2526-20251104-080712-03.xml</td>    
-                    <td class="govuk-table__cell">12<br>12</td>
-                    <td class="govuk-table__cell">Rajesh Patel</td>
-                    <td class="govuk-table__cell">Success</td>
-                    <td class="govuk-table__cell"><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">2025 to 2026</td>
-                    <td class="govuk-table__cell">R01<br>R05</td>
-                    <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>     
-                  <td class="govuk-table__cell">12<br>12</td>
-                    <td class="govuk-table__cell">Rajesh Patel</td>
-                    <td class="govuk-table__cell">Success</td>
-                    <td class="govuk-table__cell"><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">2025 to 2026</td>
-                    <td class="govuk-table__cell">R02<br>R04</td>
-                    <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>     
-                  <td class="govuk-table__cell">12<br>12</td>
-                    <td class="govuk-table__cell">Rajesh Patel</td>
-                    <td class="govuk-table__cell">Success</td>
-                    <td class="govuk-table__cell"><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
-                  </tr>
-                </tbody>
-            </table>
-     
-        </div>
+      <table class="govuk-table moj-sortable-table" data-module="moj-sortable-table">
+
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+
+            <th scope="col" class="govuk-table__header" aria-sort="none">
+              <button class="moj-sortable-table__button">Created date</button>
+            </th>
+
+            <th scope="col" class="govuk-table__header" aria-sort="none">
+              <button class="moj-sortable-table__button">Report periods</button>
+            </th>
+
+            <th scope="col" class="govuk-table__header" aria-sort="none">
+              <button class="moj-sortable-table__button">ILR files </button>
+            </th>
+
+            <th scope="col" class="govuk-table__header" aria-sort="none">
+              <button class="moj-sortable-table__button">Funding periods</button>
+            </th>
+
+            <th scope="col" class="govuk-table__header" aria-sort="none">
+              <button class="moj-sortable-table__button">Created by</button>
+            </th>
+
+
+            <th scope="col" class="govuk-table__header" aria-sort="none">
+              <button class="moj-sortable-table__button">Status</button>
+            </th>
+            <th scope="col" class="govuk-table__header">
+              	Download link
+            </th>
+          </tr>
+        </thead>
+
+        <tbody class="govuk-table__body" id="table-body">
+ 
+   
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">16 June 2026 at 10:56</td>
+            <td class="govuk-table__cell">R04<br>R05</td>
+            <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>    
+            <td class="govuk-table__cell">12<br>12</td>
+            <td class="govuk-table__cell">Rajesh Patel</td>
+            <td class="govuk-table__cell">Success</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">15 June 2026 at 14:07</td>
+            <td class="govuk-table__cell">R01<br>R04</td>
+            <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>    
+            <td class="govuk-table__cell">12<br>12</td>
+            <td class="govuk-table__cell">Rajesh Patel</td>
+            <td class="govuk-table__cell">Success</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
+          </tr>
+
+           <tr class="govuk-table__row">
+            <td class="govuk-table__cell">06 June 2026 at 08:33/td>
+            <td class="govuk-table__cell">R01<br>R03</td>
+            <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>    
+            <td class="govuk-table__cell">12<br>12</td>
+            <td class="govuk-table__cell">Rajesh Patel</td>
+            <td class="govuk-table__cell">Success</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">04 June 2026 at 15:42</td>
+            <td class="govuk-table__cell">R01<br>R03</td>
+            <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>    
+            <td class="govuk-table__cell">12<br>12</td>
+            <td class="govuk-table__cell">Rajesh Patel</td>
+            <td class="govuk-table__cell">Fail</td>
+            <td class="govuk-table__cell">Contact helpdesk</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
     </div>
+
     
-    
-    <nav class="govuk-pagination" role="navigation" aria-label="results">
         <div class="govuk-pagination__prev">
           <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
             <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
@@ -173,9 +246,31 @@ GOV.UK Prototype Kit
         </div>
       </nav>
 
-    
-            </main>
+  </main>
 
+  <!-- Scripts -->
+  <script src="https://unpkg.com/govuk-frontend@4.7.0/dist/govuk/all.js"></script>
+  <script src="https://unpkg.com/@ministryofjustice/frontend@1.6.0/moj/all.js"></script>
+
+  <script>
+    window.GOVUKFrontend.initAll();
+    window.MOJFrontend.initAll();
+
+    // Simple client-side filter
+    document.getElementById("filter").addEventListener("keyup", function () {
+      const filter = this.value.toLowerCase();
+      const rows = document.querySelectorAll("#table-body tr");
+
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(filter) ? "" : "none";
+      });
+    });
+  </script>
+
+</body>
+</html>
+``
 
 
 {% endblock %}

@@ -13,6 +13,7 @@
     "@govuk-prototype-kit/common-templates": "3.0.0",
     "@govuk-prototype-kit/step-by-step": "^2.1.0",
     "@govuk-prototype-kit/task-list": "2.0.0",
+    "@ministryofjustice/frontend": "^9.0.0",
     "govuk-frontend": "^6.0.0",
     "govuk-prototype-kit": "^13.20.0",
     "hmrc-frontend": "7.8.0",
