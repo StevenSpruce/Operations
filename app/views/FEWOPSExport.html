@@ -59,17 +59,30 @@
     <table class="govuk-table">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header"><h2 class="govuk-heading-l">Staff collection</h2></th>
-  
-  <div class="govuk-grid-column-one-half" style="display: flex; flex-direction: column; align-items: flex-end;">
-    
-    {{ govukButton({
-      text: "Export new submission report",
-      classes: "govuk-!-margin-bottom-3"
-    }) }}
 
-    {{ govukButton({
-      text: "Export submission progress report"
-    }) }}
+  </div>
+  
+  <!-- Right column: aligned to the right edge -->
+  <div class="govuk-grid-column-one-half" style="display: flex; justify-content: flex-end;">
+    
+    <!-- Button wrapper: forces children to stretch to the same width -->
+    <div style="display: flex; flex-direction: column; align-items: stretch;">
+      
+      <!-- New Top Button -->
+      {{ govukButton({
+        text: "Export new submission report",
+        classes: "govuk-!-margin-bottom-3"
+      }) }}
+
+      <!-- Existing Bottom Button -->
+      {{ govukButton({
+        text: "Export submission progress report",
+        classes: "govuk-!-margin-bottom-0"
+      }) }}
+
+    </div>
+  </div>
+</div>
 
   </div>
 </div>
