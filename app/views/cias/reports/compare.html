@@ -581,6 +581,7 @@ function handleBtnClick() {
     const dropdownRtn2Value = document.getElementById("returnPeriod2").value;
     const dropdownILR2Value = document.getElementById("ilrSelection2").value;
 
+    
     if ((dropdownRtn1Value === 'choose') && (dropdownILR1Value === 'choose') && (dropdownRtn2Value === 'choose')  && (dropdownILR2Value === 'choose') ){
           window.location.href = "/cias/reports/compare-error4";
       return;
@@ -601,6 +602,7 @@ function handleBtnClick() {
       return;
     }
     else {
+     
       window.location.href = "/cias/reports/generating-report";
     }
 
