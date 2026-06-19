@@ -96,6 +96,20 @@ GOV.UK Prototype Kit
         </div>
     </div>
 
+ <div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#ilrSelection1">The same ILRs files have been selected</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
 
 <a  href="/cias/reports/select-academic-year" class="govuk-back-link">Back</a>
 
@@ -132,7 +146,8 @@ GOV.UK Prototype Kit
   </h2>
 
   <div class="return-card">
-    
+     
+ 
     <label class="govuk-label" for="location">
       Return period 1
     </label>
@@ -142,15 +157,13 @@ GOV.UK Prototype Kit
         id="returnPeriod1"
         name="Return period selection"
       >
-        <option value="choose" selected>Select return period</option>
+        <option value="choose">Select return period</option>
         <option value="1">R01</option>
-        <option value="2">R02</option>
+        <option value="2" selected>R02</option>
         <option value="3">R03</option>
         <option value="4">R04</option>
         <option value="5">R05</option>
     </select>
-
-          
     <!-- TABLE (recommended GOV pattern) -->
     <table class="govuk-table">
 
@@ -163,26 +176,45 @@ GOV.UK Prototype Kit
 
       
       <tbody class="govuk-table__body">
-          <td class="govuk-table__cell">
-            <label class="govuk-label" for="location">
-                ILR file 1
-            </label>
-              <!-- Dropdown 1 -->
-              <select
-                class="govuk-select"
-                id="ilrSelection1"
-                name="ILR selection"
-                aria-describedby="Provide-hint"
-              >
-                <option value="choose" selected>Select ILR file</option>
-                <option value="1">ILR-10001919-2526-20250903-163112</option>
-                <option value="2">ILR-10001919-2526-20251205-153142</option>
-                <option value="3">ILR-10001919-2526-20251104-080712</option>
-              </select>
+              <td class="govuk-table__cell">
+           <div class="govuk-form-group govuk-form-group--error">
+  <fieldset 
+    class="govuk-fieldset" 
+    role="group" 
+    aria-describedby="passport-issued-hint passport-issued-error"
+  >
+    <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span>
+      Select another ILR file
+    </p>
+
+    <div class="govuk-date-input" id="passport-issued">
+      <label class="govuk-label" for="ilrSelection1">
+        ILR file 1
+      </label>
+
+      <!-- Dropdown 1 -->
+      <select
+        class="govuk-select"
+        id="ilrSelection1"
+        name="ILR selection"
+        aria-describedby="Provide-hint"
+      >
+        <option value="choose" selected>Select ILR file</option>
+        <option value="1">ILR-10001919-2526-20250903-163112</option>
+        <option value="2" selected>ILR-10001919-2526-20251205-153142</option>
+        <option value="3">ILR-10001919-2526-20251104-080712</option>
+      </select>
+    </div>
+
+  </fieldset>
+</div>
           </td>
           <td class="govuk-table__cell">
             <label class="govuk-label" for="location">
-                Funding period 1
+              </br>  
+              </br>  
+              Funding period 1
             </label>
 
             <!-- Dropdown 1 -->
@@ -216,23 +248,26 @@ GOV.UK Prototype Kit
   </h2>
 
   <div class="return-card">
-  
-    <label class="govuk-label" for="location">
-      Return period 2
-    </label>
-      <!-- Dropdown 1 -->
-    <select
+
+      <label class="govuk-label" for="returnPeriod1">
+        Return period 2
+      </label>
+
+      <!-- Dropdown 2 -->
+      <select
         class="govuk-select"
         id="returnPeriod2"
         name="Return period selection"
       >
         <option value="choose" selected>Select return period</option>
         <option value="1">R01</option>
-        <option value="2">R02</option>
+        <option value="2" selected>R02</option>
         <option value="3">R03</option>
         <option value="4">R04</option>
         <option value="5">R05</option>
-    </select>
+      </select>
+   
+
 
 
     <!-- TABLE 2 (recommended GOV pattern) -->
@@ -250,30 +285,44 @@ GOV.UK Prototype Kit
         
           
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            <label class="govuk-label" for="location">
-                ILR file 2
-            </label>
-            <!-- Dropdown 2 -->
+                      <td class="govuk-table__cell">
+           <div class="govuk-form-group govuk-form-group--error">
+  <fieldset 
+    class="govuk-fieldset" 
+    role="group" 
+    aria-describedby="passport-issued-hint passport-issued-error"
+  >
+    <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span>
+      Select another ILR file
+    </p>
 
-              <select
-                class="govuk-select"
-                id="ilrSelection2"
-                name="ILR selection"
-                aria-describedby="Provide-hint"
-              >
-                <option value="choose" selected>Select ILR file</option>
-                <option value="1">ILR-10001919-2526-20251205-153142</option>
-                <option value="2">ILR-10001919-2526-20251104-080712</option>
-                <option value="3">ILR-10001919-2526-20251204-132448</option>
-                <option value="4">ILR-10001919-2526-20260106-100915</option>
-                <option value="5">ILR-10001919-2526-20260204-152318</option>
-              </select>
-            
-          </td>
+    <div class="govuk-date-input" id="passport-issued">
+      <label class="govuk-label" for="ilrSelection2">
+        ILR file 2
+      </label>
+
+      <!-- Dropdown 3 -->
+      <select
+        class="govuk-select"
+        id="ilrSelection2"
+        name="ILR selection"
+        aria-describedby="Provide-hint"
+      >
+        <option value="choose">Select ILR file</option>
+        <option value="11" selected>ILR-10001919-2526-20251205-153142</option>
+        <option value="12">ILR-10001919-2526-20251104-080712</option>
+        <option value="13">ILR-10001919-2526-20251204-132448</option>
+        <option value="14">ILR-10001919-2526-20260106-100915</option>
+        <option value="15">ILR-10001919-2526-20260204-152318</option>
+    </div>
+
+  </fieldset>
+</div>
+</td>
           <td class="govuk-table__cell">
              <label class="govuk-label" for="location">
-                Funding period 2
+              Funding period 2
             </label>
             <!-- Dropdown 2 -->
              <select
@@ -570,16 +619,15 @@ document.addEventListener("DOMContentLoaded", function () {
   updateFilters();
 });
 
-
-
-
 function handleBtnClick() {
   try {
     
+   
     const dropdownRtn1Value = document.getElementById("returnPeriod1").value;
     const dropdownILR1Value = document.getElementById("ilrSelection1").value;
     const dropdownRtn2Value = document.getElementById("returnPeriod2").value;
     const dropdownILR2Value = document.getElementById("ilrSelection2").value;
+
 
     
     if ((dropdownRtn1Value === 'choose') && (dropdownILR1Value === 'choose') && (dropdownRtn2Value === 'choose')  && (dropdownILR2Value === 'choose') ){
@@ -601,20 +649,10 @@ function handleBtnClick() {
       window.location.href = "/cias/reports/compare-error1";
       return;
     }
-
-
-    var ilrDropdown1 = document.getElementById("ilrSelection1");
-    var ilrDropdown2 = document.getElementById("ilrSelection2");
-    var ilrText1 = ilrDropdown1.options[ilrDropdown1.selectedIndex].text;
-    var ilrText2 = ilrDropdown2.options[ilrDropdown2.selectedIndex].text;
-
-    if ((ilrText1 === ilrText2) && (dropdownRtn1Value === dropdownRtn2Value)){
-      window.location.href = "/cias/reports/compare-error5";
-      return;
-    }else{
+    else {
      
       window.location.href = "/cias/reports/generating-report";
-   }
+    }
 
   } catch (error) {
       console.log(error.message);
