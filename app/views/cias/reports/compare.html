@@ -263,11 +263,11 @@ GOV.UK Prototype Kit
                 aria-describedby="Provide-hint"
               >
                 <option value="choose" selected>Select ILR file</option>
-                <option value="11">ILR-10001919-2526-20251205-153142</option>
-                <option value="12">ILR-10001919-2526-20251104-080712</option>
-                <option value="13">ILR-10001919-2526-20251204-132448</option>
-                <option value="14">ILR-10001919-2526-20260106-100915</option>
-                <option value="15">ILR-10001919-2526-20260204-152318</option>
+                <option value="1">ILR-10001919-2526-20251205-153142</option>
+                <option value="2">ILR-10001919-2526-20251104-080712</option>
+                <option value="3">ILR-10001919-2526-20251204-132448</option>
+                <option value="4">ILR-10001919-2526-20260106-100915</option>
+                <option value="5">ILR-10001919-2526-20260204-152318</option>
               </select>
             
           </td>
@@ -581,6 +581,7 @@ function handleBtnClick() {
     const dropdownRtn2Value = document.getElementById("returnPeriod2").value;
     const dropdownILR2Value = document.getElementById("ilrSelection2").value;
 
+    
     if ((dropdownRtn1Value === 'choose') && (dropdownILR1Value === 'choose') && (dropdownRtn2Value === 'choose')  && (dropdownILR2Value === 'choose') ){
           window.location.href = "/cias/reports/compare-error4";
       return;
@@ -600,9 +601,20 @@ function handleBtnClick() {
       window.location.href = "/cias/reports/compare-error1";
       return;
     }
-    else {
+
+
+    var ilrDropdown1 = document.getElementById("ilrSelection1");
+    var ilrDropdown2 = document.getElementById("ilrSelection2");
+    var ilrText1 = ilrDropdown1.options[ilrDropdown1.selectedIndex].text;
+    var ilrText2 = ilrDropdown2.options[ilrDropdown2.selectedIndex].text;
+
+    if ((ilrText1 === ilrText2) && (dropdownRtn1Value === dropdownRtn2Value)){
+      window.location.href = "/cias/reports/compare-error5";
+      return;
+    }else{
+     
       window.location.href = "/cias/reports/generating-report";
-    }
+   }
 
   } catch (error) {
       console.log(error.message);

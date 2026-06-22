@@ -661,32 +661,44 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-function handleBtnClick(btn) {
-
-  checkILRFileSelections();
-  
-  //window.location.href = "./generating-report.html";
-}
-
-
-function checkILRFileSelections() {
+function handleBtnClick() {
   try {
     
     const dropdownRtn1Value = document.getElementById("returnPeriod1").value;
-    if (dropdownRtn1Value === 'Choose') {
-      
-    } 
-
-    const selectedOptionRtn2 = document.querySelector("#dropdownRtn2 .option.selected");
-
-    if (selectedOptionRtn2) {
-      document.getElementById("dropdownILR2").classList.remove("disabled");
-      document.getElementById("fundingPeriod2").classList.remove("disabled");
+    const dropdownILR1Value = document.getElementById("ilrSelection1").value;
+    const dropdownRtn2Value = document.getElementById("returnPeriod2").value;
+    const dropdownILR2Value = document.getElementById("ilrSelection2").value;
+    
+    if ((dropdownRtn1Value === 'choose') && (dropdownILR1Value === 'choose') && (dropdownRtn2Value === 'choose')  && (dropdownILR2Value === 'choose') ){
+          window.location.href = "/cias/reports/compare-error4";
+      return;
     }
+
+    if ((dropdownILR1Value === 'choose') && (dropdownILR2Value === 'choose') && (dropdownRtn2Value === 'choose') ){
+      window.location.href = "/cias/reports/compare-error3";
+      return;
+    }
+
+    if ((dropdownRtn2Value === 'choose') && (dropdownILR2Value === 'choose')){
+      window.location.href = "/cias/reports/compare-error2";
+      return;
+    }
+
+    if ((dropdownILR2Value === 'choose')){
+      window.location.href = "/cias/reports/compare-error1";
+      return;
+    }
+    else {
+
+      window.location.href = "/cias/reports/generating-report";
+    }
+
   } catch (error) {
       console.log(error.message);
   }
 }
+
+</script>
 
 </script>
 

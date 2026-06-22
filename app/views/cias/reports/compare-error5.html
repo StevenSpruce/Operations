@@ -104,17 +104,14 @@ GOV.UK Prototype Kit
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#returnPeriod2">Select a return period in selection 2</a>
-        </li>
-        <li>
-          <a href="#ilrSelection2">Select a ILR file in selection 2</a>
+          <a href="#ilrSelection1">The same ILR files have been selected</a>
         </li>
       </ul>
     </div>
   </div>
   </div>
 
-<a  href="/reports-history" class="govuk-back-link">Back</a>
+<a  href="/cias/reports/select-academic-year" class="govuk-back-link">Back</a>
 
 <h2 class="govuk-heading">Cross ILR Compare</h2>
 
@@ -150,29 +147,23 @@ GOV.UK Prototype Kit
 
   <div class="return-card">
      
-
-  
-    
-      <label class="govuk-label" for="returnPeriod1">
-        Return period 1
-      </label>
-
-      <!-- Dropdown 1 -->
-      <select
+ 
+    <label class="govuk-label" for="location">
+      Return period 1
+    </label>
+    <!-- Dropdown 1 -->
+   <select
         class="govuk-select"
         id="returnPeriod1"
         name="Return period selection"
       >
-        <option value="choose" selected>Select return period</option>
+        <option value="choose">Select return period</option>
         <option value="1">R01</option>
-         <option value="2" selected>R02</option>
+        <option value="2" selected>R02</option>
         <option value="3">R03</option>
         <option value="4">R04</option>
         <option value="5">R05</option>
-      </select>
-    
- 
-
+    </select>
     <!-- TABLE (recommended GOV pattern) -->
     <table class="govuk-table">
 
@@ -185,11 +176,23 @@ GOV.UK Prototype Kit
 
       
       <tbody class="govuk-table__body">
-          <td class="govuk-table__cell">
-         
-  <label class="govuk-label" for="location">
-                ILR file 1
-            </label>
+              <td class="govuk-table__cell">
+           <div class="govuk-form-group govuk-form-group--error">
+  <fieldset 
+    class="govuk-fieldset" 
+    role="group" 
+    aria-describedby="passport-issued-hint passport-issued-error"
+  >
+    <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span>
+      Select another ILR file
+    </p>
+
+    <div class="govuk-date-input" id="passport-issued">
+      <label class="govuk-label" for="ilrSelection1">
+        ILR file 1
+      </label>
+
       <!-- Dropdown 1 -->
       <select
         class="govuk-select"
@@ -202,11 +205,15 @@ GOV.UK Prototype Kit
         <option value="2" selected>ILR-10001919-2526-20251205-153142</option>
         <option value="3">ILR-10001919-2526-20251104-080712</option>
       </select>
-    
+    </div>
+
+  </fieldset>
+</div>
           </td>
           <td class="govuk-table__cell">
             <label class="govuk-label" for="location">
-           
+              </br>  
+              </br>  
               Funding period 1
             </label>
 
@@ -242,12 +249,6 @@ GOV.UK Prototype Kit
 
   <div class="return-card">
 
-    <p id="passport-issued-error" class="govuk-error-message">
-      <span class="govuk-visually-hidden">Error:</span>
-      Select return period
-    </p>
-
-    <div class="govuk-date-input" id="passport-issued">
       <label class="govuk-label" for="returnPeriod1">
         Return period 2
       </label>
@@ -260,13 +261,13 @@ GOV.UK Prototype Kit
       >
         <option value="choose" selected>Select return period</option>
         <option value="1">R01</option>
-        <option value="2">R02</option>
+        <option value="2" selected>R02</option>
         <option value="3">R03</option>
         <option value="4">R04</option>
         <option value="5">R05</option>
       </select>
    
-</div>
+
 
 
     <!-- TABLE 2 (recommended GOV pattern) -->
@@ -284,7 +285,7 @@ GOV.UK Prototype Kit
         
           
         <tr class="govuk-table__row">
-           <td class="govuk-table__cell">
+                      <td class="govuk-table__cell">
            <div class="govuk-form-group govuk-form-group--error">
   <fieldset 
     class="govuk-fieldset" 
@@ -293,7 +294,7 @@ GOV.UK Prototype Kit
   >
     <p id="passport-issued-error" class="govuk-error-message">
       <span class="govuk-visually-hidden">Error:</span>
-      Select ILR file
+      Select another ILR file
     </p>
 
     <div class="govuk-date-input" id="passport-issued">
@@ -308,8 +309,8 @@ GOV.UK Prototype Kit
         name="ILR selection"
         aria-describedby="Provide-hint"
       >
-        <option value="choose" selected>Select ILR file</option>
-        <option value="11">ILR-10001919-2526-20251205-153142</option>
+        <option value="choose">Select ILR file</option>
+        <option value="11" selected>ILR-10001919-2526-20251205-153142</option>
         <option value="12">ILR-10001919-2526-20251104-080712</option>
         <option value="13">ILR-10001919-2526-20251204-132448</option>
         <option value="14">ILR-10001919-2526-20260106-100915</option>
@@ -321,8 +322,6 @@ GOV.UK Prototype Kit
 </td>
           <td class="govuk-table__cell">
              <label class="govuk-label" for="location">
-             </br>  
-             </br>  
               Funding period 2
             </label>
             <!-- Dropdown 2 -->
