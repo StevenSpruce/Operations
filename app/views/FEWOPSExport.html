@@ -4,11 +4,10 @@
   Start page example
 {% endblock %}
 
-
 {% block content %}
 {% include "./includes/nav.html" %}
 <br>
-<a class="govuk-link" href="/dashboardtopics"> Back</a>
+<a class="govuk-link" href="/dashboardtopics">Back</a>
 <br>
 
 <div class="govuk-grid-row">
@@ -23,15 +22,13 @@
 
 <div class="govuk-grid-row blue-background">
   <div class="govuk-grid-column-one-third">
-      <span class="govuk-caption-l">
-          Open date
-      </span>
-      <h3 class="govuk-heading-l govuk-!-font-size-27" id="openDate">26th September 2023 at 08:00</h3></div>
+      <span class="govuk-caption-l">Open date</span>
+      <h3 class="govuk-heading-l govuk-!-font-size-27" id="openDate">26th September 2023 at 08:00</h3>
+  </div>
   <div class="govuk-grid-column-one-third">
-      <span class="govuk-caption-l">
-          Close date
-      </span>
-      <h3 class="govuk-heading-l govuk-!-font-size-27" id="closeDate">9th February 2024 at 18:00</h3></div>
+      <span class="govuk-caption-l">Close date</span>
+      <h3 class="govuk-heading-l govuk-!-font-size-27" id="closeDate">9th February 2024 at 18:00</h3>
+  </div>
 </div>
 
 <div class="govuk-tabs" data-module="govuk-tabs">
@@ -55,59 +52,42 @@
       </a>
     </li>
   </ul>
+
   <div class="govuk-tabs__panel" id="past-day">
-    <table class="govuk-table">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header"><h2 class="govuk-heading-l">Staff collection</h2></th>
-
-  </div>
-  
-  <!-- Right column: aligned to the right edge -->
-  <div class="govuk-grid-column-one-half" style="display: flex; justify-content: flex-end;">
-    
-    <!-- Button wrapper: forces children to stretch to the same width -->
-    <div style="display: flex; flex-direction: column; align-items: stretch;">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h2 class="govuk-heading-l">Staff collection</h2>
+      </div>
       
-      <!-- New Top Button -->
-      {{ govukButton({
-        text: "Export new submission report",
-        classes: "govuk-!-margin-bottom-3"
-      }) }}
+      <div class="govuk-grid-column-one-half" style="display: flex; justify-content: flex-end;">
+        <div style="display: flex; flex-direction: column; align-items: stretch;">
+          
+          {{ govukButton({
+            text: "Export full staff and org submission report",
+            classes: "govuk-!-margin-bottom-3"
+          }) }}
 
-      <!-- Existing Bottom Button -->
-      {{ govukButton({
-        text: "Export submission progress report",
-        classes: "govuk-!-margin-bottom-0"
-      }) }}
+          {{ govukButton({
+            text: "Export submission progress report",
+            classes: "govuk-!-margin-bottom-4"
+          }) }}
 
+        </div>
+      </div>
     </div>
+    
+    <img src="/public/images/FEW_Staff_Dashboard.png" width="900" height="1100" alt="Staff dashboard data"> 
   </div>
-</div>
 
-  </div>
-</div>
-    </table>
-    <img src="/public/images/FEW_Staff_Dashboard.png" width="900" height="1100"> 
-  </div>
-  <div class="govuk-tabs__panel" id="past-year">
-    <table class="govuk-table">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header"><h2 class="govuk-heading-l">Governer collection</h2></th>
-      <th scope="col" class="govuk-table__header"></th>
-      <th scope="col" class="govuk-table__header"></th>
-    </tr>
-    </table>
-    <img src="/public/images/FEWGovernerDashboard.png" width="900" height="1100"> 
-  </div>
-  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
-    <h2 class="govuk-heading-l">Staff collection</h2>
-  </div>
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
-    <h2 class="govuk-heading-2">Org collection</h2>
+    <h2 class="govuk-heading-l">Org collection</h2>
   </div>
+
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
-    <h2 class="govuk-heading-3">Governer collection</h2>
+    <h2 class="govuk-heading-l">Governer collection</h2>
+    <img src="/public/images/FEWGovernerDashboard.png" width="900" height="1100" alt="Governer dashboard data"> 
   </div>
+
 </div>
 
 {% endblock %}
