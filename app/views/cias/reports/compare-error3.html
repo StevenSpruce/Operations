@@ -359,13 +359,15 @@ document.addEventListener("DOMContentLoaded", function () {
   
   const params = new URLSearchParams(window.location.search);
   const year = params.get("year");
-
+  const rtn1 = params.get("rtn1");
 
   if (year) {
         var ilrDropdown1 = document.getElementById("cilrHeader");
 
         ilrDropdown1.textContent = "Cross ILR compare for " + year;
   }
+
+  document.getElementById("returnPeriod1").selectedIndex = rtn1;
 });
 
 // BUTTON LOGIC
