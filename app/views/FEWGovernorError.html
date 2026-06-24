@@ -48,49 +48,58 @@ GOV.UK Prototype Kit
                 </div>
             </dl>
 
-            <h2 class="govuk-heading-m" id="board-representation-section">
-                How the board is represented
-                <a class="govuk-link govuk-heading-s float-right" href="/FEW-GOV/2021/check-board-representation">
-                    Change<span class="govuk-visually-hidden"> How the board is represented</span>
-                </a>
-            </h2>
-            <div class="govuk-heading-s govuk-!-display-inline-block">Status</div>
+            <!-- ERROR WRAPPER ADDED HERE -->
+            <div class="govuk-form-group govuk-form-group--error">
+                <h2 class="govuk-heading-m" id="board-representation-section">
+                    How the board is represented
+                    <a class="govuk-link govuk-heading-s float-right" href="/FEW-GOV/2021/check-board-representation">
+                        Change<span class="govuk-visually-hidden"> How the board is represented</span>
+                    </a>
+                </h2>
+                <div class="govuk-heading-s govuk-!-display-inline-block">Status</div>
 
-            <strong class="govuk-tag float-right">COMPLETED</strong>
-            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key govuk-!-width-one-half">
-                        Staff governors
-                    </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-half">
-                        6
-                    </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key govuk-!-width-one-half">
-                        Student governors
-                    </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-half">
-                        2
-                    </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key govuk-!-width-one-half">
-                        Independent governors
-                    </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-half">
-                        2
-                    </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key govuk-!-width-one-half">
-                        Parent governors
-                    </dt>
-                    <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-half">
-                        2
-                    </dd>
-                </div>
-            </dl>
+                <strong class="govuk-tag float-right">COMPLETED</strong>
+                
+                <!-- INLINE ERROR MESSAGE ADDED HERE -->
+                <p id="board-representation-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> You must complete all sections of the governor data collection
+                </p>
+
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                            Staff governors
+                        </dt>
+                        <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-half">
+                            6
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                            Student governors
+                        </dt>
+                        <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-half">
+                            2
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                            Independent governors
+                        </dt>
+                        <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-half">
+                            2
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                            Parent governors
+                        </dt>
+                        <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-half">
+                            2
+                        </dd>
+                    </div>
+                </dl>
+            </div>
 
             <h2 class="govuk-heading-m">
                 Gender
@@ -380,55 +389,58 @@ GOV.UK Prototype Kit
                     <dt class="govuk-summary-list__key govuk-!-width-one-half">
                         Any other Black, Black British or Caribbean background
                     </dt>
-                        <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-half">
-                            {{ data['GovernorEthnicities.otherblack'] }}
-                        </dd>
-                    </div>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-half">
+                        {{ data['GovernorEthnicities.otherblack'] }}
+                    </dd>
+                </div>
             </dl>
+            
             <h3 class="govuk-heading-s">
                 Other ethnic group
             </h3>
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key govuk-!-width-one-half">
-                            Arab
-                        </dt>
-                        <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-half">
-                            {{ data['GovernorEthnicities.arab'] }}
-                        </dd>
-                    </div>
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key govuk-!-width-one-half">
-                            Any other ethnic group
-                        </dt>
-                        <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-half">
-                            {{ data['GovernorEthnicities.anyother'] }}
-                        </dd>
-                    </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                        Arab
+                    </dt>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-half">
+                        {{ data['GovernorEthnicities.arab'] }}
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                        Any other ethnic group
+                    </dt>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-half">
+                        {{ data['GovernorEthnicities.anyother'] }}
+                    </dd>
+                </div>
             </dl>
+
             <h3 class="govuk-heading-s">
                 Does not wish to declare ethnicity
             </h3>
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                    <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key govuk-!-width-one-half">
-                            Prefer not to say
-                        </dt>
-                        <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-half">
-                            {{ data['GovernorEthnicities.prefernottosay'] }}
-                        </dd>
-                    </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                        Prefer not to say
+                    </dt>
+                    <dd class="govuk-summary-list__value govuk-table__header--numeric govuk-!-width-one-half">
+                        {{ data['GovernorEthnicities.prefernottosay'] }}
+                    </dd>
+                </div>
             </dl>
-    <h2 class="govuk-heading-m">
-        Time served
-        <a class="govuk-link govuk-heading-s float-right" href="/FEW-GOV/2021/check-board-time-served">
-            Change<span class="govuk-visually-hidden"> Time served</span>
-        </a>
-    </h2>
-    <div class="govuk-heading-s govuk-!-display-inline-block">Status</div>
 
-    <strong class="govuk-tag float-right">COMPLETED</strong>
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <h2 class="govuk-heading-m">
+                Time served
+                <a class="govuk-link govuk-heading-s float-right" href="/FEW-GOV/2021/check-board-time-served">
+                    Change<span class="govuk-visually-hidden"> Time served</span>
+                </a>
+            </h2>
+            <div class="govuk-heading-s govuk-!-display-inline-block">Status</div>
+
+            <strong class="govuk-tag float-right">COMPLETED</strong>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-one-half">
                         Less than 1 year served
@@ -469,17 +481,18 @@ GOV.UK Prototype Kit
                         
                     </dd>
                 </div>
-        </dl>
-    <h2 class="govuk-heading-m">
-        Vacancies
-        <a class="govuk-link govuk-heading-s float-right" href="/FEW-GOV/2021/check-board-vacancies">
-            Change<span class="govuk-visually-hidden"> Vacancies</span>
-        </a>
-    </h2>
-    <div class="govuk-heading-s govuk-!-display-inline-block">Status</div>
+            </dl>
 
-    <strong class="govuk-tag float-right">COMPLETED</strong>
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <h2 class="govuk-heading-m">
+                Vacancies
+                <a class="govuk-link govuk-heading-s float-right" href="/FEW-GOV/2021/check-board-vacancies">
+                    Change<span class="govuk-visually-hidden"> Vacancies</span>
+                </a>
+            </h2>
+            <div class="govuk-heading-s govuk-!-display-inline-block">Status</div>
+
+            <strong class="govuk-tag float-right">COMPLETED</strong>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                 <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key govuk-!-width-one-half">
                         Were there any board member vacancies during the last academic year?
@@ -520,34 +533,16 @@ GOV.UK Prototype Kit
                         
                     </dd>
                 </div>
-        </dl>
-</a>
-<div class="govuk-button-group">
+            </dl>
 
-      <button type="submit" class="govuk-button" data-module="govuk-button">
-    Return to dashboard
-  </button>
-</div>
-  
-</div>
-
-
-
-
-
-    </div>
-</div>
-
-
-                </div>
+            <div class="govuk-button-group">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Return to dashboard
+                </button>
             </div>
-        </main>
+            
+        </div>
     </div>
-
-
-
-</body>
-
-
+</main>
 
 {% endblock %}
