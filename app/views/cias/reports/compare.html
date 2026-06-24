@@ -320,12 +320,17 @@ function handleBtnClick() {
     }
     
 
-    var ilrText1 = dropdownILR1Value.options[dropdownILR1Value.selectedIndex].text;
+    const rtnSelection1 = document.getElementById("returnPeriod1");
+    const ilrSelection1 = document.getElementById("ilrSelection1");
+    const rtnSelection2 = document.getElementById("returnPeriod2");
+    const ilrSelection2 = document.getElementById("ilrSelection2");
     
-    var ilrText2 = dropdownILR2Value.options[dropdownILR2Value.selectedIndex].text;
-alert(ilrText1);
+    var ilrText1 = ilrSelection1.options[ilrSelection1.selectedIndex].text;
+    
+    var ilrText2 = ilrSelection2.options[ilrSelection2.selectedIndex].text;
+
     if ((ilrText1 === ilrText2) && (dropdownRtn1Value === dropdownRtn2Value)){
-      window.location.href = "/cias/reports/compare-error5" + encodeURIComponent(year);
+      window.location.href = "/cias/reports/compare-error5?year=" + encodeURIComponent(year);
       return;
     }else{
           
