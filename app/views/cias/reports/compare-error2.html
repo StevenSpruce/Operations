@@ -350,16 +350,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // BUTTON LOGIC
 
-// BUTTON LOGIC
 function handleBtnClick() {
 
   const dropdownRtn1Value  = document.getElementById("returnPeriod1").value;
   const dropdownILR1Value = document.getElementById("ilrSelection1").value;
   const dropdownRtn2Value = document.getElementById("returnPeriod2").value;
   const dropdownILR2Value = document.getElementById("ilrSelection2").value;
+  
   const params = new URLSearchParams(window.location.search);
   const year = params.get("year");
-
 
    if ((dropdownRtn1Value === 'choose') && (dropdownILR1Value === 'choose') && (dropdownRtn2Value === 'choose')  && (dropdownILR2Value === 'choose') ){
           window.location.href = "/cias/reports/compare-error4?year=" + encodeURIComponent(year);
@@ -382,20 +381,24 @@ function handleBtnClick() {
     }
     
 
-    var ilrText1 = ilrDropdown1.options[dropdownILR1Value.selectedIndex].text;
-    var ilrText2 = ilrDropdown2.options[dropdownILR2Value.selectedIndex].text;
+    const rtnSelection1 = document.getElementById("returnPeriod1");
+    const ilrSelection1 = document.getElementById("ilrSelection1");
+    const rtnSelection2 = document.getElementById("returnPeriod2");
+    const ilrSelection2 = document.getElementById("ilrSelection2");
+    
+    var ilrText1 = ilrSelection1.options[ilrSelection1.selectedIndex].text;
+    
+    var ilrText2 = ilrSelection2.options[ilrSelection2.selectedIndex].text;
 
     if ((ilrText1 === ilrText2) && (dropdownRtn1Value === dropdownRtn2Value)){
-      window.location.href = "/cias/reports/compare-error5" + encodeURIComponent(year);
+      window.location.href = "/cias/reports/compare-error5?year=" + encodeURIComponent(year);
       return;
     }else{
-    
-      //const url =  "reports-history2?year="+ encodeURIComponent(year);
-      
+          
       window.location.href = "reports-history2";  
     }
     
-  }
+}
 </script>
 
 {% endblock %}
