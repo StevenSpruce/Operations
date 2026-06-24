@@ -6,7 +6,8 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-<link rel="stylesheet" href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-5.0.0.min.css">
+<link rel="stylesheet"
+href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-5.0.0.min.css">
 
 <style>
   .return-card {
@@ -16,58 +17,8 @@ GOV.UK Prototype Kit
     border-radius: 6px;
     background: #fff;
   }
-/* FILTER PANEL */
-.moj-filter {
-  border: 1px solid #b1b4b6;
-}
-
-.moj-filter__header {
-  background: #b1b4b6;
-  padding: 10px 15px;
-}
-
-.moj-filter__content {
-  background: #f3f2f1;
-  padding: 15px;
-}
-
-/* Selected filters */
-.moj-filter__selected-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.moj-filter__group {
-  margin-top: 20px;
-}
-
-.moj-filter-tag {
-  display: inline-block;
-  border: 1px solid #0b0c0c;
-  background: #ffffff;
-  padding: 5px 10px;
-  margin: 5px 10px 0 0;
-  cursor: pointer;
-}
-
-/* Layout */
-.filter-layout {
-  display: flex;
-  gap: 40px;
-}
-
-.filter-sidebar {
-  width: 300px;
-}
-
-.filter-results {
-  flex-grow: 1;
-}
-
-
-    
 </style>
+
 
 <main class="govuk-main-wrapper" id="content" role="main">
 
@@ -118,31 +69,23 @@ GOV.UK Prototype Kit
   </div>
   </div>
 
-<a  href="/cias/reports/select-academic-year" class="govuk-back-link">Back</a>
+<a href="/cias/reports/select-academic-year" class="govuk-back-link">Back</a>
 
-<h2 class="govuk-heading">Cross ILR Compare</h2>
 
+    
+<h1 class="govuk-heading-l" id="cilrHeader">Cross ILR Compare</h1>
+
+<!-- TAB PANEL -->
 <div class="govuk-tabs" data-module="govuk-tabs">
 
 <ul class="govuk-tabs__list">
-
 <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-<a class="govuk-tabs__tab"
-   href="#files"
-   id="tab_files">
-  ILR files to compare
-</a>
+<a class="govuk-tabs__tab" href="#files">ILR files to compare</a>
 </li>
 
 <li class="govuk-tabs__list-item">
-<a class="govuk-tabs__tab"
-   href="#filters"
-   id="tab_filters"
-   tabindex="-1">
-  Cross ILR filters
-</a>
+<a class="govuk-tabs__tab" href="#filters">Additional filters</a>
 </li>
-
 </ul>
 
 <!-- PANEL 1 -->
@@ -155,8 +98,9 @@ GOV.UK Prototype Kit
   <div class="return-card">
      
 
-  
-    
+   
+
+    <div class="govuk-date-input" id="passport-issued">
       <label class="govuk-label" for="returnPeriod1">
         Return period 1
       </label>
@@ -169,12 +113,13 @@ GOV.UK Prototype Kit
       >
         <option value="choose" selected>Select return period</option>
         <option value="1">R01</option>
-         <option value="2" selected>R02</option>
+        <option value="2">R02</option>
         <option value="3">R03</option>
         <option value="4">R04</option>
         <option value="5">R05</option>
       </select>
-    
+    </div>
+
  
 
     <!-- TABLE (recommended GOV pattern) -->
@@ -261,7 +206,12 @@ GOV.UK Prototype Kit
   </h2>
 
   <div class="return-card">
-
+<div class="govuk-form-group govuk-form-group--error">
+  <fieldset 
+    class="govuk-fieldset" 
+    role="group" 
+    aria-describedby="passport-issued-hint passport-issued-error"
+  >
     <p id="passport-issued-error" class="govuk-error-message">
       <span class="govuk-visually-hidden">Error:</span>
       Select return period
@@ -285,7 +235,9 @@ GOV.UK Prototype Kit
         <option value="4">R04</option>
         <option value="5">R05</option>
       </select>
-   
+    </div>
+
+  </fieldset>
 </div>
 
 
@@ -373,194 +325,11 @@ GOV.UK Prototype Kit
     </div>
 </div>
 
-
 <!-- PANEL 2 -->
 <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="filters">
- <div class="filter-layout">
-
-    <!-- LEFT: FILTER FORM -->
-    <div class="filter-sidebar">
-      <form id="filter-form">
-
-        <div class="moj-filter">
-
-          <div class="moj-filter__header">
-            <h2 class="govuk-heading-m">Filter</h2>
-          </div>
-
-          <div class="moj-filter__content">
-
-            <!-- TYPE -->
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-heading-s">Partner UKPRN</legend>
-
-                <div class="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="PartnerUKPRN NULL" name="type" checked>
-                    <label class="govuk-label govuk-checkboxes__label">PartnerUKPRN NULL</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="10006005" name="type" checked>
-                    <label class="govuk-label govuk-checkboxes__label">10006005</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="10065710" name="type" checked>
-                    <label class="govuk-label govuk-checkboxes__label">10065710</label>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-
-            <!-- STATUS -->
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-heading-s">Funding Filters</legend>
-
-                <div class="govuk-checkboxes">
-                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="DEF"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">DEF</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="All Sources"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">All Sources</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="MCA/GLA"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">MCA/GLA</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="110"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">110</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="111"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">111</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="112"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">112</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="113"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">113</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="114"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">114</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="115"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">115</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="116"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">116</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="117"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">117</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="118"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">118</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="119"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">119</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="120"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">120</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="121"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">121</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="122"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">122</label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox" value="123"  name="status" checked>
-                    <label class="govuk-label govuk-checkboxes__label">123</label>
-                  </div>
-
-                </div>
-              </fieldset>
-            </div>
-
-            <button class="govuk-button" type="submit">
-              Apply filters
-            </button>
-
-            <a href="#" id="clearFilters" class="govuk-link">
-              Clear all filters
-            </a>
-
-          </div>
-
-        </div>
-
-      </form>
-    </div>
-
-    <!-- RIGHT: RESULTS + SELECTED FILTERS -->
-    <div class="filter-results">
-
-      <div class="moj-filter">
-
-        <div class="moj-filter__header">
-          <h2 class="govuk-heading-m">Selected filters</h2>
-        </div>
-
-        <div class="moj-filter__content">
-
-          <div class="moj-filter__selected-header">
-          <!--  <h3 class="govuk-heading-m">Selected filters</h3>-->
-            <a href="#" id="clearFiltersTop" class="govuk-link">Clear all selected filters</a>
-          </div>
-
-     
-          <div class="moj-filter__group" id="type-output">
-            <h4 class="govuk-heading-s">Partner UKPRN</h4>
-          </div>
-
-      
-          <div class="moj-filter__group" id="status-output">
-            <h4 class="govuk-heading-s">Funding Filters</h4>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </div>
+<h2 class="govuk-heading-m">Under construction</h2>
 </div>
 
-</div>
-
-</div>
 </div>
 
 <button 
@@ -580,107 +349,74 @@ GOV.UK Prototype Kit
             <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
           </svg>
         </button>
+
+</div>
 </main>
 
 <script>
-
-
-// Apply filters
-document.getElementById("filter-form").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  updateFilters();
-});
-
-function updateFilters() {
-  const typeOutput = document.getElementById("type-output");
-  const statusOutput = document.getElementById("status-output");
-
-  // reset
-  typeOutput.innerHTML = "<h4 class='govuk-heading-s'>Partner UKPRN</h4>";
-  statusOutput.innerHTML = "<h4 class='govuk-heading-s'>Funding</h4>";
-
-  const checked = document.querySelectorAll("input[type=checkbox]:checked");
-
-  checked.forEach(input => {
-    const group = input.name === "type" ? typeOutput : statusOutput;
-
-    const tag = document.createElement("button");
-    tag.className = "moj-filter-tag";
-    tag.type = "button";
-    tag.textContent = input.value + " ×";
-
-    tag.addEventListener("click", () => {
-      input.checked = false;
-      updateFilters();
-    });
-
-    group.appendChild(tag);
-  });
-}
-
-// Clear filters
-function clearAll() {
-  document.querySelectorAll("input[type=checkbox]").forEach(cb => cb.checked = false);
-  updateFilters();
-}
-
-document.getElementById("clearFilters").addEventListener("click", function(e) {
-  e.preventDefault();
-  clearAll();
-});
-
-document.getElementById("clearFiltersTop").addEventListener("click", function(e) {
-  e.preventDefault();
-  clearAll();
-});
-
-
+// SAFE DOM LOAD
 document.addEventListener("DOMContentLoaded", function () {
-  updateFilters();
+  
+  const params = new URLSearchParams(window.location.search);
+  const year = params.get("year");
+
+
+  if (year) {
+        var ilrDropdown1 = document.getElementById("cilrHeader");
+
+        ilrDropdown1.textContent = "Cross ILR compare for " + year;
+  }
 });
 
+// BUTTON LOGIC
 
+// BUTTON LOGIC
 function handleBtnClick() {
-  try {
-    
-   
-    const dropdownRtn1Value = document.getElementById("returnPeriod1").value;
-    const dropdownILR1Value = document.getElementById("ilrSelection1").value;
-    const dropdownRtn2Value = document.getElementById("returnPeriod2").value;
-    const dropdownILR2Value = document.getElementById("ilrSelection2").value;
+
+  const dropdownRtn1Value  = document.getElementById("returnPeriod1").value;
+  const dropdownILR1Value = document.getElementById("ilrSelection1").value;
+  const dropdownRtn2Value = document.getElementById("returnPeriod2").value;
+  const dropdownILR2Value = document.getElementById("ilrSelection2").value;
+  const params = new URLSearchParams(window.location.search);
+  const year = params.get("year");
 
 
-    
-    if ((dropdownRtn1Value === 'choose') && (dropdownILR1Value === 'choose') && (dropdownRtn2Value === 'choose')  && (dropdownILR2Value === 'choose') ){
-          window.location.href = "/cias/reports/compare-error4";
+   if ((dropdownRtn1Value === 'choose') && (dropdownILR1Value === 'choose') && (dropdownRtn2Value === 'choose')  && (dropdownILR2Value === 'choose') ){
+          window.location.href = "/cias/reports/compare-error4?year=" + encodeURIComponent(year);
       return;
     }
 
     if ((dropdownILR1Value === 'choose') && (dropdownILR2Value === 'choose') && (dropdownRtn2Value === 'choose') ){
-      window.location.href = "/cias/reports/compare-error3";
+      window.location.href = "/cias/reports/compare-error3?year=" + encodeURIComponent(year);
       return;
     }
 
     if ((dropdownRtn2Value === 'choose') && (dropdownILR2Value === 'choose')){
-      window.location.href = "/cias/reports/compare-error2";
+      window.location.href = "/cias/reports/compare-error2?year=" + encodeURIComponent(year);
       return;
     }
 
     if ((dropdownILR2Value === 'choose')){
-      window.location.href = "/cias/reports/compare-error1";
+      window.location.href = "/cias/reports/compare-error1?year=" + encodeURIComponent(year);
       return;
     }
-    else {
-     
-      window.location.href = "/cias/reports/generating-report";
+    
+
+    var ilrText1 = ilrDropdown1.options[dropdownILR1Value.selectedIndex].text;
+    var ilrText2 = ilrDropdown2.options[dropdownILR2Value.selectedIndex].text;
+
+    if ((ilrText1 === ilrText2) && (dropdownRtn1Value === dropdownRtn2Value)){
+      window.location.href = "/cias/reports/compare-error5" + encodeURIComponent(year);
+      return;
+    }else{
+    
+      //const url =  "reports-history2?year="+ encodeURIComponent(year);
+      
+      window.location.href = "reports-history2";  
     }
-
-  } catch (error) {
-      console.log(error.message);
+    
   }
-}
-
 </script>
 
 {% endblock %}
+
