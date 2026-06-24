@@ -48,84 +48,72 @@ Cross ILR overview
     </div>
   </br>
 
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  
+  <a href="/cias/reports/overview" class="govuk-back-link">Back</a>
 
-    <div class="govuk-grid-row">
-    
-        <div class="govuk-grid-column">
-            
-        <h1 class="govuk-heading-l">Cross ILR Reports</h1>
+              
+  <h1 class="govuk-heading-l">Cross ILR Reports</h1>
 
-    
-            <a href="select-academic-year.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-                 Generate cross ILR report
-                <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" aria-hidden="true" focusable="false">
+ <a 
+   role="button"
+   class="govuk-button govuk-button--start"
+   onclick="handleClick()">
+  Generate cross ILR report
+    <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" aria-hidden="true" focusable="false">
                     <path fill="currentColor" d="M11 0H8V8H0V11H8V19H11V11H19V8H11V0Z"></path>
-                </svg></a>
-    
-        </div>
-    </div>
-    
+                </svg>
+</a>
+
+
     
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
             <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-            <h2 class="govuk-heading-l">
-                Historical ILR reports created
-            </h2>
+           
+             <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td>
+                      <label class="govuk-label">
+                          Select academic year
+                      </label>
+                       <!-- Dropdown 1 -->
+                      <select
+                        class="govuk-select"
+                        id="academicYearSelection"
+                        name="Academic year selection"
+                        aria-describedby="Provide-hint"
+                      >
+                        <option value="1">2026 to 2027</option>
+                        <option value="2" selected>2025 to 2026</option>
+                        <option value="3">2024 to 2025</option>
+                        <option value="4">2023 to 2024</option>
+                      </select>
 
-             <label class="govuk-label">
-                Select academic year
-            </label>
-              <!-- Dropdown 1 -->
-              <select
-                class="govuk-select"
-                id="academicYearSelection"
-                name="Academic year selection"
-                aria-describedby="Provide-hint"
-              >
-                <option value="1">2026 to 2027</option>
-                <option value="choose" selected>2025 to 2026</option>
-                <option value="2">2024 to 2025</option>
-                <option value="3">2023 to 2024</option>
-              </select>
+
+                    </td>
+                    <td>
+                          <label class="govuk-label">
+                          Rows per page
+                          </label>
+                          <select class="govuk-select" id="rows">
+                          <option selected>10</option>
+                          <option>20</option>
+                          <option>30</option>
+                          <option>40</option>
+                          <option>50</option>
+                          </select>
+                      </div>
+                    </td>
+                  </tr> 
+                </tbody>
+              </table>
+
+             
             </br>
-            </br>
 
-            <div class="filters">
-             <div class="govuk-form-group">
-                <div class="govuk-form-group titan-filter">
-                  <label class="govuk-label" for="event-name">
-                      Filter by <strong>reporting period, or cross ILR filename</strong>
-                  </label>
-                  <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text">
-            </div>
 
-            <div class="govuk-form-group">
-                <label class="govuk-label" for="rows">
-                Rows per page
-                </label>
-                <select class="govuk-select" id="rows">
-                <option selected>10</option>
-                <option>20</option>
-                <option>30</option>
-                <option>40</option>
-                <option>50</option>
-                </select>
-            </div>
-
-            </div>
             
-            <div>
-              <button id="search" type="search" class="govuk-button govuk-button--start govuk-!-margin-bottom-0">
-              Search
-              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
-                  <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
-              </svg>
-              </button>
-            </div>
-
-            <br>
     
     <!--Table -->
     <div class="table-container">
@@ -139,26 +127,26 @@ Cross ILR overview
               <button class="moj-sortable-table__button">Created date</button>
             </th>
 
-            <th scope="col" class="govuk-table__header" aria-sort="none">
-              <button class="moj-sortable-table__button">Report periods</button>
+            <th scope="col" class="govuk-table__header">
+              	Report periods
+            </th>
+            
+            <th scope="col" class="govuk-table__header">
+              	ILR files
             </th>
 
-            <th scope="col" class="govuk-table__header" aria-sort="none">
-              <button class="moj-sortable-table__button">ILR files </button>
+            <th scope="col" class="govuk-table__header">
+              	Funding periods
             </th>
-
-            <th scope="col" class="govuk-table__header" aria-sort="none">
-              <button class="moj-sortable-table__button">Funding periods</button>
-            </th>
-
+           
             <th scope="col" class="govuk-table__header" aria-sort="none">
               <button class="moj-sortable-table__button">Created by</button>
             </th>
-
-
-            <th scope="col" class="govuk-table__header" aria-sort="none">
-              <button class="moj-sortable-table__button">Status</button>
+            
+            <th scope="col" class="govuk-table__header">
+              	Status
             </th>
+           
             <th scope="col" class="govuk-table__header">
               	Download link
             </th>
@@ -167,14 +155,23 @@ Cross ILR overview
 
         <tbody class="govuk-table__body" id="table-body">
  
-   
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">23 June 2026 at 16:43</td>
+            <td class="govuk-table__cell">R03<br>R05</td>
+            <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>    
+            <td class="govuk-table__cell">12<br>12</td>
+            <td class="govuk-table__cell">Rajesh Patel</td>
+            <td class="govuk-table__cell">Processing</td>
+            <td class="govuk-table__cell"></td>  
+          </tr>
+
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">16 June 2026 at 10:56</td>
             <td class="govuk-table__cell">R04<br>R05</td>
             <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>    
             <td class="govuk-table__cell">12<br>12</td>
             <td class="govuk-table__cell">Rajesh Patel</td>
-            <td class="govuk-table__cell">Success</td>
+            <td class="govuk-table__cell">Completed</td>
             <td class="govuk-table__cell"><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
           </tr>
 
@@ -184,7 +181,7 @@ Cross ILR overview
             <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>    
             <td class="govuk-table__cell">12<br>12</td>
             <td class="govuk-table__cell">Rajesh Patel</td>
-            <td class="govuk-table__cell">Success</td>
+            <td class="govuk-table__cell">Completed</td>
             <td class="govuk-table__cell"><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
           </tr>
 
@@ -194,7 +191,7 @@ Cross ILR overview
             <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>    
             <td class="govuk-table__cell">12<br>12</td>
             <td class="govuk-table__cell">Rajesh Patel</td>
-            <td class="govuk-table__cell">Success</td>
+            <td class="govuk-table__cell">Completed</td>
             <td class="govuk-table__cell"><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
           </tr>
 
@@ -204,7 +201,7 @@ Cross ILR overview
             <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>    
             <td class="govuk-table__cell">12<br>12</td>
             <td class="govuk-table__cell">Rajesh Patel</td>
-            <td class="govuk-table__cell">Fail</td>
+            <td class="govuk-table__cell">Failed</td>
             <td class="govuk-table__cell">Contact helpdesk</td>
           </tr>
 
@@ -253,8 +250,10 @@ Cross ILR overview
   <script src="https://unpkg.com/@ministryofjustice/frontend@1.6.0/moj/all.js"></script>
 
   <script>
+   
     window.GOVUKFrontend.initAll();
     window.MOJFrontend.initAll();
+    
 
     // Simple client-side filter
     document.getElementById("filter").addEventListener("keyup", function () {
@@ -265,7 +264,27 @@ Cross ILR overview
         const text = row.innerText.toLowerCase();
         row.style.display = text.includes(filter) ? "" : "none";
       });
+
+      customDate();
     });
+
+
+    
+  function handleClick() {        
+    try {
+
+      const select = document.getElementById("academicYearSelection");
+      const selectedText = select.options[select.selectedIndex].text;
+     
+      const url =  "select-academic-year?year="+ encodeURIComponent(select.selectedIndex + 1);
+      
+      window.location.href = url;
+      
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
   </script>
 
 </body>

@@ -11,18 +11,35 @@ GOV.UK Prototype Kit
   
 function continueBtnClick() {       
   try {
-      if ((document.getElementById("academicYear1").checked) || (document.getElementById("academicYear2").checked) || (document.getElementById("academicYear3").checked) || (document.getElementById("academicYear3").checked))
-      {
-        window.location.href = "/cias/reports/compare";
-      }
-      else
-      {
-        window.location.href = "/cias/reports/select-academic-year-error";
-      }
-  } catch (error) {
-    console.log(error.message);
-  }
+
+      const select = document.getElementById("academicYearSelection");
+      const selectedText = select.options[select.selectedIndex].text;
+     
+      const url =  "compare?year="+ encodeURIComponent(selectedText);
+      
+      window.location.href = url;
+      
+    } catch (error) {
+      console.log(error.message);
+    }
 }
+
+ 
+
+document.addEventListener("DOMContentLoaded", function () {
+  
+  const select = document.getElementById("academicYearSelection");
+
+
+  // Get query string
+  const params = new URLSearchParams(window.location.search);
+
+  // Read values
+  const year = params.get("year");
+  
+  select.value=year;
+});
+
 </script>
 
 <section aria-label="Service information" class="govuk-service-navigation"
@@ -55,40 +72,23 @@ function continueBtnClick() {
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-
       <h1 class="govuk-heading-xl">Select academic year</h1>
 
+      <select
+        class="govuk-select"
+        id="academicYearSelection"
+        name="Academic year selection"
+        aria-describedby="Provide-hint"
+      >
+        <option value="1">2026 to 2027</option>
+        <option value="2">2025 to 2026</option>
+        <option value="3">2024 to 2025</option>
+        <option value="4">2023 to 2024</option>
+      </select>
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="academicYear1" name="academicYear" type="radio" value="2026">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-          2026 to 2027
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="academicYear2" name="academicYear" type="radio" value="2025">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-          2025 to 2026
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="academicYear3" name="academicYear" type="radio" value="2024">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
-          2024 to 2025
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="academicYear4" name="academicYear" type="radio" value="2023">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">
-          2023 to 2024
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
+    </br>
+    </br>
+
 
 
 <a draggable="false" class="govuk-button" onclick="continueBtnClick()">Continue</a>
@@ -99,7 +99,7 @@ function continueBtnClick() {
 </div>
 
 
-                  <div class="govuk-grid-column-one-third">
+                  
                         <br><br><br><br><br>
      
             
