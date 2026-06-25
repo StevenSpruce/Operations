@@ -1,0 +1,98 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet"
+href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-5.0.0.min.css">
+
+<style>
+  .return-card {
+    border: 1px solid #b1b4b6;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    background: #fff;
+  }
+</style>
+
+
+<main class="govuk-main-wrapper" id="content" role="main">
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+
+  
+<section aria-label="Service information" class="govuk-service-navigation"
+         data-module="govuk-service-navigation">
+    <div class="govuk-width-container">
+        <div class="govuk-service-navigation__container">
+            <span class="govuk-service-navigation__service-name">
+                <a href="/" class="govuk-service-navigation__link">
+                    Submit learner data
+                </a>
+            </span>
+        </div>
+    </div>
+</section>
+        <div class="govuk-body account-info">
+        <div>
+            <span class="your-name" id="bannerUserName">
+                Rajesh PATEL
+ UKPRN:10000222             </span>
+            <a class="account-link" href="/Account/SignOut">Sign out</a>
+        </div>
+    </div>
+<br>
+
+<a href="/cias/reports/select-academic-year" class="govuk-back-link">Back</a>
+
+<br>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+    
+<h1 class="govuk-heading-xl">Audit Services</h1>
+
+
+<div class="govuk-grid-row">
+   
+    <div class="govuk-grid-column-one-third">
+            <div class="border-top ">
+                <h2 class="govuk-heading-m "><a class="govuk-link" href="/cias/overview">Cross ILR</a></h2>
+                <span class="govuk-body-s">View cross ILR files</span><br>
+                <span class="govuk-body-s">Create cross ILR reports</span>
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-third">
+            <div class="border-top ">
+                <h2 class="govuk-heading-m "><a class="govuk-link" href="">Annotations</a></h2>
+                <span class="govuk-body-s">View annotations</span><br>
+                <span class="govuk-body-s">Add annotations</span>
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-third">
+            <div class="border-top ">
+                <h2 class="govuk-heading-m "><a class="govuk-link" href="">Sampler</a></h2>
+                <span class="govuk-body-s">Extract a sample of learner data</span>
+            </div>
+        </div>
+      
+</div>
+<br>
+</details>
+</div>
+
+
+<br>
+</details>
+</div>
+
+
+
+
+{% endblock %}
