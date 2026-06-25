@@ -80,8 +80,11 @@
   </div>
 
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
-    <h2 class="govuk-heading-l">Org collection</h2>
-  </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h2 class="govuk-heading-l">Org collection</h2>
+      </div>
+
       <div class="govuk-grid-column-one-half" style="display: flex; justify-content: flex-end;">
         <div style="display: flex; flex-direction: column; align-items: stretch;">
           
@@ -95,8 +98,34 @@
             classes: "govuk-!-margin-bottom-4"
           }) }}
 
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
-    <h2 class="govuk-heading-l">Governer collection</h2>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h2 class="govuk-heading-l">Governer collection</h2>
+      </div>
+
+      <div class="govuk-grid-column-one-half" style="display: flex; justify-content: flex-end;">
+        <div style="display: flex; flex-direction: column; align-items: stretch;">
+          
+          {{ govukButton({
+            text: "Export staff and org submission report",
+            classes: "govuk-!-margin-bottom-3"
+          }) }}
+
+          {{ govukButton({
+            text: "Export submission progress report",
+            classes: "govuk-!-margin-bottom-4"
+          }) }}
+
+        </div>
+      </div>
+    </div>
+
     <img src="/public/images/FEWGovernerDashboard.png" width="900" height="1100" alt="Governer dashboard data"> 
   </div>
 
