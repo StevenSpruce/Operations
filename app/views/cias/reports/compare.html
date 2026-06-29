@@ -337,7 +337,7 @@ function handleBtnClick() {
     
     var ilrText2 = ilrSelection2.options[ilrSelection2.selectedIndex].text;
 
-    if ((ilrText1 === ilrText2) && (dropdownRtn1Value === dropdownRtn2Value)){
+    if (ilrText1 === ilrText2){
       window.location.href = "/cias/reports/compare-error5?year=" + encodeURIComponent(year);
       return;
     }else{
