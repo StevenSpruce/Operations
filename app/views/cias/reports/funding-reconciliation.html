@@ -1,0 +1,181 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<script>
+  function handleBtnClick(btn) {
+    window.location.href = "/cias/reports/reports-history";
+  }
+</script>
+
+
+<section aria-label="Service information" class="govuk-service-navigation"
+         data-module="govuk-service-navigation">
+    <div class="govuk-width-container">
+        <div class="govuk-service-navigation__container">
+            <span class="govuk-service-navigation__service-name">
+                <a href="/" class="govuk-service-navigation__link">
+                    Submit learner data
+                </a>
+            </span>
+        </div>
+    </div>
+</section>
+        <div class="govuk-body account-info">
+        <div>
+            <span class="your-name" id="bannerUserName">
+                Rajesh PATEL
+ UKPRN:10000222             </span>
+            <a class="account-link" href="/Account/SignOut">Sign out</a>
+        </div>
+    </div>
+
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+    <main class="govuk-main-wrapper" id="content" role="main">
+        <div class="govuk-grid-row flex">
+        <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading">Funding reconciliation summary report</h1>
+
+           
+<table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header">Filename</th>
+      <th class="govuk-table__header">Return period</th>
+      <th class="govuk-table__header">Funding period</th>
+      <th class="govuk-table__header govuk-table__header--numeric">FM25</th>
+      <th class="govuk-table__header govuk-table__header--numeric">FM35</th>
+      <th class="govuk-table__header govuk-table__header--numeric">FM36</th>
+      <th class="govuk-table__header govuk-table__header--numeric">FM38</th>
+      <th class="govuk-table__header govuk-table__header--numeric">FM99</th>
+      <th class="govuk-table__header govuk-table__header--numeric">Total</th>
+    </tr>
+  </thead>
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">ILR-9999999-594605541</td>
+      <td class="govuk-table__cell">R02</td>
+      <td class="govuk-table__cell">12</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£729,990</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£46,028</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">718,240</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£18,750</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£53,920</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£1,566,928</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">ILR-9999999-928736987</td>
+      <td class="govuk-table__cell">R05</td>
+      <td class="govuk-table__cell">12</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£719,545</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£46,028</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£735,989</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£18,750</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£173,933</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£1,694,245</td>
+    </tr>
+
+    <tr class="govuk-table__row govuk-!-font-weight-bold">
+      <td class="govuk-table__cell">Difference</td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">(£10,445)</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£17,749</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£120,013</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£127,317</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<h2 class="govuk-heading-m">Variance Analysis</h2>
+
+<table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header">Adjustment Type</th>
+      <th class="govuk-table__header govuk-table__header--numeric">FM25</th>
+      <th class="govuk-table__header govuk-table__header--numeric">FM35</th>
+      <th class="govuk-table__header govuk-table__header--numeric">FM36</th>
+      <th class="govuk-table__header govuk-table__header--numeric">FM38</th>
+      <th class="govuk-table__header govuk-table__header--numeric">FM99</th>
+      <th class="govuk-table__header govuk-table__header--numeric">Total</th>
+    </tr>
+  </thead>
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Learners Added</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£162</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£1,863</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£90,148</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£92,173</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Learners Removed</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">(£10,607)</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">(£8,901)</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">(£19,508)</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Updated</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£15,886</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£38,766</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£54,652</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Total</td>
+     <td class="govuk-table__cell govuk-table__cell--numeric">(£10,445)</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£17,749</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£120,013</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£127,317</td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+        <button 
+            type="button"
+            class="govuk-button"
+            id="crossILRCompare"
+            onclick="handleBtnClick(this)">
+            Reports history
+        </button>
+
+    </main>
+
+</body>
+
+
+{% endblock %}

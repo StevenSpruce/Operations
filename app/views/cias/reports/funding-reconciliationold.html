@@ -1,0 +1,160 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<script>
+  function handleBtnClick(btn) {
+    window.location.href = "/cias/reports/compare";
+  }
+</script>
+
+
+<section aria-label="Service information" class="govuk-service-navigation"
+         data-module="govuk-service-navigation">
+    <div class="govuk-width-container">
+        <div class="govuk-service-navigation__container">
+            <span class="govuk-service-navigation__service-name">
+                <a href="/" class="govuk-service-navigation__link">
+                    Submit learner data
+                </a>
+            </span>
+        </div>
+    </div>
+</section>
+        <div class="govuk-body account-info">
+        <div>
+            <span class="your-name" id="bannerUserName">
+                Rajesh PATEL
+ UKPRN:10000222             </span>
+            <a class="account-link" href="/Account/SignOut">Sign out</a>
+        </div>
+    </div>
+
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+    <main class="govuk-main-wrapper" id="content" role="main">
+        <div class="govuk-grid-row flex">
+        <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading">Funding reconciliation summary report</h1>
+
+            <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-visually-hidden">Table R09</caption>
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col">Description</th>
+                        <th class="govuk-table__header" scope="col">FM36 Apprenticeships</th>
+                        <th class="govuk-table__header" scope="col">FM35 ASF</th>
+                        <th class="govuk-table__header" scope="col">FM38 ASF</th>
+                        <th class="govuk-table__header" scope="col">FM37 Loans Bursary</th>
+                        <th class="govuk-table__header" scope="col">FM25 16-19</th>
+                        <th class="govuk-table__header" scope="col">FM25 T Levels</th>
+                        <th class="govuk-table__header" scope="col">Totals</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="row">Balance from reviewed ILR</td>
+                          <td class="govuk-table__cell" scope="row">£3,718,240</td>
+                          <td class="govuk-table__cell" scope="row">£46,028</td>
+                          <td class="govuk-table__cell" scope="row">£4,853,920</td>
+                          <td class="govuk-table__cell" scope="row">£18,750</td>
+                          <td class="govuk-table__cell" scope="row">£43,845,065</td>
+                          <td class="govuk-table__cell" scope="row">£5,884,925</td>
+                          <td class="govuk-table__cell" scope="row">£58,366,928</td>
+                        </tr>
+                        
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell" scope="row">Learners Added</td>
+                          <td class="govuk-table__cell" scope="row">£1,863</td>
+                          <td class="govuk-table__cell" scope="row">£0</td>
+                          <td class="govuk-table__cell" scope="row">£230,546</td>
+                          <td class="govuk-table__cell" scope="row">£0</td>
+                          <td class="govuk-table__cell" scope="row">£162</td>
+                          <td class="govuk-table__cell" scope="row">£0</td>
+                          <td class="govuk-table__cell" scope="row">£232,571</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" scope="row">Learners Removed</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">(£9,970)</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">(£10,607)</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">(£20,577)</td>
+                        </tr>
+
+                         <tr class="govuk-table__row">
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" scope="row">Learning Aims Added</td>
+                            <td class="govuk-table__cell" scope="row">£15,886</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">£100,437</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">£116,323</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" scope="row">Learning Aims Removed</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" scope="row">Net Change</td>
+                            <td class="govuk-table__cell" scope="row">£17,749</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">£320,013</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">(£10,445)</td>
+                            <td class="govuk-table__cell" scope="row">£0</td>
+                            <td class="govuk-table__cell" scope="row">£327,317</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" scope="row">Revised Position</td>
+                            <td class="govuk-table__cell" scope="row">£3,735,989</td>
+                            <td class="govuk-table__cell" scope="row">£46,028</td>
+                            <td class="govuk-table__cell" scope="row">£5,173,933</td>
+                            <td class="govuk-table__cell" scope="row">£18,750</td>
+                            <td class="govuk-table__cell" scope="row">£43,834,620</td>
+                            <td class="govuk-table__cell" scope="row">£5,884,925</td>
+                            <td class="govuk-table__cell" scope="row">£58,694,245</td>
+                        </tr>
+                </tbody>
+            </table>
+
+        <button 
+            type="button"
+            class="govuk-button"
+            id="crossILRCompare"
+            onclick="handleBtnClick(this)">
+            Cross ILR Compare
+        </button>
+
+    </main>
+
+</body>
+
+
+{% endblock %}
