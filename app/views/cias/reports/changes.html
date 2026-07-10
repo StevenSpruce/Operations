@@ -14,10 +14,54 @@ Cross ILR overview
 
   <!-- MOJ CSS -->
   <link rel="stylesheet" href="https://unpkg.com/@ministryofjustice/frontend@1.6.0/moj/all.css">
-
+<meta name="theme-color" content="#1d70b8">
+<link rel="icon" sizes="48x48" href="/find-a-learning-aim/lib/govuk-frontend/assets/rebrand/images/favicon.ico">
+<link rel="icon" sizes="any" href="/find-a-learning-aim/lib/govuk-frontend/assets/rebrand/images/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="/find-a-learning-aim/lib/govuk-frontend/assets/rebrand/images/govuk-icon-mask.svg" color="#1d70b8">
+<link rel="apple-touch-icon" href="/find-a-learning-aim/lib/govuk-frontend/assets/rebrand/images/govuk-icon-180.png">
+<link rel="manifest" href="/find-a-learning-aim/lib/govuk-frontend/assets/rebrand/manifest.json">
+<meta property="og:image" content="~/lib/govuk-frontend/assets/rebrand/images/govuk-opengraph-image.png">
   <style>
     .table-container {
       overflow-x: auto;
+    }
+    .search-bar {
+        display: flex;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-bar .autocomplete-wrapper {
+        flex: 1;
+    }
+
+    .search-bar .govuk-input {
+        width: 100%;
+        margin: 0;
+        border-right: none;
+    }
+
+    .search-button {
+        width: 56px;
+        height: 40px;
+        border: 2px solid #0b0c0c;
+        background: #000;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-button img {
+        width: 20px;
+        height: 20px;
+        filter: brightness(0) invert(1);
+    }
+
+    .govuk-details {
+        margin-top: 5px;
     }
   </style>
 </head>
@@ -51,34 +95,151 @@ Cross ILR overview
   
   <a href="/cias/reports//funding-reconciliation" class="govuk-back-link">Back</a>
 
-    <table class="govuk-table">
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td>
-              <h1 class="govuk-heading-l">193 Changes</h1> 
-            </td>
-            <td>
-                  <label class="govuk-label">
-                  Rows per page
-                  </label>
-                  <select class="govuk-select" id="rows">
-                  <option selected>10</option>
-                  <option>20</option>
-                  <option>30</option>
-                  <option>40</option>
-                  <option>50</option>
-                  </select>
-              </div>
-            </td>
-          </tr> 
-        </tbody>
-      </table>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">193 Changes</h1>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="rows">
+                Rows per page
+            </label>
+
+            <select class="govuk-select" id="rows" name="rows">
+                <option selected value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+    </div>
+</div>
 
              
             </br>
 
+            <style>
+    .search-bar {
+        display: flex;
+        width: 100%;
+        margin-bottom: 10px;
+    }
 
-            
+    .search-bar .autocomplete-wrapper {
+        flex: 1;
+    }
+
+    .search-bar .govuk-input {
+        width: 100%;
+        margin: 0;
+        border-right: none;
+    }
+
+    .search-button {
+        width: 56px;
+        height: 40px;
+        border: 2px solid #0b0c0c;
+ 
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-button img {
+        width: 20px;
+        height: 20px;
+        filter: brightness(0) invert(1);
+    }
+
+    .govuk-details {
+        margin-top: 5px;
+    }
+</style>
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <label for="autocomplete-overlay" class="govuk-label">
+            Search by
+            <strong>learner reference number, unique learner number,
+            learning aim reference</strong>
+            or <strong>change field</strong>
+        </label>
+
+        <div class="search-bar">
+
+            <div id="tt-overlay" class="autocomplete-wrapper second">
+                <div class="autocomplete__wrapper" role="combobox" aria-expanded="false">
+                    <input
+                        class="govuk-input"
+                        id="autocomplete-overlay"
+                        name="SearchTerm"
+                        type="text"
+                        maxlength="200"
+                        placeholder="e.g 30100083 or Completion status">
+                </div>
+            </div>
+
+            <button
+                id="searchProviders"
+                type="submit"
+                class="search-button"
+                aria-label="Search">
+
+                <img src="/public/images/magnifying-glass.png" alt="magnifying glass" />
+
+            </button>
+
+        </div>
+
+        <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                    Search using a wildcard
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                A wildcard search allows you to search using the asterisk * symbol.
+            </div>
+        </details>
+
+    </div>
+  </br>
+    <div class="govuk-grid-column-one-third">
+
+        <div class="govuk-form-group">
+
+            <label class="govuk-label" for="searchType">
+                Search field
+            </label>
+
+            <select class="govuk-select" id="searchType" name="searchType">
+                <option value="LearnerReferenceNumber">
+                    Learner reference number
+                </option>
+                <option value="UniqueLearnerNumber">
+                    Unique learner number
+                </option>
+                <option selected value="Units">
+                    Learning aim reference
+                </option>
+                <option value="ChangeField">
+                    Change field
+                </option>
+            </select>
+
+        </div>
+
+    </div>
+
+</div>
+
     
     <!--Table -->
     <div class="table-container">
