@@ -1,0 +1,224 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+Cross ILR overview
+{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html><!DOCTYPE html="en">
+<head>
+  
+  <!-- GOV.UK CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/govuk-frontend@4.7.0/dist/govuk/all.css">
+
+  <!-- MOJ CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/@ministryofjustice/frontend@1.6.0/moj/all.css">
+
+  <style>
+    .table-container {
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body class="govuk-template__body">
+
+  <main class="govuk-main-wrapper">
+
+    <section aria-label="Service information" class="govuk-service-navigation"
+         data-module="govuk-service-navigation">
+    <div class="govuk-width-container">
+        <div class="govuk-service-navigation__container">
+            <span class="govuk-service-navigation__service-name">
+                <a href="/" class="govuk-service-navigation__link">
+                    Submit learner data
+                </a>
+            </span>
+        </div>
+    </div>
+</section>
+        <div class="govuk-body account-info">
+        <div>
+            <span class="your-name" id="bannerUserName">
+                Rajesh PATEL UKPRN:10000222
+            </span>
+            <a class="account-link" href="/Account/SignOut">Sign out</a>
+        </div>
+    </div>
+
+<main class="govuk-main-wrapper" id="content" role="main">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+  <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td>
+              <h1 class="govuk-heading-l">3 Learners aims removed for existing learners</h1> 
+            </td>
+            <td>
+                  <label class="govuk-label">
+                  Rows per page
+                  </label>
+                  <select class="govuk-select" id="rows">
+                  <option selected>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  </select>
+              </div>
+            </td>
+          </tr> 
+        </tbody>
+      </table>
+
+            <!--Table -->
+    <div class="table-container">
+
+      <table class="govuk-table moj-sortable-table" data-module="moj-sortable-table">
+
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">
+              	Learner reference number
+            </th>
+            
+            <th scope="col" class="govuk-table__header">
+              	Unique learner number
+            </th>
+            
+            <th scope="col" class="govuk-table__header">
+              	Name
+            </th>
+
+            <th scope="col" class="govuk-table__header">
+              	FM25
+            </th>
+           
+           <th scope="col" class="govuk-table__header">
+              	FM35
+            </th>
+
+            <th scope="col" class="govuk-table__header">
+              	FM36
+            </th>
+            
+            <th scope="col" class="govuk-table__header">
+              	FM38
+            </th>
+
+            <th scope="col" class="govuk-table__header">
+              	FM99
+            </th>
+            <th scope="col" class="govuk-table__header">
+              	Total funding
+            </th>
+          </tr>
+        </thead>
+
+        <tbody class="govuk-table__body" id="table-body">
+ <tr class="govuk-table__row">
+    <td class="govuk-table__cell">L30001</td>
+    <td class="govuk-table__cell">3234561</td>
+    <td class="govuk-table__cell">Emma Carter</td>
+    <td class="govuk-table__cell">(£4,000)</td>
+    <td class="govuk-table__cell">£0</td>
+    <td class="govuk-table__cell">£0</td>
+    <td class="govuk-table__cell">£0</td>
+    <td class="govuk-table__cell">(£3,000)</td>
+    <td class="govuk-table__cell">(£7,000)</td>
+</tr>
+
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">L30002</td>
+    <td class="govuk-table__cell">3234562</td>
+    <td class="govuk-table__cell">Liam Johnson</td>
+    <td class="govuk-table__cell">(£3,507)</td>
+    <td class="govuk-table__cell">£0</td>
+    <td class="govuk-table__cell">£0</td>
+    <td class="govuk-table__cell">£0</td>
+    <td class="govuk-table__cell">(£2,901)</td>
+    <td class="govuk-table__cell">(£6,408)</td>
+</tr>
+
+<tr class="govuk-table__row">
+    <td class="govuk-table__cell">L30003</td>
+    <td class="govuk-table__cell">3234563</td>
+    <td class="govuk-table__cell">Olivia Brown</td>
+    <td class="govuk-table__cell">(£3,100)</td>
+    <td class="govuk-table__cell">£0</td>
+    <td class="govuk-table__cell">£0</td>
+    <td class="govuk-table__cell">£0</td>
+    <td class="govuk-table__cell">(£3,000)</td>
+    <td class="govuk-table__cell">(£6,100)</td>
+</tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+    
+        <div class="govuk-pagination__prev">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            <span class="govuk-pagination__link-title">Previous</span></a>
+        </div>
+        <ul class="govuk-pagination__list">
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+              1
+            </a>
+          </li>
+          <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+              2
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-pagination__next">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg></a>
+        </div>
+      </nav>
+    </div>
+  </div>
+ </main>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/govuk-frontend@4.7.0/dist/govuk/all.js"></script>
+  <script src="https://unpkg.com/@ministryofjustice/frontend@1.6.0/moj/all.js"></script>
+
+  <script>
+    window.GOVUKFrontend.initAll();
+    window.MOJFrontend.initAll();
+
+    // Simple client-side filter
+    document.getElementById("filter").addEventListener("keyup", function () {
+      const filter = this.value.toLowerCase();
+      const rows = document.querySelectorAll("#table-body tr");
+
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(filter) ? "" : "none";
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+
+{% endblock %}
