@@ -7,11 +7,8 @@ GOV.UK Prototype Kit
 {% block content %}
 
 
-<script>
-  function handleBtnClick(btn) {
-    window.location.href = "/cias/reports/reports-history";
-  }
-</script>
+
+
 
 
 <!-- <section aria-label="Service information" class="govuk-service-navigation"
@@ -43,8 +40,12 @@ GOV.UK Prototype Kit
         <div class="govuk-grid-row flex">
         <div class="govuk-grid-column-full">
 
-        <h1 class="govuk-heading">Funding reconciliation summary report</h1>
+        <h1 class="govuk-heading" id="fundingTitle">Funding reconciliation summary report</h1>
 
+        <div class="govuk" style="background-color:#f3f2f1;">
+          <h1 class="govuk-heading-l" id="provider-name"></h1>
+          <p class="govuk-heading" id=ukprn-name> </p>
+        </div> 
            
 <table class="govuk-table">
 
@@ -210,6 +211,39 @@ GOV.UK Prototype Kit
     </main>
 
 </body>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const params = new URLSearchParams(window.location.search);
+  const year = params.get("year");
+
+  const providerText = params.get("provider");
+  const ukprn = params.get("ukprn");
+  
+  document.getElementById("fundingTitle").textContent ="Funding reconciliation summary report for " + year;
+  document.getElementById("provider-name").textContent = providerText;
+  document.getElementById("ukprn-name").textContent = "UKPRN: " + ukprn;      
+  
+  
+});
+
+
+  function handleBtnClick(btn) {
+
+    const params = new URLSearchParams(window.location.search);
+    const year = params.get("year");
+
+    const providerText = params.get("provider");
+    const ukprn = params.get("ukprn");
+
+    window.location.href = "reports-history?year=" + encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
+  }
+
+ 
+</script>
 
 
 {% endblock %}
