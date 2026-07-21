@@ -12,12 +12,16 @@ GOV.UK Prototype Kit
 function continueBtnClick() {       
   try {
 
-      const select = document.getElementById("academicYearSelection");
-      const selectedText = select.options[select.selectedIndex].text;
+        const select = document.getElementById("academicYearSelection");
+        const selectedText = select.options[select.selectedIndex].text;
      
-      const url =  "compare?year="+ encodeURIComponent(selectedText);
-      
-      window.location.href = url;
+        const params = new URLSearchParams(window.location.search);
+        const provider = params.get("provider");
+        const ukprn = params.get("ukprn");
+     
+        const url =  "compare?year="+ encodeURIComponent(selectedText) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider);
+
+        window.location.href = url;
       
     } catch (error) {
       console.log(error.message);
@@ -28,16 +32,33 @@ function continueBtnClick() {
 
 document.addEventListener("DOMContentLoaded", function () {
   
-  const select = document.getElementById("academicYearSelection");
+    try {
+        const params = new URLSearchParams(window.location.search);
+        const year = params.get("year");  
+        const provider = params.get("provider");
+        const ukprn = params.get("ukprn");
+     
+    if((year) && (provider) && (ukprn)) 
+    {
+      const select = document.getElementById("academicYearSelection");
 
+      select.value=year;
 
-  // Get query string
-  const params = new URLSearchParams(window.location.search);
-
-  // Read values
-  const year = params.get("year");
+      document.getElementById("provider-name").textContent = provider;
+      document.getElementById("ukprn-name").textContent = "UKPRN: " + ukprn;      
+    }
+    
+    } catch (error) {
+        console.log(error.message);
+    }
   
-  select.value=year;
+
+
+  
+  
+  
+  
+  
 });
 
 </script>
@@ -73,6 +94,11 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-xl">Select academic year</h1>
+
+       <div class="govuk" style="background-color:#f3f2f1;">
+            <h1 class="govuk-heading-l" id="provider-name"></h1>
+            <p class="govuk-heading" id=ukprn-name> </p>
+        </div>  
 
       <select
         class="govuk-select"

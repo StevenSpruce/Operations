@@ -54,15 +54,14 @@ Cross ILR overview
            
                          
             <h1 class="govuk-heading-xl">Cross ILR Reports</h1>
-              
-           
-            
+                                     
             <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
 
-              
-            <h1 class="govuk-heading-l" id="provider-name"></h1>
-            <p class="govuk-heading" id=ukprn-name> </p>
+            <div class="govuk" style="background-color:#f3f2f1;">
+              <h1 class="govuk-heading-l" id="provider-name"></h1>
+              <p class="govuk-heading" id=ukprn-name> </p>
+            </div>    
 
             </div>
           </div>
@@ -297,7 +296,21 @@ function handleClick() {
       const select = document.getElementById("academicYearSelection");
       const selectedText = select.options[select.selectedIndex].text;
      
-      const url =  "/cias/reports/select-academic-year?year="+ encodeURIComponent(select.selectedIndex + 1);
+      const selectedValue = select.value;
+
+      const params = new URLSearchParams(window.location.search);
+      const providerText = params.get("provider");
+      const ukprn = params.get("ukprn");
+     
+      if(providerText)
+      {
+        document.getElementById("provider-name").textContent = providerText;
+        document.getElementById("ukprn-name").textContent = "UKPRN: " + ukprn;      
+      }
+    
+      
+      const provider = providerText;
+      const url =  "/cias/reports/select-academic-year?year="+ encodeURIComponent(select.selectedIndex + 1) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider);
       
       window.location.href = url;
       
