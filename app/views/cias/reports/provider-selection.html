@@ -16,7 +16,7 @@ GOV.UK Prototype Kit
   <div class="govuk-grid-row flex">
     <div class="govuk-grid-column-full">
 
-<section aria-label="Service information" class="govuk-service-navigation"
+<!--<section aria-label="Service information" class="govuk-service-navigation"
          data-module="govuk-service-navigation">
     <div class="govuk-width-container">
         <div class="govuk-service-navigation__container">
@@ -35,7 +35,7 @@ GOV.UK Prototype Kit
  UKPRN:10000222             </span>
             <a class="account-link" href="/Account/SignOut">Sign out</a>
         </div>
-    </div>
+    </div>  -->
 
       <a href="javascript:history.back()" class="govuk-back-link">Back</a>
       <br></br>
@@ -53,7 +53,7 @@ GOV.UK Prototype Kit
         name="Provide selection"
         aria-describedby="Provide-hint"
       >
-        <option value="choose" selected>Choose provider</option>
+               <option value="choose" selected>Choose provider</option>
 <option value="10000020 ">10000020 - 5 E LTD.</option>
 <option value="10000044 ">10000044 - ABBOT BEYNE SCHOOL</option>
 <option value="10000045 ">10000045 - OAK WOOD SCHOOL</option>
@@ -2100,7 +2100,6 @@ GOV.UK Prototype Kit
 <option value="90001045 ">90001045 - NORTH EAST MAYORAL COMBINED AUTHORITY</option>
 <option value="90001070 ">90001070 - CHESHIRE AND WARRINGTON</option>
 <option value="90001071 ">90001071 - CUMBERLAND COUNCIL</option>
-
       </select>
       </div>
 
@@ -2122,18 +2121,23 @@ GOV.UK Prototype Kit
 
 <script>
 
-  function handleBtnClick(btn) {
+function handleBtnClick(btn) {
    
-    try {
+try {
       const select = document.getElementById("provideSelection");
       const selectedValue = select.value;
+      const selectedText  = select.options[select.selectedIndex].text;
+     
+      const provider = selectedText.substring(10);
+     
       if (selectedValue ==='choose')
       {
         window.location.href = "/cias/reports/provider-selection-error";
       }
       else
       {
-        window.location.href = "/cias/reports/compare";
+        
+        window.location.href = "/cias/reports/reports-history?ukprn=" + encodeURIComponent(selectedValue) + "&provider=" + encodeURIComponent(provider);
       }
   } catch (error) {
     console.log(error.message);

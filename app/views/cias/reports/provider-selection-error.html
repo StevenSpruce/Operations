@@ -16,7 +16,7 @@ GOV.UK Prototype Kit
   <div class="govuk-grid-row flex">
     <div class="govuk-grid-column-full">
 
-<section aria-label="Service information" class="govuk-service-navigation"
+<!--<section aria-label="Service information" class="govuk-service-navigation"
          data-module="govuk-service-navigation">
     <div class="govuk-width-container">
         <div class="govuk-service-navigation__container">
@@ -35,7 +35,7 @@ GOV.UK Prototype Kit
  UKPRN:10000222             </span>
             <a class="account-link" href="/Account/SignOut">Sign out</a>
         </div>
-    </div>
+    </div>  -->
 
       <a href="javascript:history.back()" class="govuk-back-link">Back</a>
       <br></br>
@@ -2133,21 +2133,28 @@ GOV.UK Prototype Kit
 </main>
 
 
-
 <script>
 
-  function handleBtnClick(btn) {
+function handleBtnClick(btn) {
    
-    try {
-        const select = document.getElementById("provideSelection");
-        const selectedValue = select.value;
+try {
+      const select = document.getElementById("provideSelection");
+      const selectedValue = select.value;
+      const selectedText  = select.options[select.selectedIndex].text;
+     
+      const provider = selectedText.substring(10);
+     
+      if (selectedValue ==='choose')
+      {
+        window.location.href = "/cias/reports/provider-selection-error";
+      }
+      else
+      {
         
-        if (selectedValue !='choose')
-        {
-            window.location.href = "/cias/reports/compare";
-        }
-    } catch (error) {
-        console.log(error.message);
+        window.location.href = "/cias/reports/reports-history?ukprn=" + encodeURIComponent(selectedValue) + "&provider=" + encodeURIComponent(provider);
+      }
+  } catch (error) {
+    console.log(error.message);
   }
 }
 </script>
