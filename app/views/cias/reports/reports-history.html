@@ -178,7 +178,7 @@ Cross ILR overview
             <td class="govuk-table__cell">12<br>12</td>
             <td class="govuk-table__cell">Rajesh Patel</td>
             <td class="govuk-table__cell">Completed</td>
-            <td class="govuk-table__cell"><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></br><a class="govuk-link" href="funding-reconciliation">Funding reconciliation</a></td>  
+            <td class="govuk-table__cell"><a class="govuk-link" id="table-row1" href="funding-reconciliation">Funding reconciliation</a></br><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
           </tr>
 
           <tr class="govuk-table__row">
@@ -188,7 +188,7 @@ Cross ILR overview
             <td class="govuk-table__cell">12<br>12</td>
             <td class="govuk-table__cell">Rajesh Patel</td>
             <td class="govuk-table__cell">Completed</td>
-            <td class="govuk-table__cell"><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></br><a class="govuk-link" href="funding-reconciliation">Funding reconciliation</a></td>  
+            <td class="govuk-table__cell"><a class="govuk-link" id="table-row2" href="funding-reconciliation">Funding reconciliation</a></br><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
           </tr>
 
            <tr class="govuk-table__row">
@@ -198,7 +198,7 @@ Cross ILR overview
             <td class="govuk-table__cell">12<br>12</td>
             <td class="govuk-table__cell">Rajesh Patel</td>
             <td class="govuk-table__cell">Completed</td>
-            <td class="govuk-table__cell"><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></br><a class="govuk-link" href="funding-reconciliation">Funding reconciliation</a></td>  
+            <td class="govuk-table__cell"><a class="govuk-link" id="table-row3" href="funding-reconciliation">Funding reconciliation</a></br><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
           </tr>
 
           <tr class="govuk-table__row">
@@ -258,36 +258,29 @@ Cross ILR overview
   <script>
    
 
-   
-    //window.GOVUKFrontend.initAll();
-    //window.MOJFrontend.initAll();
-        
-    /* Simple client-side filter
-    document.getElementById("filter").addEventListener("keyup", function () {
-      const filter = this.value.toLowerCase();
-      const rows = document.querySelectorAll("#table-body tr");
-
-      rows.forEach(row => {
-        const text = row.innerText.toLowerCase();
-        row.style.display = text.includes(filter) ? "" : "none";
-      });
-    });*/
 
 
 document.addEventListener("DOMContentLoaded", function () {
   try {
     const params = new URLSearchParams(window.location.search);
     
+    const year = params.get("year");
     const provider = params.get("provider");
     const ukprn = params.get("ukprn");
-     
+
     if(provider)
     {
       document.getElementById("provider-name").textContent = provider;
       document.getElementById("ukprn-name").textContent = "UKPRN: " + ukprn;      
     }
     
+    document.getElementById('table-row1').href = "funding-reconciliation" + "?year="+ encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider);
+    document.getElementById('table-row2').href = "funding-reconciliation" + "?year="+ encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider);
+    document.getElementById('table-row3').href = "funding-reconciliation" + "?year="+ encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider);
+
+
   } catch (error) {
+   
       console.log(error.message);
   }
 });
