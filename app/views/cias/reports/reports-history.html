@@ -264,7 +264,8 @@ document.addEventListener("DOMContentLoaded", function () {
   try {
     const params = new URLSearchParams(window.location.search);
     
-    const year = params.get("year");
+    const select = document.getElementById("academicYearSelection");
+    const year = select.options[select.selectedIndex].text;
     const provider = params.get("provider");
     const ukprn = params.get("ukprn");
 
