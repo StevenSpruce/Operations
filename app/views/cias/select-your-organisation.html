@@ -1,0 +1,80 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+Cross ILR overview
+{% endblock %}
+
+{% block content %}
+
+
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <div class="govuk-grid-column-full">
+                    
+
+                    
+        
+            <h1 class="govuk-heading-xl">Select your organisation</h1>
+        <p class="govuk-body">
+                You are associated with more than 1 organisation, please select the one you wish to sign-in with.
+            </p>
+
+            <p class="govuk-body govuk-!-font-weight-bold">
+                Your organisations
+            </p>
+
+
+        
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+                
+                <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="internalusergroup" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                    DfE - Submit learner data internal user group (open)
+                    </label>
+                </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="internalauditusergroup" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                    DfE - Submit learner data internal audit user group (open)
+                    </label>
+                </div>
+                </div>
+            </fieldset>
+    
+            </br>
+            </br>
+            
+            <button class="govuk-button" onclick="continueBtnClick()">Continue</button>
+                
+        </main>
+    </div>
+
+</body>
+</html>
+
+<script>
+  
+function continueBtnClick() {       
+    try {
+
+        const selected = document.getElementById("internalauditusergroup").checked;
+        
+        if (selected) {
+            window.location.href = "/cias/audit-services";
+        }
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+</script>
+
+
+{% endblock %}
