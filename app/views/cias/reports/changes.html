@@ -1,0 +1,509 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+Cross ILR overview
+{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html><!DOCTYPE html="en">
+<head>
+  
+  <!-- GOV.UK CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/govuk-frontend@4.7.0/dist/govuk/all.css">
+
+  <!-- MOJ CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/@ministryofjustice/frontend@1.6.0/moj/all.css">
+<meta name="theme-color" content="#1d70b8">
+<link rel="icon" sizes="48x48" href="/find-a-learning-aim/lib/govuk-frontend/assets/rebrand/images/favicon.ico">
+<link rel="icon" sizes="any" href="/find-a-learning-aim/lib/govuk-frontend/assets/rebrand/images/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="/find-a-learning-aim/lib/govuk-frontend/assets/rebrand/images/govuk-icon-mask.svg" color="#1d70b8">
+<link rel="apple-touch-icon" href="/find-a-learning-aim/lib/govuk-frontend/assets/rebrand/images/govuk-icon-180.png">
+<link rel="manifest" href="/find-a-learning-aim/lib/govuk-frontend/assets/rebrand/manifest.json">
+<meta property="og:image" content="~/lib/govuk-frontend/assets/rebrand/images/govuk-opengraph-image.png">
+  <style>
+    .table-container {
+      overflow-x: auto;
+    }
+    .search-bar {
+        display: flex;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-bar .autocomplete-wrapper {
+        flex: 1;
+    }
+
+    .search-bar .govuk-input {
+        width: 100%;
+        margin: 0;
+        border-right: none;
+    }
+
+    .search-button {
+        width: 56px;
+        height: 40px;
+        border: 2px solid #0b0c0c;
+        background: #000;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-button img {
+        width: 20px;
+        height: 20px;
+        filter: brightness(0) invert(1);
+    }
+
+    .govuk-details {
+        margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body class="govuk-template__body">
+
+  <main class="govuk-main-wrapper">
+
+    <!-- <section aria-label="Service information" class="govuk-service-navigation"
+         data-module="govuk-service-navigation">
+    <div class="govuk-width-container">
+        <div class="govuk-service-navigation__container">
+            <span class="govuk-service-navigation__service-name">
+                <a href="/" class="govuk-service-navigation__link">
+                    Submit learner data
+                </a>
+            </span>
+        </div>
+    </div>
+</section>
+        <div class="govuk-body account-info">
+        <div>
+            <span class="your-name" id="bannerUserName">
+                Rajesh PATEL
+ UKPRN:10000222             </span>
+            <a class="account-link" href="/Account/SignOut">Sign out</a>
+        </div>
+    </div>
+  </br> -->
+
+  
+  <a href="/cias/reports/funding-reconciliation" class="govuk-back-link">Back</a>
+
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">193 Changes</h1>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="rows">
+                Rows per page
+            </label>
+
+            <select class="govuk-select" id="rows" name="rows">
+                <option selected value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+             
+            </br>
+
+            <style>
+    .search-bar {
+        display: flex;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-bar .autocomplete-wrapper {
+        flex: 1;
+    }
+
+    .search-bar .govuk-input {
+        width: 100%;
+        margin: 0;
+        border-right: none;
+    }
+
+    .search-button {
+        width: 56px;
+        height: 40px;
+        border: 2px solid #0b0c0c;
+ 
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-button img {
+        width: 20px;
+        height: 20px;
+        filter: brightness(0) invert(1);
+    }
+
+    .govuk-details {
+        margin-top: 5px;
+    }
+</style>
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <label for="autocomplete-overlay" class="govuk-label">
+            Search by
+            <strong>learner reference number, unique learner number,
+            learning aim reference</strong>
+            or <strong>change field</strong>
+        </label>
+
+        <div class="search-bar">
+
+            <div id="tt-overlay" class="autocomplete-wrapper second">
+                <div class="autocomplete__wrapper" role="combobox" aria-expanded="false">
+                    <input
+                        class="govuk-input"
+                        id="autocomplete-overlay"
+                        name="SearchTerm"
+                        type="text"
+                        maxlength="200"
+                        placeholder="e.g 30100083 or Completion status">
+                </div>
+            </div>
+
+            <button
+                id="searchProviders"
+                type="submit"
+                class="search-button"
+                aria-label="Search">
+
+                <img src="/public/images/magnifying-glass.png" alt="magnifying glass" />
+
+            </button>
+
+        </div>
+
+        <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                    Search using a wildcard
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                A wildcard search allows you to search using the asterisk * symbol.
+            </div>
+        </details>
+
+    </div>
+  </br>
+    <div class="govuk-grid-column-one-third">
+
+        <div class="govuk-form-group">
+
+            <label class="govuk-label" for="searchType">
+                Search field
+            </label>
+
+            <select class="govuk-select" id="searchType" name="searchType">
+                <option value="LearnerReferenceNumber">
+                    Learner reference number
+                </option>
+                <option value="UniqueLearnerNumber">
+                    Unique learner number
+                </option>
+                <option selected value="Units">
+                    Learning aim reference
+                </option>
+                <option value="ChangeField">
+                    Change field
+                </option>
+            </select>
+
+        </div>
+
+    </div>
+
+</div>
+
+    
+    <!--Table -->
+    <div class="table-container">
+
+      <table class="govuk-table moj-sortable-table" data-module="moj-sortable-table">
+
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+
+            <th scope="col" class="govuk-table__header">
+              	Learner reference number
+            </th>
+
+            <th scope="col" class="govuk-table__header">
+              	Unique learner number
+            </th>
+            
+            <th scope="col" class="govuk-table__header">
+              	Learning aim reference
+            </th>
+
+            <th scope="col" class="govuk-table__header" aria-sort="none">
+              	Change field
+            </th>
+                                
+            <th scope="col" class="govuk-table__header">
+              	ILR 1 value
+            </th>
+           
+            <th scope="col" class="govuk-table__header">
+              	ILR 2 value
+            </th>
+
+            <th scope="col" class="govuk-table__header">
+              	ILR 1 funding total
+            </th>
+
+             <th scope="col" class="govuk-table__header">
+              	ILR 2 funding total
+            </th>
+
+            <th scope="col" class="govuk-table__header">
+              	Change in funding
+            </th>
+          </tr>
+        </thead>
+
+        <tbody class="govuk-table__body" id="table-body">
+ 
+   
+         <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30100083</td>
+            <td class="govuk-table__cell">4661509500</td>
+            <td class="govuk-table__cell">60342900</td>
+            <td class="govuk-table__cell">Learning actual end date</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">17/12/2025</td>
+            <td class="govuk-table__cell">£7,558.97</td>
+            <td class="govuk-table__cell">£7,558.97</td>
+            <td class="govuk-table__cell">£0.00</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30100083</td>
+            <td class="govuk-table__cell">4661509500</td>
+            <td class="govuk-table__cell">60342900</td>
+            <td class="govuk-table__cell">Completion status</td>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">2</td>
+            <td class="govuk-table__cell">£7,558.97</td>
+            <td class="govuk-table__cell">£7,558.97</td>
+            <td class="govuk-table__cell">£0.00</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30100083</td>
+            <td class="govuk-table__cell">4661509500</td>
+            <td class="govuk-table__cell">60342900</td>
+            <td class="govuk-table__cell">Outcome</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">8</td>
+            <td class="govuk-table__cell">£7,558.97</td>
+            <td class="govuk-table__cell">£7,558.97</td>
+            <td class="govuk-table__cell">£0.00</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30095419</td>
+            <td class="govuk-table__cell">5665483752</td>
+            <td class="govuk-table__cell">6035821X</td>
+            <td class="govuk-table__cell">Completion status</td>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">3</td>
+            <td class="govuk-table__cell">£7,967.82</td>
+            <td class="govuk-table__cell">£5,311.88</td>
+            <td class="govuk-table__cell">-£2,655.94</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30095419</td>
+            <td class="govuk-table__cell">5665483752</td>
+            <td class="govuk-table__cell">6035821X</td>
+            <td class="govuk-table__cell">Outcome</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">3</td>
+            <td class="govuk-table__cell">£7,967.82</td>
+            <td class="govuk-table__cell">£5,311.88</td>
+            <td class="govuk-table__cell">-£2,655.94</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30095419</td>
+            <td class="govuk-table__cell">5665483752</td>
+            <td class="govuk-table__cell">6035821X</td>
+            <td class="govuk-table__cell">Withdrawal reason</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">97</td>
+            <td class="govuk-table__cell">£7,967.82</td>
+            <td class="govuk-table__cell">£5,311.88</td>
+            <td class="govuk-table__cell">-£2,655.94</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30095419</td>
+            <td class="govuk-table__cell">5665483752</td>
+            <td class="govuk-table__cell">6035821X</td>
+            <td class="govuk-table__cell">Learning actual end date</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">29/09/2025</td>
+            <td class="govuk-table__cell">£7,967.82</td>
+            <td class="govuk-table__cell">£5,311.88</td>
+            <td class="govuk-table__cell">-£2,655.94</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30095419</td>
+            <td class="govuk-table__cell">5665483752</td>
+            <td class="govuk-table__cell">6035821X</td>
+            <td class="govuk-table__cell">On programme payments</td>
+            <td class="govuk-table__cell">£7,967.82</td>
+            <td class="govuk-table__cell">£5,311.88</td>
+            <td class="govuk-table__cell">£7,967.82</td>
+            <td class="govuk-table__cell">£5,311.88</td>
+            <td class="govuk-table__cell">-£2,655.94</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30095419</td>
+            <td class="govuk-table__cell">5665483752</td>
+            <td class="govuk-table__cell">6035821X</td>
+            <td class="govuk-table__cell">Total funding</td>
+            <td class="govuk-table__cell">£7,967.82</td>
+            <td class="govuk-table__cell">£5,311.88</td>
+            <td class="govuk-table__cell">£7,967.82</td>
+            <td class="govuk-table__cell">£5,311.88</td>
+            <td class="govuk-table__cell">-£2,655.94</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30095087</td>
+            <td class="govuk-table__cell">5796293736</td>
+            <td class="govuk-table__cell">6035821X</td>
+            <td class="govuk-table__cell">Learning actual end date</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">28/11/2025</td>
+            <td class="govuk-table__cell">£7,967.82</td>
+            <td class="govuk-table__cell">£9,959.78</td>
+            <td class="govuk-table__cell">£1,991.96</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30095087</td>
+            <td class="govuk-table__cell">5796293736</td>
+            <td class="govuk-table__cell">6035821X</td>
+            <td class="govuk-table__cell">Completion status</td>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">2</td>
+            <td class="govuk-table__cell">£7,967.82</td>
+            <td class="govuk-table__cell">£9,959.78</td>
+            <td class="govuk-table__cell">£1,991.96</td>
+        </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+    
+        <div class="govuk-pagination__prev">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            <span class="govuk-pagination__link-title">Previous</span></a>
+        </div>
+        <ul class="govuk-pagination__list">
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+              1
+            </a>
+          </li>
+          <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+              2
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-pagination__next">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg></a>
+        </div>
+      </nav>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/govuk-frontend@4.7.0/dist/govuk/all.js"></script>
+  <script src="https://unpkg.com/@ministryofjustice/frontend@1.6.0/moj/all.js"></script>
+
+  <script>
+   
+    window.GOVUKFrontend.initAll();
+    window.MOJFrontend.initAll();
+        
+    // Simple client-side filter
+    document.getElementById("filter").addEventListener("keyup", function () {
+      const filter = this.value.toLowerCase();
+      const rows = document.querySelectorAll("#table-body tr");
+
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(filter) ? "" : "none";
+      });
+    });
+
+
+    
+  function handleClick() {        
+    try {
+
+      const select = document.getElementById("academicYearSelection");
+      const selectedText = select.options[select.selectedIndex].text;
+     
+      const url =  "select-academic-year?year="+ encodeURIComponent(select.selectedIndex + 1);
+      
+      window.location.href = url;
+      
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+  </script>
+
+</body>
+</html>
+``
+
+
+{% endblock %}

@@ -26,7 +26,7 @@ href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-
 <div class="govuk-grid-column-full">
 
   
-<section aria-label="Service information" class="govuk-service-navigation"
+<!-- <section aria-label="Service information" class="govuk-service-navigation"
          data-module="govuk-service-navigation">
     <div class="govuk-width-container">
         <div class="govuk-service-navigation__container">
@@ -45,7 +45,7 @@ href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-
  UKPRN:10000222             </span>
             <a class="account-link" href="/Account/SignOut">Sign out</a>
         </div>
-    </div>
+    </div>  -->
 
 
 <div class="govuk-error-summary" data-module="govuk-error-summary">
@@ -68,11 +68,12 @@ href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-
 
 <a href="/cias/reports/select-academic-year" class="govuk-back-link">Back</a>
 
+<h1 class="govuk-heading-xl" id="cilrHeader">Cross ILR Compare</h1>
 
+
+  <h1 class="govuk-heading-l" id="provider-name"></h1>
+  <p class="govuk-heading" id=ukprn-name> </p>
     
-<h1 class="govuk-heading-l" id="cilrHeader">Cross ILR Compare</h1>
-
-<!-- TAB PANEL -->
 <div class="govuk-tabs" data-module="govuk-tabs">
 
 <ul class="govuk-tabs__list">
@@ -348,12 +349,17 @@ document.addEventListener("DOMContentLoaded", function () {
         ilrDropdown1.textContent = "Cross ILR compare for " + year;
   }
 
+  const provider = params.get("provider");
+  const ukprn = params.get("ukprn");
+     
+  document.getElementById("provider-name").textContent = provider;
+  document.getElementById("ukprn-name").textContent = "UKPRN: " + ukprn;      
+
   document.getElementById("returnPeriod1").selectedIndex = rtn1;
   document.getElementById("ilrSelection1").selectedIndex = ilr1;
 });
 
 
-// BUTTON LOGIC
 function handleBtnClick() {
 
   const dropdownRtn1Value  = document.getElementById("returnPeriod1").value;
@@ -368,27 +374,32 @@ function handleBtnClick() {
   const ilrFile1Index = document.getElementById("ilrSelection1").selectedIndex;
   const ilrFile2Index = document.getElementById("ilrSelection2").selectedIndex;
 
+  
+  const providerText = params.get("provider");
+  const ukprn = params.get("ukprn");
+     
+  
 
    if ((dropdownRtn1Value === 'choose') && (dropdownILR1Value === 'choose') && (dropdownRtn2Value === 'choose')  && (dropdownILR2Value === 'choose') ){
-          window.location.href = "/cias/reports/compare-error4?year=" + encodeURIComponent(year);
+          window.location.href = "/cias/reports/compare-error4?year=" + encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
       return;
     }
 
     if ((dropdownILR1Value === 'choose') && (dropdownILR2Value === 'choose') && (dropdownRtn2Value === 'choose') ){
 
       
-      window.location.href = "/cias/reports/compare-error3?year=" + encodeURIComponent(year) + "&rtn1=" + encodeURIComponent(rtnPeriod1Index);
+      window.location.href = "/cias/reports/compare-error3?year=" + encodeURIComponent(year) + "&rtn1=" + encodeURIComponent(rtnPeriod1Index) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
       return;
     }
 
     
     if ((dropdownRtn2Value === 'choose') && (dropdownILR2Value === 'choose')){
-      window.location.href = "/cias/reports/compare-error2?year=" + encodeURIComponent(year) + "&rtn1=" + encodeURIComponent(rtnPeriod1Index) + "&ilr1=" + encodeURIComponent(rtnPeriod1Index);
+      window.location.href = "/cias/reports/compare-error2?year=" + encodeURIComponent(year) + "&rtn1=" + encodeURIComponent(rtnPeriod1Index) + "&ilr1=" + encodeURIComponent(rtnPeriod1Index) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
       return;
     }
 
     if ((dropdownILR2Value === 'choose')){
-      window.location.href = "/cias/reports/compare-error1?year=" + encodeURIComponent(year) + "&rtn1=" + encodeURIComponent(rtnPeriod1Index) + "&ilr1=" + encodeURIComponent(rtnPeriod1Index) + "&rtn2=" + encodeURIComponent(rtnPeriod2Index);
+      window.location.href = "/cias/reports/compare-error1?year=" + encodeURIComponent(year) + "&rtn1=" + encodeURIComponent(rtnPeriod1Index) + "&ilr1=" + encodeURIComponent(rtnPeriod1Index) + "&rtn2=" + encodeURIComponent(rtnPeriod2Index) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
       return;
     }
     
@@ -402,16 +413,17 @@ function handleBtnClick() {
     
     var ilrText2 = ilrSelection2.options[ilrSelection2.selectedIndex].text;
 
-    if ((ilrText1 === ilrText2) && (dropdownRtn1Value === dropdownRtn2Value)){
-      window.location.href = "/cias/reports/compare-error5?year=" + encodeURIComponent(year);
+    if (ilrText1 === ilrText2){
+      window.location.href = "/cias/reports/compare-error5?year=" + encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
       return;
     }else{
           
-      window.location.href = "reports-history2";  
+      window.location.href = "funding-reconciliation?year=" + encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
     }
     
 }
 </script>
+
 
 {% endblock %}
 

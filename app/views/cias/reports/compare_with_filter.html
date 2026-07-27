@@ -308,7 +308,7 @@ GOV.UK Prototype Kit
 <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="filters">
  <div class="filter-layout">
    <h2 class="govuk-heading-m">Under construction</h2>
-<!--
+
    
     
     <div class="filter-sidebar">
@@ -487,7 +487,7 @@ GOV.UK Prototype Kit
       </div>
 
     </div>
-  </div> -->
+  </div> 
 </div>
 
 </div>
@@ -570,21 +570,20 @@ document.getElementById("clearFiltersTop").addEventListener("click", function(e)
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  alert("testtt");
+  
   updateFilters();
 
   try {   
-    alert("test");
+
     const headerText = document.getElementById("cilrHeader");
-alert("test1");
+
 
     // Get query string
     const params = new URLSearchParams(window.location.search);
-alert("test2");
+
     // Read values
     const year = params.get("year");
     
-    alert(year);
   } catch (error) {
       console.log(error.message);
   }
