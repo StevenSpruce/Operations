@@ -10,6 +10,20 @@ Cross ILR overview
 
     <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
+     <br></br>
+
+       <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+            There’s a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                    <a href="#controls" autofocus="">Check data you want to submit</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
         <main class="govuk-main-wrapper" id="content" role="main">
             <div class="govuk-grid-row flex">
@@ -32,7 +46,7 @@ Cross ILR overview
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
                 
-                <div class="govuk-radios" data-module="govuk-radios">
+                 <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="internalusergroup" type="radio" value="internalusergroup">
                     <label class="govuk-label govuk-radios__label" for="organisation ">
@@ -60,7 +74,6 @@ Cross ILR overview
 </html>
 
 <script>
-  
 function continueBtnClick() {       
     try {
 
@@ -78,10 +91,7 @@ function continueBtnClick() {
         console.log(error.message);
     }
 }
-
 </script>
 
 
 {% endblock %}
-
-
