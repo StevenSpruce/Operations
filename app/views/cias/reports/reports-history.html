@@ -171,14 +171,14 @@ Cross ILR overview
         <tbody class="govuk-table__body" id="table-body">
  
    
-          <tr class="govuk-table__row">
+          <tr class="govuk-table__row" id="tablerow1" >
             <td class="govuk-table__cell">16 June 2026 at 10:56</td>
             <td class="govuk-table__cell">R04<br>R05</td>
             <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>    
             <td class="govuk-table__cell">12<br>12</td>
             <td class="govuk-table__cell">Rajesh Patel</td>
-            <td class="govuk-table__cell">1123<br>Completed</td>
-            <td class="govuk-table__cell"><a class="govuk-link" id="table-row1" href="funding-reconciliation">Funding reconciliation</a></br><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
+            <td class="govuk-table__cell">1123<br><span id="status">Processing</span></td>
+            <td class="govuk-table__cell"><a class="govuk-link" id="table-link1" href="funding-reconciliation">Funding reconciliation</a></br><a class="govuk-link" id="table-link1a" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
           </tr>
 
           <tr class="govuk-table__row">
@@ -188,7 +188,7 @@ Cross ILR overview
             <td class="govuk-table__cell">12<br>12</td>
             <td class="govuk-table__cell">Rajesh Patel</td>
             <td class="govuk-table__cell">1243<br>Completed</td>
-            <td class="govuk-table__cell"><a class="govuk-link" id="table-row2" href="funding-reconciliation">Funding reconciliation</a></br><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
+            <td class="govuk-table__cell"><a class="govuk-link" id="table-link2" href="funding-reconciliation">Funding reconciliation</a></br><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
           </tr>
 
            <tr class="govuk-table__row">
@@ -198,7 +198,7 @@ Cross ILR overview
             <td class="govuk-table__cell">12<br>12</td>
             <td class="govuk-table__cell">Rajesh Patel</td>
             <td class="govuk-table__cell">2179<br>Completed</td>
-            <td class="govuk-table__cell"><a class="govuk-link" id="table-row3" href="funding-reconciliation">Funding reconciliation</a></br><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
+            <td class="govuk-table__cell"><a class="govuk-link" id="table-link3" href="funding-reconciliation">Funding reconciliation</a></br><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
           </tr>
 
           <tr class="govuk-table__row">
@@ -275,16 +275,48 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("ukprn-name").textContent = "UKPRN: " + ukprn;      
     }
     
-    document.getElementById('table-row1').href = "funding-reconciliation" + "?year="+ encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider);
-    document.getElementById('table-row2').href = "funding-reconciliation" + "?year="+ encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider);
-    document.getElementById('table-row3').href = "funding-reconciliation" + "?year="+ encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider);
+    document.getElementById('table-link1').href = "funding-reconciliation" + "?year="+ encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider);
+    document.getElementById('table-link1').style.visibility="hidden";
+    document.getElementById('table-link1a').style.visibility="hidden";
+    document.getElementById('table-link2').href = "funding-reconciliation" + "?year="+ encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider);
+    document.getElementById('table-link3').href = "funding-reconciliation" + "?year="+ encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider);
 
+    startTimer();
 
   } catch (error) {
    
       console.log(error.message);
   }
 });
+
+let seconds = 0;
+let timerInterval = null;
+
+
+function startTimer() {
+   try {
+    if (!timerInterval) {
+        timerInterval = setInterval(() => {
+            seconds++;
+            if (seconds > 2)
+            {
+      
+              clearInterval(timerInterval);
+              timerInterval = null;
+
+              document.getElementById('table-link1').style.visibility="visible";
+              document.getElementById('table-link1a').style.visibility="visible";
+              document.getElementById("status").textContent = "Completed";
+            }
+        }, 1000);
+    }
+    } catch (error) {
+      
+      console.log(error.message);
+    }
+}
+
+
 
     
 function handleClick() {        
