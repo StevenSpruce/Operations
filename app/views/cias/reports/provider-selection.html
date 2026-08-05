@@ -43,7 +43,7 @@ GOV.UK Prototype Kit
       <div class="govuk-grid-row">
       
           <div class="govuk-grid-column">
-              <h1 class="govuk-heading-xl">Select a provider to compare ILRs</h1>
+              <h1 class="govuk-heading-xl" id="cilrHeader">Select a provider to compare ILRs</h1>
                 
               <div class="govuk-form-group">
 
@@ -2121,6 +2121,19 @@ GOV.UK Prototype Kit
 
 <script>
 
+  document.addEventListener("DOMContentLoaded", function () {
+  
+  const params = new URLSearchParams(window.location.search);
+  const year = params.get("year");
+
+  if (year) {
+        var ilrDropdown1 = document.getElementById("cilrHeader");
+
+        ilrDropdown1.textContent = "Select a provider to compare ILRs for " + year;
+  }
+  
+});
+
 function handleBtnClick(btn) {
    
 try {
@@ -2136,8 +2149,9 @@ try {
       }
       else
       {
-        
-        window.location.href = "/cias/reports/reports-history?ukprn=" + encodeURIComponent(selectedValue) + "&provider=" + encodeURIComponent(provider) + "&generatebtn=false";
+        const params = new URLSearchParams(window.location.search);
+        const year = params.get("year");
+        window.location.href = "/cias/reports/reports-history?ukprn=" + encodeURIComponent(selectedValue) + "&provider=" + encodeURIComponent(provider) + "&year=" + encodeURIComponent(year) + "&generatebtn=false";
       }
   } catch (error) {
     console.log(error.message);

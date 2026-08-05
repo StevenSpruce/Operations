@@ -63,7 +63,7 @@ href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-
   </div>
 
 
-<a href="/cias/reports/select-academic-year" class="govuk-back-link">Back</a>
+ <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 <h1 class="govuk-heading-xl" id="cilrHeader">Cross ILR Compare</h1>
 
@@ -325,7 +325,7 @@ href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-
 </main>
 
 <script>
-// SAFE DOM LOAD
+
 document.addEventListener("DOMContentLoaded", function () {
   
   const params = new URLSearchParams(window.location.search);
@@ -412,7 +412,7 @@ function handleBtnClick() {
       return;
     }else{
           
-      window.location.href = "reports-history?year=" + encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText) + "&generatebtn=true";
+      window.location.href = "funding-reconciliation?year=" + encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
     }
     
 }

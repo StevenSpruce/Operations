@@ -54,7 +54,7 @@ Cross ILR overview
           <a href="javascript:history.back()" class="govuk-back-link">Back</a>
            
                          
-            <h1 class="govuk-heading-xl">Cross ILR Reports</h1>
+            <h1 class="govuk-heading-xl" id="cilrHeader">Cross ILR Reports</h1>
                                      
             <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
@@ -87,25 +87,7 @@ Cross ILR overview
              <table class="govuk-table">
                 <tbody class="govuk-table__body">
                   <tr class="govuk-table__row">
-                    <td>
-                      <label class="govuk-label">
-                          Select academic year
-                      </label>
-                       <!-- Dropdown 1 -->
-                      <select
-                        class="govuk-select"
-                        id="academicYearSelection"
-                        name="Academic year selection"
-                        aria-describedby="Provide-hint"
-                      >
-                        <option value="1">2026 to 2027</option>
-                        <option value="2" selected>2025 to 2026</option>
-                        <option value="3">2024 to 2025</option>
-                        <option value="4">2023 to 2024</option>
-                      </select>
-
-
-                    </td>
+                   
                     <td>
                           <label class="govuk-label">
                           Rows per page
@@ -264,13 +246,13 @@ document.addEventListener("DOMContentLoaded", function () {
   try {
     const params = new URLSearchParams(window.location.search);
     
-    const select = document.getElementById("academicYearSelection");
-    const year = select.options[select.selectedIndex].text;
+    const year = params.get("year");
     const provider = params.get("provider");
     const ukprn = params.get("ukprn");
     const generatebtn = params.get("generatebtn");
 
     
+     document.getElementById("cilrHeader").textContent = "Cross ILR Reports for " + year;
 
     if(provider)
     {
@@ -338,14 +320,10 @@ function startTimer() {
 function handleClick() {        
     try {
 
-      const select = document.getElementById("academicYearSelection");
-      const selectedText = select.options[select.selectedIndex].text;
-     
-      const selectedValue = select.value;
-
       const params = new URLSearchParams(window.location.search);
       const providerText = params.get("provider");
       const ukprn = params.get("ukprn");
+      const year = params.get("year");
      
       if(providerText)
       {
@@ -355,7 +333,7 @@ function handleClick() {
     
       
       const provider = providerText;
-      const url =  "/cias/reports/select-academic-year?year="+ encodeURIComponent(select.selectedIndex + 1) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider);
+      const url =  "compare?year="+ encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider);
       
       window.location.href = url;
       
