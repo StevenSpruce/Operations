@@ -2142,15 +2142,16 @@ try {
       const selectedText  = select.options[select.selectedIndex].text;
      
       const provider = selectedText.substring(10);
+      const params = new URLSearchParams(window.location.search);
+      const year = params.get("year");
      
       if (selectedValue ==='choose')
       {
-        window.location.href = "/cias/reports/provider-selection-error";
+        window.location.href = "/cias/reports/provider-selection-error?year="+ encodeURIComponent(year);
       }
       else
       {
-        const params = new URLSearchParams(window.location.search);
-        const year = params.get("year");
+        
         window.location.href = "/cias/reports/reports-history?ukprn=" + encodeURIComponent(selectedValue) + "&provider=" + encodeURIComponent(provider) + "&year=" + encodeURIComponent(year) + "&generatebtn=false";
       }
   } catch (error) {
