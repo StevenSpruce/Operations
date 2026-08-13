@@ -14,9 +14,10 @@ function continueBtnClick() {
 
         const select = document.getElementById("academicYearSelection");
         const selectedText = select.options[select.selectedIndex].text;
+        const params = new URLSearchParams(window.location.search);
+        const crossILR = params.get("crossilr");
      
-        const url =  "/cias/reports/provider-selection?year="+ encodeURIComponent(selectedText);
-
+        const url =  "/cias/reports/provider-selection?year="+ encodeURIComponent(selectedText) + "&crossilr=" + encodeURIComponent(crossILR);
         window.location.href = url;
       
     } catch (error) {
@@ -29,7 +30,8 @@ function continueBtnClick() {
 </script>
 
 
-<a href="/cias/reports/overview" class="govuk-back-link">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
 
       <main class="govuk-main-wrapper" id="content" role="main">
           <div class="govuk-grid-row flex">

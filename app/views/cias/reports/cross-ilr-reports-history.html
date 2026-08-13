@@ -1,0 +1,351 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+Cross ILR overview
+{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html><!DOCTYPE html="en">
+<head>
+  
+  <!-- GOV.UK CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/govuk-frontend@4.7.0/dist/govuk/all.css">
+
+  <!-- MOJ CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/@ministryofjustice/frontend@1.6.0/moj/all.css">
+
+  <style>
+    .table-container {
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<!--<body class="govuk-template__body">
+
+  <main class="govuk-main-wrapper">
+
+    <section aria-label="Service information" class="govuk-service-navigation"
+         data-module="govuk-service-navigation">
+    <div class="govuk-width-container">
+        <div class="govuk-service-navigation__container">
+            <span class="govuk-service-navigation__service-name">
+                <a href="/" class="govuk-service-navigation__link">
+                    Submit learner data
+                </a>
+            </span>
+        </div>
+    </div>
+</section>
+        <div class="govuk-body account-info">
+        <div>
+            <span class="your-name" id="bannerUserName">
+                Rajesh PATEL
+ UKPRN:10000222             </span>
+            <a class="account-link" href="/Account/SignOut">Sign out</a>
+        </div>
+    </div>
+  </br> -->
+
+   <div class="govuk-grid-row flex">
+      <div class="govuk-grid-column-full">
+          <!--<a href="/cias/reports/overview" class="govuk-back-link">Back</a> -->
+          <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+           
+                         
+            <h1 class="govuk-heading-xl" id="cilrHeader">Cross ILR Reports</h1>
+                                     
+            <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+            
+              <h1 class="govuk-heading-l" id="provider-name"></h1>
+              <p class="govuk-heading" id=ukprn-name> </p>
+            
+            </div>
+          </div>
+        
+           </br></br>
+          <a 
+            role="button"
+            class="govuk-button govuk-button--start"
+            onclick="handleClick()">
+            Generate cross ILR report
+              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" aria-hidden="true" focusable="false">
+                              <path fill="currentColor" d="M11 0H8V8H0V11H8V19H11V11H19V8H11V0Z"></path>
+                          </svg>
+          </a>
+      </div>
+    </div>
+
+    
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+           
+             <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                   
+                    <td>
+                          <label class="govuk-label">
+                          Rows per page
+                          </label>
+                          <select class="govuk-select" id="rows">
+                          <option selected>10</option>
+                          <option>20</option>
+                          <option>30</option>
+                          <option>40</option>
+                          <option>50</option>
+                          </select>
+                      </div>
+                    </td>
+                  </tr> 
+                </tbody>
+              </table>
+
+             
+            </br>
+
+
+            
+    
+    <!--Table -->
+    <div class="table-container">
+
+      <table class="govuk-table moj-sortable-table" data-module="moj-sortable-table">
+
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+
+            <th scope="col" class="govuk-table__header" aria-sort="none">
+              <button class="moj-sortable-table__button">Created date</button>
+            </th>
+
+            <th scope="col" class="govuk-table__header">
+              	Report periods
+            </th>
+            
+            <th scope="col" class="govuk-table__header">
+              	ILR files
+            </th>
+
+            <th scope="col" class="govuk-table__header">
+              	Funding periods
+            </th>
+           
+            <th scope="col" class="govuk-table__header" aria-sort="none">
+              <button class="moj-sortable-table__button">Created by</button>
+            </th>
+            
+            <th scope="col" class="govuk-table__header">
+              	Status
+            </th>
+           
+            <th scope="col" class="govuk-table__header">
+              	Actions
+            </th>
+          </tr>
+        </thead>
+
+      
+        <tbody class="govuk-table__body" id="table-body">
+ 
+   
+          <tr class="govuk-table__row" id="tablerow1" >
+            <td class="govuk-table__cell">16 June 2026 at 10:56</td>
+            <td class="govuk-table__cell">R04<br>R05</td>
+            <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>    
+            <td class="govuk-table__cell">12<br>12</td>
+            <td class="govuk-table__cell">Rajesh Patel</td>
+            <td class="govuk-table__cell">1123<br><span id="status">Processing</span></td>
+            <td class="govuk-table__cell"><a class="govuk-link" id="table-link1" href="funding-reconciliation">Funding reconciliation</a></br><a class="govuk-link" id="table-link1a" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">15 June 2026 at 14:07</td>
+            <td class="govuk-table__cell">R01<br>R04</td>
+            <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>    
+            <td class="govuk-table__cell">12<br>12</td>
+            <td class="govuk-table__cell">Rajesh Patel</td>
+            <td class="govuk-table__cell">1243<br>Completed</td>
+            <td class="govuk-table__cell"><a class="govuk-link" id="table-link2" href="funding-reconciliation">Funding reconciliation</a></br><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
+          </tr>
+
+           <tr class="govuk-table__row">
+            <td class="govuk-table__cell">06 June 2026 at 08:33</td>
+            <td class="govuk-table__cell">R01<br>R03</td>
+            <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>    
+            <td class="govuk-table__cell">12<br>12</td>
+            <td class="govuk-table__cell">Rajesh Patel</td>
+            <td class="govuk-table__cell">2179<br>Completed</td>
+            <td class="govuk-table__cell"><a class="govuk-link" id="table-link3" href="funding-reconciliation">Funding reconciliation</a></br><a class="govuk-link" href="/public/files/ILR-10000840-2526-20260302-103009-02.zip">Download reports</a></td>  
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">04 June 2026 at 15:42</td>
+            <td class="govuk-table__cell">R01<br>R03</td>
+            <td class="govuk-table__cell">ILR-10001919-2526-20251205-153142-02.xml <br> ILR-10001919-2526-20251104-080712-03.xml</td>    
+            <td class="govuk-table__cell">12<br>12</td>
+            <td class="govuk-table__cell">Rajesh Patel</td>
+            <td class="govuk-table__cell">2365<br>Failed</td>
+            <td class="govuk-table__cell">Contact helpdesk</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+    
+        <div class="govuk-pagination__prev">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            <span class="govuk-pagination__link-title">Previous</span></a>
+        </div>
+        <ul class="govuk-pagination__list">
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+              1
+            </a>
+          </li>
+          <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+              2
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-pagination__next">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg></a>
+        </div>
+      </nav>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/govuk-frontend@4.7.0/dist/govuk/all.js"></script>
+  <script src="https://unpkg.com/@ministryofjustice/frontend@1.6.0/moj/all.js"></script>
+
+  <script>
+   
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    
+    const year = params.get("year");
+    const provider = params.get("provider");
+    const ukprn = params.get("ukprn");
+    const generatebtn = params.get("generatebtn");
+
+    
+     document.getElementById("cilrHeader").textContent = "Cross ILR Reports for " + year;
+
+    if(provider)
+    {
+      document.getElementById("provider-name").textContent = provider;
+      document.getElementById("ukprn-name").textContent = "UKPRN: " + ukprn;      
+    }
+    
+    
+    document.getElementById('table-link2').href = "funding-reconciliation" + "?year="+ encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider);
+    document.getElementById('table-link3').href = "funding-reconciliation" + "?year="+ encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider);
+
+    if(generatebtn)
+    {
+      if (generatebtn=="false")
+      {
+        document.getElementById("tablerow1").remove();
+        
+      }
+      else
+      {
+        document.getElementById('table-link1').style.visibility="hidden";
+        document.getElementById('table-link1a').style.visibility="hidden";
+        document.getElementById('table-link1').href = "funding-reconciliation" + "?year="+ encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(provider);
+        startTimer();    
+      }
+    }
+    
+
+  } catch (error) {
+   
+      console.log(error.message);
+  }
+});
+
+let seconds = 0;
+let timerInterval = null;
+
+
+function startTimer() {
+   try {
+    if (!timerInterval) {
+        timerInterval = setInterval(() => {
+            seconds++;
+            if (seconds > 2)
+            {
+      
+              clearInterval(timerInterval);
+              timerInterval = null;
+
+              document.getElementById('table-link1').style.visibility="visible";
+              document.getElementById('table-link1a').style.visibility="visible";
+              document.getElementById("status").textContent = "Completed";
+            }
+        }, 1000);
+    }
+    } catch (error) {
+      
+      console.log(error.message);
+    }
+}
+
+
+
+    
+function handleClick() {        
+    try {
+
+      const params = new URLSearchParams(window.location.search);
+      const providerText = params.get("provider");
+      const ukprn = params.get("ukprn");
+      const year = params.get("year");
+     
+      if(providerText)
+      {
+        document.getElementById("provider-name").textContent = providerText;
+        document.getElementById("ukprn-name").textContent = "UKPRN: " + ukprn;      
+      }
+    
+      
+      const url =  "compare?year="+ encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
+      
+      window.location.href = url;
+      
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+  </script>
+
+</body>
+</html>
+
+
+
+{% endblock %}

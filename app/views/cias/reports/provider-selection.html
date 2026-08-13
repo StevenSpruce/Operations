@@ -2144,15 +2144,23 @@ try {
       const provider = selectedText.substring(10);
       const params = new URLSearchParams(window.location.search);
       const year = params.get("year");
-     
+      const crossILR = params.get("crossilr");
+
+
       if (selectedValue ==='choose')
       {
         window.location.href = "/cias/reports/provider-selection-error?year="+ encodeURIComponent(year);
       }
       else
       {
-        
-        window.location.href = "/cias/reports/reports-history?ukprn=" + encodeURIComponent(selectedValue) + "&provider=" + encodeURIComponent(provider) + "&year=" + encodeURIComponent(year) + "&generatebtn=false";
+        if (crossILR=="true")
+        {        
+          window.location.href = "/cias/reports/cross-ilr-reports-history?ukprn=" + encodeURIComponent(selectedValue) + "&provider=" + encodeURIComponent(provider) + "&year=" + encodeURIComponent(year) + "&generatebtn=false";
+        }
+        else
+        {
+          window.location.href = "/cias/reports/audit-reports-history?ukprn=" + encodeURIComponent(selectedValue) + "&provider=" + encodeURIComponent(provider) + "&year=" + encodeURIComponent(year) + "&generatebtn=false";
+        }
       }
   } catch (error) {
     console.log(error.message);
