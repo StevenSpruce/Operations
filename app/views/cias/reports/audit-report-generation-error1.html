@@ -202,6 +202,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const providerText = params.get("provider");
   const ukprn = params.get("ukprn");
+    const rtn1 = params.get("rtn1");
+
      
   document.getElementById("provider-name").textContent = providerText;
   document.getElementById("ukprn-name").textContent = "UKPRN: " + ukprn;      
@@ -211,6 +213,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         ilrDropdown1.textContent = "Audit report generation for " + year;
   }
+
+  document.getElementById("returnPeriod1").selectedIndex = rtn1;
 });
 
 
@@ -232,7 +236,7 @@ function handleBtnClick() {
   
 
    if ((dropdownRtn1Value === 'choose') && (dropdownILR1Value === 'choose')){
-
+    alert("why");
           window.location.href = "/cias/reports/audit-report-generation-error2?year=" + encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
       return;
     }
