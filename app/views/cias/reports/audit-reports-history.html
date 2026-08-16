@@ -231,10 +231,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
      
-    
-     // const url =  "audit-report-generation?year="+ encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
-      
-     // window.location.href = url;
+    if(generatebtn)
+    {
+      if (generatebtn=="false")
+      {
+        document.getElementById("tablerow1").remove();
+        
+      }
+      else
+      {
+
+        document.getElementById('table-link1a').style.visibility="hidden";
+        
+        startTimer();    
+      }
+    }
     
 
   } catch (error) {
@@ -248,6 +259,7 @@ let timerInterval = null;
 
 
 function startTimer() {
+  
    try {
     if (!timerInterval) {
         timerInterval = setInterval(() => {
@@ -258,7 +270,6 @@ function startTimer() {
               clearInterval(timerInterval);
               timerInterval = null;
 
-              document.getElementById('table-link1').style.visibility="visible";
               document.getElementById('table-link1a').style.visibility="visible";
               document.getElementById("status").textContent = "Completed";
             }
