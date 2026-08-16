@@ -34,7 +34,7 @@ href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#ilrSelection1">The same ILR files have been selected</a>
+          <a href="#ilrSelection1">Select a ILR file</a>
         </li>
       </ul>
     </div>
@@ -56,13 +56,25 @@ href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-
   
   </br></br>
 
+  <div class="return-card">
+     
+<div class="govuk-form-group">
+  <fieldset 
+    class="govuk-fieldset" 
+    role="group" 
+    aria-describedby="passport-issued-hint"
+  >
+    <p>
+      Select return period
+    </p>
 
+    <div class="govuk-date-input" id="passport-issued">
+      <label class="govuk-label" for="returnPeriod1">
+        Return period
+      </label>
 
-<label class="govuk-label" for="audit-generation">
-      Return period 1
-    </label>
-    <!-- Dropdown 1 -->
-   <select
+      <!-- Dropdown 1 -->
+      <select
         class="govuk-select"
         id="returnPeriod1"
         name="Return period selection"
@@ -73,10 +85,13 @@ href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-
         <option value="3">R03</option>
         <option value="4">R04</option>
         <option value="5">R05</option>
-    </select>
+      </select>
+    </div>
 
+  </fieldset>
+</div>
 
- <!-- TABLE -->
+    <!-- TABLE (recommended GOV pattern) -->
     <table class="govuk-table">
 
       <thead class="govuk-table__head">
@@ -89,25 +104,44 @@ href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-
       
       <tbody class="govuk-table__body">
           <td class="govuk-table__cell">
-            <label class="govuk-label" for="location">
-                ILR file 1
-            </label>
-              <!-- Dropdown 1 -->
-              <select
-                class="govuk-select"
-                id="ilrSelection1"
-                name="ILR selection"
-                aria-describedby="Provide-hint"
-              >
-                <option value="choose" selected>Select ILR file</option>
-                <option value="1">ILR-10001919-2526-20250903-163112</option>
-                <option value="2">ILR-10001919-2526-20251205-153142</option>
-                <option value="3">ILR-10001919-2526-20251104-080712</option>
-              </select>
+           <div class="govuk-form-group govuk-form-group--error">
+  <fieldset 
+    class="govuk-fieldset" 
+    role="group" 
+    aria-describedby="passport-issued-hint passport-issued-error"
+  >
+    <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span>
+      Select ILR file
+    </p>
+
+    <div class="govuk-date-input" id="passport-issued">
+      <label class="govuk-label" for="ilrSelection1">
+        ILR file
+      </label>
+
+      <!-- Dropdown 1 -->
+      <select
+        class="govuk-select"
+        id="ilrSelection1"
+        name="ILR selection"
+        aria-describedby="Provide-hint"
+      >
+        <option value="choose" selected>Select ILR file</option>
+        <option value="1">ILR-10001919-2526-20250903-163112</option>
+        <option value="2">ILR-10001919-2526-20251205-153142</option>
+        <option value="3">ILR-10001919-2526-20251104-080712</option>
+      </select>
+    </div>
+
+  </fieldset>
+</div>
           </td>
           <td class="govuk-table__cell">
             <label class="govuk-label" for="location">
-                Funding period 1
+              </br>  
+              </br>  
+              Funding period
             </label>
 
             <!-- Dropdown 1 -->
@@ -134,8 +168,9 @@ href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-
         </tr>
       </tbody>
     </table>
+  </div>
 
-</div>
+
 
 <button 
   type="button"
@@ -183,35 +218,33 @@ function handleBtnClick() {
 
   const dropdownRtn1Value  = document.getElementById("returnPeriod1").value;
   const dropdownILR1Value = document.getElementById("ilrSelection1").value;
-  const dropdownRtn2Value = document.getElementById("returnPeriod2").value;
-  const dropdownILR2Value = document.getElementById("ilrSelection2").value;
+
   
   const params = new URLSearchParams(window.location.search);
   const year = params.get("year");
   const rtnPeriod1Index = document.getElementById("returnPeriod1").selectedIndex;
-  const rtnPeriod2Index = document.getElementById("returnPeriod2").selectedIndex;
   const ilrFile1Index = document.getElementById("ilrSelection1").selectedIndex;
-  const ilrFile2Index = document.getElementById("ilrSelection2").selectedIndex;
-
+ 
   
   const providerText = params.get("provider");
   const ukprn = params.get("ukprn");
      
   
 
-     if ((dropdownRtn2Value === 'choose') && (dropdownILR2Value === 'choose')){
-      window.location.href = "/cias/reports/compare-error2?year=" + encodeURIComponent(year) + "&rtn1=" + encodeURIComponent(rtnPeriod1Index) + "&ilr1=" + encodeURIComponent(rtnPeriod1Index) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
+   if ((dropdownRtn1Value === 'choose') && (dropdownILR1Value === 'choose')){
+
+          window.location.href = "/cias/reports/audit-report-generation-error2?year=" + encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
       return;
     }
 
-    if ((dropdownILR2Value === 'choose')){
-      window.location.href = "/cias/reports/compare-error1?year=" + encodeURIComponent(year) + "&rtn1=" + encodeURIComponent(rtnPeriod1Index) + "&ilr1=" + encodeURIComponent(rtnPeriod1Index) + "&rtn2=" + encodeURIComponent(rtnPeriod2Index) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
+    if ((dropdownILR1Value === 'choose') ){      
+      window.location.href = "/cias/reports/audit-report-generation-error1?year=" + encodeURIComponent(year) + "&rtn1=" + encodeURIComponent(rtnPeriod1Index) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);;
+      
       return;
     }
 
-    
-    window.location.href = "audit-reports-history?year=" + encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText) + "&generatebtn=true";
-    
+            
+    window.location.href = "/cias/reports/audit-reports-history?year=" + encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText) + "&generatebtn=true";
 }
 </script>
 
