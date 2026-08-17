@@ -8,6 +8,19 @@ Select academic year
 
 
 <script>
+
+ document.addEventListener("DOMContentLoaded", function () {
+  
+  const params = new URLSearchParams(window.location.search);
+  const crossilr = params.get("crossilr");
+
+  if (crossilr=="false") {
+        var infomessage = document.getElementById("infoid");
+
+        infomessage.textContent = "The year selected will be used to view existing audit reports generated and to generate new audit reports for the selected academic year."
+  }
+  
+});
   
 function continueBtnClick() {       
   try {
@@ -43,8 +56,8 @@ function continueBtnClick() {
       <h1 class="govuk-heading-xl">Select academic year</h1>
 
   </br>
-      <p class="govuk-body">
-                The year selected will be used to view existing reports generated and to generate new cross ILR reports for the selected academic year.
+      <p id=infoid class="govuk-body">
+                The year selected will be used to view existing cross ilr reports generated and to generate new cross ILR reports for the selected academic year.
             </p>
        
       <select
