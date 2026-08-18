@@ -42,7 +42,7 @@ Cross ILR overview
                     
 
                     
-        <form method="get" action="/cias/reports/provider-selection">
+    
             <h1 class="govuk-heading-xl">Cross ILR reporting</h1>
         <p class="govuk-body">
                 This service enables you to identify changes between two ILR submissions and assess their impact on funding.
@@ -57,8 +57,14 @@ The funding shown in the report is cumulative, up to and including the selected 
         </p>
             <p class="govuk-body">Additional filters allow you to select sub-contract UKPRNs and Source of Funding.</p>
             
-            <button class="govuk-button">Continue</button>
-        </form>           
+             <button 
+                type="button"
+                class="govuk-button"
+                id="crossilrOverview"
+                onclick="continueBtnClick(this)">
+                Continue
+            </button>   
+         
         </main>
     </div>
 
@@ -66,6 +72,20 @@ The funding shown in the report is cumulative, up to and including the selected 
 </html>
 
 
+<script>
+  
+function continueBtnClick() {       
+  try {
 
+     const url =  "/cias/reports/select-academic-year?crossilr=true";
+
+     window.location.href = url;
+      
+    } catch (error) {
+      console.log(error.message);
+    }
+}
+
+</script>
 
 {% endblock %}

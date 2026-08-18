@@ -1,7 +1,7 @@
 {% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-GOV.UK Prototype Kit
+Funding reconciliation
 {% endblock %}
 
 {% block content %}
@@ -144,7 +144,7 @@ GOV.UK Prototype Kit
       <td class="govuk-table__cell govuk-table__cell--numeric">(£2,000)</td>
       <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
       <td class="govuk-table__cell govuk-table__cell--numeric">(£5,500)</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">(£12,750)</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">(£12,000)</td>
     </tr>
 
     
@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const providerText = params.get("provider");
     const ukprn = params.get("ukprn");
 
-    window.location.href = "reports-history?year=" + encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
+    window.location.href = "cross-ilr-reports-history?year=" + encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText) + "&generatebtn=false";
   }
 
  

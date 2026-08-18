@@ -1,7 +1,7 @@
 {% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-GOV.UK Prototype Kit
+Provider selection
 {% endblock %}
 
 
@@ -43,7 +43,7 @@ GOV.UK Prototype Kit
       <div class="govuk-grid-row">
       
           <div class="govuk-grid-column">
-              <h1 class="govuk-heading-xl">Select a provider to compare ILRs</h1>
+              <h1 class="govuk-heading-xl" id="cilrHeader">Select a provider to compare ILRs</h1>
                 
               <div class="govuk-form-group">
 
@@ -2121,6 +2121,19 @@ GOV.UK Prototype Kit
 
 <script>
 
+  document.addEventListener("DOMContentLoaded", function () {
+  
+  const params = new URLSearchParams(window.location.search);
+  const year = params.get("year");
+
+  if (year) {
+        var ilrDropdown1 = document.getElementById("cilrHeader");
+
+        ilrDropdown1.textContent = "Select a provider for " + year;
+  }
+  
+});
+
 function handleBtnClick(btn) {
    
 try {
@@ -2129,15 +2142,25 @@ try {
       const selectedText  = select.options[select.selectedIndex].text;
      
       const provider = selectedText.substring(10);
-     
+      const params = new URLSearchParams(window.location.search);
+      const year = params.get("year");
+      const crossILR = params.get("crossilr");
+
+
       if (selectedValue ==='choose')
       {
-        window.location.href = "/cias/reports/provider-selection-error";
+        window.location.href = "/cias/reports/provider-selection-error?year="+ encodeURIComponent(year);
       }
       else
       {
-        
-        window.location.href = "/cias/reports/reports-history?ukprn=" + encodeURIComponent(selectedValue) + "&provider=" + encodeURIComponent(provider);
+        if (crossILR=="true")
+        {        
+          window.location.href = "/cias/reports/cross-ilr-reports-history?ukprn=" + encodeURIComponent(selectedValue) + "&provider=" + encodeURIComponent(provider) + "&year=" + encodeURIComponent(year) + "&generatebtn=false";
+        }
+        else
+        {
+          window.location.href = "/cias/reports/audit-reports-history?ukprn=" + encodeURIComponent(selectedValue) + "&provider=" + encodeURIComponent(provider) + "&year=" + encodeURIComponent(year) + "&generatebtn=false";
+        }
       }
   } catch (error) {
     console.log(error.message);

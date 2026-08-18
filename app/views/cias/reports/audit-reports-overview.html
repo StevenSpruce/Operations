@@ -1,0 +1,70 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+Cross ILR overview
+{% endblock %}
+
+{% block content %}
+
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+        <main class="govuk-main-wrapper" id="content" role="main">
+            <div class="govuk-grid-row flex">
+                <div class="govuk-grid-column-full">
+                    
+
+                    
+    
+            <h1 class="govuk-heading-xl">Audit reports</h1>
+        <p class="govuk-body">
+                The returns reporting service enables you to generate and review reports based on an uploaded ILR return, helping you identify data quality issues, funding impacts, and potential exceptions within your return.
+            </p>
+
+            <p class="govuk-body">
+                To generate a report, select the relevant academic year, return period, and the ILR submission you wish to analyse. Only returns available for the selected return period will be displayed for selection.
+            </p>
+
+            <p class="govuk-body">The Funding Period defaults to Period 12, but you can choose any funding period from 1 to 12. Funding values displayed within the report are cumulative and include all activity up to and including the selected funding period.</p>
+
+            <p class="govuk-body">Once generated, reports can be downloaded as required.</p>
+            
+
+        </p>
+            
+        <button 
+            type="button"
+            class="govuk-button"
+            id="reportsOverview"
+            onclick="continueBtnClick(this)">
+            Continue
+        </button>
+
+             
+        </main>
+    </div>
+
+</body>
+</html>
+
+
+<script>
+  
+function continueBtnClick() {       
+  try {
+
+     const url =  "/cias/reports/select-academic-year?crossilr=false";
+
+     window.location.href = url;
+      
+    } catch (error) {
+      console.log(error.message);
+    }
+}
+
+
+</script>
+
+
+{% endblock %}

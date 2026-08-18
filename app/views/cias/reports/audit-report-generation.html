@@ -1,0 +1,225 @@
+{% extends "layoutsld.html" %}
+
+{% block pageTitle %}
+Audit report generation
+{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet"
+href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-5.0.0.min.css">
+
+<style>
+  .return-card {
+    border: 1px solid #b1b4b6;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    background: #fff;
+  }
+</style>
+
+
+<main class="govuk-main-wrapper" id="content" role="main">
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+
+  
+<!-- <section aria-label="Service information" class="govuk-service-navigation"
+         data-module="govuk-service-navigation">
+    <div class="govuk-width-container">
+        <div class="govuk-service-navigation__container">
+            <span class="govuk-service-navigation__service-name">
+                <a href="/" class="govuk-service-navigation__link">
+                    Submit learner data
+                </a>
+            </span>
+        </div>
+    </div>
+</section>
+        <div class="govuk-body account-info">
+        <div>
+            <span class="your-name" id="bannerUserName">
+                Rajesh PATEL
+ UKPRN:10000222             </span>
+            <a class="account-link" href="/Account/SignOut">Sign out</a>
+        </div>
+    </div> -->
+
+
+
+ <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+</br>
+    
+<h1 class="govuk-heading-xl" id="cilrHeader">Audit report generation</h1>
+
+
+  <h1 class="govuk-heading-l" id="provider-name"></h1>
+  <p class="govuk-heading" id=ukprn-name> </p>
+
+  
+  </br></br>
+
+ <div class="return-card">
+
+<label class="govuk-label" for="audit-generation">
+      Return period
+    </label>
+    <!-- Dropdown 1 -->
+   <select
+        class="govuk-select"
+        id="returnPeriod1"
+        name="Return period selection"
+      >
+        <option value="choose" selected>Select return period</option>
+        <option value="1">R01</option>
+        <option value="2">R02</option>
+        <option value="3">R03</option>
+        <option value="4">R04</option>
+        <option value="5">R05</option>
+    </select>
+
+
+ <!-- TABLE -->
+    <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header"></th>
+          <th class="govuk-table__header"></th>
+        </tr>
+      </thead>
+
+      
+      <tbody class="govuk-table__body">
+          <td class="govuk-table__cell">
+            <label class="govuk-label" for="location">
+                ILR file
+            </label>
+              <!-- Dropdown 1 -->
+              <select
+                class="govuk-select"
+                id="ilrSelection1"
+                name="ILR selection"
+                aria-describedby="Provide-hint"
+              >
+                <option value="choose" selected>Select ILR file</option>
+                <option value="1">ILR-10001919-2526-20250903-163112</option>
+                <option value="2">ILR-10001919-2526-20251205-153142</option>
+                <option value="3">ILR-10001919-2526-20251104-080712</option>
+              </select>
+          </td>
+          <td class="govuk-table__cell">
+            <label class="govuk-label" for="location">
+                Funding period
+            </label>
+
+            <!-- Dropdown 1 -->
+             <select
+                class="govuk-select"
+                id="fundingSelection1"
+                name="Funding selection"
+                aria-describedby="Provide-hint"
+              >
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12" selected>12</option>
+              </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+</div>
+</div>
+
+<button 
+  type="button"
+  class="govuk-button govuk-button--start"
+  id="continueBtn"
+  onclick="handleBtnClick(this)">
+
+          Generate audit reports
+          <svg class="govuk-button__start-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="17.5"
+              height="19"
+              viewBox="0 0 33 40"
+              aria-hidden="true"
+              focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+          </svg>
+        </button>
+
+</div>
+</main>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  
+  const params = new URLSearchParams(window.location.search);
+  const year = params.get("year");
+
+  const providerText = params.get("provider");
+  const ukprn = params.get("ukprn");
+     
+  document.getElementById("provider-name").textContent = providerText;
+  document.getElementById("ukprn-name").textContent = "UKPRN: " + ukprn;      
+
+  if (year) {
+        var ilrDropdown1 = document.getElementById("cilrHeader");
+
+        ilrDropdown1.textContent = "Audit report generation for " + year;
+  }
+});
+
+
+function handleBtnClick() {
+
+  const dropdownRtn1Value  = document.getElementById("returnPeriod1").value;
+  const dropdownILR1Value = document.getElementById("ilrSelection1").value;
+
+  
+  const params = new URLSearchParams(window.location.search);
+  const year = params.get("year");
+  const rtnPeriod1Index = document.getElementById("returnPeriod1").selectedIndex;
+  const ilrFile1Index = document.getElementById("ilrSelection1").selectedIndex;
+ 
+  
+  const providerText = params.get("provider");
+  const ukprn = params.get("ukprn");
+
+  
+   if ((dropdownRtn1Value === 'choose') && (dropdownILR1Value === 'choose')){
+
+          window.location.href = "/cias/reports/audit-report-generation-error2?year=" + encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
+      return;
+    }
+
+    if ((dropdownILR1Value === 'choose') ){      
+      window.location.href = "/cias/reports/audit-report-generation-error1?year=" + encodeURIComponent(year) + "&rtn1=" + encodeURIComponent(rtnPeriod1Index) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);;
+      
+      return;
+    }
+
+    
+          
+      window.location.href = "/cias/reports/audit-reports-history?year=" + encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText) + "&generatebtn=true";
+    
+}
+</script>
+
+{% endblock %}
+

@@ -61,7 +61,7 @@ href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-
   </div>
   </div>
 
-  <a href="/cias/reports/select-academic-year" class="govuk-back-link">Back</a>
+   <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 
     
@@ -408,7 +408,7 @@ function handleBtnClick() {
       return;
     }else{
           
-      window.location.href = "funding-reconciliation?year=" + encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText);
+      window.location.href = "cross-ilr-reports-history?year=" + encodeURIComponent(year) + "&ukprn=" + encodeURIComponent(ukprn) + "&provider=" + encodeURIComponent(providerText) + "&generatebtn=true";
     }
     
 }
