@@ -17,6 +17,10 @@ href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-
     border-radius: 6px;
     background: #fff;
   }
+   .no-borders .govuk-table__cell,
+  .no-borders .govuk-table__header {
+    border-bottom: none;
+  }
 </style>
 
 
@@ -126,7 +130,7 @@ href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-
  
 
     <!-- TABLE (recommended GOV pattern) -->
-    <table class="govuk-table">
+    <table class="govuk-table no-borders">
 
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -249,7 +253,7 @@ href="https://govuk-frontend-production.cloudapps.digital/assets/govuk-frontend-
 
 
     <!-- TABLE 2 (recommended GOV pattern) -->
-    <table class="govuk-table">
+    <table class="govuk-table no-borders">
 
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
