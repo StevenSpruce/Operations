@@ -25,95 +25,112 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         
-        <table class="govuk-table govuk-!-margin-top-4">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Date and time</th>
-              <th scope="col" class="govuk-table__header">File</th>
-              <th scope="col" class="govuk-table__header">Submitted by</th>
-              <th scope="col" class="govuk-table__header">Reports</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            
-            <!-- Row 1: Extracted from your upload page screenshot -->
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                2 Sep 2026<br>
-                <span class="govuk-body-s govuk-!-text-color-secondary">10:15am</span>
-              </td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">YPD-10033670-2627-20260819-080002-01.XML</a>
-              </td>
-              <td class="govuk-table__cell">Steven Spruce</td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">Download reports</a>
-              </td>
-            </tr>
-
-            <!-- Row 2: Dummy historical data -->
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                3 Aug 2026<br>
-                <span class="govuk-body-s govuk-!-text-color-secondary">11:30am</span>
-              </td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">YPD-10033670-2627-20260703-091500-01.XML</a>
-              </td>
-              <td class="govuk-table__cell">Steven Spruce</td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">Download reports</a>
-              </td>
-            </tr>
-
-            <!-- Row 3: Dummy historical data -->
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                1 Jul 2026<br>
-                <span class="govuk-body-s govuk-!-text-color-secondary">2:45pm</span>
-              </td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">YPD-10033670-2627-20260601-143000-01.XML</a>
-              </td>
-              <td class="govuk-table__cell">Niamh Gallagher</td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">Download reports</a>
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
-
-        <!-- Pagination (Optional but standard for history pages) -->
-        <nav class="govuk-pagination" role="navigation" aria-label="results">
-          <div class="govuk-pagination__prev">
-            <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
-              <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-                <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
-              </svg>
-              <span class="govuk-pagination__link-title">Previous</span>
-            </a>
+        <div class="govuk-accordion govuk-!-margin-top-4" data-module="govuk-accordion" id="accordion-default">
+          
+          <!-- Return Period 1: September 2026 -->
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Return period: September 2026
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Date and time</th>
+                    <th scope="col" class="govuk-table__header">File</th>
+                    <th scope="col" class="govuk-table__header">Submitted by</th>
+                    <th scope="col" class="govuk-table__header">Reports</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      2 Sep 2026<br>
+                      <span class="govuk-body-s govuk-!-text-color-secondary">10:15am</span>
+                    </td>
+                    <td class="govuk-table__cell">
+                      <a href="#" class="govuk-link">YPD-10033670-2627-20260902-101500-01.XML</a>
+                    </td>
+                    <td class="govuk-table__cell">Steven Spruce</td>
+                    <td class="govuk-table__cell">
+                      <a href="#" class="govuk-link">Download reports</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-          <ul class="govuk-pagination__list">
-            <li class="govuk-pagination__item govuk-pagination__item--current">
-              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">1</a>
-            </li>
-            <li class="govuk-pagination__item">
-              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">2</a>
-            </li>
-            <li class="govuk-pagination__item">
-              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">3</a>
-            </li>
-          </ul>
-          <div class="govuk-pagination__next">
-            <a class="govuk-link govuk-pagination__link" href="#" rel="next">
-              <span class="govuk-pagination__link-title">Next</span>
-              <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-                <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-              </svg>
-            </a>
+
+          <!-- Return Period 2: August 2026 (From your screenshot) -->
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                  Return period: August 2026
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Date and time</th>
+                    <th scope="col" class="govuk-table__header">File</th>
+                    <th scope="col" class="govuk-table__header">Submitted by</th>
+                    <th scope="col" class="govuk-table__header">Reports</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      19 Aug 2026<br>
+                      <span class="govuk-body-s govuk-!-text-color-secondary">08:00am</span>
+                    </td>
+                    <td class="govuk-table__cell">
+                      <a href="#" class="govuk-link">YPD-10033670-2627-20260819-080002-01.XML</a>
+                    </td>
+                    <td class="govuk-table__cell">Steven Spruce</td>
+                    <td class="govuk-table__cell">
+                      <a href="#" class="govuk-link">Download reports</a>
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      10 Aug 2026<br>
+                      <span class="govuk-body-s govuk-!-text-color-secondary">2:45pm</span>
+                    </td>
+                    <td class="govuk-table__cell">
+                      <a href="#" class="govuk-link">YPD-10033670-2627-20260810-143000-01.XML</a>
+                    </td>
+                    <td class="govuk-table__cell">Niamh Gallagher</td>
+                    <td class="govuk-table__cell">
+                      <a href="#" class="govuk-link">Download reports</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-        </nav>
+
+          <!-- Return Period 3: July 2026 -->
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                  Return period: July 2026
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+              <p class="govuk-body">No files were submitted for this return period.</p>
+            </div>
+          </div>
+
+        </div>
 
       </div>
     </div>
