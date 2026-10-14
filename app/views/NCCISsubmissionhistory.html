@@ -1,7 +1,7 @@
 {% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-  Submission history and schedule
+  Submission history - NCCIS
 {% endblock %}
 
 {% block content %}
@@ -11,51 +11,25 @@
 
   <main class="govuk-main-wrapper" id="content" role="main">
     
-    <!-- Top Section: Intro and Filters -->
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        
+        <span class="govuk-caption-xl">Young Person Dataset (NCCIS)</span>
         <h1 class="govuk-heading-xl">Submission history</h1>
-
+        
         <p class="govuk-body">
-          View your submissions from the last 90 days and see your updated reports. After 90 days you can find your reports for each collection period in 'submission history'.
+          View your previous dataset submissions. Download the reports of your most recent submission to see your latest figures.
         </p>
-        <p class="govuk-body">
-          Download the reports of your most recent submission to see your latest figures
-        </p>
-
-        <div class="govuk-form-group govuk-!-margin-top-6 govuk-!-margin-bottom-8">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-              <h2 class="govuk-fieldset__heading">
-                Filter your submission types
-              </h2>
-            </legend>
-            <div id="filter-hint" class="govuk-hint">
-              Choosing a filter will result in the page refreshing automatically
-            </div>
-            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="filter-ilr" name="submissionFilter" type="checkbox" value="ilr">
-                <label class="govuk-label govuk-checkboxes__label" for="filter-ilr">
-                  ILR
-                </label>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-
       </div>
     </div>
 
-    <!-- Middle Section: Submission History Tables -->
+    <!-- Academic Year Section -->
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         
-        <h2 class="govuk-heading-l govuk-!-margin-bottom-4">Academic Collection Year 2026 to 2027</h2>
+        <h2 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Academic Collection Year 2026 to 2027</h2>
         
-        <h3 class="govuk-heading-m">R01</h3>
-
+        <!-- Return Period: January 2027 -->
+        <h3 class="govuk-heading-l">Jan 2027</h3>
         <table class="govuk-table govuk-!-margin-bottom-9">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
@@ -70,28 +44,14 @@
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
-                <strong>2 September<br>2026 at<br>2:12pm</strong>
+                <strong>14 February<br>2027 at<br>10:15am</strong>
               </td>
-              <td class="govuk-table__cell">ILR</td>
+              <td class="govuk-table__cell">NCCIS</td>
               <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">ILR-10033670-<br>2627-20260819-<br>080002-01.XML</a>
+                <a href="#" class="govuk-link">YPD-10033670-<br>2627-20270214-<br>101500-01.XML</a>
               </td>
               <td class="govuk-table__cell">Steven<br>Spruce</td>
-              <td class="govuk-table__cell">2864844</td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">Download<br>reports</a>
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                <strong>27 August<br>2026 at<br>2:50pm</strong>
-              </td>
-              <td class="govuk-table__cell">ILR</td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">ILR-10033670-<br>2627-20260819-<br>080001-01.XML</a>
-              </td>
-              <td class="govuk-table__cell">Steven<br>Spruce</td>
-              <td class="govuk-table__cell">2860548</td>
+              <td class="govuk-table__cell">2987112</td>
               <td class="govuk-table__cell">
                 <a href="#" class="govuk-link">Download<br>reports</a>
               </td>
@@ -99,50 +59,116 @@
           </tbody>
         </table>
 
-      </div>
-    </div>
-
-    <!-- Divider -->
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-    <!-- Bottom Section: Submission Schedule -->
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        
-        <h2 class="govuk-heading-l">Submission schedule</h2>
-        <p class="govuk-body">These are the next 4 submission periods.</p>
-
-        <table class="govuk-table">
+        <!-- Return Period: December 2026 -->
+        <h3 class="govuk-heading-l">Dec 2026</h3>
+        <table class="govuk-table govuk-!-margin-bottom-9">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Month</th>
-              <th scope="col" class="govuk-table__header">Open date</th>
-              <th scope="col" class="govuk-table__header">Close date</th>
+              <th scope="col" class="govuk-table__header">Date</th>
+              <th scope="col" class="govuk-table__header">Type</th>
+              <th scope="col" class="govuk-table__header">File</th>
+              <th scope="col" class="govuk-table__header">Submitted by</th>
+              <th scope="col" class="govuk-table__header">Reference</th>
+              <th scope="col" class="govuk-table__header">Reports</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Oct 2026</th>
-              <td class="govuk-table__cell">1 November 2026</td>
-              <td class="govuk-table__cell">15 November 2026</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Nov 2026</th>
-              <td class="govuk-table__cell">1 December 2026</td>
-              <td class="govuk-table__cell">15 December 2026</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Dec 2026</th>
-              <td class="govuk-table__cell">1 January 2027</td>
-              <td class="govuk-table__cell">20 January 2027</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Jan 2027</th>
-              <td class="govuk-table__cell">1 February 2027</td>
-              <td class="govuk-table__cell">15 February 2027</td>
+              <td class="govuk-table__cell">
+                <strong>18 January<br>2027 at<br>2:45pm</strong>
+              </td>
+              <td class="govuk-table__cell">NCCIS</td>
+              <td class="govuk-table__cell">
+                <a href="#" class="govuk-link">YPD-10033670-<br>2627-20270118-<br>144500-01.XML</a>
+              </td>
+              <td class="govuk-table__cell">Steven<br>Spruce</td>
+              <td class="govuk-table__cell">2975440</td>
+              <td class="govuk-table__cell">
+                <a href="#" class="govuk-link">Download<br>reports</a>
+              </td>
             </tr>
           </tbody>
         </table>
+
+        <!-- Return Period: November 2026 -->
+        <h3 class="govuk-heading-l">Nov 2026</h3>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Date</th>
+              <th scope="col" class="govuk-table__header">Type</th>
+              <th scope="col" class="govuk-table__header">File</th>
+              <th scope="col" class="govuk-table__header">Submitted by</th>
+              <th scope="col" class="govuk-table__header">Reference</th>
+              <th scope="col" class="govuk-table__header">Reports</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong>12 December<br>2026 at<br>9:10am</strong>
+              </td>
+              <td class="govuk-table__cell">NCCIS</td>
+              <td class="govuk-table__cell">
+                <a href="#" class="govuk-link">YPD-10033670-<br>2627-20261212-<br>091000-01.XML</a>
+              </td>
+              <td class="govuk-table__cell">Niamh<br>Gallagher</td>
+              <td class="govuk-table__cell">2963118</td>
+              <td class="govuk-table__cell">
+                <a href="#" class="govuk-link">Download<br>reports</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Return Period: October 2026 -->
+        <h3 class="govuk-heading-l">Oct 2026</h3>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Date</th>
+              <th scope="col" class="govuk-table__header">Type</th>
+              <th scope="col" class="govuk-table__header">File</th>
+              <th scope="col" class="govuk-table__header">Submitted by</th>
+              <th scope="col" class="govuk-table__header">Reference</th>
+              <th scope="col" class="govuk-table__header">Reports</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong>14 November<br>2026 at<br>11:30am</strong>
+              </td>
+              <td class="govuk-table__cell">NCCIS</td>
+              <td class="govuk-table__cell">
+                <a href="#" class="govuk-link">YPD-10033670-<br>2627-20261114-<br>113000-01.XML</a>
+              </td>
+              <td class="govuk-table__cell">Steven<br>Spruce</td>
+              <td class="govuk-table__cell">2951004</td>
+              <td class="govuk-table__cell">
+                <a href="#" class="govuk-link">Download<br>reports</a>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong>05 November<br>2026 at<br>3:15pm</strong>
+              </td>
+              <td class="govuk-table__cell">NCCIS</td>
+              <td class="govuk-table__cell">
+                <a href="#" class="govuk-link">YPD-10033670-<br>2627-20261105-<br>151500-01.XML</a>
+              </td>
+              <td class="govuk-table__cell">Steven<br>Spruce</td>
+              <td class="govuk-table__cell">2949882</td>
+              <td class="govuk-table__cell">
+                <a href="#" class="govuk-link">Download<br>reports</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Previous Academic Year (Header only to show progression) -->
+        <h2 class="govuk-heading-xl govuk-!-margin-top-8">Academic Collection Year 2025 to 2026</h2>
+        <p class="govuk-body"><a href="#" class="govuk-link">View older submissions</a></p>
 
       </div>
     </div>
