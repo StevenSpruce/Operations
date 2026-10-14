@@ -1,7 +1,7 @@
 {% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-  Submission history - ILR
+  Submission history and schedule
 {% endblock %}
 
 {% block content %}
@@ -11,9 +11,12 @@
 
   <main class="govuk-main-wrapper" id="content" role="main">
     
+    <!-- Top Section: Intro and Filters -->
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         
+        <h1 class="govuk-heading-xl">Submission history</h1>
+
         <p class="govuk-body">
           View your submissions from the last 90 days and see your updated reports. After 90 days you can find your reports for each collection period in 'submission history'.
         </p>
@@ -21,7 +24,6 @@
           Download the reports of your most recent submission to see your latest figures
         </p>
 
-        <!-- Filter Section -->
         <div class="govuk-form-group govuk-!-margin-top-6 govuk-!-margin-bottom-8">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
@@ -46,15 +48,15 @@
       </div>
     </div>
 
-    <!-- Academic Year 2026 to 2027 -->
+    <!-- Middle Section: Submission History Tables -->
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         
-        <h2 class="govuk-heading-xl govuk-!-margin-bottom-4">Academic Collection Year 2026 to 2027</h2>
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-4">Academic Collection Year 2026 to 2027</h2>
         
-        <h3 class="govuk-heading-l">R01</h3>
+        <h3 class="govuk-heading-m">R01</h3>
 
-        <table class="govuk-table">
+        <table class="govuk-table govuk-!-margin-bottom-9">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header">Date</th>
@@ -66,7 +68,6 @@
             </tr>
           </thead>
           <tbody class="govuk-table__body">
-            
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
                 <strong>2 September<br>2026 at<br>2:12pm</strong>
@@ -81,7 +82,6 @@
                 <a href="#" class="govuk-link">Download<br>reports</a>
               </td>
             </tr>
-
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
                 <strong>27 August<br>2026 at<br>2:50pm</strong>
@@ -96,27 +96,53 @@
                 <a href="#" class="govuk-link">Download<br>reports</a>
               </td>
             </tr>
-
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                <strong>18 August<br>2026 at<br>9:07am</strong>
-              </td>
-              <td class="govuk-table__cell">ILR</td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">ILR-10033670-<br>2627-20260818-<br>080001-01.XML</a>
-              </td>
-              <td class="govuk-table__cell">Steven<br>Spruce</td>
-              <td class="govuk-table__cell">2853586</td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">Download<br>reports</a>
-              </td>
-            </tr>
-
           </tbody>
         </table>
 
-        <!-- Academic Year 2025 to 2026 (Header only as shown in image) -->
-        <h2 class="govuk-heading-xl govuk-!-margin-top-8">Academic Collection Year 2025 to 2026</h2>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <!-- Bottom Section: Submission Schedule -->
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        
+        <h2 class="govuk-heading-l">Submission schedule</h2>
+        <p class="govuk-body">These are the next 4 submission periods.</p>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Month</th>
+              <th scope="col" class="govuk-table__header">Open date</th>
+              <th scope="col" class="govuk-table__header">Close date</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Oct 2026</th>
+              <td class="govuk-table__cell">1 November 2026</td>
+              <td class="govuk-table__cell">15 November 2026</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Nov 2026</th>
+              <td class="govuk-table__cell">1 December 2026</td>
+              <td class="govuk-table__cell">15 December 2026</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Dec 2026</th>
+              <td class="govuk-table__cell">1 January 2027</td>
+              <td class="govuk-table__cell">20 January 2027</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Jan 2027</th>
+              <td class="govuk-table__cell">1 February 2027</td>
+              <td class="govuk-table__cell">15 February 2027</td>
+            </tr>
+          </tbody>
+        </table>
 
       </div>
     </div>
