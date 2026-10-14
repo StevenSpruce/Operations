@@ -1,10 +1,29 @@
 {% extends "layoutsld.html" %}
 
 {% block pageTitle %}
-  Submission history - NCCIS
+  Submissions - Young Person Dataset
 {% endblock %}
 
 {% block content %}
+
+<!-- Phase banner and Account info from new screenshot -->
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag govuk-tag--blue">
+      LIVE
+    </strong>
+    <span class="govuk-phase-banner__text">
+      Your <a class="govuk-link" href="#" target="_blank">feedback (opens in new tab)</a> will help us improve the service.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full govuk-!-text-align-right govuk-!-padding-top-2 govuk-!-padding-bottom-4">
+    <span class="govuk-body">Niamh Gallagher UKPRN:10033670</span>
+    <a href="#" class="govuk-link govuk-!-margin-left-2">Sign out</a>
+  </div>
+</div>
 
 <div class="govuk-width-container">
   <a href="javascript:history.back()" class="govuk-back-link">Back</a>
@@ -13,23 +32,65 @@
     
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <span class="govuk-caption-xl">Young Person Dataset (NCCIS)</span>
-        <h1 class="govuk-heading-xl">Submission history</h1>
         
-        <p class="govuk-body">
-          View your previous dataset submissions. Download the reports of your most recent submission to see your latest figures.
-        </p>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">Submissions</h1>
+        <p class="govuk-body">Young Person Dataset collections</p>
+        
       </div>
     </div>
 
-    <!-- Academic Year Section -->
+    <!-- Filter by year section (Horizontal Layout) -->
+    <div class="govuk-grid-row govuk-!-margin-top-6 govuk-!-margin-bottom-8">
+      <div class="govuk-grid-column-full">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h2 class="govuk-fieldset__heading">
+                Filter by year
+              </h2>
+            </legend>
+            <div id="filter-hint" class="govuk-hint">
+              The page will refresh after you select each filter.
+            </div>
+            
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes" style="display: flex; gap: 20px; flex-wrap: wrap;">
+              
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="year-26-27" name="yearFilter" type="checkbox" value="2026-2027">
+                <label class="govuk-label govuk-checkboxes__label" for="year-26-27">
+                  2026 to<br>2027
+                </label>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="year-25-26" name="yearFilter" type="checkbox" value="2025-2026">
+                <label class="govuk-label govuk-checkboxes__label" for="year-25-26">
+                  2025 to<br>2026
+                </label>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="year-24-25" name="yearFilter" type="checkbox" value="2024-2025">
+                <label class="govuk-label govuk-checkboxes__label" for="year-24-25">
+                  2024 to<br>2025
+                </label>
+              </div>
+
+            </div>
+
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    <!-- Academic Year Section with NCCIS Data -->
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         
-        <h2 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-6">Academic Collection Year 2026 to 2027</h2>
+        <h2 class="govuk-heading-xl govuk-!-margin-bottom-6">Academic Year 2026 to 2027</h2>
         
         <!-- Return Period: January 2027 -->
-        <h3 class="govuk-heading-l">Jan 2027</h3>
+        <h3 class="govuk-heading-m">Jan 2027</h3>
         <table class="govuk-table govuk-!-margin-bottom-9">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
@@ -60,7 +121,7 @@
         </table>
 
         <!-- Return Period: December 2026 -->
-        <h3 class="govuk-heading-l">Dec 2026</h3>
+        <h3 class="govuk-heading-m">Dec 2026</h3>
         <table class="govuk-table govuk-!-margin-bottom-9">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
@@ -91,7 +152,7 @@
         </table>
 
         <!-- Return Period: November 2026 -->
-        <h3 class="govuk-heading-l">Nov 2026</h3>
+        <h3 class="govuk-heading-m">Nov 2026</h3>
         <table class="govuk-table govuk-!-margin-bottom-9">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
@@ -120,55 +181,6 @@
             </tr>
           </tbody>
         </table>
-
-        <!-- Return Period: October 2026 -->
-        <h3 class="govuk-heading-l">Oct 2026</h3>
-        <table class="govuk-table govuk-!-margin-bottom-9">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Date</th>
-              <th scope="col" class="govuk-table__header">Type</th>
-              <th scope="col" class="govuk-table__header">File</th>
-              <th scope="col" class="govuk-table__header">Submitted by</th>
-              <th scope="col" class="govuk-table__header">Reference</th>
-              <th scope="col" class="govuk-table__header">Reports</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                <strong>14 November<br>2026 at<br>11:30am</strong>
-              </td>
-              <td class="govuk-table__cell">NCCIS</td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">YPD-10033670-<br>2627-20261114-<br>113000-01.XML</a>
-              </td>
-              <td class="govuk-table__cell">Steven<br>Spruce</td>
-              <td class="govuk-table__cell">2951004</td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">Download<br>reports</a>
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                <strong>05 November<br>2026 at<br>3:15pm</strong>
-              </td>
-              <td class="govuk-table__cell">NCCIS</td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">YPD-10033670-<br>2627-20261105-<br>151500-01.XML</a>
-              </td>
-              <td class="govuk-table__cell">Steven<br>Spruce</td>
-              <td class="govuk-table__cell">2949882</td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">Download<br>reports</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Previous Academic Year (Header only to show progression) -->
-        <h2 class="govuk-heading-xl govuk-!-margin-top-8">Academic Collection Year 2025 to 2026</h2>
-        <p class="govuk-body"><a href="#" class="govuk-link">View older submissions</a></p>
 
       </div>
     </div>
