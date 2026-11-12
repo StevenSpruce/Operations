@@ -4,29 +4,72 @@
   Latest submissions – NCCIS
 {% endblock %}
 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back to Homepage",
+    href: "#"
+  }) }}
+{% endblock %}
+
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    
+    <!-- Side Navigation -->
+    <div class="govuk-grid-column-one-quarter">
+      <nav aria-label="Secondary">
+        <ul class="govuk-list govuk-!-margin-bottom-6">
+          <li class="govuk-!-margin-bottom-2">
+            <a href="#" class="govuk-link govuk-!-font-weight-bold" style="text-decoration: none;">Latest submissions</a>
+          </li>
+          <li class="govuk-!-margin-bottom-2">
+            <a href="#" class="govuk-link" style="text-decoration: none;">Submission history</a>
+          </li>
+
+    <!-- Main Content -->
+    <div class="govuk-grid-column-three-quarters">
 
       <h1 class="govuk-heading-xl">
         Latest submissions
       </h1>
       
       <p class="govuk-body">
-        
+        View your submissions from the last 90 days and see your updated reports. After 90 days you can find your reports for each collection period in 'submission history'.
+      </p>
       
       <p class="govuk-body govuk-!-margin-bottom-8">
-        NCCIS Young Person Dataset file 
+        Download the reports of your most recent submission to see your latest figures
       </p>
 
-      <!-- 2026 to 2027 Section -->
-      <h2 class="govuk-heading-l govuk-!-margin-top-6">Academic Collection Year 2026 to 2027</h2>
+      <!-- Filter Section -->
+      <form action="#" method="post" novalidate>
+        {{ govukCheckboxes({
+          name: "submissionType",
+          fieldset: {
+            legend: {
+              text: "Filter your submission types",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          hint: {
+            text: "Choosing a filter will result in the page refreshing automatically"
+          },
+          items: [
+            {
+              value: "YPD",
+              text: "YPD"
+            }
+          ]
+        }) }}
+      </form>
 
-      <h3 class="govuk-heading-m">December 2026</h3>
+      <!-- November Section (Formerly R01) -->
+      <h2 class="govuk-heading-l govuk-!-margin-top-6">November</h2>
       
       {{ govukTable({
         head: [
           { text: "Date" },
+          { text: "Type" },
           { text: "File" },
           { text: "Submitted by" },
           { text: "Reference" },
@@ -34,21 +77,24 @@
         ],
         rows: [
           [
-            { html: "2 January<br>2027 at<br>2:12pm" },
+            { html: "2 September<br>2026 at<br>2:12pm" },
+            { text: "YPD" },
             { html: "<a href='#' class='govuk-link'>YPD-10033670-<br>2627-20260819-<br>080002-01.XML</a>" },
             { text: "Steven Spruce" },
             { text: "2864844" },
             { html: "<a href='#' class='govuk-link'>Download<br>reports</a>" }
           ],
           [
-            { html: "20 January<br>2027 at<br>2:50pm" },
+            { html: "27 August<br>2026 at<br>2:50pm" },
+            { text: "YPD" },
             { html: "<a href='#' class='govuk-link'>YPD-10033670-<br>2627-20260819-<br>080001-01.XML</a>" },
             { text: "Steven Spruce" },
             { text: "2860548" },
             { html: "<a href='#' class='govuk-link'>Download<br>reports</a>" }
           ],
           [
-            { html: "18 January<br>2027 at<br>9:07am" },
+            { html: "18 August<br>2026 at<br>9:07am" },
+            { text: "YPD" },
             { html: "<a href='#' class='govuk-link'>YPD-10033670-<br>2627-20260818-<br>080001-01.XML</a>" },
             { text: "Steven Spruce" },
             { text: "2853586" },
@@ -57,11 +103,13 @@
         ]
       }) }}
 
-      <h3 class="govuk-heading-m">November 2026</h3>
+      <!-- December Section (Formerly R13) -->
+      <h2 class="govuk-heading-l govuk-!-margin-top-8">December</h2>
 
       {{ govukTable({
         head: [
           { text: "Date" },
+          { text: "Type" },
           { text: "File" },
           { text: "Submitted by" },
           { text: "Reference" },
@@ -69,8 +117,17 @@
         ],
         rows: [
           [
-            { html: "14 December<br>2026 at<br>4:39pm" },
-            { html: "<a href='#' class='govuk-link'>YPD-10033670-<br>2627-20260620-<br>081104-04.XML</a>" },
+            { html: "14 September<br>2026 at<br>5:08pm" },
+            { text: "YPD" },
+            { html: "<a href='#' class='govuk-link'>YPD-10033670-<br>2526-20260620-<br>081104-04.XML</a>" },
+            { text: "ESFA" },
+            { text: "2891619" },
+            { html: "<a href='#' class='govuk-link'>Download<br>reports</a>" }
+          ],
+          [
+            { html: "19 August<br>2026 at<br>4:39pm" },
+            { text: "YPD" },
+            { html: "<a href='#' class='govuk-link'>YPD-10033670-<br>2526-20260620-<br>081104-04.XML</a>" },
             { text: "Steven Spruce" },
             { text: "2855354" },
             { html: "<a href='#' class='govuk-link'>Download<br>reports</a>" }
@@ -78,5 +135,6 @@
         ]
       }) }}
 
+    </div>
   </div>
 {% endblock %}
