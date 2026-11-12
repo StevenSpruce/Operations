@@ -1,0 +1,123 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Latest submissions – NCCIS
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back to Homepage",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    
+    <!-- ============================================== -->
+    <!-- SIDE NAVIGATION (1/4 WIDTH)                    -->
+    <!-- ============================================== -->
+    <div class="govuk-grid-column-one-quarter">
+      <nav aria-label="Sub navigation">
+        <ul class="govuk-list govuk-!-margin-bottom-6">
+          <li class="govuk-!-margin-bottom-2">
+            <a href="#" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Latest submissions</a>
+          </li>
+          <li class="govuk-!-margin-bottom-2">
+            <a href="#" class="govuk-link govuk-link--no-underline">Submission history</a>
+          </li>
+        </ul>
+      </nav>
+    </div> 
+    <!-- END OF SIDE NAVIGATION - This closing div is critical -->
+
+    <!-- ============================================== -->
+    <!-- MAIN CONTENT (3/4 WIDTH)                       -->
+    <!-- ============================================== -->
+    <div class="govuk-grid-column-three-quarters">
+
+      <h1 class="govuk-heading-xl">
+        Latest submissions
+      </h1>
+      
+      <p class="govuk-body">
+        View your submissions from the last 90 days and download the reports of your most recent submission. After 90 days you can find your reports for each collection period in 'submission history'.
+      </p>
+
+      <!-- November Section -->
+      <h2 class="govuk-heading-l govuk-!-margin-top-6">November 2026</h2>
+      
+      {{ govukTable({
+        head: [
+          { text: "Date" },
+          { text: "Type" },
+          { text: "File" },
+          { text: "Submitted by" },
+          { text: "Reference" },
+          { text: "Reports" }
+        ],
+        rows: [
+          [
+            { html: "2 December<br>2026 at<br>2:12pm" },
+            { text: "YPD" },
+            { html: "<a href='#' class='govuk-link'>YPD-10033670-<br>2627-20260819-<br>080002-01.XML</a>" },
+            { text: "Steven Spruce" },
+            { text: "2864844" },
+            { html: "<a href='#' class='govuk-link'>Download<br>reports</a>" }
+          ],
+          [
+            { html: "12 December<br>2026 at<br>2:50pm" },
+            { text: "YPD" },
+            { html: "<a href='#' class='govuk-link'>YPD-10033670-<br>2627-20260819-<br>080001-01.XML</a>" },
+            { text: "Steven Spruce" },
+            { text: "2860548" },
+            { html: "<a href='#' class='govuk-link'>Download<br>reports</a>" }
+          ],
+          [
+            { html: "15 December<br>2026 at<br>9:07am" },
+            { text: "YPD" },
+            { html: "<a href='#' class='govuk-link'>YPD-10033670-<br>2627-20260818-<br>080001-01.XML</a>" },
+            { text: "Steven Spruce" },
+            { text: "2853586" },
+            { html: "<a href='#' class='govuk-link'>Download<br>reports</a>" }
+          ]
+        ]
+      }) }}
+
+      <!-- December Section -->
+      <h2 class="govuk-heading-l govuk-!-margin-top-8">December 2026</h2>
+
+      {{ govukTable({
+        head: [
+          { text: "Date" },
+          { text: "Type" },
+          { text: "File" },
+          { text: "Submitted by" },
+          { text: "Reference" },
+          { text: "Reports" }
+        ],
+        rows: [
+          [
+            { html: "14 January<br>2027 at<br>5:08pm" },
+            { text: "YPD" },
+            { html: "<a href='#' class='govuk-link'>YPD-10033670-<br>2526-20260620-<br>081104-04.XML</a>" },
+            { text: "ESFA" },
+            { text: "2891619" },
+            { html: "<a href='#' class='govuk-link'>Download<br>reports</a>" }
+          ],
+          [
+            { html: "15 January<br>2027 at<br>4:39pm" },
+            { text: "YPD" },
+            { html: "<a href='#' class='govuk-link'>YPD-10033670-<br>2526-20260620-<br>081104-04.XML</a>" },
+            { text: "Steven Spruce" },
+            { text: "2855354" },
+            { html: "<a href='#' class='govuk-link'>Download<br>reports</a>" }
+          ]
+        ]
+      }) }}
+
+    </div>
+    <!-- END OF MAIN CONTENT -->
+
+  </div>
+{% endblock %}
