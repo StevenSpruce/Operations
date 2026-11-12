@@ -14,18 +14,26 @@
 {% block content %}
   <div class="govuk-grid-row">
     
-    <!-- Side Navigation -->
+    <!-- ============================================== -->
+    <!-- SIDE NAVIGATION (1/4 WIDTH)                    -->
+    <!-- ============================================== -->
     <div class="govuk-grid-column-one-quarter">
-      <nav aria-label="Secondary">
+      <nav aria-label="Sub navigation">
         <ul class="govuk-list govuk-!-margin-bottom-6">
           <li class="govuk-!-margin-bottom-2">
-            <a href="#" class="govuk-link govuk-!-font-weight-bold" style="text-decoration: none;">Latest submissions</a>
+            <a href="#" class="govuk-link govuk-link--no-underline govuk-!-font-weight-bold">Latest submissions</a>
           </li>
           <li class="govuk-!-margin-bottom-2">
-            <a href="#" class="govuk-link" style="text-decoration: none;">Submission history</a>
+            <a href="#" class="govuk-link govuk-link--no-underline">Submission history</a>
           </li>
+        </ul>
+      </nav>
+    </div> 
+    <!-- END OF SIDE NAVIGATION - This closing div is critical -->
 
-    <!-- Main Content -->
+    <!-- ============================================== -->
+    <!-- MAIN CONTENT (3/4 WIDTH)                       -->
+    <!-- ============================================== -->
     <div class="govuk-grid-column-three-quarters">
 
       <h1 class="govuk-heading-xl">
@@ -63,7 +71,7 @@
         }) }}
       </form>
 
-      <!-- November Section (Formerly R01) -->
+      <!-- November Section -->
       <h2 class="govuk-heading-l govuk-!-margin-top-6">November</h2>
       
       {{ govukTable({
@@ -103,7 +111,7 @@
         ]
       }) }}
 
-      <!-- December Section (Formerly R13) -->
+      <!-- December Section -->
       <h2 class="govuk-heading-l govuk-!-margin-top-8">December</h2>
 
       {{ govukTable({
@@ -136,5 +144,7 @@
       }) }}
 
     </div>
+    <!-- END OF MAIN CONTENT -->
+
   </div>
 {% endblock %}
