@@ -48,29 +48,6 @@
         Download the reports of your most recent submission to see your latest figures
       </p>
 
-      <!-- Filter Section -->
-      <form action="#" method="post" novalidate>
-        {{ govukCheckboxes({
-          name: "submissionType",
-          fieldset: {
-            legend: {
-              text: "Filter your submission types",
-              isPageHeading: false,
-              classes: "govuk-fieldset__legend--s"
-            }
-          },
-          hint: {
-            text: "Choosing a filter will result in the page refreshing automatically"
-          },
-          items: [
-            {
-              value: "YPD",
-              text: "YPD"
-            }
-          ]
-        }) }}
-      </form>
-
       <!-- November Section -->
       <h2 class="govuk-heading-l govuk-!-margin-top-6">November 2026</h2>
       
