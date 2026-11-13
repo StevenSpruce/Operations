@@ -54,7 +54,91 @@
         <p class="govuk-body govuk-!-margin-bottom-8">
           View all your submissions and download the reports of your most recent submission. You can find your reports for each collection period in 'submission history'.
         </p>
+
+        <!-- Filter by year section -->
+        <div class="govuk-form-group govuk-!-margin-bottom-8">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h2 class="govuk-fieldset__heading">
+                Filter by year
+              </h2>
+            </legend>
+            <div id="filter-hint" class="govuk-hint">
+              The page will refresh after you select each filter.
+            </div>
+            
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes" style="display: flex; gap: 20px; flex-wrap: wrap;">
+              
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="year-26-27" name="yearFilter" type="checkbox" value="2026-2027">
+                <label class="govuk-label govuk-checkboxes__label" for="year-26-27">
+                  2026<br>to<br>2027
+                </label>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="year-25-26" name="yearFilter" type="checkbox" value="2025-2026">
+                <label class="govuk-label govuk-checkboxes__label" for="year-25-26">
+                  2025<br>to<br>2026
+                </label>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="year-24-25" name="yearFilter" type="checkbox" value="2024-2025">
+                <label class="govuk-label govuk-checkboxes__label" for="year-24-25">
+                  2024<br>to<br>2025
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
         
+        <!-- Month: December 2026 -->
+        <h2 class="govuk-heading-l">December 2026</h2>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Date</th>
+              <th scope="col" class="govuk-table__header">Type</th>
+              <th scope="col" class="govuk-table__header">File</th>
+              <th scope="col" class="govuk-table__header">Submitted by</th>
+              <th scope="col" class="govuk-table__header">Reference</th>
+              <th scope="col" class="govuk-table__header">Reports</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                14 January<br>2027 at<br>5:08pm
+              </td>
+              <td class="govuk-table__cell">YPD</td>
+              <td class="govuk-table__cell">
+                <a href="#" class="govuk-link">YPD-10033670-<br>2526-20260620-<br>081104-04.XML</a>
+              </td>
+              <td class="govuk-table__cell">ESFA</td>
+              <td class="govuk-table__cell">2891619</td>
+              <td class="govuk-table__cell">
+                <a href="#" class="govuk-link">Download<br>reports</a>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                15 January<br>2027 at<br>4:39pm
+              </td>
+              <td class="govuk-table__cell">YPD</td>
+              <td class="govuk-table__cell">
+                <a href="#" class="govuk-link">YPD-10033670-<br>2526-20260620-<br>081104-04.XML</a>
+              </td>
+              <td class="govuk-table__cell">Steven Spruce</td>
+              <td class="govuk-table__cell">2855354</td>
+              <td class="govuk-table__cell">
+                <a href="#" class="govuk-link">Download<br>reports</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
         <!-- Month: November 2026 -->
         <h2 class="govuk-heading-l">November 2026</h2>
         <table class="govuk-table govuk-!-margin-bottom-9">
@@ -107,51 +191,6 @@
               </td>
               <td class="govuk-table__cell">Steven Spruce</td>
               <td class="govuk-table__cell">2853586</td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">Download<br>reports</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Month: December 2026 -->
-        <h2 class="govuk-heading-l">December 2026</h2>
-        <table class="govuk-table govuk-!-margin-bottom-9">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Date</th>
-              <th scope="col" class="govuk-table__header">Type</th>
-              <th scope="col" class="govuk-table__header">File</th>
-              <th scope="col" class="govuk-table__header">Submitted by</th>
-              <th scope="col" class="govuk-table__header">Reference</th>
-              <th scope="col" class="govuk-table__header">Reports</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                14 January<br>2027 at<br>5:08pm
-              </td>
-              <td class="govuk-table__cell">YPD</td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">YPD-10033670-<br>2526-20260620-<br>081104-04.XML</a>
-              </td>
-              <td class="govuk-table__cell">ESFA</td>
-              <td class="govuk-table__cell">2891619</td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">Download<br>reports</a>
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                15 January<br>2027 at<br>4:39pm
-              </td>
-              <td class="govuk-table__cell">YPD</td>
-              <td class="govuk-table__cell">
-                <a href="#" class="govuk-link">YPD-10033670-<br>2526-20260620-<br>081104-04.XML</a>
-              </td>
-              <td class="govuk-table__cell">Steven Spruce</td>
-              <td class="govuk-table__cell">2855354</td>
               <td class="govuk-table__cell">
                 <a href="#" class="govuk-link">Download<br>reports</a>
               </td>
